@@ -1,7 +1,7 @@
 * {
-  margin:0;
+  margin: 0;
   padding: 0;
-  outline:0;
+  outline: 0;
 }
 
 .flex-item1 {
@@ -24,16 +24,15 @@
   max-width: 40%;
 }
 
-
 .connect-us {
-  color:black;
+  color: black;
   font-size: 19px;
   font-weight: bold;
   padding-bottom: 15px;
 }
 
 .clear {
-  clear:both;
+  clear: both;
 }
 
 .wrapper {
@@ -48,76 +47,75 @@
   }
   .img-main {
     min-height: 860px;
-      .menu-top {
-        line-height: 150px;
-        .nav-top {
-          float: right;
-          .blog {
-            background: #dd5931;
-            font-size: 22px;
-            padding: 0 10px;
-            margin-left: 20px;
-            line-height: normal;
-            a {
-              text-decoration: none;
-              color: white;
-            }
-          }
-          ul {
-            li {
-              display: inline-block;
-              .link {
-                color: white;
-                text-transform: uppercase;
-                margin: 0 20px;
-                font-family: 'Questrial', sans-serif;
-                font-size: 20px;
-                text-decoration: none;
-                padding-bottom: 8px;
-                &:hover {
-                  border-bottom: 2px solid white;
-                }
-              }
-            }
+    .menu-top {
+      line-height: 150px;
+      .nav-top {
+        float: right;
+        .blog {
+          background: #dd5931;
+          font-size: 22px;
+          padding: 0 10px;
+          margin-left: 20px;
+          line-height: normal;
+          a {
+            text-decoration: none;
+            color: white;
           }
         }
-
-      }
-      .main-info {
-        height: 600px;
-        .local-com {
-          color: white;
-          width: 80%;
-          margin: 0 auto;
-          position: relative;
-          top: 50%;
-          transform: translateY(-50%);
-          h1 {
-            font-family: 'Bevan', cursive;
-            font-size: 80px;
-            letter-spacing: 1px;
-            line-height: 60px;
-            margin-bottom: 30px;
-          }
-          span {
-            font-size: 19px;
-          }
-          .more {
-            margin-top: 40px;
-            .more-about {
-              font-size: 18px;
+        ul {
+          li {
+            display: inline-block;
+            .link {
               color: white;
               text-transform: uppercase;
-              padding: 10px 50px;
-              border: 3px solid;
+              margin: 0 20px;
+              font-family: 'Questrial', sans-serif;
+              font-size: 20px;
               text-decoration: none;
+              padding-bottom: 8px;
               &:hover {
-                background: #dd5931;
+                border-bottom: 2px solid white;
               }
             }
           }
         }
       }
+    }
+    .main-info {
+      height: 600px;
+      .local-com {
+        color: white;
+        width: 80%;
+        margin: 0 auto;
+        position: relative;
+        top: 50%;
+        transform: translateY(-50%);
+        h1 {
+          font-family: 'Bevan', cursive;
+          font-size: 80px;
+          letter-spacing: 1px;
+          line-height: 60px;
+          margin-bottom: 30px;
+        }
+        span {
+          font-size: 19px;
+        }
+        .more {
+          margin-top: 40px;
+          .more-about {
+            font-size: 18px;
+            color: white;
+            text-transform: uppercase;
+            padding: 10px 50px;
+            border: 3px solid;
+            text-decoration: none;
+            &:hover {
+              background: #dd5931;
+            }
+          }
+        }
+      }
+    }
   }
   .container {
     .partners {
@@ -133,7 +131,7 @@
 
 .contacts {
   background: #f5f5f4;
-  color:#888;
+  color: #888;
   .get-in-touch {
     display: flex;
     flex-wrap: wrap;
@@ -144,9 +142,9 @@
       font-size: 20px;
       .fa {
         padding: 3px;
-        border:2px solid transparent;
+        border: 2px solid transparent;
         &:hover {
-          border:2px solid #dd5931;
+          border: 2px solid #dd5931;
           color: #dd5931;
         }
       }
@@ -187,11 +185,11 @@
         li {
           display: inline;
           a {
-            text-decoration:none ;
+            text-decoration: none;
             margin-left: 20px;
             color: #f5f5f4;
             &:hover {
-              color:#dd5931;
+              color: #dd5931;
             }
           }
         }
