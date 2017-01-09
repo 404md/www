@@ -1,0 +1,150 @@
+.wrapper.amenities .img-main .base {
+  background: #333; }
+
+* {
+  margin: 0;
+  padding: 0;
+  outline: 0; }
+
+.flex-item1 {
+  flex: 0 0 10%;
+  max-width: 10%; }
+
+.flex-item2 {
+  flex: 0 0 20%;
+  max-width: 20%; }
+
+.flex-item3 {
+  flex: 0 0 30%;
+  max-width: 30%; }
+
+.flex-item4 {
+  flex: 0 0 40%;
+  max-width: 40%; }
+
+.connect-us {
+  color: black;
+  font-size: 19px;
+  font-weight: bold;
+  padding-bottom: 15px; }
+
+.clear {
+  clear: both; }
+
+.wrapper {
+  min-height: 800px; }
+  .wrapper.main .img-main {
+    background-image: linear-gradient(180deg, rgba(40, 35, 47, 0.9), rgba(0, 0, 0, 0.1)), url(../image/main-picture.jpg);
+    background-position: center;
+    background-size: cover;
+    position: relative; }
+  .wrapper .img-main {
+    min-height: 860px; }
+    .wrapper .img-main .menu-top {
+      line-height: 150px; }
+      .wrapper .img-main .menu-top .nav-top {
+        float: right; }
+        .wrapper .img-main .menu-top .nav-top .blog {
+          background: #dd5931;
+          font-size: 22px;
+          padding: 0 10px;
+          margin-left: 20px;
+          line-height: normal; }
+          .wrapper .img-main .menu-top .nav-top .blog a {
+            text-decoration: none;
+            color: white; }
+        .wrapper .img-main .menu-top .nav-top ul li {
+          display: inline-block; }
+          .wrapper .img-main .menu-top .nav-top ul li .link {
+            color: white;
+            text-transform: uppercase;
+            margin: 0 20px;
+            font-family: 'Questrial', sans-serif;
+            font-size: 20px;
+            text-decoration: none;
+            padding-bottom: 8px; }
+            .wrapper .img-main .menu-top .nav-top ul li .link:hover {
+              border-bottom: 2px solid white; }
+    .wrapper .img-main .main-info {
+      height: 600px; }
+      .wrapper .img-main .main-info .local-com {
+        color: white;
+        width: 80%;
+        margin: 0 auto;
+        position: relative;
+        top: 50%;
+        transform: translateY(-50%); }
+        .wrapper .img-main .main-info .local-com h1 {
+          font-family: 'Bevan', cursive;
+          font-size: 80px;
+          letter-spacing: 1px;
+          line-height: 60px;
+          margin-bottom: 30px; }
+        .wrapper .img-main .main-info .local-com span {
+          font-size: 19px; }
+        .wrapper .img-main .main-info .local-com .more {
+          margin-top: 40px; }
+          .wrapper .img-main .main-info .local-com .more .more-about {
+            font-size: 18px;
+            color: white;
+            text-transform: uppercase;
+            padding: 10px 50px;
+            border: 3px solid;
+            text-decoration: none; }
+            .wrapper .img-main .main-info .local-com .more .more-about:hover {
+              background: #dd5931; }
+  .wrapper .container .partners {
+    line-height: 150px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap; }
+
+.contacts {
+  background: #f5f5f4;
+  color: #888; }
+  .contacts .get-in-touch {
+    display: flex;
+    flex-wrap: wrap;
+    padding-top: 50px;
+    padding-bottom: 50px; }
+    .contacts .get-in-touch .flex-item2 {
+      color: #888;
+      font-size: 20px; }
+      .contacts .get-in-touch .flex-item2 .fa {
+        padding: 3px;
+        border: 2px solid transparent; }
+        .contacts .get-in-touch .flex-item2 .fa:hover {
+          border: 2px solid #dd5931;
+          color: #dd5931; }
+      .contacts .get-in-touch .flex-item2 .fa:not(:last-child) {
+        margin-right: 15px; }
+      .contacts .get-in-touch .flex-item2 .fa:nth-child(6) {
+        margin-right: 0; }
+    .contacts .get-in-touch .flex-item4 {
+      padding: 0 30px; }
+    .contacts .get-in-touch .flex-item3 a {
+      color: #888; }
+
+.footer-black {
+  background: #454545; }
+  .footer-black .container .left-footer {
+    float: left;
+    color: grey;
+    line-height: 50px;
+    height: 50px; }
+  .footer-black .container .right-footer {
+    float: right;
+    line-height: 50px;
+    height: 50px; }
+    .footer-black .container .right-footer ul {
+      margin-bottom: 0; }
+      .footer-black .container .right-footer ul li {
+        display: inline; }
+        .footer-black .container .right-footer ul li a {
+          text-decoration: none;
+          margin-left: 20px;
+          color: #f5f5f4; }
+          .footer-black .container .right-footer ul li a:hover {
+            color: #dd5931; }
+
+/*# sourceMappingURL=index.css.map */
