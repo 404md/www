@@ -74,7 +74,8 @@
         position: relative;
         top: 50%;
         transform: translateY(-50%); }
-        .wrapper .img-main .main-info .local-com h1 {
+        .wrapper .img-main .main-info .local-com h1,
+        .wrapper .img-main .main-info .local-com h2 {
           font-family: 'Bevan', cursive;
           font-size: 80px;
           letter-spacing: 1px;
