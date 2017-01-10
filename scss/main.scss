@@ -126,8 +126,65 @@
 
     }
   }
-
 }
+
+
+
+/* Navigation */
+
+.main-nav {
+  height: 150px;
+  background: #333;
+  .container {
+    .logo {
+      line-height: 150px;
+      float:left;
+    }
+    .nav-top {
+      float: right;
+      line-height: 150px;
+      .active {
+        .link {
+          border: 2px solid white;
+        }
+      }
+      ul {
+        margin-bottom: 0;
+        li {
+          display: inline-block;
+          text-decoration: none;
+          .link {
+            color: white;
+            text-transform: uppercase;
+            margin: 0 12px;
+            font-family: 'Questrial', sans-serif;
+            font-size: 20px;
+            text-decoration: none;
+            padding: 8px;
+            border: 2px solid transparent;
+            &:hover {
+              border-bottom: 2px solid white;
+            }
+          }
+
+        }
+      }
+      .blog {
+        background: #dd5931;
+        font-size: 22px;
+        padding: 0 10px;
+        margin-left: 20px;
+        line-height: normal;
+        a {
+          text-decoration: none;
+          color: white;
+        }
+      }
+    }
+  }
+}
+
+/* Main Footer*/
 
 .contacts {
   background: #f5f5f4;
