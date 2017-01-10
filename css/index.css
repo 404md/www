@@ -133,6 +133,12 @@
     color: grey;
     line-height: 50px;
     height: 50px; }
+    .footer-black .container .left-footer a {
+      text-decoration: none;
+      margin-left: 20px;
+      color: #f5f5f4; }
+      .footer-black .container .left-footer a:hover {
+        color: #dd5931; }
   .footer-black .container .right-footer {
     float: right;
     line-height: 50px;
