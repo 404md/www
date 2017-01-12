@@ -1,2 +1,15 @@
-
+.wrapper {
+  &.amenities {
+    .blocks {
+      background:#f5f5f4;
+      height: 600px;
+      .container {
+        .flex-block {
+          width: 300px;
+          text-align: center;
+        }
+      }
+    }
+  }
+}
 
