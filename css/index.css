@@ -1,18 +1,19 @@
 * {
   margin: 0;
   padding: 0;
-  outline: 0; }
-
-* {
+  outline: 0;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box; }
 
 img {
-  vertical-align: middle; }
-
-img {
+  vertical-align: middle;
   border: 0; }
+
+.display-flex {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap; }
 
 body {
   font-family: 'Nunito Sans', sans-serif;
@@ -77,8 +78,8 @@ body {
             .wrapper .main-block .main-info .local-com .more .more-about .text-bold {
               font-size: 20px; }
             .wrapper .main-block .main-info .local-com .more .more-about:hover {
-              background: #dd5931;
-              border: 3px solid #dd5931; }
+              background: #fc0;
+              border: 3px solid #fc0; }
   .wrapper .container .partners {
     line-height: 150px;
     display: flex;
@@ -142,10 +143,12 @@ body {
     .contacts .get-in-touch .block-1 {
       width: 10%; }
     .contacts .get-in-touch .block-2 {
-      width: 50%;
-      padding: 0 20px; }
+      width: 55%;
+      padding-right: 25px; }
     .contacts .get-in-touch .block-3 {
-      width: 20%; }
+      width: 15%; }
+      .contacts .get-in-touch .block-3 .new-line {
+        display: block; }
       .contacts .get-in-touch .block-3 a {
         color: #888;
         text-decoration: none; }
@@ -207,7 +210,7 @@ body {
       position: absolute;
       width: 155px;
       height: 6px;
-      background: #888;
+      background: #dd5931;
       bottom: 0; }
 
 @media (min-width: 768px) {
@@ -237,7 +240,7 @@ body {
     .main-nav .container .nav-top .navt.responsive {
       float: none;
       clear: both;
-      line-height: 20px; }
+      line-height: 30px; }
       .main-nav .container .nav-top .navt.responsive .icon {
         right: 0;
         top: 0;
