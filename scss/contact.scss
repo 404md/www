@@ -1,0 +1,35 @@
+.image {
+  height: 350px;
+  .image-contact {
+    background-image: url(../images/contact.png);
+    background-position: center;
+    background-size: cover;
+    height: 350px;
+  }
+}
+
+.wrapper {
+  &.contact {
+    .main-block {
+      min-height: 700px;
+      .container {
+        position: relative;
+        .map-style {
+          height: 700px;
+        }
+        .input-field {
+          position: absolute;
+          top: 0;
+          right: 15px;
+          width: 40%;
+          background: white;
+          opacity: 0.93;
+          height: 700px;
+          .input-center {
+
+          }
+        }
+      }
+    }
+  }
+}

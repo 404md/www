@@ -1,15 +1,31 @@
+
+
+.text-page {
+  font-size:15px;
+}
+
+.text-color {
+  color:#dd5931;
+}
+
 .wrapper {
   &.amenities {
-    .blocks {
-      background:#f5f5f4;
-      height: 600px;
-      .container {
-        .flex-block {
-          width: 300px;
-          text-align: center;
+    .main-block {
+      .blocks {
+        background: #f5f5f4;
+        .container {
+          .display-flex {
+            padding-top: 70px;
+            padding-bottom: 40px;
+          .flex-block {
+            width: 300px;
+            text-align: center;
+            padding-bottom: 20px;
+
+            }
+          }
         }
       }
     }
   }
 }
-
