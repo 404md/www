@@ -45,6 +45,12 @@ background-color: #fff;
   clear: both;
 }
 
+.center-block {
+  position: relative;
+  top:50%;
+  transform: translateY(-50%) ;
+}
+
 .wrapper {
   min-height: 800px;
   &.main {
@@ -61,7 +67,7 @@ background-color: #fff;
       background: transparent;
     }
     .main-info {
-      height: 600px;
+      height: 670px;
       .local-com {
         color: white;
         width: 80%;
@@ -71,18 +77,20 @@ background-color: #fff;
         transform: translateY(-50%);
         h1,h2 {
           font-family: 'Arvo', serif;
-          font-size: 80px;
+          font-size: 90px;
           letter-spacing: 1px;
           line-height: 60px;
           margin-bottom: 30px;
         }
         .text-center {
           font-size: 19px;
+          width: 95%;
         }
         .more {
           margin-top: 40px;
           display: block;
           .more-about {
+            display: inline-block;
             font-size: 18px;
             color: white;
             text-transform: uppercase;
@@ -93,8 +101,8 @@ background-color: #fff;
               font-size: 20px;
             }
             &:hover {
-              background: #fc0;
-              border: 3px solid #fc0;
+              background: #dd5931;
+              border-color: #dd5931;
             }
           }
         }
@@ -125,6 +133,7 @@ background-color: #fff;
       float: left;
     }
     .nav-top {
+      float: right;
       .icon {
         display: none;
 
@@ -140,7 +149,6 @@ background-color: #fff;
         }
       }
       ul {
-        float: right;
         line-height: 150px;
         margin-bottom: 0;
         li {
@@ -194,7 +202,7 @@ background-color: #fff;
     }
     .block-2 {
       width: 55%;
-      padding-right: 25px;
+      padding-right: 37px;
     }
     .block-3 {
       width: 15%;
@@ -218,6 +226,9 @@ background-color: #fff;
         &:hover {
           border: 2px solid #dd5931;
           color: #dd5931;
+        }
+        &.fa-google-plus {
+          font-size: 16px;
         }
       }
     }
@@ -266,10 +277,12 @@ background-color: #fff;
 /* Title */
 
 .new-page {
+  height: 250px;
   .pages {
     width: 60%;
-    margin-bottom: 60px;
-    margin-top: 60px;
+    top: 50%;
+    position: relative;
+    transform: translateY(-50%);
     .text-page {
       font-size:15px;
     }
