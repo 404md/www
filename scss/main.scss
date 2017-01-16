@@ -46,8 +46,30 @@ body {
 }
 
 
+.image {
+  height: 250px;
+  .image-amentities {
+    background-image: url(../images/amenitis.png);
+    background-position: center;
+    background-size: cover;
+    height: 250px;
+  }
+  .image-contact {
+    background-image: url(../images/contact.png);
+    background-size: cover;
+    height: 250px;
+  }
+  .image-members {
+    background-image: url(../images/members.png);
+    background-position: center;
+    background-size: cover;
+    height: 250px;
+  }
+}
+
+
 .text-anvio {
-  font-family: 'Arvo', serif;
+  font-family: 'Lato', sans-serif;
   font-weight: 700;
   margin-top: 40px;
   font-size: 25px;
@@ -151,18 +173,17 @@ body {
 }
 
 
-
 /* Navigation */
 
 .main-nav {
-  min-height: 150px;
+  min-height: 120px;
   background: #ffffff;
   .container {
     .logo {
-      line-height: 150px;
+      line-height: 120px;
       float: left;
       .img-logo {
-        height: 80px;
+        height: 75px;
       }
     }
     .nav-top {
@@ -181,7 +202,7 @@ body {
         }
       }
       ul {
-        line-height: 150px;
+        line-height: 120px;
         margin-bottom: 0;
         li {
           display: inline-block;
@@ -230,11 +251,14 @@ body {
     padding-bottom: 50px;
     justify-content: space-between;
     .block-1 {
-      width: 10%;
+      width: 11%;
       line-height: 110px;
+      img {
+        height: 100px;
+      }
     }
     .block-2 {
-      width: 55%;
+      width: 54%;
       padding-right: 37px;
       padding-left: 30px;
     }
@@ -312,30 +336,21 @@ body {
 
 
 .new-page {
-  height: 250px;
+  height: 150px;
   .pages {
     width: 60%;
-    top: 50%;
+    top: 45%;
     position: relative;
     transform: translateY(-50%);
     .text-page {
       font-size:15px;
     }
     .page-name {
-      font-family: 'Arvo', serif;
-      font-size: 50px;
+      font-family: 'Lato', sans-serif;
+      font-size: 45px;
       position: relative;
-      margin-bottom: 20px;
-      &:before {
-        content: '';
-        position: absolute;
-        width: 140px;
-        height: 6px;
-        background: #dd5931;
-        bottom: 0;
-      }
+      text-transform: uppercase;
     }
-
   }
 }
 
@@ -344,9 +359,15 @@ body {
   padding-bottom: 10px;
   .pages {
     .heading {
-      font-family: 'Arvo', serif;
+      font-family: 'Lato', sans-serif;
       font-size: 50px;
       color:#ccc;
     }
   }
+}
+
+.line {
+  width: 80px;
+  height: 6px;
+  background:#dd5931;
 }

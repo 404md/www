@@ -1,3 +1,8 @@
+.new-page.amenities-page {
+  height: 200px; }
+  .new-page.amenities-page .pages .line {
+    margin-bottom: 20px; }
+
 .text-page {
   font-size: 15px; }
 
@@ -14,14 +19,6 @@
       text-align: center;
       padding-bottom: 20px; }
 
-.image {
-  height: 350px; }
-  .image .image-contact {
-    background-image: url(../images/contact.png);
-    background-position: center;
-    background-size: cover;
-    height: 350px; }
-
 .wrapper.contact .main-block {
   min-height: 700px; }
   .wrapper.contact .main-block .container {
@@ -35,7 +32,36 @@
       width: 40%;
       background: white;
       opacity: 0.93;
-      height: 700px; }
+      height: 700px;
+      display: flex;
+      justify-content: center;
+      align-items: center; }
+      .wrapper.contact .main-block .container .input-field .input-style {
+        height: 40px;
+        width: 70%;
+        border: 2px solid #ccc;
+        margin-bottom: 25px;
+        font-size: 20px;
+        padding: 0 15px;
+        color: #ccc; }
+      .wrapper.contact .main-block .container .input-field .style-textarea {
+        border: 2px solid #ccc;
+        width: 70%;
+        font-size: 12px;
+        padding: 0 15px;
+        color: gray; }
+      .wrapper.contact .main-block .container .input-field .text-s {
+        font-size: 20px;
+        margin-bottom: 5px; }
+      .wrapper.contact .main-block .container .input-field .submit-button {
+        width: 70%;
+        background: #dd5931;
+        border: 0;
+        margin-top: 25px;
+        font-size: 18px;
+        text-transform: uppercase;
+        padding: 10px 0;
+        color: white; }
 
 * {
   margin: 0;
@@ -76,8 +102,25 @@ body {
 .clear {
   clear: both; }
 
+.image {
+  height: 250px; }
+  .image .image-amentities {
+    background-image: url(../images/amenitis.png);
+    background-position: center;
+    background-size: cover;
+    height: 250px; }
+  .image .image-contact {
+    background-image: url(../images/contact.png);
+    background-size: cover;
+    height: 250px; }
+  .image .image-members {
+    background-image: url(../images/members.png);
+    background-position: center;
+    background-size: cover;
+    height: 250px; }
+
 .text-anvio {
-  font-family: 'Arvo', serif;
+  font-family: 'Lato', sans-serif;
   font-weight: 700;
   margin-top: 40px;
   font-size: 25px;
@@ -142,13 +185,13 @@ body {
 
 /* Navigation */
 .main-nav {
-  min-height: 150px;
+  min-height: 120px;
   background: #ffffff; }
   .main-nav .container .logo {
-    line-height: 150px;
+    line-height: 120px;
     float: left; }
     .main-nav .container .logo .img-logo {
-      height: 80px; }
+      height: 75px; }
   .main-nav .container .nav-top {
     float: right; }
     .main-nav .container .nav-top .icon {
@@ -160,7 +203,7 @@ body {
     .main-nav .container .nav-top .active .link {
       border: 2px solid black; }
     .main-nav .container .nav-top ul {
-      line-height: 150px;
+      line-height: 120px;
       margin-bottom: 0; }
       .main-nav .container .nav-top ul li {
         display: inline-block;
@@ -198,10 +241,12 @@ body {
     padding-bottom: 50px;
     justify-content: space-between; }
     .contacts .get-in-touch .block-1 {
-      width: 10%;
+      width: 11%;
       line-height: 110px; }
+      .contacts .get-in-touch .block-1 img {
+        height: 100px; }
     .contacts .get-in-touch .block-2 {
-      width: 55%;
+      width: 54%;
       padding-right: 37px;
       padding-left: 30px; }
     .contacts .get-in-touch .block-3 {
@@ -255,34 +300,32 @@ body {
 
 /* Title */
 .new-page {
-  height: 250px; }
+  height: 150px; }
   .new-page .pages {
     width: 60%;
-    top: 50%;
+    top: 45%;
     position: relative;
     transform: translateY(-50%); }
     .new-page .pages .text-page {
       font-size: 15px; }
     .new-page .pages .page-name {
-      font-family: 'Arvo', serif;
-      font-size: 50px;
+      font-family: 'Lato', sans-serif;
+      font-size: 45px;
       position: relative;
-      margin-bottom: 20px; }
-      .new-page .pages .page-name:before {
-        content: '';
-        position: absolute;
-        width: 140px;
-        height: 6px;
-        background: #dd5931;
-        bottom: 0; }
+      text-transform: uppercase; }
 
 .new-heading {
   padding-top: 40px;
   padding-bottom: 10px; }
   .new-heading .pages .heading {
-    font-family: 'Arvo', serif;
+    font-family: 'Lato', sans-serif;
     font-size: 50px;
     color: #ccc; }
+
+.line {
+  width: 80px;
+  height: 6px;
+  background: #dd5931; }
 
 .text-name {
   text-transform: uppercase; }
@@ -291,21 +334,31 @@ body {
   color: #aaaaaa;
   font-size: 15px; }
 
-.image {
-  height: 350px; }
-  .image .image-members {
-    background-image: url(../images/members.png);
-    background-position: center;
-    background-size: cover;
-    height: 350px; }
-
+.wrapper.members .container .our-members .slick-prev {
+  top: -20px;
+  left: auto;
+  right: 42px; }
+  .wrapper.members .container .our-members .slick-prev:before {
+    content: '<';
+    background: #dd5931;
+    color: white;
+    text-align: left;
+    padding: 2px 10px 10px 10px; }
+.wrapper.members .container .our-members .slick-next {
+  top: -20px;
+  right: 11px; }
+  .wrapper.members .container .our-members .slick-next:before {
+    content: '>';
+    background: #dd5931;
+    color: white;
+    text-align: left;
+    padding: 2px 10px 10px 10px; }
 .wrapper.members .container .our-members .slick-list {
   margin-right: -30px; }
   .wrapper.members .container .our-members .slick-list .member-info {
     margin-right: 30px; }
     .wrapper.members .container .our-members .slick-list .member-info .member-pic img {
-      width: 100%;
-      height: 360px; }
+      width: 100%; }
     .wrapper.members .container .our-members .slick-list .member-info .all-info {
       margin-top: 20px; }
       .wrapper.members .container .our-members .slick-list .member-info .all-info h2, .wrapper.members .container .our-members .slick-list .member-info .all-info h4 {
@@ -348,7 +401,7 @@ body {
           margin-top: 20px;
           font-size: 17px; }
         .case-study .container .right-block .right-info .right-header {
-          font-family: 'Arvo', serif;
+          font-family: 'Lato', sans-serif;
           font-size: 50px;
           position: relative;
           margin-bottom: 20px; }
@@ -414,26 +467,37 @@ body {
     width: 20%; }
   .contacts .get-in-touch .block-2 {
     width: 80%;
-    padding-left: 20px; }
+    padding: 0; }
     .contacts .get-in-touch .block-2 .connect-us {
       display: none; }
   .contacts .get-in-touch .block-3 {
     width: 50%;
-    text-align: center; }
+    text-align: left; }
     .contacts .get-in-touch .block-3 .connect-us {
       padding-top: 15px; }
     .contacts .get-in-touch .block-3 .one-line {
       display: inline-block; }
   .contacts .get-in-touch .block-4 {
     width: 50%;
-    text-align: center; }
+    text-align: left; }
     .contacts .get-in-touch .block-4 .connect-us {
       padding-top: 15px; }
     .contacts .get-in-touch .block-4 .one-line {
       display: inline-block; }
 
   .new-page .pages {
-    width: 70%; } }
+    width: 70%; }
+
+  .case-study .container .left-block {
+    float: none;
+    text-align: center; }
+  .case-study .container .right-block {
+    float: none;
+    height: 400px;
+    width: 100%;
+    text-align: center; }
+    .case-study .container .right-block .right-info {
+      width: 100%; } }
 @media (max-width: 639px) {
   .wrapper .main-block {
     min-height: 660px; }
@@ -455,11 +519,39 @@ body {
 
   .new-page .pages {
     width: 90%; } }
+@media (max-width: 590px) {
+  .contacts .get-in-touch {
+    padding-top: 15px;
+    padding-bottom: 20px; }
+    .contacts .get-in-touch .block-1 {
+      width: 100%;
+      text-align: center;
+      margin-bottom: 10px; }
+      .contacts .get-in-touch .block-1 img {
+        height: 90px; }
+    .contacts .get-in-touch .block-2 {
+      width: 100%;
+      text-align: center; }
+      .contacts .get-in-touch .block-2 .connect-us {
+        display: none; }
+    .contacts .get-in-touch .block-3 {
+      width: 100%;
+      text-align: center; }
+    .contacts .get-in-touch .block-4 {
+      width: 100%;
+      text-align: center; }
+
+  .case-study .container .left-block img {
+    width: 90%; }
+  .case-study .container .right-block {
+    height: 450px; } }
 @media (max-width: 450px) {
   .contacts .get-in-touch .block-3 {
-    width: 100%; }
+    width: 100%;
+    text-align: center; }
   .contacts .get-in-touch .block-4 {
-    width: 100%; }
+    width: 100%;
+    text-align: center; }
 
   .footer-black .container .left-footer {
     text-align: center; }

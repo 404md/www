@@ -97,14 +97,14 @@
       }
       .block-2 {
         width: 80%;
-        padding-left: 20px;
+        padding:0;
         .connect-us {
           display: none;
         }
       }
       .block-3 {
         width: 50%;
-        text-align: center;
+        text-align: left;
         .connect-us {
           padding-top: 15px;
         }
@@ -114,7 +114,7 @@
       }
       .block-4 {
         width: 50%;
-        text-align: center;
+        text-align: left;
         .connect-us {
           padding-top: 15px;
         }
@@ -127,6 +127,23 @@
   .new-page {
     .pages {
      width: 70%;
+    }
+  }
+  .case-study {
+    .container {
+      .left-block {
+        float:none;
+        text-align: center;
+      }
+      .right-block {
+        float:none;
+        height: 400px;
+        width: 100%;
+        text-align: center;
+        .right-info {
+          width: 100%;
+        }
+      }
     }
   }
 }
@@ -171,14 +188,61 @@
   }
 }
 
+@media (max-width: 590px) {
+  .contacts {
+    .get-in-touch {
+      padding-top: 15px;
+      padding-bottom: 20px;
+      .block-1 {
+        width: 100%;
+        text-align: center;
+        margin-bottom: 10px;
+        img {
+          height: 90px;
+        }
+      }
+      .block-2 {
+        width: 100%;
+        text-align: center;
+
+        .connect-us {
+          display: none;
+        }
+      }
+      .block-3 {
+        width: 100%;
+        text-align: center;
+      }
+      .block-4 {
+        width: 100%;
+        text-align: center;
+      }
+    }
+  }
+  .case-study {
+    .container {
+      .left-block {
+       img {
+         width: 90%;
+       }
+      }
+      .right-block {
+        height: 450px;
+      }
+    }
+  }
+}
+
 @media (max-width:450px) {
   .contacts {
     .get-in-touch {
       .block-3 {
         width: 100%;
+        text-align: center;
       }
       .block-4 {
         width: 100%;
+        text-align: center;
       }
     }
   }

@@ -1,17 +1,4 @@
-(function () {
-    
-      $('.our-members').slick({
-        infinite: true,
-        slidesToShow: 3,
-        slidesToScroll: 1,
-        arrows: false,
-        dot:false,
-        autoplay: true,
-        autoplaySpeed: 2000
-    });
 
-
-})(jQuery);
 
 function NavigationFunction() {
     var x = document.getElementById("myTopnav");
