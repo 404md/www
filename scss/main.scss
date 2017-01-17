@@ -57,12 +57,18 @@ body {
   .image-contact {
     background-image: url(../images/contact.png);
     background-size: cover;
-    background-position: 20% 16%;;
+    background-position: 48% 16%;
     height: 200px;
   }
   .image-members {
     background-image: url(../images/members.png);
-    background-position: 20% 80%;;
+    background-position: 20% 80%;
+    background-size: cover;
+    height: 200px;
+  }
+  .image-plans {
+    background-image: url(../images/plans.png);
+    background-position: 52% 48%;
     background-size: cover;
     height: 200px;
   }

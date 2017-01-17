@@ -163,6 +163,46 @@
       }
     }
   }
+  .wrapper {
+    &.contact {
+      .main-block {
+
+        .container {
+
+          .map-style {
+           height: 860px;
+          }
+          .input-field {
+            margin:auto;
+            top: auto;
+            height: 700px;
+            bottom: 0;
+            right:0;
+            width: 100%;
+            .hole-form {
+              width: 55%;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 645px) {
+  .wrapper {
+    &.amenities {
+      .main-block {
+        .blocks {
+          .container {
+            .display-flex {
+              justify-content: center;
+            }
+          }
+        }
+      }
+    }
+  }
 }
 
 @media (max-width: 639px) {
@@ -245,6 +285,13 @@
       }
       .right-block {
         height: 450px;
+      }
+    }
+  }
+  .new-page {
+    .pages {
+      .page-name {
+        font-size: 40px;
       }
     }
   }
