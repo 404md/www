@@ -47,23 +47,24 @@ body {
 
 
 .image {
-  height: 250px;
+  height: 200px;
   .image-amentities {
     background-image: url(../images/amenitis.png);
     background-position: center;
     background-size: cover;
-    height: 250px;
+    height: 200px;
   }
   .image-contact {
     background-image: url(../images/contact.png);
     background-size: cover;
-    height: 250px;
+    background-position: 20% 16%;;
+    height: 200px;
   }
   .image-members {
     background-image: url(../images/members.png);
-    background-position: center;
+    background-position: 20% 80%;;
     background-size: cover;
-    height: 250px;
+    height: 200px;
   }
 }
 
@@ -80,7 +81,7 @@ body {
   min-height: 800px;
   &.main {
     .main-block {
-      background-image: linear-gradient(180deg, rgba(40, 35, 47, .90), rgba(0, 0, 0, .1)), url(../images/bg.jpg);
+      background-image: url(../images/bg.png);
       background-position: center;
       background-size: cover;
       position: relative;
@@ -128,7 +129,7 @@ body {
         top: 50%;
         transform: translateY(-50%);
         h1,h2 {
-          font-family: 'Arvo', serif;
+          font-family: 'Lato', sans-serif;
           font-size: 90px;
           letter-spacing: 1px;
           line-height: 60px;
