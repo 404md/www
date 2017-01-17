@@ -20,11 +20,11 @@ img {
 }
 
 body {
-font-family:'Nunito Sans', sans-serif;
-font-size: 14px;
-line-height: 1.42857143;
-color: #333;
-background-color: #fff;
+  font-family: 'Nunito Sans', sans-serif;
+  font-size: 14px;
+  line-height: 1.42857143;
+  color: #333;
+  background-color: #fff;
 }
 
 .container {
@@ -45,10 +45,35 @@ background-color: #fff;
   clear: both;
 }
 
-.center-block {
-  position: relative;
-  top:50%;
-  transform: translateY(-50%) ;
+
+.image {
+  height: 250px;
+  .image-amentities {
+    background-image: url(../images/amenitis.png);
+    background-position: center;
+    background-size: cover;
+    height: 250px;
+  }
+  .image-contact {
+    background-image: url(../images/contact.png);
+    background-size: cover;
+    height: 250px;
+  }
+  .image-members {
+    background-image: url(../images/members.png);
+    background-position: center;
+    background-size: cover;
+    height: 250px;
+  }
+}
+
+
+.text-anvio {
+  font-family: 'Lato', sans-serif;
+  font-weight: 700;
+  margin-top: 40px;
+  font-size: 25px;
+  margin-bottom: 15px;
 }
 
 .wrapper {
@@ -60,11 +85,38 @@ background-color: #fff;
       background-size: cover;
       position: relative;
     }
+    .main-block {
+      .main-nav {
+        .container {
+          .nav-top {
+            .icon {
+              a {
+                color: white;
+              }
+            }
+          }
+        }
+      }
+    }
   }
   .main-block {
     min-height: 860px;
     .main-nav {
       background: transparent;
+      .container {
+        .nav-top {
+          ul {
+            li {
+              .link {
+                color:white;
+                &:hover {
+                  border-bottom-color: white;
+                }
+              }
+            }
+          }
+        }
+      }
     }
     .main-info {
       height: 670px;
@@ -121,52 +173,53 @@ background-color: #fff;
 }
 
 
-
 /* Navigation */
 
 .main-nav {
-  min-height: 150px;
-  background: #333;
+  min-height: 120px;
+  background: #ffffff;
   .container {
     .logo {
-      line-height: 150px;
+      line-height: 120px;
       float: left;
+      .img-logo {
+        height: 75px;
+      }
     }
     .nav-top {
       float: right;
       .icon {
         display: none;
-
         a {
-          color: white;
+          color: black;
           font-size: 25px;
           text-decoration: none;
         }
       }
       .active {
         .link {
-          border: 2px solid white;
+          border: 2px solid black;
         }
       }
       ul {
-        line-height: 150px;
+        line-height: 120px;
         margin-bottom: 0;
         li {
           display: inline-block;
           text-decoration: none;
           .link {
-            color: white;
+            color: black;
             text-transform: uppercase;
             margin: 0 12px;
             font-size: 20px;
             text-decoration: none;
-            padding: 8px;
+            padding:2px 8px;
             border: 2px solid transparent;
             &.active {
-              border: 2px solid white;
+              border-color: black;
             }
             &:hover {
-              border-bottom: 2px solid white;
+              border-bottom-color: black;
             }
           }
           a {
@@ -198,11 +251,16 @@ background-color: #fff;
     padding-bottom: 50px;
     justify-content: space-between;
     .block-1 {
-      width: 10%;
+      width: 11%;
+      line-height: 110px;
+      img {
+        height: 100px;
+      }
     }
     .block-2 {
-      width: 55%;
+      width: 54%;
       padding-right: 37px;
+      padding-left: 30px;
     }
     .block-3 {
       width: 15%;
@@ -276,30 +334,40 @@ background-color: #fff;
 
 /* Title */
 
+
 .new-page {
-  height: 250px;
+  height: 150px;
   .pages {
     width: 60%;
-    top: 50%;
+    top: 45%;
     position: relative;
     transform: translateY(-50%);
     .text-page {
       font-size:15px;
     }
     .page-name {
-      font-family: 'Arvo', serif;
-      font-size: 50px;
+      font-family: 'Lato', sans-serif;
+      font-size: 45px;
       position: relative;
-      font-weight:400;
-      margin-bottom: 10px;
-      &:before {
-        content: '';
-        position: absolute;
-        width: 155px;
-        height: 6px;
-        background: #dd5931;
-        bottom: 0;
-      }
+      text-transform: uppercase;
     }
   }
+}
+
+.new-heading {
+  padding-top: 40px;
+  padding-bottom: 10px;
+  .pages {
+    .heading {
+      font-family: 'Lato', sans-serif;
+      font-size: 50px;
+      color:#ccc;
+    }
+  }
+}
+
+.line {
+  width: 80px;
+  height: 6px;
+  background:#dd5931;
 }

@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" />
     <link href="https://fonts.googleapis.com/css?family=PT+Sans|Questrial" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Arvo:400,700" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Arvo:700|Nunito+Sans" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
     <!-- Google Tag Manager -->
     <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
     new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
@@ -28,7 +28,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <div class="container">
         <div class="logo">
             <a href="https://www.404.md">
-                <img class="img-logo" src="../images/logo.png" alt="Logo 404 Not Found" />
+                <img class="img-logo" src="../images/logo-right-black.svg" alt="Logo 404 Not Found" />
             </a>
         </div>
         <div class="nav-top" >
@@ -47,17 +47,39 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     </div>
 </header>
 
-<div class=" container new-page">
+<section class="image">
+    <div class="image-contact"></div>
+</section>
+
+<div class="container new-page">
     <div class="pages">
-        <h1 class="page-name">Contact.</h1>
-        <span class="text-page">404 Not Found is a community for IT Businesses and IT people from Moldova.
-        We want to empower local community of small companies and skillied individuals to be competitive
-        globally.</span>
+        <h1 class="page-name">Contact</h1>
+        <div class="line"></div>
     </div>
 </div>
 
-<div class="wrapper ">
+<div class="wrapper contact">
     <section class="main-block">
+        <div class="container">
+            <div id="map" class="map-style"></div>
+            <div class="input-field">
+                <form >
+                    <span class="text-s">Name</span><br>
+                    <input class="input-style" type="text" name="name"><br>
+
+                    <span class="text-s">Phone</span><br>
+                    <input class="input-style" type="text" name="phone"><br>
+                    <span class="text-s">E-mail</span><br>
+                    <input class="input-style" type="text" name="e-mail" /><br>
+                    <span class="text-s">Message</span><br>
+                    <textarea class="style-textarea" rows="4" cols="50"></textarea>
+
+                    <button class="submit-button" type="submit">Submit</button>
+                </form>
+
+            </div>
+        </div>
+
 
     </section>
     <div class="container">
@@ -73,7 +95,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <footer>
 <div class="contacts">
     <div class="container get-in-touch">
-        <div class="block-1"><img src="../images/logo-footer.png" alt="Logo 404 Not Found" /></div>
+        <div class="block-1"><img src="../images/logo-below-white.svg" alt="Logo 404 Not Found" /></div>
         <div class="block-2">
             <h4 class="connect-us">About us</h4>
             404 Not Found is a community for IT Businesses and IT people from Moldova.
@@ -129,5 +151,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
 <script type="text/javascript" src="../js/main.js"></script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBMl1HPvxC30Mtcbe6gKWZjiccGAYopsQA&callback=myMap"></script>
+
 </body>
 </html>

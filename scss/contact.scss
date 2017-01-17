@@ -1,0 +1,56 @@
+
+.wrapper {
+  &.contact {
+    .main-block {
+      min-height: 700px;
+      .container {
+        position: relative;
+        .map-style {
+          height: 700px;
+        }
+        .input-field {
+          position: absolute;
+          top: 0;
+          right: 15px;
+          width: 40%;
+          background: white;
+          opacity: 0.93;
+          height: 700px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          .input-style {
+            height: 40px;
+            width: 70%;
+            border: 2px solid #ccc;
+            margin-bottom: 25px;
+            font-size: 20px;
+            padding: 0 15px;
+            color:#ccc;
+          }
+          .style-textarea {
+            border: 2px solid #ccc;
+            width: 70%;
+            font-size: 12px;
+            padding: 0 15px;
+            color:gray;
+          }
+          .text-s {
+            font-size: 20px;
+            margin-bottom: 5px;
+          }
+          .submit-button {
+            width: 70%;
+            background:#dd5931;
+            border:0;
+            margin-top: 25px;
+            font-size: 18px;
+            text-transform: uppercase;
+            padding: 10px 0;
+            color: white;
+          }
+        }
+      }
+    }
+  }
+}
