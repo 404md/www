@@ -12,10 +12,13 @@
   &.members {
     .container {
       .our-members {
+        &.slick-slider {
+          margin-right: -30px;
+        }
         .slick-prev {
           top: -20px;
           left: auto;
-          right: 42px;
+          right: 72px;
           &:before {
             content:'<';
             background: #dd5931;
@@ -26,7 +29,7 @@
         }
         .slick-next {
           top: -20px;
-          right: 11px;
+          right: 41px;
           &:before {
             content:'>';
             background: #dd5931;
@@ -36,7 +39,7 @@
           }
         }
         .slick-list {
-          margin-right: -30px;
+          //margin-right: -30px;
           .member-info {
             margin-right: 30px;
             .member-pic {
@@ -69,13 +72,15 @@
   .container {
     .display-flex {
       min-height: 300px;
+      padding-top: 40px;
+      padding-bottom: 40px;
       .project-block {
         width: 300px;
         text-align: center;
         margin: auto;
         .text-anvio {
-          margin-bottom: 0;
           margin-top: 20px;
+          margin-bottom: 10px;
         }
       }
     }

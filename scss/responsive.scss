@@ -146,6 +146,23 @@
       }
     }
   }
+  .projects {
+    min-height: 200px;
+    .container {
+      .display-flex {
+        min-height: 200px;
+        .project-block {
+          width: 210px;
+          img {
+            width: 50%;
+          }
+          .text-anvio {
+            font-size: 20px;
+          }
+        }
+      }
+    }
+  }
 }
 
 @media (max-width: 639px) {

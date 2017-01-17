@@ -63,23 +63,34 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <div class="container">
             <div id="map" class="map-style"></div>
             <div class="input-field">
-                <form >
-                    <span class="text-s">Name</span><br>
-                    <input class="input-style" type="text" name="name"><br>
+                <form class="hole-form">
 
-                    <span class="text-s">Phone</span><br>
-                    <input class="input-style" type="text" name="phone"><br>
-                    <span class="text-s">E-mail</span><br>
-                    <input class="input-style" type="text" name="e-mail" /><br>
-                    <span class="text-s">Message</span><br>
-                    <textarea class="style-textarea" rows="4" cols="50"></textarea>
+                    <form method="post">
+                        <div>
+                            <label for="name">Name</label>
+                            <input  class="input-style" type="text" id="name" name="user_name" />
+                        </div>
+                        <div>
+                            <label for="phone">Phone</label>
+                            <input class="input-style" type="tel" id="phone" name="user_phone" />
+                        </div>
+                        <div>
+                            <label for="mail">E-mail</label>
+                            <input class="input-style" type="email" id="mail" name="user_mail" />
+                        </div>
+                        <div>
+                            <label for="msg">Message</label>
+                            <textarea class="text-style" id="msg" name="user_message" rows="4"></textarea>
+                        </div>
 
-                    <button class="submit-button" type="submit">Submit</button>
+                        <div>
+                            <button class="button" type="submit">Submit</button>
+                        </div>
+                    </form>
                 </form>
 
             </div>
         </div>
-
 
     </section>
     <div class="container">
