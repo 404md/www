@@ -45,6 +45,22 @@ body {
   clear: both;
 }
 
+.button {
+  display: inline-block;
+  background: #dd5931;
+  font-size: 17px;
+  padding: 10px 50px;
+  text-transform: uppercase;
+  color: #ffffff;
+  border: 2px solid;
+  cursor:pointer;
+  text-decoration: none;
+  &:hover {
+    border-color: black;
+    color:black;
+    background: transparent;
+  }
+}
 
 .image {
   height: 160px;

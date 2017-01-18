@@ -33,6 +33,44 @@
         }
       }
     }
+    &.plans-and-prices {
+      .main-block {
+        .container {
+          .display-flex {
+            .plans {
+              width: auto;
+              margin-bottom: 10px;
+              .img-plan {
+                float: left;
+              }
+              .discription {
+                width: 100%;
+                padding: 0;
+                .block-responsive {
+                  padding: 20px;
+                  float: left;
+                  width: 52%;
+                  height: 384px;
+                p {
+                  font-size: 15px;
+                  line-height: 22px;
+                  padding-bottom: 10px;
+                }
+                .bold-text {
+
+                }
+
+                .button {
+                  margin-top: 17px;
+                  margin-bottom: 15px;
+                }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
   }
 }
 
