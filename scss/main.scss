@@ -47,30 +47,30 @@ body {
 
 
 .image {
-  height: 200px;
+  height: 160px;
   .image-amentities {
     background-image: url(../images/amenitis.png);
     background-position: center;
     background-size: cover;
-    height: 200px;
+    height: 160px;
   }
   .image-contact {
     background-image: url(../images/contact.png);
     background-size: cover;
     background-position: 48% 16%;
-    height: 200px;
+    height: 160px;
   }
   .image-members {
     background-image: url(../images/members.png);
     background-position: 20% 80%;
     background-size: cover;
-    height: 200px;
+    height: 160px;
   }
   .image-plans {
     background-image: url(../images/plans.png);
     background-position: 52% 48%;
     background-size: cover;
-    height: 200px;
+    height: 160px;
   }
 }
 
@@ -150,18 +150,19 @@ body {
           display: block;
           .more-about {
             display: inline-block;
-            font-size: 18px;
+            font-size: 20px;
             color: white;
             text-transform: uppercase;
             padding: 10px 50px;
-            border: 3px solid;
+            border: 3px solid #dd5931;
             text-decoration: none;
+            background: #dd5931;
             .text-bold {
               font-size: 20px;
             }
             &:hover {
-              background: #dd5931;
-              border-color: #dd5931;
+              border-color: #ffffff;
+              background: transparent;
             }
           }
         }
@@ -183,11 +184,11 @@ body {
 /* Navigation */
 
 .main-nav {
-  min-height: 120px;
+  min-height: 100px;
   background: #ffffff;
   .container {
     .logo {
-      line-height: 120px;
+      line-height: 100px;
       float: left;
       .img-logo {
         height: 75px;
@@ -209,7 +210,7 @@ body {
         }
       }
       ul {
-        line-height: 120px;
+        line-height: 100px;
         margin-bottom: 0;
         li {
           display: inline-block;
@@ -217,7 +218,7 @@ body {
           .link {
             color: black;
             text-transform: uppercase;
-            margin: 0 12px;
+            margin: 0 8px;
             font-size: 20px;
             text-decoration: none;
             padding:2px 8px;
@@ -236,11 +237,12 @@ body {
       }
       .blog {
         background: #dd5931;
-        font-size: 22px;
+        font-size: 19px;
         padding: 0 10px;
         margin-left: 20px;
         line-height: normal;
         color: white;
+        text-transform: uppercase;
       }
     }
   }
@@ -343,10 +345,10 @@ body {
 
 
 .new-page {
-  height: 150px;
+  height: 200px;
   .pages {
     width: 60%;
-    top: 45%;
+    top: 47%;
     position: relative;
     transform: translateY(-50%);
     .text-page {
@@ -377,4 +379,5 @@ body {
   width: 80px;
   height: 6px;
   background:#dd5931;
+  margin-bottom: 20px;
 }
