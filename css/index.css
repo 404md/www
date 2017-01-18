@@ -479,8 +479,8 @@ body {
   .wrapper .main-block .main-info .local-com .text-center {
     font-size: 15px; }
   .wrapper.plans-and-prices .main-block .container .display-flex .plans {
-    width: auto;
-    margin-bottom: 10px; }
+    margin-bottom: 10px;
+    width: 100%; }
     .wrapper.plans-and-prices .main-block .container .display-flex .plans .img-plan {
       float: left; }
     .wrapper.plans-and-prices .main-block .container .display-flex .plans .discription {
