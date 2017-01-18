@@ -1,8 +1,3 @@
-.new-page.amenities-page {
-  height: 200px; }
-  .new-page.amenities-page .pages .line {
-    margin-bottom: 20px; }
-
 .text-page {
   font-size: 15px; }
 
@@ -59,15 +54,12 @@
           width: 100%;
           color: #aaaaaa; }
         .wrapper.contact .main-block .container .input-field .hole-form .button {
-          width: 100%;
-          background: #dd5931;
-          border: 0;
-          font-size: 17px;
-          padding: 10px 0;
+          width: 100%; }
+        .wrapper.contact .main-block .container .input-field .hole-form .heading-contact {
           text-transform: uppercase;
-          color: #ffffff; }
-          .wrapper.contact .main-block .container .input-field .hole-form .button:hover {
-            opacity: 0.8; }
+          font-size: 25px;
+          font-weight: 600;
+          padding-bottom: 20px; }
 
 * {
   margin: 0;
@@ -108,28 +100,43 @@ body {
 .clear {
   clear: both; }
 
+.button {
+  display: inline-block;
+  background: #dd5931;
+  font-size: 17px;
+  padding: 10px 50px;
+  text-transform: uppercase;
+  color: #ffffff;
+  border: 2px solid;
+  cursor: pointer;
+  text-decoration: none; }
+  .button:hover {
+    border-color: black;
+    color: black;
+    background: transparent; }
+
 .image {
-  height: 200px; }
+  height: 160px; }
   .image .image-amentities {
     background-image: url(../images/amenitis.png);
     background-position: center;
     background-size: cover;
-    height: 200px; }
+    height: 160px; }
   .image .image-contact {
     background-image: url(../images/contact.png);
     background-size: cover;
     background-position: 48% 16%;
-    height: 200px; }
+    height: 160px; }
   .image .image-members {
     background-image: url(../images/members.png);
     background-position: 20% 80%;
     background-size: cover;
-    height: 200px; }
+    height: 160px; }
   .image .image-plans {
     background-image: url(../images/plans.png);
     background-position: 52% 48%;
     background-size: cover;
-    height: 200px; }
+    height: 160px; }
 
 .text-anvio {
   font-family: 'Lato', sans-serif;
@@ -178,17 +185,18 @@ body {
           display: block; }
           .wrapper .main-block .main-info .local-com .more .more-about {
             display: inline-block;
-            font-size: 18px;
+            font-size: 20px;
             color: white;
             text-transform: uppercase;
             padding: 10px 50px;
-            border: 3px solid;
-            text-decoration: none; }
+            border: 3px solid #dd5931;
+            text-decoration: none;
+            background: #dd5931; }
             .wrapper .main-block .main-info .local-com .more .more-about .text-bold {
               font-size: 20px; }
             .wrapper .main-block .main-info .local-com .more .more-about:hover {
-              background: #dd5931;
-              border-color: #dd5931; }
+              border-color: #ffffff;
+              background: transparent; }
   .wrapper .container .partners {
     line-height: 150px;
     display: flex;
@@ -197,10 +205,10 @@ body {
 
 /* Navigation */
 .main-nav {
-  min-height: 120px;
+  min-height: 100px;
   background: #ffffff; }
   .main-nav .container .logo {
-    line-height: 120px;
+    line-height: 100px;
     float: left; }
     .main-nav .container .logo .img-logo {
       height: 75px; }
@@ -215,7 +223,7 @@ body {
     .main-nav .container .nav-top .active .link {
       border: 2px solid black; }
     .main-nav .container .nav-top ul {
-      line-height: 120px;
+      line-height: 100px;
       margin-bottom: 0; }
       .main-nav .container .nav-top ul li {
         display: inline-block;
@@ -223,7 +231,7 @@ body {
         .main-nav .container .nav-top ul li .link {
           color: black;
           text-transform: uppercase;
-          margin: 0 12px;
+          margin: 0 8px;
           font-size: 20px;
           text-decoration: none;
           padding: 2px 8px;
@@ -236,11 +244,12 @@ body {
           text-decoration: none; }
     .main-nav .container .nav-top .blog {
       background: #dd5931;
-      font-size: 22px;
+      font-size: 19px;
       padding: 0 10px;
       margin-left: 20px;
       line-height: normal;
-      color: white; }
+      color: white;
+      text-transform: uppercase; }
 
 /* Main Footer*/
 .contacts {
@@ -312,10 +321,10 @@ body {
 
 /* Title */
 .new-page {
-  height: 150px; }
+  height: 200px; }
   .new-page .pages {
     width: 60%;
-    top: 45%;
+    top: 47%;
     position: relative;
     transform: translateY(-50%); }
     .new-page .pages .text-page {
@@ -337,7 +346,8 @@ body {
 .line {
   width: 80px;
   height: 6px;
-  background: #dd5931; }
+  background: #dd5931;
+  margin-bottom: 20px; }
 
 .text-name {
   text-transform: uppercase; }
@@ -377,8 +387,6 @@ body {
       line-height: 20px; }
     .wrapper.members .container .our-members .slick-list .member-info .all-info h4 {
       padding-bottom: 15px; }
-    .wrapper.members .container .our-members .slick-list .member-info .all-info .contant {
-      font-size: 17px; }
 
 .projects {
   background: #f5f5f4;
@@ -413,7 +421,7 @@ body {
         position: relative; }
         .case-study .container .right-block .right-info p {
           margin-top: 20px;
-          font-size: 17px; }
+          font-size: 16px; }
         .case-study .container .right-block .right-info .right-header {
           font-family: 'Lato', sans-serif;
           font-size: 50px;
@@ -428,17 +436,32 @@ body {
             bottom: 0; }
 
 .wrapper.plans-and-prices .main-block .container .display-flex .plans {
-  width: 310px; }
-  .wrapper.plans-and-prices .main-block .container .display-flex .plans .imag-plan {
+  width: 353px; }
+  .wrapper.plans-and-prices .main-block .container .display-flex .plans .img-plan {
     position: relative; }
-    .wrapper.plans-and-prices .main-block .container .display-flex .plans .imag-plan .text-plan {
+    .wrapper.plans-and-prices .main-block .container .display-flex .plans .img-plan img {
+      width: 100%;
+      height: 384px; }
+    .wrapper.plans-and-prices .main-block .container .display-flex .plans .img-plan .text-plan {
       position: absolute;
       bottom: 0;
-      padding: 20px;
+      padding: 25px;
       color: #ffffff; }
-      .wrapper.plans-and-prices .main-block .container .display-flex .plans .imag-plan .text-plan .text-p {
+      .wrapper.plans-and-prices .main-block .container .display-flex .plans .img-plan .text-plan .text-p {
         font-size: 25px;
         text-transform: uppercase; }
+  .wrapper.plans-and-prices .main-block .container .display-flex .plans .discription {
+    background: #f5f5f4;
+    padding: 25px; }
+    .wrapper.plans-and-prices .main-block .container .display-flex .plans .discription p {
+      font-size: 15px;
+      line-height: 25px;
+      padding-bottom: 30px; }
+    .wrapper.plans-and-prices .main-block .container .display-flex .plans .discription .bold-text {
+      font-weight: 600; }
+    .wrapper.plans-and-prices .main-block .container .display-flex .plans .discription .button {
+      margin-top: 40px;
+      margin-bottom: 30px; }
 
 @media (min-width: 768px) {
   .container {
@@ -454,7 +477,27 @@ body {
     font-size: 50px;
     line-height: 50px; }
   .wrapper .main-block .main-info .local-com .text-center {
-    font-size: 15px; } }
+    font-size: 15px; }
+  .wrapper.plans-and-prices .main-block .container .display-flex .plans {
+    margin-bottom: 10px;
+    width: 100%; }
+    .wrapper.plans-and-prices .main-block .container .display-flex .plans .img-plan {
+      float: left; }
+    .wrapper.plans-and-prices .main-block .container .display-flex .plans .discription {
+      width: 100%;
+      padding: 0; }
+      .wrapper.plans-and-prices .main-block .container .display-flex .plans .discription .block-responsive {
+        padding: 20px;
+        float: left;
+        width: 52%;
+        height: 384px; }
+        .wrapper.plans-and-prices .main-block .container .display-flex .plans .discription .block-responsive p {
+          font-size: 15px;
+          line-height: 22px;
+          padding-bottom: 10px; }
+        .wrapper.plans-and-prices .main-block .container .display-flex .plans .discription .block-responsive .button {
+          margin-top: 17px;
+          margin-bottom: 15px; } }
 @media screen and (max-width: 992px) {
   .main-nav .container .nav-top {
     position: relative;
@@ -464,7 +507,7 @@ body {
     .main-nav .container .nav-top .navt .icon {
       float: right;
       display: inline-block;
-      line-height: 120px; }
+      line-height: 100px; }
     .main-nav .container .nav-top .navt.responsive {
       float: none;
       clear: both;
@@ -473,7 +516,7 @@ body {
         right: 0;
         top: 0;
         position: absolute;
-        line-height: 120px; }
+        line-height: 100px; }
       .main-nav .container .nav-top .navt.responsive li {
         float: none;
         display: inline; }

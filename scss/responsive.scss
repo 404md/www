@@ -33,6 +33,44 @@
         }
       }
     }
+    &.plans-and-prices {
+      .main-block {
+        .container {
+          .display-flex {
+            .plans {
+              margin-bottom: 10px;
+              width: 100%;
+              .img-plan {
+                float: left;
+              }
+              .discription {
+                width: 100%;
+                padding: 0;
+                .block-responsive {
+                  padding: 20px;
+                  float: left;
+                  width: 52%;
+                  height: 384px;
+                p {
+                  font-size: 15px;
+                  line-height: 22px;
+                  padding-bottom: 10px;
+                }
+                .bold-text {
+
+                }
+
+                .button {
+                  margin-top: 17px;
+                  margin-bottom: 15px;
+                }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
   }
 }
 
@@ -49,7 +87,7 @@
           .icon {
             float: right;
             display: inline-block;
-            line-height: 120px;
+            line-height: 100px;
           }
           &.responsive {
             float: none;
@@ -59,7 +97,7 @@
               right: 0;
               top: 0;
               position: absolute;
-              line-height: 120px;
+              line-height: 100px;
 
             }
             li {

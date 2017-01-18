@@ -19,43 +19,40 @@
           display: flex;
           justify-content: center;
           align-items: center;
-         .hole-form {
-           width: 60%;
-           label {
-             display: block;
-             margin-bottom: 10px;
-             font-size: 18px;
-           }
-           .input-style {
-             height: 40px;
-             width: 100%;
-             font-size: 20px;
-             padding: 0 10px;
-             border: 1px solid #454545;
-             margin-bottom: 20px;
-             color:#aaaaaa;
-           }
-           .text-style {
-             font-size: 20px;
-             padding: 0 10px;
-             border: 1px solid #454545;
-             margin-bottom: 20px;
-             width: 100%;
-             color:#aaaaaa;
-           }
-           .button {
-             width: 100%;
-             background:#dd5931;
-             border:0;
-             font-size: 17px;
-             padding: 10px 0;
-             text-transform: uppercase;
-             color:#ffffff;
-             &:hover {
-               opacity: 0.8;
-             }
-           }
-         }
+          .hole-form {
+            width: 60%;
+            label {
+              display: block;
+              margin-bottom: 10px;
+              font-size: 18px;
+            }
+            .input-style {
+              height: 40px;
+              width: 100%;
+              font-size: 20px;
+              padding: 0 10px;
+              border: 1px solid #454545;
+              margin-bottom: 20px;
+              color: #aaaaaa;
+            }
+            .text-style {
+              font-size: 20px;
+              padding: 0 10px;
+              border: 1px solid #454545;
+              margin-bottom: 20px;
+              width: 100%;
+              color: #aaaaaa;
+            }
+            .button {
+              width: 100%;
+            }
+            .heading-contact {
+              text-transform: uppercase;
+              font-size: 25px;
+              font-weight: 600;
+              padding-bottom: 20px;
+            }
+          }
         }
       }
     }
