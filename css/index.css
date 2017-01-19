@@ -33,7 +33,7 @@
       justify-content: center;
       align-items: center; }
       .wrapper.contact .main-block .container .input-field .hole-form {
-        width: 60%; }
+        width: 65%; }
         .wrapper.contact .main-block .container .input-field .hole-form label {
           display: block;
           margin-bottom: 10px;
@@ -79,7 +79,7 @@ img {
   flex-wrap: wrap; }
 
 body {
-  font-family: 'Nunito Sans', sans-serif;
+  font-family: 'Lato', sans-serif;
   font-size: 14px;
   line-height: 1.42857143;
   color: #333;
@@ -349,6 +349,96 @@ body {
   background: #dd5931;
   margin-bottom: 20px; }
 
+/* Footer Gallery*/
+.gallery .gallary-line {
+  height: 300px;
+  margin-top: 60px;
+  overflow: hidden; }
+  .gallery .gallary-line .img1 {
+    background-image: url(../images/img1.png);
+    background-position: center;
+    background-size: cover;
+    height: 300px;
+    width: 33%;
+    float: left;
+    cursor: pointer;
+    transition: all .5s;
+    position: relative; }
+    .gallery .gallary-line .img1:hover {
+      transform: scale(1.2); }
+  .gallery .gallary-line .two-pic {
+    width: 10%;
+    float: left;
+    overflow: hidden; }
+    .gallery .gallary-line .two-pic .img2 {
+      background-image: url(../images/img2.png);
+      background-position: center;
+      background-size: cover;
+      height: 150px;
+      width: 100%;
+      float: left;
+      cursor: pointer;
+      transition: all .5s;
+      position: relative;
+      z-index: 2; }
+      .gallery .gallary-line .two-pic .img2:hover {
+        transform: scale(1.2); }
+    .gallery .gallary-line .two-pic .img3 {
+      background-image: url(../images/img3.png);
+      background-position: center;
+      background-size: cover;
+      height: 151px;
+      width: 100%;
+      float: left;
+      cursor: pointer;
+      position: relative;
+      z-index: 2;
+      transition: all .5s; }
+      .gallery .gallary-line .two-pic .img3:hover {
+        transform: scale(1.2); }
+  .gallery .gallary-line .img4 {
+    background-image: url(../images/img4.png);
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    height: 300px;
+    width: 35%;
+    float: left;
+    cursor: pointer;
+    display: flex; }
+    .gallery .gallary-line .img4:before {
+      content: '';
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: #dd5931;
+      opacity: 0.8;
+      position: absolute; }
+    .gallery .gallary-line .img4 .we-love {
+      position: relative;
+      z-index: 1;
+      margin: auto;
+      font-size: 25px;
+      color: white; }
+      .gallery .gallary-line .img4 .we-love .avatar-comment {
+        text-transform: uppercase; }
+      .gallery .gallary-line .img4 .we-love span {
+        font-size: 20px; }
+  .gallery .gallary-line .img5 {
+    background-image: url(../images/img5.png);
+    background-position: center;
+    background-size: cover;
+    height: 301px;
+    width: 12%;
+    float: left;
+    cursor: pointer;
+    position: relative;
+    z-index: 1;
+    transition: all .5s; }
+    .gallery .gallary-line .img5:hover {
+      transform: scale(1.2); }
+
 .text-name {
   text-transform: uppercase; }
 
@@ -356,36 +446,36 @@ body {
   color: #aaaaaa;
   font-size: 15px; }
 
-.wrapper.members .container .our-members.slick-slider {
+.wrapper.members .main-block .container .our-members.slick-slider {
   margin-right: -30px; }
-.wrapper.members .container .our-members .slick-prev {
+.wrapper.members .main-block .container .our-members .slick-prev {
   top: -20px;
   left: auto;
   right: 72px; }
-  .wrapper.members .container .our-members .slick-prev:before {
+  .wrapper.members .main-block .container .our-members .slick-prev:before {
     content: '<';
     background: #dd5931;
     color: white;
     text-align: left;
     padding: 2px 10px 10px 10px; }
-.wrapper.members .container .our-members .slick-next {
+.wrapper.members .main-block .container .our-members .slick-next {
   top: -20px;
   right: 41px; }
-  .wrapper.members .container .our-members .slick-next:before {
+  .wrapper.members .main-block .container .our-members .slick-next:before {
     content: '>';
     background: #dd5931;
     color: white;
     text-align: left;
     padding: 2px 10px 10px 10px; }
-.wrapper.members .container .our-members .slick-list .member-info {
+.wrapper.members .main-block .container .our-members .slick-list .member-info {
   margin-right: 30px; }
-  .wrapper.members .container .our-members .slick-list .member-info .member-pic img {
+  .wrapper.members .main-block .container .our-members .slick-list .member-info .member-pic img {
     width: 100%; }
-  .wrapper.members .container .our-members .slick-list .member-info .all-info {
+  .wrapper.members .main-block .container .our-members .slick-list .member-info .all-info {
     margin-top: 20px; }
-    .wrapper.members .container .our-members .slick-list .member-info .all-info h2, .wrapper.members .container .our-members .slick-list .member-info .all-info h4 {
+    .wrapper.members .main-block .container .our-members .slick-list .member-info .all-info h2, .wrapper.members .main-block .container .our-members .slick-list .member-info .all-info h4 {
       line-height: 20px; }
-    .wrapper.members .container .our-members .slick-list .member-info .all-info h4 {
+    .wrapper.members .main-block .container .our-members .slick-list .member-info .all-info h4 {
       padding-bottom: 15px; }
 
 .projects {
@@ -591,6 +681,18 @@ body {
     width: 100%; }
     .wrapper.contact .main-block .container .input-field .hole-form {
       width: 55%; } }
+@media (max-width: 695px) {
+  .wrapper.plans-and-prices .main-block .container .display-flex .plans {
+    width: 353px;
+    margin: 0 auto;
+    margin-bottom: 10px; }
+    .wrapper.plans-and-prices .main-block .container .display-flex .plans .img-plan {
+      float: none; }
+      .wrapper.plans-and-prices .main-block .container .display-flex .plans .img-plan img {
+        width: 100%;
+        height: 384px; }
+    .wrapper.plans-and-prices .main-block .container .display-flex .plans .discription .block-responsive {
+      width: 100%; } }
 @media (max-width: 645px) {
   .wrapper.amenities .main-block .blocks .container .display-flex {
     justify-content: center; } }
