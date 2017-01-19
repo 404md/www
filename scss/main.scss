@@ -20,7 +20,7 @@ img {
 }
 
 body {
-  font-family: 'Nunito Sans', sans-serif;
+  font-family: 'Lato', sans-serif;
   font-size: 14px;
   line-height: 1.42857143;
   color: #333;
@@ -396,4 +396,112 @@ body {
   height: 6px;
   background:#dd5931;
   margin-bottom: 20px;
+}
+
+/* Footer Gallery*/
+.gallery {
+  .gallary-line {
+    height: 300px;
+    margin-top: 60px;
+    overflow: hidden;
+    .img1 {
+      background-image: url(../images/img1.png);
+      background-position: center;
+      background-size: cover;
+      height: 300px;
+      width: 33%;
+      float:left;
+      cursor: pointer;
+      transition: all .5s;
+      position: relative;
+      &:hover {
+        transform: scale(1.2);
+      }
+    }
+    .two-pic {
+      width: 10%;
+      float: left;
+      overflow: hidden;
+      .img2 {
+        background-image: url(../images/img2.png);
+        background-position: center;
+        background-size: cover;
+        height: 150px;
+        width: 100%;
+        float:left;
+        cursor: pointer;
+        transition: all .5s;
+        position: relative;
+        z-index: 2;
+        &:hover {
+          transform: scale(1.2);
+
+        }
+      }
+      .img3{
+        background-image: url(../images/img3.png);
+        background-position: center;
+        background-size: cover;
+        height: 151px;
+        width: 100%;
+        float:left;
+        cursor: pointer;
+        position: relative;
+        z-index: 2;
+        transition: all .5s;
+        &:hover {
+          transform: scale(1.2);
+        }
+      }
+    }
+    .img4 {
+      background-image: url(../images/img4.png);
+      background-position: center;
+      background-size: cover;
+      position: relative;
+      height: 300px;
+      width: 35%;
+      float:left;
+      cursor: pointer;
+      display: flex;
+      &:before {
+       content: '';
+       top: 0;
+       bottom: 0;
+       left: 0;
+       right:0;
+       background:#dd5931;
+       opacity: 0.8;
+       position: absolute;
+     }
+      .we-love {
+        position: relative;
+        z-index: 1;
+        margin: auto;
+        font-size: 25px;
+        color:white;
+        .avatar-comment {
+          text-transform: uppercase;
+        }
+        span {
+          font-size: 20px;
+        }
+      }
+    }
+    .img5 {
+      background-image: url(../images/img5.png);
+      background-position: center;
+      background-size: cover;
+      height: 301px;
+      width: 12%;
+      float:left;
+      cursor: pointer;
+      position: relative;
+      z-index: 1;
+      transition: all .5s;
+      &:hover {
+        transform: scale(1.2);
+      }
+    }
+  }
 }

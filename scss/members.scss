@@ -10,49 +10,51 @@
 
 .wrapper {
   &.members {
-    .container {
-      .our-members {
-        &.slick-slider {
-          margin-right: -30px;
-        }
-        .slick-prev {
-          top: -20px;
-          left: auto;
-          right: 72px;
-          &:before {
-            content:'<';
-            background: #dd5931;
-            color:white;
-            text-align: left;
-            padding: 2px 10px 10px 10px;
+    .main-block {
+      .container {
+        .our-members {
+          &.slick-slider {
+            margin-right: -30px;
           }
-        }
-        .slick-next {
-          top: -20px;
-          right: 41px;
-          &:before {
-            content:'>';
-            background: #dd5931;
-            color:white;
-            text-align: left;
-            padding: 2px 10px 10px 10px;
-          }
-        }
-        .slick-list {
-          .member-info {
-            margin-right: 30px;
-            .member-pic {
-              img {
-                width: 100%;
-              }
+          .slick-prev {
+            top: -20px;
+            left: auto;
+            right: 72px;
+            &:before {
+              content: '<';
+              background: #dd5931;
+              color: white;
+              text-align: left;
+              padding: 2px 10px 10px 10px;
             }
-            .all-info {
-              margin-top: 20px;
-              h2,h4 {
-                line-height: 20px;
+          }
+          .slick-next {
+            top: -20px;
+            right: 41px;
+            &:before {
+              content: '>';
+              background: #dd5931;
+              color: white;
+              text-align: left;
+              padding: 2px 10px 10px 10px;
+            }
+          }
+          .slick-list {
+            .member-info {
+              margin-right: 30px;
+              .member-pic {
+                img {
+                  width: 100%;
+                }
               }
-              h4 {
-                padding-bottom: 15px;
+              .all-info {
+                margin-top: 20px;
+                h2, h4 {
+                  line-height: 20px;
+                }
+                h4 {
+                  padding-bottom: 15px;
+                }
               }
             }
           }
