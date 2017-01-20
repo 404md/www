@@ -1,3 +1,10 @@
+.gallery {
+  &.amenities-gallery {
+    .gallary-line {
+      margin-top: 0;
+    }
+  }
+}
 
 .text-page {
   font-size:15px;
@@ -15,13 +22,13 @@
         .container {
           .display-flex {
             padding-top: 70px;
-            padding-bottom: 40px;
+            padding-bottom: 50px;
             align-items: flex-end;
           .flex-block {
+            height: 300px;
             width: 300px;
             text-align: center;
             padding-bottom: 20px;
-
             }
           }
         }
