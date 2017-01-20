@@ -21,8 +21,8 @@ aws s3 sync --delete contact/ s3://www.404.md/contact/ --region eu-central-1 --s
 echo "Synchronizing members/"
 aws s3 sync --delete members/ s3://www.404.md/members/ --region eu-central-1 --storage-class REDUCED_REDUNDANCY --metadata-directive REPLACE --cache-control max-age=600
 
-echo "Synchronizing plans-prices/"
-aws s3 sync --delete plans-prices/ s3://www.404.md/plans-prices/ --region eu-central-1 --storage-class REDUCED_REDUNDANCY --metadata-directive REPLACE --cache-control max-age=600
+echo "Synchronizing pricing/"
+aws s3 sync --delete pricing/ s3://www.404.md/pricing/ --region eu-central-1 --storage-class REDUCED_REDUNDANCY --metadata-directive REPLACE --cache-control max-age=600
 
 echo "Synchronizing privacy/"
 aws s3 sync --delete privacy/ s3://www.404.md/privacy/ --region eu-central-1 --storage-class REDUCED_REDUNDANCY --metadata-directive REPLACE --cache-control max-age=600
