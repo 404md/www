@@ -6,6 +6,9 @@ aws s3 cp index.html s3://www.404.md/ --region eu-central-1 --storage-class REDU
 echo "Synchronizing css/"
 aws s3 sync --delete css/ s3://www.404.md/css/ --region eu-central-1 --storage-class REDUCED_REDUNDANCY --metadata-directive REPLACE --cache-control max-age=600
 
+echo "Synchronizing fonts/"
+aws s3 sync --delete fonts/ s3://www.404.md/fonts/ --region eu-central-1 --storage-class REDUCED_REDUNDANCY --metadata-directive REPLACE --cache-control max-age=600
+
 echo "Synchronizing images/"
 aws s3 sync --delete images/ s3://www.404.md/images/ --region eu-central-1 --storage-class REDUCED_REDUNDANCY --metadata-directive REPLACE --cache-control max-age=600
 
