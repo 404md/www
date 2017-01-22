@@ -71,31 +71,28 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                    <div class="heading-contact">Get in touch</div>
                     <div>
                         <label for="name">Name</label>
-                        <input class="input-style" type="text" id="name" name="user_name"/>
+                        <input class="input-style" type="text" id="name" name="user_name" placeholder="e.g. John Smith" />
                     </div>
                     <div>
                         <label for="phone">Phone</label>
-                        <input class="input-style" type="tel" id="phone" name="user_phone"/>
+                        <input class="input-style" type="tel" id="phone" name="user_phone" placeholder="e.g. 022 999 999" />
                     </div>
                     <div>
                         <label for="mail">E-mail</label>
-                        <input class="input-style" type="email" id="mail" name="user_mail"/>
+                        <input class="input-style" type="email" id="mail" name="user_mail" placeholder="e.g. john.smith@email.com" />
                     </div>
                     <div>
                         <label for="msg">Message</label>
-                        <textarea class="text-style" id="msg" name="user_message" rows="4"></textarea>
+                        <textarea class="text-style" id="msg" name="user_message" placeholder="Please Tell Us Your Feedback" rows="4"></textarea>
                     </div>
                     <div class="recaptcha-center">
-                    <div class="g-recaptcha"  data-sitekey="6LcHAgkTAAAAAHP1uEknBzH3ZeeqciGJEXVgZAJm"></div>
-                        <br/>
+                        <div class="g-recaptcha"  data-sitekey="6LcHAgkTAAAAAHP1uEknBzH3ZeeqciGJEXVgZAJm"></div>
                     </div>
-                    <div>
-                        </div>
-                        <button class="button" type="submit">Submit</button>
+                    <br/>
+                    <button class="button" type="submit">Submit</button>
                 </form>
             </div>
         </div>
-
     </section>
 
     <section class="gallery">
@@ -201,7 +198,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 <script type="text/javascript" src="../js/jquery-1.11.0.min.js"></script>
 <script type="text/javascript" src="../js/main.js"></script>
-<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBMl1HPvxC30Mtcbe6gKWZjiccGAYopsQA&callback=myMap"></script>
+<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBMl1HPvxC30Mtcbe6gKWZjiccGAYopsQA&callback=myMap" async defer></script>
 <script type="text/javascript" src="https://www.google.com/recaptcha/api.js" async defer></script>
 
 </body>
