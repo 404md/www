@@ -95,13 +95,26 @@
     .right-block {
       float:right;
       width: 50%;
-      height: 573px;
+      height: 630px;
       .right-info {
         width: 90%;
         float: right;
         top: 50%;
         transform: translateY(-50%);
         position: relative;
+        .logo {
+          display: block;
+          height: 100px;
+          img {
+            height: 80px;
+            position: relative;
+            top: 50%;
+            -webkit-transform: translateY(-50%);
+            -moz-transform: translateY(-50%);
+            -o-transform: translateY(-50%);
+            transform: translateY(-50%);
+          }
+        }
         p {
           margin-top: 20px;
           font-size: 16px;
