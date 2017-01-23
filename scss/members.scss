@@ -144,31 +144,12 @@
   position: relative;
   width: 1em;
   height: 1em;
-  background-color: #cccccc;
+  background-color: #44a5db;
   font-size: 12em;
   text-align: center;
    border-radius:(50%);
 }
-.slice-right {
-  position: absolute;
-  z-index: 11;
-  background-color: #44a5db;
-  width: 100%;
-  height: 100%;
-  clip: rect(0, .5em, .5em, .5em);
-   border-radius:(50%);
 
-}
-.slice-left {
-  position: absolute;
-  z-index: 11;
-  background-color: #44a5db;
-  width: 100%;
-  height: 100%;
-  clip: rect(0, .5em, .5em, .5em);
-   border-radius:(50%);
-
-}
 .percent {
   position: absolute;
   z-index: 20;
@@ -191,44 +172,100 @@
   color: #cccccc;
 }
 
-$animation-speed: .3s;
-.slice-right {
-  -webkit-animation-delay: $animation-speed * 4;
-  -webkit-animation-duration: $animation-speed;
-  -webkit-animation-name: right-slice;
-  -webkit-animation-iteration-count: 1;
-  -webkit-animation-fill-mode: forwards;
+
+$configs: (
+        chart-two: (
+                svgSize: 175px,
+                percentage: 100,
+                strokeWidth: 8px,
+                backgroundColor: #cccccc,
+                foregroundColor: #44a5db,
+                labelColor: #cccccc,
+                labelFontSize: 2.5rem,
+                duration: 3s,
+                animationDelay: 1s
+        )
+);
+
+
+/* ------- DO NOT EDIT BELOW --------- */
+$pi: 3.14;
+$labelData: '';
+@for $i from 0 to 101 {
+  $labelData: $labelData + $i + '%' + '\a';
 }
 
-.slice-left {
-  -webkit-animation-delay: $animation-speed * 5;
-  -webkit-animation-duration: $animation-speed;
-  -webkit-animation-name: left-slice;
-  -webkit-animation-iteration-count: 1;
-  -webkit-animation-timing-function: ease-out;
-  -webkit-animation-fill-mode: forwards;
-}
+@each $chart, $param in $configs {
 
-@-webkit-keyframes right-slice {
-  from {
-    clip: rect(0, 50%, .5em, .5em);
+  $c: (map-get($param, svgSize) - map-get($param, strokeWidth)) * $pi;
+  $cOffSet: (map-get($param, percentage)/100)*$c;
+
+  .#{$chart} {
+    width: map-get($param, svgSize);
+    height: map-get($param, svgSize);
+    margin: 0 auto;
+    position: relative;
+
+    &.animate {
+      svg .circle-foreground {
+        animation: offset map-get($param, duration) ease-in-out forwards;
+        animation-delay: map-get($param, animationDelay);
+      }
+      figcaption:after {
+        animation: #{$chart}-label map-get($param, duration) steps(map-get($param, percentage)) forwards;
+        animation-delay: map-get($param, animationDelay);
+      }
+    }
+
+    svg {
+      width: 100%;
+      height: 100%;
+      .circle-background {
+        r: (map-get($param, svgSize) - map-get($param, strokeWidth))/2;
+        cx: 50%;
+        cy: 50%;
+        fill: none;
+        stroke: map-get($param, backgroundColor);
+        stroke-width: map-get($param, strokeWidth);
+      }
+      .circle-foreground {
+        @extend .circle-background;
+        stroke: map-get($param, foregroundColor);
+        stroke-dasharray: $cOffSet $c;
+        stroke-dashoffset: $cOffSet;
+        stroke-linecap: round;
+        transform-origin: 50% 50%;
+        transform: rotate(-90deg);
+      }
+    }
+    figcaption {
+      display: inline-block;
+      width: 100%;
+      height: map-get($param, labelFontSize);
+      overflow: hidden;
+      text-align: center;
+      color: map-get($param, labelColor);
+      position: absolute;
+      top: calc(50% - #{map-get($param, labelFontSize)/2});
+      left: 0;
+      font-size: 0;
+      &:after {
+        display: inline-block;
+        content: $labelData;
+        white-space: pre;
+        font-size: map-get($param, labelFontSize);
+        line-height: map-get($param, labelFontSize);
+      }
+    }
   }
-  50% {
-    clip: rect(0, 1em, .5em, .5em);
-  }
-  to {
-    clip: rect(0, 1em, 1em, .5em);
+  @keyframes #{$chart}-label {
+    100% {
+      transform: translateY(map-get($param, labelFontSize) * (-(map-get($param, percentage))));
+    }
   }
 }
-
-@-webkit-keyframes left-slice {
-  from {
-    clip: rect(.5em, .5em, 1em, .5em);
-  }
-  50% {
-    clip: rect(.5em, .5em, 1em, 0)
-  }
-  to {
-    clip: rect(-0.3em, .5em, 1em, 0);
+@keyframes offset {
+  100% {
+    stroke-dashoffset: 0;
   }
 }
