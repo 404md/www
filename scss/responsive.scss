@@ -97,6 +97,22 @@
       }
     }
   }
+  .case-study {
+    .container {
+      .right-block {
+        width: 40%;
+        min-height: 800px;
+        .right-info {
+          width: 100%;
+          .logo {
+            img {
+              height: 60px;
+            }
+          }
+        }
+      }
+    }
+  }
 }
 
 @media screen and (max-width: 992px) {
@@ -200,9 +216,10 @@
       }
       .right-block {
         float:none;
-        height: 400px;
+        min-height: 630px;
         width: 100%;
         text-align: center;
+        margin-bottom: 20px;
         .right-info {
           width: 100%;
         }
@@ -390,7 +407,7 @@
        }
       }
       .right-block {
-        height: 450px;
+        min-height:800px
       }
     }
   }
@@ -438,6 +455,27 @@
           }
         }
       }
+    }
+  }
+}
+
+@media (min-width: 320px) {
+  .wrapper {
+    &.contact {
+      .main-block {
+        .container {
+          .input-field {
+            .hole-form {
+              width: 80%;
+            }
+          }
+        }
+      }
+    }
+    .g-recaptcha {
+      transform:scale(0.84);
+      -webkit-transform:scale(0.84);
+      transform-origin:0 0;-webkit-transform-origin:0 0;
     }
   }
 }
