@@ -12,6 +12,19 @@ img {
   border: 0;
 }
 
+a {
+  text-decoration: none;
+  color:#dd5931;
+  cursor: pointer;
+  a:hover {
+    color:#000000;
+  }
+}
+
+.text-center {
+  text-align: center;
+}
+
 
 .display-flex {
   display: flex;
@@ -235,6 +248,9 @@ body {
       float: left;
       .img-logo {
         height: 75px;
+        a {
+          display: inline-block;
+        }
       }
     }
     .nav-top {
@@ -433,6 +449,11 @@ body {
 /* Footer Gallery*/
 
 .gallery {
+  &.members-gallary {
+    .gallary-line {
+      margin-top: 10px;
+    }
+  }
   .gallary-line {
     height: 300px;
     margin-top: 60px;
