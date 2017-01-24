@@ -1,12 +1,10 @@
 (function ($) {
 
     $('.our-members').slick({
-        // infinite: true,
+        infinite: true,
         slidesToShow: 3,
         slidesToScroll: 1,
-        initialSlide: 3,
-        infinite: false,
-        adaptiveHeight: true,
+        
 
         responsive: [
             {
