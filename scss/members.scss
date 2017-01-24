@@ -14,12 +14,14 @@
       .container {
         .our-members {
           &.slick-slider {
-            margin-right: -30px;
+            .slick-list {
+              margin: 0 -15px;
+            }
           }
           .slick-prev {
             top: -20px;
             left: auto;
-            right: 72px;
+            right: 42px;
             &:before {
               content: '<';
               background: #dd5931;
@@ -30,7 +32,7 @@
           }
           .slick-next {
             top: -20px;
-            right: 41px;
+            right: 11px;
             &:before {
               content: '>';
               background: #dd5931;
@@ -41,7 +43,9 @@
           }
           .slick-list {
             .member-info {
-              margin-right: 30px;
+              &.slick-slide {
+                margin: 0 15px;
+              }
               .member-pic {
                 img {
                   width: 100%;
@@ -91,11 +95,116 @@
     margin-top: 50px;
     .left-block {
       float:left;
+      width: 50%;
+      font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+      .mockup {
+        background: #fff;
+        border: 1px solid #e1e1e1;
+        box-shadow: 0 1px 7px 0 rgba(0, 0, 0, .08);
+        padding: 20px 50px 50px;
+        position: relative;
+        margin-bottom: 40px;
+        .logo-img {
+          height: 35px;
+          margin: 0 auto;
+          display: flex;
+        }
+
+        .mockup-head {
+          border-width: 1px 0;
+          border-color: #3b9ff3;
+          border-style: solid;
+          margin: 20px 0;
+          padding: 5px 0 15px 0;
+          h1 {
+            color: #3b9ff3;
+            font-size: 24px;
+            line-height: 40px;
+            margin: 0;
+            text-align: left;
+          }
+          .flex-row {
+            display: flex;
+            flex-wrap: wrap;
+            font-size: 17px;
+            .flex-item-6 {
+              width: 50%;
+              margin: 10px 0;
+              &.text-left {
+                text-align: left;
+              }
+              &.text-right {
+                text-align: right;
+              }
+              &.self-center {
+                width: 50%;
+                line-height: 37px;
+                text-align: right;
+              }
+              .icons-cont {
+                i {
+                  background: #ddd;
+                  padding: 6px;
+                  border-radius: 50%;
+                  margin-left: 10px;
+                }
+                .five {
+                  padding: 7px 8px;
+                }
+                .fa-facebook {
+                  font-size: 15px;
+                  padding: 9px 12px;
+                }
+                .fa-twitter {
+                  font-size: 16px;
+                  padding: 9px;
+                }
+              }
+            }
+          }
+        }
+
+        .mockup-cont {
+          & > p {
+            margin: 0 0 20px;
+          }
+
+          img {
+            margin-bottom: 20px;
+            opacity: .7;
+            width: 100%;
+          }
+
+          .blurry {
+            position: relative;
+            p {
+              filter: blur(2.5px);
+              -webkit-filter: blur(2.5px);
+            }
+
+            .btn {
+              position: absolute;
+              top: 50%;
+              left: 50%;
+              transform: translateX(-50%) translateY(-50%);
+              -webkit-transform: translateX(-50%) translateY(-50%);
+              &.btn-primary {
+                background: #44a5db;
+                border: 0;
+                padding: 10px;
+                color: #fff;
+                font-size: 13px;
+                text-transform: uppercase;
+              }
+            }
+          }
+        }
+      }
     }
     .right-block {
       float:right;
       width: 50%;
-      height: 630px;
+      height:700px;
       .right-info {
         width: 90%;
         float: right;
@@ -138,134 +247,11 @@
   }
 }
 
-
-.pie {
-  display: inline-block;
+.circle1, .circle2, .circle3 {
+  margin: 0 auto;
+  width: 175px;
+  height: 175px;
   position: relative;
-  width: 1em;
-  height: 1em;
-  background-color: #44a5db;
-  font-size: 12em;
-  text-align: center;
-   border-radius:(50%);
+
 }
 
-.percent {
-  position: absolute;
-  z-index: 20;
-  top: 7px;
-  right: 7px;
-  bottom: 7px;
-  left: 7px;
-  background: #f5f5f4;
-   border-radius:(50%);
-}
-.number {
-  position: absolute;
-  z-index: 30;
-  width: 100%;
-  height: 100%;
-  padding-top: 50%;
-  line-height: 0;
-  font-size: 35px;
-  font-weight: 700;
-  color: #cccccc;
-}
-
-
-$configs: (
-        chart-two: (
-                svgSize: 175px,
-                percentage: 100,
-                strokeWidth: 8px,
-                backgroundColor: #cccccc,
-                foregroundColor: #44a5db,
-                labelColor: #cccccc,
-                labelFontSize: 2.5rem,
-                duration: 3s,
-                animationDelay: 1s
-        )
-);
-
-
-/* ------- DO NOT EDIT BELOW --------- */
-$pi: 3.14;
-$labelData: '';
-@for $i from 0 to 101 {
-  $labelData: $labelData + $i + '%' + '\a';
-}
-
-@each $chart, $param in $configs {
-
-  $c: (map-get($param, svgSize) - map-get($param, strokeWidth)) * $pi;
-  $cOffSet: (map-get($param, percentage)/100)*$c;
-
-  .#{$chart} {
-    width: map-get($param, svgSize);
-    height: map-get($param, svgSize);
-    margin: 0 auto;
-    position: relative;
-
-    &.animate {
-      svg .circle-foreground {
-        animation: offset map-get($param, duration) ease-in-out forwards;
-        animation-delay: map-get($param, animationDelay);
-      }
-      figcaption:after {
-        animation: #{$chart}-label map-get($param, duration) steps(map-get($param, percentage)) forwards;
-        animation-delay: map-get($param, animationDelay);
-      }
-    }
-
-    svg {
-      width: 100%;
-      height: 100%;
-      .circle-background {
-        r: (map-get($param, svgSize) - map-get($param, strokeWidth))/2;
-        cx: 50%;
-        cy: 50%;
-        fill: none;
-        stroke: map-get($param, backgroundColor);
-        stroke-width: map-get($param, strokeWidth);
-      }
-      .circle-foreground {
-        @extend .circle-background;
-        stroke: map-get($param, foregroundColor);
-        stroke-dasharray: $cOffSet $c;
-        stroke-dashoffset: $cOffSet;
-        stroke-linecap: round;
-        transform-origin: 50% 50%;
-        transform: rotate(-90deg);
-      }
-    }
-    figcaption {
-      display: inline-block;
-      width: 100%;
-      height: map-get($param, labelFontSize);
-      overflow: hidden;
-      text-align: center;
-      color: map-get($param, labelColor);
-      position: absolute;
-      top: calc(50% - #{map-get($param, labelFontSize)/2});
-      left: 0;
-      font-size: 0;
-      &:after {
-        display: inline-block;
-        content: $labelData;
-        white-space: pre;
-        font-size: map-get($param, labelFontSize);
-        line-height: map-get($param, labelFontSize);
-      }
-    }
-  }
-  @keyframes #{$chart}-label {
-    100% {
-      transform: translateY(map-get($param, labelFontSize) * (-(map-get($param, percentage))));
-    }
-  }
-}
-@keyframes offset {
-  100% {
-    stroke-dashoffset: 0;
-  }
-}

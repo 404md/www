@@ -42,6 +42,11 @@
               width: 100%;
               .img-plan {
                 float: left;
+                height: 445px;
+                img {
+                  width: auto;
+                  height: 100%;
+                }
               }
               .discription {
                 width: 100%;
@@ -50,20 +55,16 @@
                   padding: 20px;
                   float: left;
                   width: 52%;
-                  height: 384px;
+                  height: 445px;
                 p {
                   font-size: 15px;
                   line-height: 22px;
                   padding-bottom: 10px;
                 }
-                .bold-text {
-
-                }
 
                 .button {
                   margin-top: 17px;
                   margin-bottom: 15px;
-                  float: left;
                   }
                 }
               }
@@ -100,8 +101,8 @@
   .case-study {
     .container {
       .right-block {
-        width: 40%;
-        min-height: 800px;
+        width: 47%;
+        min-height: 700px;
         .right-info {
           width: 100%;
           .logo {
@@ -212,7 +213,8 @@
     .container {
       .left-block {
         float:none;
-        text-align: center;
+        margin: 0 auto;
+        width: 90%;
       }
       .right-block {
         float:none;
@@ -264,6 +266,32 @@
         }
       }
     }
+    &.pricing {
+      .main-block {
+        .container {
+          .display-flex {
+            margin: 0 20px;
+            .plans {
+              width: 360px;
+              margin: 0 auto;
+              margin-bottom: 10px;
+              .discription {
+                .block-responsive {
+                  float: left;
+                  width: 100%;
+                  height: 540px;
+
+                  .button {
+                    margin-top: 17px;
+                    margin-bottom: 15px;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
   }
   .g-recaptcha {
     transform:scale(0.70);
@@ -286,22 +314,18 @@
       .container {
         .display-flex {
           .plans {
-            width: 353px;
             margin: 0 auto;
             margin-bottom: 10px;
             .img-plan {
               float: none;
               img {
                 width: 100%;
-                height: 384px;
               }
             }
             .discription {
               .block-responsive {
                 width: 100%;
-                .button {
-                  float: right;
-                }
+
               }
             }
           }
@@ -402,12 +426,37 @@
   .case-study {
     .container {
       .left-block {
-       img {
-         width: 90%;
-       }
+        .mockup {
+          .mockup-head {
+
+            h1 {
+              color: #3b9ff3;
+              font-size: 24px;
+              line-height: 40px;
+              margin: 0;
+              text-align: center;
+            }
+            .flex-row {
+              .flex-item-6 {
+                width: 100%;
+                &.text-left {
+                  text-align: center;
+                }
+                &.text-right {
+                  text-align: center;
+                }
+                &.self-center {
+                  width: 100%;
+                  line-height: 37px;
+                  text-align: center;
+                }
+              }
+            }
+          }
+        }
       }
       .right-block {
-        min-height:800px
+        min-height:700px
       }
     }
   }
@@ -456,10 +505,47 @@
         }
       }
     }
+    &.pricing {
+      .main-block {
+        .container {
+          .display-flex {
+            .plans {
+              .img-plan {
+                height: 400px;
+              }
+              .discription {
+                .block-responsive {
+                  height: 620px;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+    .container {
+      .partners {
+        .pycoding{
+          img {
+            height: 15px;
+          }
+        }
+        .mitoc {
+          img {
+            height: 30px;
+          }
+        }
+        .usaid {
+          img {
+            height: 40px;
+          }
+        }
+      }
+    }
   }
 }
 
-@media (min-width: 320px) {
+@media (max-width: 320px) {
   .wrapper {
     &.contact {
       .main-block {
@@ -473,9 +559,90 @@
       }
     }
     .g-recaptcha {
-      transform:scale(0.84);
-      -webkit-transform:scale(0.84);
-      transform-origin:0 0;-webkit-transform-origin:0 0;
+      transform: scale(0.84);
+      -webkit-transform: scale(0.84);
+      transform-origin: 0 0;
+      -webkit-transform-origin: 0 0;
+    }
+    &.pricing {
+      .main-block {
+        .container {
+          .display-flex {
+            .plans {
+              .img-plan {
+                float: left;
+                height: 300px;
+                img {
+                  width: auto;
+                  height: 100%;
+                }
+              }
+              .discription {
+                .block-responsive {
+                  height: 700px;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  .case-study {
+    .container {
+      .left-block {
+        .mockup {
+          .logo-img {
+            height: 30px;
+          }
+          .mockup-head {
+
+            h1 {
+              color: #3b9ff3;
+              font-size: 24px;
+              line-height: 40px;
+              margin: 0;
+              text-align: center;
+            }
+            .flex-row {
+              .flex-item-6 {
+                width: 100%;
+                &.text-left {
+                  text-align: center;
+                }
+                &.text-right {
+                  text-align: center;
+                }
+                &.self-center {
+                  width: 100%;
+                  line-height: 37px;
+                  text-align: center;
+                }
+              }
+            }
+          }
+        }
+      }
+      .right-block {
+        min-height: 850px;
+        .right-info {
+          .logo {
+            img {
+              height: 50px;
+            }
+          }
+        }
+      }
+    }
+  }
+  .new-page {
+    .pages {
+      .page-name {
+        font-size: 30px;
+      }
+      .text-page{
+        font-size: 15px;
+      }
     }
   }
 }

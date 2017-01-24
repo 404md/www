@@ -13,6 +13,7 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Arvo:400,700" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato" />
 
+
     <!-- Google Tag Manager -->
     <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
     new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
@@ -41,7 +42,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 <li><a class="link" href="/amenities/">Amenities</a></li>
                 <li><a class="link" href="/pricing/">Pricing</a></li>
                 <li><a class="link" href="/contact/">Contact</a></li>
-                <li><a class="last-line" href="https://blog.404.md"><em class="blog">blog</em></a></li>
+                <li><a class="last-line" href="https://blog.404.md"><span class="blog">blog</span></a></li>
                 <li class="icon"><a href="javascript:void(0);" onclick="NavigationFunction()">
                     <i class="fa fa-bars" aria-hidden="true"></i></a></li>
             </ul>
@@ -132,40 +133,21 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 <h2 class="heading">Projects</h2>
             </div>
         </div>
-        <div class="projects">
+
+        <div class="projects active">
             <div class="container">
                 <div class="display-flex">
                     <div class="project-block">
-                        <figure class="chart-two animate">
-                            <svg role="img" xmlns="http://www.w3.org/2000/svg">
-                                <title>[title here]</title>
-                                <desc>[long description here]</desc>
-                                <circle class="circle-background"/>
-                                <circle class="circle-foreground"/>
-                            </svg>
-                            <figcaption>50% of all males like donuts.</figcaption>
-                        </figure>
+                        <div class="circle1"></div>
                         <div class="text-anvio">Happy <span class="text-color"> Customers</span></div>
                     </div>
                     <div class="project-block">
-                        <div class="pie">
-                            <div class="slice-right"></div>
-                            <div class="slice-left"></div>
-                            <div class="percent">
-                                <div class="number">30,000</div>
-                            </div>
-                        </div>
+                        <div class="circle2"></div>
                         <div class="text-anvio">Hours of <span class="text-color">Computing</span></div>
                     </div>
 
                     <div class="project-block">
-                        <div class="pie">
-                            <div class="slice-right"></div>
-                            <div class="slice-left"></div>
-                            <div class="percent">
-                                <div class="number">700</div>
-                            </div>
-                        </div>
+                        <div class="circle3"></div>
                         <div class="text-anvio">Terabytes of <span class="text-color">Storage</span></div>
                     </div>
                 </div>
@@ -175,7 +157,52 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <div class="case-study">
             <div class="container">
                 <div class="left-block">
-                    <img src="../images/study.jpg" alt="Case Study" />
+                    <div class="mockup">
+                    <img class="logo-img" src="../images/adtechmedia-logo.svg" alt="AdTechMedia">
+
+                    <div class="mockup-head">
+                        <div class="flex-row">
+                            <div class="flex-item-6">
+                                <h1>Article Title</h1>
+                            </div>
+                            <div class="flex-item-6 self-center">
+                                <div class="icons-cont text-right">
+                                    <i class="five">5¢</i>
+                                    <i class="fa fa-facebook"></i>
+                                    <i class="fa fa-twitter"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="flex-row">
+                            <div class="flex-item-6 text-left">
+                                By John Smith, <i>author</i>
+                            </div>
+                            <div class="flex-item-6 text-right">September 22nd, 2016</div>
+                        </div>
+                    </div>
+
+                    <div class="mockup-cont">
+                        <img src="../images/mockup-image.jpg">
+
+                        <p>It is a long established fact that a reader will be distracted by
+                            the readable content of a page when looking at its layout.
+                        </p>
+
+                        <div class="blurry">
+                            <p>It is a long established fact that a reader will be distracted by
+                                the readable content of a page when looking at its layout.
+                                The point of using Lorem Ipsum is that it has a more-or-less normal
+                                distribution of letters, as opposed to using 'Content here, content here',
+                                making it look like readable English.
+                            </p>
+                            <button type="submit" class="btn btn-primary">
+                                <i class="fa fa-lock"></i>
+                                Unlock Content
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
                 </div>
                 <div class="right-block">
                     <div class="right-info">
@@ -250,6 +277,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     </div>
 </div>
 
+
+
 <footer>
 <div class="contacts">
     <div class="container get-in-touch">
@@ -318,11 +347,12 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 </div>
 </footer>
 
+
 <script type="text/javascript" src="../js/jquery-1.11.0.min.js"></script>
-<script type="text/javascript" src="../js/jquery.classyloader.min.js"></script>
 <script type="text/javascript" src="../js/slick-1.6.0.min.js"></script>
 <script type="text/javascript" src="../js/main.js"></script>
 <script type="text/javascript" src="../js/members.js"></script>
+<script type="text/javascript" src="../js/progressbar.min.js"></script>
 
 </body>
 </html>
