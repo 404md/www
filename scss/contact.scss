@@ -20,7 +20,7 @@
           justify-content: center;
           align-items: center;
           .hole-form {
-            width: 65%;
+            width: auto;
             label {
               display: block;
               margin-bottom: 10px;
@@ -42,6 +42,7 @@
               margin-bottom: 20px;
               width: 100%;
               color: #aaaaaa;
+              resize:none;
             }
             .button {
               width: 100%;

@@ -74,11 +74,7 @@
       }
     }
   }
-  .g-recaptcha {
-    transform:scale(0.83);
-    -webkit-transform:scale(0.83);
-    transform-origin:0 0;-webkit-transform-origin:0 0;
-  }
+
   .gallery {
     .gallary-line {
       height: 180px;
@@ -102,7 +98,6 @@
     .container {
       .right-block {
         width: 47%;
-        min-height: 700px;
         .right-info {
           width: 100%;
           .logo {
@@ -132,19 +127,24 @@
             line-height: 100px;
           }
           &.responsive {
+            //-moz-box-shadow:    inset  0  8px 8px -8px #696868;
+            //-webkit-box-shadow: inset  0  8px 8px -8px #696868;
+            //box-shadow:        inset  0  8px 8px -8px #696868;
             float: none;
             clear: both;
             line-height: 30px;
+
             .icon {
               right: 0;
               top: 0;
               position: absolute;
               line-height: 100px;
-
             }
             li {
               float: none;
               display: inline;
+
+              //position: relative;
               a {
                 display: block;
                 text-align: center;
@@ -152,8 +152,24 @@
               .last-line {
                 line-height: 1;
                 padding: 10px 0;
+                .blog {
+                  margin-left: 0;
+                }
+              }
+              .link {
+                margin: 0;
               }
             }
+            //&:before {
+            //  content:'';
+            //  position: absolute;
+            //  top: 0;
+            //  bottom: 0;
+            //  left: 0;
+            //  right: 0;
+            //  background: black;
+            //  opacity: 0.4;
+            //}
           }
         }
       }
@@ -215,13 +231,15 @@
         float:none;
         margin: 0 auto;
         width: 90%;
+        .mockup {
+          margin-bottom: 0;
+        }
       }
       .right-block {
         float:none;
-        min-height: 630px;
         width: 100%;
         text-align: center;
-        margin-bottom: 20px;
+        min-height: 630px;
         .right-info {
           width: 100%;
         }
@@ -259,9 +277,6 @@
             bottom: 0;
             right:0;
             width: 100%;
-            .hole-form {
-              width: 55%;
-            }
           }
         }
       }
@@ -270,17 +285,16 @@
       .main-block {
         .container {
           .display-flex {
-            margin: 0 20px;
+            display: unset;
             .plans {
               width: 360px;
               margin: 0 auto;
               margin-bottom: 10px;
               .discription {
                 .block-responsive {
-                  float: left;
+                  min-height: 500px;
                   width: 100%;
-                  height: 540px;
-
+                  height: auto;
                   .button {
                     margin-top: 17px;
                     margin-bottom: 15px;
@@ -293,11 +307,7 @@
       }
     }
   }
-  .g-recaptcha {
-    transform:scale(0.70);
-    -webkit-transform:scale(0.70);
-    transform-origin:0 0;-webkit-transform-origin:0 0;
-  }
+
   .gallery {
     &.members-gallary {
     .gallary-line {
@@ -306,6 +316,39 @@
     }
   }
 }
+
+@media (max-width: 780px) {
+  .gallery {
+    min-height: 360px;
+    .gallary-line {
+      min-height: 360px;
+      .responsive-gallery{
+       overflow: hidden;
+        .img1 {
+          width: 80%;
+        }
+        .two-pic {
+          width: 20%;
+          .img2, .img3 {
+            background-size: unset;
+          }
+        }
+      }
+      .img4 {
+        width: 63%;
+        .we-love {
+          span {
+            font-size: 15px;
+          }
+        }
+      }
+      .img5 {
+        width: 17%;
+      }
+    }
+  }
+}
+
 
 @media (max-width: 695px) {
 .wrapper {
@@ -357,7 +400,7 @@
     .main-block {
       min-height: 660px;
       .main-info {
-        height: 450px;
+        height: 530px;
       }
     }
     .container {
@@ -454,9 +497,13 @@
             }
           }
         }
+        .mockup {
+          margin-bottom: 0;
+        }
       }
       .right-block {
-        min-height:700px
+        min-height:820px;
+        margin-bottom: 20px;
       }
     }
   }
@@ -468,6 +515,36 @@
     }
   }
 }
+
+@media (max-width: 550px) {
+  .gallery {
+    .gallary-line {
+      .responsive-gallery {
+        .img1 {
+          width: 66%;
+        }
+        .two-pic {
+          width: 34%;
+          &.two-pic-responsive {
+            width: 27%;
+          }
+        }
+      }
+      .img4 {
+        width: 45%;
+        .we-love {
+          span {
+            font-size: 12px;
+          }
+        }
+      }
+      .img5 {
+        width: 28%;
+      }
+    }
+  }
+}
+
 
 @media (max-width:450px) {
   .contacts {
@@ -510,13 +587,9 @@
         .container {
           .display-flex {
             .plans {
+              width: auto;
               .img-plan {
-                height: 400px;
-              }
-              .discription {
-                .block-responsive {
-                  height: 620px;
-                }
+                height: auto;
               }
             }
           }
@@ -545,6 +618,30 @@
   }
 }
 
+@media (max-width: 360px) {
+  .case-study {
+    .container {
+      .right-block {
+        min-height: 770px;
+        .right-info {
+          .right-header {
+            font-size: 45px;
+            &:before {
+              width: 100px;
+            }
+          }
+          .logo {
+            height: 60px;
+            img {
+              height: 50px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
 @media (max-width: 320px) {
   .wrapper {
     &.contact {
@@ -558,29 +655,15 @@
         }
       }
     }
-    .g-recaptcha {
-      transform: scale(0.84);
-      -webkit-transform: scale(0.84);
-      transform-origin: 0 0;
-      -webkit-transform-origin: 0 0;
-    }
-    &.pricing {
+
+    &.main {
       .main-block {
-        .container {
-          .display-flex {
-            .plans {
-              .img-plan {
-                float: left;
-                height: 300px;
-                img {
-                  width: auto;
-                  height: 100%;
-                }
-              }
-              .discription {
-                .block-responsive {
-                  height: 700px;
-                }
+        .main-info {
+          height: 530px;
+          .local-com {
+            .more {
+              .more-about {
+                font-size: 16px;
               }
             }
           }

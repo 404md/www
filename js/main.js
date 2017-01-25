@@ -10,11 +10,16 @@ function NavigationFunction() {
 }
 
 function myMap() {
-    var mapCanvas = document.getElementById("map");
-    var mapOptions = {
-        center: new google.maps.LatLng(46.9861808, 28.8577161),
-        zoom: 18
+    var myLatLng = {lat: 46.9869511, lng: 28.8579025};
 
-    }
-    var map = new google.maps.Map(mapCanvas, mapOptions);
+    var map = new google.maps.Map(document.getElementById('map'), {
+        zoom: 18,
+        center: myLatLng
+    });
+
+    var marker = new google.maps.Marker({
+        position: myLatLng,
+        map: map,
+        title: 'Olimpiada'
+    });
 }

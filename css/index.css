@@ -18,6 +18,8 @@
       width: 300px;
       text-align: center;
       padding-bottom: 20px; }
+      .wrapper.amenities .main-block .blocks .container .display-flex .flex-block img {
+        height: 90px; }
 
 .wrapper.contact .main-block {
   min-height: 700px; }
@@ -37,7 +39,7 @@
       justify-content: center;
       align-items: center; }
       .wrapper.contact .main-block .container .input-field .hole-form {
-        width: 65%; }
+        width: auto; }
         .wrapper.contact .main-block .container .input-field .hole-form label {
           display: block;
           margin-bottom: 10px;
@@ -56,7 +58,8 @@
           border: 1px solid #454545;
           margin-bottom: 20px;
           width: 100%;
-          color: #aaaaaa; }
+          color: #aaaaaa;
+          resize: none; }
         .wrapper.contact .main-block .container .input-field .hole-form .button {
           width: 100%; }
         .wrapper.contact .main-block .container .input-field .hole-form .heading-contact {
@@ -81,11 +84,14 @@ a {
   text-decoration: none;
   color: #dd5931;
   cursor: pointer; }
-  a a:hover {
+  a:hover {
     color: #000000; }
 
 .text-center {
   text-align: center; }
+
+.odd {
+  background: #FCFCFB; }
 
 .display-flex {
   display: flex;
@@ -580,12 +586,13 @@ body {
                 border-radius: 50%;
                 margin-left: 10px; }
               .case-study .container .left-block .mockup .mockup-head .flex-row .flex-item-6 .icons-cont .five {
-                padding: 7px 8px; }
+                padding: 7px 8px;
+                font-size: 17px; }
               .case-study .container .left-block .mockup .mockup-head .flex-row .flex-item-6 .icons-cont .fa-facebook {
                 font-size: 15px;
                 padding: 9px 12px; }
               .case-study .container .left-block .mockup .mockup-head .flex-row .flex-item-6 .icons-cont .fa-twitter {
-                font-size: 16px;
+                font-size: 15px;
                 padding: 9px; }
         .case-study .container .left-block .mockup .mockup-cont > p {
           margin: 0 0 20px; }
@@ -723,12 +730,6 @@ body {
           margin-top: 17px;
           margin-bottom: 15px; }
 
-  .g-recaptcha {
-    transform: scale(0.83);
-    -webkit-transform: scale(0.83);
-    transform-origin: 0 0;
-    -webkit-transform-origin: 0 0; }
-
   .gallery .gallary-line {
     height: 180px; }
     .gallery .gallary-line .img1 {
@@ -741,8 +742,7 @@ body {
       height: 180px; }
 
   .case-study .container .right-block {
-    width: 47%;
-    min-height: 700px; }
+    width: 47%; }
     .case-study .container .right-block .right-info {
       width: 100%; }
       .case-study .container .right-block .right-info .logo img {
@@ -775,6 +775,10 @@ body {
         .main-nav .container .nav-top .navt.responsive li .last-line {
           line-height: 1;
           padding: 10px 0; }
+          .main-nav .container .nav-top .navt.responsive li .last-line .blog {
+            margin-left: 0; }
+        .main-nav .container .nav-top .navt.responsive li .link {
+          margin: 0; }
 
   .footer-black .container .left-footer {
     float: none;
@@ -811,12 +815,13 @@ body {
     float: none;
     margin: 0 auto;
     width: 90%; }
+    .case-study .container .left-block .mockup {
+      margin-bottom: 0; }
   .case-study .container .right-block {
     float: none;
-    min-height: 630px;
     width: 100%;
     text-align: center;
-    margin-bottom: 20px; }
+    min-height: 630px; }
     .case-study .container .right-block .right-info {
       width: 100%; }
 
@@ -840,30 +845,41 @@ body {
     bottom: 0;
     right: 0;
     width: 100%; }
-    .wrapper.contact .main-block .container .input-field .hole-form {
-      width: 55%; }
   .wrapper.pricing .main-block .container .display-flex {
-    margin: 0 20px; }
+    display: unset; }
     .wrapper.pricing .main-block .container .display-flex .plans {
       width: 360px;
       margin: 0 auto;
       margin-bottom: 10px; }
       .wrapper.pricing .main-block .container .display-flex .plans .discription .block-responsive {
-        float: left;
+        min-height: 500px;
         width: 100%;
-        height: 540px; }
+        height: auto; }
         .wrapper.pricing .main-block .container .display-flex .plans .discription .block-responsive .button {
           margin-top: 17px;
           margin-bottom: 15px; }
 
-  .g-recaptcha {
-    transform: scale(0.7);
-    -webkit-transform: scale(0.7);
-    transform-origin: 0 0;
-    -webkit-transform-origin: 0 0; }
-
   .gallery.members-gallary .gallary-line {
     margin-top: 0; } }
+@media (max-width: 780px) {
+  .gallery {
+    min-height: 360px; }
+    .gallery .gallary-line {
+      min-height: 360px; }
+      .gallery .gallary-line .responsive-gallery {
+        overflow: hidden; }
+        .gallery .gallary-line .responsive-gallery .img1 {
+          width: 80%; }
+        .gallery .gallary-line .responsive-gallery .two-pic {
+          width: 20%; }
+          .gallery .gallary-line .responsive-gallery .two-pic .img2, .gallery .gallary-line .responsive-gallery .two-pic .img3 {
+            background-size: unset; }
+      .gallery .gallary-line .img4 {
+        width: 63%; }
+        .gallery .gallary-line .img4 .we-love span {
+          font-size: 15px; }
+      .gallery .gallary-line .img5 {
+        width: 17%; } }
 @media (max-width: 695px) {
   .wrapper.pricing .main-block .container .display-flex .plans {
     margin: 0 auto;
@@ -881,7 +897,7 @@ body {
   .wrapper .main-block {
     min-height: 660px; }
     .wrapper .main-block .main-info {
-      height: 450px; }
+      height: 530px; }
   .wrapper .container .partners {
     justify-content: space-around;
     line-height: 90px; }
@@ -936,11 +952,27 @@ body {
       width: 100%;
       line-height: 37px;
       text-align: center; }
+  .case-study .container .left-block .mockup {
+    margin-bottom: 0; }
   .case-study .container .right-block {
-    min-height: 700px; }
+    min-height: 820px;
+    margin-bottom: 20px; }
 
   .new-page .pages .page-name {
     font-size: 40px; } }
+@media (max-width: 550px) {
+  .gallery .gallary-line .responsive-gallery .img1 {
+    width: 66%; }
+  .gallery .gallary-line .responsive-gallery .two-pic {
+    width: 34%; }
+    .gallery .gallary-line .responsive-gallery .two-pic.two-pic-responsive {
+      width: 27%; }
+  .gallery .gallary-line .img4 {
+    width: 45%; }
+    .gallery .gallary-line .img4 .we-love span {
+      font-size: 12px; }
+  .gallery .gallary-line .img5 {
+    width: 28%; } }
 @media (max-width: 450px) {
   .contacts .get-in-touch .block-3 {
     width: 100%;
@@ -958,32 +990,34 @@ body {
     margin-bottom: 20px; }
   .wrapper .main-block .main-info .local-com .more {
     margin-top: 20px; }
-  .wrapper.pricing .main-block .container .display-flex .plans .img-plan {
-    height: 400px; }
-  .wrapper.pricing .main-block .container .display-flex .plans .discription .block-responsive {
-    height: 620px; }
+  .wrapper.pricing .main-block .container .display-flex .plans {
+    width: auto; }
+    .wrapper.pricing .main-block .container .display-flex .plans .img-plan {
+      height: auto; }
   .wrapper .container .partners .pycoding img {
     height: 15px; }
   .wrapper .container .partners .mitoc img {
     height: 30px; }
   .wrapper .container .partners .usaid img {
     height: 40px; } }
+@media (max-width: 360px) {
+  .case-study .container .right-block {
+    min-height: 770px; }
+    .case-study .container .right-block .right-info .right-header {
+      font-size: 45px; }
+      .case-study .container .right-block .right-info .right-header:before {
+        width: 100px; }
+    .case-study .container .right-block .right-info .logo {
+      height: 60px; }
+      .case-study .container .right-block .right-info .logo img {
+        height: 50px; } }
 @media (max-width: 320px) {
   .wrapper.contact .main-block .container .input-field .hole-form {
     width: 80%; }
-  .wrapper .g-recaptcha {
-    transform: scale(0.84);
-    -webkit-transform: scale(0.84);
-    transform-origin: 0 0;
-    -webkit-transform-origin: 0 0; }
-  .wrapper.pricing .main-block .container .display-flex .plans .img-plan {
-    float: left;
-    height: 300px; }
-    .wrapper.pricing .main-block .container .display-flex .plans .img-plan img {
-      width: auto;
-      height: 100%; }
-  .wrapper.pricing .main-block .container .display-flex .plans .discription .block-responsive {
-    height: 700px; }
+  .wrapper.main .main-block .main-info {
+    height: 530px; }
+    .wrapper.main .main-block .main-info .local-com .more .more-about {
+      font-size: 16px; }
 
   .case-study .container .left-block .mockup .logo-img {
     height: 30px; }
