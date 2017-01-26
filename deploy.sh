@@ -1,37 +1,29 @@
 #!/usr/bin/env bash
 
-echo "Uploading index.html"
-aws s3 cp index.html s3://www.404.md/ --region eu-central-1 --storage-class REDUCED_REDUNDANCY --metadata-directive REPLACE --cache-control max-age=604800
-aws s3 cp robots.txt s3://www.404.md/ --region eu-central-1 --storage-class REDUCED_REDUNDANCY --metadata-directive REPLACE --cache-control max-age=604800
-aws s3 cp sitemap.xml s3://www.404.md/ --region eu-central-1 --storage-class REDUCED_REDUNDANCY --metadata-directive REPLACE --cache-control max-age=604800
+#echo "Install minifying tools"
+#npm install html-minifier -g
+#npm install cssnano-cli -g
 
-echo "Synchronizing css/"
-aws s3 sync --delete css/ s3://www.404.md/css/ --region eu-central-1 --storage-class REDUCED_REDUNDANCY --metadata-directive REPLACE --cache-control max-age=604800
+echo "Minifying css code"
+cssnano < css/index.css > css/index.min.css
 
-echo "Synchronizing fonts/"
-aws s3 sync --delete fonts/ s3://www.404.md/fonts/ --region eu-central-1 --storage-class REDUCED_REDUNDANCY --metadata-directive REPLACE --cache-control max-age=604800
+echo "Copying resources into build/release folder"
+mkdir -p build/Release/
+cp -R robots.txt sitemap.xml css fonts images js amenities contact members pricing privacy terms build/Release/
 
-echo "Synchronizing images/"
-aws s3 sync --delete images/ s3://www.404.md/images/ --region eu-central-1 --storage-class REDUCED_REDUNDANCY --metadata-directive REPLACE --cache-control max-age=604800
+echo "Minifying html code"
+html-minifier --collapse-whitespace --remove-comments ./index.html -o build/Release/index.html
+html-minifier --collapse-whitespace --remove-comments ./amenities/index.html -o build/Release/amenities/index.html
+html-minifier --collapse-whitespace --remove-comments ./contact/index.html -o build/Release/contact/index.html
+html-minifier --collapse-whitespace --remove-comments ./members/index.html -o build/Release/members/index.html
+html-minifier --collapse-whitespace --remove-comments ./pricing/index.html -o build/Release/pricing/index.html
+html-minifier --collapse-whitespace --remove-comments ./privacy/index.html -o build/Release/privacy/index.html
+html-minifier --collapse-whitespace --remove-comments ./terms/index.html -o build/Release/terms/index.html
 
-echo "Synchronizing js/"
-aws s3 sync --delete js/ s3://www.404.md/js/ --region eu-central-1 --storage-class REDUCED_REDUNDANCY --metadata-directive REPLACE --cache-control max-age=604800
+#echo "Synchronizing build/Release/"
+#aws s3 sync --delete build/Release/ s3://www.404.md/ --region eu-central-1 --storage-class REDUCED_REDUNDANCY --metadata-directive REPLACE --cache-control max-age=604800
 
-echo "Synchronizing amenities/"
-aws s3 sync --delete amenities/ s3://www.404.md/amenities/ --region eu-central-1 --storage-class REDUCED_REDUNDANCY --metadata-directive REPLACE --cache-control max-age=604800
+#echo "Cleaning up build/Release/"
+#rm -rf build/Release/*
 
-echo "Synchronizing contact/"
-aws s3 sync --delete contact/ s3://www.404.md/contact/ --region eu-central-1 --storage-class REDUCED_REDUNDANCY --metadata-directive REPLACE --cache-control max-age=604800
-
-echo "Synchronizing members/"
-aws s3 sync --delete members/ s3://www.404.md/members/ --region eu-central-1 --storage-class REDUCED_REDUNDANCY --metadata-directive REPLACE --cache-control max-age=604800
-
-echo "Synchronizing pricing/"
-aws s3 sync --delete pricing/ s3://www.404.md/pricing/ --region eu-central-1 --storage-class REDUCED_REDUNDANCY --metadata-directive REPLACE --cache-control max-age=604800
-
-echo "Synchronizing privacy/"
-aws s3 sync --delete privacy/ s3://www.404.md/privacy/ --region eu-central-1 --storage-class REDUCED_REDUNDANCY --metadata-directive REPLACE --cache-control max-age=604800
-
-echo "Synchronizing terms/"
-aws s3 sync --delete terms/ s3://www.404.md/terms/ --region eu-central-1 --storage-class REDUCED_REDUNDANCY --metadata-directive REPLACE --cache-control max-age=604800
-
+echo "Done"
