@@ -23,50 +23,60 @@
 
 .wrapper.contact .main-block {
   min-height: 700px; }
-  .wrapper.contact .main-block .container {
-    position: relative; }
-    .wrapper.contact .main-block .container .map-style {
-      height: 700px; }
-    .wrapper.contact .main-block .container .input-field {
+  .wrapper.contact .main-block .container .map-style {
+    width: 60%;
+    height: 700px;
+    float: left; }
+  .wrapper.contact .main-block .container .input-field {
+    position: relative;
+    width: 40%;
+    height: 700px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url(../images/map.png);
+    background-position: center;
+    background-size: cover;
+    float: left; }
+    .wrapper.contact .main-block .container .input-field:before {
       position: absolute;
-      top: 0;
-      right: 15px;
-      width: 40%;
+      content: '';
       background: white;
-      opacity: 0.93;
-      height: 700px;
-      display: flex;
-      justify-content: center;
-      align-items: center; }
-      .wrapper.contact .main-block .container .input-field .hole-form {
-        width: auto; }
-        .wrapper.contact .main-block .container .input-field .hole-form label {
-          display: block;
-          margin-bottom: 10px;
-          font-size: 18px; }
-        .wrapper.contact .main-block .container .input-field .hole-form .input-style {
-          height: 40px;
-          width: 100%;
-          font-size: 20px;
-          padding: 0 10px;
-          border: 1px solid #454545;
-          margin-bottom: 20px;
-          color: #aaaaaa; }
-        .wrapper.contact .main-block .container .input-field .hole-form .text-style {
-          font-size: 20px;
-          padding: 10px;
-          border: 1px solid #454545;
-          margin-bottom: 20px;
-          width: 100%;
-          color: #aaaaaa;
-          resize: none; }
-        .wrapper.contact .main-block .container .input-field .hole-form .button {
-          width: 100%; }
-        .wrapper.contact .main-block .container .input-field .hole-form .heading-contact {
-          text-transform: uppercase;
-          font-size: 25px;
-          font-weight: 600;
-          padding-bottom: 20px; }
+      top: 0;
+      left: 0;
+      bottom: 0;
+      right: 0;
+      opacity: 0.95; }
+    .wrapper.contact .main-block .container .input-field .hole-form {
+      position: relative;
+      width: auto; }
+      .wrapper.contact .main-block .container .input-field .hole-form label {
+        display: block;
+        margin-bottom: 10px;
+        font-size: 18px; }
+      .wrapper.contact .main-block .container .input-field .hole-form .input-style {
+        height: 40px;
+        width: 100%;
+        font-size: 20px;
+        padding: 0 10px;
+        border: 1px solid #454545;
+        margin-bottom: 20px;
+        color: #aaaaaa; }
+      .wrapper.contact .main-block .container .input-field .hole-form .text-style {
+        font-size: 20px;
+        padding: 10px;
+        border: 1px solid #454545;
+        margin-bottom: 20px;
+        width: 100%;
+        color: #aaaaaa;
+        resize: none; }
+      .wrapper.contact .main-block .container .input-field .hole-form .button {
+        width: 100%; }
+      .wrapper.contact .main-block .container .input-field .hole-form .heading-contact {
+        text-transform: uppercase;
+        font-size: 25px;
+        font-weight: 600;
+        padding-bottom: 20px; }
 
 * {
   margin: 0;
@@ -87,7 +97,7 @@ a {
   a:hover {
     color: #000000; }
 
-.text-center {
+.btn-center {
   text-align: center; }
 
 .odd {
@@ -666,17 +676,22 @@ body {
   .wrapper.pricing .main-block .container .display-flex .plans .img-plan {
     position: relative; }
     .wrapper.pricing .main-block .container .display-flex .plans .img-plan img {
-      width: 100%;
-      height: 384px; }
-    .wrapper.pricing .main-block .container .display-flex .plans .img-plan .text-plan {
+      width: 100%; }
+    .wrapper.pricing .main-block .container .display-flex .plans .img-plan .back-color {
       position: absolute;
+      height: 95px;
+      background-color: rgba(221, 89, 49, 0.4);
       bottom: 0;
-      right: 0;
-      padding: 25px;
-      color: #ffffff; }
-      .wrapper.pricing .main-block .container .display-flex .plans .img-plan .text-plan .text-p {
-        font-size: 25px;
-        text-transform: uppercase; }
+      width: 100%;
+      text-align: right; }
+      .wrapper.pricing .main-block .container .display-flex .plans .img-plan .back-color .text-plan {
+        bottom: 0;
+        right: 0;
+        padding: 25px;
+        color: #ffffff; }
+        .wrapper.pricing .main-block .container .display-flex .plans .img-plan .back-color .text-plan .text-p {
+          font-size: 25px;
+          text-transform: uppercase; }
   .wrapper.pricing .main-block .container .display-flex .plans .discription {
     background: #f5f5f4;
     padding: 25px; }
@@ -685,7 +700,10 @@ body {
       line-height: 25px;
       padding-bottom: 30px; }
     .wrapper.pricing .main-block .container .display-flex .plans .discription .bold-text {
-      font-weight: 600; }
+      font-weight: 600;
+      display: inline-block; }
+      .wrapper.pricing .main-block .container .display-flex .plans .discription .bold-text p {
+        display: inline-block; }
     .wrapper.pricing .main-block .container .display-flex .plans .discription .button {
       margin-top: 40px;
       margin-bottom: 30px; }
@@ -808,9 +826,6 @@ body {
     .contacts .get-in-touch .block-4 .one-line {
       display: inline-block; }
 
-  .new-page .pages {
-    width: 70%; }
-
   .case-study .container .left-block {
     float: none;
     margin: 0 auto;
@@ -836,28 +851,33 @@ body {
         .projects .container .display-flex .project-block .text-anvio {
           font-size: 20px; }
 
-  .wrapper.contact .main-block .container .map-style {
-    height: 860px; }
-  .wrapper.contact .main-block .container .input-field {
-    margin: auto;
-    top: auto;
-    height: 700px;
-    bottom: 0;
-    right: 0;
-    width: 100%; }
+  .wrapper.contact .main-block {
+    min-height: 900px; }
+    .wrapper.contact .main-block .container .map-style {
+      height: 200px;
+      width: 100%; }
+    .wrapper.contact .main-block .container .input-field {
+      margin: auto;
+      top: auto;
+      height: 700px;
+      bottom: 0;
+      right: 0;
+      width: 100%; }
   .wrapper.pricing .main-block .container .display-flex {
     display: unset; }
-    .wrapper.pricing .main-block .container .display-flex .plans {
-      width: 360px;
-      margin: 0 auto;
+    .wrapper.pricing .main-block .container .display-flex .plans .img-plan {
+      height: auto;
+      margin-right: 20px;
       margin-bottom: 10px; }
-      .wrapper.pricing .main-block .container .display-flex .plans .discription .block-responsive {
-        min-height: 500px;
-        width: 100%;
-        height: auto; }
-        .wrapper.pricing .main-block .container .display-flex .plans .discription .block-responsive .button {
-          margin-top: 17px;
-          margin-bottom: 15px; }
+      .wrapper.pricing .main-block .container .display-flex .plans .img-plan .back-color {
+        text-align: left; }
+    .wrapper.pricing .main-block .container .display-flex .plans .discription .block-responsive {
+      width: 100%;
+      height: auto;
+      float: none; }
+      .wrapper.pricing .main-block .container .display-flex .plans .discription .block-responsive .button {
+        margin-top: 17px;
+        margin-bottom: 15px; }
 
   .gallery.members-gallary .gallary-line {
     margin-top: 0; } }
@@ -880,16 +900,6 @@ body {
           font-size: 15px; }
       .gallery .gallary-line .img5 {
         width: 17%; } }
-@media (max-width: 695px) {
-  .wrapper.pricing .main-block .container .display-flex .plans {
-    margin: 0 auto;
-    margin-bottom: 10px; }
-    .wrapper.pricing .main-block .container .display-flex .plans .img-plan {
-      float: none; }
-      .wrapper.pricing .main-block .container .display-flex .plans .img-plan img {
-        width: 100%; }
-    .wrapper.pricing .main-block .container .display-flex .plans .discription .block-responsive {
-      width: 100%; } }
 @media (max-width: 645px) {
   .wrapper.amenities .main-block .blocks .container .display-flex {
     justify-content: center; } }
@@ -972,7 +982,21 @@ body {
     .gallery .gallary-line .img4 .we-love span {
       font-size: 12px; }
   .gallery .gallary-line .img5 {
-    width: 28%; } }
+    width: 28%; }
+
+  .wrapper.pricing .main-block .container .display-flex .plans {
+    width: 90%;
+    margin: 10px auto; }
+    .wrapper.pricing .main-block .container .display-flex .plans .img-plan {
+      margin-right: 0;
+      margin-bottom: 0;
+      float: none; }
+      .wrapper.pricing .main-block .container .display-flex .plans .img-plan .back-color {
+        text-align: right; }
+      .wrapper.pricing .main-block .container .display-flex .plans .img-plan img {
+        width: 100%; }
+    .wrapper.pricing .main-block .container .display-flex .plans .discription .block-responsive {
+      width: auto; } }
 @media (max-width: 450px) {
   .contacts .get-in-touch .block-3 {
     width: 100%;
@@ -1013,11 +1037,16 @@ body {
         height: 50px; } }
 @media (max-width: 320px) {
   .wrapper.contact .main-block .container .input-field .hole-form {
-    width: 80%; }
+    width: 95%; }
   .wrapper.main .main-block .main-info {
     height: 530px; }
     .wrapper.main .main-block .main-info .local-com .more .more-about {
       font-size: 16px; }
+  .wrapper .g-recaptcha {
+    transform: scale(0.91);
+    -webkit-transform: scale(0.91);
+    transform-origin: 0 0;
+    -webkit-transform-origin: 0 0; }
 
   .case-study .container .left-block .mockup .logo-img {
     height: 30px; }

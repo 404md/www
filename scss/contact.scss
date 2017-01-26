@@ -4,22 +4,34 @@
     .main-block {
       min-height: 700px;
       .container {
-        position: relative;
         .map-style {
+          width: 60%;
           height: 700px;
+          float:left;
         }
         .input-field {
-          position: absolute;
-          top: 0;
-          right: 15px;
+          position: relative;
           width: 40%;
-          background: white;
-          opacity: 0.93;
           height: 700px;
           display: flex;
           justify-content: center;
           align-items: center;
+          background-image: url(../images/map.png);
+          background-position: center;
+          background-size: cover;
+          float:left;
+          &:before {
+            position: absolute;
+            content:'';
+            background: white;
+            top:0;
+            left:0;
+            bottom:0;
+            right:0;
+            opacity: 0.95;
+          }
           .hole-form {
+            position: relative;
             width: auto;
             label {
               display: block;

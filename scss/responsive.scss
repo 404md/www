@@ -127,9 +127,6 @@
             line-height: 100px;
           }
           &.responsive {
-            //-moz-box-shadow:    inset  0  8px 8px -8px #696868;
-            //-webkit-box-shadow: inset  0  8px 8px -8px #696868;
-            //box-shadow:        inset  0  8px 8px -8px #696868;
             float: none;
             clear: both;
             line-height: 30px;
@@ -144,7 +141,6 @@
               float: none;
               display: inline;
 
-              //position: relative;
               a {
                 display: block;
                 text-align: center;
@@ -160,16 +156,6 @@
                 margin: 0;
               }
             }
-            //&:before {
-            //  content:'';
-            //  position: absolute;
-            //  top: 0;
-            //  bottom: 0;
-            //  left: 0;
-            //  right: 0;
-            //  background: black;
-            //  opacity: 0.4;
-            //}
           }
         }
       }
@@ -220,11 +206,7 @@
       }
     }
   }
-  .new-page {
-    .pages {
-     width: 70%;
-    }
-  }
+
   .case-study {
     .container {
       .left-block {
@@ -266,9 +248,11 @@
   .wrapper {
     &.contact {
       .main-block {
+        min-height: 900px;
         .container {
           .map-style {
-           height: 860px;
+           height: 200px;
+            width: 100%;
           }
           .input-field {
             margin:auto;
@@ -287,14 +271,20 @@
           .display-flex {
             display: unset;
             .plans {
-              width: 360px;
-              margin: 0 auto;
-              margin-bottom: 10px;
+              .img-plan {
+               height: auto;
+                margin-right: 20px;
+                margin-bottom: 10px;
+                .back-color {
+                  text-align: left;
+                }
+              }
+
               .discription {
                 .block-responsive {
-                  min-height: 500px;
                   width: 100%;
                   height: auto;
+                  float:none;
                   .button {
                     margin-top: 17px;
                     margin-bottom: 15px;
@@ -347,36 +337,6 @@
       }
     }
   }
-}
-
-
-@media (max-width: 695px) {
-.wrapper {
-  &.pricing {
-    .main-block {
-      .container {
-        .display-flex {
-          .plans {
-            margin: 0 auto;
-            margin-bottom: 10px;
-            .img-plan {
-              float: none;
-              img {
-                width: 100%;
-              }
-            }
-            .discription {
-              .block-responsive {
-                width: 100%;
-
-              }
-            }
-          }
-        }
-      }
-    }
-  }
-}
 }
 
 @media (max-width: 645px) {
@@ -543,6 +503,36 @@
       }
     }
   }
+  .wrapper {
+    &.pricing {
+      .main-block {
+        .container {
+          .display-flex {
+            .plans {
+              width: 90%;
+              margin: 10px auto;
+              .img-plan {
+                margin-right: 0;
+                margin-bottom: 0;
+                float: none;
+                .back-color {
+                  text-align: right;
+                }
+                img {
+                  width: 100%;
+                }
+              }
+              .discription {
+                .block-responsive {
+                  width: auto;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
 }
 
 
@@ -649,7 +639,7 @@
         .container {
           .input-field {
             .hole-form {
-              width: 80%;
+             width: 95%;
             }
           }
         }
@@ -670,6 +660,11 @@
         }
       }
     }
+    .g-recaptcha {
+        transform:scale(0.91);
+        -webkit-transform:scale(0.91);
+        transform-origin:0 0;-webkit-transform-origin:0 0;
+     }
   }
   .case-study {
     .container {
