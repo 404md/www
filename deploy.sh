@@ -14,7 +14,7 @@ uglifyjs ./js/members.js -c -m -o ./js/members.min.js
 
 echo "Copying resources into build/release folder"
 mkdir -p ./build/Release/
-cp -R robots.txt sitemap.xml css fonts images js amenities contact members pricing privacy terms ./build/Release/
+cp -R favicon.png robots.txt sitemap.xml css fonts images js amenities contact members pricing privacy terms ./build/Release/
 
 echo "Minifying html code"
 html-minifier --collapse-whitespace --remove-comments ./index.html -o ./build/Release/index.html
