@@ -2,6 +2,8 @@
 
 echo "Uploading index.html"
 aws s3 cp index.html s3://www.404.md/ --region eu-central-1 --storage-class REDUCED_REDUNDANCY --metadata-directive REPLACE --cache-control max-age=604800
+aws s3 cp robots.txt s3://www.404.md/ --region eu-central-1 --storage-class REDUCED_REDUNDANCY --metadata-directive REPLACE --cache-control max-age=604800
+aws s3 cp sitemap.xml s3://www.404.md/ --region eu-central-1 --storage-class REDUCED_REDUNDANCY --metadata-directive REPLACE --cache-control max-age=604800
 
 echo "Synchronizing css/"
 aws s3 sync --delete css/ s3://www.404.md/css/ --region eu-central-1 --storage-class REDUCED_REDUNDANCY --metadata-directive REPLACE --cache-control max-age=604800
