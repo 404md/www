@@ -78,6 +78,11 @@
         font-weight: 600;
         padding-bottom: 20px; }
 
+.menu-toggle {
+  width: 100px;
+  height: 100px;
+  background: red; }
+
 * {
   margin: 0;
   padding: 0;

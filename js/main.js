@@ -23,3 +23,13 @@ function myMap() {
         title: 'Olimpiada'
     });
 }
+
+
+(function ($) {
+
+    $(function() {
+        $('#menu-toggle').click(function () {
+            $(this).toggleClass('open');
+        });
+    });
+})(jQuery);

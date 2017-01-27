@@ -139,6 +139,20 @@ body {
                 color: white;
               }
             }
+            #menu-toggle {
+              &.open {
+                #cross {
+                 span {
+                   background: white;
+                 }
+                }
+              }
+              #hamburger {
+                span {
+                  background: white;
+                }
+              }
+            }
           }
         }
       }
@@ -562,4 +576,102 @@ body {
     }
   }
 }
+
+#menu-toggle {
+  display: none;
+  float: right;
+  width:50px;
+  height:50px;
+  position:relative;
+  top:25px;
+  cursor:pointer;
+
+  #hamburger {
+    position:absolute;
+    height:100%;
+    width:100%;
+    span {
+      width:30px;
+      height:4px;
+      position:relative;
+      top:0;
+      left:10px;
+      margin:10px 0;
+      display:block;
+      background:black;
+      border-radius:2px;
+      &:nth-child(1){
+        transition-delay:.5s;
+      }
+      &:nth-child(2){
+        transition-delay:.625s;
+      }
+      &:nth-child(3){
+        transition-delay:.75s;
+      }
+    }
+  }
+  #cross {
+    position:absolute;
+    height:100%;
+    width:100%;
+    transform:rotate(45deg);
+    span{
+      &:nth-child(1){
+        height:0%;
+        width:4px;
+        position:absolute;
+        top:10%;
+        left:22px;
+        transition-delay:0s;
+      }
+      &:nth-child(2){
+        width:0%;
+        height:4px;
+        position:absolute;
+        left:10%;
+        top:22px;
+        transition-delay:.25s;
+      }
+    }
+  }
+}
+
+#menu-toggle.open {
+  #hamburger {
+    span {
+
+      width:0%;
+      &:nth-child(1){
+        transition-delay:0s;
+      }
+      &:nth-child(2){
+        transition-delay:.125s;
+      }
+      &:nth-child(3){
+        transition-delay:.25s;
+      }
+    }
+  }
+  #cross {
+    span {
+      display:block;
+      background:black;
+      border-radius:2px;
+    }
+    span {
+      &:nth-child(1){
+        height:80%;
+        transition-delay:.625s;
+      }
+    }
+    span {
+      &:nth-child(2){
+        width:80%;
+        transition-delay:.375s;
+      }
+    }
+  }
+}
+
 
