@@ -1,0 +1,57 @@
+.wrapper {
+  &.pricing {
+    .main-block {
+      .container {
+        .display-flex {
+          .plans {
+            width: 353px;
+            .img-plan {
+              position: relative;
+              img {
+                width: 100%;
+              }
+              .back-color {
+                position: absolute;
+                height: 95px;
+                background-color: rgba(221,89,49,0.4);
+                bottom: 0;
+                width: 100%;
+                text-align: right;
+                .text-plan {
+                bottom: 0;
+                right: 0;
+                padding: 25px;
+                color: #ffffff;
+                .text-p {
+                  font-size: 25px;
+                  text-transform: uppercase;
+                }
+              }
+            }
+          }
+            .discription {
+              background: #f5f5f4;
+              padding: 25px;
+              p {
+                font-size: 15px;
+                line-height: 25px;
+                padding-bottom: 30px;
+              }
+              .bold-text {
+                font-weight: 600;
+                display: inline-block;
+                p {
+                  display: inline-block;
+                }
+              }
+              .button {
+                margin-top: 40px;
+                margin-bottom: 30px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

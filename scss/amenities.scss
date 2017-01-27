@@ -1,0 +1,41 @@
+.gallery {
+  &.amenities-gallery {
+    .gallary-line {
+      margin-top: 0;
+    }
+  }
+}
+
+.text-page {
+  font-size:15px;
+}
+
+.text-color {
+  color:#dd5931;
+}
+
+.wrapper {
+  &.amenities {
+    .main-block {
+      .blocks {
+        background: #f5f5f4;
+        .container {
+          .display-flex {
+            padding-top: 70px;
+            padding-bottom: 50px;
+            align-items: flex-end;
+          .flex-block {
+            height: 300px;
+            width: 300px;
+            text-align: center;
+            padding-bottom: 20px;
+            img {
+              height: 90px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,73 @@
+
+.wrapper {
+  &.contact {
+    .main-block {
+      min-height: 700px;
+      .container {
+        .map-style {
+          width: 60%;
+          height: 700px;
+          float:left;
+        }
+        .input-field {
+          position: relative;
+          width: 40%;
+          height: 700px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          background-image: url(../images/map.png);
+          background-position: center;
+          background-size: cover;
+          float:left;
+          &:before {
+            position: absolute;
+            content:'';
+            background: white;
+            top:0;
+            left:0;
+            bottom:0;
+            right:0;
+            opacity: 0.95;
+          }
+          .hole-form {
+            position: relative;
+            width: auto;
+            label {
+              display: block;
+              margin-bottom: 10px;
+              font-size: 18px;
+            }
+            .input-style {
+              height: 40px;
+              width: 100%;
+              font-size: 20px;
+              padding: 0 10px;
+              border: 1px solid #454545;
+              margin-bottom: 20px;
+              color: #aaaaaa;
+            }
+            .text-style {
+              font-size: 20px;
+              padding: 10px;
+              border: 1px solid #454545;
+              margin-bottom: 20px;
+              width: 100%;
+              color: #aaaaaa;
+              resize:none;
+            }
+            .button {
+              width: 100%;
+            }
+            .heading-contact {
+              text-transform: uppercase;
+              font-size: 25px;
+              font-weight: 600;
+              padding-bottom: 20px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
