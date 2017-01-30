@@ -1,14 +1,6 @@
-
-
-function NavigationFunction() {
-    var x = document.getElementById("myTopnav");
-    if (x.className === "navt") {
-        x.className += " responsive";
-    } else {
-        x.className = "navt";
-    }
-}
-
+/**
+ * Google Map callback
+ */
 function myMap() {
     var myLatLng = {lat: 46.9869511, lng: 28.8579025};
 
@@ -24,9 +16,7 @@ function myMap() {
     });
 }
 
-
 (function ($) {
-
     $(function() {
         $('#menu-toggle').click(function () {
             $(this).toggleClass('open');
