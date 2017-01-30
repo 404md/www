@@ -129,6 +129,9 @@ body {
       background-position: center;
       background-size: cover;
       position: relative;
+      .main-info {
+        height: 757px;
+      }
     }
     .main-block {
       .main-nav {
@@ -222,6 +225,59 @@ body {
             &:hover {
               border-color: #ffffff;
               background: transparent;
+            }
+          }
+        }
+        h1 {
+          width: 100%;
+          position: relative;
+          left: 51%;
+          transform: translate3d(calc(-50% - 12px),calc(-50% + 12px),0);
+          mix-blend-mode: screen;
+          text-shadow: 0px 0px #dd5931,
+          0px 0px #dd5931,
+          0px 0px #dd5931,
+          0px 0px #dd5931,
+          0px 0px #dd5931;
+          opacity:0;
+          animation: revolve 2s cubic-bezier(.47,.01,0,1.01) forwards 0.5s;
+
+          @keyframes revolve {
+            to{
+              opacity:1;
+              transform: translate3d(-50%,-50%,0);
+              text-shadow: -2px 0px #dd5931,
+              -3px 0px #dd5931,
+              -4px 0px #dd5931,
+              -5px 0px #dd5931,
+              -6px 0px #dd5931;
+
+            }
+          }
+        }
+        h2 {
+          width: 100%;
+          position: relative;
+          left: 51%;
+          transform: translate3d(calc(-50% - 12px),calc(-50% + 12px),0);
+          mix-blend-mode: screen;
+          text-shadow: 0px 0px #dd5931,
+          0px 0px #dd5931,
+          0px 0px #dd5931,
+          0px 0px #dd5931,
+          0px 0px #dd5931;
+          opacity:0;
+          animation: revolve 2s cubic-bezier(.47,.01,0,1.01) forwards 0.5s;
+          @keyframes revolve {
+            to{
+              opacity:1;
+              transform: translate3d(-50%,-50%,0);
+              text-shadow: -2px 0px #dd5931,
+              -3px 0px #dd5931,
+              -4px 0px #dd5931,
+              -5px 0px #dd5931,
+              -6px 0px #dd5931;
+
             }
           }
         }
@@ -342,7 +398,7 @@ body {
     padding-bottom: 50px;
     justify-content: space-between;
     .block-1 {
-      width: 11%;
+      width: 12%;
       line-height: 110px;
       img {
         height: 100px;

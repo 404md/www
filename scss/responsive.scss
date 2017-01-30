@@ -47,6 +47,30 @@
           h1,h2 {
             font-size: 50px;
             line-height: 50px;
+            width: 100%;
+            position: relative;
+
+            mix-blend-mode: screen;
+            text-shadow: 0px 0px #dd5931,
+            0px 0px #dd5931,
+            0px 0px #dd5931,
+            0px 0px #dd5931,
+            0px 0px #dd5931;
+            opacity:0;
+            animation: revolve 2s cubic-bezier(.47,.01,0,1.01) forwards 0.5s;
+
+            @keyframes revolve {
+              to{
+                opacity:1;
+                transform: translate3d(-50%,-50%,0);
+                text-shadow: 0px 0px #dd5931,
+                0px 0px #dd5931,
+                -1px 0px #dd5931,
+                -2px 0px #dd5931,
+                -3px 0px #dd5931;
+
+              }
+            }
           }
           .text-center {
             font-size: 15px;
@@ -203,13 +227,17 @@
           top: 100px;
           width: 100%;
           left:0;
-          background: black;
+          background-color: rgba(21, 7, 3, 0.9);
           z-index: 2;
           line-height: 70px;
           box-shadow:-3px -4px 5px -5px rgba(0, 0, 0, 0.3);
           -webkit-box-shadow:-3px -5px 5px -5px rgba(0, 0, 0, 0.3);
           li {
+            border-bottom: 2px solid transparent;
             display: block;
+            &:hover {
+              background: transparent;
+            }
             &:last-child {
               box-shadow: -3px 2px 3px rgba(0, 0, 0, 0.3);
               -webkit-box-shadow: -3px 2px 3px rgba(0, 0, 0, 0.3);
@@ -218,33 +246,25 @@
               background: transparent;
             }
             .link {
-              border: 0;
-              width: 750px;
-              margin: 0 auto;
-              &.active {
-                color: #dd5931;
+              &:hover {
+                background: transparent;
               }
-
             }
             &:hover {
-              background: #dd5931;
+              border-bottom: 2px solid white;
               a, .link.active {
                 color:white;
               }
             }
             .last-line {
               &:hover {
-                background:#dd5931 ;
+                background:transparent ;
               }
             }
           }
           .blog {
-            border:0;
-            width: 765px;
-            margin: 0 auto;
             &:hover {
-              background: #dd5931;
-              color:white;
+              color:#dd5931;
             }
           }
         }
@@ -271,6 +291,10 @@
     .get-in-touch {
       .block-1 {
         width: 20%;
+        line-height: 80px;
+        img {
+          height: 75px;
+        }
       }
       .block-2 {
         width: 80%;
@@ -287,6 +311,13 @@
         }
         .one-line {
           display: inline-block;
+          .fa-phone {
+            padding-left: 10px;
+
+          }
+          a {
+            padding-right: 10px;
+          }
         }
       }
       .block-4 {
@@ -452,6 +483,13 @@
 
 @media (max-width: 639px) {
   .wrapper {
+    &.main {
+      .main-block {
+        .main-info {
+          height: 670px;
+        }
+      }
+    }
     .main-block {
       min-height: 660px;
       .main-info {
@@ -499,9 +537,6 @@
         width: 100%;
         text-align: center;
         margin-bottom: 10px;
-        img {
-          height: 90px;
-        }
       }
       .block-2 {
         width: 100%;
@@ -566,6 +601,35 @@
     .pages {
       .page-name {
         font-size: 40px;
+      }
+    }
+  }
+}
+
+@media (max-width: 568px) {
+  .wrapper {
+    .container {
+      .partners {
+       .pycoding {
+         img {
+           height: 10px;
+         }
+       }
+        .itech {
+          img {
+            height: 40px;
+          }
+        }
+        .mitoc {
+          img {
+            height: 25px;
+          }
+        }
+        .usaid {
+          img {
+            height: 40px;
+          }
+        }
       }
     }
   }
@@ -683,19 +747,9 @@
     }
     .container {
       .partners {
-        .pycoding{
-          img {
-            height: 15px;
-          }
-        }
-        .mitoc {
-          img {
-            height: 30px;
-          }
-        }
         .usaid {
           img {
-            height: 40px;
+            height: 35px;
           }
         }
       }
@@ -720,6 +774,32 @@
             img {
               height: 50px;
             }
+          }
+        }
+      }
+    }
+  }
+  .wrapper {
+    .container {
+      .partners {
+        .pycoding {
+          img {
+            height: 18px;
+          }
+        }
+        .itech {
+          img {
+            height: 50px;
+          }
+        }
+        .mitoc {
+          img {
+            height: 35px;
+          }
+        }
+        .usaid {
+          img {
+            height: 40px;
           }
         }
       }
@@ -760,6 +840,7 @@
         -webkit-transform:scale(0.91);
         transform-origin:0 0;-webkit-transform-origin:0 0;
      }
+
   }
   .case-study {
     .container {
