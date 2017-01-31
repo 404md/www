@@ -1282,4 +1282,12 @@ body {
   .new-page .pages .text-page {
     font-size: 15px; } }
 
+@font-face {
+    font-family: 'Lato-Regular';
+    src: url('../fonts/Lato-Regular.eot');
+    src: local('☺'), url('../fonts/Lato-Regular.woff') format('woff'), url('../fonts/Lato-Regular.ttf') format('truetype'), url('../fonts/Lato-Regular.svg') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
 /*# sourceMappingURL=index.css.map */

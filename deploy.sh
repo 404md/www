@@ -13,6 +13,7 @@ uglifyjs ./js/main.js -c -m -o ./js/main.min.js
 uglifyjs ./js/members.js -c -m -o ./js/members.min.js
 
 echo "Copying resources into build/release folder"
+rm -rf ./build/Release/*
 mkdir -p ./build/Release/
 cp -R favicon.png robots.txt sitemap.xml css fonts images js amenities contact members pricing privacy terms ./build/Release/
 
@@ -27,8 +28,5 @@ html-minifier --collapse-whitespace --remove-comments ./terms/index.html -o ./bu
 
 echo "Synchronizing build/Release/"
 aws s3 sync --delete build/Release/ s3://www.404.md/ --region eu-central-1 --storage-class REDUCED_REDUNDANCY --metadata-directive REPLACE --cache-control max-age=604800
-
-echo "Cleaning up build/Release/"
-rm -rf ./build/Release/*
 
 echo "Done"
