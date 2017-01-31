@@ -36,7 +36,7 @@ a {
 }
 
 body {
-  font-family: 'Lato', sans-serif;
+  font-family: 'Lato-Regular', sans-serif;
   font-size: 14px;
   line-height: 1.42857143;
   color: #333;
@@ -87,25 +87,25 @@ body {
 .image {
   height: 160px;
   .image-amenities {
-    background-image: url(../images/amenities.png);
+    background-image: url(../images/amenities.jpg);
     background-position: center;
     background-size: cover;
     height: 160px;
   }
   .image-contact {
-    background-image: url(../images/contact.png);
+    background-image: url(../images/contact.jpg);
     background-size: cover;
     background-position: 48% 16%;
     height: 160px;
   }
   .image-members {
-    background-image: url(../images/members.png);
+    background-image: url(../images/members.jpg);
     background-position: 20% 80%;
     background-size: cover;
     height: 160px;
   }
   .image-plans {
-    background-image: url(../images/plans.png);
+    background-image: url(../images/plans.jpg);
     background-position: 52% 48%;
     background-size: cover;
     height: 160px;
@@ -114,7 +114,7 @@ body {
 
 
 .text-anvio {
-  font-family: 'Lato', sans-serif;
+  font-family: 'Lato-Regular', sans-serif;
   font-weight: 700;
   margin-top: 40px;
   font-size: 25px;
@@ -125,7 +125,7 @@ body {
   min-height: 800px;
   &.main {
     .main-block {
-      background-image: url(../images/bg.png);
+      background-image: url(../images/bg.jpg);
       background-position: center;
       background-size: cover;
       position: relative;
@@ -171,8 +171,12 @@ body {
             li {
               .link {
                 color:white;
+                position: relative;
                 &:hover {
-                  border-bottom-color: white;
+                  &:before {
+                    content:'';
+                   background: white;
+                  }
                 }
               }
             }
@@ -197,7 +201,7 @@ body {
         top: 50%;
         transform: translateY(-50%);
         h1,h2 {
-          font-family: 'Lato', sans-serif;
+          font-family: 'Lato-Regular', sans-serif;
           font-size: 90px;
           letter-spacing: 1px;
           line-height: 60px;
@@ -219,9 +223,6 @@ body {
             border: 3px solid #dd5931;
             text-decoration: none;
             background: #dd5931;
-            .text-bold {
-              font-size: 20px;
-            }
             &:hover {
               border-color: #ffffff;
               background: transparent;
@@ -251,7 +252,6 @@ body {
               -4px 0px #dd5931,
               -5px 0px #dd5931,
               -6px 0px #dd5931;
-
             }
           }
         }
@@ -277,7 +277,6 @@ body {
               -4px 0px #dd5931,
               -5px 0px #dd5931,
               -6px 0px #dd5931;
-
             }
           }
         }
@@ -348,6 +347,7 @@ body {
           display: inline-block;
           text-decoration: none;
           .link {
+            position: relative;
             color: black;
             text-transform: uppercase;
             margin: 0 8px;
@@ -359,7 +359,15 @@ body {
               border-color: black;
             }
             &:hover {
-              border-bottom-color: black;
+              &:before {
+              content: '';
+              position: absolute;
+              height: 2px;
+              background: black;
+              left: 0;
+              right: 0;
+              bottom: -2px;
+              }
             }
           }
           a {
@@ -481,7 +489,6 @@ body {
 
 /* Title */
 
-
 .new-page {
   .pages {
     width: 100%;
@@ -492,10 +499,20 @@ body {
       font-size: 17px;
     }
     .page-name {
-      font-family: 'Lato', sans-serif;
+      font-family: 'Lato-Regular', sans-serif;
       font-size: 45px;
       position: relative;
       text-transform: uppercase;
+      padding-bottom: 5px;
+      margin-bottom: 20px;
+      &:before {
+        content: '';
+        position: absolute;
+        width: 80px;
+        height: 6px;
+        background:#dd5931;
+        bottom: 0;
+      }
     }
   }
 }
@@ -505,34 +522,27 @@ body {
   padding-bottom: 10px;
   .pages {
     .heading {
-      font-family: 'Lato', sans-serif;
+      font-family: 'Lato-Regular', sans-serif;
       font-size: 50px;
       color:#ccc;
     }
   }
 }
 
-.line {
-  width: 80px;
-  height: 6px;
-  background:#dd5931;
-  margin-bottom: 20px;
-}
-
 /* Footer Gallery*/
 
 .gallery {
-  &.members-gallary {
-    .gallary-line {
+  &.members-gallery {
+    .gallery-line {
       margin-top: 10px;
     }
   }
-  .gallary-line {
+  .gallery-line {
     height: 300px;
     margin-top: 60px;
     overflow: hidden;
     .img1 {
-      background-image: url(../images/img1.png);
+      background-image: url(../images/img1.jpg);
       background-position: center;
       background-size: cover;
       height: 300px;
@@ -550,7 +560,7 @@ body {
       float: left;
       overflow: hidden;
       .img2 {
-        background-image: url(../images/img2.png);
+        background-image: url(../images/img2.jpg);
         background-position: center;
         background-size: cover;
         height: 150px;
@@ -566,7 +576,7 @@ body {
         }
       }
       .img3{
-        background-image: url(../images/img3.png);
+        background-image: url(../images/img3.jpg);
         background-position: center;
         background-size: cover;
         height: 151px;
@@ -582,7 +592,7 @@ body {
       }
     }
     .img4 {
-      background-image: url(../images/img4.png);
+      background-image: url(../images/img4.jpg);
       background-position: center;
       background-size: cover;
       position: relative;
@@ -616,11 +626,11 @@ body {
       }
     }
     .img5 {
-      background-image: url(../images/img5.png);
+      background-image: url(../images/img5.jpg);
       background-position: center;
       background-size: cover;
       height: 301px;
-      width: 12%;
+      width: 100%;
       float:left;
       cursor: pointer;
       position: relative;
@@ -629,6 +639,12 @@ body {
       &:hover {
         transform: scale(1.2);
       }
+    }
+    .img-block {
+      overflow: hidden;
+      width: 12%;
+      display: inline-block;
+      float: left;
     }
   }
 }

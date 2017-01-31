@@ -1,0 +1,9 @@
+/* Lato */
+
+@font-face {
+    font-family: 'Lato-Regular';
+    src: url('../../fonts/Lato/Lato-Regular.eot');
+    src: local('☺'), url('../../fonts/Lato/Lato-Regular.woff') format('woff'), url('../../fonts/Lato/Lato-Regular.ttf') format('truetype'), url('../../fonts/Lato/Lato-Regular.svg') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
