@@ -20,6 +20,7 @@ function myMap() {
     $(function() {
         $('#menu-toggle').click(function () {
             $(this).toggleClass('open');
+            $('.main-nav').addClass("responsive-nav");
         });
     });
 })(jQuery);

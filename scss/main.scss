@@ -204,7 +204,7 @@ body {
           font-family: 'Lato-Regular', sans-serif;
           font-size: 90px;
           letter-spacing: 1px;
-          line-height: 60px;
+          line-height: 75px;
           margin-bottom: 30px;
         }
         .text-center {
@@ -226,57 +226,6 @@ body {
             &:hover {
               border-color: #ffffff;
               background: transparent;
-            }
-          }
-        }
-        h1 {
-          width: 100%;
-          position: relative;
-          left: 51%;
-          transform: translate3d(calc(-50% - 12px),calc(-50% + 12px),0);
-          mix-blend-mode: screen;
-          text-shadow: 0px 0px #dd5931,
-          0px 0px #dd5931,
-          0px 0px #dd5931,
-          0px 0px #dd5931,
-          0px 0px #dd5931;
-          opacity:0;
-          animation: revolve 2s cubic-bezier(.47,.01,0,1.01) forwards 0.5s;
-
-          @keyframes revolve {
-            to{
-              opacity:1;
-              transform: translate3d(-50%,-50%,0);
-              text-shadow: -2px 0px #dd5931,
-              -3px 0px #dd5931,
-              -4px 0px #dd5931,
-              -5px 0px #dd5931,
-              -6px 0px #dd5931;
-            }
-          }
-        }
-        h2 {
-          width: 100%;
-          position: relative;
-          left: 51%;
-          transform: translate3d(calc(-50% - 12px),calc(-50% + 12px),0);
-          mix-blend-mode: screen;
-          text-shadow: 0px 0px #dd5931,
-          0px 0px #dd5931,
-          0px 0px #dd5931,
-          0px 0px #dd5931,
-          0px 0px #dd5931;
-          opacity:0;
-          animation: revolve 2s cubic-bezier(.47,.01,0,1.01) forwards 0.5s;
-          @keyframes revolve {
-            to{
-              opacity:1;
-              transform: translate3d(-50%,-50%,0);
-              text-shadow: -2px 0px #dd5931,
-              -3px 0px #dd5931,
-              -4px 0px #dd5931,
-              -5px 0px #dd5931,
-              -6px 0px #dd5931;
             }
           }
         }
@@ -418,7 +367,7 @@ body {
       padding-left: 30px;
     }
     .block-3 {
-      width: 15%;
+      width: 17%;
       .new-line {
         display: block;
       }
@@ -601,27 +550,49 @@ body {
       float:left;
       cursor: pointer;
       display: flex;
-      &:before {
-       content: '';
-       top: 0;
-       bottom: 0;
-       left: 0;
-       right:0;
-       background:#dd5931;
-       opacity: 0.8;
-       position: absolute;
-     }
       .we-love {
-        position: relative;
-        z-index: 1;
-        margin: auto;
-        font-size: 25px;
-        color:white;
-        .avatar-comment {
-          text-transform: uppercase;
+        display: none;
+      }
+      &:hover {
+        &:before {
+          content: '';
+          top: 0;
+          bottom: 0;
+          left: 0;
+          right:0;
+          background:#dd5931;
+          opacity: 0.8;
+          position: absolute;
         }
-        span {
-          font-size: 20px;
+        .we-love {
+          display: block;
+          position: relative;
+          z-index: 1;
+          margin: auto;
+          font-size: 25px;
+          color:white;
+          .avatar {
+            width: 100px;
+            height: 100px;
+            overflow: hidden;
+            border-radius:  50%;
+            float: left;
+            margin-right: 20px;
+            img {
+              height: 100%;
+            }
+          }
+          .comment {
+            line-height: 25px;
+            .avatar-comment {
+              padding-bottom: 20px;
+              text-transform: uppercase;
+              display: block;
+            }
+            span {
+              font-size: 20px;
+            }
+          }
         }
       }
     }
@@ -652,10 +623,10 @@ body {
 #menu-toggle {
   display: none;
   float: right;
-  width:50px;
-  height:50px;
+  width:30px;
+  height:30px;
   position:relative;
-  top:25px;
+  top:35px;
   cursor:pointer;
 
   #hamburger {
@@ -667,8 +638,8 @@ body {
       height:4px;
       position:relative;
       top:0;
-      left:10px;
-      margin:10px 0;
+      left:-5px;
+      margin:5px;
       display:block;
       background:black;
       border-radius:2px;
@@ -694,7 +665,7 @@ body {
         width:4px;
         position:absolute;
         top:10%;
-        left:22px;
+        left:13px;
         transition-delay:0s;
       }
       &:nth-child(2){
@@ -702,7 +673,7 @@ body {
         height:4px;
         position:absolute;
         left:10%;
-        top:22px;
+        top:13px;
         transition-delay:.25s;
       }
     }
