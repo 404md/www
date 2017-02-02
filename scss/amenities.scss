@@ -39,3 +39,26 @@
     }
   }
 }
+
+/* Gallery */
+
+.gallery {
+  &.amenities-gallery {
+    .gallery-line {
+      height: 300px;
+      .img1 {
+        background-image: url(../images/img1.jpg);
+      }
+      .img2 {
+        background-image: url(../images/img2.jpg);
+      }
+      .img3 {
+        background-image: url(../images/img3.jpg);
+      }
+      .img4 {
+        background-image: url(../images/img4.jpg);
+        display: flex;
+      }
+    }
+  }
+}
