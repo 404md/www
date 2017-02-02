@@ -71,3 +71,25 @@
     }
   }
 }
+
+/* Gallery */
+
+.gallery {
+  &.connect-us {
+    .gallery-line {
+      margin-top: 60px;
+      .img1 {
+        background-image: url(../images/c-img1.jpg);
+      }
+      .img2 {
+        background-image: url(../images/c-img2.jpg);
+      }
+      .img3 {
+        background-image: url(../images/c-img3.jpg);
+      }
+      .img4 {
+        background-image: url(../images/c-img4.jpg);
+      }
+    }
+  }
+}

@@ -160,6 +160,14 @@ body {
         }
       }
     }
+    .language {
+      a {
+        color: white;
+        &:hover {
+          color:#dd5931;
+        }
+      }
+    }
   }
   .main-block {
     min-height: 860px;
@@ -276,6 +284,7 @@ body {
     }
     .nav-top {
       float: right;
+      position: relative;
       .icon {
         display: none;
         a {
@@ -338,6 +347,11 @@ body {
           color: black;
           background: white;
         }
+      }
+      .language {
+        position: absolute;
+        top:0;
+        right:0;
       }
     }
   }
@@ -480,142 +494,93 @@ body {
 
 /* Footer Gallery*/
 
+.pic {
+  width: 25%;
+  float: left;
+}
+
+.we-love {
+  display: none;
+}
+
+.img-value {
+  background-position: center;
+  background-size: cover;
+  position: relative;
+  height: 300px;
+  width: 100%;
+  cursor: pointer;
+  display: flex;
+}
+
+.img-hover {
+  &:hover {
+    &:before {
+      content: '';
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right:0;
+      background:#dd5931;
+      opacity: 0.8;
+      position: absolute;
+      transition: .3s;
+    }
+    .we-love {
+      display: block;
+      position: relative;
+      z-index: 1;
+      margin: auto;
+      font-size: 25px;
+      color:white;
+      .avatar {
+        width: 100px;
+        height: 100px;
+        overflow: hidden;
+        border-radius:  50%;
+        float: left;
+        margin-right: 20px;
+        img {
+          height: 100%;
+        }
+      }
+      .comment {
+        line-height: 25px;
+        .avatar-comment {
+          padding-bottom: 20px;
+          text-transform: uppercase;
+          display: block;
+        }
+        span {
+          font-size: 20px;
+        }
+      }
+    }
+  }
+}
+
+/* Gallery */
+
 .gallery {
   &.members-gallery {
     .gallery-line {
-      margin-top: 10px;
+      margin-top: 0;
     }
   }
   .gallery-line {
     height: 300px;
     margin-top: 60px;
-    overflow: hidden;
     .img1 {
       background-image: url(../images/img1.jpg);
-      background-position: center;
-      background-size: cover;
-      height: 300px;
-      width: 33%;
-      float:left;
-      cursor: pointer;
-      transition: all .5s;
-      position: relative;
-      &:hover {
-        transform: scale(1.2);
-      }
     }
-    .two-pic {
-      width: 10%;
-      float: left;
-      overflow: hidden;
-      .img2 {
-        background-image: url(../images/img2.jpg);
-        background-position: center;
-        background-size: cover;
-        height: 150px;
-        width: 100%;
-        float:left;
-        cursor: pointer;
-        transition: all .5s;
-        position: relative;
-        z-index: 2;
-        &:hover {
-          transform: scale(1.2);
-
-        }
-      }
-      .img3{
-        background-image: url(../images/img3.jpg);
-        background-position: center;
-        background-size: cover;
-        height: 151px;
-        width: 100%;
-        float:left;
-        cursor: pointer;
-        position: relative;
-        z-index: 2;
-        transition: all .5s;
-        &:hover {
-          transform: scale(1.2);
-        }
-      }
+    .img2 {
+      background-image: url(../images/img2.jpg);
+    }
+    .img3 {
+      background-image: url(../images/img3.jpg);
     }
     .img4 {
       background-image: url(../images/img4.jpg);
-      background-position: center;
-      background-size: cover;
-      position: relative;
-      height: 300px;
-      width: 35%;
-      float:left;
-      cursor: pointer;
-      display: flex;
-      .we-love {
-        display: none;
-      }
-      &:hover {
-        &:before {
-          content: '';
-          top: 0;
-          bottom: 0;
-          left: 0;
-          right:0;
-          background:#dd5931;
-          opacity: 0.8;
-          position: absolute;
-        }
-        .we-love {
-          display: block;
-          position: relative;
-          z-index: 1;
-          margin: auto;
-          font-size: 25px;
-          color:white;
-          .avatar {
-            width: 100px;
-            height: 100px;
-            overflow: hidden;
-            border-radius:  50%;
-            float: left;
-            margin-right: 20px;
-            img {
-              height: 100%;
-            }
-          }
-          .comment {
-            line-height: 25px;
-            .avatar-comment {
-              padding-bottom: 20px;
-              text-transform: uppercase;
-              display: block;
-            }
-            span {
-              font-size: 20px;
-            }
-          }
-        }
-      }
-    }
-    .img5 {
-      background-image: url(../images/img5.jpg);
-      background-position: center;
-      background-size: cover;
-      height: 301px;
-      width: 100%;
-      float:left;
-      cursor: pointer;
-      position: relative;
-      z-index: 1;
-      transition: all .5s;
-      &:hover {
-        transform: scale(1.2);
-      }
-    }
-    .img-block {
-      overflow: hidden;
-      width: 12%;
-      display: inline-block;
-      float: left;
     }
   }
 }

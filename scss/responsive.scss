@@ -73,22 +73,10 @@
       }
     }
   }
-
   .gallery {
     .gallery-line {
       height: 180px;
-      .img1 {
-        height: 180px;
-      }
-      .two-pic {
-        .img2, .img3 {
-          height: 90px;
-        }
-      }
-      .img4 {
-        height: 180px;
-      }
-      .img5 {
+      .img1, .img2, .img3, .img4 {
         height: 180px;
       }
     }
@@ -111,6 +99,23 @@
 }
 
 @media screen and (max-width: 992px) {
+  .pic{
+    width: 50%;
+    .img-hover {
+      .we-love {
+        .avatar {
+          width: 80px;
+          height: 80px;
+        }
+        .comment {
+          span {
+            font-size: 15px;
+          }
+        }
+      }
+    }
+  }
+
   .wrapper {
     &.main {
       .main-block {
@@ -405,44 +410,6 @@
   }
 }
 
-@media (max-width: 780px) {
-  .gallery {
-    min-height: 360px;
-    .gallery-line {
-      min-height: 360px;
-      .responsive-gallery{
-       overflow: hidden;
-        .img1 {
-          width: 80%;
-        }
-        .two-pic {
-          width: 20%;
-          .img2, .img3 {
-            background-size: unset;
-          }
-        }
-        .img-block {
-          width: 17%;
-          .img5 {
-            width: 100%;
-          }
-        }
-      }
-      .img4 {
-        width: 63%;
-        .we-love {
-          span {
-            font-size: 15px;
-          }
-        }
-      }
-      .img5 {
-        width: 17%;
-      }
-    }
-  }
-}
-
 @media (max-width: 732px) {
   .wrapper {
     .container {
@@ -619,35 +586,6 @@
 }
 
 @media (max-width: 550px) {
-  .gallery {
-    .gallery-line {
-      .responsive-gallery {
-        .img1 {
-          width: 66%;
-        }
-        .two-pic {
-          width: 34%;
-          &.two-pic-responsive {
-            width: 27%;
-          }
-        }
-        .img-block {
-          width: 25%;
-        }
-      }
-      .img4 {
-        width: 48%;
-        .we-love {
-          span {
-            font-size: 12px;
-          }
-        }
-      }
-      .img5 {
-        width: 28%;
-      }
-    }
-  }
   .wrapper {
     &.pricing {
       .main-block {
@@ -680,6 +618,26 @@
   }
 }
 
+@media (max-width: 480px){
+  .pic {
+    width: 100%;
+    .img-hover {
+      .we-love {
+        .avatar {
+          width: 90px;
+          height: 90px;
+        }
+      }
+    }
+  }
+  .gallery {
+    .gallery-line {
+      .img1, .img2, .img3, .img4 {
+        height: 300px;
+      }
+    }
+  }
+}
 
 @media (max-width:450px) {
   .contacts {
