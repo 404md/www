@@ -134,7 +134,7 @@
   .container {
     .nav-top {
       float: none;
-
+      position: static;
       .navt {
         display: none;
         position: absolute;
@@ -248,6 +248,9 @@
         .open + .navt{
           display: block;
         }
+      }
+      .language {
+        right:15px;
       }
     }
   }

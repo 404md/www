@@ -108,17 +108,17 @@ jQuery(function($) {
 
     var wasShown = false;
 
-    if (!wasShown) {
-        $(window).on('scroll', (function(e) {
-            var $div = $('.project-block');
+    $(window).on('scroll', function () {
+        var start_element = $(".text-anvio");
+        var scroll_pos = $(window).scrollTop() + $(window).height();
+        var element_pos = start_element.offset().top + start_element.height();
+        if (scroll_pos > element_pos && !wasShown) {
+            bar1.animate(1.0);
+            bar2.animate(1.0);
+            bar3.animate(1.0);
+            wasShown = true;
+        }
 
-            if ($div.length > 0 && !wasShown) {
-                bar1.animate(1.0);
-                bar2.animate(1.0);
-                bar3.animate(1.0);
-                wasShown = true;
-            }
-        }));
-    }
+    })
 
 });

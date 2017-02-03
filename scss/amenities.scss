@@ -22,7 +22,7 @@
         .container {
           .display-flex {
             padding-top: 70px;
-            padding-bottom: 50px;
+            padding-bottom: 25px;
             align-items: flex-end;
           .flex-block {
             height: 300px;
@@ -45,7 +45,6 @@
 .gallery {
   &.amenities-gallery {
     .gallery-line {
-      height: 300px;
       .img1 {
         background-image: url(../images/img1.jpg);
       }
