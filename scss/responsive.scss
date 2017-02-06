@@ -16,6 +16,24 @@
   }
 }
 
+@media (max-width: 1366px) {
+  .pic{
+    .img-hover {
+      .we-love {
+        .comment {
+          line-height: 20px;
+          .avatar-comment {
+            padding-bottom: 15px;
+          }
+          span {
+            font-size: 15px;
+          }
+        }
+      }
+    }
+  }
+}
+
 @media (max-width: 1200px) {
   .wrapper {
     .main-block {
@@ -54,7 +72,7 @@
                   padding: 20px;
                   float: left;
                   width: 52%;
-                  height: 445px;
+                  min-height: 445px;
                 p {
                   font-size: 15px;
                   line-height: 22px;
@@ -98,7 +116,7 @@
   }
 }
 
-@media screen and (max-width: 992px) {
+@media (max-width: 1024px) {
   .pic{
     width: 50%;
     .img-hover {
@@ -115,7 +133,9 @@
       }
     }
   }
+}
 
+@media screen and (max-width: 992px) {
   .wrapper {
     &.main {
       .main-block {
@@ -169,10 +189,6 @@
                 height: 0;
               }
             }
-            &.active {
-              color: #dd5931;
-            }
-
           }
           &:hover {
             background: #dd5931;
@@ -230,6 +246,7 @@
               background:#dd5931 ;
               a, .link.active {
                 color:white;
+                background:#dd5931
               }
             }
             .last-line {
@@ -413,6 +430,79 @@
   }
 }
 
+@media (max-width: 736px) {
+  .gallery {
+    display: none;
+  }
+  .main-nav {
+    .container {
+      .nav-top {
+        .navt {
+          li {
+            .link, .last-line {
+              &:hover {
+                  background: none;
+                  color: unset;
+              }
+              &.active {
+                color:#dd5931;
+                &:hover {
+                  color: unset;
+                }
+              }
+            }
+            &:hover{
+              background: none;
+              color:unset;
+            }
+            a, .link.active {
+              &:hover {
+                color:unset;
+              }
+            }
+          }
+          .blog {
+            background:#dd5931;
+            &:hover {
+              background: none;
+              color: unset;
+            }
+          }
+        }
+      }
+    }
+  }
+  .wrapper {
+    &.members {
+      .main-block {
+        .container {
+          .our-members {
+            .slick-prev {
+              top: -14px;
+              left: auto;
+              right: 20px;
+              &:before {
+                content: '<';
+                padding: 0px 5px 5px 5px;
+                font-size: 17px;
+              }
+            }
+            .slick-next {
+              top: -14px;
+              right: 0px;
+              &:before {
+                content: '>';
+                padding: 0px 5px 5px 5px;
+                font-size: 17px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
 @media (max-width: 732px) {
   .wrapper {
     .container {
@@ -464,6 +554,12 @@
       .main-block {
         .main-info {
           height: 670px;
+          &.ru-vertion {
+            h1,h2 {
+              font-size: 50px;
+              line-height: 45px;
+            }
+          }
           .local-com {
             .text-center {
               width: 100%;
@@ -621,27 +717,6 @@
   }
 }
 
-@media (max-width: 480px){
-  .pic {
-    width: 100%;
-    .img-hover {
-      .we-love {
-        .avatar {
-          width: 90px;
-          height: 90px;
-        }
-      }
-    }
-  }
-  .gallery {
-    .gallery-line {
-      .img1, .img2, .img3, .img4 {
-        height: 300px;
-      }
-    }
-  }
-}
-
 @media (max-width:450px) {
   .contacts {
     .get-in-touch {
@@ -776,6 +851,12 @@
       .main-block {
         .main-info {
           height: 530px;
+          &.ru-vertion {
+            h1,h2 {
+              font-size: 40px;
+              line-height: 40px;
+            }
+          }
           .local-com {
             .more {
               .more-about {

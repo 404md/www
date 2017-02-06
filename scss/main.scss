@@ -131,6 +131,12 @@ body {
       position: relative;
       .main-info {
         height: 757px;
+        &.ru-vertion {
+          h1,h2 {
+            font-size: 74px;
+            line-height:65px;
+          }
+        }
       }
     }
     .main-block {
@@ -453,6 +459,11 @@ body {
 /* Title */
 
 .new-page {
+  &.members-page {
+    .pages {
+      margin-bottom: 40px;
+    }
+  }
   .pages {
     width: 100%;
     margin-top: 30px;
