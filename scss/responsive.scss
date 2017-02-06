@@ -16,6 +16,24 @@
   }
 }
 
+@media (max-width: 1366px) {
+  .pic{
+    .img-hover {
+      .we-love {
+        .comment {
+          line-height: 20px;
+          .avatar-comment {
+            padding-bottom: 15px;
+          }
+          span {
+            font-size: 15px;
+          }
+        }
+      }
+    }
+  }
+}
+
 @media (max-width: 1200px) {
   .wrapper {
     .main-block {
@@ -98,7 +116,7 @@
   }
 }
 
-@media screen and (max-width: 992px) {
+@media (max-width: 1024px) {
   .pic{
     width: 50%;
     .img-hover {
@@ -115,7 +133,9 @@
       }
     }
   }
+}
 
+@media screen and (max-width: 992px) {
   .wrapper {
     &.main {
       .main-block {
