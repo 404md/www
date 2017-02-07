@@ -5,9 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Contact | 404 Not Found | Local Community | Global Platform</title>
     <meta name="description" content="404 Not Found is a community for IT Businesses and IT people from Moldova. We want to empower local IT community of small companies and skillied individuals to be competitive globally" />
-    <link rel="stylesheet" href="../css/index.min.css" />
-    <link rel="stylesheet" href="../css/font-awesome-4.7.0.min.css" />
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=PT+Sans|Questrial|Lato|Arvo:400,700" />
+
+    <script type="text/javascript" src="../js/css.min.js"></script>
+    <link rel="preload" href="../css/index.min.css" as="style" onload="this.rel='stylesheet'" />
+    <noscript><link rel="stylesheet" href="../css/index.min.css" /></noscript>
+    <link rel="preload" href="../css/font-awesome-4.7.0.min.css" as="style" onload="this.rel='stylesheet'" />
+    <noscript><link rel="stylesheet" href="../css/font-awesome-4.7.0.min.css" /></noscript>
+
     <!-- Google Tag Manager -->
     <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
     new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
@@ -29,16 +33,29 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 <img class="img-logo" src="../images/logo-right-black.svg" alt="Logo 404 Not Found" />
             </a>
         </div>
-        <div class="nav-top" >
+        <div class="nav-top">
+            <div id="menu-toggle">
+                <div id="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+                <div id="cross">
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
             <ul class="navt" id="myTopnav">
-                <li><a class="link odd" href="/members/">Members</a></li>
+                <li><a class="link" href="/members/">Members</a></li>
                 <li><a class="link" href="/amenities/">Amenities</a></li>
-                <li><a class="link odd" href="/pricing/">Pricing</a></li>
+                <li><a class="link" href="/pricing/">Pricing</a></li>
                 <li><a class="link active" href="/contact/">Contact</a></li>
-                <li><a class="last-line odd" href="https://blog.404.md"><span class="blog">blog</span></a></li>
-                <li class="icon"><a href="javascript:void(0);" onclick="NavigationFunction()">
-                    <i class="fa fa-bars" aria-hidden="true"></i></a></li>
+                <li><a class="last-line" href="https://blog.404.md"><span class="blog">blog</span></a></li>
             </ul>
+            <div class="language">
+                <a href="/ro/contact/"><img src="../images/flag-ro.png"> ro</a>
+                <a href="/ru/contact/"><img src="../images/flag-ru.png"> ru</a>
+            </div>
         </div>
         <div class="clear"></div>
     </div>
@@ -51,7 +68,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <div class="container new-page">
     <div class="pages">
         <h1 class="page-name">Contact us</h1>
-        <div class="line"></div>
         <span class="text-page">
             404 Not Found is a community for IT businesses and IT people from Moldova.
             We want to empower local community of small companies and skilled individuals
@@ -93,26 +109,67 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         </div>
     </section>
 
-    <section class="gallery">
-        <div class="gallary-line">
-            <div class="responsive-gallery">
-                <div class="img1"></div>
-                <div class="two-pic">
-                    <div class="img2"></div>
-                    <div class="img3"></div>
-                </div>
-            </div>
-            <div class="responsive-gallery">
-                <div class="img4">
+    <section class="gallery connect-us">
+        <div class="gallery-line">
+            <div class="pic">
+                <div class="img1 img-value img-hover">
                     <div class="we-love">
-                        <!--<div class="avatar-comment">Eugen</div>-->
-                        <span>"We love 404 community."</span>
+                        <div class="avatar">
+                            <img src="../images/member1.jpg" alt="Andrei C.">
+                        </div>
+                        <div class="comment">
+                            <span class="avatar-comment">Andrei C.</span>
+                            <span>"I enjoy being part of 404 community."</span>
+                        </div>
                     </div>
                 </div>
-                <div class="img5"></div>
-                <div class="two-pic two-pic-responsive">
-                    <div class="img2"></div>
-                    <div class="img3"></div>
+                <div class="we-love">
+                    <div class="avatar">
+                        <img src="../images/member1.jpg" alt="Andrei C.">
+                    </div>
+                    <div class="comment">
+                        <span class="avatar-comment">Andrei C.</span>
+                        <span>"I enjoy being part of 404 community."</span>
+                    </div>
+                </div>
+            </div>
+            <div class="pic">
+                <div class="img2 img-value img-hover">
+                    <div class="we-love">
+                        <div class="avatar">
+                            <img src="../images/member1.jpg" alt="Andrei C.">
+                        </div>
+                        <div class="comment">
+                            <span class="avatar-comment">Andrei C.</span>
+                            <span>"I enjoy being part of 404 community."</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="pic">
+                <div class="img3 img-value img-hover">
+                    <div class="we-love">
+                        <div class="avatar">
+                            <img src="../images/member1.jpg" alt="Andrei C.">
+                        </div>
+                        <div class="comment">
+                            <span class="avatar-comment">Andrei C.</span>
+                            <span>"I enjoy being part of 404 community."</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="pic">
+                <div class="img4 img-value img-hover">
+                    <div class="we-love">
+                        <div class="avatar">
+                            <img src="../images/member1.jpg" alt="Andrei C.">
+                        </div>
+                        <div class="comment">
+                            <span class="avatar-comment">Andrei C.</span>
+                            <span>"I enjoy being part of 404 community."</span>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -122,9 +179,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <div class="container">
         <section class="partners">
             <div class="pycoding"><img src="../images/logo-pycoding.svg" alt="PyCoding Moldova" /></div>
-            <div><img src="../images/logo-itech.png" alt="iTech Moldova" /></div>
+            <div class="itech"><img src="../images/logo-itech.png" alt="iTech Moldova" /></div>
             <div class="mitoc"><img src="../images/logo-mitoc.svg" alt="Mitoc Group USA" /></div>
-            <div class="usaid"><img src="../images/logo-usaid.svg" alt="USAID from the American People" /></div>
+            <div class="usaid"><img src="../images/logo-usaid.png" alt="USAID from the American People" /></div>
         </section>
     </div>
 </div>
@@ -181,7 +238,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <div class="left-footer">
             2017 &copy; PyCoding SRL
             <a href="/terms/">Terms of Use</a>
-            <a href="/privacy/">Privacy Policy</a>
         </div>
         <div class="right-footer">
             <ul class="">
