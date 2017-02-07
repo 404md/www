@@ -1076,23 +1076,28 @@ body {
   .gallery {
     display: none; }
 
-  .main-nav .container .nav-top .navt li .link:hover, .main-nav .container .nav-top .navt li .last-line:hover {
-    background: none;
-    color: unset; }
-  .main-nav .container .nav-top .navt li .link.active, .main-nav .container .nav-top .navt li .last-line.active {
-    color: #dd5931; }
-    .main-nav .container .nav-top .navt li .link.active:hover, .main-nav .container .nav-top .navt li .last-line.active:hover {
-      color: unset; }
-  .main-nav .container .nav-top .navt li:hover {
-    background: none;
-    color: unset; }
-  .main-nav .container .nav-top .navt li a:hover, .main-nav .container .nav-top .navt li .link.active:hover {
-    color: unset; }
-  .main-nav .container .nav-top .navt .blog {
-    background: #dd5931; }
-    .main-nav .container .nav-top .navt .blog:hover {
+  .main-nav .container .nav-top .navt {
+    line-height: 61px; }
+    .main-nav .container .nav-top .navt li .link, .main-nav .container .nav-top .navt li .last-line {
+      font-size: 15px; }
+      .main-nav .container .nav-top .navt li .link:hover, .main-nav .container .nav-top .navt li .last-line:hover {
+        background: none;
+        color: unset; }
+      .main-nav .container .nav-top .navt li .link.active, .main-nav .container .nav-top .navt li .last-line.active {
+        color: #dd5931; }
+        .main-nav .container .nav-top .navt li .link.active:hover, .main-nav .container .nav-top .navt li .last-line.active:hover {
+          color: unset; }
+    .main-nav .container .nav-top .navt li:hover {
       background: none;
       color: unset; }
+    .main-nav .container .nav-top .navt li a:hover, .main-nav .container .nav-top .navt li .link.active:hover {
+      color: unset; }
+    .main-nav .container .nav-top .navt .blog {
+      background: #dd5931;
+      font-size: 15px; }
+      .main-nav .container .nav-top .navt .blog:hover {
+        background: none;
+        color: unset; }
 
   .wrapper.members .main-block .container .our-members .slick-prev {
     top: -14px;

@@ -197,6 +197,9 @@
               color:white;
             }
           }
+          .link.active {
+            color: #dd5931;
+          }
         }
         .blog {
           border:0;
@@ -438,8 +441,10 @@
     .container {
       .nav-top {
         .navt {
+          line-height: 61px;
           li {
             .link, .last-line {
+              font-size: 15px;
               &:hover {
                   background: none;
                   color: unset;
@@ -463,6 +468,7 @@
           }
           .blog {
             background:#dd5931;
+            font-size: 15px;
             &:hover {
               background: none;
               color: unset;
