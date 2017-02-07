@@ -197,6 +197,9 @@
               color:white;
             }
           }
+          .link.active {
+            color: #dd5931;
+          }
         }
         .blog {
           border:0;
@@ -438,8 +441,10 @@
     .container {
       .nav-top {
         .navt {
+          line-height: 61px;
           li {
             .link, .last-line {
+              font-size: 15px;
               &:hover {
                   background: none;
                   color: unset;
@@ -463,6 +468,7 @@
           }
           .blog {
             background:#dd5931;
+            font-size: 15px;
             &:hover {
               background: none;
               color: unset;
@@ -533,13 +539,74 @@
 }
 
 @media (max-width: 645px) {
+  .new-page{
+    .pages {
+      .page-name {
+        font-size: 45px;
+      }
+      .text-page {
+        font-size: 15px;
+      }
+    }
+  }
   .wrapper {
     &.amenities {
       .main-block {
         .blocks {
           .container {
             .display-flex {
+              padding-top: 45px;
               justify-content: center;
+              .flex-block {
+                height: 220px;
+                .text-anvio {
+                  margin-top: 10px;
+                  margin-bottom: 5px;
+                  font-size: 23px;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  .circle1, .circle2, .circle3 {
+    width: 140px;
+    height: 140px;
+  }
+  .new-heading {
+    padding-top: 0;
+    .pages {
+      .heading {
+        font-size: 45px;
+      }
+    }
+  }
+  .projects {
+    .container {
+      .display-flex {
+        .project-block {
+          font-size: 25px;
+        }
+      }
+    }
+  }
+  .case-study {
+    .container {
+      .right-block {
+        min-height: 750px;
+        .right-info {
+          .logo {
+           height: 45px;
+            img {
+              height: 40px;
+            }
+          }
+          .right-header {
+            font-size: 35px;
+            &:before {
+              width: 85px;
             }
           }
         }
@@ -670,15 +737,7 @@
         }
       }
       .right-block {
-        min-height:820px;
         margin-bottom: 20px;
-      }
-    }
-  }
-  .new-page {
-    .pages {
-      .page-name {
-        font-size: 40px;
       }
     }
   }
@@ -806,31 +865,6 @@
       }
     }
   }
-}
-
-@media (max-width: 360px) {
-  .case-study {
-    .container {
-      .right-block {
-        min-height: 770px;
-        .right-info {
-          .right-header {
-            font-size: 45px;
-            &:before {
-              width: 100px;
-            }
-          }
-          .logo {
-            height: 60px;
-            img {
-              height: 50px;
-            }
-          }
-        }
-      }
-    }
-  }
-
 }
 
 @media (max-width: 320px) {
