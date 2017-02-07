@@ -110,6 +110,12 @@ body {
     background-size: cover;
     height: 160px;
   }
+  .image-terms {
+    background-image: url(../images/terms.jpg);
+    background-position: 52% 27%;
+    background-size: cover;
+    height: 160px;
+  }
 }
 
 
@@ -122,6 +128,25 @@ body {
 }
 
 .wrapper {
+  &.terms {
+    .main-block {
+      .container {
+        h2 {
+          font-size: 40px;
+        }
+        .text-title {
+          font-size: 30px;
+          font-weight: 700;
+          margin-bottom: 10px;
+          display: inline-block;
+        }
+        p {
+          font-size: 17px;
+          margin-bottom: 20px;
+        }
+      }
+    }
+  }
   min-height: 800px;
   &.main {
     .main-block {
