@@ -136,7 +136,6 @@ body {
   font-family: 'Lato-Regular', sans-serif;
   font-size: 14px;
   line-height: 1.42857143;
-  color: #333;
   background-color: #fff; }
 
 .container {
@@ -405,6 +404,8 @@ body {
           color: #dd5931; }
         .contacts .get-in-touch .block-4 .fa.fa-google-plus {
           font-size: 16px; }
+      .contacts .get-in-touch .block-4.ru-vertion-footer .connect-us {
+        line-height: 25px; }
 
 .footer-black {
   background: #454545; }
@@ -517,7 +518,7 @@ body {
       text-transform: uppercase;
       display: block; }
     .img-hover:hover .we-love .comment span {
-      font-size: 20px; }
+      font-size: 15px; }
 
 /* Gallery */
 .gallery.members-gallery .gallery-line {
@@ -663,7 +664,7 @@ body {
         margin-bottom: 10px; }
 
 .case-study {
-  min-height: 500px; }
+  min-height: 760px; }
   .case-study .container {
     margin-top: 50px; }
     .case-study .container .left-block {
@@ -749,7 +750,7 @@ body {
     .case-study .container .right-block {
       float: right;
       width: 50%;
-      height: 700px; }
+      height: 710px; }
       .case-study .container .right-block .right-info {
         width: 90%;
         float: right;
@@ -883,8 +884,16 @@ body {
     width: 47%; }
     .case-study .container .right-block .right-info {
       width: 100%; }
-      .case-study .container .right-block .right-info .logo img {
-        height: 60px; } }
+      .case-study .container .right-block .right-info .logo {
+        height: 45px; }
+        .case-study .container .right-block .right-info .logo img {
+          height: 40px; }
+      .case-study .container .right-block .right-info .right-header {
+        font-size: 35px; }
+        .case-study .container .right-block .right-info .right-header:before {
+          width: 85px; }
+      .case-study .container .right-block .right-info p {
+        margin-top: 10px; } }
 @media (max-width: 1024px) {
   .pic {
     width: 50%; }
@@ -935,6 +944,8 @@ body {
           background: #dd5931; }
           .main-nav .container .nav-top .navt li:hover a, .main-nav .container .nav-top .navt li:hover .link.active {
             color: white; }
+        .main-nav .container .nav-top .navt li .link.active {
+          color: #dd5931; }
       .main-nav .container .nav-top .navt .blog {
         border: 0;
         width: 765px;
@@ -1027,9 +1038,14 @@ body {
     float: none;
     width: 100%;
     text-align: center;
-    min-height: 630px; }
+    height: auto; }
     .case-study .container .right-block .right-info {
-      width: 100%; }
+      width: 100%;
+      top: unset;
+      transform: unset;
+      position: unset;
+      margin-top: 15px;
+      margin-bottom: 30px; }
 
   .projects {
     min-height: 200px; }
@@ -1070,7 +1086,7 @@ body {
         margin-top: 17px;
         margin-bottom: 15px; }
 
-  .gallery.members-gallery .gallery-line {
+  .gallery.members-gallery .gallery-line, .gallery.connect-us .gallery-line {
     margin-top: 0; } }
 @media (max-width: 736px) {
   .gallery {
@@ -1091,13 +1107,12 @@ body {
       background: none;
       color: unset; }
     .main-nav .container .nav-top .navt li a:hover, .main-nav .container .nav-top .navt li .link.active:hover {
-      color: unset; }
+      color: #dd5931; }
+    .main-nav .container .nav-top .navt li:nth-child(odd) {
+      background: #FCFCFB; }
     .main-nav .container .nav-top .navt .blog {
       background: #dd5931;
       font-size: 15px; }
-      .main-nav .container .nav-top .navt .blog:hover {
-        background: none;
-        color: unset; }
 
   .wrapper.members .main-block .container .our-members .slick-prev {
     top: -14px;
@@ -1113,7 +1128,11 @@ body {
     .wrapper.members .main-block .container .our-members .slick-next:before {
       content: '>';
       padding: 0px 5px 5px 5px;
-      font-size: 17px; } }
+      font-size: 17px; }
+  .wrapper.members .main-block .case-study .container .right-block .right-info {
+    margin-bottom: 0; }
+  .wrapper.pricing .main-block .container .display-flex .plans:last-child {
+    margin-bottom: 0; } }
 @media (max-width: 732px) {
   .wrapper .container .partners .pycoding img {
     height: 20px; }
@@ -1125,7 +1144,7 @@ body {
     height: 45px; } }
 @media (max-width: 645px) {
   .new-page .pages .page-name {
-    font-size: 45px; }
+    font-size: 35px; }
   .new-page .pages .text-page {
     font-size: 15px; }
 
@@ -1146,21 +1165,10 @@ body {
   .new-heading {
     padding-top: 0; }
     .new-heading .pages .heading {
-      font-size: 45px; }
+      font-size: 40px; }
 
   .projects .container .display-flex .project-block {
-    font-size: 25px; }
-
-  .case-study .container .right-block {
-    min-height: 750px; }
-    .case-study .container .right-block .right-info .logo {
-      height: 45px; }
-      .case-study .container .right-block .right-info .logo img {
-        height: 40px; }
-    .case-study .container .right-block .right-info .right-header {
-      font-size: 35px; }
-      .case-study .container .right-block .right-info .right-header:before {
-        width: 85px; } }
+    font-size: 25px; } }
 @media (max-width: 639px) {
   .wrapper.main .main-block .main-info {
     height: 670px; }
@@ -1226,9 +1234,7 @@ body {
       line-height: 37px;
       text-align: center; }
   .case-study .container .left-block .mockup {
-    margin-bottom: 0; }
-  .case-study .container .right-block {
-    margin-bottom: 20px; } }
+    margin-bottom: 0; } }
 @media (max-width: 550px) {
   .wrapper.pricing .main-block .container .display-flex .plans {
     width: 90%;
@@ -1253,8 +1259,6 @@ body {
 
   .footer-black .container .left-footer {
     text-align: center; }
-    .footer-black .container .left-footer a {
-      display: none; }
 
   .wrapper .main-block .main-info .local-com h1, .wrapper .main-block .main-info .local-com h2 {
     margin-bottom: 20px; }
