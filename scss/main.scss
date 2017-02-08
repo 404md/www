@@ -39,7 +39,6 @@ body {
   font-family: 'Lato-Regular', sans-serif;
   font-size: 14px;
   line-height: 1.42857143;
-  color: #333;
   background-color: #fff;
 }
 
@@ -438,6 +437,11 @@ body {
           font-size: 16px;
         }
       }
+      &.ru-vertion-footer {
+        .connect-us {
+          line-height: 25px;
+        }
+      }
     }
   }
 }
@@ -588,7 +592,7 @@ body {
           display: block;
         }
         span {
-          font-size: 20px;
+          font-size: 15px;
         }
       }
     }

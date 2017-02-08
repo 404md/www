@@ -106,9 +106,19 @@
         .right-info {
           width: 100%;
           .logo {
+            height: 45px;
             img {
-              height: 60px;
+              height: 40px;
             }
+          }
+          .right-header {
+            font-size: 35px;
+            &:before {
+              width: 85px;
+            }
+          }
+          p {
+            margin-top: 10px;
           }
         }
       }
@@ -347,9 +357,14 @@
         float:none;
         width: 100%;
         text-align: center;
-        min-height: 630px;
+        height: auto;
         .right-info {
           width: 100%;
+          top:unset;
+          transform: unset;
+          position: unset;
+          margin-top: 15px;
+          margin-bottom: 30px;
         }
       }
     }
@@ -425,7 +440,7 @@
   }
 
   .gallery {
-    &.members-gallery {
+    &.members-gallery, &.connect-us {
     .gallery-line {
       margin-top:  0;
       }
@@ -446,33 +461,32 @@
             .link, .last-line {
               font-size: 15px;
               &:hover {
-                  background: none;
-                  color: unset;
+                background: none;
+                color: unset;
               }
               &.active {
-                color:#dd5931;
+                color: #dd5931;
                 &:hover {
                   color: unset;
                 }
               }
             }
-            &:hover{
-              background: none;
-              color:unset;
-            }
-            a, .link.active {
-              &:hover {
-                color:unset;
-              }
-            }
-          }
-          .blog {
-            background:#dd5931;
-            font-size: 15px;
             &:hover {
               background: none;
               color: unset;
             }
+            a, .link.active {
+              &:hover {
+                color: #dd5931;
+              }
+            }
+            &:nth-child(odd){
+              background:#FCFCFB;
+            }
+          }
+          .blog {
+            background: #dd5931;
+            font-size: 15px;
           }
         }
       }
@@ -500,6 +514,28 @@
                 content: '>';
                 padding: 0px 5px 5px 5px;
                 font-size: 17px;
+              }
+            }
+          }
+        }
+        .case-study {
+          .container {
+            .right-block {
+              .right-info {
+                margin-bottom: 0;
+              }
+            }
+          }
+        }
+      }
+    }
+    &.pricing {
+      .main-block {
+        .container {
+          .display-flex {
+            .plans {
+              &:last-child {
+                margin-bottom: 0;
               }
             }
           }
@@ -542,7 +578,7 @@
   .new-page{
     .pages {
       .page-name {
-        font-size: 45px;
+        font-size: 35px;
       }
       .text-page {
         font-size: 15px;
@@ -579,7 +615,7 @@
     padding-top: 0;
     .pages {
       .heading {
-        font-size: 45px;
+        font-size: 40px;
       }
     }
   }
@@ -595,20 +631,8 @@
   .case-study {
     .container {
       .right-block {
-        min-height: 750px;
         .right-info {
-          .logo {
-           height: 45px;
-            img {
-              height: 40px;
-            }
-          }
-          .right-header {
-            font-size: 35px;
-            &:before {
-              width: 85px;
-            }
-          }
+
         }
       }
     }
@@ -706,7 +730,6 @@
       .left-block {
         .mockup {
           .mockup-head {
-
             h1 {
               color: #3b9ff3;
               font-size: 24px;
@@ -736,12 +759,26 @@
           margin-bottom: 0;
         }
       }
-      .right-block {
-        margin-bottom: 20px;
-      }
     }
   }
 }
+
+//@media (max-width: 568px) {
+// .wrapper {
+//   &.members {
+//     .main-block {
+//       .case-study {
+//         .container {
+//           .right-block {
+//             height: 690px;
+//             min-height: 680px;
+//           }
+//         }
+//       }
+//     }
+//   }
+// }
+//}
 
 @media (max-width: 550px) {
   .wrapper {
@@ -793,9 +830,6 @@
     .container {
       .left-footer {
         text-align: center;
-      a {
-        display: none;
-       }
       }
     }
   }
