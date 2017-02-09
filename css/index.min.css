@@ -18,7 +18,9 @@
       height: 300px;
       width: 310px;
       text-align: center;
-      padding-bottom: 20px; }
+      padding-bottom: 20px;
+      padding-left: 10px;
+      padding-right: 10px; }
       .wrapper.amenities .main-block .blocks .container .display-flex .flex-block img {
         height: 90px; }
 
@@ -220,6 +222,8 @@ body {
   .wrapper.terms .main-block .container p {
     font-size: 17px;
     margin-bottom: 20px; }
+    .wrapper.terms .main-block .container p:last-child {
+      margin-bottom: 0; }
   .wrapper.main .main-block {
     background-image: url(../images/bg.jpg);
     background-position: center;
@@ -393,17 +397,20 @@ body {
         text-decoration: none; }
     .contacts .get-in-touch .block-4 {
       width: 15%; }
-      .contacts .get-in-touch .block-4 a {
-        color: #888;
-        font-size: 20px; }
-      .contacts .get-in-touch .block-4 .fa {
-        padding: 3px;
-        border: 2px solid transparent; }
-        .contacts .get-in-touch .block-4 .fa:hover {
-          border: 2px solid #dd5931;
-          color: #dd5931; }
-        .contacts .get-in-touch .block-4 .fa.fa-google-plus {
-          font-size: 16px; }
+      .contacts .get-in-touch .block-4 .display-flex {
+        flex-wrap: nowrap; }
+        .contacts .get-in-touch .block-4 .display-flex a {
+          color: #888;
+          font-size: 18px;
+          width: 30px;
+          height: 30px;
+          text-align: center;
+          display: block;
+          line-height: 26px;
+          border: 2px solid transparent; }
+          .contacts .get-in-touch .block-4 .display-flex a:hover {
+            border: 2px solid #dd5931;
+            color: #dd5931; }
       .contacts .get-in-touch .block-4.ru-vertion-footer .connect-us {
         line-height: 25px; }
 
@@ -901,7 +908,10 @@ body {
       width: 80px;
       height: 80px; }
     .pic .img-hover .we-love .comment span {
-      font-size: 15px; } }
+      font-size: 15px; }
+
+  .wrapper.amenities .main-block .blocks .container .display-flex.ru-block .text-anvio {
+    font-size: 21px; } }
 @media screen and (max-width: 992px) {
   .wrapper.main .main-block .main-nav.responsive-nav {
     background: black; }
@@ -924,7 +934,7 @@ body {
       box-shadow: -3px -4px 5px -5px rgba(0, 0, 0, 0.3);
       -webkit-box-shadow: -3px -5px 5px -5px rgba(0, 0, 0, 0.3); }
       .main-nav .container .nav-top .navt li {
-        transition: 0.3s;
+        transition: 0.5s;
         display: block; }
         .main-nav .container .nav-top .navt li:last-child {
           box-shadow: -3px 2px 3px rgba(0, 0, 0, 0.3);
@@ -981,8 +991,7 @@ body {
         .main-nav .container .nav-top.main-page-nav .navt li:hover {
           background: #dd5931; }
           .main-nav .container .nav-top.main-page-nav .navt li:hover a, .main-nav .container .nav-top.main-page-nav .navt li:hover .link.active {
-            color: white;
-            background: #dd5931; }
+            color: white; }
         .main-nav .container .nav-top.main-page-nav .navt li .last-line:hover {
           background: transparent; }
       .main-nav .container .nav-top.main-page-nav .navt .blog:hover {
@@ -1026,7 +1035,8 @@ body {
     .contacts .get-in-touch .block-4 .connect-us {
       padding-top: 15px; }
     .contacts .get-in-touch .block-4 .one-line {
-      display: inline-block; }
+      display: inline-flex;
+      justify-content: unset; }
 
   .case-study .container .left-block {
     float: none;
@@ -1113,6 +1123,18 @@ body {
     .main-nav .container .nav-top .navt .blog {
       background: #dd5931;
       font-size: 15px; }
+  .main-nav .container .nav-top.main-page-nav .navt li:hover {
+    background: unset; }
+  .main-nav .container .nav-top.main-page-nav .navt li .link:hover {
+    background: unset; }
+  .main-nav .container .nav-top.main-page-nav .navt li:hover {
+    background: unset;
+    color: unset; }
+  .main-nav .container .nav-top.main-page-nav .navt li .last-line:hover {
+    background: unset; }
+  .main-nav .container .nav-top.main-page-nav .navt .blog {
+    color: white;
+    background: #dd5931; }
 
   .wrapper.members .main-block .container .our-members .slick-prev {
     top: -14px;
@@ -1144,7 +1166,7 @@ body {
     height: 45px; } }
 @media (max-width: 645px) {
   .new-page .pages .page-name {
-    font-size: 35px; }
+    font-size: 34px; }
   .new-page .pages .text-page {
     font-size: 15px; }
 
@@ -1165,10 +1187,15 @@ body {
   .new-heading {
     padding-top: 0; }
     .new-heading .pages .heading {
-      font-size: 40px; }
+      font-size: 30px; }
 
   .projects .container .display-flex .project-block {
-    font-size: 25px; } }
+    font-size: 25px; }
+
+  .case-study .container .right-block .right-info .logo img {
+    height: 40px; }
+  .case-study .container .right-block .right-info .right-header {
+    font-size: 30px; } }
 @media (max-width: 639px) {
   .wrapper.main .main-block .main-info {
     height: 670px; }
@@ -1282,6 +1309,12 @@ body {
 @media (max-width: 320px) {
   .wrapper.contact .main-block .container .input-field .hole-form {
     width: 95%; }
+    .wrapper.contact .main-block .container .input-field .hole-form .heading-contact {
+      font-size: 22px; }
+    .wrapper.contact .main-block .container .input-field .hole-form .input-style {
+      font-size: 16px; }
+    .wrapper.contact .main-block .container .input-field .hole-form .text-style {
+      font-size: 16px; }
   .wrapper.main .main-block .main-info {
     height: 530px; }
     .wrapper.main .main-block .main-info.ru-vertion h1, .wrapper.main .main-block .main-info.ru-vertion h2 {
@@ -1294,6 +1327,20 @@ body {
     -webkit-transform: scale(0.91);
     transform-origin: 0 0;
     -webkit-transform-origin: 0 0; }
+  .wrapper.pricing .main-block .container .display-flex .plans .img-plan .back-color .text-plan .text-p {
+    font-size: 20px; }
+  .wrapper.pricing .main-block .container .display-flex .plans .description .block-responsive .btn-center a {
+    font-size: 13px; }
+  .wrapper .container .partners {
+    line-height: 70px; }
+    .wrapper .container .partners .pycoding img {
+      height: 17px; }
+    .wrapper .container .partners .itech img {
+      height: 56px; }
+    .wrapper .container .partners .mitoc img {
+      height: 35px; }
+    .wrapper .container .partners .usaid img {
+      height: 37px; }
 
   .case-study .container .left-block .mockup .logo-img {
     height: 30px; }
@@ -1315,12 +1362,13 @@ body {
       text-align: center; }
   .case-study .container .right-block {
     min-height: 850px; }
-    .case-study .container .right-block .right-info .logo img {
-      height: 50px; }
 
   .new-page .pages .page-name {
-    font-size: 30px; }
+    font-size: 26px; }
   .new-page .pages .text-page {
-    font-size: 15px; } }
+    font-size: 15px; }
+
+  .footer-black .container .left-footer.ru-text {
+    font-size: 12px; } }
 
 /*# sourceMappingURL=index.min.css.map */

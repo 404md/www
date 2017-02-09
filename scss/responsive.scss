@@ -143,6 +143,23 @@
       }
     }
   }
+  .wrapper {
+    &.amenities {
+      .main-block {
+        .blocks {
+          .container {
+            .display-flex {
+             &.ru-block {
+               .text-anvio {
+                 font-size: 21px;
+               }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
 }
 
 @media screen and (max-width: 992px) {
@@ -177,7 +194,7 @@
         box-shadow:-3px -4px 5px -5px rgba(0, 0, 0, 0.3);
           -webkit-box-shadow:-3px -5px 5px -5px rgba(0, 0, 0, 0.3);
         li {
-          transition:0.3s;
+          transition:0.5s;
           display: block;
           &:last-child {
             box-shadow: -3px 2px 3px rgba(0, 0, 0, 0.3);
@@ -202,7 +219,6 @@
           }
           &:hover {
             background: #dd5931;
-
             a, .link.active {
               color:white;
             }
@@ -259,7 +275,6 @@
               background:#dd5931 ;
               a, .link.active {
                 color:white;
-                background:#dd5931
               }
             }
             .last-line {
@@ -337,7 +352,8 @@
           padding-top: 15px;
         }
         .one-line {
-          display: inline-block;
+          display: inline-flex;
+          justify-content: unset;
         }
       }
     }
@@ -489,6 +505,33 @@
             font-size: 15px;
           }
         }
+        &.main-page-nav {
+          .navt {
+            li {
+              &:hover {
+                background: unset;
+              }
+              .link {
+                &:hover {
+                  background: unset;
+                }
+              }
+              &:hover {
+                background:unset;
+                color:unset;
+              }
+              .last-line {
+                &:hover {
+                  background:unset;
+                }
+              }
+            }
+            .blog {
+                color:white;
+                background:#dd5931 ;
+            }
+          }
+        }
       }
     }
   }
@@ -578,7 +621,7 @@
   .new-page{
     .pages {
       .page-name {
-        font-size: 35px;
+        font-size: 34px;
       }
       .text-page {
         font-size: 15px;
@@ -615,7 +658,7 @@
     padding-top: 0;
     .pages {
       .heading {
-        font-size: 40px;
+        font-size: 30px;
       }
     }
   }
@@ -632,7 +675,14 @@
     .container {
       .right-block {
         .right-info {
-
+          .logo {
+            img {
+              height: 40px;
+            }
+          }
+         .right-header {
+           font-size: 30px;
+         }
         }
       }
     }
@@ -763,23 +813,6 @@
   }
 }
 
-//@media (max-width: 568px) {
-// .wrapper {
-//   &.members {
-//     .main-block {
-//       .case-study {
-//         .container {
-//           .right-block {
-//             height: 690px;
-//             min-height: 680px;
-//           }
-//         }
-//       }
-//     }
-//   }
-// }
-//}
-
 @media (max-width: 550px) {
   .wrapper {
     &.pricing {
@@ -909,6 +942,15 @@
           .input-field {
             .hole-form {
              width: 95%;
+              .heading-contact {
+                font-size: 22px;
+              }
+              .input-style {
+                font-size: 16px;
+              }
+              .text-style {
+                font-size: 16px;
+              }
             }
           }
         }
@@ -940,7 +982,59 @@
         -webkit-transform:scale(0.91);
         transform-origin:0 0;-webkit-transform-origin:0 0;
      }
-
+      &.pricing {
+        .main-block {
+          .container {
+            .display-flex {
+              .plans {
+                .img-plan {
+                  .back-color {
+                    .text-plan {
+                     .text-p {
+                       font-size:20px;
+                      }
+                    }
+                  }
+                }
+                .description {
+                  .block-responsive {
+                    .btn-center {
+                      a {
+                        font-size: 13px;
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    .container {
+      .partners {
+        line-height: 70px;
+        .pycoding {
+          img {
+            height: 17px;
+          }
+        }
+        .itech {
+          img {
+            height: 56px;
+          }
+        }
+        .mitoc {
+          img {
+            height: 35px;
+          }
+        }
+        .usaid {
+          img {
+            height: 37px;
+          }
+        }
+      }
+    }
   }
   .case-study {
     .container {
@@ -979,23 +1073,25 @@
       }
       .right-block {
         min-height: 850px;
-        .right-info {
-          .logo {
-            img {
-              height: 50px;
-            }
-          }
-        }
       }
     }
   }
   .new-page {
     .pages {
       .page-name {
-        font-size: 30px;
+        font-size: 26px;
       }
       .text-page{
         font-size: 15px;
+      }
+    }
+  }
+  .footer-black {
+    .container {
+      .left-footer {
+        &.ru-text {
+          font-size: 12px;
+        }
       }
     }
   }
