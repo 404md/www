@@ -35,6 +35,44 @@
   background-image: url(../images/img4.jpg);
   display: flex; }
 
+.wrapper.booking .main-block {
+  min-height: 700px; }
+  .wrapper.booking .main-block .container .back-image {
+    background-image: url(../images/1.jpg);
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    background-size: cover;
+    height: 700px;
+    position: relative; }
+    .wrapper.booking .main-block .container .back-image:before {
+      content: '';
+      position: absolute;
+      width: 60%;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      background: rgba(0, 0, 0, 0.3); }
+    .wrapper.booking .main-block .container .back-image .booking-form {
+      position: relative;
+      width: 40%;
+      background: white;
+      height: 700px;
+      opacity: 0.95;
+      display: flex;
+      justify-content: center;
+      align-items: center; }
+      .wrapper.booking .main-block .container .back-image .booking-form .form {
+        width: 67%;
+        margin: 0 auto; }
+        .wrapper.booking .main-block .container .back-image .booking-form .form .heading-contact {
+          padding-bottom: 10px; }
+        .wrapper.booking .main-block .container .back-image .booking-form .form label {
+          margin-bottom: 10px;
+          font-size: 18px;
+          display: block; }
+        .wrapper.booking .main-block .container .back-image .booking-form .form .text-style {
+          margin-bottom: 20px; }
+
 .wrapper.contact .main-block {
   min-height: 700px; }
   .wrapper.contact .main-block .container .map-style {
@@ -68,29 +106,6 @@
         display: block;
         margin-bottom: 10px;
         font-size: 18px; }
-      .wrapper.contact .main-block .container .input-field .hole-form .input-style {
-        height: 40px;
-        width: 100%;
-        font-size: 20px;
-        padding: 0 10px;
-        border: 1px solid #454545;
-        margin-bottom: 20px;
-        color: #aaaaaa; }
-      .wrapper.contact .main-block .container .input-field .hole-form .text-style {
-        font-size: 20px;
-        padding: 10px;
-        border: 1px solid #454545;
-        margin-bottom: 20px;
-        width: 100%;
-        color: #aaaaaa;
-        resize: none; }
-      .wrapper.contact .main-block .container .input-field .hole-form .button {
-        width: 100%; }
-      .wrapper.contact .main-block .container .input-field .hole-form .heading-contact {
-        text-transform: uppercase;
-        font-size: 25px;
-        font-weight: 600;
-        padding-bottom: 20px; }
 
 /* Gallery */
 .gallery.connect-us .gallery-line {
@@ -146,11 +161,38 @@ body {
   margin-right: auto;
   margin-left: auto; }
 
+.heading-contact {
+  text-transform: uppercase;
+  font-size: 25px;
+  font-weight: 600;
+  padding-bottom: 20px; }
+
+.input-style {
+  height: 40px;
+  width: 100%;
+  font-size: 20px;
+  padding: 0 10px;
+  border: 1px solid #454545;
+  margin-bottom: 20px;
+  color: #aaaaaa; }
+
+.text-style {
+  font-size: 20px;
+  padding: 10px;
+  border: 1px solid #454545;
+  margin-bottom: 20px;
+  width: 100%;
+  color: #aaaaaa;
+  resize: none; }
+
 .connect-us {
   color: black;
   font-size: 19px;
   font-weight: bold;
   padding-bottom: 5px; }
+
+.button {
+  width: 100%; }
 
 .clear {
   clear: both; }
@@ -199,6 +241,11 @@ body {
     height: 160px; }
   .image .image-terms {
     background-image: url(../images/terms.jpg);
+    background-position: 52% 27%;
+    background-size: cover;
+    height: 160px; }
+  .image .image-book_tour {
+    background-image: url(../images/book.jpg);
     background-position: 52% 27%;
     background-size: cover;
     height: 160px; }
@@ -881,6 +928,8 @@ body {
         .wrapper.pricing .main-block .container .display-flex .plans .description .block-responsive .button {
           margin-top: 17px;
           margin-bottom: 15px; }
+  .wrapper.booking .main-block .container .back-image .booking-form .form {
+    width: auto; }
 
   .gallery .gallery-line {
     height: 180px; }
@@ -1095,6 +1144,12 @@ body {
       .wrapper.pricing .main-block .container .display-flex .plans .description .block-responsive .button {
         margin-top: 17px;
         margin-bottom: 15px; }
+  .wrapper.booking .main-block .container .back-image:before {
+    width: 100%; }
+  .wrapper.booking .main-block .container .back-image .booking-form {
+    width: 100%; }
+    .wrapper.booking .main-block .container .back-image .booking-form .form {
+      width: auto; }
 
   .gallery.members-gallery .gallery-line, .gallery.connect-us .gallery-line {
     margin-top: 0; } }
@@ -1341,6 +1396,13 @@ body {
       height: 35px; }
     .wrapper .container .partners .usaid img {
       height: 37px; }
+  .wrapper.booking .main-block .container .back-image .booking-form .form {
+    width: 90%; }
+    .wrapper.booking .main-block .container .back-image .booking-form .form .g-recaptcha {
+      transform: scale(0.85);
+      -webkit-transform: scale(0.85);
+      transform-origin: 0 0;
+      -webkit-transform-origin: 0 0; }
 
   .case-study .container .left-block .mockup .logo-img {
     height: 30px; }
