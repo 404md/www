@@ -1,0 +1,51 @@
+.wrapper {
+  &.booking {
+    .main-block {
+      min-height: 700px;
+      .container {
+        .back-image {
+          background-image: url(../images/1.jpg);
+          background-repeat: no-repeat;
+          background-position: 50% 50%;
+          background-size: cover;
+          height: 700px;
+          position: relative;
+          &:before {
+            content: '';
+            position: absolute;
+            width: 60%;
+            top: 0;
+            right: 0;
+            bottom:0;
+            background: rgba(0, 0, 0, 0.3);
+          }
+          .booking-form {
+            position: relative;
+            width: 40%;
+            background: white;
+            height: 700px;
+            opacity: 0.95;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            .form {
+              width: 67%;
+              margin: 0 auto;
+              .heading-contact {
+                padding-bottom: 10px;
+              }
+              label {
+                margin-bottom: 10px;
+                font-size: 18px;
+                display: block;
+              }
+              .text-style {
+                margin-bottom: 20px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

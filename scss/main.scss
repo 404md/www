@@ -49,11 +49,41 @@ body {
   margin-left: auto;
 }
 
+.heading-contact {
+  text-transform: uppercase;
+  font-size: 25px;
+  font-weight: 600;
+  padding-bottom: 20px;
+}
+
+.input-style {
+  height: 40px;
+  width: 100%;
+  font-size: 20px;
+  padding: 0 10px;
+  border: 1px solid #454545;
+  margin-bottom: 20px;
+  color: #aaaaaa;
+}
+.text-style {
+  font-size: 20px;
+  padding: 10px;
+  border: 1px solid #454545;
+  margin-bottom: 20px;
+  width: 100%;
+  color: #aaaaaa;
+  resize:none;
+}
+
 .connect-us {
   color: black;
   font-size: 19px;
   font-weight: bold;
   padding-bottom: 5px;
+}
+
+.button {
+  width: 100%;
 }
 
 .clear {
@@ -111,6 +141,12 @@ body {
   }
   .image-terms {
     background-image: url(../images/terms.jpg);
+    background-position: 52% 27%;
+    background-size: cover;
+    height: 160px;
+  }
+  .image-book_tour {
+    background-image: url(../images/book.jpg);
     background-position: 52% 27%;
     background-size: cover;
     height: 160px;

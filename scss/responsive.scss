@@ -90,6 +90,20 @@
         }
       }
     }
+    &.booking {
+      .main-block {
+        .container {
+          .back-image {
+            .booking-form {
+              .form {
+                width: auto;
+
+              }
+            }
+          }
+        }
+      }
+    }
   }
   .gallery {
     .gallery-line {
@@ -447,6 +461,24 @@
                     margin-bottom: 15px;
                   }
                 }
+              }
+            }
+          }
+        }
+      }
+    }
+    &.booking {
+      .main-block {
+        .container {
+          .back-image {
+            &:before {
+              width: 100%;
+            }
+            .booking-form {
+              width: 100%;
+              .form {
+                width: auto;
+
               }
             }
           }
@@ -1031,6 +1063,25 @@
         .usaid {
           img {
             height: 37px;
+          }
+        }
+      }
+    }
+    &.booking {
+      .main-block {
+        .container {
+          .back-image {
+
+            .booking-form {
+              .form {
+                width: 90%;
+                .g-recaptcha {
+                  transform:scale(0.85);
+                  -webkit-transform:scale(0.85);
+                  transform-origin:0 0;-webkit-transform-origin:0 0;
+                }
+              }
+            }
           }
         }
       }
