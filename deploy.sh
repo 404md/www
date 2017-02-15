@@ -1,5 +1,13 @@
 #!/usr/bin/env bash
 
+if [ -z $(which aws) ]; then
+    echo 'aws cli must be installed on your PC'
+    exit 1
+fi
+
+region=$([ -n "$1" ] && echo "$1" || echo 'eu-central-1')
+profile=$([ -n "$2" ] && echo "$2" || echo 'default')
+
 #echo "Install minifying tools"
 #npm install html-minifier -g
 #npm install cssnano-cli -g
@@ -42,6 +50,6 @@ html-minifier --collapse-whitespace --remove-comments ./ru/pricing/index.html -o
 html-minifier --collapse-whitespace --remove-comments ./ru/terms/index.html -o ./build/Release/ru/terms/index.html
 
 echo "Synchronizing build/Release/"
-aws s3 sync --delete build/Release/ s3://www.404.md/ --region eu-central-1 --storage-class REDUCED_REDUNDANCY --metadata-directive REPLACE --cache-control max-age=604800
+aws s3 sync ./build/Release/ s3://www.404.md/ --region ${region} --profile ${profile} --delete --storage-class REDUCED_REDUNDANCY --metadata-directive REPLACE --cache-control max-age=604800
 
 echo "Done"
