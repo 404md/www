@@ -18,7 +18,9 @@
       height: 300px;
       width: 310px;
       text-align: center;
-      padding-bottom: 20px; }
+      padding-bottom: 20px;
+      padding-left: 5px;
+      padding-right: 5px; }
       .wrapper.amenities .main-block .blocks .container .display-flex .flex-block img {
         height: 90px; }
 
@@ -66,29 +68,6 @@
         display: block;
         margin-bottom: 10px;
         font-size: 18px; }
-      .wrapper.contact .main-block .container .input-field .hole-form .input-style {
-        height: 40px;
-        width: 100%;
-        font-size: 20px;
-        padding: 0 10px;
-        border: 1px solid #454545;
-        margin-bottom: 20px;
-        color: #aaaaaa; }
-      .wrapper.contact .main-block .container .input-field .hole-form .text-style {
-        font-size: 20px;
-        padding: 10px;
-        border: 1px solid #454545;
-        margin-bottom: 20px;
-        width: 100%;
-        color: #aaaaaa;
-        resize: none; }
-      .wrapper.contact .main-block .container .input-field .hole-form .button {
-        width: 100%; }
-      .wrapper.contact .main-block .container .input-field .hole-form .heading-contact {
-        text-transform: uppercase;
-        font-size: 25px;
-        font-weight: 600;
-        padding-bottom: 20px; }
 
 /* Gallery */
 .gallery.connect-us .gallery-line {
@@ -136,7 +115,6 @@ body {
   font-family: 'Lato-Regular', sans-serif;
   font-size: 14px;
   line-height: 1.42857143;
-  color: #333;
   background-color: #fff; }
 
 .container {
@@ -145,11 +123,38 @@ body {
   margin-right: auto;
   margin-left: auto; }
 
+.heading-contact {
+  text-transform: uppercase;
+  font-size: 25px;
+  font-weight: 600;
+  padding-bottom: 20px; }
+
+.input-style {
+  height: 40px;
+  width: 100%;
+  font-size: 20px;
+  padding: 0 10px;
+  border: 1px solid #454545;
+  margin-bottom: 20px;
+  color: #aaaaaa; }
+
+.text-style {
+  font-size: 20px;
+  padding: 10px;
+  border: 1px solid #454545;
+  margin-bottom: 20px;
+  width: 100%;
+  color: #aaaaaa;
+  resize: none; }
+
 .connect-us {
   color: black;
   font-size: 19px;
   font-weight: bold;
   padding-bottom: 5px; }
+
+.button {
+  width: 100%; }
 
 .clear {
   clear: both; }
@@ -196,6 +201,16 @@ body {
     background-position: 52% 48%;
     background-size: cover;
     height: 160px; }
+  .image .image-terms {
+    background-image: url(../images/terms.jpg);
+    background-position: 52% 27%;
+    background-size: cover;
+    height: 160px; }
+  .image .image-book_tour {
+    background-image: url(../images/book.jpg);
+    background-position: 52% 27%;
+    background-size: cover;
+    height: 160px; }
 
 .text-anvio {
   font-family: 'Lato-Regular', sans-serif;
@@ -206,6 +221,18 @@ body {
 
 .wrapper {
   min-height: 800px; }
+  .wrapper.terms .main-block .container h2 {
+    font-size: 40px; }
+  .wrapper.terms .main-block .container .text-title {
+    font-size: 30px;
+    font-weight: 700;
+    margin-bottom: 10px;
+    display: inline-block; }
+  .wrapper.terms .main-block .container p {
+    font-size: 17px;
+    margin-bottom: 20px; }
+    .wrapper.terms .main-block .container p:last-child {
+      margin-bottom: 0; }
   .wrapper.main .main-block {
     background-image: url(../images/bg.jpg);
     background-position: center;
@@ -379,17 +406,22 @@ body {
         text-decoration: none; }
     .contacts .get-in-touch .block-4 {
       width: 15%; }
-      .contacts .get-in-touch .block-4 a {
-        color: #888;
-        font-size: 20px; }
-      .contacts .get-in-touch .block-4 .fa {
-        padding: 3px;
-        border: 2px solid transparent; }
-        .contacts .get-in-touch .block-4 .fa:hover {
-          border: 2px solid #dd5931;
-          color: #dd5931; }
-        .contacts .get-in-touch .block-4 .fa.fa-google-plus {
-          font-size: 16px; }
+      .contacts .get-in-touch .block-4 .display-flex {
+        flex-wrap: nowrap; }
+        .contacts .get-in-touch .block-4 .display-flex a {
+          color: #888;
+          font-size: 18px;
+          width: 30px;
+          height: 30px;
+          text-align: center;
+          display: block;
+          line-height: 26px;
+          border: 2px solid transparent; }
+          .contacts .get-in-touch .block-4 .display-flex a:hover {
+            border: 2px solid #dd5931;
+            color: #dd5931; }
+      .contacts .get-in-touch .block-4.ru-vertion-footer .connect-us {
+        line-height: 25px; }
 
 .footer-black {
   background: #454545; }
@@ -502,7 +534,7 @@ body {
       text-transform: uppercase;
       display: block; }
     .img-hover:hover .we-love .comment span {
-      font-size: 20px; }
+      font-size: 15px; }
 
 /* Gallery */
 .gallery.members-gallery .gallery-line {
@@ -648,7 +680,7 @@ body {
         margin-bottom: 10px; }
 
 .case-study {
-  min-height: 500px; }
+  min-height: 760px; }
   .case-study .container {
     margin-top: 50px; }
     .case-study .container .left-block {
@@ -734,7 +766,7 @@ body {
     .case-study .container .right-block {
       float: right;
       width: 50%;
-      height: 700px; }
+      height: 710px; }
       .case-study .container .right-block .right-info {
         width: 90%;
         float: right;
@@ -858,6 +890,8 @@ body {
         .wrapper.pricing .main-block .container .display-flex .plans .description .block-responsive .button {
           margin-top: 17px;
           margin-bottom: 15px; }
+  .wrapper.booking .main-block .container .back-image .booking-form .form {
+    width: auto; }
 
   .gallery .gallery-line {
     height: 180px; }
@@ -868,8 +902,16 @@ body {
     width: 47%; }
     .case-study .container .right-block .right-info {
       width: 100%; }
-      .case-study .container .right-block .right-info .logo img {
-        height: 60px; } }
+      .case-study .container .right-block .right-info .logo {
+        height: 45px; }
+        .case-study .container .right-block .right-info .logo img {
+          height: 40px; }
+      .case-study .container .right-block .right-info .right-header {
+        font-size: 35px; }
+        .case-study .container .right-block .right-info .right-header:before {
+          width: 85px; }
+      .case-study .container .right-block .right-info p {
+        margin-top: 10px; } }
 @media (max-width: 1024px) {
   .pic {
     width: 50%; }
@@ -877,7 +919,10 @@ body {
       width: 80px;
       height: 80px; }
     .pic .img-hover .we-love .comment span {
-      font-size: 15px; } }
+      font-size: 15px; }
+
+  .wrapper.amenities .main-block .blocks .container .display-flex.ru-block .text-anvio {
+    font-size: 21px; } }
 @media screen and (max-width: 992px) {
   .wrapper.main .main-block .main-nav.responsive-nav {
     background: black; }
@@ -900,7 +945,7 @@ body {
       box-shadow: -3px -4px 5px -5px rgba(0, 0, 0, 0.3);
       -webkit-box-shadow: -3px -5px 5px -5px rgba(0, 0, 0, 0.3); }
       .main-nav .container .nav-top .navt li {
-        transition: 0.3s;
+        transition: 0.5s;
         display: block; }
         .main-nav .container .nav-top .navt li:last-child {
           box-shadow: -3px 2px 3px rgba(0, 0, 0, 0.3);
@@ -920,6 +965,8 @@ body {
           background: #dd5931; }
           .main-nav .container .nav-top .navt li:hover a, .main-nav .container .nav-top .navt li:hover .link.active {
             color: white; }
+        .main-nav .container .nav-top .navt li .link.active {
+          color: #dd5931; }
       .main-nav .container .nav-top .navt .blog {
         border: 0;
         width: 765px;
@@ -955,8 +1002,7 @@ body {
         .main-nav .container .nav-top.main-page-nav .navt li:hover {
           background: #dd5931; }
           .main-nav .container .nav-top.main-page-nav .navt li:hover a, .main-nav .container .nav-top.main-page-nav .navt li:hover .link.active {
-            color: white;
-            background: #dd5931; }
+            color: white; }
         .main-nav .container .nav-top.main-page-nav .navt li .last-line:hover {
           background: transparent; }
       .main-nav .container .nav-top.main-page-nav .navt .blog:hover {
@@ -1000,7 +1046,8 @@ body {
     .contacts .get-in-touch .block-4 .connect-us {
       padding-top: 15px; }
     .contacts .get-in-touch .block-4 .one-line {
-      display: inline-block; }
+      display: inline-flex;
+      justify-content: unset; }
 
   .case-study .container .left-block {
     float: none;
@@ -1012,9 +1059,14 @@ body {
     float: none;
     width: 100%;
     text-align: center;
-    min-height: 630px; }
+    height: auto; }
     .case-study .container .right-block .right-info {
-      width: 100%; }
+      width: 100%;
+      top: unset;
+      transform: unset;
+      position: unset;
+      margin-top: 15px;
+      margin-bottom: 30px; }
 
   .projects {
     min-height: 200px; }
@@ -1054,30 +1106,52 @@ body {
       .wrapper.pricing .main-block .container .display-flex .plans .description .block-responsive .button {
         margin-top: 17px;
         margin-bottom: 15px; }
+  .wrapper.booking .main-block .container .back-image:before {
+    width: 100%; }
+  .wrapper.booking .main-block .container .back-image .booking-form {
+    width: 100%; }
+    .wrapper.booking .main-block .container .back-image .booking-form .form {
+      width: auto; }
 
-  .gallery.members-gallery .gallery-line {
+  .gallery.members-gallery .gallery-line, .gallery.connect-us .gallery-line {
     margin-top: 0; } }
 @media (max-width: 736px) {
   .gallery {
     display: none; }
 
-  .main-nav .container .nav-top .navt li .link:hover, .main-nav .container .nav-top .navt li .last-line:hover {
-    background: none;
-    color: unset; }
-  .main-nav .container .nav-top .navt li .link.active, .main-nav .container .nav-top .navt li .last-line.active {
-    color: #dd5931; }
-    .main-nav .container .nav-top .navt li .link.active:hover, .main-nav .container .nav-top .navt li .last-line.active:hover {
-      color: unset; }
-  .main-nav .container .nav-top .navt li:hover {
-    background: none;
-    color: unset; }
-  .main-nav .container .nav-top .navt li a:hover, .main-nav .container .nav-top .navt li .link.active:hover {
-    color: unset; }
-  .main-nav .container .nav-top .navt .blog {
-    background: #dd5931; }
-    .main-nav .container .nav-top .navt .blog:hover {
+  .main-nav .container .nav-top .navt {
+    line-height: 61px; }
+    .main-nav .container .nav-top .navt li .link, .main-nav .container .nav-top .navt li .last-line {
+      font-size: 15px; }
+      .main-nav .container .nav-top .navt li .link:hover, .main-nav .container .nav-top .navt li .last-line:hover {
+        background: none;
+        color: unset; }
+      .main-nav .container .nav-top .navt li .link.active, .main-nav .container .nav-top .navt li .last-line.active {
+        color: #dd5931; }
+        .main-nav .container .nav-top .navt li .link.active:hover, .main-nav .container .nav-top .navt li .last-line.active:hover {
+          color: unset; }
+    .main-nav .container .nav-top .navt li:hover {
       background: none;
       color: unset; }
+    .main-nav .container .nav-top .navt li a:hover, .main-nav .container .nav-top .navt li .link.active:hover {
+      color: #dd5931; }
+    .main-nav .container .nav-top .navt li:nth-child(odd) {
+      background: #FCFCFB; }
+    .main-nav .container .nav-top .navt .blog {
+      background: #dd5931;
+      font-size: 15px; }
+  .main-nav .container .nav-top.main-page-nav .navt li:hover {
+    background: unset; }
+  .main-nav .container .nav-top.main-page-nav .navt li .link:hover {
+    background: unset; }
+  .main-nav .container .nav-top.main-page-nav .navt li:hover {
+    background: unset;
+    color: unset; }
+  .main-nav .container .nav-top.main-page-nav .navt li .last-line:hover {
+    background: unset; }
+  .main-nav .container .nav-top.main-page-nav .navt .blog {
+    color: white;
+    background: #dd5931; }
 
   .wrapper.members .main-block .container .our-members .slick-prev {
     top: -14px;
@@ -1093,7 +1167,11 @@ body {
     .wrapper.members .main-block .container .our-members .slick-next:before {
       content: '>';
       padding: 0px 5px 5px 5px;
-      font-size: 17px; } }
+      font-size: 17px; }
+  .wrapper.members .main-block .case-study .container .right-block .right-info {
+    margin-bottom: 0; }
+  .wrapper.pricing .main-block .container .display-flex .plans:last-child {
+    margin-bottom: 0; } }
 @media (max-width: 732px) {
   .wrapper .container .partners .pycoding img {
     height: 20px; }
@@ -1104,8 +1182,37 @@ body {
   .wrapper .container .partners .usaid img {
     height: 45px; } }
 @media (max-width: 645px) {
+  .new-page .pages .page-name {
+    font-size: 34px; }
+  .new-page .pages .text-page {
+    font-size: 15px; }
+
   .wrapper.amenities .main-block .blocks .container .display-flex {
-    justify-content: center; } }
+    padding-top: 45px;
+    justify-content: center; }
+    .wrapper.amenities .main-block .blocks .container .display-flex .flex-block {
+      height: 220px; }
+      .wrapper.amenities .main-block .blocks .container .display-flex .flex-block .text-anvio {
+        margin-top: 10px;
+        margin-bottom: 5px;
+        font-size: 23px; }
+
+  .circle1, .circle2, .circle3 {
+    width: 140px;
+    height: 140px; }
+
+  .new-heading {
+    padding-top: 0; }
+    .new-heading .pages .heading {
+      font-size: 30px; }
+
+  .projects .container .display-flex .project-block {
+    font-size: 25px; }
+
+  .case-study .container .right-block .right-info .logo img {
+    height: 40px; }
+  .case-study .container .right-block .right-info .right-header {
+    font-size: 30px; } }
 @media (max-width: 639px) {
   .wrapper.main .main-block .main-info {
     height: 670px; }
@@ -1171,13 +1278,7 @@ body {
       line-height: 37px;
       text-align: center; }
   .case-study .container .left-block .mockup {
-    margin-bottom: 0; }
-  .case-study .container .right-block {
-    min-height: 820px;
-    margin-bottom: 20px; }
-
-  .new-page .pages .page-name {
-    font-size: 40px; } }
+    margin-bottom: 0; } }
 @media (max-width: 550px) {
   .wrapper.pricing .main-block .container .display-flex .plans {
     width: 90%;
@@ -1202,8 +1303,6 @@ body {
 
   .footer-black .container .left-footer {
     text-align: center; }
-    .footer-black .container .left-footer a {
-      display: none; }
 
   .wrapper .main-block .main-info .local-com h1, .wrapper .main-block .main-info .local-com h2 {
     margin-bottom: 20px; }
@@ -1224,20 +1323,15 @@ body {
     height: 41px; }
   .wrapper .container .partners .usaid img {
     height: 45px; } }
-@media (max-width: 360px) {
-  .case-study .container .right-block {
-    min-height: 770px; }
-    .case-study .container .right-block .right-info .right-header {
-      font-size: 45px; }
-      .case-study .container .right-block .right-info .right-header:before {
-        width: 100px; }
-    .case-study .container .right-block .right-info .logo {
-      height: 60px; }
-      .case-study .container .right-block .right-info .logo img {
-        height: 50px; } }
 @media (max-width: 320px) {
   .wrapper.contact .main-block .container .input-field .hole-form {
     width: 95%; }
+    .wrapper.contact .main-block .container .input-field .hole-form .heading-contact {
+      font-size: 22px; }
+    .wrapper.contact .main-block .container .input-field .hole-form .input-style {
+      font-size: 16px; }
+    .wrapper.contact .main-block .container .input-field .hole-form .text-style {
+      font-size: 16px; }
   .wrapper.main .main-block .main-info {
     height: 530px; }
     .wrapper.main .main-block .main-info.ru-vertion h1, .wrapper.main .main-block .main-info.ru-vertion h2 {
@@ -1250,6 +1344,27 @@ body {
     -webkit-transform: scale(0.91);
     transform-origin: 0 0;
     -webkit-transform-origin: 0 0; }
+  .wrapper.pricing .main-block .container .display-flex .plans .img-plan .back-color .text-plan .text-p {
+    font-size: 20px; }
+  .wrapper.pricing .main-block .container .display-flex .plans .description .block-responsive .btn-center a {
+    font-size: 13px; }
+  .wrapper .container .partners {
+    line-height: 70px; }
+    .wrapper .container .partners .pycoding img {
+      height: 17px; }
+    .wrapper .container .partners .itech img {
+      height: 56px; }
+    .wrapper .container .partners .mitoc img {
+      height: 35px; }
+    .wrapper .container .partners .usaid img {
+      height: 37px; }
+  .wrapper.booking .main-block .container .back-image .booking-form .form {
+    width: 90%; }
+    .wrapper.booking .main-block .container .back-image .booking-form .form .g-recaptcha {
+      transform: scale(0.85);
+      -webkit-transform: scale(0.85);
+      transform-origin: 0 0;
+      -webkit-transform-origin: 0 0; }
 
   .case-study .container .left-block .mockup .logo-img {
     height: 30px; }
@@ -1271,12 +1386,50 @@ body {
       text-align: center; }
   .case-study .container .right-block {
     min-height: 850px; }
-    .case-study .container .right-block .right-info .logo img {
-      height: 50px; }
 
   .new-page .pages .page-name {
-    font-size: 30px; }
+    font-size: 26px; }
   .new-page .pages .text-page {
-    font-size: 15px; } }
+    font-size: 15px; }
+
+  .footer-black .container .left-footer.ru-text {
+    font-size: 12px; } }
+.wrapper.booking .main-block {
+  min-height: 700px; }
+  .wrapper.booking .main-block .container .back-image {
+    background-image: url(../images/1.jpg);
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    background-size: cover;
+    height: 700px;
+    position: relative; }
+    .wrapper.booking .main-block .container .back-image:before {
+      content: '';
+      position: absolute;
+      width: 60%;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      background: rgba(0, 0, 0, 0.3); }
+    .wrapper.booking .main-block .container .back-image .booking-form {
+      position: relative;
+      width: 40%;
+      background: white;
+      height: 700px;
+      opacity: 0.95;
+      display: flex;
+      justify-content: center;
+      align-items: center; }
+      .wrapper.booking .main-block .container .back-image .booking-form .form {
+        width: 67%;
+        margin: 0 auto; }
+        .wrapper.booking .main-block .container .back-image .booking-form .form .heading-contact {
+          padding-bottom: 10px; }
+        .wrapper.booking .main-block .container .back-image .booking-form .form label {
+          margin-bottom: 10px;
+          font-size: 18px;
+          display: block; }
+        .wrapper.booking .main-block .container .back-image .booking-form .form .text-style {
+          margin-bottom: 20px; }
 
 /*# sourceMappingURL=index.min.css.map */

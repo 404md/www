@@ -90,6 +90,20 @@
         }
       }
     }
+    &.booking {
+      .main-block {
+        .container {
+          .back-image {
+            .booking-form {
+              .form {
+                width: auto;
+
+              }
+            }
+          }
+        }
+      }
+    }
   }
   .gallery {
     .gallery-line {
@@ -106,9 +120,19 @@
         .right-info {
           width: 100%;
           .logo {
+            height: 45px;
             img {
-              height: 60px;
+              height: 40px;
             }
+          }
+          .right-header {
+            font-size: 35px;
+            &:before {
+              width: 85px;
+            }
+          }
+          p {
+            margin-top: 10px;
           }
         }
       }
@@ -128,6 +152,23 @@
         .comment {
           span {
             font-size: 15px;
+          }
+        }
+      }
+    }
+  }
+  .wrapper {
+    &.amenities {
+      .main-block {
+        .blocks {
+          .container {
+            .display-flex {
+             &.ru-block {
+               .text-anvio {
+                 font-size: 21px;
+               }
+              }
+            }
           }
         }
       }
@@ -167,7 +208,7 @@
         box-shadow:-3px -4px 5px -5px rgba(0, 0, 0, 0.3);
           -webkit-box-shadow:-3px -5px 5px -5px rgba(0, 0, 0, 0.3);
         li {
-          transition:0.3s;
+          transition:0.5s;
           display: block;
           &:last-child {
             box-shadow: -3px 2px 3px rgba(0, 0, 0, 0.3);
@@ -192,10 +233,12 @@
           }
           &:hover {
             background: #dd5931;
-
             a, .link.active {
               color:white;
             }
+          }
+          .link.active {
+            color: #dd5931;
           }
         }
         .blog {
@@ -246,7 +289,6 @@
               background:#dd5931 ;
               a, .link.active {
                 color:white;
-                background:#dd5931
               }
             }
             .last-line {
@@ -324,7 +366,8 @@
           padding-top: 15px;
         }
         .one-line {
-          display: inline-block;
+          display: inline-flex;
+          justify-content: unset;
         }
       }
     }
@@ -344,9 +387,14 @@
         float:none;
         width: 100%;
         text-align: center;
-        min-height: 630px;
+        height: auto;
         .right-info {
           width: 100%;
+          top:unset;
+          transform: unset;
+          position: unset;
+          margin-top: 15px;
+          margin-bottom: 30px;
         }
       }
     }
@@ -419,10 +467,28 @@
         }
       }
     }
+    &.booking {
+      .main-block {
+        .container {
+          .back-image {
+            &:before {
+              width: 100%;
+            }
+            .booking-form {
+              width: 100%;
+              .form {
+                width: auto;
+
+              }
+            }
+          }
+        }
+      }
+    }
   }
 
   .gallery {
-    &.members-gallery {
+    &.members-gallery, &.connect-us {
     .gallery-line {
       margin-top:  0;
       }
@@ -438,34 +504,63 @@
     .container {
       .nav-top {
         .navt {
+          line-height: 61px;
           li {
             .link, .last-line {
+              font-size: 15px;
               &:hover {
-                  background: none;
-                  color: unset;
+                background: none;
+                color: unset;
               }
               &.active {
-                color:#dd5931;
+                color: #dd5931;
                 &:hover {
                   color: unset;
                 }
               }
             }
-            &:hover{
-              background: none;
-              color:unset;
-            }
-            a, .link.active {
-              &:hover {
-                color:unset;
-              }
-            }
-          }
-          .blog {
-            background:#dd5931;
             &:hover {
               background: none;
               color: unset;
+            }
+            a, .link.active {
+              &:hover {
+                color: #dd5931;
+              }
+            }
+            &:nth-child(odd){
+              background:#FCFCFB;
+            }
+          }
+          .blog {
+            background: #dd5931;
+            font-size: 15px;
+          }
+        }
+        &.main-page-nav {
+          .navt {
+            li {
+              &:hover {
+                background: unset;
+              }
+              .link {
+                &:hover {
+                  background: unset;
+                }
+              }
+              &:hover {
+                background:unset;
+                color:unset;
+              }
+              .last-line {
+                &:hover {
+                  background:unset;
+                }
+              }
+            }
+            .blog {
+                color:white;
+                background:#dd5931 ;
             }
           }
         }
@@ -494,6 +589,28 @@
                 content: '>';
                 padding: 0px 5px 5px 5px;
                 font-size: 17px;
+              }
+            }
+          }
+        }
+        .case-study {
+          .container {
+            .right-block {
+              .right-info {
+                margin-bottom: 0;
+              }
+            }
+          }
+        }
+      }
+    }
+    &.pricing {
+      .main-block {
+        .container {
+          .display-flex {
+            .plans {
+              &:last-child {
+                margin-bottom: 0;
               }
             }
           }
@@ -533,15 +650,71 @@
 }
 
 @media (max-width: 645px) {
+  .new-page{
+    .pages {
+      .page-name {
+        font-size: 34px;
+      }
+      .text-page {
+        font-size: 15px;
+      }
+    }
+  }
   .wrapper {
     &.amenities {
       .main-block {
         .blocks {
           .container {
             .display-flex {
+              padding-top: 45px;
               justify-content: center;
+              .flex-block {
+                height: 220px;
+                .text-anvio {
+                  margin-top: 10px;
+                  margin-bottom: 5px;
+                  font-size: 23px;
+                }
+              }
             }
           }
+        }
+      }
+    }
+  }
+  .circle1, .circle2, .circle3 {
+    width: 140px;
+    height: 140px;
+  }
+  .new-heading {
+    padding-top: 0;
+    .pages {
+      .heading {
+        font-size: 30px;
+      }
+    }
+  }
+  .projects {
+    .container {
+      .display-flex {
+        .project-block {
+          font-size: 25px;
+        }
+      }
+    }
+  }
+  .case-study {
+    .container {
+      .right-block {
+        .right-info {
+          .logo {
+            img {
+              height: 40px;
+            }
+          }
+         .right-header {
+           font-size: 30px;
+         }
         }
       }
     }
@@ -639,7 +812,6 @@
       .left-block {
         .mockup {
           .mockup-head {
-
             h1 {
               color: #3b9ff3;
               font-size: 24px;
@@ -668,17 +840,6 @@
         .mockup {
           margin-bottom: 0;
         }
-      }
-      .right-block {
-        min-height:820px;
-        margin-bottom: 20px;
-      }
-    }
-  }
-  .new-page {
-    .pages {
-      .page-name {
-        font-size: 40px;
       }
     }
   }
@@ -734,9 +895,6 @@
     .container {
       .left-footer {
         text-align: center;
-      a {
-        display: none;
-       }
       }
     }
   }
@@ -808,31 +966,6 @@
   }
 }
 
-@media (max-width: 360px) {
-  .case-study {
-    .container {
-      .right-block {
-        min-height: 770px;
-        .right-info {
-          .right-header {
-            font-size: 45px;
-            &:before {
-              width: 100px;
-            }
-          }
-          .logo {
-            height: 60px;
-            img {
-              height: 50px;
-            }
-          }
-        }
-      }
-    }
-  }
-
-}
-
 @media (max-width: 320px) {
   .wrapper {
     &.contact {
@@ -841,6 +974,15 @@
           .input-field {
             .hole-form {
              width: 95%;
+              .heading-contact {
+                font-size: 22px;
+              }
+              .input-style {
+                font-size: 16px;
+              }
+              .text-style {
+                font-size: 16px;
+              }
             }
           }
         }
@@ -872,7 +1014,78 @@
         -webkit-transform:scale(0.91);
         transform-origin:0 0;-webkit-transform-origin:0 0;
      }
+      &.pricing {
+        .main-block {
+          .container {
+            .display-flex {
+              .plans {
+                .img-plan {
+                  .back-color {
+                    .text-plan {
+                     .text-p {
+                       font-size:20px;
+                      }
+                    }
+                  }
+                }
+                .description {
+                  .block-responsive {
+                    .btn-center {
+                      a {
+                        font-size: 13px;
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    .container {
+      .partners {
+        line-height: 70px;
+        .pycoding {
+          img {
+            height: 17px;
+          }
+        }
+        .itech {
+          img {
+            height: 56px;
+          }
+        }
+        .mitoc {
+          img {
+            height: 35px;
+          }
+        }
+        .usaid {
+          img {
+            height: 37px;
+          }
+        }
+      }
+    }
+    &.booking {
+      .main-block {
+        .container {
+          .back-image {
 
+            .booking-form {
+              .form {
+                width: 90%;
+                .g-recaptcha {
+                  transform:scale(0.85);
+                  -webkit-transform:scale(0.85);
+                  transform-origin:0 0;-webkit-transform-origin:0 0;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
   }
   .case-study {
     .container {
@@ -911,23 +1124,25 @@
       }
       .right-block {
         min-height: 850px;
-        .right-info {
-          .logo {
-            img {
-              height: 50px;
-            }
-          }
-        }
       }
     }
   }
   .new-page {
     .pages {
       .page-name {
-        font-size: 30px;
+        font-size: 26px;
       }
       .text-page{
         font-size: 15px;
+      }
+    }
+  }
+  .footer-black {
+    .container {
+      .left-footer {
+        &.ru-text {
+          font-size: 12px;
+        }
       }
     }
   }
