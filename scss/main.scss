@@ -315,19 +315,24 @@ body {
       display: flex;
       justify-content: space-between;
       flex-wrap: wrap;
+      .usaid {
+        img {
+          height: 48px;
+        }
+      }
+      .sweden {
+        img {
+          height: 100px;
+        }
+      }
       .pycoding{
         img {
-          height: 23px;
+          height: 24px;
         }
       }
       .mitoc {
         img {
           height: 40px;
-        }
-      }
-      .usaid {
-        img {
-          height: 48px;
         }
       }
     }

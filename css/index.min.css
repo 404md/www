@@ -304,12 +304,14 @@ body {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap; }
-    .wrapper .container .partners .pycoding img {
-      height: 23px; }
-    .wrapper .container .partners .mitoc img {
-      height: 40px; }
     .wrapper .container .partners .usaid img {
       height: 48px; }
+    .wrapper .container .partners .sweden img {
+      height: 100px; }
+    .wrapper .container .partners .pycoding img {
+      height: 24px; }
+    .wrapper .container .partners .mitoc img {
+      height: 40px; }
 
 /* Navigation */
 .main-nav {
