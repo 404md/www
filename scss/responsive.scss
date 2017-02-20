@@ -219,7 +219,6 @@
           }
           .link, .last-line {
             border: 0;
-            width: 750px;
             margin: 0 auto;
             display: block;
             padding: 0 20px;
@@ -243,7 +242,6 @@
         }
         .blog {
           border:0;
-          width: 765px;
           margin: 0 auto;
           &:hover {
             background: #dd5931;
@@ -1002,7 +1000,7 @@
           .local-com {
             .more {
               .more-about {
-                font-size: 16px;
+                font-size: 15px;
               }
             }
           }
