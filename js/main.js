@@ -16,11 +16,18 @@ function myMap() {
     });
 }
 
-(function ($) {
-    $(function() {
-        $('#menu-toggle').click(function () {
-            $(this).toggleClass('open');
-            $('.main-nav').toggleClass("responsive-nav");
-        });
+jQuery(function($) {
+    'use strict';
+
+    $('#menu-toggle').click(function () {
+        $(this).toggleClass('open');
+        $('.main-nav').toggleClass("responsive-nav");
     });
-})(jQuery);
+
+    $('a').on('click touchend', function(e) {
+        var el = $(this);
+        var link = el.attr('href');
+        window.location = link;
+    });
+
+});

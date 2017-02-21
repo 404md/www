@@ -13,9 +13,8 @@ profile=$([ -n "$2" ] && echo "$2" || echo 'default')
 #npm install cssnano-cli -g
 #npm install uglify-js -g
 
-# we use --compressed flag so we do not need to compress it again
-#echo "Minifying css code"
-#cssnano < ./css/index.css > ./css/index.min.css
+echo "Minifying css code"
+cssnano < ./css/index.css > ./css/index.min.css
 
 echo "Minifying js code"
 uglifyjs ./js/main.js -c -m -o ./js/main.min.js
