@@ -163,6 +163,9 @@
         .blocks {
           .container {
             .display-flex {
+              .flex-block {
+                width: 310px;
+              }
              &.ru-block {
                .text-anvio {
                  font-size: 21px;
