@@ -40,6 +40,7 @@ body {
   font-size: 14px;
   line-height: 1.42857143;
   background-color: #fff;
+  -webkit-text-size-adjust:none;
 }
 
 .container {
@@ -82,7 +83,7 @@ body {
   padding-bottom: 5px;
 }
 
-.button {
+.button-contact {
   width: 100%;
 }
 
