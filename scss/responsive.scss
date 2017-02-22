@@ -219,7 +219,6 @@
           }
           .link, .last-line {
             border: 0;
-            width: 750px;
             margin: 0 auto;
             display: block;
             padding: 0 20px;
@@ -243,7 +242,6 @@
         }
         .blog {
           border:0;
-          width: 765px;
           margin: 0 auto;
           &:hover {
             background: #dd5931;
@@ -646,6 +644,27 @@
         }
       }
     }
+    &.booking {
+      .main-block {
+        .container {
+          .back-image {
+            .booking-form {
+              #mc_embed_signup {
+                width: auto;
+                .heading-contact {
+                  font-size: 20px;
+                }
+                .mc-field-group {
+                  label {
+                    font-size: 16px;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
   }
 }
 
@@ -1002,7 +1021,7 @@
           .local-com {
             .more {
               .more-about {
-                font-size: 16px;
+                font-size: 15px;
               }
             }
           }
@@ -1071,15 +1090,14 @@
       .main-block {
         .container {
           .back-image {
-
             .booking-form {
-              .form {
+              #mc_embed_signup {
                 width: 90%;
-                .g-recaptcha {
-                  transform:scale(0.85);
-                  -webkit-transform:scale(0.85);
-                  transform-origin:0 0;-webkit-transform-origin:0 0;
-                }
+              }
+              .g-recaptcha {
+                transform:scale(0.85);
+                -webkit-transform:scale(0.85);
+                transform-origin:0 0;-webkit-transform-origin:0 0;
               }
             }
           }
