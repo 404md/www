@@ -8,7 +8,7 @@
           background-repeat: no-repeat;
           background-position: 50% 50%;
           background-size: cover;
-          min-height: 900px;
+          min-height: 1000px;
           position: relative;
           &:before {
             content: '';
@@ -23,7 +23,7 @@
             position: relative;
             width: 100%;
             background: white;
-            min-height: 900px;
+            min-height: 1000px;
             opacity: 0.95;
             display: flex;
             justify-content: center;
@@ -34,6 +34,10 @@
             }
             .text-style {
               margin-bottom: 0;
+              &:focus {
+                border:2px solid #333;
+                padding: 9px;
+              }
             }
           }
         }
@@ -45,9 +49,9 @@
 /* MailChimp Form Embed Code - Classic - 12/17/2015 v10.7 */
 #mc_embed_signup form {display:block; width: 100%; margin: 0 auto;}
 #mc_embed_signup h2 {font-weight:bold; padding:0; font-size: 30px;;}
-#mc_embed_signup input[type=checkbox]{-webkit-appearance:checkbox;}
+#mc_embed_signup input[type=checkbox]{-webkit-appearance:checkbox; zoom: 1.5;}
 #mc_embed_signup input[type=radio]{-webkit-appearance:radio;}
-#mc_embed_signup input:focus {border-color:#333;}
+#mc_embed_signup input:focus {border:2px solid #333;}
 #mc_embed_signup .small-meta {font-size: 11px;}
 #mc_embed_signup .nowrap {white-space:nowrap;}
 
@@ -70,7 +74,7 @@
 #mc_embed_signup .clear {clear:both;}
 
 #mc_embed_signup .mc-field-group.input-group ul {margin:0; padding:5px 0; list-style:none;}
-#mc_embed_signup .mc-field-group.input-group ul li {display:block; padding:3px 0; margin:0;}
+#mc_embed_signup .mc-field-group.input-group ul li {display:inline-block; padding:3px 0; margin-right:10px;}
 #mc_embed_signup .mc-field-group.input-group label {display:inline;}
 #mc_embed_signup .mc-field-group.input-group input {display:inline; width:auto; border:none;}
 

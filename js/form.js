@@ -8,6 +8,7 @@
     fnames[4]='MMERGE4';ftypes[4]='text';
     fnames[7]='MMERGE7';ftypes[7]='date';
     fnames[5]='MMERGE5';ftypes[5]='text';
+    fnames[6]='MMERGE6';ftypes[6]='radio';
 
     $.extend($.validator.messages, {
         required: "This field is required.",
