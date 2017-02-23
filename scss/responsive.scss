@@ -163,6 +163,9 @@
         .blocks {
           .container {
             .display-flex {
+              .flex-block {
+                width: 310px;
+              }
              &.ru-block {
                .text-anvio {
                  font-size: 21px;
@@ -219,7 +222,6 @@
           }
           .link, .last-line {
             border: 0;
-            width: 750px;
             margin: 0 auto;
             display: block;
             padding: 0 20px;
@@ -243,7 +245,6 @@
         }
         .blog {
           border:0;
-          width: 765px;
           margin: 0 auto;
           &:hover {
             background: #dd5931;
@@ -624,6 +625,11 @@
   .wrapper {
     .container {
       .partners {
+        .sweden {
+          img {
+            height: 75px;
+          }
+        }
         .pycoding {
           img {
             height: 20px;
@@ -642,6 +648,30 @@
         .usaid {
           img {
             height: 45px;
+          }
+        }
+      }
+    }
+    &.booking {
+      .main-block {
+        .container {
+          .back-image {
+            .booking-form {
+              #mc_embed_signup {
+                width: auto;
+                .heading-contact {
+                  font-size: 20px;
+                }
+                .mc-field-group {
+                  label {
+                    font-size: 16px;
+                  }
+                }
+                input[type=checkbox] {
+                  zoom:unset;
+                }
+              }
+            }
           }
         }
       }
@@ -963,6 +993,60 @@
         }
       }
     }
+    &.booking {
+      .main-block {
+        .container {
+          .back-image {
+            .booking-form {
+              #mc_embed_signup {
+                width: 90%;
+              }
+              .g-recaptcha {
+                transform:scale(0.85);
+                -webkit-transform:scale(0.85);
+                transform-origin:0 0;-webkit-transform-origin:0 0;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 375px) {
+  .wrapper {
+    &.booking {
+      .main-block {
+        .container {
+          .back-image {
+            .booking-form {
+              &.ru-booking {
+                #mc_embed_signup {
+                  .mc-field-group {
+                    &.input-group {
+                      ul {
+                        li {
+                          margin-right: 3px;
+                          &:last-child {
+                            margin-right: 0;
+                          }
+                        }
+                      }
+                    }
+                    &.ru {
+                      label {
+                        font-size: 13px;
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
   }
 }
 
@@ -1002,7 +1086,7 @@
           .local-com {
             .more {
               .more-about {
-                font-size: 16px;
+                font-size: 15px;
               }
             }
           }
@@ -1071,15 +1155,11 @@
       .main-block {
         .container {
           .back-image {
-
             .booking-form {
-              .form {
-                width: 90%;
-                .g-recaptcha {
-                  transform:scale(0.85);
-                  -webkit-transform:scale(0.85);
-                  transform-origin:0 0;-webkit-transform-origin:0 0;
-                }
+              .g-recaptcha {
+                transform:scale(0.85);
+                -webkit-transform:scale(0.85);
+                transform-origin:0 0;-webkit-transform-origin:0 0;
               }
             }
           }
