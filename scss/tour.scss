@@ -57,7 +57,7 @@
 
 #mc_embed_signup .mc-field-group {clear:left; position:relative; width:100%;padding-bottom: 10px; min-height:50px;}
 #mc_embed_signup .mc-field-group .message-text { padding-top: 5px;}
-#mc_embed_signup .size1of2 {clear:none; float:left; display:inline-block; width:100%; margin-right:4%;}
+#mc_embed_signup .size1of2 {clear:none; float:left; display:inline-block; width:100%; margin-right:4%; margin-bottom: 5px;}
 * html #mc_embed_signup .size1of2 {margin-right:2%; /* Fix for IE6 double margins. */}
 #mc_embed_signup .mc-field-group label {display:block; margin-bottom:3px; font-size: 20px}
 #mc_embed_signup .mc-field-group input {display:block; width:100%; padding:8px 0; text-indent:2%;}
@@ -69,7 +69,7 @@
 #mc_embed_signup .datefield .monthfield input, #mc_embed_signup .datefield .dayfield input{width:50px;}
 #mc_embed_signup .datefield label, #mc_embed_signup .phonefield-us label{display:none;}
 
-#mc_embed_signup .indicates-required {text-align:right; font-size:11px; margin-right:4%;}
+#mc_embed_signup .indicates-required {text-align:right; font-size:11px;}
 #mc_embed_signup .asterisk {color:#e85c41; font-size:150%; font-weight:normal; position:relative; top:5px;}
 #mc_embed_signup .clear {clear:both;}
 

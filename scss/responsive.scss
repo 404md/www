@@ -59,10 +59,18 @@
               width: 100%;
               .img-plan {
                 float: left;
-                height: 445px;
+               height: auto;
+                width: 40%;
                 img {
-                  width: auto;
+                  width: 100%;
                   height: 100%;
+                }
+                .back-color {
+                  .text-plan {
+                    .text-p {
+                      font-size: 17px;
+                    }
+                  }
                 }
               }
               .description {
@@ -71,17 +79,26 @@
                 .block-responsive {
                   padding: 20px;
                   float: left;
-                  width: 52%;
+                  width: 60%;
                   min-height: 445px;
                 p {
                   font-size: 15px;
                   line-height: 22px;
                   padding-bottom: 10px;
+                  &:last-child {
+                    padding-bottom: 0;
+                  }
                 }
-
+                .btn-center {
+                  &.ro {
+                    .button {
+                      margin-top: 25px;
+                    }
+                  }
+                }
                 .button {
                   margin-top: 17px;
-                  margin-bottom: 15px;
+                  margin-bottom: 0;
                   }
                 }
               }
@@ -665,6 +682,7 @@
                 .mc-field-group {
                   label {
                     font-size: 16px;
+                    padding-top: 10px;
                   }
                 }
                 input[type=checkbox] {
@@ -888,6 +906,7 @@
                 margin-right: 0;
                 margin-bottom: 0;
                 float: none;
+                width: 100%;
                 .back-color {
                   text-align: right;
                 }
@@ -949,6 +968,7 @@
               width: auto;
               .img-plan {
                 height: auto;
+                width: auto;
               }
             }
           }
@@ -960,6 +980,19 @@
         .usaid {
           img {
             height: 35px;
+          }
+        }
+      }
+    }
+    &.booking {
+      .main-block {
+        .container {
+          .back-image {
+            .booking-form {
+              #mc_embed_signup {
+                width: 90%;
+              }
+            }
           }
         }
       }
@@ -998,9 +1031,6 @@
         .container {
           .back-image {
             .booking-form {
-              #mc_embed_signup {
-                width: 90%;
-              }
               .g-recaptcha {
                 transform:scale(0.85);
                 -webkit-transform:scale(0.85);
