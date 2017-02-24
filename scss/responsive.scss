@@ -242,7 +242,7 @@
             margin: 0 auto;
             display: block;
             padding: 0 20px;
-
+            width: 750px;
             &:hover {
               &:before {
                 content: '';
@@ -514,6 +514,23 @@
   }
 }
 
+
+@media (max-width: 768px) {
+ .main-nav {
+   .container {
+     .nav-top {
+       .navt {
+         li {
+           .link, .last-line {
+             width: auto;
+           }
+         }
+       }
+     }
+   }
+ }
+}
+
 @media (max-width: 736px) {
   .gallery {
     display: none;
@@ -588,29 +605,6 @@
   .wrapper {
     &.members {
       .main-block {
-        .container {
-          .our-members {
-            .slick-prev {
-              top: -14px;
-              left: auto;
-              right: 20px;
-              &:before {
-                content: '<';
-                padding: 0px 5px 5px 5px;
-                font-size: 17px;
-              }
-            }
-            .slick-next {
-              top: -14px;
-              right: 0px;
-              &:before {
-                content: '>';
-                padding: 0px 5px 5px 5px;
-                font-size: 17px;
-              }
-            }
-          }
-        }
         .case-study {
           .container {
             .right-block {
@@ -675,7 +669,7 @@
           .back-image {
             .booking-form {
               #mc_embed_signup {
-                width: auto;
+                width:auto;
                 .heading-contact {
                   font-size: 20px;
                 }

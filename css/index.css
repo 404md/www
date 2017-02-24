@@ -642,24 +642,20 @@ body {
 .wrapper.members .main-block .container .our-members.slick-slider .slick-list {
   margin: 0 -15px; }
 .wrapper.members .main-block .container .our-members .slick-prev {
-  top: -20px;
+  top: 42%;
   left: auto;
-  right: 42px; }
+  z-index: 2; }
   .wrapper.members .main-block .container .our-members .slick-prev:before {
-    content: '<';
-    background: #dd5931;
+    content: '\f053';
     color: white;
-    text-align: left;
-    padding: 2px 10px 10px 10px; }
+    font-family: FontAwesome; }
 .wrapper.members .main-block .container .our-members .slick-next {
-  top: -20px;
+  top: 42%;
   right: 11px; }
   .wrapper.members .main-block .container .our-members .slick-next:before {
-    content: '>';
-    background: #dd5931;
+    content: '\f054';
     color: white;
-    text-align: left;
-    padding: 2px 10px 10px 10px; }
+    font-family: FontAwesome; }
 .wrapper.members .main-block .container .our-members .slick-list .member-info.slick-slide {
   margin: 0 15px; }
 .wrapper.members .main-block .container .our-members .slick-list .member-info .member-pic img {
@@ -973,7 +969,8 @@ body {
           border: 0;
           margin: 0 auto;
           display: block;
-          padding: 0 20px; }
+          padding: 0 20px;
+          width: 750px; }
           .main-nav .container .nav-top .navt li .link:hover:before, .main-nav .container .nav-top .navt li .last-line:hover:before {
             content: '';
             height: 0; }
@@ -1130,6 +1127,9 @@ body {
 
   .gallery.members-gallery .gallery-line, .gallery.connect-us .gallery-line {
     margin-top: 0; } }
+@media (max-width: 768px) {
+  .main-nav .container .nav-top .navt li .link, .main-nav .container .nav-top .navt li .last-line {
+    width: auto; } }
 @media (max-width: 736px) {
   .gallery {
     display: none; }
@@ -1168,21 +1168,6 @@ body {
     color: white;
     background: #dd5931; }
 
-  .wrapper.members .main-block .container .our-members .slick-prev {
-    top: -14px;
-    left: auto;
-    right: 20px; }
-    .wrapper.members .main-block .container .our-members .slick-prev:before {
-      content: '<';
-      padding: 0px 5px 5px 5px;
-      font-size: 17px; }
-  .wrapper.members .main-block .container .our-members .slick-next {
-    top: -14px;
-    right: 0px; }
-    .wrapper.members .main-block .container .our-members .slick-next:before {
-      content: '>';
-      padding: 0px 5px 5px 5px;
-      font-size: 17px; }
   .wrapper.members .main-block .case-study .container .right-block .right-info {
     margin-bottom: 0; }
   .wrapper.pricing .main-block .container .display-flex .plans:last-child {
