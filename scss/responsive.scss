@@ -59,10 +59,18 @@
               width: 100%;
               .img-plan {
                 float: left;
-                height: 445px;
+               height: auto;
+                width: 40%;
                 img {
-                  width: auto;
+                  width: 100%;
                   height: 100%;
+                }
+                .back-color {
+                  .text-plan {
+                    .text-p {
+                      font-size: 17px;
+                    }
+                  }
                 }
               }
               .description {
@@ -71,17 +79,26 @@
                 .block-responsive {
                   padding: 20px;
                   float: left;
-                  width: 52%;
+                  width: 60%;
                   min-height: 445px;
                 p {
                   font-size: 15px;
                   line-height: 22px;
                   padding-bottom: 10px;
+                  &:last-child {
+                    padding-bottom: 0;
+                  }
                 }
-
+                .btn-center {
+                  &.ro {
+                    .button {
+                      margin-top: 25px;
+                    }
+                  }
+                }
                 .button {
                   margin-top: 17px;
-                  margin-bottom: 15px;
+                  margin-bottom: 0;
                   }
                 }
               }
@@ -163,6 +180,9 @@
         .blocks {
           .container {
             .display-flex {
+              .flex-block {
+                width: 310px;
+              }
              &.ru-block {
                .text-anvio {
                  font-size: 21px;
@@ -219,7 +239,6 @@
           }
           .link, .last-line {
             border: 0;
-            width: 750px;
             margin: 0 auto;
             display: block;
             padding: 0 20px;
@@ -243,7 +262,6 @@
         }
         .blog {
           border:0;
-          width: 765px;
           margin: 0 auto;
           &:hover {
             background: #dd5931;
@@ -624,6 +642,11 @@
   .wrapper {
     .container {
       .partners {
+        .sweden {
+          img {
+            height: 75px;
+          }
+        }
         .pycoding {
           img {
             height: 20px;
@@ -642,6 +665,31 @@
         .usaid {
           img {
             height: 45px;
+          }
+        }
+      }
+    }
+    &.booking {
+      .main-block {
+        .container {
+          .back-image {
+            .booking-form {
+              #mc_embed_signup {
+                width: auto;
+                .heading-contact {
+                  font-size: 20px;
+                }
+                .mc-field-group {
+                  label {
+                    font-size: 16px;
+                    padding-top: 10px;
+                  }
+                }
+                input[type=checkbox] {
+                  zoom:unset;
+                }
+              }
+            }
           }
         }
       }
@@ -858,6 +906,7 @@
                 margin-right: 0;
                 margin-bottom: 0;
                 float: none;
+                width: 100%;
                 .back-color {
                   text-align: right;
                 }
@@ -919,6 +968,7 @@
               width: auto;
               .img-plan {
                 height: auto;
+                width: auto;
               }
             }
           }
@@ -930,6 +980,19 @@
         .usaid {
           img {
             height: 35px;
+          }
+        }
+      }
+    }
+    &.booking {
+      .main-block {
+        .container {
+          .back-image {
+            .booking-form {
+              #mc_embed_signup {
+                width: 90%;
+              }
+            }
           }
         }
       }
@@ -959,6 +1022,57 @@
         .usaid {
           img {
             height: 45px;
+          }
+        }
+      }
+    }
+    &.booking {
+      .main-block {
+        .container {
+          .back-image {
+            .booking-form {
+              .g-recaptcha {
+                transform:scale(0.85);
+                -webkit-transform:scale(0.85);
+                transform-origin:0 0;-webkit-transform-origin:0 0;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 375px) {
+  .wrapper {
+    &.booking {
+      .main-block {
+        .container {
+          .back-image {
+            .booking-form {
+              &.ru-booking {
+                #mc_embed_signup {
+                  .mc-field-group {
+                    &.input-group {
+                      ul {
+                        li {
+                          margin-right: 3px;
+                          &:last-child {
+                            margin-right: 0;
+                          }
+                        }
+                      }
+                    }
+                    &.ru {
+                      label {
+                        font-size: 13px;
+                      }
+                    }
+                  }
+                }
+              }
+            }
           }
         }
       }
@@ -1002,7 +1116,7 @@
           .local-com {
             .more {
               .more-about {
-                font-size: 16px;
+                font-size: 15px;
               }
             }
           }
@@ -1071,15 +1185,11 @@
       .main-block {
         .container {
           .back-image {
-
             .booking-form {
-              .form {
-                width: 90%;
-                .g-recaptcha {
-                  transform:scale(0.85);
-                  -webkit-transform:scale(0.85);
-                  transform-origin:0 0;-webkit-transform-origin:0 0;
-                }
+              .g-recaptcha {
+                transform:scale(0.85);
+                -webkit-transform:scale(0.85);
+                transform-origin:0 0;-webkit-transform-origin:0 0;
               }
             }
           }
