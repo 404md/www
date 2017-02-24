@@ -19,26 +19,22 @@
             }
           }
           .slick-prev {
-            top: -20px;
+            top:42%;
             left: auto;
-            right: 42px;
+            z-index: 2;
             &:before {
-              content: '<';
-              background: #dd5931;
+              content: '\f053';
               color: white;
-              text-align: left;
-              padding: 2px 10px 10px 10px;
+              font-family: FontAwesome;
             }
           }
           .slick-next {
-            top: -20px;
+            top:42%;
             right: 11px;
             &:before {
-              content: '>';
-              background: #dd5931;
+              content:'\f054';
               color: white;
-              text-align: left;
-              padding: 2px 10px 10px 10px;
+              font-family: FontAwesome;
             }
           }
           .slick-list {
