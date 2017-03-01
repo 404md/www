@@ -64,7 +64,18 @@ body {
   padding: 0 10px;
   border: 1px solid #454545;
   margin-bottom: 20px;
-  color: #aaaaaa;
+  ::-webkit-input-placeholder {
+    color: #aaaaaa;
+  }
+  ::-moz-placeholder {
+    color: #aaaaaa;
+  }
+  :-ms-input-placeholder {
+    color: #aaaaaa;
+  }
+  :-moz-placeholder {
+    color: #aaaaaa;
+  }
 }
 .text-style {
   font-size: 20px;
@@ -104,7 +115,7 @@ body {
   padding: 10px 50px;
   text-transform: uppercase;
   color: #ffffff;
-  border: 2px solid;
+  border: 2px solid transparent;
   cursor:pointer;
   text-decoration: none;
   &:hover {
@@ -154,7 +165,7 @@ body {
   }
   .image-invite {
     background-image: url(../images/invite.jpg);
-    background-position: 19% 27%;
+    background-position: 45% 27%;
     background-size: cover;
     height: 160px;
   }
