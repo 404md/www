@@ -121,6 +121,25 @@
         }
       }
     }
+    &.invitation {
+      .main-block {
+        .container {
+          .add-friends {
+            .number-block {
+              font-size: 13px;
+              .block-n {
+                &:not(:last-child) {
+                  &:after {
+                    top:8px;
+                    height: 2px;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
   }
   .gallery {
     .gallery-line {
@@ -203,6 +222,62 @@
         .main-nav {
           &.responsive-nav {
             background: black;
+          }
+        }
+      }
+    }
+    &.invitation {
+      .main-block {
+        .container {
+          .add-friends {
+            .text-invite {
+              width: 100%;
+              font-size: 25px;
+              line-height: 30px;
+            }
+            .number-block {
+              font-size: 13px;
+              .block-n {
+                padding-bottom: 20px;
+                padding-right: 0;
+                display: block;
+                &:last-child {
+                  padding-bottom: 0;
+                }
+                &:not(:last-child) {
+                  &:after {
+                    display:none;
+                  }
+                }
+              }
+            }
+          }
+        }
+        .form-invitation {
+          .container {
+            .heading-contact {
+
+            }
+            .form-invite {
+              .contacts-invite {
+                width: 100%;
+                .form-block {
+                  width: auto;
+                  &:first-child {
+
+                  }
+
+                  &:nth-child(3) {
+                    width: 15%;
+                    &:last-child {
+                      &:after {
+
+                      }
+                    }
+                  }
+                }
+              }
+            }
           }
         }
       }
@@ -764,6 +839,10 @@
 }
 
 @media (max-width: 639px) {
+  .text-uppercase {
+    font-size: 17px;
+    text-align: center;
+  }
   .wrapper {
     &.main {
       .main-block {
@@ -802,7 +881,7 @@
           h1,h2 {
             text-align: center;
             font-size: 40px;
-            line-height: 35px;
+            line-height: 40px;
           }
           .text-center {
             text-align: center;
@@ -1100,7 +1179,6 @@
     &.main {
       .main-block {
         .main-info {
-          height: 530px;
           &.ru-vertion {
             h1,h2 {
               font-size: 40px;
@@ -1251,3 +1329,4 @@
     }
   }
 }
+
