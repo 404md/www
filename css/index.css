@@ -195,6 +195,11 @@ body {
   background-color: #fff;
   -webkit-text-size-adjust: none; }
 
+.text-uppercase {
+  text-transform: uppercase;
+  margin-top: 40px;
+  font-size: 25px; }
+
 .container {
   padding-right: 15px;
   padding-left: 15px;
@@ -987,6 +992,11 @@ body {
           margin-bottom: 0; }
   .wrapper.booking .main-block .container .back-image .booking-form .form {
     width: auto; }
+  .wrapper.invitation .main-block .container .add-friends .number-block {
+    font-size: 13px; }
+    .wrapper.invitation .main-block .container .add-friends .number-block .block-n:not(:last-child):after {
+      top: 8px;
+      height: 2px; }
 
   .gallery .gallery-line {
     height: 180px; }
@@ -1023,6 +1033,26 @@ body {
 @media screen and (max-width: 992px) {
   .wrapper.main .main-block .main-nav.responsive-nav {
     background: black; }
+  .wrapper.invitation .main-block .container .add-friends .text-invite {
+    width: 100%;
+    font-size: 25px;
+    line-height: 30px; }
+  .wrapper.invitation .main-block .container .add-friends .number-block {
+    font-size: 13px; }
+    .wrapper.invitation .main-block .container .add-friends .number-block .block-n {
+      padding-bottom: 20px;
+      padding-right: 0;
+      display: block; }
+      .wrapper.invitation .main-block .container .add-friends .number-block .block-n:last-child {
+        padding-bottom: 0; }
+      .wrapper.invitation .main-block .container .add-friends .number-block .block-n:not(:last-child):after {
+        display: none; }
+  .wrapper.invitation .main-block .form-invitation .container .form-invite .contacts-invite {
+    width: 100%; }
+    .wrapper.invitation .main-block .form-invitation .container .form-invite .contacts-invite .form-block {
+      width: auto; }
+      .wrapper.invitation .main-block .form-invitation .container .form-invite .contacts-invite .form-block:nth-child(3) {
+        width: 15%; }
 
   #menu-toggle {
     display: block; }
@@ -1309,6 +1339,10 @@ body {
   .case-study .container .right-block .right-info .right-header {
     font-size: 30px; } }
 @media (max-width: 639px) {
+  .text-uppercase {
+    font-size: 17px;
+    text-align: center; }
+
   .wrapper.main .main-block .main-info {
     height: 670px; }
     .wrapper.main .main-block .main-info.ru-vertion h1, .wrapper.main .main-block .main-info.ru-vertion h2 {
@@ -1328,7 +1362,7 @@ body {
     .wrapper .main-block .main-info .local-com h1, .wrapper .main-block .main-info .local-com h2 {
       text-align: center;
       font-size: 40px;
-      line-height: 35px; }
+      line-height: 40px; }
     .wrapper .main-block .main-info .local-com .text-center {
       text-align: center; }
     .wrapper .main-block .main-info .local-com .more {
@@ -1443,13 +1477,11 @@ body {
       font-size: 16px; }
     .wrapper.contact .main-block .container .input-field .hole-form .text-style {
       font-size: 16px; }
-  .wrapper.main .main-block .main-info {
-    height: 530px; }
-    .wrapper.main .main-block .main-info.ru-vertion h1, .wrapper.main .main-block .main-info.ru-vertion h2 {
-      font-size: 40px;
-      line-height: 40px; }
-    .wrapper.main .main-block .main-info .local-com .more .more-about {
-      font-size: 15px; }
+  .wrapper.main .main-block .main-info.ru-vertion h1, .wrapper.main .main-block .main-info.ru-vertion h2 {
+    font-size: 40px;
+    line-height: 40px; }
+  .wrapper.main .main-block .main-info .local-com .more .more-about {
+    font-size: 15px; }
   .wrapper .g-recaptcha {
     transform: scale(0.91);
     -webkit-transform: scale(0.91);
