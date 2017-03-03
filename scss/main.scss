@@ -35,6 +35,12 @@ a {
   flex-wrap: wrap;
 }
 
+.text-upercase {
+  text-transform:uppercase ;
+  font-size: 30px;
+  margin-top: 40px;
+}
+
 body {
   font-family: 'Lato-Regular', sans-serif;
   font-size: 14px;
@@ -199,6 +205,11 @@ body {
           &:last-child {
             margin-bottom: 0;
           }
+        }
+        ul li {
+          font-size: 17px;
+          margin-bottom: 20px;
+          list-style: inside;
         }
       }
     }
