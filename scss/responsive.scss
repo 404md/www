@@ -157,6 +157,25 @@
   }
 }
 
+@media (max-width: 1074px) {
+  .wrapper {
+    &.thankyou {
+      .main-block {
+        .container {
+          &.new-page {
+            width: 80%;
+            .pages {
+              .page-name{
+                font-size: 20px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
 @media (max-width: 1024px) {
   .pic{
     width: 50%;
@@ -682,6 +701,26 @@
                 input[type=checkbox] {
                   zoom:unset;
                 }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 618px) {
+  .wrapper {
+    &.thankyou {
+      .main-block {
+        .container {
+          &.new-page {
+            width: auto;
+            .pages {
+             margin: 0 auto;
+              .page-name {
+                font-size: 16px;
               }
             }
           }
