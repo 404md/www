@@ -366,6 +366,26 @@ body {
       }
     }
   }
+  &.thankyou {
+    min-height: unset;
+    .main-block {
+      min-height: unset;
+      background: #f5f5f4;
+      .container {
+        &.new-page {
+          width: 50%;
+          text-align: center;
+          padding: 40px 0;
+          .pages {
+            .page-name{
+              text-align: center;
+              font-size: 25px;
+            }
+          }
+        }
+      }
+    }
+  }
 }
 
 
