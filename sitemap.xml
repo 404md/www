@@ -20,7 +20,12 @@
   <changefreq>weekly</changefreq>
 </url>
 <url>
-  <loc>https://www.404.md/priving/</loc>
+  <loc>https://www.404.md/pricing/</loc>
+  <priority>0.80</priority>
+  <changefreq>weekly</changefreq>
+</url>
+<url>
+  <loc>https://www.404.md/tour/</loc>
   <priority>0.80</priority>
   <changefreq>weekly</changefreq>
 </url>
@@ -50,7 +55,12 @@
   <changefreq>weekly</changefreq>
 </url>
 <url>
-  <loc>https://www.404.md/ro/priving/</loc>
+  <loc>https://www.404.md/ro/pricing/</loc>
+  <priority>0.80</priority>
+  <changefreq>weekly</changefreq>
+</url>
+<url>
+  <loc>https://www.404.md/ro/tour/</loc>
   <priority>0.80</priority>
   <changefreq>weekly</changefreq>
 </url>
@@ -80,7 +90,12 @@
   <changefreq>weekly</changefreq>
 </url>
 <url>
-  <loc>https://www.404.md/ru/priving/</loc>
+  <loc>https://www.404.md/ru/pricing/</loc>
+  <priority>0.80</priority>
+  <changefreq>weekly</changefreq>
+</url>
+<url>
+  <loc>https://www.404.md/ru/tour/</loc>
   <priority>0.80</priority>
   <changefreq>weekly</changefreq>
 </url>
