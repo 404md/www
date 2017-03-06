@@ -24,10 +24,20 @@ jQuery(function($) {
         $('.main-nav').toggleClass("responsive-nav");
     });
 
-    $('a').on('click touchend', function(e) {
-        var el = $(this);
-        var link = el.attr('href');
-        window.location = link;
-    });
+    var isScrolling;
+    var navigationBar = $('.navt a');
+
+    navigationBar.on('touchstart', function(){
+            isScrolling = false;
+        });
+    navigationBar.on('touchmove', function(e){
+            isScrolling = true;
+        });
+    navigationBar.on('touchend', function(e){
+            if( !isScrolling )
+            {
+                window.location = $(this).attr('href');
+            }
+        });
 
 });

@@ -24,8 +24,8 @@ echo "Copying resources into build/release folder"
 rm -rf ./build/Release/*
 mkdir -p ./build/Release/
 cp -R favicon.png robots.txt sitemap.xml css fonts images js \
-	amenities contact invitation members pricing terms tour ro ru \
-	./build/Release/
+	amenities contact invitation members pricing terms tour tour-ok \
+	ro ru ./build/Release/
 
 echo "Minifying html code"
 html-minifier --collapse-whitespace --remove-comments ./amenities/index.html -o ./build/Release/amenities/index.html
@@ -35,6 +35,7 @@ html-minifier --collapse-whitespace --remove-comments ./members/index.html -o ./
 html-minifier --collapse-whitespace --remove-comments ./pricing/index.html -o ./build/Release/pricing/index.html
 html-minifier --collapse-whitespace --remove-comments ./terms/index.html -o ./build/Release/terms/index.html
 html-minifier --collapse-whitespace --remove-comments ./tour/index.html -o ./build/Release/tour/index.html
+html-minifier --collapse-whitespace --remove-comments ./tour-ok/index.html -o ./build/Release/tour-ok/index.html
 html-minifier --collapse-whitespace --remove-comments ./index.html -o ./build/Release/index.html
 
 html-minifier --collapse-whitespace --remove-comments ./ro/amenities/index.html -o ./build/Release/ro/amenities/index.html
@@ -43,6 +44,8 @@ html-minifier --collapse-whitespace --remove-comments ./ro/invitation/index.html
 html-minifier --collapse-whitespace --remove-comments ./ro/members/index.html -o ./build/Release/ro/members/index.html
 html-minifier --collapse-whitespace --remove-comments ./ro/pricing/index.html -o ./build/Release/ro/pricing/index.html
 html-minifier --collapse-whitespace --remove-comments ./ro/terms/index.html -o ./build/Release/ro/terms/index.html
+html-minifier --collapse-whitespace --remove-comments ./ro/tour/index.html -o ./build/Release/ro/tour/index.html
+html-minifier --collapse-whitespace --remove-comments ./ro/tour-ok/index.html -o ./build/Release/ro/tour-ok/index.html
 html-minifier --collapse-whitespace --remove-comments ./ro/index.html -o ./build/Release/ro/index.html
 
 html-minifier --collapse-whitespace --remove-comments ./ru/amenities/index.html -o ./build/Release/ru/amenities/index.html
@@ -51,6 +54,8 @@ html-minifier --collapse-whitespace --remove-comments ./ru/invitation/index.html
 html-minifier --collapse-whitespace --remove-comments ./ru/members/index.html -o ./build/Release/ru/members/index.html
 html-minifier --collapse-whitespace --remove-comments ./ru/pricing/index.html -o ./build/Release/ru/pricing/index.html
 html-minifier --collapse-whitespace --remove-comments ./ru/terms/index.html -o ./build/Release/ru/terms/index.html
+html-minifier --collapse-whitespace --remove-comments ./ru/tour/index.html -o ./build/Release/ru/tour/index.html
+html-minifier --collapse-whitespace --remove-comments ./ru/tour-ok/index.html -o ./build/Release/ru/tour-ok/index.html
 html-minifier --collapse-whitespace --remove-comments ./ru/index.html -o ./build/Release/ru/index.html
 
 echo "Synchronizing build/Release/"
