@@ -17,6 +17,7 @@
 .wrapper {
   &.amenities {
     .main-block {
+      min-height: unset;
       .blocks {
         background: #f5f5f4;
         .container {
@@ -25,7 +26,7 @@
             padding-bottom: 25px;
             align-items: flex-end;
           .flex-block {
-            height: 300px;
+            height: 260px;
             width: 320px;
             text-align: center;
             padding-bottom: 20px;
@@ -34,6 +35,9 @@
             img {
               height: 90px;
               }
+            .text-anvio {
+              margin-top: 20px;
+            }
             }
           }
         }

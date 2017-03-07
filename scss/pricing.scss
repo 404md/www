@@ -55,3 +55,17 @@
     }
   }
 }
+
+.btn-right {
+  .button {
+    padding:0 10px;
+    background: unset;
+    font-size: unset;
+    border-color: white;
+    &:hover {
+      color:white;
+      background: #dd5931;
+      border-color: #dd5931;
+    }
+  }
+}

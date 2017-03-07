@@ -8,21 +8,25 @@
 .text-color {
   color: #dd5931; }
 
-.wrapper.amenities .main-block .blocks {
-  background: #f5f5f4; }
-  .wrapper.amenities .main-block .blocks .container .display-flex {
-    padding-top: 70px;
-    padding-bottom: 25px;
-    align-items: flex-end; }
-    .wrapper.amenities .main-block .blocks .container .display-flex .flex-block {
-      height: 300px;
-      width: 320px;
-      text-align: center;
-      padding-bottom: 20px;
-      padding-left: 5px;
-      padding-right: 5px; }
-      .wrapper.amenities .main-block .blocks .container .display-flex .flex-block img {
-        height: 90px; }
+.wrapper.amenities .main-block {
+  min-height: unset; }
+  .wrapper.amenities .main-block .blocks {
+    background: #f5f5f4; }
+    .wrapper.amenities .main-block .blocks .container .display-flex {
+      padding-top: 70px;
+      padding-bottom: 25px;
+      align-items: flex-end; }
+      .wrapper.amenities .main-block .blocks .container .display-flex .flex-block {
+        height: 260px;
+        width: 320px;
+        text-align: center;
+        padding-bottom: 20px;
+        padding-left: 5px;
+        padding-right: 5px; }
+        .wrapper.amenities .main-block .blocks .container .display-flex .flex-block img {
+          height: 90px; }
+        .wrapper.amenities .main-block .blocks .container .display-flex .flex-block .text-anvio {
+          margin-top: 20px; }
 
 /* Gallery */
 .gallery.amenities-gallery .gallery-line .img1 {
@@ -128,7 +132,7 @@
       margin: 0 auto; }
       .wrapper.invitation .main-block .form-invitation .container .form-invite .contacts-invite .form-block {
         display: inline-block;
-        width: 32%; }
+        width: 31%; }
         .wrapper.invitation .main-block .form-invitation .container .form-invite .contacts-invite .form-block:first-child {
           margin-right: 20px; }
         .wrapper.invitation .main-block .form-invitation .container .form-invite .contacts-invite .form-block label {
@@ -179,6 +183,9 @@ a {
 
 .btn-center {
   text-align: center; }
+
+.btn-right {
+  text-align: right; }
 
 .odd {
   background: #FCFCFB; }
@@ -234,7 +241,6 @@ body {
   border: 1px solid #454545;
   margin-bottom: 20px;
   width: 100%;
-  color: #aaaaaa;
   resize: none; }
 
 .connect-us {
@@ -952,6 +958,16 @@ body {
       margin-top: 40px;
       margin-bottom: 30px; }
 
+.btn-right .button {
+  padding: 0 10px;
+  background: unset;
+  font-size: unset;
+  border-color: white; }
+  .btn-right .button:hover {
+    color: white;
+    background: #dd5931;
+    border-color: #dd5931; }
+
 @media (min-width: 768px) {
   .container {
     width: 750px; } }
@@ -1099,6 +1115,13 @@ body {
           margin-bottom: 0; }
   .wrapper.booking .main-block .container .back-image .booking-form .form {
     width: auto; }
+  .wrapper.invitation .main-block .container .add-friends .number-block {
+    font-size: 13px; }
+    .wrapper.invitation .main-block .container .add-friends .number-block .block-n:not(:last-child):after {
+      top: 8px;
+      height: 2px; }
+  .wrapper.invitation .main-block .form-invitation .container .form-invite .contacts-invite .form-block .input-style {
+    font-size: 15px; }
 
   .gallery .gallery-line {
     height: 180px; }
@@ -1138,6 +1161,14 @@ body {
   .wrapper.amenities .main-block .blocks .container .display-flex.ru-block .text-anvio {
     font-size: 21px; } }
 @media screen and (max-width: 992px) {
+  .booking-form #mc_embed_signup {
+    width: auto; }
+    .booking-form #mc_embed_signup .heading-contact {
+      font-size: 20px; }
+    .booking-form #mc_embed_signup .mc-field-group label {
+      font-size: 16px;
+      padding-top: 10px; }
+
   .main-nav .container .nav-top .navt li .link, .main-nav .container .nav-top .navt li .last-line {
     width: 750px; }
   .main-nav .container .nav-top .language {
@@ -1227,8 +1258,6 @@ body {
       height: auto;
       margin-right: 20px;
       margin-bottom: 10px; }
-      .wrapper.pricing .main-block .container .display-flex .plans .img-plan .back-color {
-        text-align: left; }
     .wrapper.pricing .main-block .container .display-flex .plans .description .block-responsive {
       width: 100%;
       height: auto;
@@ -1242,9 +1271,32 @@ body {
     width: 100%; }
     .wrapper.booking .main-block .container .back-image .booking-form .form {
       width: auto; }
+  .wrapper.invitation .main-block .container .add-friends {
+    margin-top: 20px; }
+    .wrapper.invitation .main-block .container .add-friends .text-invite {
+      width: 100%;
+      font-size: 25px;
+      line-height: 30px; }
+    .wrapper.invitation .main-block .container .add-friends .number-block {
+      font-size: 13px; }
+      .wrapper.invitation .main-block .container .add-friends .number-block .block-n {
+        padding-bottom: 20px;
+        padding-right: 0;
+        display: block; }
+        .wrapper.invitation .main-block .container .add-friends .number-block .block-n:last-child {
+          padding-bottom: 0; }
+        .wrapper.invitation .main-block .container .add-friends .number-block .block-n:not(:last-child):after {
+          display: none; }
+  .wrapper.invitation .main-block .form-invitation .container .form-invite .contacts-invite {
+    width: 100%; }
 
   .gallery.members-gallery .gallery-line, .gallery.connect-us .gallery-line {
     margin-top: 0; } }
+@media (max-width: 680px) {
+  .wrapper.invitation .main-block .form-invitation .container .form-invite .contacts-invite .form-block span {
+    font-size: 22px; }
+  .wrapper.invitation .main-block .form-invitation .container .form-invite .contacts-invite .form-block .input-style {
+    font-size: 12px; } }
 @media (max-width: 768px) {
   .main-nav .container .nav-top .navt li .link, .main-nav .container .nav-top .navt li .last-line {
     width: auto; } }
@@ -1304,12 +1356,7 @@ body {
   .wrapper.booking .main-block .container .back-image .booking-form #mc_embed_signup {
     width: auto; }
     .wrapper.booking .main-block .container .back-image .booking-form #mc_embed_signup .heading-contact {
-      font-size: 20px; }
-    .wrapper.booking .main-block .container .back-image .booking-form #mc_embed_signup .mc-field-group label {
-      font-size: 16px;
-      padding-top: 10px; }
-    .wrapper.booking .main-block .container .back-image .booking-form #mc_embed_signup input[type=checkbox] {
-      zoom: unset; } }
+      font-size: 20px; } }
 @media (max-width: 618px) {
   .wrapper.thankyou .main-block .container.new-page {
     width: auto; }
@@ -1432,7 +1479,14 @@ body {
       .wrapper.pricing .main-block .container .display-flex .plans .img-plan img {
         width: 100%; }
     .wrapper.pricing .main-block .container .display-flex .plans .description .block-responsive {
-      width: auto; } }
+      width: auto; }
+  .wrapper.invitation .main-block .form-invitation .container .form-invite .contacts-invite .form-block {
+    width: 48%; }
+    .wrapper.invitation .main-block .form-invitation .container .form-invite .contacts-invite .form-block:nth-child(3) {
+      top: -47px; } }
+@media (max-width: 498px) {
+  .case-study .container .left-block .mockup .mockup-cont .blurry .btn.btn-primary {
+    font-size: 8px; } }
 @media (max-width: 450px) {
   .contacts .get-in-touch .block-3 {
     width: 100%;
@@ -1457,6 +1511,11 @@ body {
     height: 35px; }
   .wrapper.booking .main-block .container .back-image .booking-form #mc_embed_signup {
     width: 90%; } }
+@media (max-width: 422px) {
+  .booking-form #mc_embed_signup {
+    width: auto; }
+    .booking-form #mc_embed_signup .mc-field-group label {
+      font-size: 13px; } }
 @media (max-width: 414px) {
   .wrapper .container .partners .pycoding img {
     height: 20px; }
@@ -1516,6 +1575,14 @@ body {
     -webkit-transform: scale(0.85);
     transform-origin: 0 0;
     -webkit-transform-origin: 0 0; }
+  .wrapper.invitation .main-block .container .add-friends .text-invite {
+    font-size: 20px; }
+  .wrapper.invitation .main-block .form-invitation .container .form-invite .contacts-invite .form-block {
+    width: auto; }
+  .wrapper.invitation .main-block .form-invitation .container .form-invite .contacts-invite .button.form-btn {
+    font-size: 15px; }
+  .wrapper.invitation .main-block .form-invitation .container .form-invite .sales .heading-contact {
+    font-size: 16px; }
 
   .case-study .container .left-block .mockup .logo-img {
     height: 30px; }
@@ -1552,7 +1619,6 @@ body {
     background-repeat: no-repeat;
     background-position: 50% 50%;
     background-size: cover;
-    min-height: 1000px;
     position: relative; }
     .wrapper.booking .main-block .container .back-image:before {
       content: '';
@@ -1565,11 +1631,11 @@ body {
     .wrapper.booking .main-block .container .back-image .booking-form {
       position: relative;
       background: white;
-      min-height: 1000px;
       opacity: 0.95;
       display: flex;
       justify-content: center;
-      align-items: center; }
+      align-items: center;
+      padding: 40px 0; }
       .wrapper.booking .main-block .container .back-image .booking-form .input-style {
         margin-bottom: 0;
         border-color: black; }
@@ -1696,7 +1762,8 @@ body {
   margin-right: 10px; }
 
 #mc_embed_signup .mc-field-group.input-group label {
-  display: inline; }
+  display: inline;
+  padding-left: 5px; }
 
 #mc_embed_signup .mc-field-group.input-group input {
   display: inline;

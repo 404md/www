@@ -35,6 +35,7 @@
 }
 
 @media (max-width: 1200px) {
+
   .wrapper {
     &.main {
       .main-block {
@@ -259,6 +260,38 @@
         }
       }
     }
+    &.invitation {
+      .main-block {
+        .container {
+          .add-friends {
+            .number-block {
+              font-size: 13px;
+              .block-n {
+                &:not(:last-child) {
+                  &:after {
+                    top:8px;
+                    height: 2px;
+                  }
+                }
+              }
+            }
+          }
+        }
+        .form-invitation {
+          .container {
+            .form-invite {
+              .contacts-invite {
+                .form-block {
+                  .input-style {
+                    font-size: 15px;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
   }
   .gallery {
     .gallery-line {
@@ -354,12 +387,26 @@
 }
 
 @media screen and (max-width: 992px) {
+  .booking-form {
+    #mc_embed_signup {
+      width: auto;
+      .heading-contact {
+        font-size: 20px;
+      }
+      .mc-field-group {
+        label {
+          font-size: 16px;
+          padding-top: 10px;
+        }
+      }
+    }
+  }
+
   .main-nav {
     .container {
       .nav-top {
         .navt {
           li {
-
             .link, .last-line {
               width: 750px;
             }
@@ -503,9 +550,7 @@
                height: auto;
                 margin-right: 20px;
                 margin-bottom: 10px;
-                .back-color {
-                  text-align: left;
-                }
+
               }
 
               .description {
@@ -542,6 +587,48 @@
         }
       }
     }
+    &.invitation {
+      .main-block {
+        .container {
+          .add-friends {
+            margin-top: 20px;
+            .text-invite {
+              width: 100%;
+              font-size: 25px;
+              line-height: 30px;
+            }
+            .number-block {
+              font-size: 13px;
+              .block-n {
+                padding-bottom: 20px;
+                padding-right: 0;
+                display: block;
+                &:last-child {
+                  padding-bottom: 0;
+                }
+                &:not(:last-child) {
+                  &:after {
+                    display:none;
+                  }
+                }
+              }
+            }
+          }
+        }
+        .form-invitation {
+          .container {
+            .heading-contact {
+
+            }
+            .form-invite {
+              .contacts-invite {
+                width: 100%;
+              }
+            }
+          }
+        }
+      }
+    }
   }
 
   .gallery {
@@ -553,6 +640,31 @@
   }
 }
 
+
+@media (max-width: 680px) {
+  .wrapper {
+    &.invitation {
+      .main-block {
+        .form-invitation {
+          .container {
+            .form-invite {
+              .contacts-invite {
+                .form-block {
+                  span {
+                    font-size: 22px;
+                  }
+                  .input-style {
+                    font-size: 12px;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
 
 @media (max-width: 768px) {
  .main-nav {
@@ -712,15 +824,6 @@
                 .heading-contact {
                   font-size: 20px;
                 }
-                .mc-field-group {
-                  label {
-                    font-size: 16px;
-                    padding-top: 10px;
-                  }
-                }
-                input[type=checkbox] {
-                  zoom:unset;
-                }
               }
             }
           }
@@ -728,6 +831,10 @@
       }
     }
   }
+}
+
+@media (max-width: 626px) {
+
 }
 
 @media (max-width: 618px) {
@@ -980,6 +1087,45 @@
         }
       }
     }
+    &.invitation {
+      .main-block {
+        .form-invitation {
+          .container {
+            .form-invite {
+              .contacts-invite {
+                .form-block {
+                  width: 48%;
+                  &:nth-child(3) {
+                    top:-47px;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 498px) {
+  .case-study {
+    .container {
+      .left-block {
+        .mockup {
+          .mockup-cont {
+            .blurry {
+              .btn {
+                &.btn-primary {
+                  font-size: 8px;
+                }
+              }
+
+            }
+          }
+        }
+      }
+    }
   }
 }
 
@@ -1050,6 +1196,19 @@
               }
             }
           }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 422px) {
+  .booking-form {
+    #mc_embed_signup {
+      width: auto;
+      .mc-field-group {
+        label {
+          font-size: 13px;
         }
       }
     }
@@ -1245,6 +1404,38 @@
                 transform:scale(0.85);
                 -webkit-transform:scale(0.85);
                 transform-origin:0 0;-webkit-transform-origin:0 0;
+              }
+            }
+          }
+        }
+      }
+    }
+    &.invitation {
+      .main-block {
+        .container {
+          .add-friends {
+            .text-invite {
+              font-size: 20px;
+              }
+            }
+          }
+        .form-invitation {
+          .container {
+            .form-invite {
+              .contacts-invite {
+                .form-block {
+                  width: auto;
+                }
+                .button {
+                  &.form-btn {
+                    font-size: 15px;
+                  }
+                }
+              }
+              .sales {
+                .heading-contact {
+                  font-size: 16px;
+                }
               }
             }
           }
