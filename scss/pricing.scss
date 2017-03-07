@@ -69,3 +69,27 @@
     }
   }
 }
+
+/* Gallery */
+
+.gallery {
+  &.pricing-gallery {
+    .gallery-line {
+      .img1 {
+        background-image: url(../images/img1-p.jpg);
+      }
+      .img2 {
+        background-image: url(../images/img2-p.jpg);
+
+      }
+      .img3 {
+        background-image: url(../images/img3-p.jpg);
+        background-position-y: 70%;
+      }
+      .img4 {
+        background-image: url(../images/img4-p.jpg);
+        display: flex;
+      }
+    }
+  }
+}

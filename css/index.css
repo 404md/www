@@ -32,9 +32,12 @@
 .gallery.amenities-gallery .gallery-line .img1 {
   background-image: url(../images/img1.jpg); }
 .gallery.amenities-gallery .gallery-line .img2 {
-  background-image: url(../images/img2.jpg); }
+  background-image: url(../images/img2.jpg);
+  background-position: 98%;
+  background-position-y: 80%; }
 .gallery.amenities-gallery .gallery-line .img3 {
-  background-image: url(../images/img3.jpg); }
+  background-image: url(../images/img3.jpg);
+  background-position-y: 70%; }
 .gallery.amenities-gallery .gallery-line .img4 {
   background-image: url(../images/img4.jpg);
   display: flex; }
@@ -77,13 +80,13 @@
 .gallery.connect-us .gallery-line {
   margin-top: 60px; }
   .gallery.connect-us .gallery-line .img1 {
-    background-image: url(../images/c-img1.jpg); }
+    background-image: url(../images/img1-c.jpg); }
   .gallery.connect-us .gallery-line .img2 {
-    background-image: url(../images/c-img2.jpg); }
+    background-image: url(../images/img2-c.jpg); }
   .gallery.connect-us .gallery-line .img3 {
-    background-image: url(../images/c-img3.jpg); }
+    background-image: url(../images/img3-c.jpg); }
   .gallery.connect-us .gallery-line .img4 {
-    background-image: url(../images/c-img4.jpg); }
+    background-image: url(../images/img4-c.jpg); }
 
 .new-page.invitation .pages {
   margin-bottom: 0; }
@@ -655,21 +658,6 @@ body {
     .img-hover:hover .we-love .comment span {
       font-size: 15px; }
 
-/* Gallery */
-.gallery.members-gallery .gallery-line {
-  margin-top: 0; }
-.gallery .gallery-line {
-  height: 300px;
-  margin-top: 60px; }
-  .gallery .gallery-line .img1 {
-    background-image: url(../images/img1.jpg); }
-  .gallery .gallery-line .img2 {
-    background-image: url(../images/img2.jpg); }
-  .gallery .gallery-line .img3 {
-    background-image: url(../images/img3.jpg); }
-  .gallery .gallery-line .img4 {
-    background-image: url(../images/img4.jpg); }
-
 #menu-toggle {
   display: none;
   float: right;
@@ -921,6 +909,21 @@ body {
   height: 175px;
   position: relative; }
 
+/* Gallery */
+.gallery.members-gallery .gallery-line {
+  margin-top: 0; }
+.gallery .gallery-line {
+  height: 300px;
+  margin-top: 60px; }
+  .gallery .gallery-line .img1 {
+    background-image: url(../images/img1-m.jpg); }
+  .gallery .gallery-line .img2 {
+    background-image: url(../images/img2-m.jpg); }
+  .gallery .gallery-line .img3 {
+    background-image: url(../images/img3-m.jpg); }
+  .gallery .gallery-line .img4 {
+    background-image: url(../images/img4-m.jpg); }
+
 .wrapper.pricing .main-block .container .display-flex .plans {
   width: 353px; }
   .wrapper.pricing .main-block .container .display-flex .plans .img-plan {
@@ -967,6 +970,18 @@ body {
     color: white;
     background: #dd5931;
     border-color: #dd5931; }
+
+/* Gallery */
+.gallery.pricing-gallery .gallery-line .img1 {
+  background-image: url(../images/img1-p.jpg); }
+.gallery.pricing-gallery .gallery-line .img2 {
+  background-image: url(../images/img2-p.jpg); }
+.gallery.pricing-gallery .gallery-line .img3 {
+  background-image: url(../images/img3-p.jpg);
+  background-position-y: 70%; }
+.gallery.pricing-gallery .gallery-line .img4 {
+  background-image: url(../images/img4-p.jpg);
+  display: flex; }
 
 @media (min-width: 768px) {
   .container {
@@ -1644,6 +1659,17 @@ body {
         .wrapper.booking .main-block .container .back-image .booking-form .text-style:focus {
           border: 2px solid #333;
           padding: 9px; }
+
+/* Gallery */
+.gallery.tour-gallery .gallery-line .img1 {
+  background-image: url(../images/img1-t.jpg); }
+.gallery.tour-gallery .gallery-line .img2 {
+  background-image: url(../images/img2-t.jpg); }
+.gallery.tour-gallery .gallery-line .img3 {
+  background-image: url(../images/img3-t.jpg); }
+.gallery.tour-gallery .gallery-line .img4 {
+  background-image: url(../images/img4-t.jpg);
+  display: flex; }
 
 /* MailChimp Form Embed Code - Classic - 12/17/2015 v10.7 */
 #mc_embed_signup {

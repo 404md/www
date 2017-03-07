@@ -44,6 +44,31 @@
   }
 }
 
+/* Gallery */
+
+.gallery {
+  &.tour-gallery {
+    .gallery-line {
+      .img1 {
+        background-image: url(../images/img1-t.jpg);
+      }
+      .img2 {
+        background-image: url(../images/img2-t.jpg);
+
+      }
+      .img3 {
+        background-image: url(../images/img3-t.jpg);
+
+      }
+      .img4 {
+        background-image: url(../images/img4-t.jpg);
+        display: flex;
+      }
+    }
+  }
+}
+
+
 /* MailChimp Form Embed Code - Classic - 12/17/2015 v10.7 */
 #mc_embed_signup{background:#fff; clear:left; font:14px Helvetica,Arial,sans-serif;width: 50%; }
 #mc_embed_signup form {display:block; width: 100%; margin: 0 auto;}
