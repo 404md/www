@@ -679,8 +679,14 @@ body {
         border-radius:  50%;
         float: left;
         margin-right: 20px;
+        position: relative;
+        background:#dd5931 ;
         img {
           height: 100%;
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
         }
       }
       .comment {
@@ -802,4 +808,27 @@ body {
     src: local('☺'), url('../fonts/Lato-Regular.woff') format('woff'), url('../fonts/Lato-Regular.ttf') format('truetype'), url('../fonts/Lato-Regular.svg') format('svg');
     font-weight: normal;
     font-style: normal;
+}
+
+
+/* Gallery bfor terms*/
+
+.gallery {
+  &.terms {
+    .gallery-line {
+      margin-top: 60px;
+      .img1 {
+        background-image: url(../images/img1-tr.jpg);
+      }
+      .img2 {
+        background-image: url(../images/img2-tr.jpg);
+      }
+      .img3 {
+        background-image: url(../images/img3-tr.jpg);
+      }
+      .img4 {
+        background-image: url(../images/img4-tr.jpg);
+      }
+    }
+  }
 }
