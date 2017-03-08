@@ -60,7 +60,7 @@ html-minifier --collapse-whitespace --remove-comments ./ru/index.html -o ./build
 
 echo "Synchronizing build/Release/"
 aws s3 sync ./build/Release/ s3://www.404.md/ --region ${region} --profile ${profile} \
-	--storage-class REDUCED_REDUNDANCY --metadata-directive REPLACE --cache-control max-age=604800
+	--storage-class REDUCED_REDUNDANCY --metadata-directive REPLACE --cache-control max-age=600
 
 echo "Invalidating CloudFront"
 aws cloudfront create-invalidation --distribution-id E1CHAR53JHGDQK --paths '/*'
