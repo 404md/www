@@ -1,0 +1,92 @@
+<svg id="Слой_1" data-name="Слой 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+  <defs>
+    <style>
+      .cls-1, .cls-2, .cls-3, .cls-6, .cls-7, .cls-8 {
+        fill: none;
+      }
+
+      .cls-2, .cls-4, .cls-7, .cls-8 {
+        stroke: #000;
+      }
+
+      .cls-2, .cls-3, .cls-4, .cls-6, .cls-7, .cls-8 {
+        stroke-linecap: round;
+      }
+
+      .cls-2, .cls-3, .cls-4, .cls-8 {
+        stroke-linejoin: round;
+      }
+
+      .cls-2, .cls-3, .cls-4 {
+        stroke-width: 2px;
+      }
+
+      .cls-3, .cls-6 {
+        stroke: #fc592a;
+      }
+
+      .cls-4, .cls-5 {
+        fill: #fc592a;
+      }
+
+      .cls-5 {
+        font-size: 20.29px;
+        font-family: Lato-Bold, Lato;
+        font-weight: 700;
+      }
+
+      .cls-6, .cls-7 {
+        stroke-miterlimit: 10;
+      }
+    </style>
+  </defs>
+  <title>icon-7</title>
+  <g>
+    <rect class="cls-1" width="100" height="100"/>
+    <path class="cls-2" d="M86.5,20.79V81.51a4.65,4.65,0,0,1-4.65,4.65H20.15a4.65,4.65,0,0,1-4.65-4.65V20.79h13v8.45h6.76V20.79H66.78v8.45h6.76V20.79Z"/>
+    <rect class="cls-3" x="28.46" y="12.34" width="6.76" height="16.9"/>
+    <rect class="cls-3" x="66.78" y="12.34" width="6.76" height="16.9"/>
+    <rect class="cls-2" x="26.77" y="45.37" width="48.46" height="30.87"/>
+    <line class="cls-4" x1="15.56" y1="36.01" x2="85.44" y2="36.01"/>
+    <line class="cls-2" x1="45.99" y1="29.25" x2="43.74" y2="29.25"/>
+    <line class="cls-2" x1="51.63" y1="29.25" x2="49.37" y2="29.25"/>
+    <line class="cls-2" x1="57.26" y1="29.25" x2="55.01" y2="29.25"/>
+    <text class="cls-5" transform="translate(38.1 68.69)">31</text>
+    <g>
+      <line class="cls-6" x1="11.38" y1="8.43" x2="11.38" y2="6.98"/>
+      <line class="cls-6" x1="11.38" y1="12.81" x2="11.38" y2="11.35"/>
+      <line class="cls-6" x1="14.38" y1="9.89" x2="12.88" y2="9.89"/>
+      <line class="cls-6" x1="9.87" y1="9.89" x2="8.37" y2="9.89"/>
+    </g>
+    <g>
+      <line class="cls-6" x1="93.38" y1="71.43" x2="93.38" y2="69.98"/>
+      <line class="cls-6" x1="93.38" y1="75.81" x2="93.38" y2="74.35"/>
+      <line class="cls-6" x1="96.38" y1="72.89" x2="94.88" y2="72.89"/>
+      <line class="cls-6" x1="91.87" y1="72.89" x2="90.37" y2="72.89"/>
+    </g>
+    <g>
+      <line class="cls-6" x1="25.38" y1="91.43" x2="25.38" y2="89.98"/>
+      <line class="cls-6" x1="25.38" y1="95.81" x2="25.38" y2="94.35"/>
+      <line class="cls-6" x1="28.38" y1="92.89" x2="26.88" y2="92.89"/>
+      <line class="cls-6" x1="23.87" y1="92.89" x2="22.37" y2="92.89"/>
+    </g>
+    <g>
+      <line class="cls-7" x1="5.43" y1="55.88" x2="6.49" y2="54.85"/>
+      <line class="cls-7" x1="2.24" y1="58.97" x2="3.3" y2="57.94"/>
+      <line class="cls-7" x1="6.49" y1="58.97" x2="5.43" y2="57.94"/>
+      <line class="cls-7" x1="3.3" y1="55.88" x2="2.24" y2="54.85"/>
+    </g>
+    <g>
+      <line class="cls-7" x1="63.43" y1="3.88" x2="64.49" y2="2.85"/>
+      <line class="cls-7" x1="60.24" y1="6.97" x2="61.3" y2="5.94"/>
+      <line class="cls-7" x1="64.49" y1="6.97" x2="63.43" y2="5.94"/>
+      <line class="cls-7" x1="61.3" y1="3.88" x2="60.24" y2="2.85"/>
+    </g>
+    <line class="cls-8" x1="19.5" y1="78.5" x2="19.5" y2="53.5"/>
+    <line class="cls-8" x1="23.5" y1="82.5" x2="32.5" y2="82.5"/>
+    <path class="cls-8" d="M19.5,78.5c0,3,1,4,4,4"/>
+    <line class="cls-8" x1="35" y1="82.5" x2="37" y2="82.5"/>
+    <line class="cls-8" x1="39.5" y1="82.5" x2="40.5" y2="82.5"/>
+    <line class="cls-8" x1="83.5" y1="33" x2="64.5" y2="33"/>
+  </g>
+</svg>

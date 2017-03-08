@@ -25,6 +25,10 @@ a {
   text-align: center;
 }
 
+.btn-right {
+  text-align: right;
+}
+
 .odd {
   background:#FCFCFB;
 }
@@ -89,7 +93,6 @@ body {
   border: 1px solid #454545;
   margin-bottom: 20px;
   width: 100%;
-  color: #aaaaaa;
   resize:none;
 }
 
@@ -695,31 +698,6 @@ body {
   }
 }
 
-/* Gallery */
-
-.gallery {
-  &.members-gallery {
-    .gallery-line {
-      margin-top: 0;
-    }
-  }
-  .gallery-line {
-    height: 300px;
-    margin-top: 60px;
-    .img1 {
-      background-image: url(../images/img1.jpg);
-    }
-    .img2 {
-      background-image: url(../images/img2.jpg);
-    }
-    .img3 {
-      background-image: url(../images/img3.jpg);
-    }
-    .img4 {
-      background-image: url(../images/img4.jpg);
-    }
-  }
-}
 
 #menu-toggle {
   display: none;
