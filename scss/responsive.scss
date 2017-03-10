@@ -35,13 +35,23 @@
 }
 
 @media (max-width: 1200px) {
-
   .wrapper {
     &.main {
       .main-block {
         .main-nav {
           &.responsive-nav {
             background: black;
+          }
+        }
+      }
+    }
+    &.invitation {
+      .main-block {
+        .container {
+          .add-friends {
+            .pic-invite {
+             display: none;
+            }
           }
         }
       }
@@ -326,6 +336,17 @@
       }
     }
   }
+  .img-hover{
+    &:hover {
+      .we-love {
+        .avatar {
+          width: 95px;
+          height: 95px;
+          margin-right: 15px;
+        }
+      }
+    }
+  }
 }
 
 @media (max-width: 1074px) {
@@ -348,6 +369,15 @@
 }
 
 @media (max-width: 1024px) {
+  .gallery {
+    &.members-gallery {
+      .gallery-line {
+        .img4 {
+          background-position: 20% 63%;
+        }
+      }
+    }
+  }
   .pic{
     width: 50%;
     .img-hover {

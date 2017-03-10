@@ -1,10 +1,3 @@
-.new-page {
-  &.invitation {
-    .pages {
-      margin-bottom: 0;
-    }
-  }
-}
 
 .gallery {
   &.invitation {
@@ -21,10 +14,20 @@
       .container {
         .add-friends {
           margin-bottom: 40px;
+          .pic-invite {
+            width: 10%;
+            float: left;
+            margin-right: 10px;
+            img {
+              height: 95px;
+            }
+          }
           .text-invite {
             font-size: 25px;
             line-height: 35px;
             width: 80%;
+            float: left;
+            margin-bottom: 10px;
           }
           .number-block {
             margin: 15px 0;
@@ -32,8 +35,8 @@
             .block-n {
               display: inline-block;
               position: relative;
-              padding-right: 70px;
               &:not(:last-child) {
+                padding-right: 70px;
                 &:after {
                   content: '';
                   position: absolute;
