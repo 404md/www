@@ -88,9 +88,6 @@
   .gallery.connect-us .gallery-line .img4 {
     background-image: url(../images/img4-c.jpg); }
 
-.new-page.invitation .pages {
-  margin-bottom: 0; }
-
 .gallery.invitation .gallery-line {
   margin-top: 0; }
 
@@ -98,25 +95,34 @@
   min-height: unset; }
   .wrapper.invitation .main-block .container .add-friends {
     margin-bottom: 40px; }
+    .wrapper.invitation .main-block .container .add-friends .pic-invite {
+      width: 10%;
+      float: left;
+      margin-right: 10px; }
+      .wrapper.invitation .main-block .container .add-friends .pic-invite img {
+        height: 95px; }
     .wrapper.invitation .main-block .container .add-friends .text-invite {
       font-size: 25px;
       line-height: 35px;
-      width: 80%; }
+      width: 80%;
+      float: left;
+      margin-bottom: 10px; }
     .wrapper.invitation .main-block .container .add-friends .number-block {
       margin: 15px 0;
       font-size: 17px; }
       .wrapper.invitation .main-block .container .add-friends .number-block .block-n {
         display: inline-block;
-        position: relative;
-        padding-right: 70px; }
-        .wrapper.invitation .main-block .container .add-friends .number-block .block-n:not(:last-child):after {
-          content: '';
-          position: absolute;
-          width: 50px;
-          height: 3px;
-          background: #dd5931;
-          right: 8px;
-          top: 11px; }
+        position: relative; }
+        .wrapper.invitation .main-block .container .add-friends .number-block .block-n:not(:last-child) {
+          padding-right: 70px; }
+          .wrapper.invitation .main-block .container .add-friends .number-block .block-n:not(:last-child):after {
+            content: '';
+            position: absolute;
+            width: 50px;
+            height: 3px;
+            background: #dd5931;
+            right: 8px;
+            top: 11px; }
         .wrapper.invitation .main-block .container .add-friends .number-block .block-n .numbers {
           background: #dd5931;
           border-radius: 50%;
@@ -591,8 +597,7 @@ body {
 .new-page .pages {
   width: 100%;
   margin-top: 30px;
-  margin-bottom: 30px;
-  min-height: 165px; }
+  margin-bottom: 40px; }
   .new-page .pages .text-page {
     font-size: 17px; }
   .new-page .pages .page-name {
@@ -632,7 +637,6 @@ body {
   position: relative;
   height: 300px;
   width: 100%;
-  cursor: pointer;
   display: flex; }
 
 .img-hover:hover:before {
@@ -651,7 +655,8 @@ body {
   z-index: 1;
   margin: auto;
   font-size: 25px;
-  color: white; }
+  color: white;
+  width: 88%; }
   .img-hover:hover .we-love .avatar {
     width: 100px;
     height: 100px;
@@ -1011,7 +1016,8 @@ body {
   background-position-y: 70%; }
 .gallery.pricing-gallery .gallery-line .img4 {
   background-image: url(../images/img4-p.jpg);
-  display: flex; }
+  display: flex;
+  background-position: right; }
 
 @media (min-width: 768px) {
   .container {
@@ -1032,6 +1038,8 @@ body {
 @media (max-width: 1200px) {
   .wrapper.main .main-block .main-nav.responsive-nav {
     background: black; }
+  .wrapper.invitation .main-block .container .add-friends .pic-invite {
+    display: none; }
 
   #menu-toggle {
     display: block; }
@@ -1186,13 +1194,21 @@ body {
         .case-study .container .right-block .right-info .right-header:before {
           width: 85px; }
       .case-study .container .right-block .right-info p {
-        margin-top: 10px; } }
+        margin-top: 10px; }
+
+  .img-hover:hover .we-love .avatar {
+    width: 95px;
+    height: 95px;
+    margin-right: 15px; } }
 @media (max-width: 1074px) {
   .wrapper.thankyou .main-block .container.new-page {
     width: 80%; }
     .wrapper.thankyou .main-block .container.new-page .pages .page-name {
       font-size: 20px; } }
 @media (max-width: 1024px) {
+  .gallery.members-gallery .gallery-line .img4 {
+    background-position: 20% 63%; }
+
   .pic {
     width: 50%; }
     .pic .img-hover .we-love .avatar {

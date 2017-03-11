@@ -595,8 +595,7 @@ body {
   .pages {
     width: 100%;
     margin-top: 30px;
-    margin-bottom: 30px;
-    min-height: 165px;
+    margin-bottom: 40px;
     .text-page {
       font-size: 17px;
     }
@@ -648,7 +647,6 @@ body {
   position: relative;
   height: 300px;
   width: 100%;
-  cursor: pointer;
   display: flex;
 }
 
@@ -672,6 +670,7 @@ body {
       margin: auto;
       font-size: 25px;
       color:white;
+      width: 88%;
       .avatar {
         width: 100px;
         height: 100px;
