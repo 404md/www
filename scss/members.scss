@@ -253,3 +253,28 @@
 
 }
 
+/* Gallery */
+
+.gallery {
+  &.members-gallery {
+    .gallery-line {
+      margin-top: 0;
+    }
+  }
+  .gallery-line {
+    height: 300px;
+    margin-top: 60px;
+    .img1 {
+      background-image: url(../images/img1-m.jpg);
+    }
+    .img2 {
+      background-image: url(../images/img2-m.jpg);
+    }
+    .img3 {
+      background-image: url(../images/img3-m.jpg);
+    }
+    .img4 {
+      background-image: url(../images/img4-m.jpg);
+    }
+  }
+}

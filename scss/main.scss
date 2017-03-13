@@ -25,6 +25,10 @@ a {
   text-align: center;
 }
 
+.btn-right {
+  text-align: right;
+}
+
 .odd {
   background:#FCFCFB;
 }
@@ -89,7 +93,6 @@ body {
   border: 1px solid #454545;
   margin-bottom: 20px;
   width: 100%;
-  color: #aaaaaa;
   resize:none;
 }
 
@@ -592,8 +595,7 @@ body {
   .pages {
     width: 100%;
     margin-top: 30px;
-    margin-bottom: 30px;
-    min-height: 165px;
+    margin-bottom: 40px;
     .text-page {
       font-size: 17px;
     }
@@ -645,7 +647,6 @@ body {
   position: relative;
   height: 300px;
   width: 100%;
-  cursor: pointer;
   display: flex;
 }
 
@@ -669,6 +670,7 @@ body {
       margin: auto;
       font-size: 25px;
       color:white;
+      width: 88%;
       .avatar {
         width: 100px;
         height: 100px;
@@ -676,8 +678,14 @@ body {
         border-radius:  50%;
         float: left;
         margin-right: 20px;
+        position: relative;
+        background:#dd5931 ;
         img {
           height: 100%;
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
         }
       }
       .comment {
@@ -695,31 +703,6 @@ body {
   }
 }
 
-/* Gallery */
-
-.gallery {
-  &.members-gallery {
-    .gallery-line {
-      margin-top: 0;
-    }
-  }
-  .gallery-line {
-    height: 300px;
-    margin-top: 60px;
-    .img1 {
-      background-image: url(../images/img1.jpg);
-    }
-    .img2 {
-      background-image: url(../images/img2.jpg);
-    }
-    .img3 {
-      background-image: url(../images/img3.jpg);
-    }
-    .img4 {
-      background-image: url(../images/img4.jpg);
-    }
-  }
-}
 
 #menu-toggle {
   display: none;
@@ -824,4 +807,27 @@ body {
     src: local('☺'), url('../fonts/Lato-Regular.woff') format('woff'), url('../fonts/Lato-Regular.ttf') format('truetype'), url('../fonts/Lato-Regular.svg') format('svg');
     font-weight: normal;
     font-style: normal;
+}
+
+
+/* Gallery bfor terms*/
+
+.gallery {
+  &.terms {
+    .gallery-line {
+      margin-top: 60px;
+      .img1 {
+        background-image: url(../images/img1-tr.jpg);
+      }
+      .img2 {
+        background-image: url(../images/img2-tr.jpg);
+      }
+      .img3 {
+        background-image: url(../images/img3-tr.jpg);
+      }
+      .img4 {
+        background-image: url(../images/img4-tr.jpg);
+      }
+    }
+  }
 }
