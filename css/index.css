@@ -141,7 +141,7 @@
       margin: 0 auto; }
       .wrapper.invitation .main-block .form-invitation .container .form-invite .contacts-invite .form-block {
         display: inline-block;
-        width: 31%; }
+        width: 40%; }
         .wrapper.invitation .main-block .form-invitation .container .form-invite .contacts-invite .form-block:first-child {
           margin-right: 20px; }
         .wrapper.invitation .main-block .form-invitation .container .form-invite .contacts-invite .form-block label {
@@ -149,7 +149,8 @@
           display: inline-block; }
         .wrapper.invitation .main-block .form-invitation .container .form-invite .contacts-invite .form-block:nth-child(3) {
           text-align: center;
-          position: relative; }
+          position: relative;
+          width: 15%; }
           .wrapper.invitation .main-block .form-invitation .container .form-invite .contacts-invite .form-block:nth-child(3):last-child:after {
             content: '+';
             position: absolute;
@@ -165,11 +166,18 @@
           font-size: 25px; }
       .wrapper.invitation .main-block .form-invitation .container .form-invite .contacts-invite .button.form-btn {
         margin-top: 30px; }
-    .wrapper.invitation .main-block .form-invitation .container .form-invite .sales {
-      text-align: center; }
-      .wrapper.invitation .main-block .form-invitation .container .form-invite .sales .heading-contact {
-        margin: 40px 0;
-        padding-bottom: 0; }
+      .wrapper.invitation .main-block .form-invitation .container .form-invite .contacts-invite.total {
+        padding: 40px 0;
+        text-align: center; }
+        .wrapper.invitation .main-block .form-invitation .container .form-invite .contacts-invite.total .sales {
+          display: inline-block;
+          margin: 0 20px; }
+          .wrapper.invitation .main-block .form-invitation .container .form-invite .contacts-invite.total .sales .heading-contact {
+            margin: 0;
+            padding-bottom: 0; }
+        .wrapper.invitation .main-block .form-invitation .container .form-invite .contacts-invite.total .form-block:after {
+          content: " ";
+          display: none; }
 
 /* Gallery */
 .gallery.invitation .gallery-line {
@@ -220,6 +228,16 @@ a {
   text-transform: uppercase;
   font-size: 30px;
   margin-top: 40px; }
+
+.btn {
+  color: #dd5931;
+  background: white;
+  border-radius: 50%;
+  border: 2px solid;
+  padding: 10px 14px; }
+  .btn i {
+    font-style: normal;
+    font-size: 19px; }
 
 body {
   font-family: 'Lato-Regular', sans-serif;

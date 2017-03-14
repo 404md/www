@@ -73,7 +73,7 @@
               margin: 0 auto;
               .form-block {
                 display: inline-block;
-                width: 31%;
+                width: 40%;
                 &:first-child {
                   margin-right: 20px;
                 }
@@ -85,6 +85,7 @@
                 &:nth-child(3) {
                   text-align: center;
                   position: relative;
+                  width: 15%;
                   &:last-child {
                     &:after {
                       content: '+';
@@ -109,12 +110,23 @@
                   margin-top: 30px;
                 }
               }
-            }
-            .sales {
-              text-align: center;
-              .heading-contact {
-                margin: 40px 0;
-                padding-bottom: 0;
+              &.total {
+                padding: 40px 0;
+                text-align: center;
+                .sales {
+                  display: inline-block;
+                  margin: 0 20px;
+                  .heading-contact {
+                    margin: 0;
+                    padding-bottom: 0;
+                  }
+                }
+                .form-block {
+                  &:after {
+                    content: " ";
+                    display: none;
+                  }
+                }
               }
             }
           }
