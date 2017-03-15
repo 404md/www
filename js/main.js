@@ -40,4 +40,9 @@ jQuery(function($) {
             }
         });
 
+    // if($('.input-style').val() != '') {
+    //     console.log('hi');
+    //     $('.sales-fiels').addClass('get-sales');
+    // }
+
 });
