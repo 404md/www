@@ -21,6 +21,10 @@ a {
   }
 }
 
+.hidden {
+  display: none;
+}
+
 .btn-center {
   text-align: center;
 }
@@ -44,20 +48,6 @@ a {
   font-size: 30px;
   margin-top: 40px;
 }
-
-.btn {
-  color: #dd5931;
-  background: white;
-  border-radius: 50%;
-  border: 2px solid;
-  padding: 10px 14px;
-  i {
-    font-style: normal;
-    font-size: 19px;
-
-  }
-}
-
 
 body {
   font-family: 'Lato-Regular', sans-serif;

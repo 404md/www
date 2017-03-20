@@ -7,6 +7,34 @@
   }
 }
 
+.btn-circle {
+  color: #dd5931;
+  background: white;
+  border-radius: 50%;
+  border: 2px solid;
+  padding: 10px 14px;
+  i {
+    font-style: normal;
+    font-size: 19px;
+
+  }
+}
+
+.contacts-invite {
+  width: 80%;
+  margin: 0 auto;
+}
+
+
+.form-block {
+  display: inline-block;
+  width: 40%;
+}
+
+.remove-circle {
+  padding: 10px 15px;
+}
+
 .wrapper {
   &.invitation {
     .main-block {
@@ -69,11 +97,13 @@
           }
           .form-invite {
             .contacts-invite {
-              width: 80%;
-              margin: 0 auto;
               .form-block {
-                display: inline-block;
-                width: 40%;
+                &.get-sales {
+                  .sales-fiels {
+                      border-color:#dd5931;
+                      color:#dd5931;
+                  }
+                }
                 &:first-child {
                   margin-right: 20px;
                 }
