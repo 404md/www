@@ -96,56 +96,34 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             <div class="container">
                 <div class="heading-contact">Invite your friends</div>
                 <div class="form-invite">
-                    <form method="post">
-                        <div class="contacts-invite">
+                    <form method="post" >
+                        <div class="contacts-invite" id="destination"></div>
+                        <div class="contacts-invite hidden" id="form-template">
+                            <div class="clone-div">
+
                             <div class="form-block">
-                                <label for="name">Name</label>
-                                <input class="input-style" type="text" pattern="[A-Za-z\s]{5,}" id="name" name="user_name"
-                                       placeholder="e.g. Vlad Ursu" required />
+                                <label>Name</label>
+                                <input class="input-style" type="text" pattern="[A-Za-z\s]{5,}" id="xxx" name="xxx"
+                                       placeholder="e.g. Vlad Ursu" _required />
                             </div>
                             <div class="form-block">
-                                <label for="mail">E-mail</label>
-                                <input class="input-style" type="email" id="mail" name="user_mail"
-                                       placeholder="e.g. vlad.ursu@email.com" required />
-                            </div>
-                            <div class="form-block">
-                                <span class="sales-fiels">10%</span>
-                            </div>
-                        </div>
-                        <div class="contacts-invite">
-                            <div class="form-block">
-                                <label for="name2">Name</label>
-                                <input class="input-style" type="text" pattern="[A-Za-z\s]{5,}" id="name2" name="user_name"
-                                       placeholder="e.g. Vlad Ursu" required />
-                            </div>
-                            <div class="form-block">
-                                <label for="mail2">E-mail</label>
-                                <input class="input-style" type="email" id="mail2" name="user_mail"
-                                       placeholder="e.g. vlad.ursu@email.com" required />
+                                <label>E-mail</label>
+                                <input class="input-style mail-input" type="email" id="yyy" name="yyy"
+                                       placeholder="e.g. vlad.ursu@email.com" _required />
                             </div>
                             <div class="form-block">
                                 <span class="sales-fiels">10%</span>
                             </div>
-                        </div>
-                        <div class="contacts-invite">
-                            <div class="form-block">
-                                <label for="name3">Name</label>
-                                <input class="input-style" type="text"  pattern="[A-Za-z\s]{5,}" id="name3" name="user_name"
-                                       placeholder="e.g. Vlad Ursu" required/>
-                            </div>
-                            <div class="form-block">
-                                <label for="mail3">E-mail</label>
-                                <input class="input-style" type="email" id="mail3" name="user_mail"
-                                       placeholder="e.g. vlad.ursu@email.com" required/>
-                            </div>
-                            <div class="form-block">
-                                <span class="sales-fiels">10%</span>
                             </div>
                         </div>
                         <div class="contacts-invite total">
-                            <button class="btn" type="submit">
+                            <button class="btn-circle add-circle" type="submit">
                                 <i>+</i>
                             </button>
+                            <button class="btn-circle remove-circle" type="submit">
+                                <i>-</i>
+                            </button>
+
                             <div class="sales">
                                 <span class="heading-contact"> You will have  discount </span>
                             </div>
@@ -287,7 +265,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 </footer>
 
 <script type="text/javascript" src="../js/jquery-1.11.0.min.js"></script>
-<script type="text/javascript" src="../js/main.min.js"></script>
+<script type="text/javascript" src="../js/main.js"></script>
 <script type="text/javascript" src="https://www.google.com/recaptcha/api.js" async defer></script>
 
 </body>

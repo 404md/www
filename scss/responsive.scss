@@ -680,6 +680,7 @@
             .form-invite {
               .contacts-invite {
                 .form-block {
+                  width: 39%;
                   span {
                     font-size: 22px;
                   }
@@ -861,10 +862,6 @@
       }
     }
   }
-}
-
-@media (max-width: 626px) {
-
 }
 
 @media (max-width: 618px) {
@@ -1124,9 +1121,21 @@
             .form-invite {
               .contacts-invite {
                 .form-block {
-                  width: 48%;
+                  width: 65%;
                   &:nth-child(3) {
-                    top:-47px;
+                    top: -47px;
+                    width: 30%;
+                  }
+                }
+                &.total {
+                  .sales {
+                    .heading-contact {
+                      font-size: 17px;
+                    }
+                  }
+                  .form-block {
+                    width: 15%;
+                    top:unset;
                   }
                 }
               }

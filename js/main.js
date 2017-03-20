@@ -27,22 +27,47 @@ jQuery(function($) {
     var isScrolling;
     var navigationBar = $('.navt a');
 
-    navigationBar.on('touchstart', function(){
-            isScrolling = false;
-        });
-    navigationBar.on('touchmove', function(e){
-            isScrolling = true;
-        });
-    navigationBar.on('touchend', function(e){
-            if( !isScrolling )
-            {
-                window.location = $(this).attr('href');
-            }
-        });
+    navigationBar.on('touchstart', function() {
+        isScrolling = false;
+    });
+    navigationBar.on('touchmove', function(e) {
+        isScrolling = true;
+    });
+    navigationBar.on('touchend', function(e) {
+        if(!isScrolling) {
+            window.location = $(this).attr('href');
+        }
+    });
 
-    // if($('.input-style').val() != '') {
-    //     console.log('hi');
-    //     $('.sales-fiels').addClass('get-sales');
-    // }
+    var button = $('.add-circle');
+    var count = 1;
+    var tmpl = $('#form-template').html();
+
+    button.on('click', function (e) {
+        if (count > 5) {
+            e.preventDefault();
+            e.stopPropagation();
+            return;
+        }
+
+        tmpl = tmpl
+            .replace(/xxx/g, 'user_name' + count)
+            .replace(/yyy/g, 'user_mail' + count)
+            .replace('_required', 'required');
+
+        $('#destination').append(tmpl);
+
+        count++;
+    });
+
+
+    button.trigger("click");
+
+    $('.mail-input').on("blur", function() {
+        if($(this).val() != '') {
+            console.log('hi');
+            $('.form-block').addClass('get-sales');
+        }
+    });
 
 });
