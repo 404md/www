@@ -41,7 +41,7 @@ jQuery(function($) {
 
     var button = $('.add-circle');
     var count = 1;
-    var tmpl = $('#form-template').html();
+
 
     button.on('click', function (e) {
         if (count > 5) {
@@ -50,14 +50,15 @@ jQuery(function($) {
             return;
         }
 
-        tmpl = tmpl
-            .replace(/xxx/g, 'user_name' + count)
-            .replace(/yyy/g, 'user_mail' + count)
+        var tmpl = $('#form-template')
+            .html()
+            .replace(/xxx/g, 'user_name_' + count)
+            .replace(/yyy/g, 'user_mail_' + count)
             .replace('_required', 'required');
 
         $('#destination').append(tmpl);
-
         count++;
+
     });
 
 
@@ -65,9 +66,18 @@ jQuery(function($) {
 
     $('.mail-input').on("blur", function() {
         if($(this).val() != '') {
-            console.log('hi');
             $('.form-block').addClass('get-sales');
         }
     });
+
+    var divCount = 0;
+
+    function addDiv(parentElement, numberOfDivs) {
+        for(var i = 0; i < numberOfDivs; i++) {
+            var d = document.createElement("div");
+            d.setAttribute("class", "remove-div" + divCount);
+            divCount++;
+        }
+    }
 
 });
