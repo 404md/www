@@ -91,6 +91,27 @@
 .gallery.invitation .gallery-line {
   margin-top: 0; }
 
+.btn-circle {
+  color: #dd5931;
+  background: white;
+  border-radius: 50%;
+  border: 2px solid;
+  padding: 10px 14px; }
+  .btn-circle i {
+    font-style: normal;
+    font-size: 19px; }
+
+.contacts-invite {
+  width: 80%;
+  margin: 0 auto; }
+
+.form-block {
+  display: inline-block;
+  width: 40%; }
+
+.remove-circle {
+  padding: 10px 15px; }
+
 .wrapper.invitation .main-block {
   min-height: unset; }
   .wrapper.invitation .main-block .container .add-friends {
@@ -136,45 +157,46 @@
     .wrapper.invitation .main-block .form-invitation .container .heading-contact {
       margin-top: 40px;
       display: inline-block; }
-    .wrapper.invitation .main-block .form-invitation .container .form-invite .contacts-invite {
-      width: 80%;
-      margin: 0 auto; }
-      .wrapper.invitation .main-block .form-invitation .container .form-invite .contacts-invite .form-block {
+    .wrapper.invitation .main-block .form-invitation .container .form-invite .contacts-invite .form-block.get-sales .sales-fiels {
+      border-color: #dd5931;
+      color: #dd5931; }
+    .wrapper.invitation .main-block .form-invitation .container .form-invite .contacts-invite .form-block:first-child {
+      margin-right: 20px; }
+    .wrapper.invitation .main-block .form-invitation .container .form-invite .contacts-invite .form-block label {
+      margin-bottom: 10px;
+      display: inline-block; }
+    .wrapper.invitation .main-block .form-invitation .container .form-invite .contacts-invite .form-block:nth-child(3) {
+      text-align: center;
+      position: relative;
+      width: 15%; }
+      .wrapper.invitation .main-block .form-invitation .container .form-invite .contacts-invite .form-block:nth-child(3):last-child:after {
+        content: '+';
+        position: absolute;
+        color: #dd5931;
+        bottom: -42px;
+        left: 48%; }
+    .wrapper.invitation .main-block .form-invitation .container .form-invite .contacts-invite .form-block .sales-fiels {
+      color: #aaaaaa;
+      background: white;
+      border-radius: 50%;
+      border: 2px solid;
+      padding: 16px 7px;
+      font-size: 25px; }
+    .wrapper.invitation .main-block .form-invitation .container .form-invite .contacts-invite .form-block .input-style:focus {
+      border: 2px solid #454545; }
+    .wrapper.invitation .main-block .form-invitation .container .form-invite .contacts-invite .button.form-btn {
+      margin-top: 30px; }
+    .wrapper.invitation .main-block .form-invitation .container .form-invite .contacts-invite.total {
+      padding: 40px 0;
+      text-align: center; }
+      .wrapper.invitation .main-block .form-invitation .container .form-invite .contacts-invite.total .sales {
         display: inline-block;
-        width: 40%; }
-        .wrapper.invitation .main-block .form-invitation .container .form-invite .contacts-invite .form-block:first-child {
-          margin-right: 20px; }
-        .wrapper.invitation .main-block .form-invitation .container .form-invite .contacts-invite .form-block label {
-          margin-bottom: 10px;
-          display: inline-block; }
-        .wrapper.invitation .main-block .form-invitation .container .form-invite .contacts-invite .form-block:nth-child(3) {
-          text-align: center;
-          position: relative;
-          width: 15%; }
-          .wrapper.invitation .main-block .form-invitation .container .form-invite .contacts-invite .form-block:nth-child(3):last-child:after {
-            content: '+';
-            position: absolute;
-            color: #dd5931;
-            bottom: -42px;
-            left: 48%; }
-        .wrapper.invitation .main-block .form-invitation .container .form-invite .contacts-invite .form-block span {
-          color: #aaaaaa;
-          background: white;
-          border-radius: 50%;
-          border: 2px solid;
-          padding: 16px 7px;
-          font-size: 25px; }
-      .wrapper.invitation .main-block .form-invitation .container .form-invite .contacts-invite .button.form-btn {
-        margin-top: 30px; }
-      .wrapper.invitation .main-block .form-invitation .container .form-invite .contacts-invite.total {
-        padding: 40px 0;
-        text-align: center; }
-        .wrapper.invitation .main-block .form-invitation .container .form-invite .contacts-invite.total .sales {
-          display: inline-block;
-          margin: 0 20px; }
-          .wrapper.invitation .main-block .form-invitation .container .form-invite .contacts-invite.total .sales .heading-contact {
-            margin: 0;
-            padding-bottom: 0; }
+        margin: 0 20px; }
+        .wrapper.invitation .main-block .form-invitation .container .form-invite .contacts-invite.total .sales .heading-contact {
+          margin: 0;
+          padding-bottom: 0; }
+      .wrapper.invitation .main-block .form-invitation .container .form-invite .contacts-invite.total .form-block {
+        width: 15%; }
         .wrapper.invitation .main-block .form-invitation .container .form-invite .contacts-invite.total .form-block:after {
           content: " ";
           display: none; }
@@ -210,6 +232,9 @@ a {
   a:hover {
     color: #000000; }
 
+.hidden {
+  display: none; }
+
 .btn-center {
   text-align: center; }
 
@@ -228,16 +253,6 @@ a {
   text-transform: uppercase;
   font-size: 30px;
   margin-top: 40px; }
-
-.btn {
-  color: #dd5931;
-  background: white;
-  border-radius: 50%;
-  border: 2px solid;
-  padding: 10px 14px; }
-  .btn i {
-    font-style: normal;
-    font-size: 19px; }
 
 body {
   font-family: 'Lato-Regular', sans-serif;
@@ -980,7 +995,8 @@ body {
 .wrapper.pricing .main-block .container .display-flex .plans {
   width: 353px; }
   .wrapper.pricing .main-block .container .display-flex .plans .img-plan {
-    position: relative; }
+    position: relative;
+    height: 437px; }
     .wrapper.pricing .main-block .container .display-flex .plans .img-plan img {
       width: 100%; }
     .wrapper.pricing .main-block .container .display-flex .plans .img-plan .back-color {
@@ -1372,10 +1388,12 @@ body {
   .gallery.members-gallery .gallery-line, .gallery.connect-us .gallery-line {
     margin-top: 0; } }
 @media (max-width: 680px) {
-  .wrapper.invitation .main-block .form-invitation .container .form-invite .contacts-invite .form-block span {
-    font-size: 22px; }
-  .wrapper.invitation .main-block .form-invitation .container .form-invite .contacts-invite .form-block .input-style {
-    font-size: 12px; } }
+  .wrapper.invitation .main-block .form-invitation .container .form-invite .contacts-invite .form-block {
+    width: 39%; }
+    .wrapper.invitation .main-block .form-invitation .container .form-invite .contacts-invite .form-block span {
+      font-size: 22px; }
+    .wrapper.invitation .main-block .form-invitation .container .form-invite .contacts-invite .form-block .input-style {
+      font-size: 12px; } }
 @media (max-width: 768px) {
   .main-nav .container .nav-top .navt li .link, .main-nav .container .nav-top .navt li .last-line {
     width: auto; } }
@@ -1560,9 +1578,15 @@ body {
     .wrapper.pricing .main-block .container .display-flex .plans .description .block-responsive {
       width: auto; }
   .wrapper.invitation .main-block .form-invitation .container .form-invite .contacts-invite .form-block {
-    width: 48%; }
+    width: 65%; }
     .wrapper.invitation .main-block .form-invitation .container .form-invite .contacts-invite .form-block:nth-child(3) {
-      top: -47px; } }
+      top: -47px;
+      width: 30%; }
+  .wrapper.invitation .main-block .form-invitation .container .form-invite .contacts-invite.total .sales .heading-contact {
+    font-size: 17px; }
+  .wrapper.invitation .main-block .form-invitation .container .form-invite .contacts-invite.total .form-block {
+    width: 15%;
+    top: unset; } }
 @media (max-width: 498px) {
   .case-study .container .left-block .mockup .mockup-cont .blurry .btn.btn-primary {
     font-size: 8px; } }
