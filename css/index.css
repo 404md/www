@@ -195,9 +195,11 @@
         .wrapper.invitation .main-block .form-invitation .container .form-invite .contacts-invite.total .sales .heading-contact {
           margin: 0;
           padding-bottom: 0; }
-      .wrapper.invitation .main-block .form-invitation .container .form-invite .contacts-invite.total .form-block:after {
-        content: " ";
-        display: none; }
+      .wrapper.invitation .main-block .form-invitation .container .form-invite .contacts-invite.total .form-block {
+        width: 15%; }
+        .wrapper.invitation .main-block .form-invitation .container .form-invite .contacts-invite.total .form-block:after {
+          content: " ";
+          display: none; }
 
 /* Gallery */
 .gallery.invitation .gallery-line {
