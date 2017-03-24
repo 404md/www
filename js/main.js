@@ -40,11 +40,24 @@ jQuery(function($) {
     });
 
     var button = $('.add-circle');
-    var count = 1;
+    var count = 0;
+
+    var destination = $('#destination');
+    function  hideAndshowtrash( i,el) {
+        destination.find('.clone-div').each(function(i,el) {
+            if(count == 1){
+                $($(el).find('.trash')[0]).hide();
+
+            }
+            else{
+                $($(el).find('.trash')[0]).show();
+            }
+        });
+    }
 
 
     button.on('click', function (e) {
-        if (count > 5) {
+        if (count > 4) {
             e.preventDefault();
             e.stopPropagation();
             return;
@@ -56,28 +69,39 @@ jQuery(function($) {
             .replace(/yyy/g, 'user_mail_' + count)
             .replace('_required', 'required');
 
-        $('#destination').append(tmpl);
+        destination.append(tmpl);
+
+        destination.find('.clone-div').last().attr('data-name', count);
         count++;
 
-    });
+        hideAndshowtrash();
 
+
+        $('.mail-input').on("blur",  function() {
+
+            var $parent = $(this).closest('.clone-div');
+            $parent.find('.change-color').toggleClass('get-sales');
+
+            var counter = $('.get-sales').length.toString();
+
+            console.log(counter * 10);
+            $('.total-get-sales').addClass('total-sales');
+           $('#total-sales').text(counter * 10 + '%');
+        });
+    });
 
     button.trigger("click");
 
-    $('.mail-input').on("blur", function() {
-        if($(this).val() != '') {
-            $('.form-block').addClass('get-sales');
+    $(".contacts-invite").on("click", ".trash", function(e){
+
+        if (count>0) {
+            e.preventDefault();
+            $( e.target ).closest('.clone-div').remove();
         }
+        count--;
+
+        hideAndshowtrash();
+
     });
-
-    var divCount = 0;
-
-    function addDiv(parentElement, numberOfDivs) {
-        for(var i = 0; i < numberOfDivs; i++) {
-            var d = document.createElement("div");
-            d.setAttribute("class", "remove-div" + divCount);
-            divCount++;
-        }
-    }
 
 });

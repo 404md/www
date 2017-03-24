@@ -102,12 +102,12 @@
     font-size: 19px; }
 
 .contacts-invite {
-  width: 80%;
+  width: 90%;
   margin: 0 auto; }
 
 .form-block {
   display: inline-block;
-  width: 40%; }
+  width: 38%; }
 
 .remove-circle {
   padding: 10px 15px; }
@@ -157,7 +157,7 @@
     .wrapper.invitation .main-block .form-invitation .container .heading-contact {
       margin-top: 40px;
       display: inline-block; }
-    .wrapper.invitation .main-block .form-invitation .container .form-invite .contacts-invite .form-block.get-sales .sales-fiels {
+    .wrapper.invitation .main-block .form-invitation .container .form-invite .contacts-invite .form-block.change-color.get-sales .sales-fiels {
       border-color: #dd5931;
       color: #dd5931; }
     .wrapper.invitation .main-block .form-invitation .container .form-invite .contacts-invite .form-block:first-child {
@@ -184,6 +184,10 @@
       font-size: 25px; }
     .wrapper.invitation .main-block .form-invitation .container .form-invite .contacts-invite .form-block .input-style:focus {
       border: 2px solid #454545; }
+    .wrapper.invitation .main-block .form-invitation .container .form-invite .contacts-invite .form-block.trash {
+      width: 5%;
+      color: red;
+      cursor: pointer; }
     .wrapper.invitation .main-block .form-invitation .container .form-invite .contacts-invite .button.form-btn {
       margin-top: 30px; }
     .wrapper.invitation .main-block .form-invitation .container .form-invite .contacts-invite.total {
@@ -200,6 +204,12 @@
         .wrapper.invitation .main-block .form-invitation .container .form-invite .contacts-invite.total .form-block:after {
           content: " ";
           display: none; }
+      .wrapper.invitation .main-block .form-invitation .container .form-invite .contacts-invite.total .total-get-sales .sales-fiels {
+        padding: 16px 13px; }
+      .wrapper.invitation .main-block .form-invitation .container .form-invite .contacts-invite.total .total-get-sales.total-sales .sales-fiels {
+        border-color: #dd5931;
+        color: #dd5931;
+        padding: 16px 7px; }
 
 /* Gallery */
 .gallery.invitation .gallery-line {
