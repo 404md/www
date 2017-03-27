@@ -19,6 +19,7 @@ cssnano < ./css/index.css > ./css/index.min.css
 echo "Minifying js code"
 uglifyjs ./js/main.js -c -m -o ./js/main.min.js
 uglifyjs ./js/members.js -c -m -o ./js/members.min.js
+uglifyjs ./js/contact.js -c -m -o ./js/contact.min.js
 uglifyjs ./js/mc-validate.js -c -m -o ./js/mc-validate.min.js
 
 echo "Copying resources into build/release folder"
@@ -38,7 +39,8 @@ done
 
 echo "Synchronizing build/Release/"
 aws s3 sync ./build/Release/ s3://www.404.md/ --region ${region} --profile ${profile} \
-	--storage-class REDUCED_REDUNDANCY --metadata-directive REPLACE --cache-control max-age=600
+	--storage-class REDUCED_REDUNDANCY --metadata-directive REPLACE --cache-control max-age=600 \
+	--exclude 'backend/*'
 
 echo "Invalidating CloudFront"
 aws cloudfront create-invalidation --distribution-id E1CHAR53JHGDQK --paths '/*'
