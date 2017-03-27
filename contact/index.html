@@ -79,7 +79,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <div class="container">
             <div id="map" class="map-style"></div>
             <div class="input-field">
-                <form class="hole-form" method="post">
+                <form id="contact-us-form" class="hole-form">
                    <div class="heading-contact">Get in touch</div>
                     <div>
                         <label for="name">Name</label>
@@ -97,11 +97,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                         <label for="msg">Message</label>
                         <textarea class="text-style" id="msg" name="user_message" placeholder="Please Tell Us Your Feedback" rows="4"></textarea>
                     </div>
-                    <div class="recaptcha-center">
-                        <div class="g-recaptcha"  data-sitekey="6LcHAgkTAAAAAHP1uEknBzH3ZeeqciGJEXVgZAJm"></div>
-                    </div>
-                    <br/>
-                    <button class="button button-contact " type="submit">Submit</button>
+                    <div id="reCaptcha"></div>
+                    <div class="status-message"></div>
+                    <button class="button button-contact" type="submit">Submit</button>
                 </form>
             </div>
         </div>
@@ -233,10 +231,13 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 </div>
 </footer>
 
-<script type="text/javascript" src="../js/jquery-1.11.0.min.js"></script>
-<script type="text/javascript" src="../js/main.min.js"></script>
-<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBMl1HPvxC30Mtcbe6gKWZjiccGAYopsQA&callback=myMap" async defer></script>
-<script type="text/javascript" src="https://www.google.com/recaptcha/api.js" async defer></script>
+<script src="../js/jquery-1.11.0.min.js"></script>
+<script src="../js/jquery.validate.min.js"></script>
+<script src="../js/aws-sdk.min.js"></script>
+<script src="../js/main.min.js"></script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBMl1HPvxC30Mtcbe6gKWZjiccGAYopsQA&callback=myMap" async defer></script>
+<script src="https://www.google.com/recaptcha/api.js?onload=createCaptcha&render=explicit&hl=en" async defer></script>
+<script src="../js/contact.min.js"></script>
 
 </body>
 </html>
