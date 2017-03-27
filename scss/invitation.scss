@@ -173,15 +173,16 @@
                 }
 
                 .total-get-sales {
-                  .sales-fiels {
-                    padding: 16px 13px;
+                  .filled-field {
+                    border-color: #dd5931;
+                    color: #dd5931;
+                    padding: 16px 7px;
                   }
-                  &.total-sales {
-                    .sales-fiels {
-                      border-color: #dd5931;
-                      color: #dd5931;
-                      padding: 16px 7px;
-                    }
+                }
+                &.gray-circle {
+                  .btn-circle {
+                    color: #aaaaaa;
+                    background: white;
                   }
                 }
               }

@@ -42,6 +42,24 @@
   background-image: url(../images/img4.jpg);
   display: flex; }
 
+.error-m {
+  position: relative;
+  padding-bottom: 5px; }
+  .error-m label.error {
+    position: absolute;
+    font-size: 15px;
+    color: red;
+    bottom: 5px;
+    left: 0; }
+  .error-m input.error, .error-m textarea.error {
+    border-color: red; }
+
+.status-message.error {
+  position: absolute;
+  bottom: 55px;
+  line-height: 21px;
+  color: red; }
+
 .wrapper.contact .main-block {
   min-height: 700px; }
   .wrapper.contact .main-block .container .map-style {
@@ -70,11 +88,13 @@
       opacity: 0.95; }
     .wrapper.contact .main-block .container .input-field .hole-form {
       position: relative;
-      width: auto; }
-      .wrapper.contact .main-block .container .input-field .hole-form label {
+      width: 80%; }
+      .wrapper.contact .main-block .container .input-field .hole-form .input-name {
         display: block;
         margin-bottom: 10px;
         font-size: 18px; }
+      .wrapper.contact .main-block .container .input-field .hole-form .button {
+        margin-top: 30px; }
 
 /* Gallery */
 .gallery.connect-us .gallery-line {
@@ -204,12 +224,13 @@
         .wrapper.invitation .main-block .form-invitation .container .form-invite .contacts-invite.total .form-block:after {
           content: " ";
           display: none; }
-      .wrapper.invitation .main-block .form-invitation .container .form-invite .contacts-invite.total .total-get-sales .sales-fiels {
-        padding: 16px 13px; }
-      .wrapper.invitation .main-block .form-invitation .container .form-invite .contacts-invite.total .total-get-sales.total-sales .sales-fiels {
+      .wrapper.invitation .main-block .form-invitation .container .form-invite .contacts-invite.total .total-get-sales .filled-field {
         border-color: #dd5931;
         color: #dd5931;
         padding: 16px 7px; }
+      .wrapper.invitation .main-block .form-invitation .container .form-invite .contacts-invite.total.gray-circle .btn-circle {
+        color: #aaaaaa;
+        background: white; }
 
 /* Gallery */
 .gallery.invitation .gallery-line {
@@ -1376,6 +1397,8 @@ body {
     width: 100%; }
     .wrapper.booking .main-block .container .back-image .booking-form .form {
       width: auto; }
+  .wrapper.invitation .main-block .form-invitation .container .form-invite .contacts-invite .form-block.trash {
+    width: 4%; }
   .wrapper.invitation .main-block .container .add-friends {
     margin-top: 20px; }
     .wrapper.invitation .main-block .container .add-friends .text-invite {

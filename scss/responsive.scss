@@ -619,6 +619,19 @@
     }
     &.invitation {
       .main-block {
+        .form-invitation {
+          .container {
+            .form-invite {
+              .contacts-invite {
+                .form-block {
+                  &.trash {
+                    width: 4%;
+                  }
+                }
+              }
+            }
+          }
+        }
         .container {
           .add-friends {
             margin-top: 20px;
@@ -1136,6 +1149,7 @@
                   .form-block {
                     width: 15%;
                     top:unset;
+
                   }
                 }
               }

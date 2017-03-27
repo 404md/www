@@ -39,30 +39,43 @@ jQuery(function($) {
         }
     });
 
+    var $totalCount = $('#total-sales');
+    var destination = $('#destination');
     var button = $('.add-circle');
     var count = 0;
 
-    var destination = $('#destination');
-    function  hideAndshowtrash( i,el) {
-        destination.find('.clone-div').each(function(i,el) {
-            if(count == 1){
+    function  hideAndShowTrash() {
+        destination.find('.clone-div').each(function(i, el) {
+            if(count == 1) {
                 $($(el).find('.trash')[0]).hide();
-
-            }
-            else{
+            } else {
                 $($(el).find('.trash')[0]).show();
             }
         });
     }
 
 
+    function refreshTotalPercentage() {
+        var $filledItems = destination.find('.get-sales');
+        var itemCount = $filledItems.length;
+console.log(itemCount);
+        if (itemCount) {
+            $totalCount.text(itemCount * 10 + '%').addClass('filled-field');
+        } else {
+            $totalCount.text('0%').removeClass('filled-field');
+        }
+    }
+
     button.on('click', function (e) {
         if (count > 4) {
             e.preventDefault();
             e.stopPropagation();
             return;
-        }
 
+        }
+        if (count == 4) {
+            $('.total').addClass('gray-circle');
+        }
         var tmpl = $('#form-template')
             .html()
             .replace(/xxx/g, 'user_name_' + count)
@@ -74,33 +87,27 @@ jQuery(function($) {
         destination.find('.clone-div').last().attr('data-name', count);
         count++;
 
-        hideAndshowtrash();
+        hideAndShowTrash();
 
-
-        $('.mail-input').on("blur",  function() {
-
+        $('.mail-input').on('change', function() {
             var $parent = $(this).closest('.clone-div');
             $parent.find('.change-color').toggleClass('get-sales');
-
-            var counter = $('.get-sales').length.toString();
-
-            console.log(counter * 10);
-            $('.total-get-sales').addClass('total-sales');
-           $('#total-sales').text(counter * 10 + '%');
+            refreshTotalPercentage();
         });
     });
 
     button.trigger("click");
 
     $(".contacts-invite").on("click", ".trash", function(e){
-
-        if (count>0) {
+        if (count > 0) {
             e.preventDefault();
             $( e.target ).closest('.clone-div').remove();
+            $('.total').removeClass('gray-circle');
+            count--;
         }
-        count--;
 
-        hideAndshowtrash();
+        hideAndShowTrash();
+        refreshTotalPercentage();
 
     });
 
