@@ -99,7 +99,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                     <form method="post" >
                         <div class="contacts-invite" id="destination"></div>
                         <div class="contacts-invite hidden" id="form-template">
-                            <div class="clone-div remove-div">
+                            <div class="clone-div" data-name="x">
                                 <div class="form-block">
                                     <label>Name</label>
                                     <input class="input-style" type="text" pattern="[A-Za-z\s]{5,}" id="xxx" name="xxx"
@@ -110,8 +110,11 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                                     <input class="input-style mail-input" type="email" id="yyy" name="yyy"
                                            placeholder="e.g. vlad.ursu@email.com" _required />
                                 </div>
-                                <div class="form-block">
+                                <div class="form-block change-color">
                                     <span class="sales-fiels">10%</span>
+                                </div>
+                                <div class="form-block trash ">
+                                    <i class="fa fa-trash-o" aria-hidden="true"></i>
                                 </div>
                             </div>
                         </div>
@@ -119,14 +122,12 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                             <button class="btn-circle add-circle" type="submit">
                                 <i>+</i>
                             </button>
-                            <button class="btn-circle remove-circle" type="submit">
-                                <i>-</i>
-                            </button>
-
                             <div class="sales">
                                 <span class="heading-contact"> You will have  discount </span>
                             </div>
-                            <div class="form-block"><span class="sales-fiels">10%</span> </div>
+                            <div class="form-block total-get-sales">
+                                <span id="total-sales" class="sales-fiels"> 0%</span>
+                            </div>
                         </div>
                         <div class="contacts-invite">
                             <button class="button button-contact " type="submit">Submit</button>
@@ -264,7 +265,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 </footer>
 
 <script type="text/javascript" src="../js/jquery-1.11.0.min.js"></script>
-<script type="text/javascript" src="../js/main.min.js"></script>
+<script type="text/javascript" src="../js/main.js"></script>
 <script type="text/javascript" src="https://www.google.com/recaptcha/api.js" async defer></script>
 
 </body>
