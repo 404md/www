@@ -1,3 +1,30 @@
+.error-m {
+  position: relative;
+  padding-bottom: 5px;
+  label {
+    &.error {
+      position: absolute;
+      font-size: 15px;
+      color:red;
+      bottom: 5px;
+      left:0;
+    }
+  }
+  input, textarea {
+    &.error {
+      border-color: red;
+    }
+  }
+}
+
+.status-message {
+  &.error {
+    position: absolute;
+    bottom: 55px;
+    line-height: 21px;
+    color:red;
+  }
+}
 
 .wrapper {
   &.contact {
@@ -32,11 +59,14 @@
           }
           .hole-form {
             position: relative;
-            width: auto;
-            label {
+            width:80%;
+            .input-name {
               display: block;
               margin-bottom: 10px;
               font-size: 18px;
+            }
+            .button {
+              margin-top: 30px;
             }
           }
         }
