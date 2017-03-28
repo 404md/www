@@ -133,8 +133,11 @@
                   background: white;
                   border-radius: 50%;
                   border: 2px solid;
-                  padding: 16px 7px;
                   font-size: 25px;
+                  height: 65px;
+                  width: 65px;
+                  line-height: 60px;
+                  display: inline-block;
                 }
                 .input-style {
                   &:focus {
@@ -176,7 +179,6 @@
                   .filled-field {
                     border-color: #dd5931;
                     color: #dd5931;
-                    padding: 16px 7px;
                   }
                 }
                 &.gray-circle {

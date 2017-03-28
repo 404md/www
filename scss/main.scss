@@ -57,6 +57,11 @@ body {
   -webkit-text-size-adjust:none;
 }
 
+#reCaptcha {
+  position: absolute;
+  z-index: 1;
+}
+
 .container {
   padding-right: 15px;
   padding-left: 15px;
@@ -179,6 +184,12 @@ body {
   .image-invite {
     background-image: url(../images/invite.jpg);
     background-position: 45% 27%;
+    background-size: cover;
+    height: 160px;
+  }
+  .image-fb-gallery {
+    background-image: url(../images/fb-gallery.jpg);
+    background-position: 45% 48%;
     background-size: cover;
     height: 160px;
   }

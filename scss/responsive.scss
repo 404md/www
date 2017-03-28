@@ -683,6 +683,26 @@
   }
 }
 
+@media (max-width: 720px) {
+  .wrapper {
+    &.invitation {
+      .main-block {
+        .form-invitation {
+          .container {
+            .form-invite {
+              .contacts-invite {
+                .form-block {
+                  width: 35%;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
 
 @media (max-width: 680px) {
   .wrapper {
@@ -693,7 +713,6 @@
             .form-invite {
               .contacts-invite {
                 .form-block {
-                  width: 39%;
                   span {
                     font-size: 22px;
                   }
@@ -1134,10 +1153,13 @@
             .form-invite {
               .contacts-invite {
                 .form-block {
-                  width: 65%;
+                  width: 60%;
                   &:nth-child(3) {
                     top: -47px;
                     width: 30%;
+                  }
+                  &.trash {
+                    position: absolute;
                   }
                 }
                 &.total {
