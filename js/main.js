@@ -41,24 +41,36 @@ jQuery(function($) {
 
     var $totalCount = $('#total-sales');
     var destination = $('#destination');
-    var button = $('.add-circle');
+    var $addButton = $('.add-circle');
     var count = 0;
 
     function  hideAndShowTrash() {
-        destination.find('.clone-div').each(function(i, el) {
-            if(count == 1) {
-                $($(el).find('.trash')[0]).hide();
+        // destination.find('.clone-div').each(function(i, el) {
+        //     if(count == 1) {
+        //         $($(el).find('.trash')[0]).hide();
+        //     } else {
+        //         $($(el).find('.trash')[0]).show();
+        //     }
+        // });
+
+        var $trashes = destination.find('.trash');
+        var itemCount = $trashes.length;
+
+        console.log(itemCount);
+
+        $trashes.each(function() {
+            if (itemCount > 1) {
+                $(this).show();
             } else {
-                $($(el).find('.trash')[0]).show();
+                $(this).hide();
             }
         });
     }
 
-
     function refreshTotalPercentage() {
         var $filledItems = destination.find('.get-sales');
         var itemCount = $filledItems.length;
-console.log(itemCount);
+
         if (itemCount) {
             $totalCount.text(itemCount * 10 + '%').addClass('filled-field');
         } else {
@@ -66,16 +78,17 @@ console.log(itemCount);
         }
     }
 
-    button.on('click', function (e) {
+    $addButton.on('click', function (e) {
         if (count > 4) {
             e.preventDefault();
             e.stopPropagation();
             return;
-
         }
+
         if (count == 4) {
             $('.total').addClass('gray-circle');
         }
+
         var tmpl = $('#form-template')
             .html()
             .replace(/xxx/g, 'user_name_' + count)
@@ -84,31 +97,31 @@ console.log(itemCount);
 
         destination.append(tmpl);
 
-        destination.find('.clone-div').last().attr('data-name', count);
+        // destination.find('.clone-div').last().attr('data-name', count);
         count++;
 
         hideAndShowTrash();
 
         $('.mail-input').on('change', function() {
             var $parent = $(this).closest('.clone-div');
+
             $parent.find('.change-color').toggleClass('get-sales');
+
             refreshTotalPercentage();
         });
     });
 
-    button.trigger("click");
+    $addButton.trigger('click');
 
-    $(".contacts-invite").on("click", ".trash", function(e){
+    destination.on('click', '.trash', function() {
         if (count > 0) {
-            e.preventDefault();
-            $( e.target ).closest('.clone-div').remove();
+            $(this).closest('.clone-div').remove();
             $('.total').removeClass('gray-circle');
             count--;
         }
 
         hideAndShowTrash();
         refreshTotalPercentage();
-
     });
 
 });

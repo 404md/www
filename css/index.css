@@ -200,8 +200,11 @@
       background: white;
       border-radius: 50%;
       border: 2px solid;
-      padding: 16px 7px;
-      font-size: 25px; }
+      font-size: 25px;
+      height: 65px;
+      width: 65px;
+      line-height: 60px;
+      display: inline-block; }
     .wrapper.invitation .main-block .form-invitation .container .form-invite .contacts-invite .form-block .input-style:focus {
       border: 2px solid #454545; }
     .wrapper.invitation .main-block .form-invitation .container .form-invite .contacts-invite .form-block.trash {
@@ -226,8 +229,7 @@
           display: none; }
       .wrapper.invitation .main-block .form-invitation .container .form-invite .contacts-invite.total .total-get-sales .filled-field {
         border-color: #dd5931;
-        color: #dd5931;
-        padding: 16px 7px; }
+        color: #dd5931; }
       .wrapper.invitation .main-block .form-invitation .container .form-invite .contacts-invite.total.gray-circle .btn-circle {
         color: #aaaaaa;
         background: white; }
@@ -291,6 +293,10 @@ body {
   line-height: 1.42857143;
   background-color: #fff;
   -webkit-text-size-adjust: none; }
+
+#reCaptcha {
+  position: absolute;
+  z-index: 1; }
 
 .container {
   padding-right: 15px;
@@ -395,6 +401,11 @@ body {
   .image .image-invite {
     background-image: url(../images/invite.jpg);
     background-position: 45% 27%;
+    background-size: cover;
+    height: 160px; }
+  .image .image-fb-gallery {
+    background-image: url(../images/fb-gallery.jpg);
+    background-position: 45% 48%;
     background-size: cover;
     height: 160px; }
 
@@ -1420,13 +1431,14 @@ body {
 
   .gallery.members-gallery .gallery-line, .gallery.connect-us .gallery-line {
     margin-top: 0; } }
-@media (max-width: 680px) {
+@media (max-width: 720px) {
   .wrapper.invitation .main-block .form-invitation .container .form-invite .contacts-invite .form-block {
-    width: 39%; }
-    .wrapper.invitation .main-block .form-invitation .container .form-invite .contacts-invite .form-block span {
-      font-size: 22px; }
-    .wrapper.invitation .main-block .form-invitation .container .form-invite .contacts-invite .form-block .input-style {
-      font-size: 12px; } }
+    width: 35%; } }
+@media (max-width: 680px) {
+  .wrapper.invitation .main-block .form-invitation .container .form-invite .contacts-invite .form-block span {
+    font-size: 22px; }
+  .wrapper.invitation .main-block .form-invitation .container .form-invite .contacts-invite .form-block .input-style {
+    font-size: 12px; } }
 @media (max-width: 768px) {
   .main-nav .container .nav-top .navt li .link, .main-nav .container .nav-top .navt li .last-line {
     width: auto; } }
@@ -1611,10 +1623,12 @@ body {
     .wrapper.pricing .main-block .container .display-flex .plans .description .block-responsive {
       width: auto; }
   .wrapper.invitation .main-block .form-invitation .container .form-invite .contacts-invite .form-block {
-    width: 65%; }
+    width: 60%; }
     .wrapper.invitation .main-block .form-invitation .container .form-invite .contacts-invite .form-block:nth-child(3) {
       top: -47px;
       width: 30%; }
+    .wrapper.invitation .main-block .form-invitation .container .form-invite .contacts-invite .form-block.trash {
+      position: absolute; }
   .wrapper.invitation .main-block .form-invitation .container .form-invite .contacts-invite.total .sales .heading-contact {
     font-size: 17px; }
   .wrapper.invitation .main-block .form-invitation .container .form-invite .contacts-invite.total .form-block {
