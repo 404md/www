@@ -49,6 +49,15 @@ a {
   margin-top: 40px;
 }
 
+.left-fb-block {
+  float:left;
+  margin: 0 35px;
+}
+
+.fb-container-responsive {
+  display: none;
+}
+
 body {
   font-family: 'Lato-Regular', sans-serif;
   font-size: 14px;
@@ -825,7 +834,7 @@ body {
 }
 
 
-/* Gallery bfor terms*/
+/* Gallery for terms*/
 
 .gallery {
   &.terms {
@@ -842,6 +851,51 @@ body {
       }
       .img4 {
         background-image: url(../images/img4-tr.jpg);
+      }
+    }
+  }
+}
+
+
+/* Gallery for photo-gallery*/
+
+.gallery {
+  &.photos-gallery {
+    .gallery-line {
+      margin-top: 60px;
+      .img1 {
+        background-image: url(../images/img1-g.jpg);
+      }
+      .img2 {
+        background-image: url(../images/img2-g.jpg);
+      }
+      .img3 {
+        background-image: url(../images/img3-g.jpg);
+      }
+      .img4 {
+        background-image: url(../images/img4-g.jpg);
+      }
+    }
+  }
+}
+
+/* Gallery for media*/
+
+.gallery {
+  &.media-gallery {
+    .gallery-line {
+      margin-top: 60px;
+      .img1 {
+        background-image: url(../images/img1-md.jpg);
+      }
+      .img2 {
+        background-image: url(../images/img2-md.jpg);
+      }
+      .img3 {
+        background-image: url(../images/img3-md.jpg);
+      }
+      .img4 {
+        background-image: url(../images/img4-md.jpg);
       }
     }
   }
