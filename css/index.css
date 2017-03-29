@@ -287,6 +287,13 @@ a {
   font-size: 30px;
   margin-top: 40px; }
 
+.left-fb-block {
+  float: left;
+  margin: 0 35px; }
+
+.fb-container-responsive {
+  display: none; }
+
 body {
   font-family: 'Lato-Regular', sans-serif;
   font-size: 14px;
@@ -829,7 +836,7 @@ body {
   src: local("☺"), url("../fonts/Lato-Regular.woff") format("woff"), url("../fonts/Lato-Regular.ttf") format("truetype"), url("../fonts/Lato-Regular.svg") format("svg");
   font-weight: normal;
   font-style: normal; }
-/* Gallery bfor terms*/
+/* Gallery for terms*/
 .gallery.terms .gallery-line {
   margin-top: 60px; }
   .gallery.terms .gallery-line .img1 {
@@ -840,6 +847,30 @@ body {
     background-image: url(../images/img3-tr.jpg); }
   .gallery.terms .gallery-line .img4 {
     background-image: url(../images/img4-tr.jpg); }
+
+/* Gallery for photo-gallery*/
+.gallery.photos-gallery .gallery-line {
+  margin-top: 60px; }
+  .gallery.photos-gallery .gallery-line .img1 {
+    background-image: url(../images/img1-g.jpg); }
+  .gallery.photos-gallery .gallery-line .img2 {
+    background-image: url(../images/img2-g.jpg); }
+  .gallery.photos-gallery .gallery-line .img3 {
+    background-image: url(../images/img3-g.jpg); }
+  .gallery.photos-gallery .gallery-line .img4 {
+    background-image: url(../images/img4-g.jpg); }
+
+/* Gallery for media*/
+.gallery.media-gallery .gallery-line {
+  margin-top: 60px; }
+  .gallery.media-gallery .gallery-line .img1 {
+    background-image: url(../images/img1-md.jpg); }
+  .gallery.media-gallery .gallery-line .img2 {
+    background-image: url(../images/img2-md.jpg); }
+  .gallery.media-gallery .gallery-line .img3 {
+    background-image: url(../images/img3-md.jpg); }
+  .gallery.media-gallery .gallery-line .img4 {
+    background-image: url(../images/img4-md.jpg); }
 
 .text-name {
   text-transform: uppercase; }
@@ -1112,6 +1143,11 @@ body {
     .pic .img-hover .we-love .comment span {
       font-size: 15px; } }
 @media (max-width: 1200px) {
+  .fb-container {
+    text-align: center; }
+    .fb-container .left-fb-block {
+      float: none; }
+
   .wrapper.main .main-block .main-nav.responsive-nav {
     background: black; }
   .wrapper.invitation .main-block .container .add-friends .pic-invite {
@@ -1439,6 +1475,19 @@ body {
     font-size: 22px; }
   .wrapper.invitation .main-block .form-invitation .container .form-invite .contacts-invite .form-block .input-style {
     font-size: 12px; } }
+@media (max-width: 600px) {
+  .fb-container {
+    display: none; }
+
+  .fb-container-responsive {
+    display: block; }
+    .fb-container-responsive .left-fb-block {
+      float: none;
+      margin: 0;
+      display: flex;
+      justify-content: center; }
+      .fb-container-responsive .left-fb-block iframe[style] {
+        width: 66% !important; } }
 @media (max-width: 768px) {
   .main-nav .container .nav-top .navt li .link, .main-nav .container .nav-top .navt li .last-line {
     width: auto; } }
@@ -1667,6 +1716,9 @@ body {
     .booking-form #mc_embed_signup .mc-field-group label {
       font-size: 13px; } }
 @media (max-width: 414px) {
+  .fb-container-responsive .left-fb-block iframe[style] {
+    width: 88% !important; }
+
   .wrapper .container .partners .pycoding img {
     height: 20px; }
   .wrapper .container .partners .itech img {
@@ -1680,6 +1732,9 @@ body {
     -webkit-transform: scale(0.85);
     transform-origin: 0 0;
     -webkit-transform-origin: 0 0; } }
+@media (max-width: 412px) {
+  .fb-container-responsive .left-fb-block iframe[style] {
+    width: 100% !important; } }
 @media (max-width: 375px) {
   .wrapper.booking .main-block .container .back-image .booking-form.ru-booking #mc_embed_signup .mc-field-group.input-group ul li {
     margin-right: 3px; }

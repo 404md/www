@@ -35,6 +35,12 @@
 }
 
 @media (max-width: 1200px) {
+  .fb-container {
+    text-align: center;
+    .left-fb-block {
+      float:none;
+    }
+  }
   .wrapper {
     &.main {
       .main-block {
@@ -729,6 +735,24 @@
   }
 }
 
+@media (max-width: 600px) {
+  .fb-container {
+    display: none;
+  }
+  .fb-container-responsive {
+    display: block;
+    .left-fb-block {
+      float: none;
+      margin: 0;
+      display: flex;
+      justify-content: center;
+      iframe[style] {
+        width: 66% !important;
+      }
+    }
+  }
+}
+
 @media (max-width: 768px) {
  .main-nav {
    .container {
@@ -1291,6 +1315,14 @@
 }
 
 @media (max-width: 414px) {
+  .fb-container-responsive {
+    .left-fb-block {
+      iframe[style] {
+        width: 88% !important;
+        }
+      }
+    }
+
   .wrapper {
     .container {
       .partners {
@@ -1329,6 +1361,16 @@
             }
           }
         }
+      }
+    }
+  }
+}
+
+@media (max-width: 412px){
+  .fb-container-responsive {
+    .left-fb-block {
+      iframe[style] {
+        width: 100% !important;
       }
     }
   }
