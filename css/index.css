@@ -287,6 +287,13 @@ a {
   font-size: 30px;
   margin-top: 40px; }
 
+.left-fb-block {
+  float: left;
+  margin: 0 35px 20px; }
+
+.fb-container-responsive {
+  display: none; }
+
 body {
   font-family: 'Lato-Regular', sans-serif;
   font-size: 14px;
@@ -1136,9 +1143,13 @@ body {
     .pic .img-hover .we-love .comment span {
       font-size: 15px; } }
 @media (max-width: 1200px) {
-  .wrapper.photos-gallery .main-block .display-flex {
-    display: inline;
-    text-align: center; }
+  .left-fb-block {
+    float: none;
+    text-align: center;
+    margin-bottom: 30px;
+    margin-left: 0;
+    margin-right: 0; }
+
   .wrapper.main .main-block .main-nav.responsive-nav {
     background: black; }
   .wrapper.invitation .main-block .container .add-friends .pic-invite {
