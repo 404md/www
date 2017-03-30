@@ -51,7 +51,7 @@ a {
 
 .left-fb-block {
   float:left;
-  margin: 0 35px;
+  margin: 0 35px 20px;
 }
 
 .fb-container-responsive {
@@ -270,9 +270,9 @@ body {
             #menu-toggle {
               &.open {
                 #cross {
-                 span {
-                   background: white;
-                 }
+                  span {
+                    background: white;
+                  }
                 }
               }
               #hamburger {
@@ -308,7 +308,7 @@ body {
                 &:hover {
                   &:before {
                     content:'';
-                   background: white;
+                    background: white;
                   }
                 }
               }
@@ -468,13 +468,13 @@ body {
             }
             &:hover {
               &:before {
-              content: '';
-              position: absolute;
-              height: 2px;
-              background: black;
-              left: 0;
-              right: 0;
-              bottom: -2px;
+                content: '';
+                position: absolute;
+                height: 2px;
+                background: black;
+                left: 0;
+                right: 0;
+                bottom: -2px;
               }
             }
           }
@@ -543,7 +543,7 @@ body {
     .block-4 {
       width: 15%;
       .display-flex {
-       flex-wrap: nowrap;
+        flex-wrap: nowrap;
         a {
           color: #888;
           font-size: 18px;
@@ -826,11 +826,11 @@ body {
 }
 
 @font-face {
-    font-family: 'Lato-Regular';
-    src: url('../fonts/Lato-Regular.eot');
-    src: local('☺'), url('../fonts/Lato-Regular.woff') format('woff'), url('../fonts/Lato-Regular.ttf') format('truetype'), url('../fonts/Lato-Regular.svg') format('svg');
-    font-weight: normal;
-    font-style: normal;
+  font-family: 'Lato-Regular';
+  src: url('../fonts/Lato-Regular.eot');
+  src: local('☺'), url('../fonts/Lato-Regular.woff') format('woff'), url('../fonts/Lato-Regular.ttf') format('truetype'), url('../fonts/Lato-Regular.svg') format('svg');
+  font-weight: normal;
+  font-style: normal;
 }
 
 
