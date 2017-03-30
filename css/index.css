@@ -287,13 +287,6 @@ a {
   font-size: 30px;
   margin-top: 40px; }
 
-.left-fb-block {
-  float: left;
-  margin: 0 35px; }
-
-.fb-container-responsive {
-  display: none; }
-
 body {
   font-family: 'Lato-Regular', sans-serif;
   font-size: 14px;
@@ -1143,11 +1136,9 @@ body {
     .pic .img-hover .we-love .comment span {
       font-size: 15px; } }
 @media (max-width: 1200px) {
-  .fb-container {
+  .wrapper.photos-gallery .main-block .display-flex {
+    display: inline;
     text-align: center; }
-    .fb-container .left-fb-block {
-      float: none; }
-
   .wrapper.main .main-block .main-nav.responsive-nav {
     background: black; }
   .wrapper.invitation .main-block .container .add-friends .pic-invite {
@@ -1716,9 +1707,6 @@ body {
     .booking-form #mc_embed_signup .mc-field-group label {
       font-size: 13px; } }
 @media (max-width: 414px) {
-  .fb-container-responsive .left-fb-block iframe[style] {
-    width: 88% !important; }
-
   .wrapper .container .partners .pycoding img {
     height: 20px; }
   .wrapper .container .partners .itech img {
@@ -1732,9 +1720,6 @@ body {
     -webkit-transform: scale(0.85);
     transform-origin: 0 0;
     -webkit-transform-origin: 0 0; } }
-@media (max-width: 412px) {
-  .fb-container-responsive .left-fb-block iframe[style] {
-    width: 100% !important; } }
 @media (max-width: 375px) {
   .wrapper.booking .main-block .container .back-image .booking-form.ru-booking #mc_embed_signup .mc-field-group.input-group ul li {
     margin-right: 3px; }
