@@ -154,6 +154,9 @@ body {
 
 .image {
   height: 160px;
+  &.video-media {
+    height: 300px;
+  }
   .image-amenities {
     background-image: url(../images/amenities.jpg);
     background-position: center;
@@ -884,7 +887,7 @@ body {
 .gallery {
   &.media-gallery {
     .gallery-line {
-      margin-top: 60px;
+      margin-top: 0;
       .img1 {
         background-image: url(../images/img1-md.jpg);
       }
