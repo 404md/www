@@ -25,6 +25,10 @@ a {
   display: none;
 }
 
+.text-up {
+  text-transform: uppercase;
+}
+
 .btn-center {
   text-align: center;
 }
@@ -154,9 +158,6 @@ body {
 
 .image {
   height: 160px;
-  &.video-media {
-    height: 300px;
-  }
   .image-amenities {
     background-image: url(../images/amenities.jpg);
     background-position: center;
@@ -201,6 +202,12 @@ body {
   }
   .image-gallery {
     background-image: url(../images/gallery.jpg);
+    background-position: 45% 48%;
+    background-size: cover;
+    height: 160px;
+  }
+  .image-media {
+    background-image: url(../images/media.jpg);
     background-position: 45% 48%;
     background-size: cover;
     height: 160px;

@@ -423,6 +423,15 @@
 }
 
 @media screen and (max-width: 992px) {
+  .video-media {
+    &.display-flex {
+      justify-content: space-around;
+    }
+    .media-gallery {
+      width: 45%;
+      margin-bottom: 30px;
+    }
+  }
   .booking-form {
     #mc_embed_signup {
       width: auto;
@@ -1008,6 +1017,18 @@
 }
 
 @media (max-width: 639px) {
+  .video-media {
+    .media-gallery {
+      width: 80%;
+      .block-link {
+        .media-title {
+          font-size: 18px;
+          line-height: 25px;
+
+        }
+      }
+    }
+  }
   .text-upercase {
     text-align: center;
   }

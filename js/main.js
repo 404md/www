@@ -123,5 +123,12 @@ jQuery(function($) {
         hideAndShowTrash();
         refreshTotalPercentage();
     });
+    
+    $('.button-play').on('click', function(){
+        $('.image').addClass('video');
+        $('.media-image').hide();
+        $('.container-v').removeClass('hidden');
+        $('#video').attr('src', '/videos/agora.mp4');
+    })
 
 });
