@@ -378,8 +378,6 @@ body {
 
 .image {
   height: 160px; }
-.image.video-media {
-  height: 300px; }
 .image .image-amenities {
   background-image: url(../images/amenities.jpg);
   background-position: center;
@@ -417,6 +415,11 @@ body {
   height: 160px; }
 .image .image-gallery {
   background-image: url(../images/gallery.jpg);
+  background-position: 45% 48%;
+  background-size: cover;
+  height: 160px; }
+.image .image-media {
+  background-image: url(../images/media.jpg);
   background-position: 45% 48%;
   background-size: cover;
   height: 160px; }
@@ -877,10 +880,47 @@ body {
 .gallery.media-gallery .gallery-line .img4 {
   background-image: url(../images/img4-md.jpg); }
 
+#video {
+  width: 100%;
+  height: 300px; }
+
+.image.video {
+  height: 300px; }
+.image.video-media .image-media {
+  text-align: center;
+  position: relative; }
+.image.video-media .image-media .button-play {
+  background: red;
+  border-radius: 15px;
+  height: 50px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 70px;
+  margin: -25px 0 0 -25px; }
+.image.video-media .image-media .button-play:hover {
+  background: #FF5050; }
+.image.video-media .image-media .button-play .button-inner {
+  position: relative;
+  height: 100%; }
+.image.video-media .image-media .button-play .button-inner:before {
+  content: "";
+  display: block;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 10px 0 10px 20px;
+  border-color: transparent transparent transparent #ffffff;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin: 15px 0 0 -7px; }
+
 .container-v {
   position: relative;
   width: 100%;
-  height: 0; }
+  height: 0;
+  text-align: center; }
 .container-v .video {
   position: absolute;
   top: 0;
@@ -898,7 +938,8 @@ body {
   font-size: 24px; }
 .logo-media .img-logo {
   background: white;
-  width: 20px; }
+  vertical-align: baseline;
+  margin-right: 5px; }
 
 .video-media .media-gallery {
   position: relative;
@@ -910,13 +951,13 @@ body {
   color: black; }
 .video-media .media-gallery .block-link .image-media {
   width: 100%;
-  height: auto; }
+  height: auto;
+  position: relative; }
 .video-media .media-gallery .block-link .media-title {
   background: #f5f5f4;
   min-height: 110px;
   padding: 15px;
-  font-size: 16px;
-  line-height: 20px; }
+  font-size: 18px; }
 .video-media .media-gallery .block-link:hover img {
   opacity: 0.6; }
 .video-media .media-gallery .block-link:hover {
@@ -1389,7 +1430,8 @@ body {
   .video-media.display-flex {
     justify-content: space-around; }
   .video-media .media-gallery {
-    width: 45%; }
+    width: 45%;
+    margin-bottom: 30px; }
 
   .booking-form #mc_embed_signup {
     width: auto; }
