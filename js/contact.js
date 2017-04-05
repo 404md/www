@@ -95,6 +95,7 @@
    */
   $contactForm.on('submit', function (e) {
     e.preventDefault();
+    $('#msg').val('');
   });
 
   /**
@@ -164,6 +165,7 @@
                 showMessage(response.errorMessage, 'error');
               } else {
                 showMessage('Thank you for your email');
+
               }
             } else {
               showMessage(err, 'error');
@@ -184,6 +186,7 @@
 
     setTimeout(function () {
       $statusMsg.empty();
+      $statusMsg.text(message).fadeOut('slow');
       resetCaptcha();
     }, 5000);
   }

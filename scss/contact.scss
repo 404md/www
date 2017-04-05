@@ -18,6 +18,19 @@
 }
 
 .status-message {
+  &.success {
+    padding: 10px;
+    bottom: 0;
+    right: 0;
+    z-index: 2;
+    font-size: 15px;
+    width: 20%;
+    position: fixed;
+    color: #3c763d;
+    background-color: #dff0d8;
+    border-color: #d6e9c6;
+    border-radius: 4px;
+  }
   &.error {
     position: absolute;
     bottom: 55px;
