@@ -25,7 +25,7 @@ uglifyjs ./js/mc-validate.js -c -m -o ./js/mc-validate.min.js
 echo "Copying resources into build/release folder"
 rm -rf ./build/Release/*
 mkdir -p ./build/Release/
-cp -R favicon.png robots.txt sitemap.xml css fonts images js \
+cp -R favicon.png robots.txt sitemap.xml css fonts images js videos \
 	amenities contact gallery invitation media members pricing terms tour tour-ok \
 	ro ru ./build/Release/
 
