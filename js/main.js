@@ -127,8 +127,14 @@ jQuery(function($) {
     $('.button-play').on('click', function(){
         $('.image').addClass('video');
         $('.media-image').hide();
-        $('.container-v').removeClass('hidden');
+        $('.show-video').removeClass('hidden');
         $('#video').attr('src', '/videos/agora.mp4');
+    });
+
+    $('.btn-close').on('click', function(){
+        $('.show-video').addClass('hidden');
+        $('.image').removeClass('video');
+        $('.media-image').fadeIn("slow");
     })
 
 });
