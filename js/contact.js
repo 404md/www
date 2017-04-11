@@ -25,8 +25,6 @@
       'sitekey': '6LfqXhkUAAAAANDe9GkFvIyzqOF_q5hhTo4M5Xnb',
       'size': 'invisible',
       'callback': function (token) {
-        // formDataObject['g-recaptcha-response'] = token;
-        // sendMessage(buildEmail(formDataObject));
         sendMessage({
           subject: '404.md contact form',
           captchaResponse: token,
@@ -105,30 +103,6 @@
     e.preventDefault();
     $('#msg').val('');
   });
-
-  /**
-   * Build email object
-   * @param formData
-   * @returns {Object}
-   */
-  function buildEmail(formData) {
-    var name = formData.user_name,
-      email = formData.user_mail,
-      phone = formData.user_phone,
-      message = formData.user_message;
-
-    var lineTpl = "<hr style='border-top:1px dotted #66CCFF;'>",
-      contactTpl = "<p style='margin-bottom: 4px; margin-top: -1px'>Contact information:</p>",
-      nameTpl = "<span style='font-size: 95%; color: #333333; margin-left: 15px'>Name: <b>"+ name +"</b></span><br/>",
-      phoneTpl = "<span style='font-size: 95%; color: #333333; margin-left: 15px'>Phone: <b>"+ phone +"</b></span><br/>",
-      emailTpl = "<span style='font-size: 95%; color: #333333; margin-left: 15px'>Email: <b><a href='mailto:"+ email +"'>"+ email +"</a></b></span><br/>";
-
-    return {
-      "captchaResponse": formDataObject['g-recaptcha-response'],
-      "Subject": "[404.md] Contact form",
-      "MessageText": message + "<br/><br/>" + lineTpl + contactTpl + nameTpl + phoneTpl + emailTpl + lineTpl
-    };
-  }
 
   /**
    * Send email object
