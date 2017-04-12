@@ -304,7 +304,7 @@ a {
 
 .left-fb-block {
   float: left;
-  margin: 0 35px 20px; }
+  margin: 0 35px 60px; }
 
 .fb-container-responsive {
   display: none; }
@@ -560,8 +560,10 @@ body {
   .main-nav .container .logo {
     line-height: 100px;
     float: left; }
+    .main-nav .container .logo a {
+      display: block; }
     .main-nav .container .logo .img-logo {
-      height: 75px; }
+      height: 60px; }
       .main-nav .container .logo .img-logo a {
         display: inline-block; }
   .main-nav .container .nav-top {
@@ -585,10 +587,10 @@ body {
           position: relative;
           color: black;
           text-transform: uppercase;
-          margin: 0 8px;
-          font-size: 20px;
+          margin: 0 2px;
+          font-size: 16px;
           text-decoration: none;
-          padding: 2px 8px;
+          padding: 2px 4px;
           border: 2px solid transparent; }
           .main-nav .container .nav-top ul li .link.active {
             border-color: black; }
@@ -604,9 +606,9 @@ body {
           text-decoration: none; }
     .main-nav .container .nav-top .blog {
       background: #dd5931;
-      font-size: 19px;
+      font-size: 16px;
       padding: 0 10px;
-      margin-left: 20px;
+      margin-left: 10px;
       line-height: normal;
       color: white;
       text-transform: uppercase;
@@ -870,7 +872,7 @@ body {
 
 /* Gallery for photo-gallery*/
 .gallery.photos-gallery .gallery-line {
-  margin-top: 60px; }
+  margin-top: 0; }
   .gallery.photos-gallery .gallery-line .img1 {
     background-image: url(../images/img1-g.jpg); }
   .gallery.photos-gallery .gallery-line .img2 {
@@ -884,7 +886,8 @@ body {
 .gallery.media-gallery .gallery-line {
   margin-top: 0; }
   .gallery.media-gallery .gallery-line .img1 {
-    background-image: url(../images/img1-md.jpg); }
+    background-image: url(../images/img1-md.jpg);
+    background-position: inherit; }
   .gallery.media-gallery .gallery-line .img2 {
     background-image: url(../images/img2-md.jpg); }
   .gallery.media-gallery .gallery-line .img3 {
@@ -928,12 +931,16 @@ body {
         left: 50%;
         margin: 15px 0 0 -7px; }
 
-.container-v {
-  position: relative;
-  width: 100%;
-  text-align: center;
-  height: 642px; }
-  .container-v .video {
+.container.show-video {
+  position: relative; }
+  .container.show-video .btn-close {
+    position: absolute;
+    font-size: 30px;
+    color: white;
+    top: 0;
+    right: 20px;
+    cursor: pointer; }
+  .container.show-video .video {
     position: absolute;
     top: 0;
     left: 0;
@@ -1667,6 +1674,12 @@ body {
       .wrapper.thankyou .main-block .container.new-page .pages .page-name {
         font-size: 16px; } }
 @media (max-width: 645px) {
+  #video {
+    height: 300px; }
+
+  .image.video {
+    height: 300px; }
+
   .new-page .pages .page-name {
     font-size: 34px; }
   .new-page .pages .text-page {

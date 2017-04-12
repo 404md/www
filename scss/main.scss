@@ -435,8 +435,11 @@ body {
     .logo {
       line-height: 100px;
       float: left;
+      a {
+        display: block;
+      }
       .img-logo {
-        height: 75px;
+        height: 60px;
         a {
           display: inline-block;
         }
@@ -468,10 +471,10 @@ body {
             position: relative;
             color: black;
             text-transform: uppercase;
-            margin: 0 8px;
-            font-size: 20px;
+            margin: 0 2px;
+            font-size: 16px;
             text-decoration: none;
-            padding:2px 8px;
+            padding:2px 4px;
             border: 2px solid transparent;
             &.active {
               border-color: black;
@@ -495,9 +498,9 @@ body {
       }
       .blog {
         background: #dd5931;
-        font-size: 19px;
+        font-size: 16px;
         padding: 0 10px;
-        margin-left: 20px;
+        margin-left: 10px;
         line-height: normal;
         color: white;
         text-transform: uppercase;
@@ -897,6 +900,7 @@ body {
       margin-top: 0;
       .img1 {
         background-image: url(../images/img1-md.jpg);
+        background-position: inherit;
       }
       .img2 {
         background-image: url(../images/img2-md.jpg);
