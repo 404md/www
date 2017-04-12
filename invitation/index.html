@@ -61,9 +61,10 @@ window.fbAsyncInit = function () {
 
 <header class="main-nav">
     <div class="container">
-        <div class="logo">
-            <a href="https://www.404.md">
-                <img class="img-logo" src="../images/logo-right-black.svg" alt="Logo 404 Not Found" />
+        <div class="logo" itemscope itemtype=" https://schema.org/Organization">
+            <a href="https://www.404.md" itemprop="url">
+                <img itemprop="logo" class="img-logo" src="../images/logo-right-black.svg" alt="Logo 404 Not Found" />
+                <meta itemprop="url" content="https://www.404.md/images/logo-right-black.svg">
             </a>
         </div>
         <div class="nav-top" >
@@ -83,6 +84,8 @@ window.fbAsyncInit = function () {
                 <li><a class="link" href="/pricing/">Pricing</a></li>
                 <li><a class="link" href="/members/">Members</a></li>
                 <li><a class="link" href="/tour/">Book a Tour</a></li>
+                <li><a class="link" href="/media/">Mass Media</a></li>
+                <li><a class="link" href="/gallery/">Gallery</a></li>
                 <li><a class="link" href="/contact/">Contact</a></li>
                 <li><a class="last-line" href="https://blog.404.md"><span class="blog">blog</span></a></li>
             </ul>
@@ -113,18 +116,19 @@ window.fbAsyncInit = function () {
 <div class="wrapper invitation">
     <section class="main-block">
         <div class="container">
-            <div class="add-friends">
+            <div class="add-friends" itemscope itemtype="http://schema.org/OfferCatalog">
                 <div class="pic-invite">
                     <img src="../images/invitation.png">
                 </div>
                 <div class="text-invite">
-                    Recommend us to your friends and get 10% discount per each recommended friend that signs up with us
+                    <span itemprop="itemListElement">Recommend us to your friends and get 10% discount per each recommended friend that signs up with us
                     for a coworking space
+                    </span>
                 </div>
                 <div class="number-block">
-                    <div class="block-n"><span class="numbers">1</span> Invite your friend</div>
-                    <div class="block-n"><span class="numbers">2</span> Your friend sign up with us</div>
-                    <div class="block-n"><span class="numbers">3</span> You get 10% discount for each of them</div>
+                    <div itemprop="itemListElement" class="block-n"><span class="numbers">1</span> Invite your friend</div>
+                    <div itemprop="itemListElement" class="block-n"><span class="numbers">2</span> Your friend sign up with us</div>
+                    <div itemprop="itemListElement" class="block-n"><span class="numbers">3</span> You get 10% discount for each of them</div>
                 </div>
             </div>
         </div>
@@ -182,9 +186,9 @@ window.fbAsyncInit = function () {
                         <div class="avatar">
                             <img src="../images/avatar-vlad1.png" alt="Vlad U.">
                         </div>
-                        <div class="comment">
-                            <span class="avatar-comment">Vlad U.</span>
-                            <span>"404.md keeps me motivated."</span>
+                        <div class="comment" itemscope itemtype="http://schema.org/UserComments">
+                            <span class="avatar-comment" itemprop="name">Vlad U.</span>
+                            <span itemprop="commentText">"404.md keeps me motivated."</span>
                         </div>
                     </div>
                 </div>
@@ -198,9 +202,9 @@ window.fbAsyncInit = function () {
                         <div class="avatar">
                             <img src="../images/avatar-alex1.png" alt="Alex C.">
                         </div>
-                        <div class="comment">
-                            <span class="avatar-comment">Alex C.</span>
-                            <span>"Proud to be a member of 404 community."</span>
+                        <div class="comment" itemscope itemtype="http://schema.org/UserComments">
+                            <span class="avatar-comment" itemprop="name">Alex C.</span>
+                            <span itemprop="commentText">"Proud to be a member of 404 community."</span>
                         </div>
                     </div>
                 </div>
@@ -211,9 +215,9 @@ window.fbAsyncInit = function () {
                         <div class="avatar">
                             <img src="../images/avatar-dan1.png" alt="Dan B.">
                         </div>
-                        <div class="comment">
-                            <span class="avatar-comment">Dan B.</span>
-                            <span>"404 inspires me every day."</span>
+                        <div class="comment" itemscope itemtype="http://schema.org/UserComments">
+                            <span class="avatar-comment" itemprop="name">Dan B.</span>
+                            <span itemprop="commentText">"404 inspires me every day."</span>
                         </div>
                     </div>
                 </div>
@@ -224,11 +228,23 @@ window.fbAsyncInit = function () {
 
 
     <div class="container">
-        <section class="partners">
-            <div class="usaid"><img src="../images/logo-usaid.png" alt="USAID from the American People" /></div>
-            <div class="sweden"><img src="../images/logo-sweden.png" alt="Government of Sweden" /></div>
-            <div class="pycoding"><img src="../images/logo-pycoding.svg" alt="PyCoding Moldova" /></div>
-            <div class="mitoc"><img src="../images/logo-mitoc.svg" alt="Mitoc Group USA" /></div>
+        <section class="partners" itemscope itemtype="https://schema.org/Organization">
+            <div class="usaid">
+                <img itemprop="logo" src="../images/logo-usaid.png" alt="USAID from the American People" />
+                <meta itemprop="url" content="https://www.404.md/images/logo-usaid.png">
+            </div>
+            <div class="sweden">
+                <img itemprop="logo" src="../images/logo-sweden.png" alt="Government of Sweden" />
+                <meta itemprop="url" content="https://www.404.md/images/logo-sweden.png">
+            </div>
+            <div class="pycoding">
+                <img itemprop="logo" src="../images/logo-pycoding.svg" alt="PyCoding Moldova" />
+                <meta itemprop="url" content="https://www.404.md/images/logo-pycoding.svg">
+            </div>
+            <div class="mitoc">
+                <img itemprop="logo" src="../images/logo-mitoc.svg" alt="Mitoc Group USA" />
+                <meta itemprop="url" content="https://www.404.md/images/logo-mitoc.svg">
+            </div>
         </section>
     </div>
 </div>
@@ -237,44 +253,45 @@ window.fbAsyncInit = function () {
     <div class="contacts">
         <div class="container get-in-touch">
             <div class="block-1"><img src="../images/logo-below-white.svg" alt="Logo 404 Not Found" /></div>
-            <div class="block-2">
+            <div class="block-2" itemscope itemtype="https://schema.org/AboutPage">
                 <h4 class="connect-us">About us</h4>
-                404 Not Found is a coworking space for IT businesses and IT people from Moldova.
+                <span itemprop="description">404 Not Found is a coworking space for IT businesses and IT people from Moldova.
                 We want to empower local community of small companies and skilled individuals
                 to be competitive globally. Members of our community are proud to be working
                 with Fortune 500 customers from Europe and USA.
+                </span>
             </div>
             <div class="block-3">
                 <h4 class="connect-us">Get in touch</h4>
                 <div class="one-line">
                     <i class="fa fa-envelope" aria-hidden="true"></i>
-                    <a href="mailto:info@404.md">info@404.md</a>
+                    <a href="mailto:info@404.md" itemprop="email">info@404.md</a>
                 </div>
                 <div class="one-line">
                     <i class="fa fa-phone" aria-hidden="true"></i>
                     <a href="tel:+37322808291">(+373) 22 808 291</a>
                 </div>
-                <div class="one-line">
+                <div class="one-line" itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
                     <i class="fa fa-map-marker" aria-hidden="true"></i>
-                    <a href="https://goo.gl/maps/GvA1ChgPJ4U2">Blvd. Dacia #23, et. 3
-                        <span class="one-line new-line">Chisinau, Moldova</span></a>
+                    <a itemprop="streetAddress" href="https://goo.gl/maps/GvA1ChgPJ4U2"><span itemprop="streetAddress">Blvd. Dacia #23, et. 3</span>
+                        <span class="one-line new-line" itemprop="addressLocality">Chisinau, Moldova</span></a>
                 </div>
             </div>
-            <div class="block-4">
+            <div class="block-4" itemscope itemtype="https://schema.org/Organization">
                 <h4 class="connect-us">Connect with us</h4>
                 <div class="one-line display-flex">
-                    <a href="https://www.facebook.com/404moldova"><i class="fa fa-facebook" aria-hidden="true"></i></a>
-                    <a href="https://twitter.com/404moldova"><i class="fa fa-twitter" aria-hidden="true"></i></a>
-                    <a href="https://www.linkedin.com/company/404-moldova"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
-                    <a href="https://www.pinterest.com/404moldova/"><i class="fa fa-pinterest-p" aria-hidden="true"></i></a>
-                    <a href="https://pycoding.slack.com/messages/general/"><i class="fa fa-slack" aria-hidden="true"></i></a>
+                    <a href="https://www.facebook.com/404moldova" itemprop="sameAs"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+                    <a href="https://twitter.com/404moldova" itemprop="sameAs"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+                    <a href="https://www.linkedin.com/company/404-moldova" itemprop="sameAs"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
+                    <a href="https://www.pinterest.com/404moldova/" itemprop="sameAs"><i class="fa fa-pinterest-p" aria-hidden="true"></i></a>
+                    <a href="https://pycoding.slack.com/messages/general/" itemprop="sameAs"><i class="fa fa-slack" aria-hidden="true"></i></a>
                 </div>
                 <div class="one-line display-flex">
-                    <a href="https://ok.ru/md404"><i class="fa fa-odnoklassniki" aria-hidden="true"></i></a>
-                    <a href="https://vk.com/md404"><i class="fa fa-vk" aria-hidden="true"></i></a>
-                    <a href="https://instagram.com/404_moldova"><i class="fa fa-instagram" aria-hidden="true"></i></a>
-                    <a href="https://github.com/404md"><i class="fa fa-github" aria-hidden="true"></i></a>
-                    <a href="https://plus.google.com/u/0/107643683758390437710"><i class="fa fa-google-plus" aria-hidden="true"></i></a>
+                    <a href="https://ok.ru/md404" itemprop="sameAs"><i class="fa fa-odnoklassniki" aria-hidden="true"></i></a>
+                    <a href="https://vk.com/md404" itemprop="sameAs"><i class="fa fa-vk" aria-hidden="true"></i></a>
+                    <a href="https://instagram.com/404_moldova" itemprop="sameAs"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+                    <a href="https://github.com/404md" itemprop="sameAs"><i class="fa fa-github" aria-hidden="true"></i></a>
+                    <a href="https://plus.google.com/u/0/107643683758390437710" itemprop="sameAs"><i class="fa fa-google-plus" aria-hidden="true"></i></a>
                 </div>
             </div>
         </div>
@@ -292,6 +309,8 @@ window.fbAsyncInit = function () {
                     <li><a href="/pricing/">Pricing</a></li>
                     <li><a href="/members/">Members</a></li>
                     <li><a href="/tour/">Book a Tour</a></li>
+                    <li><a href="/media/">Mass Media</a></li>
+                    <li><a href="/gallery/">Gallery</a></li>
                     <li><a href="/contact/">Contact</a></li>
                     <li><a href="https://blog.404.md">Blog</a></li>
                 </ul>

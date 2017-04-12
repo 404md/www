@@ -46,25 +46,25 @@
 }
 
 .container {
-  position: relative;
-  &.show-video {
-    .btn-close {
-      position: absolute;
-      font-size: 30px;
-      color:red;
-      top:0;
-      right:20px;
-      cursor: pointer;
-    }
-    .video {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
+    &.show-video {
+      position: relative;
+      .btn-close {
+        position: absolute;
+        font-size: 30px;
+        color: white;
+        top: 0;
+        right: 20px;
+        cursor: pointer;
+      }
+      .video {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+      }
     }
   }
-}
 
 .logo-media {
   position: absolute;

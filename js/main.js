@@ -135,6 +135,7 @@ jQuery(function($) {
         $('.show-video').addClass('hidden');
         $('.image').removeClass('video');
         $('.media-image').fadeIn("slow");
+        $('#video').removeAttr('src');
     })
 
 });

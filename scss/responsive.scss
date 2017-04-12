@@ -945,6 +945,14 @@
 }
 
 @media (max-width: 645px) {
+  #video {
+    height: 300px;
+  }
+  .image {
+    &.video {
+      height: 300px;
+    }
+  }
   .new-page{
     .pages {
       .page-name {
