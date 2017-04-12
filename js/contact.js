@@ -25,8 +25,14 @@
       'sitekey': '6LfqXhkUAAAAANDe9GkFvIyzqOF_q5hhTo4M5Xnb',
       'size': 'invisible',
       'callback': function (token) {
-        formDataObject['g-recaptcha-response'] = token;
-        sendMessage(buildEmail(formDataObject));
+        sendMessage({
+          subject: '404.md contact form',
+          captchaResponse: token,
+          name: formDataObject.user_name,
+          email: formDataObject.user_mail,
+          phone: formDataObject.user_phone,
+          message: formDataObject.user_message
+        });
       }
     });
   };
@@ -99,40 +105,13 @@
   });
 
   /**
-   * Build email object
-   * @param formData
-   * @returns {Object}
-   */
-  function buildEmail(formData) {
-    var name = formData.user_name,
-      email = formData.user_mail,
-      phone = formData.user_phone,
-      message = formData.user_message;
-
-    var lineTpl = "<hr style='border-top:1px dotted #66CCFF;'>",
-      contactTpl = "<p style='margin-bottom: 4px; margin-top: -1px'>Contact information:</p>",
-      nameTpl = "<span style='font-size: 95%; color: #333333; margin-left: 15px'>Name: <b>"+ name +"</b></span><br/>",
-      phoneTpl = "<span style='font-size: 95%; color: #333333; margin-left: 15px'>Phone: <b>"+ phone +"</b></span><br/>",
-      emailTpl = "<span style='font-size: 95%; color: #333333; margin-left: 15px'>Email: <b><a href='mailto:"+ email +"'>"+ email +"</a></b></span><br/>";
-
-    return {
-      "captchaResponse": formDataObject['g-recaptcha-response'],
-      "Subject": "[404.md] Contact form",
-      "MessageText": message + "<br/><br/>" + lineTpl + contactTpl + nameTpl + phoneTpl + emailTpl + lineTpl
-    };
-  }
-
-  /**
    * Send email object
    * @param emailObj
    */
   function sendMessage(emailObj) {
-    var cognitoIdentityPoolId = "us-east-1:0fe5b617-d6a9-4474-8c8d-a31a11ff9fe7";
-    var cognitoIdentityId = '';
-
     AWS.config.region = 'us-east-1';
     AWS.config.credentials = new AWS.CognitoIdentityCredentials({
-      IdentityPoolId: cognitoIdentityPoolId
+      IdentityPoolId: 'us-east-1:0f1512f6-95c6-4364-bf28-1092393edb00'
     });
 
     AWS.config.credentials.get(function(err) {
@@ -140,7 +119,7 @@
         showMessage(err, 'error');
         return;
       }
-      cognitoIdentityId = AWS.config.credentials.identityId;
+      var cognitoIdentityId = AWS.config.credentials.identityId;
 
       var cognitoidentity = new AWS.CognitoIdentity();
 
@@ -158,7 +137,7 @@
           };
 
           lambda.invoke(params, function(err, data){
-            if(data.StatusCode == 200) {
+            if(parseInt(data.StatusCode) === 200) {
               var response = JSON.parse(data.Payload);
 
               if (response.errorMessage) {

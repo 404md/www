@@ -6,6 +6,6 @@
     "aws-sdk": "^2.13.0"
   },
   "dependencies": {
-    "aws-ses-helper": "0.0.5"
+    "aws-ses-helper": "0.0.7"
   }
 }
