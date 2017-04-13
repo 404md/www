@@ -35,7 +35,7 @@
 <!-- End Google Tag Manager -->
 </head>
 
-<body>
+<body itemscope itemtype="http://schema.org/WebPage">
 <script>
 window.fbAsyncInit = function () {
     FB.init({
@@ -61,9 +61,10 @@ window.fbAsyncInit = function () {
 
 <header class="main-nav">
     <div class="container">
-        <div class="logo">
-            <a href="https://www.404.md">
-                <img class="img-logo" src="../../images/logo-right-black.svg" alt="Logo 404 Not Found" />
+        <div class="logo" itemscope itemtype=" https://schema.org/Organization">
+            <a href="https://www.404.md" itemprop="url">
+                <img itemprop="logo" class="img-logo" src="../../images/logo-right-black.svg" alt="Logo 404 Not Found" />
+                <meta itemprop="url" content="https://www.404.md/images/logo-right-black.svg">
             </a>
         </div>
         <div class="nav-top" >
@@ -83,8 +84,8 @@ window.fbAsyncInit = function () {
                 <li><a class="link active" href="/ro/pricing/">Prețuri</a></li>
                 <li><a class="link" href="/ro/members/">Membri</a></li>
                 <li><a class="link" href="/ro/tour/">Rezervă o Vizită</a></li>
-                <li><a class="link" href="/media/">Mass Media</a></li>
-                <li><a class="link" href="/gallery/">Galerie</a></li>
+                <li><a class="link" href="/ro/media/">Mass Media</a></li>
+                <li><a class="link" href="/ro/gallery/">Galerie</a></li>
                 <li><a class="link" href="/ro/contact/">Contacte</a></li>
                 <li><a class="last-line" href="https://blog.404.md"><span class="blog">Blog</span></a></li>
             </ul>
@@ -115,19 +116,20 @@ window.fbAsyncInit = function () {
 <div class="wrapper pricing">
     <section class="main-block">
         <div class="container">
-            <div class="display-flex">
-                <div class="plans">
-                    <div class="img-plan">
+            <div class="display-flex" itemscope itemtype="http://schema.org/OfferCatalog">
+                <div class="plans" itemprop="itemListElement" itemscope itemtype="http://schema.org/OfferCatalog">
+                    <div class="img-plan" itemprop="itemListElement" itemscope itemtype="http://schema.org/Offer">
                         <img src="../../images/plan1.jpg" alt="Test Drive" />
                         <div class="back-color">
                             <div class="text-plan">
-                                <div class="text-p">Test Drive</div>
-                                <label>$20 / zi</label>
+                                <div itemprop="name" class="text-p">Test Drive</div>
+                                <label><span itemprop="priceCurrency" content="USD">$</span>
+                                    <span itemprop="price">20</span> / day</label>
                             </div>
                         </div>
                     </div>
                     <div class="description">
-                        <div class="block-responsive">
+                        <div class="block-responsive" itemprop="description">
                             <p>
                                 Devin-o parte a comunității noastre locale de profesionisti IT.
                                 Membrii noștri contribuie la platforma globală de cloud computing,
@@ -159,20 +161,20 @@ window.fbAsyncInit = function () {
                     </div>
                 </div>
 
-                <div class="plans">
-                    <div class="img-plan">
+                <div class="plans" itemprop="itemListElement" itemscope itemtype="http://schema.org/OfferCatalog">
+                    <div class="img-plan" itemprop="itemListElement" itemscope itemtype="http://schema.org/Offer">
                         <img src="../../images/plan2.jpg" alt="Individual" />
                         <div class="back-color">
                         <div class="text-plan">
-                            <div class="text-p">Individual</div>
+                            <div itemprop="name" class="text-p">Individual</div>
                             <div class="btn-right">
-                                <a href="/ro/tour/" class="button">Rezervă o Vizită</a>
+                                <a itemprop="url" href="/ro/tour/" class="button">Rezervă o Vizită</a>
                             </div>
                         </div>
                         </div>
                     </div>
                     <div class="description">
-                        <div class="block-responsive">
+                        <div class="block-responsive" itemprop="description">
                             <p>
                                 Devin-o parte a comunității noastre locale de profesionisti IT.
                                 Membrii noștri contribuie la platforma globală de cloud computing,
@@ -205,20 +207,20 @@ window.fbAsyncInit = function () {
                     </div>
                 </div>
 
-                <div class="plans">
-                    <div class="img-plan">
+                <div class="plans" itemprop="itemListElement" itemscope itemtype="http://schema.org/OfferCatalog">
+                    <div class="img-plan" itemprop="itemListElement" itemscope itemtype="http://schema.org/Offer">
                         <img src="../../images/plan3.jpg" alt="Business" />
                         <div class="back-color">
                         <div class="text-plan">
-                            <div class="text-p">Companie</div>
+                            <div itemprop="name" class="text-p">Companie</div>
                             <div class="btn-right">
-                                <a href="/tour/" class="button">Rezervă o Vizită</a>
+                                <a itemprop="url" href="/tour/" class="button">Rezervă o Vizită</a>
                             </div>
                         </div>
                         </div>
                     </div>
                     <div class="description">
-                        <div class="block-responsive">
+                        <div class="block-responsive" itemprop="description">
                             <p>
                                 Devin-o parte a comunității noastre locale de profesionisti IT.
                                 Membrii noștri contribuie la platforma globală de cloud computing,
@@ -262,9 +264,9 @@ window.fbAsyncInit = function () {
                         <div class="avatar">
                             <img src="../../images/avatar-vlad1.png" alt="Vlad U.">
                         </div>
-                        <div class="comment">
-                            <span class="avatar-comment">Vlad U.</span>
-                            <span>"404.md mă motivează."</span>
+                        <div class="comment" itemprop="creator" itemscope itemtype="http://schema.org/UserComments">
+                            <span class="avatar-comment" itemprop="name">Vlad U.</span>
+                            <span itemprop="commentText">"404.md mă motivează."</span>
                         </div>
                     </div>
                 </div>
@@ -275,9 +277,9 @@ window.fbAsyncInit = function () {
                         <div class="avatar">
                             <img src="../../images/avatar-irina2.png" alt="Irina T.">
                         </div>
-                        <div class="comment">
-                            <span class="avatar-comment">Irina T.</span>
-                            <span>"404.md deschide ușa spre succes."</span>
+                        <div class="comment" itemprop="creator" itemscope itemtype="http://schema.org/UserComments">
+                            <span class="avatar-comment" itemprop="name">Irina T.</span>
+                            <span itemprop="commentText">"404.md deschide ușa spre succes."</span>
                         </div>
                     </div>
                 </div>
@@ -291,9 +293,9 @@ window.fbAsyncInit = function () {
                         <div class="avatar">
                             <img src="../../images/avatar-cristi1.png" alt="Cristi C.">
                         </div>
-                        <div class="comment">
-                            <span class="avatar-comment">Cristi C.</span>
-                            <span>"404 Locul perfect de a lucra cu profesioniști din domeniu."</span>
+                        <div class="comment" itemprop="creator" itemscope itemtype="http://schema.org/UserComments">
+                            <span class="avatar-comment" itemprop="name">Cristi C.</span>
+                            <span itemprop="commentText">"404 Locul perfect de a lucra cu profesioniști din domeniu."</span>
                         </div>
                     </div>
                 </div>
@@ -303,11 +305,23 @@ window.fbAsyncInit = function () {
     </section>
 
     <div class="container">
-        <section class="partners">
-            <div class="usaid"><img src="../../images/logo-usaid.png" alt="USAID from the American People" /></div>
-            <div class="sweden"><img src="../../images/logo-sweden.png" alt="Government of Sweden" /></div>
-            <div class="pycoding"><img src="../../images/logo-pycoding.svg" alt="PyCoding Moldova" /></div>
-            <div class="mitoc"><img src="../../images/logo-mitoc.svg" alt="Mitoc Group USA" /></div>
+        <section class="partners" itemscope itemtype="https://schema.org/Organization">
+            <div class="usaid">
+                <img itemprop="logo" src="../../images/logo-usaid.png" alt="USAID from the American People" />
+                <meta itemprop="url" content="https://www.404.md/images/logo-usaid.png">
+            </div>
+            <div class="sweden">
+                <img itemprop="logo" src="../../images/logo-sweden.png" alt="Government of Sweden" />
+                <meta itemprop="url" content="https://www.404.md/images/logo-sweden.png">
+            </div>
+            <div class="pycoding">
+                <img itemprop="logo" src="../../images/logo-pycoding.svg" alt="PyCoding Moldova" />
+                <meta itemprop="url" content="https://www.404.md/images/logo-pycoding.svg>
+            </div>
+            <div class="mitoc">
+                <img itemprop="logo" src="../../images/logo-mitoc.svg" alt="Mitoc Group USA" />
+                <meta itemprop="url" content="https://www.404.md/images/logo-mitoc.svg">
+            </div>
         </section>
     </div>
 </div>
@@ -316,18 +330,19 @@ window.fbAsyncInit = function () {
 <div class="contacts">
     <div class="container get-in-touch">
         <div class="block-1"><img src="../../images/logo-below-white.svg" alt="Logo 404 Not Found" /></div>
-        <div class="block-2">
+        <div class="block-2" itemscope itemtype="https://schema.org/AboutPage">
             <h4 class="connect-us">Despre noi</h4>
-            404 Not Found este o comunitate de firme IT și specialiști IT din Moldova.
+            <span itemprop="description">404 Not Found este o comunitate de firme IT și specialiști IT din Moldova.
             Avem ca scop sa susținem comunitatea locală IT a companiilor mici și a specialiștilor
             calificați să fie competitivi la nivel global. Membrii comunității noastre sunt mândri
             să lucreze cu Fortune 500 clienți din Europa și SUA.
+            </span>
         </div>
-        <div class="block-3">
+        <div class="block-3" itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
             <h4 class="connect-us">Date de contact</h4>
             <div class="one-line">
                 <i class="fa fa-envelope" aria-hidden="true"></i>
-                <a href="mailto:info@404.md">info@404.md</a>
+                <a href="mailto:info@404.md" itemprop="email">info@404.md</a>
             </div>
             <div class="one-line">
                 <i class="fa fa-phone" aria-hidden="true"></i>
@@ -335,25 +350,25 @@ window.fbAsyncInit = function () {
             </div>
             <div class="one-line">
                 <i class="fa fa-map-marker" aria-hidden="true"></i>
-                <a href="https://goo.gl/maps/GvA1ChgPJ4U2">bul. Dacia #23, et. 3
-                    <span class="one-line new-line">Chișinău, Moldova</span></a>
+                <a itemprop="streetAddress" href="https://goo.gl/maps/GvA1ChgPJ4U2"><span itemprop="streetAddress">Blvd. Dacia #23, et. 3</span>
+                    <span class="one-line new-line" itemprop="addressLocality">Chișinău, Moldova</span></a>
             </div>
         </div>
-        <div class="block-4">
+        <div class="block-4" itemscope itemtype="https://schema.org/Organization">
             <h4 class="connect-us">Contactează-ne</h4>
             <div class="one-line display-flex">
-                <a href="https://www.facebook.com/404moldova"><i class="fa fa-facebook" aria-hidden="true"></i></a>
-                <a href="https://twitter.com/404moldova"><i class="fa fa-twitter" aria-hidden="true"></i></a>
-                <a href="https://www.linkedin.com/company/404-moldova"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
-                <a href="https://www.pinterest.com/404moldova/"><i class="fa fa-pinterest-p" aria-hidden="true"></i></a>
-                <a href="https://pycoding.slack.com/messages/general/"><i class="fa fa-slack" aria-hidden="true"></i></a>
+                <a href="https://www.facebook.com/404moldova" itemprop="sameAs"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+                <a href="https://twitter.com/404moldova" itemprop="sameAs"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+                <a href="https://www.linkedin.com/company/404-moldova" itemprop="sameAs"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
+                <a href="https://www.pinterest.com/404moldova/" itemprop="sameAs"><i class="fa fa-pinterest-p" aria-hidden="true"></i></a>
+                <a href="https://pycoding.slack.com/messages/general/" itemprop="sameAs"><i class="fa fa-slack" aria-hidden="true"></i></a>
             </div>
             <div class="one-line display-flex">
-                <a href="https://ok.ru/md404"><i class="fa fa-odnoklassniki" aria-hidden="true"></i></a>
-                <a href="https://vk.com/md404"><i class="fa fa-vk" aria-hidden="true"></i></a>
-                <a href="https://instagram.com/404_moldova"><i class="fa fa-instagram" aria-hidden="true"></i></a>
-                <a href="https://github.com/404md"><i class="fa fa-github" aria-hidden="true"></i></a>
-                <a href="https://plus.google.com/u/0/107643683758390437710"><i class="fa fa-google-plus" aria-hidden="true"></i></a>
+                <a href="https://ok.ru/md404" itemprop="sameAs"><i class="fa fa-odnoklassniki" aria-hidden="true"></i></a>
+                <a href="https://vk.com/md404" itemprop="sameAs"><i class="fa fa-vk" aria-hidden="true"></i></a>
+                <a href="https://instagram.com/404_moldova" itemprop="sameAs"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+                <a href="https://github.com/404md" itemprop="sameAs"><i class="fa fa-github" aria-hidden="true"></i></a>
+                <a href="https://plus.google.com/u/0/107643683758390437710" itemprop="sameAs"><i class="fa fa-google-plus" aria-hidden="true"></i></a>
             </div>
         </div>
     </div>
@@ -371,8 +386,8 @@ window.fbAsyncInit = function () {
                 <li><a href="/ro/pricing/">Prețuri</a></li>
                 <li><a href="/ro/members/">Membri</a></li>
                 <li><a href="/ro/tour/">Rezervă o Vizită</a></li>
-                <li><a href="/media/">Mass Media</a></li>
-                <li><a href="/gallery/">Galerie</a></li>
+                <li><a href="/ro/media/">Mass Media</a></li>
+                <li><a href="/ro/gallery/">Galerie</a></li>
                 <li><a href="/ro/contact/">Contacte</a></li>
                 <li><a href="https://blog.404.md">Blog</a></li>
             </ul>
