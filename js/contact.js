@@ -22,7 +22,7 @@
    */
   window.createCaptcha = function() {
     captchaId = grecaptcha.render('reCaptcha', {
-      'sitekey': '6LfqXhkUAAAAANDe9GkFvIyzqOF_q5hhTo4M5Xnb',
+      'sitekey': '6LfKzxwUAAAAAKcEduxf9b1JqN8RlNlQQtxzKfQX',
       'size': 'invisible',
       'callback': function (token) {
         sendMessage({
