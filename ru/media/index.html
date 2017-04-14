@@ -201,7 +201,7 @@ window.fbAsyncInit = function () {
                         <div class="avatar">
                             <img src="../../images/avatar-eugen1.png" alt="Евгений И.">
                         </div>
-                        <div class="comment">
+                        <div class="comment" itemscope itemtype="http://schema.org/UserComments">
                             <span class="avatar-comment">Евгений И.</span>
                             <span>"404.md вдохновляет меня делать добро"</span>
                         </div>
@@ -214,7 +214,7 @@ window.fbAsyncInit = function () {
                         <div class="avatar">
                             <img src="../../images/avatar-vlad1.png" alt="Влад У.">
                         </div>
-                        <div class="comment">
+                        <div class="comment" itemscope itemtype="http://schema.org/UserComments">
                             <span class="avatar-comment">Влад У.</span>
                             <span>"404.md мотивирует меня"</span>
                         </div>
@@ -230,9 +230,9 @@ window.fbAsyncInit = function () {
                         <div class="avatar">
                             <img src="../../images/avatar-dima2.png" alt="Дмитрий С.">
                         </div>
-                        <div class="comment">
-                            <span class="avatar-comment">Дмитрий С.</span>
-                            <span>"404.md чувствуешь себя как дома"</span>
+                        <div class="comment" itemscope itemtype="http://schema.org/UserComments">
+                            <span class="avatar-comment" itemprop="name">Дмитрий С.</span>
+                            <span itemprop="commentText">"404.md чувствуешь себя как дома"</span>
                         </div>
                     </div>
                 </div>
@@ -276,7 +276,7 @@ window.fbAsyncInit = function () {
             с Fortune 500 клиентами из Европы и США.
                 </span>
             </div>
-            <div class="block-3">
+            <div class="block-3" itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
                 <h4 class="connect-us">Наши контакты</h4>
                 <div class="one-line">
                     <i class="fa fa-envelope" aria-hidden="true"></i>
@@ -286,7 +286,7 @@ window.fbAsyncInit = function () {
                     <i class="fa fa-phone" aria-hidden="true"></i>
                     <a href="tel:+37322808291">(+373) 22 808 291</a>
                 </div>
-                <div class="one-line" itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
+                <div class="one-line">
                     <i class="fa fa-map-marker" aria-hidden="true"></i>
                     <a itemprop="streetAddress" href="https://goo.gl/maps/GvA1ChgPJ4U2"><span itemprop="streetAddress">бул. Дачия #23, эт. 3</span>
                         <span class="one-line new-line" itemprop="addressLocality">Кишинев, Молдова</span></a>

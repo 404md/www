@@ -35,7 +35,7 @@
 <!-- End Google Tag Manager -->
 </head>
 
-<body>
+<body itemscope itemtype="http://schema.org/WebPage">
 <script>
 window.fbAsyncInit = function () {
     FB.init({
@@ -63,9 +63,10 @@ window.fbAsyncInit = function () {
     <div class="main-block">
         <header class="main-nav">
             <div class="container">
-                <div class="logo">
-                    <a href="https://www.404.md">
-                        <img class="img-logo" src="../images/logo-right-white.svg" alt="Logo 404 Not Found" />
+                <div class="logo" itemscope itemtype="https://schema.org/Organization">
+                    <a href="https://www.404.md" itemprop="url">
+                        <img itemprop="logo" class="img-logo" src="../images/logo-right-white.svg" alt="Logo 404 Not Found" />
+                        <meta itemprop="url" content="https://www.404.md/images/logo-right-white.svg">
                     </a>
                 </div>
                 <div class="nav-top main-page-nav">
@@ -100,28 +101,40 @@ window.fbAsyncInit = function () {
         </header>
 
         <section class="container main-info ru-vertion">
-            <div class="local-com">
-                <h1>Местное Сообщество.</h1>
-                <h2>Глобальная Платформа.</h2>
-                <div class="text-center">
+            <div class="local-com" itemscope itemtype="http://schema.org/Organization">
+                <h1 itemprop="name">Местное Сообщество.</h1>
+                <h2 itemprop="name">Глобальная Платформа.</h2>
+                <div class="text-center" itemprop="description">
                     404 Not Found это сообщество для IT-бизнеса и IT-специалистов из Молдовы.
                     Мы хотим дать возможность маленьким компаниям и квалифицированным специалистам стать
                     конкурентоспособными на мировом рынке. Члены нашего сообщества гордятся тем что работают
                     с Fortune 500 клиентами из Европы и США.
                 </div>
                 <!--<div class="text-upercase">Официальное открытие состоится 10 Марта</div>-->
-                <div class="more">
-                    <a class="more-about" href="/ru/tour/">Бронирование посещения</a>
+                <div class="more" itemscope itemtype="http://www.schema.org/SiteNavigationElement">
+                    <a itemprop="url" class="more-about" href="/ru/tour/">Бронирование посещения</a>
                 </div>
             </div>
         </section>
     </div>
     <div class="container">
-        <section class="partners">
-            <div class="usaid"><img src="../images/logo-usaid.png" alt="USAID from the American People" /></div>
-            <div class="sweden"><img src="../images/logo-sweden.png" alt="Government of Sweden" /></div>
-            <div class="pycoding"><img src="../images/logo-pycoding.svg" alt="PyCoding Moldova" /></div>
-            <div class="mitoc"><img src="../images/logo-mitoc.svg" alt="Mitoc Group USA" /></div>
+        <section class="partners" itemscope itemtype="https://schema.org/Organization">
+            <div class="usaid">
+                <img itemprop="logo" src="../images/logo-usaid.png" alt="USAID from the American People" />
+                <meta itemprop="url" content="https://www.404.md/images/logo-usaid.png">
+            </div>
+            <div class="sweden">
+                <img itemprop="logo" src="../images/logo-sweden.png" alt="Government of Sweden" />
+                <meta itemprop="url" content="https://www.404.md/images/logo-sweden.png">
+            </div>
+            <div class="pycoding">
+                <img itemprop="logo" src="../images/logo-pycoding.svg" alt="PyCoding Moldova" />
+                <meta itemprop="url" content="https://www.404.md/images/logo-pycoding.svg">
+            </div>
+            <div class="mitoc">
+                <img itemprop="logo" src="../images/logo-mitoc.svg" alt="Mitoc Group USA" />
+                <meta itemprop="url" content="https://www.404.md/images/logo-mitoc.svg">
+            </div>
         </section>
     </div>
 </div>
@@ -130,18 +143,19 @@ window.fbAsyncInit = function () {
 <div class="contacts">
     <div class="container get-in-touch">
         <div class="block-1"><img src="../images/logo-below-white.svg" alt="Logo 404 Not Found" /></div>
-        <div class="block-2">
+        <div class="block-2" itemscope itemtype="https://schema.org/AboutPage">
             <h4 class="connect-us">О нас</h4>
-            404 Not Found это сообщество для IT-бизнеса и IT-специалистов из Молдовы.
+            <span itemprop="description">404 Not Found это сообщество для IT-бизнеса и IT-специалистов из Молдовы.
             Мы хотим дать возможность маленьким компаниям и квалифицированным специалистам стать
             конкурентоспособными на мировом рынке. Члены нашего сообщества гордятся тем что работают
             с Fortune 500 клиентами из Европы и США.
+            </span>
         </div>
-        <div class="block-3">
+        <div class="block-3" itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
             <h4 class="connect-us">Наши контакты</h4>
             <div class="one-line">
                 <i class="fa fa-envelope" aria-hidden="true"></i>
-                <a href="mailto:info@404.md">info@404.md</a>
+                <a href="mailto:info@404.md" itemprop="email">info@404.md</a>
             </div>
             <div class="one-line">
                 <i class="fa fa-phone" aria-hidden="true"></i>
@@ -149,25 +163,25 @@ window.fbAsyncInit = function () {
             </div>
             <div class="one-line">
                 <i class="fa fa-map-marker" aria-hidden="true"></i>
-                <a href="https://goo.gl/maps/GvA1ChgPJ4U2">бул. Дачия #23, эт. 3
-                <span class="one-line new-line">Кишинев, Молдова</span></a>
+                <a itemprop="streetAddress" href="https://goo.gl/maps/GvA1ChgPJ4U2"><span itemprop="streetAddress">бул. Дачия #23, эт. 3</span>
+                <span itemprop="addressLocality" class="one-line new-line">Кишинев, Молдова</span></a>
             </div>
         </div>
-        <div class="block-4 ru-vertion-footer">
+        <div class="block-4 ru-vertion-footer" itemscope itemtype="https://schema.org/Organization">
             <h4 class="connect-us">Свяжитесь с нами</h4>
             <div class="one-line display-flex">
-                <a href="https://www.facebook.com/404moldova"><i class="fa fa-facebook" aria-hidden="true"></i></a>
-                <a href="https://twitter.com/404moldova"><i class="fa fa-twitter" aria-hidden="true"></i></a>
-                <a href="https://www.linkedin.com/company/404-moldova"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
-                <a href="https://www.pinterest.com/404moldova/"><i class="fa fa-pinterest-p" aria-hidden="true"></i></a>
-                <a href="https://pycoding.slack.com/messages/general/"><i class="fa fa-slack" aria-hidden="true"></i></a>
+                <a href="https://www.facebook.com/404moldova" itemprop="sameAs"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+                <a href="https://twitter.com/404moldova" itemprop="sameAs"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+                <a href="https://www.linkedin.com/company/404-moldova" itemprop="sameAs"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
+                <a href="https://www.pinterest.com/404moldova/" itemprop="sameAs"><i class="fa fa-pinterest-p" aria-hidden="true"></i></a>
+                <a href="https://pycoding.slack.com/messages/general/" itemprop="sameAs"><i class="fa fa-slack" aria-hidden="true"></i></a>
             </div>
             <div class="one-line display-flex">
-                <a href="https://ok.ru/md404"><i class="fa fa-odnoklassniki" aria-hidden="true"></i></a>
-                <a href="https://vk.com/md404"><i class="fa fa-vk" aria-hidden="true"></i></a>
-                <a href="https://instagram.com/404_moldova"><i class="fa fa-instagram" aria-hidden="true"></i></a>
-                <a href="https://github.com/404md"><i class="fa fa-github" aria-hidden="true"></i></a>
-                <a href="https://plus.google.com/u/0/107643683758390437710"><i class="fa fa-google-plus" aria-hidden="true"></i></a>
+                <a href="https://ok.ru/md404" itemprop="sameAs"><i class="fa fa-odnoklassniki" aria-hidden="true"></i></a>
+                <a href="https://vk.com/md404" itemprop="sameAs"><i class="fa fa-vk" aria-hidden="true"></i></a>
+                <a href="https://instagram.com/404_moldova" itemprop="sameAs"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+                <a href="https://github.com/404md" itemprop="sameAs"><i class="fa fa-github" aria-hidden="true"></i></a>
+                <a href="https://plus.google.com/u/0/107643683758390437710" itemprop="sameAs"><i class="fa fa-google-plus" aria-hidden="true"></i></a>
             </div>
         </div>
     </div>
