@@ -751,8 +751,7 @@ body {
   right: 0;
   background: #dd5931;
   opacity: 0.8;
-  position: absolute;
-  transition: .3s; }
+  position: absolute; }
 .img-hover:hover .we-love {
   display: block;
   position: relative;
