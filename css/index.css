@@ -749,9 +749,9 @@ body {
   bottom: 0;
   left: 0;
   right: 0;
-  background: #dd5931;
-  opacity: 0.8;
-  position: absolute; }
+  position: absolute;
+  transition: 0.5s;
+  background-color: rgba(221, 89, 49, 0.8); }
 .img-hover:hover .we-love {
   display: block;
   position: relative;
@@ -898,6 +898,17 @@ body {
   width: 100%;
   height: 642px; }
 
+.back-color {
+  position: relative; }
+
+.black-gr {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: linear-gradient(to top, rgba(0, 0, 0, 0.7) 0%, rgba(255, 255, 255, 0) 95%); }
+
 .image.video {
   height: 642px; }
 .image.video-media .image-media {
@@ -948,7 +959,7 @@ body {
 
 .logo-media {
   position: absolute;
-  bottom: 113px;
+  bottom: 110px;
   padding: 20px;
   color: white;
   font-size: 17px; }
@@ -976,8 +987,6 @@ body {
       min-height: 110px;
       padding: 15px;
       font-size: 18px; }
-    .video-media .media-gallery .block-link:hover img {
-      opacity: 0.6; }
     .video-media .media-gallery .block-link:hover {
       color: #dd5931; }
 
