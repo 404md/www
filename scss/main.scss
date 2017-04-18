@@ -25,6 +25,10 @@ a {
   display: none;
 }
 
+.text-up {
+  text-transform: uppercase;
+}
+
 .btn-center {
   text-align: center;
 }
@@ -49,12 +53,26 @@ a {
   margin-top: 40px;
 }
 
+.left-fb-block {
+  float:left;
+  margin: 0 35px 60px;
+}
+
+.fb-container-responsive {
+  display: none;
+}
+
 body {
   font-family: 'Lato-Regular', sans-serif;
   font-size: 14px;
   line-height: 1.42857143;
   background-color: #fff;
   -webkit-text-size-adjust:none;
+}
+
+#reCaptcha {
+  position: absolute;
+  z-index: 1;
 }
 
 .container {
@@ -182,6 +200,18 @@ body {
     background-size: cover;
     height: 160px;
   }
+  .image-gallery {
+    background-image: url(../images/gallery.jpg);
+    background-position: 45% 48%;
+    background-size: cover;
+    height: 160px;
+  }
+  .image-media {
+    background-image: url(../images/media.jpg);
+    background-position: 45% 48%;
+    background-size: cover;
+    height: 160px;
+  }
 }
 
 
@@ -250,9 +280,9 @@ body {
             #menu-toggle {
               &.open {
                 #cross {
-                 span {
-                   background: white;
-                 }
+                  span {
+                    background: white;
+                  }
                 }
               }
               #hamburger {
@@ -288,7 +318,7 @@ body {
                 &:hover {
                   &:before {
                     content:'';
-                   background: white;
+                    background: white;
                   }
                 }
               }
@@ -405,8 +435,11 @@ body {
     .logo {
       line-height: 100px;
       float: left;
+      a {
+        display: block;
+      }
       .img-logo {
-        height: 75px;
+        height: 60px;
         a {
           display: inline-block;
         }
@@ -438,23 +471,23 @@ body {
             position: relative;
             color: black;
             text-transform: uppercase;
-            margin: 0 8px;
-            font-size: 20px;
+            margin: 0 2px;
+            font-size: 16px;
             text-decoration: none;
-            padding:2px 8px;
+            padding:2px 4px;
             border: 2px solid transparent;
             &.active {
               border-color: black;
             }
             &:hover {
               &:before {
-              content: '';
-              position: absolute;
-              height: 2px;
-              background: black;
-              left: 0;
-              right: 0;
-              bottom: -2px;
+                content: '';
+                position: absolute;
+                height: 2px;
+                background: black;
+                left: 0;
+                right: 0;
+                bottom: -2px;
               }
             }
           }
@@ -465,9 +498,9 @@ body {
       }
       .blog {
         background: #dd5931;
-        font-size: 19px;
+        font-size: 16px;
         padding: 0 10px;
-        margin-left: 20px;
+        margin-left: 10px;
         line-height: normal;
         color: white;
         text-transform: uppercase;
@@ -523,7 +556,7 @@ body {
     .block-4 {
       width: 15%;
       .display-flex {
-       flex-wrap: nowrap;
+        flex-wrap: nowrap;
         a {
           color: #888;
           font-size: 18px;
@@ -665,7 +698,6 @@ body {
       background:#dd5931;
       opacity: 0.8;
       position: absolute;
-      transition: .3s;
     }
     .we-love {
       display: block;
@@ -806,15 +838,15 @@ body {
 }
 
 @font-face {
-    font-family: 'Lato-Regular';
-    src: url('../fonts/Lato-Regular.eot');
-    src: local('☺'), url('../fonts/Lato-Regular.woff') format('woff'), url('../fonts/Lato-Regular.ttf') format('truetype'), url('../fonts/Lato-Regular.svg') format('svg');
-    font-weight: normal;
-    font-style: normal;
+  font-family: 'Lato-Regular';
+  src: url('../fonts/Lato-Regular.eot');
+  src: local('☺'), url('../fonts/Lato-Regular.woff') format('woff'), url('../fonts/Lato-Regular.ttf') format('truetype'), url('../fonts/Lato-Regular.svg') format('svg');
+  font-weight: normal;
+  font-style: normal;
 }
 
 
-/* Gallery bfor terms*/
+/* Gallery for terms*/
 
 .gallery {
   &.terms {
@@ -831,6 +863,52 @@ body {
       }
       .img4 {
         background-image: url(../images/img4-tr.jpg);
+      }
+    }
+  }
+}
+
+
+/* Gallery for photo-gallery*/
+
+.gallery {
+  &.photos-gallery {
+    .gallery-line {
+      margin-top: 0;
+      .img1 {
+        background-image: url(../images/img1-g.jpg);
+      }
+      .img2 {
+        background-image: url(../images/img2-g.jpg);
+      }
+      .img3 {
+        background-image: url(../images/img3-g.jpg);
+      }
+      .img4 {
+        background-image: url(../images/img4-g.jpg);
+      }
+    }
+  }
+}
+
+/* Gallery for media*/
+
+.gallery {
+  &.media-gallery {
+    .gallery-line {
+      margin-top: 0;
+      .img1 {
+        background-image: url(../images/img1-md.jpg);
+        background-position: inherit;
+      }
+      .img2 {
+        background-image: url(../images/img2-md.jpg);
+      }
+      .img3 {
+        background-image: url(../images/img3-md.jpg);
+      }
+      .img4 {
+        background-image: url(../images/img4-md.jpg);
       }
     }
   }

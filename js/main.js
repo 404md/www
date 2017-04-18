@@ -39,15 +39,54 @@ jQuery(function($) {
         }
     });
 
-    var button = $('.add-circle');
-    var count = 1;
+    var $totalCount = $('#total-sales');
+    var destination = $('#destination');
+    var $addButton = $('.add-circle');
+    var count = 0;
 
+    function  hideAndShowTrash() {
+        // destination.find('.clone-div').each(function(i, el) {
+        //     if(count == 1) {
+        //         $($(el).find('.trash')[0]).hide();
+        //     } else {
+        //         $($(el).find('.trash')[0]).show();
+        //     }
+        // });
 
-    button.on('click', function (e) {
-        if (count > 5) {
+        var $trashes = destination.find('.trash');
+        var itemCount = $trashes.length;
+
+        console.log(itemCount);
+
+        $trashes.each(function() {
+            if (itemCount > 1) {
+                $(this).show();
+            } else {
+                $(this).hide();
+            }
+        });
+    }
+
+    function refreshTotalPercentage() {
+        var $filledItems = destination.find('.get-sales');
+        var itemCount = $filledItems.length;
+
+        if (itemCount) {
+            $totalCount.text(itemCount * 10 + '%').addClass('filled-field');
+        } else {
+            $totalCount.text('0%').removeClass('filled-field');
+        }
+    }
+
+    $addButton.on('click', function (e) {
+        if (count > 4) {
             e.preventDefault();
             e.stopPropagation();
             return;
+        }
+
+        if (count == 4) {
+            $('.total').addClass('gray-circle');
         }
 
         var tmpl = $('#form-template')
@@ -56,28 +95,47 @@ jQuery(function($) {
             .replace(/yyy/g, 'user_mail_' + count)
             .replace('_required', 'required');
 
-        $('#destination').append(tmpl);
+        destination.append(tmpl);
+
+        // destination.find('.clone-div').last().attr('data-name', count);
         count++;
 
+        hideAndShowTrash();
+
+        $('.mail-input').on('change', function() {
+            var $parent = $(this).closest('.clone-div');
+
+            $parent.find('.change-color').toggleClass('get-sales');
+
+            refreshTotalPercentage();
+        });
     });
 
+    $addButton.trigger('click');
 
-    button.trigger("click");
-
-    $('.mail-input').on("blur", function() {
-        if($(this).val() != '') {
-            $('.form-block').addClass('get-sales');
+    destination.on('click', '.trash', function() {
+        if (count > 0) {
+            $(this).closest('.clone-div').remove();
+            $('.total').removeClass('gray-circle');
+            count--;
         }
+
+        hideAndShowTrash();
+        refreshTotalPercentage();
+    });
+    
+    $('.button-play').on('click', function(){
+        $('.image').addClass('video');
+        $('.media-image').hide();
+        $('.show-video').removeClass('hidden');
+        $('#video').attr('src', '/videos/agora.mp4');
     });
 
-    var divCount = 0;
-
-    function addDiv(parentElement, numberOfDivs) {
-        for(var i = 0; i < numberOfDivs; i++) {
-            var d = document.createElement("div");
-            d.setAttribute("class", "remove-div" + divCount);
-            divCount++;
-        }
-    }
+    $('.btn-close').on('click', function(){
+        $('.show-video').addClass('hidden');
+        $('.image').removeClass('video');
+        $('.media-image').fadeIn("slow");
+        $('#video').removeAttr('src');
+    })
 
 });

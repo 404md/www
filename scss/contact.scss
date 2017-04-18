@@ -1,3 +1,43 @@
+.error-m {
+  position: relative;
+  padding-bottom: 5px;
+  label {
+    &.error {
+      position: absolute;
+      font-size: 15px;
+      color:red;
+      bottom: 5px;
+      left:0;
+    }
+  }
+  input, textarea {
+    &.error {
+      border-color: red;
+    }
+  }
+}
+
+.status-message {
+  &.success {
+    padding: 10px;
+    bottom: 0;
+    right: 0;
+    z-index: 2;
+    font-size: 15px;
+    width: 20%;
+    position: fixed;
+    color: #3c763d;
+    background-color: #dff0d8;
+    border-color: #d6e9c6;
+    border-radius: 4px;
+  }
+  &.error {
+    position: absolute;
+    bottom: 55px;
+    line-height: 21px;
+    color:red;
+  }
+}
 
 .wrapper {
   &.contact {
@@ -32,11 +72,14 @@
           }
           .hole-form {
             position: relative;
-            width: auto;
-            label {
+            width:80%;
+            .input-name {
               display: block;
               margin-bottom: 10px;
               font-size: 18px;
+            }
+            .button {
+              margin-top: 30px;
             }
           }
         }

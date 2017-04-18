@@ -1,35 +1,72 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="utf-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
 <title>404 Not Found | Local Community | Global Platform</title>
-<meta name="description" content="404 Not Found is a coworking space for IT Businesses and IT people from Moldova. We want to empower local IT community of small companies and skillied individuals to be competitive globally" />
-<link rel="icon" href="/favicon.png" type="image/png" />
-<link rel="stylesheet" href="/css/index.min.css" />
-<link rel="stylesheet" href="/css/font-awesome-4.7.0.min.css" />
+<meta name="description" content="404 Not Found is a coworking space for IT Businesses and IT people from Moldova. We want to empower local IT community of small companies and skillied individuals to be competitive globally"/>
+<meta property="og:type" content="website"/>
+<meta property="og:title" content="404 Not Found | Local Community | Global Platform"/>
+<meta property="og:description" content="404 Not Found is a coworking space for IT Businesses and IT people from Moldova. We want to empower local IT community of small companies and skillied individuals to be competitive globally"/>
+<meta property="og:url" content="https://www.404.md/"/>
+<meta property="og:image" content="https://www.404.md/images/fb.jpeg"/>
+<!-- Twitter Card-->
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="404 Not Found | Local Community | Global Platform"/>
+<meta name="twitter:description" content="404 Not Found is a coworking space for IT Businesses and IT people from Moldova. We want to empower local IT community of small companies and skillied individuals to be competitive globally"/>
+<meta name="twitter:image" content="https://www.404.md/images/fb.jpeg"/>
+<meta name="twitter:url" content="https://www.404.md/"/>
+<link rel="icon" href="/favicon.png" type="image/png"/>
+<link rel="stylesheet" href="/css/index.min.css"/>
+<link rel="stylesheet" href="/css/font-awesome-4.7.0.min.css"/>
 <!-- Google Tag Manager -->
-<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-})(window,document,'script','dataLayer','GTM-5VTK2QZ');</script>
+<script>
+(function (w, d, s, l, i) {
+    w[l] = w[l] || [];
+    w[l].push({
+        'gtm.start': new Date().getTime(), event: 'gtm.js'
+    });
+    var f = d.getElementsByTagName(s)[0],
+        j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : '';
+    j.async = true;
+    j.src = 'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+    f.parentNode.insertBefore(j, f);
+})(window, document, 'script', 'dataLayer', 'GTM-5VTK2QZ');</script>
 <!-- End Google Tag Manager -->
 </head>
 
-<body>
+<body  itemscope itemtype="https://schema.org/WebPage">
+<script>
+window.fbAsyncInit = function () {
+    FB.init({
+        appId: '1098901086881688',
+        xfbml: true,
+        version: 'v2.8'
+    });
+    FB.AppEvents.logPageView();
+};
+
+(function(d, s, id){
+    var js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) {return;}
+    js = d.createElement(s); js.id = id;
+    js.src = "//connect.facebook.net/en_US/sdk.js";
+    fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+</script>
+
 <!-- Google Tag Manager (noscript) -->
-<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5VTK2QZ"
-height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5VTK2QZ" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <!-- End Google Tag Manager (noscript) -->
 
 <div class="wrapper main">
     <div class="main-block">
         <header class="main-nav">
             <div class="container">
-                <div class="logo">
-                    <a href="https://www.404.md">
-                        <img class="img-logo" src="/images/logo.png" alt="Logo 404 Not Found" />
+                <div class="logo" itemscope itemtype="https://schema.org/Organization">
+                    <a href="https://www.404.md" itemprop="url">
+                        <img itemprop="logo" class="img-logo" src="/images/logo-right-white.svg" alt="Logo 404 Not Found" />
+                        <meta itemprop="url" content="https://www.404.md/images/logo-right-white.svg">
                     </a>
                 </div>
                 <div class="nav-top main-page-nav">
@@ -44,13 +81,15 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                             <span></span>
                         </div>
                     </div>
-                    <ul class="navt" id="myTopnav">
-                        <li><a class="link" href="/amenities/">Amenities</a></li>
-                        <li><a class="link" href="/pricing/">Pricing</a></li>
-                        <li><a class="link" href="/members/">Members</a></li>
-                        <li><a class="link" href="/tour/">Book a Tour</a></li>
-                        <li><a class="link" href="/contact/">Contact</a></li>
-                        <li><a class="last-line" href="https://blog.404.md"><span class="blog">blog</span></a></li>
+                    <ul class="navt" id="myTopnav" itemscope="itemscope" itemtype="https://schema.org/SiteNavigationElement">
+                        <li itemprop="name"><a class="link" href="/amenities/" itemprop="url">Amenities</a></li>
+                        <li itemprop="name"><a class="link" href="/pricing/" itemprop="url">Pricing</a></li>
+                        <li itemprop="name"><a class="link" href="/members/" itemprop="url">Members</a></li>
+                        <li itemprop="name"><a class="link" href="/tour/" itemprop="url">Book a Tour</a></li>
+                        <li itemprop="name"><a class="link" href="/media/">Media</a></li>
+                        <li itemprop="name"><a class="link" href="/gallery/">Gallery</a></li>
+                        <li itemprop="name"><a class="link" href="/contact/" itemprop="url">Contact</a></li>
+                        <li itemprop="name"><a class="last-line" href="https://blog.404.md" itemprop="url"><span class="blog">blog</span></a></li>
                     </ul>
                     <div class="language">
                         <a href="/ro/"><img src="/images/flag-ro.png"> ro</a>
@@ -62,10 +101,10 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         </header>
 
         <section class="container main-info">
-            <div class="local-com">
-                <h1>Local Community.</h1>
-                <h2>Global Platform.</h2>
-                <div class="text-center">404 Not Found is a coworking space for IT businesses and IT people from Moldova.
+            <div class="local-com" itemscope itemtype="https://schema.org/Organization">
+                <h1 itemprop="name">Local Community.</h1>
+                <h2 itemprop="name">Global Platform.</h2>
+                <div itemprop="description" class="text-center">404 Not Found is a coworking space for IT businesses and IT people from Moldova.
                     We want to empower local IT community of small companies and skilled individuals
                     to be competitive globally. Members of our community are proud to be working with
                     Fortune 500 customers from Europe and USA.
@@ -73,18 +112,30 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 <!--<div class="text-upercase">Grand opening on March 10.
                     <div>Come in and reserve your space.</div>
                 </div>-->
-                <div class="more">
-                    <a class="more-about" href="/tour/">Book a Tour</a>
+                <div class="more" itemscope itemtype="https://schema.org/SiteNavigationElement">
+                    <a class="more-about" href="/tour/" itemprop="url">Book a Tour</a>
                 </div>
             </div>
         </section>
     </div>
     <div class="container">
-        <section class="partners">
-            <div class="usaid"><img src="/images/logo-usaid.png" alt="USAID from the American People" /></div>
-            <div class="sweden"><img src="/images/logo-sweden.png" alt="Government of Sweden" /></div>
-            <div class="pycoding"><img src="/images/logo-pycoding.svg" alt="PyCoding Moldova" /></div>
-            <div class="mitoc"><img src="/images/logo-mitoc.svg" alt="Mitoc Group USA" /></div>
+        <section class="partners" itemscope itemtype="https://schema.org/Organization">
+            <div class="usaid">
+                <img itemprop="logo" src="/images/logo-usaid.png" alt="USAID from the American People" />
+                <meta itemprop="url" content="https://www.404.md/images/logo-usaid.png">
+            </div>
+            <div class="sweden">
+                <img itemprop="logo" src="/images/logo-sweden.png" alt="Government of Sweden" />
+                <meta itemprop="url" content="https://www.404.md/images/logo-sweden.png">
+            </div>
+            <div class="pycoding">
+                <img itemprop="logo" src="/images/logo-pycoding.svg" alt="PyCoding Moldova" />
+                <meta itemprop="url" content="https://www.404.md/images/logo-pycoding.svg">
+            </div>
+            <div class="mitoc">
+                <img itemprop="logo" src="/images/logo-mitoc.svg" alt="Mitoc Group USA" />
+                <meta itemprop="url" content="https://www.404.md/images/logo-mitoc.svg">
+            </div>
         </section>
     </div>
 </div>
@@ -93,18 +144,19 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <div class="contacts">
     <div class="container get-in-touch">
         <div class="block-1"><img src="/images/logo-below-white.svg" alt="Logo 404 Not Found" /></div>
-        <div class="block-2">
+        <div class="block-2" itemscope itemtype="https://schema.org/AboutPage">
             <h4 class="connect-us">About us</h4>
-            404 Not Found is a coworking space for IT businesses and IT people from Moldova.
+            <span itemprop="description">404 Not Found is a coworking space for IT businesses and IT people from Moldova.
             We want to empower local community of small companies and skilled individuals
             to be competitive globally. Members of our community are proud to be working
             with Fortune 500 customers from Europe and USA.
+            </span>
         </div>
-        <div class="block-3">
+        <div class="block-3" itemprop="address" itemscope itemtype="https://schema.org/PostalAddress">
             <h4 class="connect-us">Get in touch</h4>
-            <div class="one-line">
+            <div class="one-line" >
                 <i class="fa fa-envelope" aria-hidden="true"></i>
-                <a href="mailto:info@404.md">info@404.md</a>
+                <a href="mailto:info@404.md" itemprop="email">info@404.md</a>
             </div>
             <div class="one-line">
                 <i class="fa fa-phone" aria-hidden="true"></i>
@@ -112,25 +164,25 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             </div>
             <div class="one-line">
                 <i class="fa fa-map-marker" aria-hidden="true"></i>
-                <a href="https://goo.gl/maps/GvA1ChgPJ4U2">Blvd. Dacia #23, et. 3
-                <span class="one-line new-line">Chisinau, Moldova</span></a>
+                <a itemprop="streetAddress" href="https://goo.gl/maps/GvA1ChgPJ4U2"><span itemprop="streetAddress">Blvd. Dacia #23, et. 3</span>
+                <span itemprop="addressLocality" class="one-line new-line">Chisinau, Moldova</span></a>
             </div>
         </div>
-        <div class="block-4">
+        <div class="block-4" itemscope itemtype="https://schema.org/Organization">
             <h4 class="connect-us">Connect with us</h4>
             <div class="one-line display-flex">
-                <a href="https://www.facebook.com/404moldova"><i class="fa fa-facebook" aria-hidden="true"></i></a>
-                <a href="https://twitter.com/404moldova"><i class="fa fa-twitter" aria-hidden="true"></i></a>
-                <a href="https://www.linkedin.com/company/404-moldova"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
-                <a href="https://www.pinterest.com/404moldova/"><i class="fa fa-pinterest-p" aria-hidden="true"></i></a>
-                <a href="https://404md.slack.com/messages/general/"><i class="fa fa-slack" aria-hidden="true"></i></a>
+                <a href="https://www.facebook.com/404moldova" itemprop="sameAs"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+                <a href="https://twitter.com/404moldova" itemprop="sameAs"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+                <a href="https://www.linkedin.com/company/404-moldova" itemprop="sameAs"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
+                <a href="https://www.pinterest.com/404moldova/" itemprop="sameAs"><i class="fa fa-pinterest-p" aria-hidden="true"></i></a>
+                <a href="https://pycoding.slack.com/messages/general/" itemprop="sameAs"><i class="fa fa-slack" aria-hidden="true"></i></a>
             </div>
             <div class="one-line display-flex">
-                <a href="https://ok.ru/md404"><i class="fa fa-odnoklassniki" aria-hidden="true"></i></a>
-                <a href="https://vk.com/md404"><i class="fa fa-vk" aria-hidden="true"></i></a>
-                <a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a>
-                <a href="https://github.com/404md"><i class="fa fa-github" aria-hidden="true"></i></a>
-                <a href="https://plus.google.com/u/0/107643683758390437710"><i class="fa fa-google-plus" aria-hidden="true"></i></a>
+                <a href="https://ok.ru/md404" itemprop="sameAs"><i class="fa fa-odnoklassniki" aria-hidden="true"></i></a>
+                <a href="https://vk.com/md404" itemprop="sameAs"><i class="fa fa-vk" aria-hidden="true"></i></a>
+                <a href="https://instagram.com/404_moldova" itemprop="sameAs"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+                <a href="https://github.com/404md" itemprop="sameAs"><i class="fa fa-github" aria-hidden="true"></i></a>
+                <a href="https://plus.google.com/u/0/107643683758390437710" itemprop="sameAs"><i class="fa fa-google-plus" aria-hidden="true"></i></a>
             </div>
         </div>
     </div>
@@ -142,14 +194,16 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             2017 &copy; PyCoding SRL
             <a href="/terms/">Terms of Use</a>
         </div>
-        <div class="right-footer">
+        <div class="right-footer" itemscope="itemscope" itemtype="https://schema.org/SiteNavigationElement">
             <ul>
-                <li><a href="/amenities/">Amenities</a></li>
-                <li><a href="/pricing/">Pricing</a></li>
-                <li><a href="/members/">Members</a></li>
-                <li><a href="/tour/">Book a Tour</a></li>
-                <li><a href="/contact/">Contact</a></li>
-                <li><a href="https://blog.404.md">Blog</a></li>
+                <li itemprop="name"><a href="/amenities/" itemprop="url">Amenities</a></li>
+                <li itemprop="name"><a href="/pricing/" itemprop="url">Pricing</a></li>
+                <li itemprop="name"><a href="/members/" itemprop="url">Members</a></li>
+                <li itemprop="name"><a href="/tour/" itemprop="url">Book a Tour</a></li>
+                <li itemprop="name"><a href="/media/">Media</a></li>
+                <li itemprop="name"><a href="/gallery/">Gallery</a></li>
+                <li itemprop="name"><a href="/contact/" itemprop="url">Contact</a></li>
+                <li itemprop="name"><a itemprop="url" href="https://blog.404.md">Blog</a></li>
             </ul>
         </div>
         <div class="clear"></div>

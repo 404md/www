@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><meta charset="UTF-8"></head>
+<body style="margin: 10px">
+    <p>Hello, someone wants to get in touch with you.</p>
+    <p>
+        <strong>From: </strong>{{ Name }}<br>
+        <strong>Email:</strong> {{ Email }}
+        {% if Phone %}
+            <br><strong>Phone:</strong> {{ Phone }}
+        {% endif %}
+    </p>
+    <p><strong>Message:</strong></p>
+    <p style="padding-left: 15px;">{{ Message }}</p>
+</body>
+</html>

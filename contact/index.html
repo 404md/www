@@ -1,33 +1,70 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="utf-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
 <title>Contact | 404 Not Found | Local Community | Global Platform</title>
-<meta name="description" content="404 Not Found is a coworking space for IT Businesses and IT people from Moldova. We want to empower local IT community of small companies and skillied individuals to be competitive globally" />
-<link rel="icon" href="/favicon.png" type="image/png" />
-<link rel="stylesheet" href="../css/index.min.css" />
-<link rel="stylesheet" href="../css/font-awesome-4.7.0.min.css" />
+<meta name="description" content="404 Not Found is a coworking space for IT Businesses and IT people from Moldova. We want to empower local IT community of small companies and skillied individuals to be competitive globally"/>
+<meta property="og:type" content="website"/>
+<meta property="og:title" content="Contact | 404 Not Found | Local Community | Global Platform"/>
+<meta property="og:description" content="404 Not Found is a coworking space for IT Businesses and IT people from Moldova. We want to empower local IT community of small companies and skillied individuals to be competitive globally"/>
+<meta property="og:url" content="https://www.404.md/contact/"/>
+<meta property="og:image" content="https://www.404.md/images/fb.jpeg"/>
+<!-- Twitter Card-->
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="Contact | Local Community | Global Platform"/>
+<meta name="twitter:description" content="404 Not Found is a coworking space for IT Businesses and IT people from Moldova. We want to empower local IT community of small companies and skillied individuals to be competitive globally"/>
+<meta name="twitter:image" content="https://www.404.md/images/fb.jpeg"/>
+<meta name="twitter:url" content="https://www.404.md/contact/"/>
+<link rel="icon" href="/favicon.png" type="image/png"/>
+<link rel="stylesheet" href="../css/index.min.css"/>
+<link rel="stylesheet" href="../css/font-awesome-4.7.0.min.css"/>
 <!-- Google Tag Manager -->
-<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-})(window,document,'script','dataLayer','GTM-5VTK2QZ');</script>
+<script>
+(function (w, d, s, l, i) {
+    w[l] = w[l] || [];
+    w[l].push({
+        'gtm.start': new Date().getTime(), event: 'gtm.js'
+    });
+    var f = d.getElementsByTagName(s)[0],
+        j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : '';
+    j.async = true;
+    j.src = 'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+    f.parentNode.insertBefore(j, f);
+})(window, document, 'script', 'dataLayer', 'GTM-5VTK2QZ');</script>
 <!-- End Google Tag Manager -->
 </head>
 
-<body>
+<body itemscope itemtype="https://schema.org/WebPage">
+<script>
+window.fbAsyncInit = function () {
+    FB.init({
+        appId: '1098901086881688',
+        xfbml: true,
+        version: 'v2.8'
+    });
+    FB.AppEvents.logPageView();
+};
+
+(function(d, s, id){
+    var js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) {return;}
+    js = d.createElement(s); js.id = id;
+    js.src = "//connect.facebook.net/en_US/sdk.js";
+    fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+</script>
+
 <!-- Google Tag Manager (noscript) -->
-<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5VTK2QZ"
-height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5VTK2QZ" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <!-- End Google Tag Manager (noscript) -->
 
 <header class="main-nav">
     <div class="container">
-        <div class="logo">
-            <a href="https://www.404.md">
-                <img class="img-logo" src="../images/logo-right-black.svg" alt="Logo 404 Not Found" />
+        <div class="logo" itemscope itemtype="https://schema.org/Organization">
+            <a href="https://www.404.md" itemprop="url">
+                <img itemprop="logo" class="img-logo" src="../images/logo-right-black.svg" alt="Logo 404 Not Found" />
+                <meta itemprop="url" content="https://www.404.md/images/logo-right-black.svg">
             </a>
         </div>
         <div class="nav-top">
@@ -47,6 +84,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 <li><a class="link" href="/pricing/">Pricing</a></li>
                 <li><a class="link" href="/members/">Members</a></li>
                 <li><a class="link" href="/tour/">Book a Tour</a></li>
+                <li><a class="link" href="/media/">Media</a></li>
+                <li><a class="link" href="/gallery/">Gallery</a></li>
                 <li><a class="link active" href="/contact/">Contact</a></li>
                 <li><a class="last-line" href="https://blog.404.md"><span class="blog">blog</span></a></li>
             </ul>
@@ -79,29 +118,27 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <div class="container">
             <div id="map" class="map-style"></div>
             <div class="input-field">
-                <form class="hole-form" method="post">
+                <form id="contact-us-form" class="hole-form">
                    <div class="heading-contact">Get in touch</div>
-                    <div>
-                        <label for="name">Name</label>
+                    <div class="error-m">
+                        <label class="input-name" for="name">Name</label>
                         <input class="input-style" type="text" id="name" name="user_name" placeholder="e.g. Vlad Ursu" />
                     </div>
-                    <div>
-                        <label for="phone">Phone</label>
+                    <div class="error-m">
+                        <label class="input-name" for="phone">Phone</label>
                         <input class="input-style" type="tel" id="phone" name="user_phone" placeholder="e.g. 022 999 999" />
                     </div>
-                    <div>
-                        <label for="mail">E-mail</label>
+                    <div class="error-m">
+                        <label class="input-name" for="mail">E-mail</label>
                         <input class="input-style" type="email" id="mail" name="user_mail" placeholder="e.g. vlad.ursu@email.com" />
                     </div>
-                    <div>
-                        <label for="msg">Message</label>
+                    <div class="error-m">
+                        <label class="input-name" for="msg">Message</label>
                         <textarea class="text-style" id="msg" name="user_message" placeholder="Please Tell Us Your Feedback" rows="4"></textarea>
                     </div>
-                    <div class="recaptcha-center">
-                        <div class="g-recaptcha"  data-sitekey="6LcHAgkTAAAAAHP1uEknBzH3ZeeqciGJEXVgZAJm"></div>
-                    </div>
-                    <br/>
-                    <button class="button button-contact " type="submit">Submit</button>
+                    <div id="reCaptcha"></div>
+                    <div class="status-message"></div>
+                    <button class="button button-contact" type="submit">Submit</button>
                 </form>
             </div>
         </div>
@@ -115,9 +152,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                         <div class="avatar">
                             <img src="../images/avatar-vlad1.png" alt="Vlad U.">
                         </div>
-                        <div class="comment">
-                            <span class="avatar-comment">Vlad U.</span>
-                            <span>"404.md keeps me motivated."</span>
+                        <div class="comment" itemscope itemtype="https://schema.org/UserComments">
+                            <span class="avatar-comment" itemprop="name">Vlad U.</span>
+                            <span itemprop="commentText">"404.md keeps me motivated"</span>
                         </div>
                     </div>
                 </div>
@@ -128,9 +165,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                         <div class="avatar">
                             <img src="../images/avatar-cristi1.png" alt="Cristi C.">
                         </div>
-                        <div class="comment">
-                            <span class="avatar-comment">Cristi C.</span>
-                            <span>"404 Great place to work with professionals devs."</span>
+                        <div class="comment" itemscope itemtype="https://schema.org/UserComments">
+                            <span class="avatar-comment" itemprop="name">Cristi C.</span>
+                            <span itemprop="commentText">"404 Great place to work with professionals devs"</span>
                         </div>
                     </div>
                 </div>
@@ -144,9 +181,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                         <div class="avatar">
                             <img src="../images/avatar-eugen1.png" alt="Eugen I." />
                         </div>
-                        <div class="comment">
-                            <span class="avatar-comment">Eugen I.</span>
-                            <span>"404.md inspires me to do good."</span>
+                        <div class="comment" itemscope itemtype="https://schema.org/UserComments">
+                            <span class="avatar-comment" itemprop="name">Eugen I.</span>
+                            <span itemprop="commentText">"404.md inspires me to do good"</span>
                         </div>
                     </div>
                 </div>
@@ -156,11 +193,23 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     </section>
 
     <div class="container">
-        <section class="partners">
-            <div class="usaid"><img src="../images/logo-usaid.png" alt="USAID from the American People" /></div>
-            <div class="sweden"><img src="../images/logo-sweden.png" alt="Government of Sweden" /></div>
-            <div class="pycoding"><img src="../images/logo-pycoding.svg" alt="PyCoding Moldova" /></div>
-            <div class="mitoc"><img src="../images/logo-mitoc.svg" alt="Mitoc Group USA" /></div>
+        <section class="partners" itemscope itemtype="https://schema.org/Organization">
+            <div class="usaid">
+                <img itemprop="logo" src="../images/logo-usaid.png" alt="USAID from the American People" />
+                <meta itemprop="url" content="https://www.404.md/images/logo-usaid.png">
+            </div>
+            <div class="sweden">
+                <img itemprop="logo" src="../images/logo-sweden.png" alt="Government of Sweden" />
+                <meta itemprop="url" content="https://www.404.md/images/logo-sweden.png">
+            </div>
+            <div class="pycoding">
+                <img itemprop="logo" src="../images/logo-pycoding.svg" alt="PyCoding Moldova" />
+                <meta itemprop="url" content="https://www.404.md/images/logo-pycoding.svg">
+            </div>
+            <div class="mitoc">
+                <img itemprop="logo" src="../images/logo-mitoc.svg" alt="Mitoc Group USA" />
+                <meta itemprop="url" content="https://www.404.md/images/logo-mitoc.svg">
+            </div>
         </section>
     </div>
 </div>
@@ -169,18 +218,19 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <div class="contacts">
     <div class="container get-in-touch">
         <div class="block-1"><img src="../images/logo-below-white.svg" alt="Logo 404 Not Found" /></div>
-        <div class="block-2">
+        <div class="block-2" itemscope itemtype="https://schema.org/AboutPage">
             <h4 class="connect-us">About us</h4>
-            404 Not Found is a coworking space for IT businesses and IT people from Moldova.
+            <span itemprop="description">404 Not Found is a coworking space for IT businesses and IT people from Moldova.
             We want to empower local community of small companies and skilled individuals
             to be competitive globally. Members of our community are proud to be working
             with Fortune 500 customers from Europe and USA.
+            </span>
         </div>
-        <div class="block-3">
+        <div class="block-3" itemprop="address" itemscope itemtype="https://schema.org/PostalAddress">
             <h4 class="connect-us">Get in touch</h4>
             <div class="one-line">
                 <i class="fa fa-envelope" aria-hidden="true"></i>
-                <a href="mailto:info@404.md">info@404.md</a>
+                <a href="mailto:info@404.md" itemprop="email">info@404.md</a>
             </div>
             <div class="one-line">
                 <i class="fa fa-phone" aria-hidden="true"></i>
@@ -188,25 +238,25 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             </div>
             <div class="one-line">
                 <i class="fa fa-map-marker" aria-hidden="true"></i>
-                <a href="https://goo.gl/maps/GvA1ChgPJ4U2">Blvd. Dacia #23, et. 3
-                <span class="one-line new-line">Chisinau, Moldova</span></a>
+                <a itemprop="streetAddress" href="https://goo.gl/maps/GvA1ChgPJ4U2"><span itemprop="streetAddress">Blvd. Dacia #23, et. 3</span>
+                <span class="one-line new-line" itemprop="addressLocality">Chisinau, Moldova</span></a>
             </div>
         </div>
-        <div class="block-4">
+        <div class="block-4" itemscope itemtype="https://schema.org/Organization">
             <h4 class="connect-us">Connect with us</h4>
             <div class="one-line display-flex">
-                <a href="https://www.facebook.com/404moldova"><i class="fa fa-facebook" aria-hidden="true"></i></a>
-                <a href="https://twitter.com/404moldova"><i class="fa fa-twitter" aria-hidden="true"></i></a>
-                <a href="https://www.linkedin.com/company/404-moldova"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
-                <a href="https://www.pinterest.com/404moldova/"><i class="fa fa-pinterest-p" aria-hidden="true"></i></a>
-                <a href="https://404md.slack.com/messages/general/"><i class="fa fa-slack" aria-hidden="true"></i></a>
+                <a href="https://www.facebook.com/404moldova" itemprop="sameAs"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+                <a href="https://twitter.com/404moldova" itemprop="sameAs"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+                <a href="https://www.linkedin.com/company/404-moldova" itemprop="sameAs" ><i class="fa fa-linkedin" aria-hidden="true"></i></a>
+                <a href="https://www.pinterest.com/404moldova/" itemprop="sameAs"><i class="fa fa-pinterest-p" aria-hidden="true"></i></a>
+                <a href="https://pycoding.slack.com/messages/general/" itemprop="sameAs"><i class="fa fa-slack" aria-hidden="true"></i></a>
             </div>
             <div class="one-line display-flex">
-                <a href="https://ok.ru/md404"><i class="fa fa-odnoklassniki" aria-hidden="true"></i></a>
-                <a href="https://vk.com/md404"><i class="fa fa-vk" aria-hidden="true"></i></a>
-                <a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a>
-                <a href="https://github.com/404md"><i class="fa fa-github" aria-hidden="true"></i></a>
-                <a href="https://plus.google.com/u/0/107643683758390437710"><i class="fa fa-google-plus" aria-hidden="true"></i></a>
+                <a href="https://ok.ru/md404" itemprop="sameAs"><i class="fa fa-odnoklassniki" aria-hidden="true"></i></a>
+                <a href="https://vk.com/md404" itemprop="sameAs"><i class="fa fa-vk" aria-hidden="true"></i></a>
+                <a href="https://instagram.com/404_moldova" itemprop="sameAs"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+                <a href="https://github.com/404md" itemprop="sameAs"><i class="fa fa-github" aria-hidden="true"></i></a>
+                <a href="https://plus.google.com/u/0/107643683758390437710" itemprop="sameAs"><i class="fa fa-google-plus" aria-hidden="true"></i></a>
             </div>
         </div>
     </div>
@@ -224,6 +274,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 <li><a href="/pricing/">Pricing</a></li>
                 <li><a href="/members/">Members</a></li>
                 <li><a href="/tour/">Book a Tour</a></li>
+                <li><a href="/media/">Media</a></li>
+                <li><a href="/gallery/">Gallery</a></li>
                 <li><a href="/contact/">Contact</a></li>
                 <li><a href="https://blog.404.md">Blog</a></li>
             </ul>
@@ -233,10 +285,13 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 </div>
 </footer>
 
-<script type="text/javascript" src="../js/jquery-1.11.0.min.js"></script>
-<script type="text/javascript" src="../js/main.min.js"></script>
-<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBMl1HPvxC30Mtcbe6gKWZjiccGAYopsQA&callback=myMap" async defer></script>
-<script type="text/javascript" src="https://www.google.com/recaptcha/api.js" async defer></script>
+<script src="../js/jquery-1.11.0.min.js"></script>
+<script src="../js/jquery.validate.min.js"></script>
+<script src="../js/aws-sdk.min.js"></script>
+<script src="../js/main.min.js"></script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBMl1HPvxC30Mtcbe6gKWZjiccGAYopsQA&callback=myMap" async defer></script>
+<script src="https://www.google.com/recaptcha/api.js?onload=createCaptcha&render=explicit&hl=en" async defer></script>
+<script src="../js/contact.min.js"></script>
 
 </body>
 </html>

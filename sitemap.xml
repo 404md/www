@@ -30,6 +30,16 @@
   <changefreq>weekly</changefreq>
 </url>
 <url>
+  <loc>https://www.404.md/media/</loc>
+  <priority>0.80</priority>
+  <changefreq>weekly</changefreq>
+</url>
+<url>
+  <loc>https://www.404.md/gallery/</loc>
+  <priority>0.80</priority>
+  <changefreq>weekly</changefreq>
+</url>
+<url>
   <loc>https://www.404.md/contact/</loc>
   <priority>0.80</priority>
   <changefreq>weekly</changefreq>
@@ -65,6 +75,16 @@
   <changefreq>weekly</changefreq>
 </url>
 <url>
+  <loc>https://www.404.md/ro/media/</loc>
+  <priority>0.80</priority>
+  <changefreq>weekly</changefreq>
+</url>
+<url>
+  <loc>https://www.404.md/ro/gallery/</loc>
+  <priority>0.80</priority>
+  <changefreq>weekly</changefreq>
+</url>
+<url>
   <loc>https://www.404.md/ro/contact/</loc>
   <priority>0.80</priority>
   <changefreq>weekly</changefreq>
@@ -96,6 +116,16 @@
 </url>
 <url>
   <loc>https://www.404.md/ru/tour/</loc>
+  <priority>0.80</priority>
+  <changefreq>weekly</changefreq>
+</url>
+<url>
+  <loc>https://www.404.md/ru/media/</loc>
+  <priority>0.80</priority>
+  <changefreq>weekly</changefreq>
+</url>
+<url>
+  <loc>https://www.404.md/ru/gallery/</loc>
   <priority>0.80</priority>
   <changefreq>weekly</changefreq>
 </url>

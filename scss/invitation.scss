@@ -21,14 +21,14 @@
 }
 
 .contacts-invite {
-  width: 80%;
+  width: 90%;
   margin: 0 auto;
 }
 
 
 .form-block {
   display: inline-block;
-  width: 40%;
+  width: 38%;
 }
 
 .remove-circle {
@@ -98,10 +98,12 @@
           .form-invite {
             .contacts-invite {
               .form-block {
-                &.get-sales {
-                  .sales-fiels {
+                &.change-color {
+                  &.get-sales {
+                    .sales-fiels {
                       border-color:#dd5931;
                       color:#dd5931;
+                    }
                   }
                 }
                 &:first-child {
@@ -131,13 +133,22 @@
                   background: white;
                   border-radius: 50%;
                   border: 2px solid;
-                  padding: 16px 7px;
                   font-size: 25px;
+                  height: 65px;
+                  width: 65px;
+                  line-height: 60px;
+                  display: inline-block;
                 }
                 .input-style {
                   &:focus {
                     border: 2px solid #454545;
                   }
+                }
+                &.trash {
+                  width: 5%;
+                  color:red;
+                  cursor: pointer;
+
                 }
               }
               .button {
@@ -161,6 +172,19 @@
                   &:after {
                     content: " ";
                     display: none;
+                  }
+                }
+
+                .total-get-sales {
+                  .filled-field {
+                    border-color: #dd5931;
+                    color: #dd5931;
+                  }
+                }
+                &.gray-circle {
+                  .btn-circle {
+                    color: #aaaaaa;
+                    background: white;
                   }
                 }
               }

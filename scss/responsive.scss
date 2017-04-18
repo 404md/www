@@ -35,6 +35,13 @@
 }
 
 @media (max-width: 1200px) {
+  .left-fb-block {
+    float:none;
+    text-align: center;
+    margin-bottom: 30px;
+    margin-left: 0;
+    margin-right: 0;
+  }
   .wrapper {
     &.main {
       .main-block {
@@ -118,7 +125,6 @@
             }
           }
         }
-
         .open + .navt{
           display: block;
         }
@@ -417,6 +423,15 @@
 }
 
 @media screen and (max-width: 992px) {
+  .video-media {
+    &.display-flex {
+      justify-content: space-around;
+    }
+    .media-gallery {
+      width: 45%;
+      margin-bottom: 30px;
+    }
+  }
   .booking-form {
     #mc_embed_signup {
       width: auto;
@@ -580,9 +595,7 @@
                height: auto;
                 margin-right: 20px;
                 margin-bottom: 10px;
-
               }
-
               .description {
                 .block-responsive {
                   width: 100%;
@@ -610,7 +623,6 @@
               width: 100%;
               .form {
                 width: auto;
-
               }
             }
           }
@@ -619,6 +631,19 @@
     }
     &.invitation {
       .main-block {
+        .form-invitation {
+          .container {
+            .form-invite {
+              .contacts-invite {
+                .form-block {
+                  &.trash {
+                    width: 4%;
+                  }
+                }
+              }
+            }
+          }
+        }
         .container {
           .add-friends {
             margin-top: 20px;
@@ -660,7 +685,6 @@
       }
     }
   }
-
   .gallery {
     &.members-gallery, &.connect-us {
     .gallery-line {
@@ -670,6 +694,25 @@
   }
 }
 
+@media (max-width: 720px) {
+  .wrapper {
+    &.invitation {
+      .main-block {
+        .form-invitation {
+          .container {
+            .form-invite {
+              .contacts-invite {
+                .form-block {
+                  width: 35%;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
 
 @media (max-width: 680px) {
   .wrapper {
@@ -680,7 +723,6 @@
             .form-invite {
               .contacts-invite {
                 .form-block {
-                  width: 39%;
                   span {
                     font-size: 22px;
                   }
@@ -697,20 +739,38 @@
   }
 }
 
+@media (max-width: 600px) {
+  .fb-container {
+    display: none;
+  }
+  .fb-container-responsive {
+    display: block;
+    .left-fb-block {
+      float: none;
+      margin: 0;
+      display: flex;
+      justify-content: center;
+      iframe[style] {
+        width: 66% !important;
+      }
+    }
+  }
+}
+
 @media (max-width: 768px) {
- .main-nav {
-   .container {
-     .nav-top {
-       .navt {
-         li {
-           .link, .last-line {
-             width: auto;
-           }
-         }
-       }
-     }
-   }
- }
+  .main-nav {
+    .container {
+      .nav-top {
+        .navt {
+          li {
+            .link, .last-line {
+              width: auto;
+            }
+          }
+        }
+      }
+    }
+  }
 }
 
 @media (max-width: 736px) {
@@ -885,6 +945,14 @@
 }
 
 @media (max-width: 645px) {
+  #video {
+    height: 300px;
+  }
+  .image {
+    &.video {
+      height: 300px;
+    }
+  }
   .new-page{
     .pages {
       .page-name {
@@ -957,6 +1025,18 @@
 }
 
 @media (max-width: 639px) {
+  .video-media {
+    .media-gallery {
+      width: 80%;
+      .block-link {
+        .media-title {
+          font-size: 18px;
+          line-height: 25px;
+
+        }
+      }
+    }
+  }
   .text-upercase {
     text-align: center;
   }
@@ -1121,10 +1201,13 @@
             .form-invite {
               .contacts-invite {
                 .form-block {
-                  width: 65%;
+                  width: 60%;
                   &:nth-child(3) {
                     top: -47px;
                     width: 30%;
+                  }
+                  &.trash {
+                    position: absolute;
                   }
                 }
                 &.total {

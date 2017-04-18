@@ -103,9 +103,5 @@ build/Release
 
 # Debug log from npm
 npm-debug.log
+.sass-cache/
 
-
-#####=== DEEP ===#####
-# Tests resources
-package.json
-**/.sass-cache/
