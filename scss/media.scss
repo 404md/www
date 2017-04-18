@@ -3,6 +3,19 @@
   height: 642px;
 }
 
+.back-color {
+  position: relative;
+}
+
+.black-gr {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: linear-gradient(to top, rgba(0, 0, 0, 0.7) 0%, rgba(255, 255, 255, 0) 95% );
+}
+
 .image {
   &.video {
     height: 642px;
@@ -68,7 +81,7 @@
 
 .logo-media {
   position: absolute;
-  bottom: 113px;
+  bottom: 110px;
   padding: 20px;
   color: white;
   font-size: 17px;
@@ -85,12 +98,12 @@
 .video-media {
   .media-gallery {
     position: relative;
-    width:30%;
+    width: 30%;
     margin-bottom: 60px;
-    color:black;
+    color: black;
     .block-link {
       display: block;
-      color:black;
+      color: black;
       .image-media {
         width: 100%;
         height: auto;
@@ -102,11 +115,9 @@
         padding: 15px;
         font-size: 18px;
       }
-      &:hover img {
-        opacity: 0.6;
-      }
+
       &:hover {
-        color:#dd5931;
+        color: #dd5931;
       }
     }
   }

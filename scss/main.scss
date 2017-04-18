@@ -695,9 +695,9 @@ body {
       bottom: 0;
       left: 0;
       right:0;
-      background:#dd5931;
-      opacity: 0.8;
       position: absolute;
+      transition: 0.5s;
+      background-color: rgba(221, 89, 49, 0.8);
     }
     .we-love {
       display: block;
