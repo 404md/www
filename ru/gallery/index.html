@@ -35,7 +35,7 @@
 <!-- End Google Tag Manager -->
 </head>
 
-<body>
+<body itemscope itemtype="https://schema.org/WebPage">
 <script>
 window.fbAsyncInit = function () {
     FB.init({
@@ -119,7 +119,7 @@ window.fbAsyncInit = function () {
     </div>
 </div>
 
-<div class="wrapper photos-gallery">
+<div class="wrapper photos-gallery" itemscope itemprop="mainContentOfPage">
     <div class="main-block">
         <div class="container">
             <div class="left-fb-block" style="overflow-x: auto; max-width: 100%;">
@@ -139,14 +139,14 @@ window.fbAsyncInit = function () {
     </div>
 
     <section class="gallery photos-gallery">
-        <div class="gallery-line">
+        <div class="gallery-line" itemscope itemtype="https://schema.org/UserComments">
             <div class="pic">
                 <div class="img1 img-value img-hover">
                     <div class="we-love">
                         <div class="avatar">
                             <img src="../../images/avatar-grigore1.png" alt="Григорий M.">
                         </div>
-                        <div class="comment" itemscope itemtype="https://schema.org/UserComments">
+                        <div class="comment">
                             <span class="avatar-comment" itemprop="name">Григорий M.</span>
                             <span itemprop="commentText">"404 вдохновляет меня на работу"</span>
                         </div>
@@ -159,7 +159,7 @@ window.fbAsyncInit = function () {
                         <div class="avatar">
                             <img src="../../images/avatar-male.jpg" alt="Габриел С.">
                         </div>
-                        <div class="comment" itemscope itemtype="https://schema.org/UserComments">
+                        <div class="comment">
                             <span class="avatar-comment" itemprop="name">Габриел С.</span>
                             <span itemprop="commentText">"404 Moldova"</span>
                         </div>
@@ -175,7 +175,7 @@ window.fbAsyncInit = function () {
                         <div class="avatar">
                             <img src="../../images/avatar-tanea1.png" alt="Татьяна С.">
                         </div>
-                        <div class="comment" itemscope itemtype="https://schema.org/UserComments">
+                        <div class="comment">
                             <span class="avatar-comment" itemprop="name">Татьяна С.</span>
                             <span itemprop="commentText">"404 идеальный путь к достижениям"</span>
                         </div>
@@ -220,7 +220,7 @@ window.fbAsyncInit = function () {
             с Fortune 500 клиентами из Европы и США.
                 </span>
             </div>
-            <div class="block-3" itemprop="address" itemscope itemtype="https://schema.org/PostalAddress">
+            <div class="block-3" itemscope itemtype="https://schema.org/PostalAddress">
                 <h4 class="connect-us">Наши контакты</h4>
                 <div class="one-line">
                     <i class="fa fa-envelope" aria-hidden="true"></i>
