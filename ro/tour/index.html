@@ -35,7 +35,7 @@
 <!-- End Google Tag Manager -->
 </head>
 
-<body>
+<body itemscope itemtype="https://schema.org/WebPage">
 <script>
 window.fbAsyncInit = function () {
     FB.init({
@@ -84,7 +84,6 @@ window.fbAsyncInit = function () {
                 <li><a class="link" href="/ro/pricing/">Prețuri</a></li>
                 <li><a class="link" href="/ro/members/">Membri</a></li>
                 <li><a class="link active" href="/ro/tour/">Rezervă o Vizită</a></li>
-                <li><a class="link" href="/ro/media/">Media</a></li>
                 <li><a class="link" href="/ro/gallery/">Galerie</a></li>
                 <li><a class="link" href="/ro/contact/">Contacte</a></li>
                 <li><a class="last-line" href="https://blog.404.md"><span class="blog">blog</span></a></li>
@@ -113,7 +112,7 @@ window.fbAsyncInit = function () {
     </div>
 </div>
 
-<div class="wrapper booking">
+<div class="wrapper booking" itemscope itemprop="mainContentOfPage">
     <section class="main-block">
         <div class="container">
             <div class="back-image">
@@ -188,14 +187,14 @@ window.fbAsyncInit = function () {
     </section>
 
     <section class="gallery tour-gallery">
-        <div class="gallery-line">
+        <div class="gallery-line" itemscope itemtype="https://schema.org/UserComments">
             <div class="pic">
                 <div class="img1 img-value img-hover">
                     <div class="we-love">
                         <div class="avatar">
                             <img src="../../images/avatar-alex2.png" alt="Alexandr V.">
                         </div>
-                        <div class="comment" itemscope itemtype="https://schema.org/UserComments">
+                        <div class="comment">
                             <span class="avatar-comment" itemprop="name">Alexandr V.</span>
                             <span itemprop="commentText">"Loc confortabil și atmosferă plăcută"</span>
                         </div>
@@ -208,7 +207,7 @@ window.fbAsyncInit = function () {
                         <div class="avatar">
                             <img src="../../images/avatar-dima1.png" alt="Dima D.">
                         </div>
-                        <div class="comment" itemscope itemtype="https://schema.org/UserComments">
+                        <div class="comment">
                             <span class="avatar-comment" itemprop="name">Dima D.</span>
                             <span itemprop="commentText">"404 este locul perfect pentru atingerea succesului"</span>
                         </div>
@@ -224,7 +223,7 @@ window.fbAsyncInit = function () {
                         <div class="avatar">
                             <img src="../../images/avatar-dima2.png" alt="Dima S.">
                         </div>
-                        <div class="comment" itemscope itemtype="https://schema.org/UserComments">
+                        <div class="comment">
                             <span class="avatar-comment" itemprop="name">Dima S.</span>
                             <span itemprop="commentText">"404.md Se simte ca acasă"</span>
                         </div>
@@ -317,7 +316,6 @@ window.fbAsyncInit = function () {
                     <li><a href="/ro/pricing/">Prețuri</a></li>
                     <li><a href="/ro/members/">Membri</a></li>
                     <li><a href="/ro/tour/">Rezervă o Vizită</a></li>
-                    <li><a href="/ro/media/">Media</a></li>
                     <li><a href="/ro/gallery/">Galerie</a></li>
                     <li><a href="/ro/contact/">Contacte</a></li>
                     <li><a href="https://blog.404.md">Blog</a></li>

@@ -35,7 +35,7 @@
 <!-- End Google Tag Manager -->
 </head>
 
-<body>
+<body itemscope itemtype="https://schema.org/WebPage">
 <script>
 window.fbAsyncInit = function () {
     FB.init({
@@ -84,7 +84,6 @@ window.fbAsyncInit = function () {
                 <li><a class="link active" href="/pricing/">Pricing</a></li>
                 <li><a class="link" href="/members/">Members</a></li>
                 <li><a class="link" href="/tour/">Book a Tour</a></li>
-                <li><a class="link" href="/media/">Media</a></li>
                 <li><a class="link" href="/gallery/">Gallery</a></li>
                 <li><a class="link" href="/contact/">Contact</a></li>
                 <li><a class="last-line" href="https://blog.404.md"><span class="blog">blog</span></a></li>
@@ -113,7 +112,7 @@ window.fbAsyncInit = function () {
     </div>
 </div>
 
-<div class="wrapper pricing">
+<div class="wrapper pricing" itemscope itemprop="mainContentOfPage">
     <section class="main-block">
         <div class="container">
             <div class="display-flex" itemscope itemtype="https://schema.org/OfferCatalog">
@@ -249,14 +248,14 @@ window.fbAsyncInit = function () {
     </section>
 
     <section class="gallery pricing-gallery">
-        <div class="gallery-line">
+        <div class="gallery-line" itemscope itemtype="https://schema.org/UserComments">
             <div class="pic">
                 <div class="img1 img-value img-hover">
                     <div class="we-love">
                         <div class="avatar">
                             <img src="../images/avatar-vlad1.png" alt="Vlad U.">
                         </div>
-                        <div class="comment" itemprop="creator" itemscope itemtype="https://schema.org/UserComments">
+                        <div class="comment">
                             <span class="avatar-comment" itemprop="name">Vlad U.</span>
                             <span itemprop="commentText">"404.md keeps me motivated"</span>
                         </div>
@@ -269,7 +268,7 @@ window.fbAsyncInit = function () {
                         <div class="avatar">
                             <img src="../images/avatar-irina2.png" alt="Irina T.">
                         </div>
-                        <div class="comment" itemprop="creator" itemscope itemtype="https://schema.org/UserComments">
+                        <div class="comment">
                             <span class="avatar-comment" itemprop="name">Irina T.</span>
                             <span itemprop="commentText">"404.md opens the door to success"</span>
                         </div>
@@ -285,7 +284,7 @@ window.fbAsyncInit = function () {
                         <div class="avatar">
                             <img src="../images/avatar-cristi1.png" alt="Cristi C.">
                         </div>
-                        <div class="comment" itemprop="creator" itemscope itemtype="https://schema.org/UserComments">
+                        <div class="comment">
                             <span class="avatar-comment" itemprop="name">Cristi C.</span>
                             <span itemprop="commentText">"404 Great place to work with professionals devs"</span>
                         </div>
@@ -330,7 +329,7 @@ window.fbAsyncInit = function () {
             with Fortune 500 customers from Europe and USA.
             </span>
         </div>
-        <div class="block-3" itemprop="address" itemscope itemtype="https://schema.org/PostalAddress">
+        <div class="block-3" itemscope itemtype="https://schema.org/PostalAddress">
             <h4 class="connect-us">Get in touch</h4>
             <div class="one-line">
                 <i class="fa fa-envelope" aria-hidden="true"></i>
@@ -378,7 +377,6 @@ window.fbAsyncInit = function () {
                 <li><a href="/pricing/">Pricing</a></li>
                 <li><a href="/members/">Members</a></li>
                 <li><a href="/tour/">Book a Tour</a></li>
-                <li><a href="/media/">Media</a></li>
                 <li><a href="/gallery/">Gallery</a></li>
                 <li><a href="/contact/">Contact</a></li>
                 <li><a href="https://blog.404.md">Blog</a></li>
