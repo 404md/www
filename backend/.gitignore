@@ -2,10 +2,8 @@
 /node_modules/
 
 # Lambda related
-index.js
-files/parameters.json
-**/dist/*
-!**/dist/.gitkeep
+**/dist/
+**/config.json
 
 # npm cache directory
 .npm

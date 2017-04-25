@@ -1,0 +1,16 @@
+{
+  "name": "404md-backend-builder",
+  "version": "0.0.2",
+  "description": "Backend part for 404.md site",
+  "scripts": {
+    "generate-skeleton": "node_modules/.bin/aws-lambda-builder generate-skeleton",
+    "emulate-lambda": "node_modules/.bin/aws-lambda-builder emulate-lambda",
+    "deploy-lambda": "node_modules/.bin/aws-lambda-builder deploy-lambda"
+  },
+  "author": "ddimitrioglo",
+  "license": "MIT",
+  "dependencies": {
+    "aws-lambda-builder": "0.0.2",
+    "aws-sdk": "^2.45.0"
+  }
+}
