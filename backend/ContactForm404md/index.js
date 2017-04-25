@@ -1,12 +1,10 @@
-import ASH from 'aws-ses-helper';
-import AWS from 'aws-sdk'
-import fs from 'fs'
-
+const ASH = require('aws-ses-helper');
+const AWS = require('aws-sdk');
+const fs = require('fs');
 const ses = new AWS.SES();
-const params = JSON.parse(fs.readFileSync('files/parameters.json'));
+const params = JSON.parse(fs.readFileSync('config.json'));
 
-export function handler(event, context) {
-
+exports.handler = (event, context) => {
   let checker = new ASH.CaptchaChecker(params.captchaSecret, event.captchaResponse);
   let template = new ASH.EmailTemplate('files/message.twig', {
     Name: event.name,
@@ -37,4 +35,4 @@ export function handler(event, context) {
     .catch(err => {
       context.fail(err);
     });
-}
+};
