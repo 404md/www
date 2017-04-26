@@ -136,6 +136,5 @@ jQuery(function($) {
         $('.image').removeClass('video');
         $('.media-image').fadeIn("slow");
         $('#video').removeAttr('src');
-    })
-
+    });
 });
