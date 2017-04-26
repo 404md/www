@@ -30,7 +30,7 @@ jQuery(function($) {
     });
 
     $.ajax({
-        url: '//s3.eu-central-1.amazonaws.com/www.404.md/instagram-feed.json',
+        url: '//www.404.md/js/instagram-feed.json',
         dataType: 'json'
     }).done(function (data) {
         data.forEach(function(item) {
