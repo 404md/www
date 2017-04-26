@@ -224,6 +224,11 @@ body {
 }
 
 .wrapper {
+  &.members {
+    .new-heading {
+      padding: 40px 10px;
+    }
+  }
   &.terms {
     .main-block {
       .container {
