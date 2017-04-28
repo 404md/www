@@ -12,78 +12,88 @@
     .main-block {
       .container {
         .instagram {
-         &.slick-initialized {
-           margin-right: -10px;
-           .slick-prev {
-               top:50%;
-               left: auto;
-               z-index: 2;
-               &:before {
-                 content: '\f053';
-                 color: white;
-                 font-family: FontAwesome;
-               }
-             }
-             .slick-next {
-               top:50%;
-               right: 7px;
-               &:before {
-                 content:'\f054';
-                 color: white;
-                 font-family: FontAwesome;
-               }
-             }
-           .slick-slide {
-             margin-right: 10px;
-             position: relative;
-             .hover-hash {
-               opacity: 0;
-               position: absolute;
-               top: 0;
-               bottom: 0;
-               left: 0;
-               right: 0;
-               color:white;
-               background-color: rgba(221, 89, 49, 0.8);
-               transition: all .2s ease-in-out;
-               .hover-text {
-                 position: relative;
-                 top: 50%;
-                 left: 50%;
-                 transform: translate(-50%, -50%);
-                 text-align: center;
-                 .likes-instagram {
-                   &:before {
-                     content:'\f08a';
-                     color: white;
-                     font-family: FontAwesome;
-                     font-size: x-large;
-                     margin-right: 10px;
-                   }
-                 }
-               }
-               &:hover {
-                 opacity: 1;
-                 transition: 0.5s;
+          &.slick-initialized {
+            margin-right: -10px;
+            .slick-prev {
+              top: 50%;
+              left: auto;
+              z-index: 2;
+              &:before {
+                content: '\f053';
+                color: white;
+                font-family: FontAwesome;
+              }
+            }
+            .slick-next {
+              top: 50%;
+              right: 7px;
+              &:before {
+                content: '\f054';
+                color: white;
+                font-family: FontAwesome;
+              }
+            }
+            .slick-slide {
+              margin-right: 10px;
+              position: relative;
+              video {
+                width: 100%;
+                transition: all .2s ease-in-out;
+              }
+              .hover-hash {
+                opacity: 0;
+                position: absolute;
+                top: 0;
+                bottom: 0;
+                left: 0;
+                right: 0;
+                color: white;
+                background-color: rgba(221, 89, 49, 0.8);
+                transition: all .2s ease-in-out;
+                .hover-text {
+                  position: relative;
+                  top: 50%;
+                  left: 50%;
+                  transform: translate(-50%, -50%);
+                  text-align: center;
+                  .likes-instagram {
+                    &:before {
+                      content: '\f08a';
+                      color: white;
+                      font-family: FontAwesome;
+                      font-size: x-large;
+                      margin-right: 10px;
+                    }
+                  }
+                }
+                &:hover {
+                  opacity: 1;
+                  transition: 0.5s;
 
-               }
-             }
-           }
-           .slick-list {
-             .slick-track {
-               .slick-slide {
-                 overflow: hidden;
-                 img {
-                   width: 100%;
-                   transition: all .2s ease-in-out;
-                   &:hover {
-                     transform: scale(1.2);
-                   }
-                 }
-               }
-             }
-           }
-         }
+                }
+                .hashtags {
+                  padding: 0 15px;
+                }
+              }
+            }
+            .slick-list {
+              .slick-track {
+                .slick-slide {
+                  overflow: hidden;
+                  &:hover img {
+                    transform: scale(1.1);
+                  }
+                  &:hover video {
+                    transform: scale(1.1);
+                  }
+                  img {
+                    width: 100%;
+                    transition: all .2s ease-in-out;
+                  }
+                }
+              }
+            }
+          }
         }
       }
     }

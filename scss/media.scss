@@ -89,6 +89,10 @@
     font-size: 19px;
     margin-right: 5px;
   }
+  .info-logo {
+    vertical-align:text-bottom;
+    margin-right: 3px;
+  }
   .img-logo {
     background: white;
     vertical-align: baseline;
@@ -97,6 +101,9 @@
 }
 
 .video-media {
+  &.display-flex {
+    justify-content: space-around;
+  }
   .media-gallery {
     position: relative;
     width: 30%;

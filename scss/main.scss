@@ -224,6 +224,41 @@ body {
 }
 
 .wrapper {
+  &.notfound-page {
+    min-height: 500px;
+    .main-block {
+      &.notfound {
+        min-height: 500px;
+        background: #f5f5f4;
+        .container {
+          height: 500px;
+          h1{
+            font-size: 95px;
+            position: relative;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+            &:before {
+              content: '';
+              position: absolute;
+              width: 165px;
+              height: 7px;
+              background: #dd5931;
+              bottom: 0;
+            }
+            a {
+              color: #000000;
+              &:hover {
+                color: #dd5931;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
   &.members {
     .new-heading {
       padding: 40px 10px;
