@@ -9,10 +9,13 @@ exports.handler = (event, context) => {
   getUserFeed().then(res => {
     let feed = res.data.map(item => {
       return {
+        type: item.type,
         link: item.link,
+        description: item.caption.text,
         tags: item.tags,
         likes: item.likes,
-        images: item.images.standard_resolution
+        images: (item.type === 'image') ? item.images.standard_resolution : {},
+        videos: (item.type === 'video') ? item.videos.standard_resolution : {},
       };
     });
 
