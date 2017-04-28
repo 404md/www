@@ -17,7 +17,6 @@ jQuery(function($) {
 
                 }
             },
-
             {
                 breakpoint: 480,
                 settings: {
@@ -26,39 +25,32 @@ jQuery(function($) {
                 }
             }
         ]
-
     });
 
     $.ajax({
-        url: '//www.404.md/js/instagram-feed.json',
+        url: '//www.404.md/instagram-feed.json',
         dataType: 'json'
     }).done(function (data) {
         data.forEach(function(item) {
-          
-              console.log(item.images.url);
-            console.log(item.link);
-            console.log(item.description);
-
             var hoverBlock = "<div class='hover-hash'><div class='hover-text'><div class='likes-instagram'>"+
                 item.likes.count +"</div><div class='hashtags'>"+ item.description +"</div></div></div>";
             var originalPost = "<a href='"+ item.link +"' target='_blank'>" + hoverBlock + "</a>";
-            var content;
-            if (item.type == 'image') {
-                content ="<img src='"+ item.images.url +"'>";
-            } else {
-                // 4to nibudi dlea video
-                content = "<div><video><source src='"+ item.videos.url +"'></video></div>"
 
-            }
+            var content = "<img src='"+ item.images.url +"'>";
 
+            // @todo adapt for video content
+            // if (item.type == 'image') {
+            //     content ="<img src='"+ item.images.url +"'>";
+            // } else {
+            //     // 4to nibudi dlea video
+            //     content = "<div><video><source src='"+ item.videos.url +"'></video></div>"
+            // }
             $('.instagram').slick('slickAdd',"<div>"+ content + originalPost +"</div>");
         });
     });
 
     var bar1 = new ProgressBar.Circle(".circle1", {
         color: '#aaa',
-        // This has to be the same size as the maximum width to
-        // prevent clipping
         strokeWidth: 4,
         trailWidth: 4,
         easing: 'easeInOut',
@@ -145,7 +137,5 @@ jQuery(function($) {
             bar3.animate(1.0);
             wasShown = true;
         }
-
     })
-
 });
