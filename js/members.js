@@ -1,10 +1,11 @@
 jQuery(function($) {
     "use strict";
 
-    $('.our-members').slick({
+    $('.instagram').slick({
         infinite: true,
         slidesToShow: 3,
         slidesToScroll: 1,
+        dots: false,
         responsive: [
             {
                 breakpoint: 992,
@@ -16,7 +17,7 @@ jQuery(function($) {
 
                 }
             },
-            
+
             {
                 breakpoint: 480,
                 settings: {
@@ -26,6 +27,21 @@ jQuery(function($) {
             }
         ]
 
+    });
+
+    $.ajax({
+        url: '//www.404.md/js/instagram-feed.json',
+        dataType: 'json'
+    }).done(function (data) {
+        data.forEach(function(item) {
+            console.log(item.images.url);
+            console.log(item.tags);
+            console.log(item.likes);
+            var tagsStr = item.tags.map(function(tag) {
+                return '#'+tag;
+            }).join(', ');
+            $('.instagram').slick('slickAdd',"<div><img src='"+ item.images.url +"'/><a href='"+ item.link +" ' target = \"_blank\"><div class='hover-hash'><div class='hover-text'><div class='likes-instagram'>"+  item.likes.count +"</div><div>"+ tagsStr +"</div></div></div></a></div></div>");
+        });
     });
 
     var bar1 = new ProgressBar.Circle(".circle1", {
