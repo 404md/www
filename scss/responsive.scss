@@ -455,7 +455,6 @@
             .link, .last-line {
               width: 750px;
             }
-
           }
         }
         .language {
@@ -679,6 +678,17 @@
               .contacts-invite {
                 width: 100%;
               }
+            }
+          }
+        }
+      }
+    }
+    &.notfound-page {
+      .main-block {
+        &.notfound {
+          .container {
+            h1 {
+           font-size: 65px;
             }
           }
         }
@@ -1098,6 +1108,23 @@
 }
 
 @media (max-width: 590px) {
+  .wrapper {
+    &.notfound-page {
+      .main-block {
+        &.notfound {
+          .container {
+            h1 {
+              font-size: 45px;
+              &:before {
+                width: 95px;
+                height: 5px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
   .contacts {
     .get-in-touch {
       padding-top: 15px;

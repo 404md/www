@@ -34,13 +34,24 @@ jQuery(function($) {
         dataType: 'json'
     }).done(function (data) {
         data.forEach(function(item) {
-            console.log(item.images.url);
-            console.log(item.tags);
-            console.log(item.likes);
-            var tagsStr = item.tags.map(function(tag) {
-                return '#'+tag;
-            }).join(', ');
-            $('.instagram').slick('slickAdd',"<div><img src='"+ item.images.url +"'/><a href='"+ item.link +" ' target = \"_blank\"><div class='hover-hash'><div class='hover-text'><div class='likes-instagram'>"+  item.likes.count +"</div><div>"+ tagsStr +"</div></div></div></a></div></div>");
+          
+              console.log(item.images.url);
+            console.log(item.link);
+            console.log(item.description);
+
+            var hoverBlock = "<div class='hover-hash'><div class='hover-text'><div class='likes-instagram'>"+
+                item.likes.count +"</div><div class='hashtags'>"+ item.description +"</div></div></div>";
+            var originalPost = "<a href='"+ item.link +"' target='_blank'>" + hoverBlock + "</a>";
+            var content;
+            if (item.type == 'image') {
+                content ="<img src='"+ item.images.url +"'>";
+            } else {
+                // 4to nibudi dlea video
+                content = "<div><video><source src='"+ item.videos.url +"'></video></div>"
+
+            }
+
+            $('.instagram').slick('slickAdd',"<div>"+ content + originalPost +"</div>");
         });
     });
 
