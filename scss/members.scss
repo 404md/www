@@ -11,6 +11,9 @@
   &.members {
     .main-block {
       .container {
+        &.instagram-block {
+          margin-bottom:40px;
+        }
         .instagram {
           &.slick-initialized {
             margin-right: -10px;
@@ -36,6 +39,32 @@
             .slick-slide {
               margin-right: 10px;
               position: relative;
+              .button-video {
+                position: absolute;
+                top: 45%;
+                left: 45%;
+                .play-button {
+                  height:50px;
+                  width: 50px;
+                  border-radius: 50%;
+                  position: relative;
+                  border: 2px solid white;
+                  &:hover {
+                    background-color: rgba(0, 173, 239, 0.9);
+                  }
+                  &:after {
+                    content: "";
+                    display: block;
+                    position: absolute;
+                    top: 15.5px;
+                    left: 18px;
+                    margin: 0 auto;
+                    border-style: solid;
+                    border-width: 9.5px 0 9.5px 17px;
+                    border-color: transparent transparent transparent rgba(255, 255, 255, 1);
+                  }
+                }
+              }
               video {
                 width: 100%;
                 transition: all .2s ease-in-out;
@@ -314,3 +343,4 @@
     }
   }
 }
+

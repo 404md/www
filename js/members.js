@@ -14,7 +14,6 @@ jQuery(function($) {
                     slidesToScroll: 2,
                     infinite: true,
                     dots: false
-
                 }
             },
             {
@@ -37,14 +36,10 @@ jQuery(function($) {
             var originalPost = "<a href='"+ item.link +"' target='_blank'>" + hoverBlock + "</a>";
 
             var content = "<img src='"+ item.images.url +"'>";
+            if (item.type == 'video') {
+                content = "<div>"+ content +"</div><div class='button-video'><div class='play-button'></div></div>"
+            }
 
-            // @todo adapt for video content
-            // if (item.type == 'image') {
-            //     content ="<img src='"+ item.images.url +"'>";
-            // } else {
-            //     // 4to nibudi dlea video
-            //     content = "<div><video><source src='"+ item.videos.url +"'></video></div>"
-            // }
             $('.instagram').slick('slickAdd',"<div>"+ content + originalPost +"</div>");
         });
     });
