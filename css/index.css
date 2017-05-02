@@ -272,7 +272,7 @@ img {
 
 a {
   text-decoration: none;
-  color: #dd5931;
+  color: #FF5533;
   cursor: pointer; }
   a:hover {
     color: #000000; }
@@ -449,27 +449,31 @@ body {
     min-height: 500px; }
     .wrapper.notfound-page .main-block.notfound {
       min-height: 500px;
-      background: #f5f5f4; }
+      background-image: url(../images/404.jpg);
+      background-position: 100% 50%;
+      background-size: cover;
+      position: relative; }
       .wrapper.notfound-page .main-block.notfound .container {
         height: 500px; }
-        .wrapper.notfound-page .main-block.notfound .container h1 {
-          font-size: 95px;
+        .wrapper.notfound-page .main-block.notfound .container .text-notfound {
           position: relative;
           top: 50%;
           left: 50%;
           transform: translate(-50%, -50%);
           text-align: center; }
-          .wrapper.notfound-page .main-block.notfound .container h1:before {
-            content: '';
-            position: absolute;
-            width: 165px;
-            height: 7px;
-            background: #dd5931;
-            bottom: 0; }
-          .wrapper.notfound-page .main-block.notfound .container h1 a {
-            color: #000000; }
-            .wrapper.notfound-page .main-block.notfound .container h1 a:hover {
-              color: #dd5931; }
+          .wrapper.notfound-page .main-block.notfound .container .text-notfound .links {
+            font-size: 25px; }
+          .wrapper.notfound-page .main-block.notfound .container .text-notfound .link-notfound {
+            color: #000000;
+            font-size: 70px;
+            font-weight: bold; }
+            .wrapper.notfound-page .main-block.notfound .container .text-notfound .link-notfound:hover {
+              color: #FF5533; }
+          .wrapper.notfound-page .main-block.notfound .container .text-notfound .location {
+            display: inline-block;
+            vertical-align: sub; }
+            .wrapper.notfound-page .main-block.notfound .container .text-notfound .location #location {
+              display: block; }
   .wrapper.members .new-heading {
     padding: 40px 10px; }
   .wrapper.terms .main-block .container h2 {
@@ -1030,6 +1034,8 @@ body {
   color: #aaaaaa;
   font-size: 15px; }
 
+.wrapper.members .main-block .container.instagram-block {
+  margin-bottom: 40px; }
 .wrapper.members .main-block .container .instagram.slick-initialized {
   margin-right: -10px; }
   .wrapper.members .main-block .container .instagram.slick-initialized .slick-prev {
@@ -1050,6 +1056,28 @@ body {
   .wrapper.members .main-block .container .instagram.slick-initialized .slick-slide {
     margin-right: 10px;
     position: relative; }
+    .wrapper.members .main-block .container .instagram.slick-initialized .slick-slide .button-video {
+      position: absolute;
+      top: 45%;
+      left: 45%; }
+      .wrapper.members .main-block .container .instagram.slick-initialized .slick-slide .button-video .play-button {
+        height: 50px;
+        width: 50px;
+        border-radius: 50%;
+        position: relative;
+        border: 2px solid white; }
+        .wrapper.members .main-block .container .instagram.slick-initialized .slick-slide .button-video .play-button:hover {
+          background-color: rgba(0, 173, 239, 0.9); }
+        .wrapper.members .main-block .container .instagram.slick-initialized .slick-slide .button-video .play-button:after {
+          content: "";
+          display: block;
+          position: absolute;
+          top: 15.5px;
+          left: 18px;
+          margin: 0 auto;
+          border-style: solid;
+          border-width: 9.5px 0 9.5px 17px;
+          border-color: transparent transparent transparent white; }
     .wrapper.members .main-block .container .instagram.slick-initialized .slick-slide video {
       width: 100%;
       transition: all .2s ease-in-out; }
@@ -1824,11 +1852,10 @@ body {
   .new-page .pages {
     width: 90%; } }
 @media (max-width: 590px) {
-  .wrapper.notfound-page .main-block.notfound .container h1 {
-    font-size: 45px; }
-    .wrapper.notfound-page .main-block.notfound .container h1:before {
-      width: 95px;
-      height: 5px; }
+  .wrapper.notfound-page .main-block.notfound .container .text-notfound .link-notfound {
+    font-size: 35px; }
+  .wrapper.notfound-page .main-block.notfound .container .text-notfound .links {
+    font-size: 20px; }
 
   .contacts .get-in-touch {
     padding-top: 15px;

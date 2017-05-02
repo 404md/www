@@ -1113,11 +1113,15 @@
       .main-block {
         &.notfound {
           .container {
-            h1 {
-              font-size: 45px;
-              &:before {
-                width: 95px;
-                height: 5px;
+            .text-notfound {
+              .link-notfound {
+                font-size: 35px;
+              }
+              .links {
+                font-size: 20px;
+              }
+              .location {
+
               }
             }
           }
