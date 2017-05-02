@@ -21,7 +21,7 @@ exports.handler = (event, context) => {
 
     let params = {
       Bucket: 'www.404.md',
-      Key: 'instagram-feed.json',
+      Key: '/json/instagram-feed.json',
       Body: JSON.stringify(feed)
     };
 

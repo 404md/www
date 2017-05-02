@@ -27,7 +27,7 @@ jQuery(function($) {
     });
 
     $.ajax({
-        url: '//www.404.md/instagram-feed.json',
+        url: '//www.404.md/json/instagram-feed.json',
         dataType: 'json'
     }).done(function (data) {
         data.forEach(function(item) {
