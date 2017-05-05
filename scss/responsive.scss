@@ -35,6 +35,15 @@
 }
 
 @media (max-width: 1200px) {
+  .contacts {
+    .get-in-touch {
+      &.flex-row {
+        .block-2 {
+          padding: 32px 0;
+        }
+      }
+    }
+  }
   .left-fb-block {
     float:none;
     text-align: center;
@@ -180,9 +189,6 @@
           .open + .navt{
             display: block;
           }
-        }
-        .language {
-          right:15px;
         }
       }
     }
@@ -423,6 +429,22 @@
 }
 
 @media screen and (max-width: 992px) {
+  .contacts {
+    .get-in-touch {
+      &.flex-row {
+        .block-2 {
+          .one-line {
+            a {
+              width: 30px;
+              height: 30px;
+              text-align: center;
+              line-height: 30px;
+            }
+          }
+        }
+      }
+    }
+  }
   .video-media {
     &.display-flex {
       justify-content: space-around;
@@ -457,9 +479,6 @@
             }
           }
         }
-        .language {
-          right:15px;
-        }
       }
     }
   }
@@ -474,53 +493,6 @@
       }
     }
   }
-  .contacts {
-    .get-in-touch {
-      .block-1 {
-        width: 20%;
-        line-height: 80px;
-        img {
-          height: 75px;
-        }
-      }
-      .block-2 {
-        width: 80%;
-        padding:0;
-        .connect-us {
-          display: none;
-        }
-      }
-      .block-3 {
-        width: 50%;
-        text-align: left;
-        .connect-us {
-          padding-top: 15px;
-        }
-        .one-line {
-          display: inline-block;
-          .fa-phone {
-            padding-left: 10px;
-
-          }
-          a {
-            padding-right: 10px;
-          }
-        }
-      }
-      .block-4 {
-        width: 50%;
-        text-align: left;
-        .connect-us {
-          padding-top: 15px;
-        }
-        .one-line {
-          display: inline-flex;
-          justify-content: unset;
-        }
-      }
-    }
-  }
-
   .case-study {
     .container {
       .left-block {
@@ -705,6 +677,38 @@
 }
 
 @media (max-width: 720px) {
+  .contacts {
+    .get-in-touch {
+      min-height: 120px;
+      &.flex-row {
+        .block-1 {
+          display: none;
+        }
+        .block-2 {
+          padding: 20px;
+          &.flex-item-4 {
+            flex: 0 0 50%;
+            max-width: 50%;
+          }
+          .one-line {
+            a {
+              width: 40px;
+              height: 40px;
+              text-align: center;
+              line-height: 40px;
+            }
+          }
+        }
+        .block-3 {
+          padding: 20px;
+          &.flex-item-4 {
+            flex: 0 0 50%;
+            max-width: 50%;
+          }
+        }
+      }
+    }
+  }
   .wrapper {
     &.invitation {
       .main-block {
@@ -955,6 +959,36 @@
 }
 
 @media (max-width: 645px) {
+  .contacts {
+    .get-in-touch {
+      &.flex-row {
+        flex-wrap: wrap;
+        .block-1 {
+          display: none;
+        }
+        .block-2 {
+          text-align: center;
+          padding: 20px 0;
+          &.flex-item-4 {
+            flex: 0 0 100%;
+            max-width: 100%;
+          }
+        }
+        .block-3 {
+          padding: 0;
+          .right-side {
+            float:none;
+            margin-bottom: 20px;
+          }
+          text-align: center;
+          &.flex-item-4 {
+            flex: 0 0 100%;
+            max-width: 100%;
+          }
+        }
+      }
+    }
+  }
   #video {
     height: 300px;
   }
@@ -1129,33 +1163,6 @@
       }
     }
   }
-  .contacts {
-    .get-in-touch {
-      padding-top: 15px;
-      padding-bottom: 20px;
-      .block-1 {
-        width: 100%;
-        text-align: center;
-        margin-bottom: 10px;
-      }
-      .block-2 {
-        width: 100%;
-        text-align: center;
-
-        .connect-us {
-          display: none;
-        }
-      }
-      .block-3 {
-        width: 100%;
-        text-align: center;
-      }
-      .block-4 {
-        width: 100%;
-        text-align: center;
-      }
-    }
-  }
   .case-study {
     .container {
       .left-block {
@@ -1283,18 +1290,6 @@
 }
 
 @media (max-width:450px) {
-  .contacts {
-    .get-in-touch {
-      .block-3 {
-        width: 100%;
-        text-align: center;
-      }
-      .block-4 {
-        width: 100%;
-        text-align: center;
-      }
-    }
-  }
   .footer-black {
     .container {
       .left-footer {
@@ -1449,6 +1444,15 @@
 }
 
 @media (max-width: 320px) {
+  .footer-black {
+    .container {
+      .left-footer {
+        a {
+          margin-left: 8px;
+        }
+      }
+    }
+  }
   .wrapper {
     &.contact {
       .main-block {
