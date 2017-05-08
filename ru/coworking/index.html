@@ -21,6 +21,8 @@
     <meta name="twitter:url" content="https://www.404.md/ru/pricing/"/>
     <link rel="icon" href="/favicon.png" type="image/png"/>
     <link rel="stylesheet" href="../../css/index.min.css"/>
+    <link rel="stylesheet" href="../../css/slick-1.6.0.min.css"/>
+    <link rel="stylesheet" href="../../css/slick-theme-1.6.0.min.css"/>
     <link rel="stylesheet" href="../../css/font-awesome-4.7.0.min.css"/>
     <link rel="stylesheet" href="../../css/materialdesignicons.css"/>
 <!-- Google Tag Manager -->
@@ -98,12 +100,16 @@ window.fbAsyncInit = function () {
 </header>
 
 <section class="image">
-    <div class="image-plans"></div>
+    <div class="image-coworking page">
+        <div class="text-page-name">
+            <!--<h1 class="page-name">Коворкинг</h1>-->
+        </div>
+    </div>
 </section>
 
 <div class="container new-page">
     <div class="pages">
-        <h1 class="page-name">Цены</h1>
+        <h1 class="page-name">Коворкинг</h1>
         <span class="text-page">
             404 Not Found это сообщество для IT-бизнеса и IT-специалистов из Молдовы.
             Мы хотим дать возможность маленьким компаниям и квалифицированным специалистам стать
@@ -116,137 +122,178 @@ window.fbAsyncInit = function () {
 <div class="wrapper pricing" itemscope itemprop="mainContentOfPage">
     <section class="main-block">
         <div class="container">
-            <div class="display-flex" itemscope itemtype="https://schema.org/OfferCatalog">
-                <div class="plans" itemprop="itemListElement" itemscope itemtype="https://schema.org/OfferCatalog">
-                    <div class="img-plan" itemprop="itemListElement" itemscope itemtype="https://schema.org/Offer">
-                        <img src="../../images/plan1.jpg" alt="Test Drive" />
-                        <div class="back-color">
-                            <div class="text-plan">
-                                <div itemprop="name" class="text-p">Тест Драйв</div>
-                                <label><span itemprop="priceCurrency" content="USD">$</span>
-                                    <span itemprop="price">20</span> / day</label>
-                            </div>
+            <div class="offers">
+                <div class="plans">
+                    <div class="plan"><img src="../../images/plan1.jpg" alt="Test Drive" />
+                        <div class="text-plan">
+                            <div class="text-p">Тест драйв</div>
+                            <label>
+                                <span>$</span>
+                                <span>20 / 24 часа</span>
+                            </label>
                         </div>
                     </div>
-                    <div class="description">
-                        <div class="block-responsive" itemprop="description">
-                            <p>
-                                Станьте частью нашего сообщества ИТ-специалистов.
-                                Наши участники внесли свой вклад в глобальную платформу облачных вычислений,
-                                работая с Fortune 500 компаниями из Европы и США.
-                            </p>
-                            <div><h3>Рабочее Место</h3></div>
-                            <p>
-                                Наши рабочие места спроектированы в лучшем стиле, чтобы обеспечить достойные условия.
-                                Талантливые специалисты заслуживают отдельных привилегий!
-                            </p>
-                            <div><h4>IT Сообщество</h4></div>
-                            <p>
-                                Сообщество позволяет участникам быть конкурентоспособными на мировом рынке
-                                и привлечь крупные проекты.
-                            </p>
-                            <div><h5>Бесплатное Членство</h5></div>
-                            <p>
-                                Основным преимуществом нашего сообщества  является бесплатное членство.
-                                Если участник  выбран для работы над проектом (ами) партнера,
-                                то партнер обеспечивает бесплатное членство для участника.
-                            </p>
-
-                            <div class="btn-center">
-                                <a href="/ru/contact/" class="button">Свяжитесь с нами</a>
-                            </div>
+                    <div class="plans-points">
+                        <ul>
+                            <li><span>Рабочее место <p class="gray-text">команда до 5 человек</p></span></li>
+                            <li><span>Доступны  конференц-залы</span></li>
+                            <li><span>1 тренинг  или мероприятие</span></li>
+                            <li><span>24-часовой доступ</span></li>
+                            <li><span>Кофе, чай, фрукты и печенье</span></li>
+                        </ul>
+                        <div class="btn-plan-contact">
+                            <a itemprop="url" href="/contact/" class="button">Свяжитесь с нами</a>
                         </div>
-                        <div class="clear"></div>
                     </div>
                 </div>
-
-                <div class="plans" itemprop="itemListElement" itemscope itemtype="https://schema.org/OfferCatalog">
-                    <div class="img-plan" itemprop="itemListElement" itemscope itemtype="https://schema.org/Offer">
-                        <img src="../../images/plan2.jpg" alt="Individual" />
-                        <div class="back-color">
-                            <div class="text-plan">
-                                <div itemprop="name" class="text-p">Индивидуально</div>
-                                <div class="btn-right">
-                                    <a itemprop="url" href="/ru/tour/" class="button">Забронируй Обход</a>
-                                </div>
-                            </div>
+                <div class="plans">
+                    <div class="plan"><img src="../../images/plan2.jpg" alt="Free Plan" />
+                        <div class="text-plan">
+                            <div class="text-p">Бесплатно</div>
+                            <label>
+                                <span>$</span>
+                                <span>0</span>
+                            </label>
                         </div>
                     </div>
-                    <div class="description">
-                        <div class="block-responsive" itemprop="description">
-                            <p>
-                                Станьте частью нашего сообщества ИТ-специалистов.
-                                Наши участники внесли свой вклад в глобальную платформу облачных вычислений,
-                                работая с Fortune 500 компаниями из Европы и США.
-                            </p>
-                            <div><h3>Рабочее Место</h3></div>
-                            <p>
-                                Наши рабочие места спроектированы в лучшем стиле, чтобы обеспечить достойные условия.
-                                Талантливые специалисты заслуживают отдельных привилегий!
-                            </p>
-                            <div><h4>IT Сообщество</h4></div>
-                            <p>
-                                Сообщество позволяет участникам быть конкурентоспособными на мировом рынке
-                                и привлечь крупные проекты.
-                            </p>
-                            <div><h5>Бесплатное Членство</h5></div>
-                            <p>
-                                Основным преимуществом нашего сообщества  является бесплатное членство.
-                                Если участник  выбран для работы над проектом (ами) партнера,
-                                то партнер обеспечивает бесплатное членство для участника.
-                            </p>
-
-                            <div class="btn-center">
-                                <a itemprop="url" href="/ru/contact/" class="button">Свяжитесь с нами</a>
-                            </div>
+                    <div class="plans-points">
+                        <ul>
+                            <li><span>Фиксированное рабочее место</span></li>
+                            <li><span>Доступны  конференц-залы</span></li>
+                            <li><span>Посещение всех тренингов и мероприятий </span></li>
+                            <li><span>24/7</span></li>
+                            <li><span>Кофе, чай, фрукты и печенье</span></li>
+                            <li><span>Свободное общение с 404 партнерами</span></li>
+                            <li><span>Бесплатные билеты на конференции Cloud Computing</span></li>
+                            <li><span>Сертификаты Cloud Computing</span></li>
+                            <li class="last-li"><span>Пригласи 2 друзей на 1 неделю
+                            <p class="gray-text">Свободное членство</p>
+                                <p class="gray-text">Самое важное преимущество нашего сообщества - бесплатное членство.
+                                    Если участник выбран для работы над проектом (ами) партнера,
+                                    партнер оплачивает членские взносы для участника.</p></span>
+                            </li>
+                        </ul>
+                        <div class="btn-plan-contact">
+                            <a itemprop="url" href="/contact/" class="button">Свяжитесь с нами</a>
                         </div>
-                        <div class="clear"></div>
                     </div>
                 </div>
-
-                <div class="plans" itemprop="itemListElement" itemscope itemtype="https://schema.org/OfferCatalog">
-                    <div class="img-plan" itemprop="itemListElement" itemscope itemtype="https://schema.org/Offer">
-                        <img src="../../images/plan3.jpg" alt="Business" />
-                        <div class="back-color">
-                            <div class="text-plan">
-                                <div itemprop="name" class="text-p">Бизнес</div>
-                                <div class="btn-right">
-                                    <a itemprop="url" href="/ru/tour/" class="button">Забронируй Обход</a>
-                                </div>
+                <div class="plans">
+                    <div class="plan"><img src="../../images/plan3.jpg" alt="Individual" />
+                        <div class="text-plan">
+                            <div class="text-p">Индивидуально</div>
+                            <div class="btn-plan">
+                                <a itemprop="url" href="/tour/" class="button">Забронируй Обход</a>
                             </div>
                         </div>
                     </div>
-                    <div class="description">
-                        <div class="block-responsive" itemprop="description">
-                            <p>
-                                Станьте частью нашего сообщества ИТ-специалистов.
-                                Наши участники внесли свой вклад в глобальную платформу облачных вычислений,
-                                работая с Fortune 500 компаниями из Европы и США.
-                            </p>
-                            <div><h3>Рабочее Место</h3></div>
-                            <p>
-                                Наши рабочие места спроектированы в лучшем стиле, чтобы обеспечить достойные условия.
-                                Талантливые специалисты заслуживают отдельных привилегий!
-                            </p>
-                            <div><h4>IT Сообщество</h4></div>
-                            <p>
-                                Сообщество позволяет участникам быть конкурентоспособными на мировом рынке
-                                и привлечь крупные проекты.
-                            </p>
-                            <div><h5>Бесплатное Членство</h5></div>
-                            <p>
-                                Основным преимуществом нашего сообщества  является бесплатное членство.
-                                Если участник  выбран для работы над проектом (ами) партнера,
-                                то партнер обеспечивает бесплатное членство для участника.
-                            </p>
-                            <div class="btn-center">
-                                <a itemprop="url" href="/ru/contact/" class="button">Свяжитесь с нами</a>
+                    <div>
+                        <div class="plans-points">
+                            <ul>
+                                <li><span>Фиксированное рабочее место</span></li>
+                                <li><span>Доступны  конференц-залы</span></li>
+                                <li><span>Посещение всех тренингов и мероприятий</span></li>
+                                <li><span>24/7</span></li>
+                                <li><span>Кофе, чай, фрукты и печенье</span></li>
+                                <li><span>Свободное общение с 404 партнерами</span></li>
+                                <li><span>Бесплатные билеты на конференции Cloud Computing</span></li>
+                                <li><span>Сертификаты Cloud Computing</span></li>
+                                <li class="last-li"><span>Пригласи 2 друзей на 1 неделю
+                                    <p class="gray-text">Обратите внимание</p>
+                                    <p class="gray-text">
+                                       Цена зависит от личных навыков и вашего опыта.
+                                        Нажмите «ПОЛУЧИТЬ ЦЕНУ» и заполните форму, чтобы получить личное предложение.
+                                    </p></span>
+                                </li>
+                            </ul>
+                            <div class="btn-plan-contact">
+                                <a itemprop="url" href="/contact/" class="button">Получи цену</a>
                             </div>
                         </div>
-                        <div class="clear"></div>
+                    </div>
+                </div>
+                <div class="plans">
+                    <div class="plan"><img src="../../images/plan4.jpg" alt="Business" />
+                        <div class="text-plan">
+                            <div class="text-p">Бизнес</div>
+                            <div class="btn-plan">
+                                <a itemprop="url" href="/tour/" class="button">Забронируй Обход</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="plans-points">
+                        <ul>
+                            <li><span>Фиксированное рабочее место</span></li>
+                            <li><span>Доступны  конференц-залы</span></li>
+                            <li><span>Посещение всех тренингов и мероприятий</span></li>
+                            <li><span>24/7</span></li>
+                            <li><span>Кофе, чай, фрукты и печенье</span></li>
+                            <li><span>Свободное общение с 404 партнерами</span></li>
+                            <li><span>Бесплатные билеты на конференции Cloud Computing</span></li>
+                            <li><span>Сертификаты Cloud Computing</span></li>
+                            <li class="last-li"><span>Free company accounting
+                               <p class="gray-text last-c">Обратите внимание</p>
+                                <p class="gray-text">
+                                    Цена зависит от личных способностей, опыта и количества членов вашей команды.
+                                    Нажмите «ПОЛУЧИТЬ ЦЕНУ» и заполните форму, чтобы получить личное коммерческое предложение.
+                                </p></span>
+                            </li>
+                        </ul>
+                        <div class="btn-plan-contact">
+                            <a itemprop="url" href="/contact/" class="button">Получи цену</a>
+                        </div>
                     </div>
                 </div>
             </div>
+        </div>
+        <div class=" container new-page">
+            <div class="pages coworking">
+                <h1 class="page-name">Удобства</h1>
+                <p class="text-p">Все предложения включают: </p>
+            </div>
+            <div class="amenities-block display-flex">
+                <div class="bloks-icons">
+                    <img src="../../images/icon-4.svg">
+                    <div class="icons-text">Скоростной Интернет</div>
+                </div>
+                <div class="bloks-icons">
+                    <img src="../../images/icon-5.svg">
+                    <div class="icons-text">Конференц - Залы</div>
+                </div>
+                <div class="bloks-icons">
+                    <img src="../../images/icon-6.svg">
+                    <div class="icons-text">Возможность Печати</div>
+                </div>
+                <div class="bloks-icons">
+                    <img src="../../images/icon-10.svg">
+                    <div class="icons-text">24/7 часа доступ</div>
+                </div>
+                <div class="bloks-icons">
+                    <img src="../../images/icon-7.svg">
+                    <div class="icons-text">Постоянные Мероприятия</div>
+                </div>
+                <div class="bloks-icons">
+                    <img src="../../images/icon-8.svg">
+                    <div class="icons-text">Удобное Расположение</div>
+                </div>
+                <div class="bloks-icons">
+                    <img src="../../images/icon-1.svg">
+                    <div class="icons-text" itemprop="name">Aдминистратор</div>
+                </div>
+                <div class="bloks-icons">
+                    <img src="../../images/icon-9.svg">
+                    <div class="icons-text" itemprop="name">Вода</div>
+                </div>
+                <div class="bloks-icons">
+                    <img src="../../images/icon-3.svg">
+                    <div class="icons-text" itemprop="name">Современная Кухня</div>
+                </div>
+                <div class="bloks-icons">
+                    <img src="../../images/icon-2.svg">
+                    <div class="icons-text" itemprop="name">Уборка Помещения</div>
+                </div>
+            </div>
+
         </div>
     </section>
 
@@ -381,7 +428,9 @@ window.fbAsyncInit = function () {
 </footer>
 
 <script type="text/javascript" src="../../js/jquery-1.11.0.min.js"></script>
+<script type="text/javascript" src="../../js/slick-1.6.0.min.js"></script>
 <script type="text/javascript" src="../../js/main.min.js"></script>
+<script type="text/javascript" src="../../js/coworking.js"></script>
 
 </body>
 </html>

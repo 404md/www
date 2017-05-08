@@ -21,6 +21,8 @@
     <meta name="twitter:url" content="https://www.404.md/coworking"/>
     <link rel="icon" href="/favicon.png" type="image/png"/>
     <link rel="stylesheet" href="../css/index.min.css"/>
+    <link rel="stylesheet" href="../css/slick-1.6.0.min.css"/>
+    <link rel="stylesheet" href="../css/slick-theme-1.6.0.min.css"/>
     <link rel="stylesheet" href="../css/font-awesome-4.7.0.min.css"/>
     <link rel="stylesheet" href="../css/materialdesignicons.css"/>
     <!-- Google Tag Manager -->
@@ -121,135 +123,177 @@ window.fbAsyncInit = function () {
 <div class="wrapper pricing" itemscope itemprop="mainContentOfPage">
     <section class="main-block">
         <div class="container">
-            <div class="display-flex" itemscope itemtype="https://schema.org/OfferCatalog">
-                <div class="plans" itemprop="itemListElement" itemscope itemtype="https://schema.org/OfferCatalog">
-                    <div class="img-plan" itemprop="itemListElement" itemscope itemtype="https://schema.org/Offer">
-                        <img src="../images/plan1.jpg" alt="Test Drive" />
-                        <div class="back-color">
-                            <div class="text-plan">
-                                <div itemprop="name" class="text-p">Test Drive</div>
-                                <label><span itemprop="priceCurrency" content="USD">$</span>
-                                    <span itemprop="price">20</span> / day</label>
-                            </div>
+            <div class="offers">
+                <div class="plans">
+                    <div class="plan"><img src="../images/plan1.jpg" alt="Test Drive" />
+                        <div class="text-plan">
+                            <div class="text-p">Test Drive</div>
+                            <label>
+                                <span>$</span>
+                                <span>20 / 24 hours</span>
+                            </label>
                         </div>
                     </div>
-                    <div class="description">
-                        <div class="block-responsive" itemprop="description">
-                            <p>
-                                Become part of our local community of IT professionals. Our members contribute
-                                to the global platform of cloud computing, working with Fortune 500 companies
-                                from Europe and USA.
-                            </p>
-                            <div><h3>Workspace</h3></div>
-                            <p>
-                                Our coworking space is designed in premium style, to provide unique experience.
-                                Great individuals deserve great perks!
-                            </p>
-                            <div><h4>Community</h4></div>
-                            <p>
-                                Membership based and cloud computing focused, our community enables members to be
-                                competitive globally and attract large scale projects.
-                            </p>
-                            <div><h5>Free Membership</h5></div>
-                            <p>
-                                The most important perk of our platform is free membership. If a member is selected
-                                to work on a partner's project(s), the partner pays membership fees for the member.
-                            </p>
-
-                            <div class="btn-center">
-                                <a itemprop="url" href="/contact/" class="button">Contact Us</a>
-                            </div>
+                    <div class="plans-points">
+                        <ul>
+                            <li><span>Workplace <p class="gray-text">up to 5 if comming with a team</p></span></li>
+                            <li><span>Access to conference rooms</span></li>
+                            <li><span>Free access to 1 training or event</span></li>
+                            <li><span>24 hours biometric access</span></li>
+                            <li><span>Coffee, tea, fruits and biscuits</span></li>
+                        </ul>
+                        <div class="btn-plan-contact">
+                        <a itemprop="url" href="/contact/" class="button">Contact Us</a>
                         </div>
-                        <div class="clear"></div>
                     </div>
                 </div>
-
-                <div class="plans" itemprop="itemListElement" itemscope itemtype="https://schema.org/OfferCatalog">
-                    <div class="img-plan"  itemprop="itemListElement" itemscope itemtype="https://schema.org/Offer">
-                        <img src="../images/plan2.jpg" alt="Individual" />
-                        <div class="back-color">
-                            <div class="text-plan">
-                                <div itemprop="name" class="text-p">Individual</div>
-                                <div class="btn-right">
-                                    <a itemprop="url" href="/tour/" class="button">Book a Tour</a>
-                                </div>
-                            </div>
+                <div class="plans">
+                    <div class="plan"><img src="../images/plan2.jpg" alt="Free Plan" />
+                        <div class="text-plan">
+                            <div class="text-p">Free Plan</div>
+                            <label>
+                                <span>$</span>
+                                <span>0</span>
+                            </label>
                         </div>
                     </div>
-                    <div class="description">
-                        <div class="block-responsive" itemprop="description">
-                            <p>
-                                Become part of our local community of IT professionals. Our members contribute
-                                to the global platform of cloud computing, working with Fortune 500 companies
-                                from Europe and USA.
-                            </p>
-                            <div><h3>Workspace</h3></div>
-                            <p>
-                                Our coworking space is designed in premium style, to provide unique experience.
-                                Great individuals deserve great perks!
-                            </p>
-                            <div><h4>Community</h4></div>
-                            <p>
-                                Membership based and cloud computing focused, our community enables members to be
-                                competitive globally and attract large scale projects.
-                            </p>
-                            <div><h5>Free Membership</h5></div>
-                            <p>
-                                The most important perk of our platform is free membership. If a member is selected
-                                to work on a partner's project(s), the partner pays membership fees for the member.
-                            </p>
-
-                            <div class="btn-center">
-                                <a itemprop="url" href="/contact/" class="button">Contact Us</a>
-                            </div>
+                    <div class="plans-points">
+                        <ul>
+                            <li><span>Fixed workplace</span></li>
+                            <li><span>Access to conference rooms</span></li>
+                            <li><span>Access to all trainings and events</span></li>
+                            <li><span>24/7 biometric access</span></li>
+                            <li><span>Coffee, tea, fruits and biscuits</span></li>
+                            <li><span>Free exposure to 404 partners</span></li>
+                            <li><span>Free tickets to Cloud Computing focused conferences</span></li>
+                            <li><span>Free Cloud Computing certification</span></li>
+                            <li class="last-li"><span>Free 1 week invitation for 2 friends
+                            <p class="gray-text">Free Membership</p>
+                                <p class="gray-text">The most important perk of our platform is free membership.
+                                    If a member is selected to work on a partner’s project(s),
+                                    the partner pays membership fees for the member.</p></span>
+                            </li>
+                        </ul>
+                        <div class="btn-plan-contact">
+                            <a itemprop="url" href="/contact/" class="button">Contact Us</a>
                         </div>
-                        <div class="clear"></div>
                     </div>
                 </div>
-
-                <div class="plans" itemprop="itemListElement" itemscope itemtype="https://schema.org/OfferCatalog">
-                    <div class="img-plan" itemprop="itemListElement" itemscope itemtype="https://schema.org/Offer">
-                        <img src="../images/plan3.jpg" alt="Business" />
-                        <div class="back-color">
-                            <div class="text-plan">
-                                <div itemprop="name" class="text-p">Business</div>
-                                <div class="btn-right">
-                                    <a itemprop="url" href="/tour/" class="button">Book a Tour</a>
-                                </div>
+                <div class="plans">
+                    <div class="plan"><img src="../images/plan3.jpg" alt="Individual" />
+                        <div class="text-plan">
+                            <div class="text-p">Individual</div>
+                            <div class="btn-plan">
+                            <a itemprop="url" href="/tour/" class="button">Book a Tour</a>
                             </div>
                         </div>
                     </div>
-                    <div class="description">
-                        <div class="block-responsive" itemprop="description">
-                            <p>
-                                Become part of our local community of IT professionals. Our members contribute
-                                to the global platform of cloud computing, working with Fortune 500 companies
-                                from Europe and USA.
-                            </p>
-                            <div><h3>Workspace</h3></div>
-                            <p>
-                                Our coworking space is designed in premium style, to provide unique experience.
-                                Great individuals deserve great perks!
-                            </p>
-                            <div><h4>Community</h4></div>
-                            <p>
-                                Membership based and cloud computing focused, our community enables members to be
-                                competitive globally and attract large scale projects.
-                            </p>
-                            <div><h5>Free Membership</h5></div>
-                            <p>
-                                The most important perk of our platform is free membership. If a member is selected
-                                to work on a partner's project(s), the partner pays membership fees for the member.
-                            </p>
-
-                            <div class="btn-center">
-                                <a itemprop="url" href="/contact/" class="button">Contact Us</a>
+                    <div>
+                        <div class="plans-points">
+                            <ul>
+                                <li><span>Fixed workplace</span></li>
+                                <li><span>Access to conference rooms</span></li>
+                                <li><span>Access to all trainings and events</span></li>
+                                <li><span>24/7 biometric access</span></li>
+                                <li><span>Coffee, tea, fruits and biscuits</span></li>
+                                <li><span>Free exposure to 404 partners</span></li>
+                                <li><span>Free tickets to Cloud Computing focused conferences</span></li>
+                                <li><span>Free Cloud Computing certification</span></li>
+                                <li class="last-li"><span>Free 1 week invitation for 2 friends
+                                    <p class="gray-text">Note that</p>
+                                    <p class="gray-text">
+                                        Price depends on personal skills and your experiense.
+                                        Click GET PRICE and fill in the form to get your personal offer.
+                                    </p></span>
+                                </li>
+                            </ul>
+                            <div class="btn-plan-contact">
+                                <a itemprop="url" href="/contact/" class="button">Get Price</a>
                             </div>
                         </div>
-                        <div class="clear"></div>
+                    </div>
+                </div>
+                <div class="plans">
+                    <div class="plan"><img src="../images/plan4.jpg" alt="Business" />
+                        <div class="text-plan">
+                            <div class="text-p">Business</div>
+                            <div class="btn-plan">
+                            <a itemprop="url" href="/tour/" class="button">Book a Tour</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="plans-points">
+                        <ul>
+                            <li><span>Fixed workplace</span></li>
+                            <li><span>Access to conference rooms</span></li>
+                            <li><span>Access to all trainings and events</span></li>
+                            <li><span>24/7 biometric access</span></li>
+                            <li><span>Coffee, tea, fruits and biscuits</span></li>
+                            <li><span>Free exposure to 404 partners</span></li>
+                            <li><span>Free tickets to Cloud Computing focused conferences</span></li>
+                            <li><span>Free Cloud Computing certification</span></li>
+                            <li class="last-li"><span>Free company accounting
+                               <p class="gray-text last-c">Note that</p>
+                                <p class="gray-text">
+                                    Price depends on your team members personal skills, experiense and number.
+                                    Click GET PRICE and fill in the form to get your personal business offer.</p></span>
+                            </li>
+                        </ul>
+                        <div class="btn-plan-contact">
+                            <a itemprop="url" href="/contact/" class="button">Get Price</a>
+                        </div>
                     </div>
                 </div>
             </div>
+        </div>
+        <div class=" container new-page">
+            <div class="pages coworking">
+                <h1 class="page-name">Amenities</h1>
+                <p class="text-p">All pricing plans include following amenities: </p>
+            </div>
+           <div class="amenities-block display-flex">
+               <div class="bloks-icons">
+                   <img src="../images/icon-4.svg">
+                   <div class="icons-text">Fast Internet</div>
+               </div>
+               <div class="bloks-icons">
+                   <img src="../images/icon-5.svg">
+                   <div class="icons-text">Conference Rooms</div>
+               </div>
+               <div class="bloks-icons">
+                   <img src="../images/icon-6.svg">
+                   <div class="icons-text">Printing Supplies</div>
+               </div>
+               <div class="bloks-icons">
+                   <img src="../images/icon-10.svg">
+                   <div class="icons-text">24 hrs Access</div>
+               </div>
+               <div class="bloks-icons">
+                   <img src="../images/icon-7.svg">
+                   <div class="icons-text">Regular Events</div>
+               </div>
+               <div class="bloks-icons">
+                   <img src="../images/icon-8.svg">
+                   <div class="icons-text">Strategic Location</div>
+               </div>
+               <div class="bloks-icons">
+                   <img src="../images/icon-1.svg">
+                   <div class="icons-text" itemprop="name">Onsite Staff </div>
+               </div>
+               <div class="bloks-icons">
+                   <img src="../images/icon-9.svg">
+                   <div class="icons-text" itemprop="name">Refreshing Water</div>
+               </div>
+               <div class="bloks-icons">
+                   <img src="../images/icon-3.svg">
+                   <div class="icons-text" itemprop="name">Modern Kitchen</div>
+               </div>
+               <div class="bloks-icons">
+                   <img src="../images/icon-2.svg">
+                   <div class="icons-text" itemprop="name">Cleaning Services</div>
+               </div>
+           </div>
+
         </div>
     </section>
 
@@ -384,6 +428,7 @@ window.fbAsyncInit = function () {
 </footer>
 
 <script type="text/javascript" src="../js/jquery-1.11.0.min.js"></script>
+<script type="text/javascript" src="../js/slick-1.6.0.min.js"></script>
 <script type="text/javascript" src="../js/main.min.js"></script>
 <script type="text/javascript" src="../js/coworking.js"></script>
 

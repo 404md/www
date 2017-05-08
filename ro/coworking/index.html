@@ -21,6 +21,8 @@
     <meta name="twitter:url" content="https://www.404.md/ro/pricing/"/>
     <link rel="icon" href="/favicon.png" type="image/png"/>
     <link rel="stylesheet" href="../../css/index.min.css"/>
+    <link rel="stylesheet" href="../../css/slick-1.6.0.min.css"/>
+    <link rel="stylesheet" href="../../css/slick-theme-1.6.0.min.css"/>
     <link rel="stylesheet" href="../../css/font-awesome-4.7.0.min.css"/>
     <link rel="stylesheet" href="../../css/materialdesignicons.css"/>
 <!-- Google Tag Manager -->
@@ -115,143 +117,177 @@ window.fbAsyncInit = function () {
 <div class="wrapper pricing" itemscope itemprop="mainContentOfPage">
     <section class="main-block">
         <div class="container">
-            <div class="display-flex" itemscope itemtype="https://schema.org/OfferCatalog">
-                <div class="plans" itemprop="itemListElement" itemscope itemtype="https://schema.org/OfferCatalog">
-                    <div class="img-plan" itemprop="itemListElement" itemscope itemtype="https://schema.org/Offer">
-                        <img src="../../images/plan1.jpg" alt="Test Drive" />
-                        <div class="back-color">
-                            <div class="text-plan">
-                                <div itemprop="name" class="text-p">Test Drive</div>
-                                <label><span itemprop="priceCurrency" content="USD">$</span>
-                                    <span itemprop="price">20</span> / day</label>
-                            </div>
+            <div class="offers">
+                <div class="plans">
+                    <div class="plan"><img src="../../images/plan1.jpg" alt="Test Drive" />
+                        <div class="text-plan">
+                            <div class="text-p">Test Drive</div>
+                            <label>
+                                <span>$</span>
+                                <span>20 / 24 ore</span>
+                            </label>
                         </div>
                     </div>
-                    <div class="description">
-                        <div class="block-responsive" itemprop="description">
-                            <p>
-                                Devin-o parte a comunității noastre locale de profesionisti IT.
-                                Membrii noștri contribuie la platforma globală de cloud computing,
-                                care lucreaza cu companii Fortune 500 din Europa si SUA.
-                            </p>
-                            <div><h3>Spațiu de lucru</h3></div>
-                            <p>
-                                Spațiul nostru de coworking este proiectat într-un stil premium,
-                                pentru a vă oferi o experiență unică. Persoanele grandioase merită avantaje mărețe!
-                            </p>
-                            <div><h4>Comunitate</h4></div>
-                            <p>
-                                Calitatea de membru și concentrarea pe cloud computing,
-                                comunitatea noastră permite membrilor să fie competitivi global,
-                                și să atragă proiecte pe scara largă.
-                            </p>
-                            <div><h5>Parteneriate libere</h5></div>
-                            <p>
-                                Cel mai mare avantaj al platformei noastre este parteneriatul liber.
-                                Dacă un membru este selectat să lucreze la proiectul unui partener,
-                                partenerul la randul sau va plăti taxele membrului.
-                            </p>
-
-                            <div class="btn-center ro">
-                                <a href="/ro/contact/" class="button">Contactează-ne</a>
-                            </div>
+                    <div class="plans-points">
+                        <ul>
+                            <li><span>Locuri de muncă <p class="gray-text">pînă la 5 dacă vii cu echipa</p></span></li>
+                            <li><span>Acces la sălile de conferințe</span></li>
+                            <li><span>Acces gratuit la un training și o conferință</span></li>
+                            <li><span>Acces biometric 24/24</span></li>
+                            <li><span>Cafea, ceai, fructe și biscuiți</span></li>
+                        </ul>
+                        <div class="btn-plan-contact">
+                            <a itemprop="url" href="/contact/" class="button">Contactează-ne</a>
                         </div>
-                        <div class="clear"></div>
                     </div>
                 </div>
-
-                <div class="plans" itemprop="itemListElement" itemscope itemtype="https://schema.org/OfferCatalog">
-                    <div class="img-plan" itemprop="itemListElement" itemscope itemtype="https://schema.org/Offer">
-                        <img src="../../images/plan2.jpg" alt="Individual" />
-                        <div class="back-color">
+                <div class="plans">
+                    <div class="plan"><img src="../../images/plan2.jpg" alt="Free Plan" />
                         <div class="text-plan">
-                            <div itemprop="name" class="text-p">Individual</div>
-                            <div class="btn-right">
-                                <a itemprop="url" href="/ro/tour/" class="button">Rezervă o Vizită</a>
-                            </div>
-                        </div>
+                            <div class="text-p">Plan Gratuit</div>
+                            <label>
+                                <span>$</span>
+                                <span>0</span>
+                            </label>
                         </div>
                     </div>
-                    <div class="description">
-                        <div class="block-responsive" itemprop="description">
-                            <p>
-                                Devin-o parte a comunității noastre locale de profesionisti IT.
-                                Membrii noștri contribuie la platforma globală de cloud computing,
-                                care lucreaza cu companii Fortune 500 din Europa si SUA.
-                            </p>
-                            <div><h3>Spațiu de lucru</h3></div>
-                            <p>
-                                Spațiul nostru de coworking este proiectat într-un stil premium,
-                                pentru a vă oferi o experiență unică. Persoanele grandioase merită avantaje mărețe!
-                            </p>
-                            <div><h4>Comunitate</h4></div>
-                            <p>
-                                Calitatea de membru și concentrarea pe cloud computing,
-                                comunitatea noastră permite membrilor să fie competitivi global,
-                                și să atragă proiecte pe scara largă.
-                            </p>
-                            <div><h5>Parteneriate libere</h5></div>
-                            <p>
-                                Cel mai mare avantaj al platformei noastre este parteneriatul liber.
-                                Dacă un membru este selectat să lucreze la proiectul unui partener,
-                                partenerul la randul sau va plăti taxele membrului.
-                            </p>
-
-                            <div class="btn-center ro">
-                                <a href="/ro/contact/" class="button">Contactează-ne</a>
-                            </div>
-
+                    <div class="plans-points">
+                        <ul>
+                            <li><span>Loc de muncă fix</span></li>
+                            <li><span>Acces la sălile de conferințe</span></li>
+                            <li><span>Acces gratuit la toate training-urile și evenimentele</span></li>
+                            <li><span>Acces biometric 24/7</span></li>
+                            <li><span>Cafea, ceai, fructe și biscuiți</span></li>
+                            <li><span>Posibilitate de a colabora cu partenerii 404</span></li>
+                            <li><span>Bilete gratuite la conferințele din domeniul Cloud Computing</span></li>
+                            <li><span>Certificare gratuită în Cloud Computing</span></li>
+                            <li class="last-li"><span>Acces gratuit pentru 2 prieteni timp de 7 zile
+                            <p class="gray-text">Parteneriat liber</p>
+                                <p class="gray-text"> Unul din avantajele platformei noastre este parteneriatul liber.
+                                    Dacă un membru este selectat să lucreze la proiectele unui partener,
+                                    partenerul la rândul său îi va achita toate tarifele membrului.</p></span>
+                            </li>
+                        </ul>
+                        <div class="btn-plan-contact">
+                            <a itemprop="url" href="/contact/" class="button">Contactează-ne</a>
                         </div>
-                        <div class="clear"></div>
                     </div>
                 </div>
-
-                <div class="plans" itemprop="itemListElement" itemscope itemtype="https://schema.org/OfferCatalog">
-                    <div class="img-plan" itemprop="itemListElement" itemscope itemtype="https://schema.org/Offer">
-                        <img src="../../images/plan3.jpg" alt="Business" />
-                        <div class="back-color">
+                <div class="plans">
+                    <div class="plan"><img src="../../images/plan3.jpg" alt="Individual" />
                         <div class="text-plan">
-                            <div itemprop="name" class="text-p">Companie</div>
-                            <div class="btn-right">
+                            <div class="text-p">Individual</div>
+                            <div class="btn-plan">
                                 <a itemprop="url" href="/tour/" class="button">Rezervă o Vizită</a>
                             </div>
                         </div>
-                        </div>
                     </div>
-                    <div class="description">
-                        <div class="block-responsive" itemprop="description">
-                            <p>
-                                Devin-o parte a comunității noastre locale de profesionisti IT.
-                                Membrii noștri contribuie la platforma globală de cloud computing,
-                                care lucreaza cu companii Fortune 500 din Europa si SUA.
-                            </p>
-                            <div><h3>Spațiu de lucru</h3></div>
-                            <p>
-                                Spațiul nostru de coworking este proiectat într-un stil premium,
-                                pentru a vă oferi o experiență unică. Persoanele grandioase merită avantaje mărețe!
-                            </p>
-                            <div><h4>Comunitate</h4></div>
-                            <p>
-                                Calitatea de membru și concentrarea pe cloud computing,
-                                comunitatea noastră permite membrilor să fie competitivi global,
-                                și să atragă proiecte pe scara largă.
-                            </p>
-                            <div><h5>Parteneriate libere</h5></div>
-                            <p>
-                                Cel mai mare avantaj al platformei noastre este parteneriatul liber.
-                                Dacă un membru este selectat să lucreze la proiectul unui partener,
-                                partenerul la randul sau va plăti taxele membrului.
-                            </p>
-
-
-                            <div class="btn-center ro">
-                                <a href="/ro/contact/" class="button">Contactează-ne</a>
+                    <div>
+                        <div class="plans-points">
+                            <ul>
+                                <li><span>Loc de muncă fix</span></li>
+                                <li><span>Acces la sălile de conferință</span></li>
+                                <li><span>Acces la toate evenimentele și training-urile</span></li>
+                                <li><span>Acces biometric 24/7</span></li>
+                                <li><span>Cafea, ceai, fructe și biscuiți</span></li>
+                                <li><span>Posibilitatea de a colabora cu partenerii 404</span></li>
+                                <li><span>Bilete gratuite la conferințele în Cloud Computing</span></li>
+                                <li><span>Certificare gratuită în Cloud Computing</span></li>
+                                <li class="last-li"><span>Acces gratuit pentru 2 prieteni timp de 7 zile
+                                    <p class="gray-text">REȚINE</p>
+                                    <p class="gray-text">
+                                        Prețul depinde de aptitudinile personale și experiență.
+                                        Click pe AFLĂ PREȚUL și îndeplinește formularul ca să primești o ofertă individuală.
+                                    </p></span>
+                                </li>
+                            </ul>
+                            <div class="btn-plan-contact">
+                                <a itemprop="url" href="/contact/" class="button">AFLĂ PREȚUL</a>
                             </div>
                         </div>
-                        <div class="clear"></div>
+                    </div>
+                </div>
+                <div class="plans">
+                    <div class="plan"><img src="../../images/plan4.jpg" alt="Business" />
+                        <div class="text-plan">
+                            <div class="text-p">Business</div>
+                            <div class="btn-plan">
+                                <a itemprop="url" href="/tour/" class="button">Rezervă o Vizită</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="plans-points">
+                        <ul>
+                            <li><span>Loc de muncă fix</span></li>
+                            <li><span>Acces la sălile de conferință</span></li>
+                            <li><span>Acces la toate evenimentele și training-urile</span></li>
+                            <li><span>Acces biometric 24/7</span></li>
+                            <li><span>Cafea, ceai, fructe și biscuiți</span></li>
+                            <li><span>Posibilitatea de a colabora cu partenerii 404</span></li>
+                            <li><span>Bilete gratuite la conferințele din domeniul Cloud Computing</span></li>
+                            <li><span>Certificare gratuită în Cloud Computing</span></li>
+                            <li class="last-li"><span>Servicii de contabilitate gratuită
+                               <p class="gray-text">REȚINE</p>
+                                <p class="gray-text">
+                                   Prețul depinde de abilitățile membrilor din echipa ta, experiență și  număr.
+                                    Click pe AFLĂ PREȚUL și îndeplinește formularul ca să primești o ofertă individuală.</p></span>
+                            </li>
+                        </ul>
+                        <div class="btn-plan-contact">
+                            <a itemprop="url" href="/contact/" class="button">AFLĂ PREȚUL</a>
+                        </div>
                     </div>
                 </div>
             </div>
+        </div>
+        <div class=" container new-page">
+            <div class="pages coworking">
+                <h1 class="page-name">Facilități</h1>
+                <p class="text-p">Toate planurile tarifare includ următoarele facilități: </p>
+            </div>
+            <div class="amenities-block display-flex">
+                <div class="bloks-icons">
+                    <img src="../../images/icon-4.svg">
+                    <div class="icons-text">Internet Rapid</div>
+                </div>
+                <div class="bloks-icons">
+                    <img src="../../images/icon-5.svg">
+                    <div class="icons-text">Săli De Conferințe</div>
+                </div>
+                <div class="bloks-icons">
+                    <img src="../../images/icon-6.svg">
+                    <div class="icons-text">Aparat De Imprimare</div>
+                </div>
+                <div class="bloks-icons">
+                    <img src="../../images/icon-10.svg">
+                    <div class="icons-text">Acces 24/7</div>
+                </div>
+                <div class="bloks-icons">
+                    <img src="../../images/icon-7.svg">
+                    <div class="icons-text">Evenimente Regulate</div>
+                </div>
+                <div class="bloks-icons">
+                    <img src="../../images/icon-8.svg">
+                    <div class="icons-text">Amplasare Strategică</div>
+                </div>
+                <div class="bloks-icons">
+                    <img src="../../images/icon-1.svg">
+                    <div class="icons-text" itemprop="name">Administrator</div>
+                </div>
+                <div class="bloks-icons">
+                    <img src="../../images/icon-9.svg">
+                    <div class="icons-text" itemprop="name">Apa Pură</div>
+                </div>
+                <div class="bloks-icons">
+                    <img src="../../images/icon-3.svg">
+                    <div class="icons-text" itemprop="name">Bucatarie Modernă</div>
+                </div>
+                <div class="bloks-icons">
+                    <img src="../../images/icon-2.svg">
+                    <div class="icons-text" itemprop="name">Servicii De Curațăre</div>
+                </div>
+            </div>
+
         </div>
     </section>
 
@@ -386,7 +422,9 @@ window.fbAsyncInit = function () {
 </footer>
 
 <script type="text/javascript" src="../../js/jquery-1.11.0.min.js"></script>
+<script type="text/javascript" src="../../js/slick-1.6.0.min.js"></script>
 <script type="text/javascript" src="../../js/main.min.js"></script>
+<script type="text/javascript" src="../../js/coworking.js"></script>
 
 </body>
 </html>

@@ -35,6 +35,11 @@
 }
 
 @media (max-width: 1200px) {
+  .amenities-block{
+    &.display-flex {
+      justify-content: space-around;
+    }
+  }
   .contacts {
     .get-in-touch {
       &.flex-row {
@@ -560,7 +565,7 @@
       .main-block {
         .container {
           .display-flex {
-            display: unset;
+            //display: unset;
             .plans {
               .img-plan {
                height: auto;
