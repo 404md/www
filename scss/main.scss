@@ -228,7 +228,7 @@ body {
 }
 
 .image {
-  height: 160px;
+  height: 360px;
   //.image-amenities {
   //  background-image: url(../images/amenities.jpg);
   //  background-position: center;
@@ -236,52 +236,52 @@ body {
   //  height: 160px;
   //}
   .image-contact {
-    background-image: url(../images/contact.jpg);
+    background-image: url(../images/contacts.jpg);
     background-size: cover;
-    background-position: 48% 16%;
-    height: 160px;
+    background-position: 50% 30%;
+    height: 360px;
   }
   .image-members {
     background-image: url(../images/members.jpg);
-    background-position: 20% 80%;
+    background-position:20% 50%;
     background-size: cover;
-    height: 160px;
+    height: 360px;
   }
   .image-coworking {
     background-image: url(../images/coworking-bg.jpg);
     background-position: 52% 48%;
     background-size: cover;
-    height: 160px;
+    height: 360px;
   }
   .image-terms {
     background-image: url(../images/terms.jpg);
     background-position: 52% 27%;
     background-size: cover;
-    height: 160px;
+    height: 360px;
   }
   .image-book_tour {
     background-image: url(../images/book.jpg);
-    background-position: 52% 27%;
+    background-position: 50% 50%;
     background-size: cover;
-    height: 160px;
+    height: 360px;
   }
   .image-invite {
     background-image: url(../images/invite.jpg);
     background-position: 45% 27%;
     background-size: cover;
-    height: 160px;
+    height: 360px;
   }
   .image-gallery {
     background-image: url(../images/gallery.jpg);
-    background-position: 45% 48%;
+    background-position: 40% 58%;
     background-size: cover;
-    height: 160px;
+    height: 360px;
   }
   .image-media {
     background-image: url(../images/media.jpg);
     background-position: 45% 48%;
     background-size: cover;
-    height: 160px;
+    height: 360px;
   }
 }
 
@@ -725,34 +725,35 @@ body {
 
 /* Title */
 
-
-//.image {
-//  .page {
-//    position: relative;
-//    .text-page-name {
-//      display: inline;
-//      position: absolute;
-//      top:50%;
-//      left:50%;
-//      transform: translate(-50%, -50%);
-//      .page-name {
-//        font-family: 'Lato-Regular', sans-serif;
-//        font-size: 45px;
-//        position: relative;
-//        text-transform: uppercase;
-//        color:#ffffff;
-//        &:before {
-//          content: '';
-//          position: absolute;
-//          width: 80px;
-//          height: 6px;
-//          background:#FF5533;
-//          bottom: 0;
-//        }
-//      }
-//    }
-//  }
-//}
+.image {
+  .page {
+    position: relative;
+    .text-page-name {
+      display: inline;
+      position: absolute;
+      top:50%;
+      left:50%;
+      transform: translate(-50%, -50%);
+      .page-name {
+        font-family: 'Lato-Regular', sans-serif;
+        font-size: 45px;
+        position: relative;
+        text-transform: uppercase;
+        color:#ffffff;
+        &:before {
+          content: '';
+          position: absolute;
+          width: 95px;
+          height: 6px;
+          background:#FF5533;
+          bottom: 0;
+          left: 50%;
+          transform: translateX(-50%);
+        }
+      }
+    }
+  }
+}
 
 .new-page {
   &.members-page {
@@ -797,6 +798,17 @@ body {
 }
 
 /* Footer Gallery*/
+
+.footer-carousel {
+  .pic {
+    .image-members {
+      img {
+        width: 100%;
+      }
+    }
+  }
+}
+
 
 .pic {
   width: 25%;
@@ -932,7 +944,6 @@ body {
 #menu-toggle.open {
   #hamburger {
     span {
-
       width:0%;
       &:nth-child(1){
         transition-delay:0s;

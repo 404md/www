@@ -153,12 +153,15 @@
   &.slick-initialized {
     margin-right: -24px;
     .slick-list {
-      margin-right: -24px;
       .slick-track {
+        display: flex;
         .plans {
           border: 2px solid transparent;
           .plan {
             position: relative;
+            display: flex;
+            flex-direction:column;
+            
             img {
               width: 100%;
               filter: grayscale(100%);
@@ -191,36 +194,33 @@
             background:#FF5533;
             border-color:#FF5533;
           }
+          .btn-plan-contact {
+            margin-top: auto;
+            padding-bottom: 24px;
+          }
         }
-        .slick-slide {
-          margin-right: 24px;
-        }
+
         .plans-points {
           position: relative;
           padding: 24px 20px;
           ul {
-            height: 596px;
+            //min-height: 525px;
             padding: 0 10px;
             font-size: 16px;
             li {
               padding-bottom: 16px;
               position: relative;
               color:#95989A;
+              .gray-text {
+                color:#95989A;
+
+              }
               span {
                 color: #000;
               }
             }
             .last-li {
               padding-bottom: 24px;
-              &:after {
-                content:'';
-                width: 100%;
-                height: 1px;
-                background:#95989A;
-                position: absolute;
-                top: 55px;
-                left: 0;
-              }
               .gray-text:first-child {
                 margin-top: 24px;
                 &.last-c {
@@ -229,8 +229,48 @@
               }
             }
           }
+          .notes {
+            position: relative;
+            .glay-line {
+              width: 100%;
+              height: 1px;
+              background:#95989A;
+              margin-bottom: 24px;
+            }
+          }
         }
       }
+    }
+    .slick-prev {
+      top: -19px;
+      left: auto;
+      right: 72px;
+      z-index: 2;
+      &:before {
+        content: '\f053';
+        color:#ffffff;
+        font-family: FontAwesome;
+        background: #FF5533;
+        padding: 10px;
+      }
+    }
+    .slick-next {
+      top: -19px;
+      right: 38px;
+      &:before {
+        content: '\f054';
+        color:#ffffff;
+        font-family: FontAwesome;
+        background:#FF5533 ;
+        padding: 10px;
+      }
+    }
+    .slick-slide {
+      margin-right: 24px;
+      height: auto;
+      float: none;
+      display: flex;
+      flex-direction: column;
     }
   }
 }

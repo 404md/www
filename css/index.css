@@ -445,47 +445,47 @@ body {
     background: transparent; }
 
 .image {
-  height: 160px; }
+  height: 360px; }
   .image .image-contact {
-    background-image: url(../images/contact.jpg);
+    background-image: url(../images/contacts.jpg);
     background-size: cover;
-    background-position: 48% 16%;
-    height: 160px; }
+    background-position: 50% 30%;
+    height: 360px; }
   .image .image-members {
     background-image: url(../images/members.jpg);
-    background-position: 20% 80%;
+    background-position: 20% 50%;
     background-size: cover;
-    height: 160px; }
+    height: 360px; }
   .image .image-coworking {
     background-image: url(../images/coworking-bg.jpg);
     background-position: 52% 48%;
     background-size: cover;
-    height: 160px; }
+    height: 360px; }
   .image .image-terms {
     background-image: url(../images/terms.jpg);
     background-position: 52% 27%;
     background-size: cover;
-    height: 160px; }
+    height: 360px; }
   .image .image-book_tour {
     background-image: url(../images/book.jpg);
-    background-position: 52% 27%;
+    background-position: 50% 50%;
     background-size: cover;
-    height: 160px; }
+    height: 360px; }
   .image .image-invite {
     background-image: url(../images/invite.jpg);
     background-position: 45% 27%;
     background-size: cover;
-    height: 160px; }
+    height: 360px; }
   .image .image-gallery {
     background-image: url(../images/gallery.jpg);
-    background-position: 45% 48%;
+    background-position: 40% 58%;
     background-size: cover;
-    height: 160px; }
+    height: 360px; }
   .image .image-media {
     background-image: url(../images/media.jpg);
     background-position: 45% 48%;
     background-size: cover;
-    height: 160px; }
+    height: 360px; }
 
 .text-anvio {
   font-family: 'Lato-Regular', sans-serif;
@@ -763,6 +763,30 @@ body {
             color: #FF5533; }
 
 /* Title */
+.image .page {
+  position: relative; }
+  .image .page .text-page-name {
+    display: inline;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); }
+    .image .page .text-page-name .page-name {
+      font-family: 'Lato-Regular', sans-serif;
+      font-size: 45px;
+      position: relative;
+      text-transform: uppercase;
+      color: #ffffff; }
+      .image .page .text-page-name .page-name:before {
+        content: '';
+        position: absolute;
+        width: 95px;
+        height: 6px;
+        background: #FF5533;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%); }
+
 .new-page.members-page .pages {
   margin-bottom: 40px; }
 .new-page .pages {
@@ -793,6 +817,9 @@ body {
     color: #ccc; }
 
 /* Footer Gallery*/
+.footer-carousel .pic .image-members img {
+  width: 100%; }
+
 .pic {
   width: 25%;
   float: left; }
@@ -1298,17 +1325,14 @@ body {
 /* Gallery */
 .gallery.members-gallery .gallery-line {
   margin-top: 0; }
-.gallery .gallery-line {
-  height: 300px;
-  margin-top: 60px; }
-  .gallery .gallery-line .img1 {
-    background-image: url(../images/img1-m.jpg); }
-  .gallery .gallery-line .img2 {
-    background-image: url(../images/img2-m.jpg); }
-  .gallery .gallery-line .img3 {
-    background-image: url(../images/img3-m.jpg); }
-  .gallery .gallery-line .img4 {
-    background-image: url(../images/img4-m.jpg); }
+.gallery .gallery-line .img1 {
+  background-image: url(../images/img1-m.jpg); }
+.gallery .gallery-line .img2 {
+  background-image: url(../images/img2-m.jpg); }
+.gallery .gallery-line .img3 {
+  background-image: url(../images/img3-m.jpg); }
+.gallery .gallery-line .img4 {
+  background-image: url(../images/img4-m.jpg); }
 
 .btn-plan .button {
   padding: 0 10px;
@@ -1370,12 +1394,14 @@ body {
 /*Offers Slick*/
 .offers.slick-initialized {
   margin-right: -24px; }
-  .offers.slick-initialized .slick-list {
-    margin-right: -24px; }
+  .offers.slick-initialized .slick-list .slick-track {
+    display: flex; }
     .offers.slick-initialized .slick-list .slick-track .plans {
       border: 2px solid transparent; }
       .offers.slick-initialized .slick-list .slick-track .plans .plan {
-        position: relative; }
+        position: relative;
+        display: flex;
+        flex-direction: column; }
         .offers.slick-initialized .slick-list .slick-track .plans .plan img {
           width: 100%;
           filter: grayscale(100%); }
@@ -1400,35 +1426,62 @@ body {
         color: #ffffff;
         background: #FF5533;
         border-color: #FF5533; }
-    .offers.slick-initialized .slick-list .slick-track .slick-slide {
-      margin-right: 24px; }
+      .offers.slick-initialized .slick-list .slick-track .plans .btn-plan-contact {
+        margin-top: auto;
+        padding-bottom: 24px; }
     .offers.slick-initialized .slick-list .slick-track .plans-points {
       position: relative;
       padding: 24px 20px; }
       .offers.slick-initialized .slick-list .slick-track .plans-points ul {
-        height: 596px;
         padding: 0 10px;
         font-size: 16px; }
         .offers.slick-initialized .slick-list .slick-track .plans-points ul li {
           padding-bottom: 16px;
           position: relative;
           color: #95989A; }
+          .offers.slick-initialized .slick-list .slick-track .plans-points ul li .gray-text {
+            color: #95989A; }
           .offers.slick-initialized .slick-list .slick-track .plans-points ul li span {
             color: #000; }
         .offers.slick-initialized .slick-list .slick-track .plans-points ul .last-li {
           padding-bottom: 24px; }
-          .offers.slick-initialized .slick-list .slick-track .plans-points ul .last-li:after {
-            content: '';
-            width: 100%;
-            height: 1px;
-            background: #95989A;
-            position: absolute;
-            top: 55px;
-            left: 0; }
           .offers.slick-initialized .slick-list .slick-track .plans-points ul .last-li .gray-text:first-child {
             margin-top: 24px; }
             .offers.slick-initialized .slick-list .slick-track .plans-points ul .last-li .gray-text:first-child.last-c {
               margin-top: 47px; }
+      .offers.slick-initialized .slick-list .slick-track .plans-points .notes {
+        position: relative; }
+        .offers.slick-initialized .slick-list .slick-track .plans-points .notes .glay-line {
+          width: 100%;
+          height: 1px;
+          background: #95989A;
+          margin-bottom: 24px; }
+  .offers.slick-initialized .slick-prev {
+    top: -19px;
+    left: auto;
+    right: 72px;
+    z-index: 2; }
+    .offers.slick-initialized .slick-prev:before {
+      content: '\f053';
+      color: #ffffff;
+      font-family: FontAwesome;
+      background: #FF5533;
+      padding: 10px; }
+  .offers.slick-initialized .slick-next {
+    top: -19px;
+    right: 38px; }
+    .offers.slick-initialized .slick-next:before {
+      content: '\f054';
+      color: #ffffff;
+      font-family: FontAwesome;
+      background: #FF5533;
+      padding: 10px; }
+  .offers.slick-initialized .slick-slide {
+    margin-right: 24px;
+    height: auto;
+    float: none;
+    display: flex;
+    flex-direction: column; }
 
 @media (min-width: 768px) {
   .container {
@@ -1597,11 +1650,6 @@ body {
       height: 2px; }
   .wrapper.invitation .main-block .form-invitation .container .form-invite .contacts-invite .form-block .input-style {
     font-size: 15px; }
-
-  .gallery .gallery-line {
-    height: 180px; }
-    .gallery .gallery-line .img1, .gallery .gallery-line .img2, .gallery .gallery-line .img3, .gallery .gallery-line .img4 {
-      height: 180px; }
 
   .case-study .container .right-block {
     width: 47%; }
@@ -1802,9 +1850,6 @@ body {
   .main-nav .container .nav-top .navt li .link, .main-nav .container .nav-top .navt li .last-line {
     width: auto; } }
 @media (max-width: 736px) {
-  .gallery {
-    display: none; }
-
   .main-nav .container .nav-top .navt {
     line-height: 61px; }
     .main-nav .container .nav-top .navt li .link, .main-nav .container .nav-top .navt li .last-line {
@@ -1956,10 +2001,7 @@ body {
     .wrapper .main-block .main-info .local-com .text-center {
       text-align: center; }
     .wrapper .main-block .main-info .local-com .more {
-      text-align: center; }
-
-  .new-page .pages {
-    width: 90%; } }
+      text-align: center; } }
 @media (max-width: 590px) {
   .wrapper.notfound-page .main-block.notfound .container .text-notfound .link-notfound {
     font-size: 35px; }

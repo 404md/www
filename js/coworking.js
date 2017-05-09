@@ -6,7 +6,7 @@ jQuery(function($) {
         slidesToShow: 4,
         slidesToScroll: 1,
         dots: false,
-        arrows:false,
+        arrows:true,
         responsive: [
             {
                 breakpoint: 1200,
@@ -14,7 +14,6 @@ jQuery(function($) {
                     slidesToShow: 3,
                     slidesToScroll: 3,
                     infinite: true,
-                    arrows:true,
                     dots: false
                 }
             },
@@ -24,16 +23,14 @@ jQuery(function($) {
                     slidesToShow: 2,
                     slidesToScroll: 2,
                     infinite: true,
-                    arrows:true,
                     dots: false
                 }
             },
             {
-                breakpoint: 500,
+                breakpoint: 540,
                 settings: {
                     slidesToShow: 1,
-                    slidesToScroll: 1,
-                    arrows:true
+                    slidesToScroll: 1
                 }
             }
         ]
