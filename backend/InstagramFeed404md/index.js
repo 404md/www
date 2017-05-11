@@ -14,14 +14,14 @@ exports.handler = (event, context) => {
         description: item.caption.text,
         tags: item.tags,
         likes: item.likes,
-        images: (item.type === 'image') ? item.images.standard_resolution : {},
+        images: item.images.standard_resolution,
         videos: (item.type === 'video') ? item.videos.standard_resolution : {},
       };
     });
 
     let params = {
       Bucket: 'www.404.md',
-      Key: '/json/instagram-feed.json',
+      Key: 'json/instagram-feed.json',
       Body: JSON.stringify(feed)
     };
 
