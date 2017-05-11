@@ -95,8 +95,10 @@
       .page-name {
         display: inline;
         &:before {
-          left:28%;
+         position:absolute;
           width: 106px;
+          left: 50%;
+          transform: translateX(-50%);
         }
       }
       .text-p {
@@ -151,9 +153,9 @@
 
 .offers {
   &.slick-initialized {
-    margin-right: -24px;
     .slick-list {
       .slick-track {
+        margin-right: -24px;
         display: flex;
         .plans {
           border: 2px solid transparent;
@@ -241,32 +243,33 @@
         }
       }
     }
-    .slick-prev {
-      top: -19px;
-      left: auto;
-      right: 72px;
-      z-index: 2;
-      &:before {
-        content: '\f053';
-        color:#ffffff;
-        font-family: FontAwesome;
-        background: #FF5533;
-        padding: 10px;
-      }
-    }
-    .slick-next {
-      top: -19px;
-      right: 38px;
-      &:before {
-        content: '\f054';
-        color:#ffffff;
-        font-family: FontAwesome;
-        background:#FF5533 ;
-        padding: 10px;
-      }
-    }
+    //.slick-prev {
+    //  top: -19px;
+    //  left: auto;
+    //  right: 72px;
+    //  z-index: 2;
+    //  &:before {
+    //    content: '\f053';
+    //    color:#ffffff;
+    //    font-family: FontAwesome;
+    //    background: #FF5533;
+    //    padding: 10px;
+    //  }
+    //}
+    //.slick-next {
+    //  top: -19px;
+    //  right: 38px;
+    //  &:before {
+    //    content: '\f054';
+    //    color:#ffffff;
+    //    font-family: FontAwesome;
+    //    background:#FF5533 ;
+    //    padding: 10px;
+    //  }
+    //}
     .slick-slide {
-      margin-right: 24px;
+      margin-right: 12px;
+      margin-left: 12px;
       height: auto;
       float: none;
       display: flex;

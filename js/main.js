@@ -142,13 +142,14 @@ jQuery(function($) {
         infinite: true,
         slidesToShow: 5,
         slidesToScroll: 1,
-        autoplay: true,
+        centerMode: true,
+        autoplay:true,
         autoplaySpeed: 2000,
         dots: false,
         arrows:false,
         responsive: [
             {
-                breakpoint: 1200,
+                breakpoint: 1350,
                 settings: {
                     slidesToShow: 4,
                     slidesToScroll: 4,
@@ -157,7 +158,7 @@ jQuery(function($) {
                 }
             },
             {
-                breakpoint: 980,
+                breakpoint: 1200,
                 settings: {
                     slidesToShow: 3,
                     slidesToScroll: 3,
@@ -166,14 +167,14 @@ jQuery(function($) {
                 }
             },
             {
-                breakpoint: 540,
+                breakpoint: 730,
                 settings: {
                     slidesToShow: 2,
                     slidesToScroll: 2
                 }
             },
             {
-                breakpoint: 430,
+                breakpoint: 630,
                 settings: {
                     slidesToShow: 1,
                     slidesToScroll: 1
@@ -182,5 +183,18 @@ jQuery(function($) {
         ]
     });
 
+    // $('.footer-carousel').on('afterChange', function(event, slick, currentSlide, nextSlide){
+    //     $('.hidden-div').hide();
+    //     $('.hidden-div[data-id=' + (currentSlide + 1) + ']').show();
+    // });
+
+    // $('.footer-carousel').on('beforeChange', function(event, slick, currentSlide, centerMode){
+    //     if (centerMode == 3) {
+    //
+    //         $('.hidden-div').show();
+    //     } else {
+    //         $('.hidden-div').hide();
+    //     }
+    // });
 
 });

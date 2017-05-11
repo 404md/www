@@ -623,9 +623,9 @@ body {
         text-transform: uppercase;
         border: 2px solid transparent;
         &:hover {
-          border-color: #000000;
-          color: black;
-          background: white;
+          border-color: #FF5533;
+          color:#ffffff;
+          background:#FF5533;
         }
       }
     }
@@ -692,6 +692,9 @@ body {
       float: left;
       line-height: 40px;
       height:40px;
+      .language {
+        margin-left: 3px;
+      }
       a {
         text-decoration: none;
         margin-left: 20px;
@@ -740,6 +743,7 @@ body {
         position: relative;
         text-transform: uppercase;
         color:#ffffff;
+        text-align: center;
         &:before {
           content: '';
           position: absolute;
@@ -801,10 +805,75 @@ body {
 
 .footer-carousel {
   .pic {
+    position: relative;
     .image-members {
       img {
         width: 100%;
       }
+    }
+    &.slick-center {
+      .hidden-avatar  {
+        opacity: 1;
+        transition: all .2s ease-in-out;
+      }
+    }
+    .we-love {
+      display: flex;
+      position: absolute;
+      z-index: 1;
+      margin: auto;
+      font-size: 25px;
+      color:white;
+      width: 90%;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      flex-wrap: wrap;
+      flex-direction: column;
+      text-align: center;
+      justify-content: center;
+      .avatar {
+        width: 100px;
+        height: 100px;
+        overflow: hidden;
+        border-radius:  50%;
+        position: relative;
+        background:#95989A ;
+        margin: 0 auto;
+        border: 4px solid #FF5533;
+        img {
+          height: 100%;
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+        }
+      }
+      .avatar-comment {
+        text-transform: uppercase;
+        display: block;
+        font-size:16px;
+        //padding-bottom: 24px;
+      }
+      .comment {
+        line-height: 25px;
+        padding-bottom: 32px;
+        width: 100%;
+        .quote {
+          padding-bottom: 15px;
+          text-align: left;
+          font-size: 35px;
+          color:#FF5533;
+        }
+        span {
+          font-size: 15px;
+        }
+      }
+    }
+    .hidden-avatar {
+      opacity: 0;
+      transition: all .3s ease-in-out;
     }
   }
 }
@@ -840,46 +909,8 @@ body {
       transition: 0.5s;
       background-color: rgba(221, 89, 49, 0.8);
     }
-    .we-love {
-      display: block;
-      position: relative;
-      z-index: 1;
-      margin: auto;
-      font-size: 25px;
-      color:white;
-      width: 88%;
-      .avatar {
-        width: 100px;
-        height: 100px;
-        overflow: hidden;
-        border-radius:  50%;
-        float: left;
-        margin-right: 20px;
-        position: relative;
-        background:#FF5533 ;
-        img {
-          height: 100%;
-          position: absolute;
-          top: 50%;
-          left: 50%;
-          transform: translate(-50%, -50%);
-        }
-      }
-      .comment {
-        line-height: 25px;
-        .avatar-comment {
-          padding-bottom: 20px;
-          text-transform: uppercase;
-          display: block;
-        }
-        span {
-          font-size: 15px;
-        }
-      }
-    }
   }
 }
-
 
 #menu-toggle {
   display: none;

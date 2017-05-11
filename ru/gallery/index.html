@@ -21,6 +21,8 @@
     <meta name="twitter:url" content="https://www.404.md/ru/gallery/"/>
     <link rel="icon" href="/favicon.png" type="image/png"/>
     <link rel="stylesheet" href="../../css/index.min.css"/>
+    <link rel="stylesheet" href="../../css/slick-1.6.0.min.css"/>
+    <link rel="stylesheet" href="../../css/slick-theme-1.6.0.min.css"/>
     <link rel="stylesheet" href="../../css/font-awesome-4.7.0.min.css"/>
     <link rel="stylesheet" href="../../css/materialdesignicons.css"/>
 <!-- Google Tag Manager -->
@@ -143,47 +145,233 @@ window.fbAsyncInit = function () {
     </div>
 
     <section class="gallery photos-gallery">
-        <div class="gallery-line" itemscope itemtype="https://schema.org/UserComments">
+        <div class="gallery-line footer-carousel" itemscope itemtype="https://schema.org/UserComments">
             <div class="pic">
-                <div class="img1 img-value img-hover">
+                <div class="hidden-avatar">
                     <div class="we-love">
+                        <div class="comment">
+                            <div class="quote">
+                                <i class="mdi-format-quote-open mdi-set"></i>
+                            </div>
+                            <span itemprop="commentText">404.md мотивирует меня</span>
+                        </div>
+                        <div class="avatar">
+                            <img src="../../images/avatar-vlad1.png" alt="Влад У.">
+                        </div>
+                        <span class="avatar-comment" itemprop="name">Влад У.</span>
+                    </div>
+                </div>
+                <div class="image-members">
+                    <img src="../../images/gallery-1.jpg">
+                </div>
+            </div>
+            <div class="pic">
+                <div class="hidden-avatar">
+                    <div class="we-love">
+                        <div class="comment">
+                            <div class="quote">
+                                <i class="mdi-format-quote-open mdi-set"></i>
+                            </div>
+                            <span itemprop="commentText">404.md вдохновляет меня делать добро</span>
+                        </div>
+                        <div class="avatar">
+                            <img src="../../images/avatar-eugen1.png" alt="Евгений И." />
+                        </div>
+                        <span class="avatar-comment" itemprop="name">Евгений И.</span>
+                    </div>
+                </div>
+                <div class="image-members">
+                    <img src="../../images/gallery-2.jpg">
+                </div>
+            </div>
+            <div class="pic">
+                <div class="hidden-avatar">
+                    <div class="we-love">
+                        <div class="comment">
+                            <div class="quote">
+                                <i class="mdi-format-quote-open mdi-set"></i>
+                            </div>
+                            <span itemprop="commentText">Здесь твоя социальная сеть реальна</span>
+                        </div>
+                        <div class="avatar">
+                            <img src="../../images/avatar-irina1.png" alt="Ирина К.">
+                        </div>
+                        <span class="avatar-comment" itemprop="name">Ирина К.</span>
+                    </div>
+                </div>
+                <div class="image-members">
+                    <img src="../../images/gallery-3.jpg">
+                </div>
+            </div>
+            <div class="pic">
+                <div class="hidden-avatar">
+                    <div class="we-love">
+                        <div class="comment">
+                            <div class="quote">
+                                <i class="mdi-format-quote-open mdi-set"></i>
+                            </div>
+                            <span itemprop="commentText">Я рад быть частью сообщества 404</span>
+                        </div>
+                        <div class="avatar">
+                            <img src="../../images/avatar-alex1.png" alt="Алекс К.">
+                        </div>
+                        <span class="avatar-comment" itemprop="name">Алекс К.</span>
+                    </div>
+                </div>
+                <div class="image-members">
+                    <img src="../../images/gallery-4.jpg">
+                </div>
+            </div>
+            <div class="pic">
+                <div class="hidden-avatar">
+                    <div class="we-love">
+                        <div class="comment">
+                            <div class="quote">
+                                <i class="mdi-format-quote-open mdi-set"></i>
+                            </div>
+                            <span itemprop="commentText">404 Лучшее место для работы с профессионалами</span>
+                        </div>
+                        <div class="avatar">
+                            <img src="../../images/avatar-cristi1.png" alt="Кристи К.">
+                        </div>
+                        <span class="avatar-comment" itemprop="name">Кристи К.</span>
+                    </div>
+                </div>
+                <div class="image-members">
+                    <img src="../../images/gallery-5.jpg">
+                </div>
+            </div>
+            <div class="pic">
+                <div class="hidden-avatar">
+                    <div class="we-love">
+                        <div class="comment">
+                            <div class="quote">
+                                <i class="mdi-format-quote-open mdi-set"></i>
+                            </div>
+                            <span itemprop="commentText">Уютное место и приятная атмосфера</span>
+                        </div>
+                        <div class="avatar">
+                            <img src="../../images/avatar-alex2.png" alt="Aлександр В.">
+                        </div>
+                        <span class="avatar-comment" itemprop="name">Aлександр В.</span>
+                    </div>
+                </div>
+                <div class="image-members">
+                    <img src="../../images/gallery-6.jpg">
+                </div>
+            </div>
+            <div class="pic">
+                <div class="hidden-avatar">
+                    <div class="we-love">
+                        <div class="comment">
+                            <div class="quote">
+                                <i class="mdi-format-quote-open mdi-set"></i>
+                            </div>
+                            <span itemprop="commentText">Я рад быть частью сообшества 404</span>
+                        </div>
+                        <div class="avatar">
+                            <img src="../../images/avatar-marcel1.png" alt="Марчел Г.">
+                        </div>
+                        <span class="avatar-comment" itemprop="name">Марчел Г.</span>
+                    </div>
+                </div>
+                <div class="image-members">
+                    <img src="../../images/gallery-7.jpg">
+                </div>
+            </div>
+            <div class="pic">
+                <div class="hidden-avatar">
+                    <div class="we-love">
+                        <div class="comment">
+                            <div class="quote">
+                                <i class="mdi-format-quote-open mdi-set"></i>
+                            </div>
+                            <span itemprop="commentText">404 вдохновляет меня на работу</span>
+                        </div>
                         <div class="avatar">
                             <img src="../../images/avatar-grigore1.png" alt="Григорий M.">
                         </div>
-                        <div class="comment">
-                            <span class="avatar-comment" itemprop="name">Григорий M.</span>
-                            <span itemprop="commentText">"404 вдохновляет меня на работу"</span>
-                        </div>
+                        <span class="avatar-comment" itemprop="name">Григорий M.</span>
                     </div>
+                </div>
+                <div class="image-members">
+                    <img src="../../images/gallery-8.jpg">
                 </div>
             </div>
             <div class="pic">
-                <div class="img2 img-value img-hover">
+                <div class="hidden-avatar">
                     <div class="we-love">
+                        <div class="comment">
+                            <div class="quote">
+                                <i class="mdi-format-quote-open mdi-set"></i>
+                            </div>
+                            <span itemprop="commentText">404 вдохновляет меня каждый день</span>
+                        </div>
                         <div class="avatar">
-                            <img src="../../images/avatar-male.jpg" alt="Габриел С.">
+                            <img src="../../images/avatar-dan1.png" alt="Дан Б.">
                         </div>
-                        <div class="comment">
-                            <span class="avatar-comment" itemprop="name">Габриел С.</span>
-                            <span itemprop="commentText">"404 Moldova"</span>
-                        </div>
+                        <span class="avatar-comment" itemprop="name">Дан Б.</span>
                     </div>
+                </div>
+                <div class="image-members">
+                    <img src="../../images/gallery-9.jpg">
                 </div>
             </div>
             <div class="pic">
-                <div class="img3 img-value"></div>
+                <div class="hidden-avatar">
+                    <div class="we-love">
+                        <div class="comment">
+                            <div class="quote">
+                                <i class="mdi-format-quote-open mdi-set"></i>
+                            </div>
+                            <span itemprop="commentText">404 это идеальное место чтобы преуспеть</span>
+                        </div>
+                        <div class="avatar">
+                            <img src="../../images/avatar-dima1.png" alt="Дмитрий Д.">
+                        </div>
+                        <span class="avatar-comment" itemprop="name">Дмитрий Д.</span>
+                    </div>
+                </div>
+                <div class="image-members">
+                    <img src="../../images/gallery-10.jpg">
+                </div>
             </div>
             <div class="pic">
-                <div class="img4 img-value img-hover">
+                <div class="hidden-avatar">
                     <div class="we-love">
+                        <div class="comment">
+                            <div class="quote">
+                                <i class="mdi-format-quote-open mdi-set"></i>
+                            </div>
+                            <span itemprop="commentText">404 идеальный путь к достижениям</span>
+                        </div>
                         <div class="avatar">
                             <img src="../../images/avatar-tanea1.png" alt="Татьяна С.">
                         </div>
-                        <div class="comment">
-                            <span class="avatar-comment" itemprop="name">Татьяна С.</span>
-                            <span itemprop="commentText">"404 идеальный путь к достижениям"</span>
-                        </div>
+                        <span class="avatar-comment" itemprop="name">Татьяна С.</span>
                     </div>
+                </div>
+                <div class="image-members">
+                    <img src="../../images/gallery-11.jpg">
+                </div>
+            </div>
+            <div class="pic">
+                <div class="hidden-avatar">
+                    <div class="we-love">
+                        <div class="comment">
+                            <div class="quote">
+                                <i class="mdi-format-quote-open mdi-set"></i>
+                            </div>
+                            <span itemprop="commentText">404.md чувствуешь себя как дома</span>
+                        </div>
+                        <div class="avatar">
+                            <img src="../../images/avatar-dima2.png" alt="Дмитрий С.">
+                        </div>
+                        <span class="avatar-comment" itemprop="name">Дмитрий С.</span>
+                    </div>
+                </div>
+                <div class="image-members">
+                    <img src="../../images/gallery-12.jpg">
                 </div>
             </div>
         </div>
@@ -273,6 +461,7 @@ window.fbAsyncInit = function () {
 </footer>
 
 <script type="text/javascript" src="../../js/jquery-1.11.0.min.js"></script>
+<script type="text/javascript" src="../../js/slick-1.6.0.min.js"></script>
 <script type="text/javascript" src="../../js/main.min.js"></script>
 
 </body>

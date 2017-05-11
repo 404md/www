@@ -434,6 +434,13 @@
 }
 
 @media screen and (max-width: 992px) {
+  .amenities-block {
+    .bloks-icons {
+      img {
+        height: 80px;
+      }
+    }
+  }
   .contacts {
     .get-in-touch {
       &.flex-row {
@@ -672,10 +679,34 @@
       }
     }
   }
-  .gallery {
-    &.members-gallery, &.connect-us {
-    .gallery-line {
-      margin-top:  0;
+  //.gallery {
+  //  &.members-gallery {
+  //  .gallery-line {
+  //    margin-top:  60px;
+  //    }
+  //  }
+  //}
+}
+
+@media (max-width:870px) {
+  .footer-carousel {
+    .pic {
+      .we-love {
+        .comment {
+          padding-bottom: 10px;
+          line-height: 15px;
+          .guote {
+            padding-bottom: 5px;
+          }
+        }
+        .avatar-comment {
+          padding-bottom: 0;
+        }
+        justify-content: center;
+        .avatar {
+          width: 80px;
+          height: 80px;
+        }
       }
     }
   }
@@ -756,6 +787,47 @@
       }
     }
   }
+  .image {
+    height: 152px;
+    .page {
+      height: 152px;
+      .text-page-name {
+        .page-name {
+          font-size: 30px;
+          padding-bottom: 3px;
+          &:before {
+            height:4px;
+            width: 65px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 630px) {
+  .footer-carousel {
+    &.slick-initialized {
+      .slick-slide {
+        margin-left: 5px;
+        margin-right: 5px;
+      }
+    }
+    .pic {
+      .we-love {
+        .avatar {
+          width: 100px;
+          height: 100px;
+        }
+        .comment {
+          padding-bottom: 24px;
+        }
+        .avatar-comment {
+          padding-top: 15px;
+        }
+      }
+    }
+  }
 }
 
 @media (max-width: 600px) {
@@ -793,9 +865,35 @@
 }
 
 @media (max-width: 736px) {
-  //.gallery {
-  //  display: none;
-  //}
+.offers {
+  &.slick-initialized {
+    .slick-list {
+      .slick-track {
+        .plans {
+          border:2px solid #000000;
+          .plan {
+            img {
+              filter: none;
+            }
+          }
+          .button {
+            background: #FF5533;
+            border:2px solid #FF5533;
+            color:#ffffff;
+          }
+        }
+        .plans-points {
+          ul {
+            li {
+              color:#FF5533;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
   .main-nav {
     .container {
       .nav-top {
@@ -870,7 +968,7 @@
           .container {
             .right-block {
               .right-info {
-                margin-bottom: 0;
+                margin-bottom: 24px;
               }
             }
           }
@@ -1299,6 +1397,9 @@
     .container {
       .left-footer {
         text-align: center;
+        a {
+          margin-left: 10px;
+        }
       }
     }
   }
@@ -1413,6 +1514,77 @@
 }
 
 @media (max-width: 375px) {
+  .gallery {
+    margin-bottom: 32px;
+  }
+  .footer-carousel {
+    .pic {
+      .we-love {
+        .avatar {
+          width: 70px;
+          height: 70px;
+        }
+        .comment {
+          padding-bottom: 14px;
+        }
+      }
+    }
+  }
+  .footer-black {
+    &.ru {
+      .container {
+        .left-footer {
+          min-height: 80px;
+          .language {
+            margin-right: 10px;
+          }
+        }
+      }
+    }
+  }
+  .new-page {
+    .pages {
+      &.coworking {
+        .page-name {
+          &:before {
+            width: 60px;
+            height: 4px;
+            margin-top: 3px;
+          }
+        }
+      }
+    }
+  }
+  .offers {
+    &.ru {
+      &.slick-initialized {
+        .slick-list {
+          .slick-track {
+            .plans-points {
+              padding: 15px 18px;
+              line-height: 21px;
+            }
+            .plan {
+              .text-plan {
+                .text-p {
+                  font-size: 15px;
+                }
+              }
+            }
+          }
+        }
+        .slick-slide {
+         margin-left: 5px;
+          margin-right: 5px;
+          .button {
+            padding: 0 1px;
+            font-size: 13px;
+          }
+        }
+      }
+    }
+
+  }
   .wrapper {
     &.booking {
       .main-block {
