@@ -49,6 +49,7 @@ a {
 
 .flex-row {
   display: flex;
+  display: -webkit-flex;
   flex-wrap: wrap;
 }
 
@@ -1089,19 +1090,260 @@ body {
 
 /* Startup-Evening*/
 
+.apply-button {
+  background: #fdb91a;
+  color: #ffffff;
+  padding: 10px 60px;
+  display: inline-block;
+  font-size: 40px;
+  border-radius: 4px;
+  &:hover {
+    background: #f03957;
+    color: #ffffff;
+  }
+}
+
 .startup {
   font-family: 'Roboto Mono', monospace;
   .first-block {
     background: #373268;
     .left-image {
-
+      img {
+        position: absolute;
+        max-height: 880px;
+      }
+      .image-block {
+        position: relative;
+        width: 90%;
+        height: 100%;
+        margin: 0 auto;
+        padding-top: 60px;
+      }
     }
     .right-image {
       padding: 60px;
       text-align: center;
+      .image-block {
+        width: 90%;
+        margin: 0 auto;
+        img {
+          max-height: 450px;
+        }
+      }
+      .text-event {
+        padding: 30px 0;
+
+      }
     }
   }
   .text-yellow {
-    color:#fdb91a;
+    color: #fdb91a;
+    font-size: 40px;
+    display: inline;
+  }
+  .second-block {
+    .block-about {
+      margin-top: 30px;
+      margin-bottom: 30px;
+    }
+    background: #e8e6e7;
+    .logos {
+      padding: 30px 0;
+      text-align: center;
+      p {
+        text-align: center;
+        padding-bottom: 20px;
+        font-size: 20px;
+        color: #373268;
+      }
+      img {
+        max-height: 113px;
+      }
+      .logos_2 {
+        width: 35%;
+      }
+    }
+    .text-event {
+      &.what {
+        padding: 30px;
+      }
+      p {
+        font-size: 20px;
+        color: #373268;
+      }
+      h1, h2, h4 {
+        font-size: 30px;
+        text-align: center;
+        color: #f03957;
+        padding-bottom: 30px;
+      }
+    }
+    .yellow-block {
+      background: #fdb91a;
+      .text-event {
+        padding: 40px 0;
+        h4 {
+          color: #373268;
+          font-size: 30px;
+          text-align: left;
+        }
+        ul {
+          padding-left: 20px;
+          li {
+            font-size: 20px;
+            color:#373268;
+          }
+        }
+      }
+    }
+    .agenda {
+      color:#373268;
+      padding-top: 40px;
+      padding-bottom: 40px;
+      &.find-us {
+        background: #ffffff;
+        text-align: center;
+        line-height: 20px;
+        p {
+          padding: 5px;
+        }
+        h3 {
+          color:#f03957;
+        }
+        .mdi-facebook-box {
+          font-size: 40px;
+          color:#373268;
+          padding: 40px 0 0;
+        }
+      }
+      .text-event {
+        margin-bottom: 0;
+      }
+      h3 {
+        font-size: 30px;
+        text-align: center;
+        padding-bottom: 40px;
+
+      }
+      p, ul {
+        font-size: 25px;
+        padding: 15px;
+      }
+      .line-block {
+        position: relative;
+        &:before {
+          content: '';
+          position: absolute;
+          height: 100%;
+          width: 2px;
+          background:#373268;
+          right: 0;
+        }
+      }
+      .left-agenda {
+       p, ul {
+         margin-left: 40px;
+         li {
+           list-style-position: inside;
+         }
+       }
+      }
+      .button-block {
+        padding: 80px 0 0;
+        p {
+          font-size: 20px;
+        }
+        .btn-block {
+          text-align: center;
+        }
+      }
+    }
+    .line-red {
+      background:#f03957;
+      height: 130px;
+      &.line-gray {
+        background:#E8E6E7;
+       h3 {
+         color:#373268;
+       }
+      }
+      h3 {
+        font-size: 30px;
+        color: #ffffff;
+        text-align: center;
+        line-height: 130px;
+      }
+    }
+    .map-event {
+      height: 490px;
+      .map-style-event {
+        height: 490px;
+      }
+    }
+  }
+}
+
+
+
+.third-block {
+  .image-cover {
+    background-image: url(../images/cover-photo.jpg);
+    background-position: 50% 50%;
+    height: 300px;
+    background-size: cover;
+  }
+  .image-photo1 {
+    background-image: url(../images/eistrati.jpg);
+    background-position: 50% 50%;
+    height: 300px;
+    background-size: cover;
+  }
+  .image-photo2 {
+    background-image: url(../images/aburciu.jpg);
+    background-position: 50% 50%;
+    height: 300px;
+    background-size: cover;
+  }
+  .image-photo3 {
+    background-image: url(../images/dsturza.jpg);
+    background-position: 50% 50%;
+    height: 300px;
+    background-size: cover;
+  }
+  .program {
+    color:#373268;
+    background:#f03957;
+    max-height: 300px;
+    &.yellow-program {
+      background:#fdb91a;
+      .text-up {
+        text-align: right;
+      }
+      p {
+        text-align: right;
+      }
+    }
+    .collaboration {
+      position: relative;
+      top: 50%;
+      transform: translateY(-50%);
+      padding:0 40px;
+      .text-up {
+        padding-bottom: 20px;
+
+        h3 {
+          font-size: 30px;
+          text-transform: uppercase;
+          color:#373268;
+          //text-align: left;
+          //margin: 40px 0;
+          //padding-left: 90px;
+        }
+      }
+
+      .text-collaboration {
+        font-size: 25px;
+      }
+    }
   }
 }

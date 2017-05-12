@@ -16,6 +16,25 @@ function myMap() {
     });
 }
 
+function myEvent() {
+    var myLatLng = {lat: 46.9869149, lng: 28.8577533};
+
+    var map2 = new google.maps.Map(document.getElementById('map2'), {
+        zoom: 18,
+        backgroundColor:"#eeeeee",
+        center: myLatLng
+    });
+
+    var marker = new google.maps.Marker({
+        position: myLatLng,
+        map: map2,
+        title: 'Olimpiada'
+
+    });
+
+}
+
+
 jQuery(function($) {
     'use strict';
 
