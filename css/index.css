@@ -249,14 +249,6 @@
 /* Gallery */
 .gallery.invitation .gallery-line {
   margin-top: 0; }
-  .gallery.invitation .gallery-line .img1 {
-    background-image: url(../images/img1-i.jpg); }
-  .gallery.invitation .gallery-line .img2 {
-    background-image: url(../images/img2-i.jpg); }
-  .gallery.invitation .gallery-line .img3 {
-    background-image: url(../images/img3-i.jpg); }
-  .gallery.invitation .gallery-line .img4 {
-    background-image: url(../images/img4-i.jpg); }
 
 * {
   margin: 0;
@@ -978,39 +970,14 @@ body {
 /* Gallery for terms*/
 .gallery.terms .gallery-line {
   margin-top: 60px; }
-  .gallery.terms .gallery-line .img1 {
-    background-image: url(../images/img1-tr.jpg); }
-  .gallery.terms .gallery-line .img2 {
-    background-image: url(../images/img2-tr.jpg); }
-  .gallery.terms .gallery-line .img3 {
-    background-image: url(../images/img3-tr.jpg); }
-  .gallery.terms .gallery-line .img4 {
-    background-image: url(../images/img4-tr.jpg); }
 
 /* Gallery for photo-gallery*/
 .gallery.photos-gallery .gallery-line {
   margin-top: 0; }
-  .gallery.photos-gallery .gallery-line .img1 {
-    background-image: url(../images/img1-g.jpg); }
-  .gallery.photos-gallery .gallery-line .img2 {
-    background-image: url(../images/img2-g.jpg); }
-  .gallery.photos-gallery .gallery-line .img3 {
-    background-image: url(../images/img3-g.jpg); }
-  .gallery.photos-gallery .gallery-line .img4 {
-    background-image: url(../images/img4-g.jpg); }
 
 /* Gallery for media*/
 .gallery.media-gallery .gallery-line {
   margin-top: 0; }
-  .gallery.media-gallery .gallery-line .img1 {
-    background-image: url(../images/img1-md.jpg);
-    background-position: inherit; }
-  .gallery.media-gallery .gallery-line .img2 {
-    background-image: url(../images/img2-md.jpg); }
-  .gallery.media-gallery .gallery-line .img3 {
-    background-image: url(../images/img3-md.jpg); }
-  .gallery.media-gallery .gallery-line .img4 {
-    background-image: url(../images/img4-md.jpg); }
 
 #video {
   width: 100%;
@@ -1407,19 +1374,6 @@ body {
 .icons-text {
   padding: 32px 0;
   font-size: 20px; }
-
-/* Gallery */
-.gallery.pricing-gallery .gallery-line .img1 {
-  background-image: url(../images/img1-p.jpg); }
-.gallery.pricing-gallery .gallery-line .img2 {
-  background-image: url(../images/img2-p.jpg); }
-.gallery.pricing-gallery .gallery-line .img3 {
-  background-image: url(../images/img3-p.jpg);
-  background-position-y: 70%; }
-.gallery.pricing-gallery .gallery-line .img4 {
-  background-image: url(../images/img4-p.jpg);
-  display: flex;
-  background-position: right; }
 
 /*Offers Slick*/
 .offers.slick-initialized .slick-list .slick-track {
