@@ -49,6 +49,7 @@ a {
 
 .flex-row {
   display: flex;
+  flex-wrap: wrap;
 }
 
 .flex-item-1 {
@@ -1082,5 +1083,25 @@ body {
         background-image: url(../images/img4-md.jpg);
       }
     }
+  }
+}
+
+
+/* Startup-Evening*/
+
+.startup {
+  font-family: 'Roboto Mono', monospace;
+  .first-block {
+    background: #373268;
+    .left-image {
+
+    }
+    .right-image {
+      padding: 60px;
+      text-align: center;
+    }
+  }
+  .text-yellow {
+    color:#fdb91a;
   }
 }
