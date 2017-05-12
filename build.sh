@@ -18,7 +18,7 @@ echo "Copying resources into build/release folder"
 rm -rf ./build/Release/*
 mkdir -p ./build/Release/
 cp -R favicon.png robots.txt sitemap.xml css fonts images js videos \
-	amenities contact gallery invitation media members pricing terms tour tour-ok \
+	amenities contact coworking gallery invitation media members terms tour tour-ok \
 	ro ru ./build/Release/
 
 echo "Minifying html code"
