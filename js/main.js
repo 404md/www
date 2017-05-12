@@ -201,19 +201,5 @@ jQuery(function($) {
             }
         ]
     });
-
-    // $('.footer-carousel').on('afterChange', function(event, slick, currentSlide, nextSlide){
-    //     $('.hidden-div').hide();
-    //     $('.hidden-div[data-id=' + (currentSlide + 1) + ']').show();
-    // });
-
-    // $('.footer-carousel').on('beforeChange', function(event, slick, currentSlide, centerMode){
-    //     if (centerMode == 3) {
-    //
-    //         $('.hidden-div').show();
-    //     } else {
-    //         $('.hidden-div').hide();
-    //     }
-    // });
-
+    
 });
