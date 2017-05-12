@@ -229,12 +229,6 @@ body {
 
 .image {
   height: 360px;
-  //.image-amenities {
-  //  background-image: url(../images/amenities.jpg);
-  //  background-position: center;
-  //  background-size: cover;
-  //  height: 160px;
-  //}
   .image-contact {
     background-image: url(../images/contacts.jpg);
     background-size: cover;
@@ -1023,18 +1017,6 @@ body {
   &.terms {
     .gallery-line {
       margin-top: 60px;
-      .img1 {
-        background-image: url(../images/img1-tr.jpg);
-      }
-      .img2 {
-        background-image: url(../images/img2-tr.jpg);
-      }
-      .img3 {
-        background-image: url(../images/img3-tr.jpg);
-      }
-      .img4 {
-        background-image: url(../images/img4-tr.jpg);
-      }
     }
   }
 }
@@ -1046,18 +1028,6 @@ body {
   &.photos-gallery {
     .gallery-line {
       margin-top: 0;
-      .img1 {
-        background-image: url(../images/img1-g.jpg);
-      }
-      .img2 {
-        background-image: url(../images/img2-g.jpg);
-      }
-      .img3 {
-        background-image: url(../images/img3-g.jpg);
-      }
-      .img4 {
-        background-image: url(../images/img4-g.jpg);
-      }
     }
   }
 }
@@ -1068,19 +1038,6 @@ body {
   &.media-gallery {
     .gallery-line {
       margin-top: 0;
-      .img1 {
-        background-image: url(../images/img1-md.jpg);
-        background-position: inherit;
-      }
-      .img2 {
-        background-image: url(../images/img2-md.jpg);
-      }
-      .img3 {
-        background-image: url(../images/img3-md.jpg);
-      }
-      .img4 {
-        background-image: url(../images/img4-md.jpg);
-      }
     }
   }
 }
