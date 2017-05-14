@@ -1,61 +1,3 @@
-.wrapper {
-  &.pricing {
-    .main-block {
-      .container {
-        //.display-flex {
-        //  .plans {
-        //    width: 353px;
-        //    .img-plan {
-        //      position: relative;
-        //      height: 437px;
-        //      img {
-        //        width: 100%;
-        //      }
-        //      .back-color {
-        //        position: absolute;
-        //        height: 105px;
-        //        background-color: rgba(221,89,49,0.4);
-        //        bottom: 0;
-        //        width: 100%;
-        //        text-align: right;
-        //        .text-plan {
-        //        bottom: 0;
-        //        right: 0;
-        //        padding: 25px;
-        //        color: #ffffff;
-        //        .text-p {
-        //          font-size: 25px;
-        //          text-transform: uppercase;
-        //        }
-        //      }
-        //    }
-        //  }
-        //    .description {
-        //      background: #f5f5f4;
-        //      padding: 25px;
-        //      p {
-        //        font-size: 15px;
-        //        line-height: 25px;
-        //        padding-bottom: 30px;
-        //      }
-        //      h4, h5, h3{
-        //        font-size: 17px;
-        //        display: inline-block;
-        //        p {
-        //          display: inline-block;
-        //        }
-        //      }
-        //      .button {
-        //        margin-top: 40px;
-        //        margin-bottom: 30px;
-        //      }
-        //    }
-        //  }
-        //}
-      }
-    }
-  }
-}
 
 .btn-plan {
   .button {
@@ -85,7 +27,6 @@
   color: #95989A;
   font-size: 10px;
 }
-
 
 .new-page {
   .pages {
@@ -122,30 +63,6 @@
 .icons-text {
   padding: 32px 0;
   font-size: 20px;
-}
-/* Gallery */
-
-.gallery {
-  &.pricing-gallery {
-    .gallery-line {
-      .img1 {
-        background-image: url(../images/img1-p.jpg);
-      }
-      .img2 {
-        background-image: url(../images/img2-p.jpg);
-
-      }
-      .img3 {
-        background-image: url(../images/img3-p.jpg);
-        background-position-y: 70%;
-      }
-      .img4 {
-        background-image: url(../images/img4-p.jpg);
-        display: flex;
-        background-position: right;
-      }
-    }
-  }
 }
 
 
@@ -206,7 +123,6 @@
           position: relative;
           padding: 24px 20px;
           ul {
-            //min-height: 525px;
             padding: 0 10px;
             font-size: 16px;
             li {
@@ -243,30 +159,6 @@
         }
       }
     }
-    //.slick-prev {
-    //  top: -19px;
-    //  left: auto;
-    //  right: 72px;
-    //  z-index: 2;
-    //  &:before {
-    //    content: '\f053';
-    //    color:#ffffff;
-    //    font-family: FontAwesome;
-    //    background: #FF5533;
-    //    padding: 10px;
-    //  }
-    //}
-    //.slick-next {
-    //  top: -19px;
-    //  right: 38px;
-    //  &:before {
-    //    content: '\f054';
-    //    color:#ffffff;
-    //    font-family: FontAwesome;
-    //    background:#FF5533 ;
-    //    padding: 10px;
-    //  }
-    //}
     .slick-slide {
       margin-right: 12px;
       margin-left: 12px;
