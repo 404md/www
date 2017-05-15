@@ -1121,12 +1121,12 @@ body {
       }
     }
     .text-event {
-      &.what {
-        padding: 30px;
-      }
       p {
         font-size: 20px;
         color: #373268;
+        &.class-p {
+          padding-bottom: 30px;
+        }
       }
       h1, h2, h4 {
         font-size: 30px;
@@ -1138,7 +1138,8 @@ body {
     .yellow-block {
       background: #fdb91a;
       .text-event {
-        padding: 40px 0;
+        padding-top: 40px;
+        padding-bottom: 40px;
         h4 {
           color: #373268;
           font-size: 30px;
@@ -1212,6 +1213,7 @@ body {
         }
         .btn-block {
           text-align: center;
+          margin: auto;
         }
       }
     }
@@ -1251,19 +1253,19 @@ body {
   }
   .image-photo1 {
     background-image: url(../images/eistrati.jpg);
-    background-position: 50% 50%;
+    background-position: 70% 50%;
     height: 300px;
     background-size: cover;
   }
   .image-photo2 {
     background-image: url(../images/aburciu.jpg);
-    background-position: 50% 50%;
+    background-position: 0% 50%;
     height: 300px;
     background-size: cover;
   }
   .image-photo3 {
     background-image: url(../images/dsturza.jpg);
-    background-position: 50% 50%;
+    background-position: 70% 50%;
     height: 300px;
     background-size: cover;
   }
