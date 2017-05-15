@@ -55,7 +55,7 @@ jQuery(function($) {
         },
         from: {color: '#44a5db', width: 4},
         to: {color: '#44a5db', width: 4},
-        // Set default step function for all animate calls
+        
         step: function (state, circle) {
             circle.path.setAttribute('stroke', state.color);
             circle.path.setAttribute('stroke-width', state.width);
