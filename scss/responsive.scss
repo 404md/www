@@ -320,14 +320,7 @@
       }
     }
   }
-  .gallery {
-    //.gallery-line {
-    //  height: 180px;
-    //  .img1, .img2, .img3, .img4 {
-    //    height: 180px;
-    //  }
-    //}
-  }
+
   .case-study {
     .container {
       .right-block {
@@ -572,7 +565,6 @@
       .main-block {
         .container {
           .display-flex {
-            //display: unset;
             .plans {
               .img-plan {
                height: auto;
@@ -679,13 +671,6 @@
       }
     }
   }
-  //.gallery {
-  //  &.members-gallery {
-  //  .gallery-line {
-  //    margin-top:  60px;
-  //    }
-  //  }
-  //}
 }
 
 @media (max-width:870px) {
@@ -1237,11 +1222,6 @@
       }
     }
   }
-  //.new-page {
-  //  .pages {
-  //    width: 90%;
-  //  }
-  //}
 }
 
 @media (max-width: 590px) {
@@ -2020,6 +2000,7 @@
         }
         .button-block {
           padding: 0;
+
         }
       }
     }

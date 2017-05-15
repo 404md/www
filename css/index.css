@@ -111,14 +111,6 @@
 /* Gallery */
 .gallery.connect-us .gallery-line {
   margin-top: 60px; }
-  .gallery.connect-us .gallery-line .img1 {
-    background-image: url(../images/img1-c.jpg); }
-  .gallery.connect-us .gallery-line .img2 {
-    background-image: url(../images/img2-c.jpg); }
-  .gallery.connect-us .gallery-line .img3 {
-    background-image: url(../images/img3-c.jpg); }
-  .gallery.connect-us .gallery-line .img4 {
-    background-image: url(../images/img4-c.jpg); }
 
 .gallery.invitation .gallery-line {
   margin-top: 0; }
@@ -421,6 +413,8 @@ body {
 .pull-center {
   position: relative;
   left: 50%;
+  -ms-transform: translateX(-50%);
+  -webkit-transform: translateX(-50%);
   transform: translateX(-50%); }
 
 .button {
@@ -505,6 +499,8 @@ body {
           position: relative;
           top: 50%;
           left: 50%;
+          -ms-transform: translate(-50%, -50%);
+          -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
           text-align: center; }
           .wrapper.notfound-page .main-block.notfound .container .text-notfound .links {
@@ -582,6 +578,8 @@ body {
         margin: 0 auto;
         position: relative;
         top: 50%;
+        -ms-transform: translateY(-50%);
+        -webkit-transform: translateY(-50%);
         transform: translateY(-50%); }
         .wrapper .main-block .main-info .local-com h1, .wrapper .main-block .main-info .local-com h2 {
           font-family: 'Lato-Regular', sans-serif;
@@ -766,6 +764,8 @@ body {
     position: absolute;
     top: 50%;
     left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%); }
     .image .page .text-page-name .page-name {
       font-family: 'Lato-Regular', sans-serif;
@@ -782,6 +782,8 @@ body {
         background: #FF5533;
         bottom: 0;
         left: 50%;
+        -ms-transform: translateX(-50%);
+        -webkit-transform: translateX(-50%);
         transform: translateX(-50%); }
 
 .new-page.members-page .pages {
@@ -851,6 +853,8 @@ body {
         position: absolute;
         top: 50%;
         left: 50%;
+        -ms-transform: translate(-50%, -50%);
+        -webkit-transform: translate(-50%, -50%);
         transform: translate(-50%, -50%); }
     .footer-carousel .pic .we-love .avatar-comment {
       text-transform: uppercase;
@@ -928,6 +932,8 @@ body {
     position: absolute;
     height: 100%;
     width: 100%;
+    -ms-transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
     transform: rotate(45deg); }
     #menu-toggle #cross span:nth-child(1) {
       height: 0%;
@@ -1146,7 +1152,7 @@ body {
 .third-block .program {
   color: #373268;
   background: #f03957;
-  max-height: 300px; }
+  height: 300px; }
   .third-block .program.yellow-program {
     background: #fdb91a; }
     .third-block .program.yellow-program .text-up {
@@ -1156,6 +1162,8 @@ body {
   .third-block .program .collaboration {
     position: relative;
     top: 50%;
+    -ms-transform: translateY(-50%);
+    -webkit-transform: -webkit-translateY -50%;
     transform: translateY(-50%);
     padding: 0 40px; }
     .third-block .program .collaboration .text-up {
@@ -1508,14 +1516,6 @@ body {
 /* Gallery */
 .gallery.members-gallery .gallery-line {
   margin-top: 0; }
-.gallery .gallery-line .img1 {
-  background-image: url(../images/img1-m.jpg); }
-.gallery .gallery-line .img2 {
-  background-image: url(../images/img2-m.jpg); }
-.gallery .gallery-line .img3 {
-  background-image: url(../images/img3-m.jpg); }
-.gallery .gallery-line .img4 {
-  background-image: url(../images/img4-m.jpg); }
 
 .btn-plan .button {
   padding: 0 10px;
@@ -2533,15 +2533,6 @@ body {
 /* Gallery */
 .gallery.tour-gallery .gallery-line {
   margin-top: 60px; }
-  .gallery.tour-gallery .gallery-line .img1 {
-    background-image: url(../images/img1-t.jpg); }
-  .gallery.tour-gallery .gallery-line .img2 {
-    background-image: url(../images/img2-t.jpg); }
-  .gallery.tour-gallery .gallery-line .img3 {
-    background-image: url(../images/img3-t.jpg); }
-  .gallery.tour-gallery .gallery-line .img4 {
-    background-image: url(../images/img4-t.jpg);
-    display: flex; }
 
 /* MailChimp Form Embed Code - Classic - 12/17/2015 v10.7 */
 #mc_embed_signup {
