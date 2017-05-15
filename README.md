@@ -7,7 +7,7 @@ This repository stores the code and data for www.404.md
 
 ### Contact Form
 
-Checks user input data and sends in there is no invalid data.
+Checks user input data and sends email if there is no invalid data.
 
 * Protected by Google reCaptcha;
 * Sends emails through AWS.SES.
@@ -18,7 +18,6 @@ Fetches data from Instagram feed and stores them to domain related bucket.
 
 * Used official Instagram API (api.instagram.com/v1);
 * Fetch latest 20 posts.
-
 
 ## Deployment
 
@@ -47,4 +46,3 @@ Available `dev` and `prod` environments for deploy.
 
 [1]: https://www.youtube.com/watch?v=WviHsoz8yHk
 [2]: https://docs.aws.amazon.com/cli/latest/userguide/cli-chap-getting-started.html
-[3]: https://asciinema.org/a/1z4pb7utf4ia2v2g1967a3sc9
