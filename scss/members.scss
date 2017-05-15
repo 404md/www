@@ -76,6 +76,7 @@
                 bottom: 0;
                 left: 0;
                 right: 0;
+                height: 100%;
                 color: white;
                 background-color: rgba(221, 89, 49, 0.8);
                 transition: all .2s ease-in-out;
@@ -83,6 +84,8 @@
                   position: relative;
                   top: 50%;
                   left: 50%;
+                  -ms-transform: translate(-50%, -50%);
+                  -webkit-transform: translate(-50%, -50%);
                   transform: translate(-50%, -50%);
                   text-align: center;
                   .likes-instagram {
