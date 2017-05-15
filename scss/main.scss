@@ -209,6 +209,8 @@ body {
 .pull-center {
   position: relative;
   left: 50%;
+  -ms-transform:translateX(-50%);
+  -webkit-transform:translateX(-50%);
   transform: translateX(-50%);
 }
 
@@ -307,6 +309,8 @@ body {
             position: relative;
             top: 50%;
             left: 50%;
+            -ms-transform:translate(-50%, -50%);
+            -webkit-transform:translate(-50%, -50%);
             transform: translate(-50%, -50%);
             text-align: center;
             .links {
@@ -456,6 +460,8 @@ body {
         margin: 0 auto;
         position: relative;
         top: 50%;
+        -ms-transform:translateY(-50%);
+        -webkit-transform:translateY(-50%);
         transform: translateY(-50%);
         h1,h2 {
           font-family: 'Lato-Regular', sans-serif;
@@ -732,6 +738,8 @@ body {
       position: absolute;
       top:50%;
       left:50%;
+      -ms-transform:translate(-50%, -50%);
+      -webkit-transform:translate(-50%, -50%);
       transform: translate(-50%, -50%);
       .page-name {
         font-family: 'Lato-Regular', sans-serif;
@@ -748,6 +756,8 @@ body {
           background:#FF5533;
           bottom: 0;
           left: 50%;
+          -ms-transform:translateX(-50%);
+          -webkit-transform:translateX(-50%);
           transform: translateX(-50%);
         }
       }
@@ -843,6 +853,8 @@ body {
           position: absolute;
           top: 50%;
           left: 50%;
+          -ms-transform:translate(-50%, -50%);
+          -webkit-transform:translate(-50%, -50%);
           transform: translate(-50%, -50%);
         }
       }
@@ -850,7 +862,6 @@ body {
         text-transform: uppercase;
         display: block;
         font-size:16px;
-        //padding-bottom: 24px;
       }
       .comment {
         line-height: 25px;
@@ -873,7 +884,6 @@ body {
     }
   }
 }
-
 
 .pic {
   width: 25%;
@@ -946,6 +956,8 @@ body {
     position:absolute;
     height:100%;
     width:100%;
+    -ms-transform:rotate(45deg);
+    -webkit-transform: rotate(45deg);
     transform:rotate(45deg);
     span{
       &:nth-child(1){
@@ -1242,8 +1254,6 @@ body {
   }
 }
 
-
-
 .third-block {
   .image-cover {
     background-image: url(../images/cover-photo.jpg);
@@ -1272,7 +1282,7 @@ body {
   .program {
     color:#373268;
     background:#f03957;
-    max-height: 300px;
+    height: 300px;
     &.yellow-program {
       background:#fdb91a;
       .text-up {
@@ -1285,6 +1295,8 @@ body {
     .collaboration {
       position: relative;
       top: 50%;
+      -ms-transform:translateY(-50%);
+      -webkit-transform: -webkit-translateY (-50%);
       transform: translateY(-50%);
       padding:0 40px;
       .text-up {
@@ -1294,9 +1306,6 @@ body {
           font-size: 30px;
           text-transform: uppercase;
           color:#373268;
-          //text-align: left;
-          //margin: 40px 0;
-          //padding-left: 90px;
         }
       }
 
