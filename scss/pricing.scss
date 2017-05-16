@@ -7,8 +7,8 @@
     border-color: white;
     &:hover {
       color:white;
-      background: #dd5931;
-      border-color: #dd5931;
+      background: #FF5533;
+      border-color: #FF5533;
     }
   }
 }
@@ -70,9 +70,11 @@
 
 .offers {
   &.slick-initialized {
+    &.slick-slider {
+      margin: 0 -12px;
+    }
     .slick-list {
       .slick-track {
-        margin-right: -24px;
         display: flex;
         .plans {
           border: 2px solid transparent;

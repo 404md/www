@@ -1,18 +1,4 @@
-.gallery {
-  &.amenities-gallery {
-    .gallery-line {
-      margin-top: 0;
-    }
-  }
-}
 
-.text-page {
-  font-size:15px;
-}
-
-.text-color {
-  color:#dd5931;
-}
 
 .wrapper {
   &.amenities {
@@ -41,31 +27,6 @@
             }
           }
         }
-      }
-    }
-  }
-}
-
-/* Gallery */
-
-.gallery {
-  &.amenities-gallery {
-    .gallery-line {
-      .img1 {
-        background-image: url(../images/img1.jpg);
-      }
-      .img2 {
-        background-image: url(../images/img2.jpg);
-        background-position: 98%;
-        background-position-y: 80%;
-      }
-      .img3 {
-        background-image: url(../images/img3.jpg);
-        background-position-y: 70%;
-      }
-      .img4 {
-        background-image: url(../images/img4.jpg);
-        display: flex;
       }
     }
   }

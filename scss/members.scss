@@ -189,11 +189,8 @@
             text-align: left;
           }
           .flex-row {
-            display: flex;
-            flex-wrap: wrap;
             font-size: 17px;
             .flex-item-6 {
-              width: 50%;
               margin: 10px 0;
               &.text-left {
                 text-align: left;
@@ -202,7 +199,6 @@
                 text-align: right;
               }
               &.self-center {
-                width: 50%;
                 line-height: 37px;
                 text-align: right;
               }
@@ -304,7 +300,7 @@
            position: absolute;
            width: 140px;
            height: 6px;
-           background: #dd5931;
+           background: #FF5533;
            bottom: 0;
          }
        }
