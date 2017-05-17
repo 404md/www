@@ -734,7 +734,7 @@ body {
         display: inline; }
         .footer-black .container .right-footer ul li a {
           text-decoration: none;
-          margin-left: 20px;
+          margin-left: 10px;
           color: #000000; }
           .footer-black .container .right-footer ul li a:hover {
             color: #FF5533; }
@@ -2311,7 +2311,7 @@ body {
   .footer-black.ru .container .left-footer {
     min-height: 80px; }
     .footer-black.ru .container .left-footer .language {
-      margin-right: 10px; }
+      margin: 0 10px; }
 
   .new-page .pages.coworking .page-name:before {
     width: 60px;
