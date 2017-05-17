@@ -149,7 +149,7 @@ jQuery(function($) {
         $('.image').addClass('video');
         $('.media-image').hide();
         $('.show-video').removeClass('hidden');
-        $('#video').attr('src', '/videos/agora.mp4');
+        $('#video').attr('src', 'https://www.youtube.com/embed/ZGbORDi_UPA?autoplay=1');
     });
 
     $('.btn-close').on('click', function(){
