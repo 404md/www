@@ -12,7 +12,6 @@ jQuery(function($) {
                 breakpoint: 1200,
                 settings: {
                     slidesToShow: 3,
-                    // slidesToScroll: 3,
                     infinite: true,
                     centerMode: true,
                     arrows:false,
@@ -23,7 +22,6 @@ jQuery(function($) {
                 breakpoint: 992,
                 settings: {
                     slidesToShow: 2,
-                    // slidesToScroll: 2,
                     arrows:false,
                     centerMode: true,
                     infinite: true,
@@ -36,7 +34,6 @@ jQuery(function($) {
                     slidesToShow: 1,
                     centerMode: true,
                     arrows:false
-                    // slidesToScroll: 1
                 }
             }
         ]
