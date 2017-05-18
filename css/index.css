@@ -496,7 +496,9 @@ body {
               color: #FF5533; }
           .wrapper.notfound-page .main-block.notfound .container .text-notfound .location {
             display: inline-block;
-            vertical-align: sub; }
+            vertical-align: sub;
+            height: 38px;
+            width: 43px; }
             .wrapper.notfound-page .main-block.notfound .container .text-notfound .location #location {
               display: block; }
   .wrapper.members .new-heading {
@@ -2071,7 +2073,6 @@ body {
     .main-nav .container .nav-top .navt li:nth-child(odd) {
       background: #FCFCFB; }
     .main-nav .container .nav-top .navt .blog {
-      background: #FF5533;
       font-size: 15px; }
   .main-nav .container .nav-top.main-page-nav .navt li:hover {
     background: unset; }
