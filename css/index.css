@@ -708,6 +708,12 @@ body {
     line-height: 20px; }
     .contacts .get-in-touch.flex-row .block-3 .right-side {
       float: right; }
+      .contacts .get-in-touch.flex-row .block-3 .right-side .one-line .mdi-phone {
+        height: 40px;
+        float: left;
+        margin-right: 2px; }
+      .contacts .get-in-touch.flex-row .block-3 .right-side .one-line .phones a {
+        display: block; }
     .contacts .get-in-touch.flex-row .block-3 .color-link {
       color: #000000;
       font-weight: bold; }
@@ -2132,6 +2138,14 @@ body {
       .contacts .get-in-touch.flex-row .block-3 .right-side {
         float: none;
         margin-bottom: 20px; }
+        .contacts .get-in-touch.flex-row .block-3 .right-side .one-line .mdi-phone {
+          height: auto;
+          float: none;
+          margin-right: 0; }
+        .contacts .get-in-touch.flex-row .block-3 .right-side .one-line .phones {
+          display: inline; }
+          .contacts .get-in-touch.flex-row .block-3 .right-side .one-line .phones a {
+            display: inline-block; }
       .contacts .get-in-touch.flex-row .block-3.flex-item-4 {
         flex: 0 0 100%;
         max-width: 100%; }

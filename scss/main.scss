@@ -234,6 +234,10 @@ body {
   }
 }
 
+//.one-more {
+//  display: block;
+//}
+
 .image {
   height: 360px;
   .image-contact {
@@ -686,12 +690,21 @@ body {
        .block-3 {
          .right-side {
            float: right;
+           .one-line {
+             .mdi-phone {
+               height: 40px;
+               float:left;
+               margin-right:2px;
+             }
+             .phones {
+               a {
+                 display:block;
+               }
+             }
+           }
          }
          padding: 30px 0;
          line-height: 20px;
-         .connect-us {
-
-         }
          .color-link {
            color: #000000;
            font-weight: bold;

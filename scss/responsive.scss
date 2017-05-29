@@ -1092,6 +1092,19 @@
           .right-side {
             float:none;
             margin-bottom: 20px;
+            .one-line {
+              .mdi-phone {
+                height:auto;
+                float:none;
+                margin-right: 0;
+              }
+              .phones {
+                display: inline;
+                a {
+                  display:inline-block;
+                }
+              }
+            }
           }
           text-align: center;
           &.flex-item-4 {
