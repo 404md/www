@@ -23,7 +23,7 @@ else
     cp sitemap.xml ${BUILD_FOLDER}/sitemap.xml
 fi
 
-cp -R favicon.png css fonts images js videos amenities contact coworking \
+cp -R favicon.png css fonts images js amenities contact coworking \
 	gallery invitation media members terms tour tour-ok ro ru \
 	${BUILD_FOLDER}/
 
