@@ -134,11 +134,6 @@ a {
   margin-top: 40px;
 }
 
-.left-fb-block {
-  float:left;
-  margin: 0 35px 60px;
-}
-
 .fb-container-responsive {
   display: none;
 }
@@ -301,6 +296,18 @@ body {
 }
 
 .wrapper {
+  &.photos-gallery {
+    .main-block {
+      .gallery-block {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        .left-fb-block {
+          margin: 0 20px 40px;
+        }
+      }
+    }
+  }
   &.notfound-page {
     min-height: 500px;
     .main-block {
