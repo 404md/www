@@ -327,10 +327,6 @@ a {
   font-size: 30px;
   margin-top: 40px; }
 
-.left-fb-block {
-  float: left;
-  margin: 0 35px 60px; }
-
 .fb-container-responsive {
   display: none; }
 
@@ -467,6 +463,12 @@ body {
 
 .wrapper {
   min-height: 800px; }
+  .wrapper.photos-gallery .main-block .gallery-block {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; }
+    .wrapper.photos-gallery .main-block .gallery-block .left-fb-block {
+      margin: 0 20px 40px; }
   .wrapper.notfound-page {
     min-height: 500px; }
     .wrapper.notfound-page .main-block.notfound {
