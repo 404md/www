@@ -126,42 +126,67 @@ window.fbAsyncInit = function () {
                              <h2 class="heading-contact">Schedule a Visit</h2>
                              <div class="indicates-required"><span class="asterisk">*</span> indicates required</div>
                              <div class="mc-field-group">
-                                 <label for="mce-EMAIL">E-mail  <span class="asterisk">*</span>
-                                 </label>
-                                 <input type="email" value="" name="EMAIL" class="required email input-style" id="mce-EMAIL" placeholder="e.g. vlad.ursu@email.com">
+                                 <div class="group">
+                                     <input type="email" value="" name="EMAIL" class="required email" id="mce-EMAIL" required>
+                                     <span class="highlight"></span>
+                                     <span class="bar"></span>
+                                     <label class="label-form" for="mce-EMAIL">E-mail  <span class="asterisk">*</span></label>
+                                 </div>
                              </div>
                              <div class="mc-field-group">
-                                 <label for="mce-FNAME">First Name  <span class="asterisk">*</span>
-                                 </label>
-                                 <input type="text" value="" name="FNAME" class="required input-style" id="mce-FNAME" placeholder="e.g. Vlad">
+                                 <div class="group">
+                                     <input type="text" value="" name="FNAME" class="required" id="mce-FNAME" required>
+                                     <span class="highlight"></span>
+                                     <span class="bar"></span>
+                                     <label class="label-form" for="mce-FNAME">First Name  <span class="asterisk">*</span></label>
+                                 </div>
                              </div>
                              <div class="mc-field-group">
-                                 <label for="mce-LNAME">Last Name  <span class="asterisk">*</span>
-                                 </label>
-                                 <input type="text" value="" name="LNAME" class="required input-style" id="mce-LNAME" placeholder="e.g. Ursu">
+                                 <div class="group">
+                                     <input type="text" value="" name="LNAME" class="required" id="mce-LNAME" required>
+                                     <span class="highlight"></span>
+                                     <span class="bar"></span>
+                                     <label class="label-form" for="mce-LNAME">Last Name  <span class="asterisk">*</span></label>
+                                 </div>
                              </div>
                              <div class="mc-field-group size1of2">
-                                 <label for="mce-TELEFON">Phone  <span class="asterisk">*</span>
-                                 </label>
-                                 <input type="tel" name="TELEFON" class="required input-style" value="" id="mce-TELEFON" placeholder="e.g. 022 999 999">
+                                 <div class="group">
+                                     <input type="tel" name="TELEFON" class="required" value="" id="mce-TELEFON" required>
+                                     <span class="highlight"></span>
+                                     <span class="bar"></span>
+                                     <label class="label-form" for="mce-TELEFON">Phone <span class="asterisk">*</span></label>
+                                 </div>
                              </div>
                              <div class="mc-field-group">
-                                 <label for="mce-JOB">Specialization (programmer; QA; designer etc.)  <span class="asterisk">*</span>
-                                 </label>
-                                 <input type="text" value="" name="JOB" class="required input-style" id="mce-JOB">
+                                 <div class="group">
+                                     <input type="text" value="" name="JOB" class="required" id="mce-JOB" required>
+                                     <span class="highlight"></span>
+                                     <span class="bar"></span>
+                                     <label class="label-form" for="mce-JOB">Specialization (QA; designer etc.)  <span class="asterisk">*</span></label>
+                                 </div>
                              </div>
                              <div class="mc-field-group size1of2">
-                                 <label for="mce-VDATE-month">Choose the date you want to book your visit  <span class="asterisk">*</span>
+                                 <label class="gray-text" for="mce-VDATE-month">Choose the date you want to book your visit  <span class="asterisk">*</span>
                                  </label>
                                  <div class="datefield">
-                                     <span class="subfield dayfield"><input class="datepart required" type="text" pattern="[0-9]*" value="" placeholder="DD" size="2" maxlength="2" name="VDATE[day]" id="mce-VDATE-day"></span> /
-                                     <span class="subfield monthfield"><input class="datepart required" type="text" pattern="[0-9]*" value="" placeholder="MM" size="2" maxlength="2" name="VDATE[month]" id="mce-VDATE-month"></span> /
-                                     <span class="subfield yearfield"><input class="datepart required" type="text" pattern="[0-9]*" value="" placeholder="YYYY" size="4" maxlength="4" name="VDATE[year]" id="mce-VDATE-year"></span>
+                                     <span class="subfield dayfield size-input">
+                                         <input class="datepart required" type="text" pattern="[0-9]*" value="" placeholder="DD" size="2" maxlength="2" name="VDATE[day]" id="mce-VDATE-day">
+                                     </span> /
+                                     <span class="subfield monthfield">
+                                         <input class="datepart required " type="text" pattern="[0-9]*" value="" placeholder="MM" size="2" maxlength="2" name="VDATE[month]" id="mce-VDATE-month">
+                                     </span> /
+                                     <span class="subfield yearfield">
+                                         <input class="datepart required" type="text" pattern="[0-9]*" value="" placeholder="YYYY" size="4" maxlength="4" name="VDATE[year]" id="mce-VDATE-year">
+                                     </span>
                                      <span class="small-meta nowrap">( dd / mm / yyyy )</span>
                                  </div>
                              </div><div class="mc-field-group">
-                             <label for="mce-MMERGE5">Message </label>
-                             <input type="text" value="" name="MMERGE5" class="input-style" id="mce-MMERGE5">
+                             <div class="group">
+                                 <input type="text" value="" name="MMERGE5" id="mce-MMERGE5" required>
+                                 <span class="highlight"></span>
+                                 <span class="bar"></span>
+                                 <label class="label-form" for="mce-MMERGE5">Message </label>
+                             </div>
                          </div>
                              <div class="mc-field-group input-group">
                                  <strong>Choose the language you prefer </strong>

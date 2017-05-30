@@ -487,13 +487,13 @@
   }
   .booking-form {
     #mc_embed_signup {
-      width: auto;
+      width: 80%;
       .heading-contact {
         font-size: 20px;
       }
       .mc-field-group {
         label {
-          font-size: 16px;
+          font-size: 15px;
           padding-top: 10px;
         }
       }
@@ -820,8 +820,6 @@
   .footer-carousel {
     &.slick-initialized {
       .slick-slide {
-        margin-left: 5px;
-        margin-right: 5px;
       }
     }
     .pic {
@@ -876,7 +874,35 @@
 }
 
 @media (max-width: 736px) {
-.offers {
+  .popup {
+    margin: 0;
+    width: 100%;
+    padding: 1em;
+    .close {
+      right: 40px;
+    }
+  }
+  #mc_embed_signup {
+    &.coworking {
+      h2 {
+        font-size: 19px;
+      }
+      width: 95%;
+      margin: 0 auto;
+      .mc-field-group {
+        .label-form {
+          font-size: 15px;
+        }
+      }
+
+      .indicates-required {
+        padding-bottom: 5px;
+        padding-top: 5px;
+      }
+    }
+  }
+
+  .offers {
   &.slick-initialized {
     .slick-list {
       .slick-track {
@@ -1038,7 +1064,6 @@
           .back-image {
             .booking-form {
               #mc_embed_signup {
-                width:auto;
                 .heading-contact {
                   font-size: 20px;
                 }
@@ -1185,9 +1210,9 @@
               height: 40px;
             }
           }
-         .right-header {
-           font-size: 30px;
-         }
+          .right-header {
+            font-size: 30px;
+          }
         }
       }
     }
@@ -1202,7 +1227,6 @@
         .media-title {
           font-size: 18px;
           line-height: 25px;
-
         }
       }
     }
@@ -1403,7 +1427,6 @@
                   font-size: 8px;
                 }
               }
-
             }
           }
         }
@@ -1471,6 +1494,30 @@
             }
           }
         }
+      }
+    }
+  }
+}
+
+@media (max-height: 430px) {
+  .popup {
+    width: 100%;
+  }
+  #mc_embed_signup {
+    &.coworking {
+      width: 100%;
+      .mc-field-group {
+        width: 50%;
+        float: right;
+        padding-right: 10px;
+        &.field-left {
+          float:left;
+        }
+      }
+
+      .indicates-required {
+        padding-bottom: 5px;
+        padding-top: 5px;
       }
     }
   }
@@ -1641,11 +1688,14 @@
 }
 
 @media (max-width: 320px) {
+  .small-meta {
+    display:block;
+  }
   .footer-black {
     .container {
       .left-footer {
         a {
-          margin-left: 8px;
+          margin-left: 15px;
         }
       }
     }
