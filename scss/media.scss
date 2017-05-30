@@ -60,7 +60,7 @@
   }
 }
 
-.container {
+.video-container {
     &.show-video {
       position: relative;
       .btn-close {
@@ -70,6 +70,9 @@
         top: 0;
         right: 20px;
         cursor: pointer;
+        &:hover {
+          color:gray;
+        }
       }
       .video {
         position: absolute;
@@ -87,9 +90,10 @@
   padding: 20px;
   color: white;
   font-size: 17px;
-  .fa-facebook-official {
+  .mdi-close-circle-outline {
     font-size: 19px;
     margin-right: 5px;
+
   }
   .info-logo {
     vertical-align:text-bottom;

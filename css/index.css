@@ -773,6 +773,13 @@ body {
 
 .new-page.members-page .pages {
   margin-bottom: 40px; }
+  .new-page.members-page .pages .page-name {
+    text-align: center; }
+    .new-page.members-page .pages .page-name:before {
+      left: 50%;
+      -ms-transform: translateX(-50%);
+      -webkit-transform: translateX(-50%);
+      transform: translateX(-50%); }
 .new-page .pages {
   margin: 40px 0; }
   .new-page .pages .text-page {
@@ -1165,6 +1172,170 @@ body {
     .third-block .program .collaboration .text-collaboration {
       font-size: 25px; }
 
+.overlay, .overlay1 {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.5);
+  transition: opacity 200ms;
+  visibility: hidden;
+  opacity: 0;
+  z-index: 7; }
+  .overlay.light, .overlay1.light {
+    background: rgba(255, 255, 255, 0.5); }
+  .overlay .cancel, .overlay1 .cancel {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    cursor: default; }
+
+.popup {
+  margin: 75px auto;
+  padding: 2em;
+  background: #fff;
+  width: 500px;
+  box-shadow: 0 0 50px rgba(0, 0, 0, 0.5);
+  position: relative;
+  height: 100%; }
+  .light .popup {
+    border-color: #aaa;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.25); }
+  .popup h2 {
+    margin-top: 0;
+    color: #777;
+    font-family: "Trebuchet MS", Tahoma, Arial, sans-serif; }
+  .popup .close {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    top: 20px;
+    right: 20px;
+    opacity: 0.8;
+    transition: all 200ms;
+    font-size: 24px;
+    font-weight: bold;
+    text-decoration: none;
+    color: #777; }
+    .popup .close:hover {
+      opacity: 1; }
+  .popup .content {
+    overflow: auto;
+    height: 100%;
+    display: flex;
+    display: -webkit-flex;
+    flex-direction: column;
+    justify-content: center; }
+  .popup p {
+    margin: 0 0 1em; }
+    .popup p:last-child {
+      margin: 0; }
+
+.pop-up-visible {
+  visibility: visible;
+  opacity: 1; }
+
+/* Mail-Chimp inputs*/
+/* form starting stylings ------------------------------- */
+.group {
+  position: relative;
+  margin-bottom: 10px;
+  display: inline-block;
+  width: 100%; }
+
+input {
+  font-size: 18px;
+  padding: 10px 10px 10px 5px;
+  display: block;
+  width: 100%;
+  border: none;
+  border-bottom: 1px solid #757575; }
+
+input:focus {
+  outline: none; }
+
+.label-form {
+  color: #95989A;
+  font-size: 18px;
+  font-weight: normal;
+  position: absolute;
+  pointer-events: none;
+  left: 5px;
+  top: 10px;
+  transition: 0.2s ease all;
+  -moz-transition: 0.2s ease all;
+  -webkit-transition: 0.2s ease all; }
+
+/* active state */
+input:focus ~ label, input:valid ~ label {
+  top: -20px;
+  font-size: 14px;
+  color: #FF5533; }
+
+.touched ~ label {
+  top: -20px;
+  color: #FF5533; }
+
+.bar {
+  position: relative;
+  display: block;
+  width: 100%; }
+
+.bar:before, .bar:after {
+  content: '';
+  height: 2px;
+  width: 0;
+  position: absolute;
+  background: #FF5533;
+  transition: 0.2s ease all;
+  -moz-transition: 0.2s ease all;
+  -webkit-transition: 0.2s ease all;
+  bottom: 0; }
+
+.bar:before {
+  left: 50%; }
+
+.bar:after {
+  right: 50%; }
+
+/* active state */
+input:focus ~ .bar:before, input:focus ~ .bar:after {
+  width: 50%; }
+
+.highlight {
+  position: absolute;
+  height: 60%;
+  width: 100px;
+  top: 25%;
+  left: 0;
+  pointer-events: none;
+  opacity: 0.5; }
+
+/* active state */
+input:focus ~ .highlight {
+  -webkit-animation: inputHighlighter 0.3s ease;
+  -moz-animation: inputHighlighter 0.3s ease;
+  animation: inputHighlighter 0.3s ease; }
+
+@-webkit-keyframes inputHighlighter {
+  from {
+    background: #FF5533; }
+  to {
+    width: 0;
+    background: transparent; } }
+@-moz-keyframes inputHighlighter {
+  from {
+    background: #FF5533; }
+  to {
+    width: 0;
+    background: transparent; } }
+@keyframes inputHighlighter {
+  from {
+    background: #FF5533; }
+  to {
+    width: 0;
+    background: transparent; } }
 #video {
   width: 100%;
   height: 642px; }
@@ -1214,16 +1385,18 @@ body {
   .image.video-media .image-media:hover .button-play {
     transform: scale(1.1); }
 
-.container.show-video {
+.video-container.show-video {
   position: relative; }
-  .container.show-video .btn-close {
+  .video-container.show-video .btn-close {
     position: absolute;
     font-size: 30px;
     color: white;
     top: 0;
     right: 20px;
     cursor: pointer; }
-  .container.show-video .video {
+    .video-container.show-video .btn-close:hover {
+      color: gray; }
+  .video-container.show-video .video {
     position: absolute;
     top: 0;
     left: 0;
@@ -1236,7 +1409,7 @@ body {
   padding: 20px;
   color: white;
   font-size: 17px; }
-  .logo-media .fa-facebook-official {
+  .logo-media .mdi-close-circle-outline {
     font-size: 19px;
     margin-right: 5px; }
   .logo-media .info-logo {
@@ -1625,6 +1798,55 @@ body {
   display: flex;
   flex-direction: column; }
 
+/* MailChimp Form Embed Code - Classic - 12/17/2015 v10.7 */
+#mc_embed_signup.coworking {
+  background: #fff;
+  clear: left;
+  width: 100%; }
+
+#mc_embed_signup form {
+  display: block;
+  width: 95%;
+  margin: 0 auto; }
+
+#mc_embed_signup h2 {
+  font-weight: bold;
+  padding: 0;
+  font-size: 25px; }
+
+#mc_embed_signup input.mce_inline_error {
+  border-color: transparent; }
+
+#mc_embed_signup .mc-field-group {
+  clear: left;
+  position: relative;
+  width: 100%;
+  min-height: 50px;
+  display: inline-block;
+  margin-bottom: 30px; }
+
+#mc_embed_signup .indicates-required {
+  text-align: right;
+  font-size: 11px;
+  padding-bottom: 20px; }
+
+#mc_embed_signup #mce-success-response {
+  color: #529214;
+  display: none;
+  margin-bottom: 20px; }
+
+#mc_embed_signup #mc-embedded-subscribe-form div.mce_inline_error {
+  padding: 0;
+  background-color: rgba(255, 255, 255, 0.85);
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  font-size: 10px;
+  font-weight: normal;
+  position: absolute;
+  color: #e85c41;
+  display: block; }
+
 @media (min-width: 768px) {
   .container {
     width: 750px; } }
@@ -1866,11 +2088,11 @@ body {
     margin-bottom: 30px; }
 
   .booking-form #mc_embed_signup {
-    width: auto; }
+    width: 80%; }
     .booking-form #mc_embed_signup .heading-contact {
       font-size: 20px; }
     .booking-form #mc_embed_signup .mc-field-group label {
-      font-size: 16px;
+      font-size: 15px;
       padding-top: 10px; }
 
   .main-nav .container .nav-top .navt li .link, .main-nav .container .nav-top .navt li .last-line {
@@ -2016,9 +2238,6 @@ body {
           height: 4px;
           width: 65px; } }
 @media (max-width: 630px) {
-  .footer-carousel.slick-initialized .slick-slide {
-    margin-left: 5px;
-    margin-right: 5px; }
   .footer-carousel .pic .we-love .avatar {
     width: 100px;
     height: 100px; }
@@ -2043,6 +2262,24 @@ body {
   .main-nav .container .nav-top .navt li .link, .main-nav .container .nav-top .navt li .last-line {
     width: auto; } }
 @media (max-width: 736px) {
+  .popup {
+    margin: 0;
+    width: 100%;
+    padding: 1em; }
+    .popup .close {
+      right: 40px; }
+
+  #mc_embed_signup.coworking {
+    width: 95%;
+    margin: 0 auto; }
+    #mc_embed_signup.coworking h2 {
+      font-size: 19px; }
+    #mc_embed_signup.coworking .mc-field-group .label-form {
+      font-size: 15px; }
+    #mc_embed_signup.coworking .indicates-required {
+      padding-bottom: 5px;
+      padding-top: 5px; }
+
   .offers.slick-initialized .slick-list .slick-track .plans {
     border: 2px solid #000000; }
     .offers.slick-initialized .slick-list .slick-track .plans .plan img {
@@ -2102,10 +2339,8 @@ body {
     height: 35px; }
   .wrapper .container .partners .usaid img {
     height: 45px; }
-  .wrapper.booking .main-block .container .back-image .booking-form #mc_embed_signup {
-    width: auto; }
-    .wrapper.booking .main-block .container .back-image .booking-form #mc_embed_signup .heading-contact {
-      font-size: 20px; } }
+  .wrapper.booking .main-block .container .back-image .booking-form #mc_embed_signup .heading-contact {
+    font-size: 20px; } }
 @media (max-width: 618px) {
   .wrapper.thankyou .main-block .container.new-page {
     width: auto; }
@@ -2280,6 +2515,21 @@ body {
     height: 35px; }
   .wrapper.booking .main-block .container .back-image .booking-form #mc_embed_signup {
     width: 90%; } }
+@media (max-height: 430px) {
+  .popup {
+    width: 100%; }
+
+  #mc_embed_signup.coworking {
+    width: 100%; }
+    #mc_embed_signup.coworking .mc-field-group {
+      width: 50%;
+      float: right;
+      padding-right: 10px; }
+      #mc_embed_signup.coworking .mc-field-group.field-left {
+        float: left; }
+    #mc_embed_signup.coworking .indicates-required {
+      padding-bottom: 5px;
+      padding-top: 5px; } }
 @media (max-width: 422px) {
   .booking-form #mc_embed_signup {
     width: auto; }
@@ -2338,8 +2588,11 @@ body {
   .wrapper.booking .main-block .container .back-image .booking-form.ru-booking #mc_embed_signup .mc-field-group.ru label {
     font-size: 13px; } }
 @media (max-width: 320px) {
+  .small-meta {
+    display: block; }
+
   .footer-black .container .left-footer a {
-    margin-left: 8px; }
+    margin-left: 15px; }
 
   .wrapper.contact .main-block .container .input-field .hole-form {
     width: 95%; }
@@ -2545,34 +2798,7 @@ body {
 #mc_embed_signup {
   background: #fff;
   clear: left;
-  font: 14px Helvetica,Arial,sans-serif;
-  width: 50%; }
-
-#mc_embed_signup form {
-  display: block;
-  width: 100%;
-  margin: 0 auto; }
-
-#mc_embed_signup h2 {
-  font-weight: bold;
-  padding: 0;
-  font-size: 30px; }
-
-#mc_embed_signup input[type=checkbox] {
-  -webkit-appearance: checkbox;
-  zoom: 1.5; }
-
-#mc_embed_signup input[type=radio] {
-  -webkit-appearance: radio; }
-
-#mc_embed_signup input:focus {
-  border: 2px solid #333; }
-
-#mc_embed_signup .small-meta {
-  font-size: 11px; }
-
-#mc_embed_signup .nowrap {
-  white-space: nowrap; }
+  width: 600px; }
 
 #mc_embed_signup .mc-field-group {
   clear: left;
@@ -2584,34 +2810,10 @@ body {
 #mc_embed_signup .mc-field-group .message-text {
   padding-top: 5px; }
 
-#mc_embed_signup .size1of2 {
-  clear: none;
-  float: left;
-  display: inline-block;
-  width: 100%;
-  margin-right: 4%;
-  margin-bottom: 5px; }
-
-* html #mc_embed_signup .size1of2 {
-  margin-right: 2%;
-  /* Fix for IE6 double margins. */ }
-
 #mc_embed_signup .mc-field-group label {
   display: block;
   margin-bottom: 3px;
   font-size: 20px; }
-
-#mc_embed_signup .mc-field-group input {
-  display: block;
-  width: 100%;
-  padding: 8px 0;
-  text-indent: 2%; }
-
-#mc_embed_signup .mc-field-group select {
-  display: inline-block;
-  width: 99%;
-  padding: 5px 0;
-  margin-bottom: 2px; }
 
 #mc_embed_signup .datefield, #mc_embed_signup .phonefield-us {
   padding: 5px 0; }
@@ -2624,28 +2826,12 @@ body {
   text-align: center;
   padding: 5px 0 2px 0; }
 
-#mc_embed_signup .phonefield-us .phonearea input, #mc_embed_signup .phonefield-us .phonedetail1 input {
-  width: 40px; }
-
 #mc_embed_signup .datefield .monthfield input, #mc_embed_signup .datefield .dayfield input {
-  width: 50px; }
+  width: 50px;
+  font-size: 12px; }
 
 #mc_embed_signup .datefield label, #mc_embed_signup .phonefield-us label {
   display: none; }
-
-#mc_embed_signup .indicates-required {
-  text-align: right;
-  font-size: 11px; }
-
-#mc_embed_signup .asterisk {
-  color: #e85c41;
-  font-size: 150%;
-  font-weight: normal;
-  position: relative;
-  top: 5px; }
-
-#mc_embed_signup .clear {
-  clear: both; }
 
 #mc_embed_signup .mc-field-group.input-group ul {
   margin: 0;
@@ -2658,8 +2844,7 @@ body {
   margin-right: 10px; }
 
 #mc_embed_signup .mc-field-group.input-group label {
-  display: inline;
-  padding-left: 5px; }
+  display: inline; }
 
 #mc_embed_signup .mc-field-group.input-group input {
   display: inline;
@@ -2723,7 +2908,7 @@ body {
   position: absolute;
   color: #e85c41; }
 
-#mc_embed_signup #mc-embedded-subscribe-form input.mce_inline_error {
-  border: 2px solid #e85c41; }
+.small-meta, .datepart {
+  font-size: 10px; }
 
 /*# sourceMappingURL=index.css.map */

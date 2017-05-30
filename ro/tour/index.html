@@ -125,43 +125,62 @@ window.fbAsyncInit = function () {
                              <h2 class="heading-contact">Hai să vezi viitorul tău birou</h2>
                              <div class="indicates-required"><span class="asterisk">*</span> câmpuri necesare</div>
                              <div class="mc-field-group">
-                                 <label for="mce-EMAIL">E-mail  <span class="asterisk">*</span>
-                                 </label>
-                                 <input type="email" value="" name="EMAIL" class="required email input-style" id="mce-EMAIL" placeholder="e.g. vlad.ursu@email.com">
+                                 <div class="group">
+                                     <input type="email" value="" name="EMAIL" class="required email" id="mce-EMAIL" required>
+                                     <span class="highlight"></span>
+                                     <span class="bar"></span>
+                                     <label class="label-form" for="mce-EMAIL">E-mail  <span class="asterisk">*</span></label>
+                                 </div>
                              </div>
                              <div class="mc-field-group">
-                                 <label for="mce-FNAME">Prenume  <span class="asterisk">*</span>
-                                 </label>
-                                 <input type="text" value="" name="FNAME" class="required input-style" id="mce-FNAME" placeholder="e.g. Vlad">
+                                 <div class="group">
+                                     <input type="text" value="" name="FNAME" class="required" id="mce-FNAME" required>
+                                     <span class="highlight"></span>
+                                     <span class="bar"></span>
+                                     <label class="label-form" for="mce-FNAME">Prenume  <span class="asterisk">*</span></label>
+                                 </div>
                              </div>
                              <div class="mc-field-group">
-                                 <label for="mce-LNAME">Nume  <span class="asterisk">*</span>
-                                 </label>
-                                 <input type="text" value="" name="LNAME" class="required input-style" id="mce-LNAME" placeholder="e.g. Ursu">
+                                 <div class="group">
+                                     <input type="text" value="" name="LNAME" class="required" id="mce-LNAME" required>
+                                     <span class="highlight"></span>
+                                     <span class="bar"></span>
+                                     <label class="label-form" for="mce-LNAME">Nume  <span class="asterisk">*</span></label>
+                                 </div>
                              </div>
                              <div class="mc-field-group size1of2">
-                                 <label for="mce-TELEFON">Telefon  <span class="asterisk">*</span>
-                                 </label>
-                                 <input type="tel" name="TELEFON" class="required input-style" value="" id="mce-TELEFON" placeholder="e.g. 022 999 999">
+                                 <div class="group">
+                                     <input type="tel" name="TELEFON" class="required" value="" id="mce-TELEFON" required>
+                                     <span class="highlight"></span>
+                                     <span class="bar"></span>
+                                     <label class="label-form" for="mce-TELEFON">Telefon  <span class="asterisk">*</span></label>
+                                 </div>
                              </div>
                              <div class="mc-field-group">
-                                 <label for="mce-JOB">Specializare (programator; QA; designer etc.)  <span class="asterisk">*</span>
-                                 </label>
-                                 <input type="text" value="" name="JOB" class="required input-style" id="mce-JOB">
+                                 <div class="group">
+                                     <input type="text" value="" name="JOB" class="required" id="mce-JOB" required>
+                                     <span class="highlight"></span>
+                                     <span class="bar"></span>
+                                     <label class="label-form" for="mce-JOB">Specializare (QA; designer etc.)  <span class="asterisk">*</span></label>
+                                 </div>
                              </div>
                              <div class="mc-field-group size1of2">
-                                 <label for="mce-VDATE-month">Data când dorești să programezi vizita  <span class="asterisk">*</span>
-                                 </label>
+                                 <label for="mce-VDATE-month">Data când dorești să programezi vizita  <span class="asterisk">*</span></label>
                                  <div class="datefield">
                                      <span class="subfield dayfield"><input class="datepart required" type="text" pattern="[0-9]*" value="" placeholder="ZZ" size="2" maxlength="2" name="VDATE[day]" id="mce-VDATE-day"></span> /
                                      <span class="subfield monthfield"><input class="datepart required" type="text" pattern="[0-9]*" value="" placeholder="LL" size="2" maxlength="2" name="VDATE[month]" id="mce-VDATE-month"></span> /
                                      <span class="subfield yearfield"><input class="datepart required" type="text" pattern="[0-9]*" value="" placeholder="AAAA" size="4" maxlength="4" name="VDATE[year]" id="mce-VDATE-year"></span>
                                      <span class="small-meta nowrap">( zz / ll / aaaa )</span>
                                  </div>
-                             </div><div class="mc-field-group">
-                             <label for="mce-MMERGE5">Mesaj </label>
-                             <input type="text" value="" name="MMERGE5" class="input-style" id="mce-MMERGE5">
-                         </div>
+                             </div>
+                             <div class="mc-field-group">
+                                 <div class="group">
+                                     <input type="text" value="" name="MMERGE5"  id="mce-MMERGE5" required>
+                                     <span class="highlight"></span>
+                                     <span class="bar"></span>
+                                     <label class="label-form" for="mce-MMERGE5">Mesaj </label>
+                                 </div>
+                             </div>
                              <div class="mc-field-group input-group">
                                  <strong>Alege limba in care preferi sa comunicăm </strong>
                                  <ul>
