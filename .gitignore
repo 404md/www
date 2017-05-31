@@ -9,6 +9,11 @@
 .idea/
 # if you remove the above rule, at least ignore the following:
 
+# Keep this folder for Instafram json
+
+/json/*
+!json/.gitkeep
+
 # User-specific stuff:
 # .idea/workspace.xml
 # .idea/tasks.xml
