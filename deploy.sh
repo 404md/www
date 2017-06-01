@@ -16,26 +16,38 @@ message() {
 message "You are going to deploy to '${env}' environment (region: ${region}), continue? [y|n]: "
 read continue
 
-if [ ${continue} == 'y' ]; then
-    if [ ${env} == 'dev' ]; then
-        bucket='s3://www-dev.404.md/'
-        distribution_id='E3GMNOZE3OLH8B'
-    else
-        bucket='s3://www.404.md/'
-        distribution_id='E1CHAR53JHGDQK'
-    fi
-
-    message "### Build: Start ###"
-    ./build.sh ${env}
-
-    message "### Deploy: Start ###"
-    message "Synchronizing build/Release/"
-    aws s3 sync ./build/Release/ ${bucket} --region ${region} --profile ${profile} \
-        --storage-class REDUCED_REDUNDANCY --metadata-directive REPLACE --cache-control max-age=600 \
-        --exclude 'backend/*' --exclude 'scss/*' --exclude 'build/*'
-
-    message "Invalidating CloudFront"
-    aws cloudfront create-invalidation --distribution-id ${distribution_id} --paths '/*'
+if [ ${continue} != 'y' ]; then
+    echo 'Exiting without deploy'
+    exit 1
 fi
+
+message "Would like to install npm dependencies? [y|n]: "
+read dependencies
+
+if [ ${dependencies} == 'y' ]; then
+    npm install html-minifier -g
+    npm install cssnano-cli -g
+    npm install uglify-js -g
+fi
+
+if [ ${env} == 'dev' ]; then
+    bucket='s3://www-dev.404.md/'
+    distribution_id='E3GMNOZE3OLH8B'
+else
+    bucket='s3://www.404.md/'
+    distribution_id='E1CHAR53JHGDQK'
+fi
+
+message "### Build: Start ###"
+./build.sh ${env}
+
+message "### Deploy: Start ###"
+message "Synchronizing build/Release/"
+aws s3 sync ./build/Release/ ${bucket} --region ${region} --profile ${profile} \
+    --storage-class REDUCED_REDUNDANCY --metadata-directive REPLACE --cache-control max-age=600 \
+    --exclude 'backend/*' --exclude 'scss/*' --exclude 'build/*'
+
+message "Invalidating CloudFront"
+aws cloudfront create-invalidation --distribution-id ${distribution_id} --paths '/*'
 
 message "Done"
