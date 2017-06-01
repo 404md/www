@@ -1,10 +1,11 @@
 jQuery(function($) {
     "use strict";
 
-    $('.our-members').slick({
+    $('.instagram').slick({
         infinite: true,
         slidesToShow: 3,
         slidesToScroll: 1,
+        dots: false,
         responsive: [
             {
                 breakpoint: 992,
@@ -13,10 +14,8 @@ jQuery(function($) {
                     slidesToScroll: 2,
                     infinite: true,
                     dots: false
-
                 }
             },
-            
             {
                 breakpoint: 480,
                 settings: {
@@ -25,13 +24,28 @@ jQuery(function($) {
                 }
             }
         ]
+    });
 
+    $.ajax({
+        url: '//www.404.md/json/instagram-feed.json',
+        dataType: 'json'
+    }).done(function (data) {
+        data.forEach(function(item) {
+            var hoverBlock = "<div class='hover-hash'><div class='hover-text'><div class='likes-instagram'>"+
+                item.likes.count +"</div><div class='hashtags'>"+ item.description +"</div></div></div>";
+            var originalPost = "<a href='"+ item.link +"' target='_blank'>" + hoverBlock + "</a>";
+
+            var content = "<img src='"+ item.images.url +"'>";
+            if (item.type == 'video') {
+                content = "<div>"+ content +"</div><div class='button-video'><div class='play-button'></div></div>"
+            }
+
+            $('.instagram').slick('slickAdd',"<div>"+ content + originalPost +"</div>");
+        });
     });
 
     var bar1 = new ProgressBar.Circle(".circle1", {
         color: '#aaa',
-        // This has to be the same size as the maximum width to
-        // prevent clipping
         strokeWidth: 4,
         trailWidth: 4,
         easing: 'easeInOut',
@@ -41,7 +55,7 @@ jQuery(function($) {
         },
         from: {color: '#44a5db', width: 4},
         to: {color: '#44a5db', width: 4},
-        // Set default step function for all animate calls
+        
         step: function (state, circle) {
             circle.path.setAttribute('stroke', state.color);
             circle.path.setAttribute('stroke-width', state.width);
@@ -118,7 +132,5 @@ jQuery(function($) {
             bar3.animate(1.0);
             wasShown = true;
         }
-
     })
-
 });

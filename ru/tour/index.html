@@ -18,7 +18,10 @@
 <meta name="twitter:url" content="https://www.404.md/ru/tour/"/>
 <link rel="icon" href="/favicon.png" type="image/png"/>
 <link rel="stylesheet" href="../../css/index.min.css"/>
+<link rel="stylesheet" href="../../css/slick-1.6.0.min.css"/>
+<link rel="stylesheet" href="../../css/slick-theme-1.6.0.min.css"/>
 <link rel="stylesheet" href="../../css/font-awesome-4.7.0.min.css"/>
+<link rel="stylesheet" href="../../css/materialdesignicons.css"/>
 <!-- Google Tag Manager -->
 <script>
 (function (w, d, s, l, i) {
@@ -62,7 +65,7 @@ window.fbAsyncInit = function () {
 <header class="main-nav">
     <div class="container">
         <div class="logo" itemscope itemtype="https://schema.org/Organization">
-            <a href="https://www.404.md" itemprop="url">
+            <a href="/ru/" itemprop="url">
                 <img itemprop="logo" class="img-logo" src="../../images/logo-right-black.svg" alt="Logo 404 Not Found" />
                 <meta itemprop="url" content="https://www.404.md/images/logo-right-black.svg">
             </a>
@@ -80,31 +83,29 @@ window.fbAsyncInit = function () {
                 </div>
             </div>
             <ul class="navt" id="myTopnav">
-                <li><a class="link" href="/ru/amenities/">Удобства</a></li>
-                <li><a class="link" href="/ru/pricing/">Цены</a></li>
+                <li><a class="link" href="/ru/coworking/">Коворкинг</a></li>
                 <li><a class="link" href="/ru/members/">Участники</a></li>
-                <li><a class="link active" href="/ru/tour/">Забронируй Обход</a></li>
                 <li><a class="link" href="/ru/media/">Пресса</a></li>
                 <li><a class="link" href="/ru/gallery/">Галерея</a></li>
                 <li><a class="link" href="/ru/contact/">Контакты</a></li>
-                <li><a class="last-line" href="https://blog.404.md"><span class="blog">Блог</span></a></li>
+                <li><a class="link" href="https://blog.404.md">Блог</a></li>
+                <li><a class="link active" href="/ru/tour/">Забронируй Обход</a></li>
             </ul>
-            <div class="language">
-                <a href="/tour/"><img src="../../images/flag-us.png"> en</a>
-                <a href="/ro/tour/"><img src="../../images/flag-ro.png"> ro</a>
-            </div>
         </div>
         <div class="clear"></div>
     </div>
 </header>
 
-<section class="image" >
-    <div class="image-book_tour"></div>
+<section class="image">
+    <div class="image-book_tour page">
+        <div class="text-page-name">
+            <h1 class="page-name">Забронировать Посещение</h1>
+        </div>
+    </div>
 </section>
 
 <div class=" container new-page">
     <div class="pages">
-        <h1 class="page-name">Забронировать Посещение</h1>
         <span class="text-page">
             404 Not Found это сообщество для IT-бизнеса и IT-специалистов из Молдовы.
             Мы хотим дать возможность маленьким компаниям и квалифицированным специалистам стать
@@ -113,7 +114,7 @@ window.fbAsyncInit = function () {
     </div>
 </div>
 
-<div class="wrapper booking">
+<div class="wrapper booking" itemscope itemprop="mainContentOfPage">
     <section class="main-block">
         <div class="container">
             <div class="back-image">
@@ -124,32 +125,47 @@ window.fbAsyncInit = function () {
                              <h2 class="heading-contact">Бронирование</h2>
                              <div class="indicates-required"><span class="asterisk">*</span> обязательные поля</div>
                              <div class="mc-field-group">
-                                 <label for="mce-EMAIL">Почта  <span class="asterisk">*</span>
-                                 </label>
-                                 <input type="email" value="" name="EMAIL" class="required email input-style" id="mce-EMAIL" placeholder=" vlad.ursu@email.com">
+                                 <div class="group">
+                                     <input type="email" value="" name="EMAIL" class="required email" id="mce-EMAIL" required>
+                                     <span class="highlight"></span>
+                                     <span class="bar"></span>
+                                     <label class="label-form" for="mce-EMAIL">Почта  <span class="asterisk">*</span></label>
+                                 </div>
                              </div>
                              <div class="mc-field-group">
-                                 <label for="mce-FNAME">Имя  <span class="asterisk">*</span>
-                                 </label>
-                                 <input type="text" value="" name="FNAME" class="required input-style" id="mce-FNAME" placeholder="Влад">
+                                 <div class="group">
+                                     <input type="text" value="" name="FNAME" class="required" id="mce-FNAME" required>
+                                     <span class="highlight"></span>
+                                     <span class="bar"></span>
+                                     <label class="label-form" for="mce-FNAME">Имя  <span class="asterisk">*</span></label>
+                                 </div>
                              </div>
                              <div class="mc-field-group">
-                                 <label for="mce-LNAME">Фамилия <span class="asterisk">*</span>
-                                 </label>
-                                 <input type="text" value="" name="LNAME" class="required input-style" id="mce-LNAME" placeholder="Урсу">
+                                 <div class="group">
+                                     <input type="text" value="" name="LNAME" class="required" id="mce-LNAME" required>
+                                     <span class="highlight"></span>
+                                     <span class="bar"></span>
+                                     <label class="label-form" for="mce-LNAME">Фамилия <span class="asterisk">*</span></label>
+                                 </div>
                              </div>
                              <div class="mc-field-group size1of2">
-                                 <label for="mce-TELEFON">Телефон <span class="asterisk">*</span>
-                                 </label>
-                                 <input type="tel" name="TELEFON" class="required input-style" value="" id="mce-TELEFON" placeholder="e.g. 022 999 999">
+                                 <div class="group">
+                                     <input type="tel" name="TELEFON" class="required" value="" id="mce-TELEFON" required>
+                                     <span class="highlight"></span>
+                                     <span class="bar"></span>
+                                     <label class="label-form" for="mce-TELEFON">Телефон <span class="asterisk">*</span></label>
+                                 </div>
                              </div>
                              <div class="mc-field-group">
-                                 <label for="mce-JOB">Cпециальность (программист; QA; дизайнер и т.д.) <span class="asterisk">*</span>
-                                 </label>
-                                 <input type="text" value="" name="JOB" class="required input-style" id="mce-JOB">
+                                 <div class="group">
+                                     <input type="text" value="" name="JOB" class="required" id="mce-JOB" required>
+                                     <span class="highlight"></span>
+                                     <span class="bar"></span>
+                                     <label class="label-form" for="mce-JOB">Cпециальность (QA; дизайнер и т.д.) <span class="asterisk">*</span></label>
+                                 </div>
                              </div>
                              <div class="mc-field-group size1of2">
-                                 <label for="mce-VDATE-month">Дата бронирования <span class="asterisk">*</span>
+                                 <label class="gray-text" for="mce-VDATE-month">Дата бронирования <span class="asterisk">*</span>
                                  </label>
                                  <div class="datefield">
                                      <span class="subfield dayfield"><input class="datepart required" type="text" pattern="[0-9]*" value="" placeholder="ДД" size="2" maxlength="2" name="VDATE[day]" id="mce-VDATE-day"></span> /
@@ -157,19 +173,21 @@ window.fbAsyncInit = function () {
                                      <span class="subfield yearfield"><input class="datepart required" type="text" pattern="[0-9]*" value="" placeholder="ГГГГ" size="4" maxlength="4" name="VDATE[year]" id="mce-VDATE-year"></span>
                                      <span class="small-meta nowrap">( дд / мм / гггг )</span>
                                  </div>
-                             </div><div class="mc-field-group">
-                             <label for="mce-MMERGE5">Сообщение </label>
-                             <input type="text" value="" name="MMERGE5" class="input-style" id="mce-MMERGE5">
-                         </div>
+                             </div>
+                             <div class="mc-field-group">
+                                 <div class="group">
+                                     <input type="text" value="" name="MMERGE5" id="mce-MMERGE5" required>
+                                     <span class="highlight"></span>
+                                     <span class="bar"></span>
+                                     <label class="label-form" for="mce-MMERGE5">Сообщение </label>
+                                 </div>
+                             </div>
                              <div class="mc-field-group input-group">
                                  <strong>Выберите язык </strong>
                                  <ul><li><input type="radio" value="Romana" name="LIMBA" id="mce-LIMBA-0"><label for="mce-LIMBA-0"> Румынский</label></li>
                                      <li><input type="radio" value="Rusa" name="LIMBA" id="mce-LIMBA-1"><label for="mce-LIMBA-1"> Русский</label></li>
                                      <li><input type="radio" value="Engleza" name="LIMBA" id="mce-LIMBA-2"><label for="mce-LIMBA-2"> Английский</label></li>
                                  </ul>
-                             </div>
-                             <div class="recaptcha-center">
-                                 <div class="g-recaptcha"  data-sitekey="6LcHAgkTAAAAAHP1uEknBzH3ZeeqciGJEXVgZAJm"></div>
                              </div>
                              <div id="mce-responses" class="clear">
                                  <div class="response" id="mce-error-response" style="display:none"></div>
@@ -186,47 +204,233 @@ window.fbAsyncInit = function () {
     </section>
 
     <section class="gallery tour-gallery">
-        <div class="gallery-line">
+        <div class="gallery-line footer-carousel" itemscope itemtype="https://schema.org/UserComments">
             <div class="pic">
-                <div class="img1 img-value img-hover">
+                <div class="hidden-avatar">
                     <div class="we-love">
+                        <div class="comment">
+                            <div class="quote">
+                                <i class="mdi-format-quote-open mdi-set"></i>
+                            </div>
+                            <span itemprop="commentText">404.md мотивирует меня</span>
+                        </div>
+                        <div class="avatar">
+                            <img src="../../images/avatar-vlad1.png" alt="Влад У.">
+                        </div>
+                        <span class="avatar-comment" itemprop="name">Влад У.</span>
+                    </div>
+                </div>
+                <div class="image-members">
+                    <img src="../../images/gallery-1.jpg">
+                </div>
+            </div>
+            <div class="pic">
+                <div class="hidden-avatar">
+                    <div class="we-love">
+                        <div class="comment">
+                            <div class="quote">
+                                <i class="mdi-format-quote-open mdi-set"></i>
+                            </div>
+                            <span itemprop="commentText">404.md вдохновляет меня делать добро</span>
+                        </div>
+                        <div class="avatar">
+                            <img src="../../images/avatar-eugen1.png" alt="Евгений И." />
+                        </div>
+                        <span class="avatar-comment" itemprop="name">Евгений И.</span>
+                    </div>
+                </div>
+                <div class="image-members">
+                    <img src="../../images/gallery-2.jpg">
+                </div>
+            </div>
+            <div class="pic">
+                <div class="hidden-avatar">
+                    <div class="we-love">
+                        <div class="comment">
+                            <div class="quote">
+                                <i class="mdi-format-quote-open mdi-set"></i>
+                            </div>
+                            <span itemprop="commentText">Здесь твоя социальная сеть реальна</span>
+                        </div>
+                        <div class="avatar">
+                            <img src="../../images/avatar-irina1.png" alt="Ирина К.">
+                        </div>
+                        <span class="avatar-comment" itemprop="name">Ирина К.</span>
+                    </div>
+                </div>
+                <div class="image-members">
+                    <img src="../../images/gallery-3.jpg">
+                </div>
+            </div>
+            <div class="pic">
+                <div class="hidden-avatar">
+                    <div class="we-love">
+                        <div class="comment">
+                            <div class="quote">
+                                <i class="mdi-format-quote-open mdi-set"></i>
+                            </div>
+                            <span itemprop="commentText">Я рад быть частью сообщества 404</span>
+                        </div>
+                        <div class="avatar">
+                            <img src="../../images/avatar-alex1.png" alt="Алекс К.">
+                        </div>
+                        <span class="avatar-comment" itemprop="name">Алекс К.</span>
+                    </div>
+                </div>
+                <div class="image-members">
+                    <img src="../../images/gallery-4.jpg">
+                </div>
+            </div>
+            <div class="pic">
+                <div class="hidden-avatar">
+                    <div class="we-love">
+                        <div class="comment">
+                            <div class="quote">
+                                <i class="mdi-format-quote-open mdi-set"></i>
+                            </div>
+                            <span itemprop="commentText">404 - лучшее место для работы с профессионалами</span>
+                        </div>
+                        <div class="avatar">
+                            <img src="../../images/avatar-cristi1.png" alt="Кристи К.">
+                        </div>
+                        <span class="avatar-comment" itemprop="name">Кристи К.</span>
+                    </div>
+                </div>
+                <div class="image-members">
+                    <img src="../../images/gallery-5.jpg">
+                </div>
+            </div>
+            <div class="pic">
+                <div class="hidden-avatar">
+                    <div class="we-love">
+                        <div class="comment">
+                            <div class="quote">
+                                <i class="mdi-format-quote-open mdi-set"></i>
+                            </div>
+                            <span itemprop="commentText">Уютное место и приятная атмосфера</span>
+                        </div>
                         <div class="avatar">
                             <img src="../../images/avatar-alex2.png" alt="Aлександр В.">
                         </div>
-                        <div class="comment" itemscope itemtype="https://schema.org/UserComments">
-                            <span class="avatar-comment" itemprop="name">Aлександр В.</span>
-                            <span itemprop="commentText">"Уютное место и приятная атмосфера"</span>
-                        </div>
+                        <span class="avatar-comment" itemprop="name">Aлександр В.</span>
                     </div>
+                </div>
+                <div class="image-members">
+                    <img src="../../images/gallery-6.jpg">
                 </div>
             </div>
             <div class="pic">
-                <div class="img2 img-value img-hover">
+                <div class="hidden-avatar">
                     <div class="we-love">
+                        <div class="comment">
+                            <div class="quote">
+                                <i class="mdi-format-quote-open mdi-set"></i>
+                            </div>
+                            <span itemprop="commentText">Я рад быть частью сообшества 404</span>
+                        </div>
+                        <div class="avatar">
+                            <img src="../../images/avatar-marcel1.png" alt="Марчел Г.">
+                        </div>
+                        <span class="avatar-comment" itemprop="name">Марчел Г.</span>
+                    </div>
+                </div>
+                <div class="image-members">
+                    <img src="../../images/gallery-7.jpg">
+                </div>
+            </div>
+            <div class="pic">
+                <div class="hidden-avatar">
+                    <div class="we-love">
+                        <div class="comment">
+                            <div class="quote">
+                                <i class="mdi-format-quote-open mdi-set"></i>
+                            </div>
+                            <span itemprop="commentText">404 вдохновляет меня на работу</span>
+                        </div>
+                        <div class="avatar">
+                            <img src="../../images/avatar-grigore1.png" alt="Григорий M.">
+                        </div>
+                        <span class="avatar-comment" itemprop="name">Григорий M.</span>
+                    </div>
+                </div>
+                <div class="image-members">
+                    <img src="../../images/gallery-8.jpg">
+                </div>
+            </div>
+            <div class="pic">
+                <div class="hidden-avatar">
+                    <div class="we-love">
+                        <div class="comment">
+                            <div class="quote">
+                                <i class="mdi-format-quote-open mdi-set"></i>
+                            </div>
+                            <span itemprop="commentText">404 мотивирует меня каждый день</span>
+                        </div>
+                        <div class="avatar">
+                            <img src="../../images/avatar-dan1.png" alt="Дан Б.">
+                        </div>
+                        <span class="avatar-comment" itemprop="name">Дан Б.</span>
+                    </div>
+                </div>
+                <div class="image-members">
+                    <img src="../../images/gallery-9.jpg">
+                </div>
+            </div>
+            <div class="pic">
+                <div class="hidden-avatar">
+                    <div class="we-love">
+                        <div class="comment">
+                            <div class="quote">
+                                <i class="mdi-format-quote-open mdi-set"></i>
+                            </div>
+                            <span itemprop="commentText">404 - это идеальное место, чтобы преуспеть</span>
+                        </div>
                         <div class="avatar">
                             <img src="../../images/avatar-dima1.png" alt="Дмитрий Д.">
                         </div>
-                        <div class="comment" itemscope itemtype="https://schema.org/UserComments">
-                            <span class="avatar-comment" itemprop="name">Дмитрий Д.</span>
-                            <span itemprop="commentText">"404 это идеальное место чтобы преуспеть"</span>
-                        </div>
+                        <span class="avatar-comment" itemprop="name">Дмитрий Д.</span>
                     </div>
+                </div>
+                <div class="image-members">
+                    <img src="../../images/gallery-10.jpg">
                 </div>
             </div>
             <div class="pic">
-                <div class="img3 img-value"></div>
+                <div class="hidden-avatar">
+                    <div class="we-love">
+                        <div class="comment">
+                            <div class="quote">
+                                <i class="mdi-format-quote-open mdi-set"></i>
+                            </div>
+                            <span itemprop="commentText">404 - идеальный путь к достижениям</span>
+                        </div>
+                        <div class="avatar">
+                            <img src="../../images/avatar-tanea1.png" alt="Татьяна С.">
+                        </div>
+                        <span class="avatar-comment" itemprop="name">Татьяна С.</span>
+                    </div>
+                </div>
+                <div class="image-members">
+                    <img src="../../images/gallery-11.jpg">
+                </div>
             </div>
             <div class="pic">
-                <div class="img4 img-value img-hover">
+                <div class="hidden-avatar">
                     <div class="we-love">
-                        <div class="avatar" itemscope itemtype="https://schema.org/UserComments">
+                        <div class="comment">
+                            <div class="quote">
+                                <i class="mdi-format-quote-open mdi-set"></i>
+                            </div>
+                            <span itemprop="commentText">Тут чувствуешь себя как дома</span>
+                        </div>
+                        <div class="avatar">
                             <img src="../../images/avatar-dima2.png" alt="Дмитрий С.">
                         </div>
-                        <div class="comment">
-                            <span class="avatar-comment" itemprop="name">Дмитрий С.</span>
-                            <span itemprop="commentText">"404.md чувствуешь себя как дома"</span>
-                        </div>
+                        <span class="avatar-comment" itemprop="name">Дмитрий С.</span>
                     </div>
+                </div>
+                <div class="image-members">
+                    <img src="../../images/gallery-12.jpg">
                 </div>
             </div>
         </div>
@@ -257,47 +461,38 @@ window.fbAsyncInit = function () {
 
 <footer>
     <div class="contacts">
-        <div class="container get-in-touch">
-            <div class="block-1"><img src="../../images/logo-below-white.svg" alt="Logo 404 Not Found" /></div>
-            <div class="block-2" itemscope itemtype="https://schema.org/AboutPage">
-                <h4 class="connect-us">О нас</h4>
-                 <span itemprop="description">404 Not Found это сообщество для IT-бизнеса и IT-специалистов из Молдовы.
-                Мы хотим дать возможность маленьким компаниям и квалифицированным специалистам стать
-                конкурентоспособными на мировом рынке. Члены нашего сообщества гордятся тем что работают
-                с Fortune 500 клиентами из Европы и США.
-                 </span>
-            </div>
-            <div class="block-3" itemprop="address" itemscope itemtype="https://schema.org/PostalAddress">
-                <h4 class="connect-us">Наши контакты</h4>
-                <div class="one-line">
-                    <i class="fa fa-envelope" aria-hidden="true"></i>
-                    <a href="mailto:info@404.md" itemprop="email">info@404.md</a>
-                </div>
-                <div class="one-line">
-                    <i class="fa fa-phone" aria-hidden="true"></i>
-                    <a href="tel:+37322808291">(+373) 22 808 291</a>
-                </div>
-                <div class="one-line">
-                    <i class="fa fa-map-marker" aria-hidden="true"></i>
-                    <a itemprop="streetAddress" href="https://goo.gl/maps/GvA1ChgPJ4U2"><span itemprop="streetAddress">бул. Дачия #23, эт. 3</span>
-                        <span class="one-line new-line" itemprop="addressLocality">Кишинев, Молдова</span></a>
-                </div>
-            </div>
-            <div class="block-4" itemscope itemtype="https://schema.org/Organization">
+        <div class="container get-in-touch flex-row">
+            <div class="block-1 flex-item-4"><img src="../../images/logo-right-black.svg" alt="Logo 404 Not Found" /></div>
+            <div class="block-2 flex-item-4" itemscope itemtype="https://schema.org/Organization">
                 <h4 class="connect-us">Свяжитесь с нами</h4>
-                <div class="one-line display-flex">
-                    <a href="https://www.facebook.com/404moldova" itemprop="sameAs"><i class="fa fa-facebook" aria-hidden="true"></i></a>
-                    <a href="https://twitter.com/404moldova" itemprop="sameAs"><i class="fa fa-twitter" aria-hidden="true"></i></a>
-                    <a href="https://www.linkedin.com/company/404-moldova" itemprop="sameAs"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
-                    <a href="https://www.pinterest.com/404moldova/" itemprop="sameAs"><i class="fa fa-pinterest-p" aria-hidden="true"></i></a>
-                    <a href="https://pycoding.slack.com/messages/general/" itemprop="sameAs"><i class="fa fa-slack" aria-hidden="true"></i></a>
+                <div class="one-line">
+                    <a href="https://www.facebook.com/404moldova" itemprop="sameAs"><i class="mdi-facebook mdi-set" aria-hidden="true"></i></a>
+                    <a href="https://instagram.com/404_moldova" itemprop="sameAs"><i class="mdi-instagram mdi-set"></i></a>
+                    <a href="https://twitter.com/404moldova" itemprop="sameAs"><i class="mdi-twitter mdi-set"></i></a>
+                    <a href="https://www.linkedin.com/company/404-moldova" itemprop="sameAs"><i class="mdi-linkedin mdi-set"></i></a>
+                    <a href="https://www.youtube.com/channel/UCXY-0ZUU-mvxbzWuLGZp5LQ" itemprop="sameAs"><i class="mdi-youtube-play mdi-set"></i></a>
+                    <a href="https://www.messenger.com/t/404Moldova/" itemprop="sameAs"><i class="mdi-facebook-messenger mdi-set"></i></a>
                 </div>
-                <div class="one-line display-flex">
-                    <a href="https://ok.ru/md404" itemprop="sameAs"><i class="fa fa-odnoklassniki" aria-hidden="true"></i></a>
-                    <a href="https://vk.com/md404" itemprop="sameAs"><i class="fa fa-vk" aria-hidden="true"></i></a>
-                    <a href="https://instagram.com/404_moldova" itemprop="sameAs"><i class="fa fa-instagram" aria-hidden="true"></i></a>
-                    <a href="https://github.com/404md" itemprop="sameAs"><i class="fa fa-github" aria-hidden="true"></i></a>
-                    <a href="https://plus.google.com/u/0/107643683758390437710" itemprop="sameAs"><i class="fa fa-google-plus" aria-hidden="true"></i></a>
+            </div>
+            <div class="block-3 flex-item-4" itemscope itemtype="https://schema.org/PostalAddress">
+                <div class="right-side">
+                    <h4 class="connect-us">Наши контакты</h4>
+                    <div class="one-line">
+                        <i class="mdi-email-outline mdi-set"></i>
+                        <a class="color-link" href="mailto:info@404.md" itemprop="email">info@404.md</a>
+                    </div>
+                    <div class="one-line">
+                        <i class="mdi-phone mdi-set"></i>
+                        <div class="phones">
+                            <a class="color-link" href="tel:+37322808291">(+373) 22 808 291</a>
+                            <a class="color-link" href="tel:+37360999007">(+373) 60 999 007</a>
+                        </div>
+                    </div>
+                    <div class="one-line">
+                        <i class="mdi-map-marker mdi-set"></i>
+                        <a class="color-link" itemprop="streetAddress" href="https://goo.gl/maps/GvA1ChgPJ4U2"><span itemprop="streetAddress">бул. Дачия #23, эт. 3</span>
+                            <span class="one-line new-line" itemprop="addressLocality">Кишинев, Молдова</span></a>
+                    </div>
                 </div>
             </div>
         </div>
@@ -307,18 +502,19 @@ window.fbAsyncInit = function () {
         <div class="container">
             <div class="left-footer ru-text">
                 2017 &copy; PyCoding SRL
-                <a href="/ru/terms/">Условия Использования</a>
+                <a href="/terms/">Условия Использования</a>
+                <a class="language" href="/tour/"><img src="../../images/flag-us.png"></a>
+                <a class="language" href="/ro/tour/"><img src="../../images/flag-ro.png"></a>
             </div>
             <div class="right-footer">
                 <ul class="">
-                    <li><a href="/ru/amenities/">Удобства</a></li>
-                    <li><a href="/ru/pricing/">Цены</a></li>
+                    <li><a href="/ru/coworking/">Коворкинг</a></li>
                     <li><a href="/ru/members/">Участники</a></li>
-                    <li><a href="/ru/tour/">Забронируй Обход</a></li>
                     <li><a href="/ru/media/">Пресса</a></li>
                     <li><a href="/ru/gallery/">Галерея</a></li>
                     <li><a href="/ru/contact/">Контакты</a></li>
                     <li><a href="https://blog.404.md">Блог</a></li>
+                    <li><a href="/ru/tour/">Забронируй Обход</a></li>
                 </ul>
             </div>
             <div class="clear"></div>
@@ -329,6 +525,8 @@ window.fbAsyncInit = function () {
 <script type="text/javascript" src="../../js/jquery-1.11.0.min.js"></script>
 <script type='text/javascript' src='../../js/mc-validate.min.js'></script>
 <script type="text/javascript" src="../../js/main.min.js"></script>
+<script type="text/javascript" src="../../js/footer-carousel.js"></script>
+<script type="text/javascript" src="../../js/slick-1.6.0.min.js"></script>
 <script type="text/javascript" src="../../js/messages_ru.js"></script>
 <script type="text/javascript" src="https://www.google.com/recaptcha/api.js" async defer></script>
 

@@ -18,7 +18,10 @@
 <meta name="twitter:url" content="https://www.404.md/ru/pricing/"/>
 <link rel="icon" href="/favicon.png" type="image/png"/>
 <link rel="stylesheet" href="../../css/index.min.css"/>
+<link rel="stylesheet" href="../../css/slick-1.6.0.min.css"/>
+<link rel="stylesheet" href="../../css/slick-theme-1.6.0.min.css"/>
 <link rel="stylesheet" href="../../css/font-awesome-4.7.0.min.css"/>
+<link rel="stylesheet" href="../../css/materialdesignicons.css"/>
 <!-- Google Tag Manager -->
 <script>
 (function (w, d, s, l, i) {
@@ -62,7 +65,7 @@ window.fbAsyncInit = function () {
 <header class="main-nav">
     <div class="container">
         <div class="logo" itemscope itemtype="https://schema.org/Organization">
-            <a href="https://www.404.md" itemprop="url">
+            <a href="/ru/" itemprop="url">
                 <img itemprop="logo" class="img-logo" src="../../images/logo-right-black.svg" alt="Logo 404 Not Found" />
                 <meta itemprop="url" content="https://www.404.md/images/logo-right-black.svg">
             </a>
@@ -80,31 +83,29 @@ window.fbAsyncInit = function () {
                 </div>
             </div>
             <ul class="navt" id="myTopnav">
-                <li><a class="link" href="/ru/amenities/">Удобства</a></li>
-                <li><a class="link active" href="/ru/pricing/">Цены</a></li>
+                <li><a class="link active" href="/ru/coworking/">Коворкинг</a></li>
                 <li><a class="link" href="/ru/members/">Участники</a></li>
-                <li><a class="link" href="/ru/tour/">Забронируй Обход</a></li>
                 <li><a class="link" href="/ru/media/">Пресса</a></li>
                 <li><a class="link" href="/ru/gallery/">Галерея</a></li>
                 <li><a class="link" href="/ru/contact/">Контакты</a></li>
-                <li><a class="last-line" href="https://blog.404.md"><span class="blog">Блог</span></a></li>
+                <li><a class="link" href="https://blog.404.md">Блог</a></li>
+                <li><a class="last-line" href="/ru/tour/"><span class="blog">Забронируй Обход</span></a></li>
                </ul>
-            <div class="language">
-                <a href="/pricing/"><img src="../../images/flag-us.png"> en</a>
-                <a href="/ro/pricing/"><img src="../../images/flag-ro.png"> ro</a>
-            </div>
         </div>
         <div class="clear"></div>
     </div>
 </header>
 
 <section class="image">
-    <div class="image-plans"></div>
+    <div class="image-coworking page">
+        <div class="text-page-name">
+            <h1 class="page-name">Цены</h1>
+        </div>
+    </div>
 </section>
 
 <div class="container new-page">
     <div class="pages">
-        <h1 class="page-name">Цены</h1>
         <span class="text-page">
             404 Not Found это сообщество для IT-бизнеса и IT-специалистов из Молдовы.
             Мы хотим дать возможность маленьким компаниям и квалифицированным специалистам стать
@@ -114,137 +115,134 @@ window.fbAsyncInit = function () {
     </div>
 </div>
 
-<div class="wrapper pricing">
+<div class="wrapper pricing" itemscope itemprop="mainContentOfPage">
     <section class="main-block">
         <div class="container">
-            <div class="display-flex" itemscope itemtype="https://schema.org/OfferCatalog">
-                <div class="plans" itemprop="itemListElement" itemscope itemtype="https://schema.org/OfferCatalog">
-                    <div class="img-plan" itemprop="itemListElement" itemscope itemtype="https://schema.org/Offer">
-                        <img src="../../images/plan1.jpg" alt="Test Drive" />
-                        <div class="back-color">
-                            <div class="text-plan">
-                                <div itemprop="name" class="text-p">Тест Драйв</div>
-                                <label><span itemprop="priceCurrency" content="USD">$</span>
-                                    <span itemprop="price">20</span> / day</label>
-                            </div>
+            <div class="offers ru">
+                <div class="plans">
+                    <div class="plan"><img src="../../images/plan1.jpg" alt="Test Drive" />
+                        <div class="text-plan">
+                            <div class="text-p">Тест драйв</div>
+                            <label>
+                                <span>$</span>
+                                <span>20 / 24 часа</span>
+                            </label>
                         </div>
                     </div>
-                    <div class="description">
-                        <div class="block-responsive" itemprop="description">
-                            <p>
-                                Станьте частью нашего сообщества ИТ-специалистов.
-                                Наши участники внесли свой вклад в глобальную платформу облачных вычислений,
-                                работая с Fortune 500 компаниями из Европы и США.
-                            </p>
-                            <div><h3>Рабочее Место</h3></div>
-                            <p>
-                                Наши рабочие места спроектированы в лучшем стиле, чтобы обеспечить достойные условия.
-                                Талантливые специалисты заслуживают отдельных привилегий!
-                            </p>
-                            <div><h4>IT Сообщество</h4></div>
-                            <p>
-                                Сообщество позволяет участникам быть конкурентоспособными на мировом рынке
-                                и привлечь крупные проекты.
-                            </p>
-                            <div><h5>Бесплатное Членство</h5></div>
-                            <p>
-                                Основным преимуществом нашего сообщества  является бесплатное членство.
-                                Если участник  выбран для работы над проектом (ами) партнера,
-                                то партнер обеспечивает бесплатное членство для участника.
-                            </p>
-
-                            <div class="btn-center">
-                                <a href="/ru/contact/" class="button">Свяжитесь с нами</a>
-                            </div>
-                        </div>
-                        <div class="clear"></div>
+                    <div class="plans-points">
+                        <ul>
+                            <li><span>Рабочее место <p class="gray-text">команда до 5 человек</p></span></li>
+                            <li><span>Доступны  конференц-залы</span></li>
+                            <li><span>1 тренинг  или мероприятие</span></li>
+                            <li><span>24-часовой доступ</span></li>
+                            <li><span>Кофе, чай, фрукты и печенье</span></li>
+                        </ul>
+                    </div>
+                    <div class="btn-plan-contact">
+                        <a itemprop="url" href="/contact/" class="button">Свяжитесь с нами</a>
                     </div>
                 </div>
-
-                <div class="plans" itemprop="itemListElement" itemscope itemtype="https://schema.org/OfferCatalog">
-                    <div class="img-plan" itemprop="itemListElement" itemscope itemtype="https://schema.org/Offer">
-                        <img src="../../images/plan2.jpg" alt="Individual" />
-                        <div class="back-color">
-                            <div class="text-plan">
-                                <div itemprop="name" class="text-p">Индивидуально</div>
-                                <div class="btn-right">
-                                    <a itemprop="url" href="/ru/tour/" class="button">Забронируй Обход</a>
-                                </div>
-                            </div>
+                <div class="plans">
+                    <div class="plan"><img src="../../images/plan2.jpg" alt="Free Plan" />
+                        <div class="text-plan">
+                            <div class="text-p">Бесплатно</div>
+                            <label>
+                                <span>$</span>
+                                <span>0</span>
+                            </label>
                         </div>
                     </div>
-                    <div class="description">
-                        <div class="block-responsive" itemprop="description">
-                            <p>
-                                Станьте частью нашего сообщества ИТ-специалистов.
-                                Наши участники внесли свой вклад в глобальную платформу облачных вычислений,
-                                работая с Fortune 500 компаниями из Европы и США.
-                            </p>
-                            <div><h3>Рабочее Место</h3></div>
-                            <p>
-                                Наши рабочие места спроектированы в лучшем стиле, чтобы обеспечить достойные условия.
-                                Талантливые специалисты заслуживают отдельных привилегий!
-                            </p>
-                            <div><h4>IT Сообщество</h4></div>
-                            <p>
-                                Сообщество позволяет участникам быть конкурентоспособными на мировом рынке
-                                и привлечь крупные проекты.
-                            </p>
-                            <div><h5>Бесплатное Членство</h5></div>
-                            <p>
-                                Основным преимуществом нашего сообщества  является бесплатное членство.
-                                Если участник  выбран для работы над проектом (ами) партнера,
-                                то партнер обеспечивает бесплатное членство для участника.
-                            </p>
-
-                            <div class="btn-center">
-                                <a itemprop="url" href="/ru/contact/" class="button">Свяжитесь с нами</a>
-                            </div>
+                    <div class="plans-points">
+                        <ul>
+                            <li><span>Фиксированное рабочее место</span></li>
+                            <li><span>Доступны  конференц-залы</span></li>
+                            <li><span>Посещение всех тренингов и мероприятий </span></li>
+                            <li><span>24/7</span></li>
+                            <li><span>Кофе, чай, фрукты и печенье</span></li>
+                            <li><span>Свободное общение с 404 партнерами</span></li>
+                            <li><span>Бесплатные билеты на конференции Cloud Computing</span></li>
+                            <li><span>Сертификаты Cloud Computing</span></li>
+                            <li><span>Пригласи 2 друзей на 1 неделю</span></li>
+                        </ul>
+                        <div class="notes">
+                            <div class="glay-line"></div>
+                            <p class="gray-text">Свободное членство</p>
+                            <p class="gray-text">Самое важное преимущество нашего сообщества - бесплатное членство.
+                                Если участник выбран для работы над проектом (ами) партнера,
+                                партнер оплачивает членские взносы для участника.</p>
                         </div>
-                        <div class="clear"></div>
+                    </div>
+                    <div class="btn-plan-contact">
+                        <a itemprop="url" href="/contact/" class="button">Свяжитесь с нами</a>
                     </div>
                 </div>
-
-                <div class="plans" itemprop="itemListElement" itemscope itemtype="https://schema.org/OfferCatalog">
-                    <div class="img-plan" itemprop="itemListElement" itemscope itemtype="https://schema.org/Offer">
-                        <img src="../../images/plan3.jpg" alt="Business" />
-                        <div class="back-color">
-                            <div class="text-plan">
-                                <div itemprop="name" class="text-p">Бизнес</div>
-                                <div class="btn-right">
-                                    <a itemprop="url" href="/ru/tour/" class="button">Забронируй Обход</a>
-                                </div>
+                <div class="plans">
+                    <div class="plan"><img src="../../images/plan3.jpg" alt="Individual" />
+                        <div class="text-plan">
+                            <div class="text-p">Индивидуально</div>
+                            <div class="btn-plan">
+                                <a itemprop="url" href="/tour/" class="button">Забронируй Обход</a>
                             </div>
                         </div>
                     </div>
-                    <div class="description">
-                        <div class="block-responsive" itemprop="description">
-                            <p>
-                                Станьте частью нашего сообщества ИТ-специалистов.
-                                Наши участники внесли свой вклад в глобальную платформу облачных вычислений,
-                                работая с Fortune 500 компаниями из Европы и США.
-                            </p>
-                            <div><h3>Рабочее Место</h3></div>
-                            <p>
-                                Наши рабочие места спроектированы в лучшем стиле, чтобы обеспечить достойные условия.
-                                Талантливые специалисты заслуживают отдельных привилегий!
-                            </p>
-                            <div><h4>IT Сообщество</h4></div>
-                            <p>
-                                Сообщество позволяет участникам быть конкурентоспособными на мировом рынке
-                                и привлечь крупные проекты.
-                            </p>
-                            <div><h5>Бесплатное Членство</h5></div>
-                            <p>
-                                Основным преимуществом нашего сообщества  является бесплатное членство.
-                                Если участник  выбран для работы над проектом (ами) партнера,
-                                то партнер обеспечивает бесплатное членство для участника.
-                            </p>
-                            <div class="btn-center">
-                                <a itemprop="url" href="/ru/contact/" class="button">Свяжитесь с нами</a>
+                        <div class="plans-points">
+                            <ul>
+                                <li><span>Фиксированное рабочее место</span></li>
+                                <li><span>Доступны  конференц-залы</span></li>
+                                <li><span>Посещение всех тренингов и мероприятий</span></li>
+                                <li><span>24/7</span></li>
+                                <li><span>Кофе, чай, фрукты и печенье</span></li>
+                                <li><span>Свободное общение с 404 партнерами</span></li>
+                                <li><span>Бесплатные билеты на конференции Cloud Computing</span></li>
+                                <li><span>Сертификаты Cloud Computing</span></li>
+                                <li><span>Пригласи 2 друзей на 1 неделю</span></li>
+                            </ul>
+                            <div class="notes">
+                                <div class="glay-line"></div>
+                                <p class="gray-text">Обратите внимание</p>
+                                <p class="gray-text">
+                                    Цена зависит от личных навыков и вашего опыта.
+                                    Нажмите «ПОЛУЧИТЬ ЦЕНУ» и заполните форму, чтобы получить личное предложение.
+                                </p>
                             </div>
                         </div>
-                        <div class="clear"></div>
+                        <div class="btn-plan-contact">
+                            <a itemprop="url" href="/contact/" class="button">Получи цену</a>
+                        </div>
+                </div>
+                <div class="plans">
+                    <div class="plan"><img src="../../images/plan4.jpg" alt="Business" />
+                        <div class="text-plan">
+                            <div class="text-p">Бизнес</div>
+                            <div class="btn-plan">
+                                <a itemprop="url" href="/tour/" class="button">Забронируй Обход</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="plans-points">
+                        <ul>
+                            <li><span>Фиксированное рабочее место</span></li>
+                            <li><span>Доступны  конференц-залы</span></li>
+                            <li><span>Посещение всех тренингов и мероприятий</span></li>
+                            <li><span>24/7</span></li>
+                            <li><span>Кофе, чай, фрукты и печенье</span></li>
+                            <li><span>Свободное общение с 404 партнерами</span></li>
+                            <li><span>Бесплатные билеты на конференции Cloud Computing</span></li>
+                            <li><span>Сертификаты Cloud Computing</span></li>
+                            <li><span>Бухгалтер</span></li>
+                            <li><span>Консультация юриста</span></li>
+                        </ul>
+                        <div class="notes">
+                            <div class="glay-line"></div>
+                            <p class="gray-text last-c">Обратите внимание</p>
+                            <p class="gray-text">
+                                Цена зависит от личных способностей, опыта и количества членов вашей команды.
+                                Нажмите «ПОЛУЧИТЬ ЦЕНУ» и заполните форму, чтобы получить личное коммерческое предложение.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="btn-plan-contact">
+                        <a itemprop="url" href="/contact/" class="button">Получи цену</a>
                     </div>
                 </div>
             </div>
@@ -252,47 +250,233 @@ window.fbAsyncInit = function () {
     </section>
 
     <section class="gallery pricing-gallery">
-        <div class="gallery-line">
+        <div class="gallery-line footer-carousel" itemscope itemtype="https://schema.org/UserComments">
             <div class="pic">
-                <div class="img1 img-value img-hover">
+                <div class="hidden-avatar">
                     <div class="we-love">
+                        <div class="comment">
+                            <div class="quote">
+                                <i class="mdi-format-quote-open mdi-set"></i>
+                            </div>
+                            <span itemprop="commentText">404.md мотивирует меня</span>
+                        </div>
                         <div class="avatar">
                             <img src="../../images/avatar-vlad1.png" alt="Влад У.">
                         </div>
-                        <div class="comment" itemprop="creator" itemscope itemtype="https://schema.org/UserComments">
-                            <span class="avatar-comment" itemprop="name">Влад У.</span>
-                            <span itemprop="commentText">"404.md мотивирует меня"</span>
-                        </div>
+                        <span class="avatar-comment" itemprop="name">Влад У.</span>
                     </div>
+                </div>
+                <div class="image-members">
+                    <img src="../../images/gallery-1.jpg">
                 </div>
             </div>
             <div class="pic">
-                <div class="img2 img-value img-hover">
+                <div class="hidden-avatar">
                     <div class="we-love">
+                        <div class="comment">
+                            <div class="quote">
+                                <i class="mdi-format-quote-open mdi-set"></i>
+                            </div>
+                            <span itemprop="commentText">404.md вдохновляет меня делать добро</span>
+                        </div>
                         <div class="avatar">
-                            <img src="../../images/avatar-irina2.png" alt="Ирина Т.">
+                            <img src="../../images/avatar-eugen1.png" alt="Евгений И." />
                         </div>
-                        <div class="comment" itemprop="creator" itemscope itemtype="https://schema.org/UserComments">
-                            <span class="avatar-comment" itemprop="name">Ирина Т.</span>
-                            <span itemprop="commentText">"404.md открывает дверь к успеху"</span>
-                        </div>
+                        <span class="avatar-comment" itemprop="name">Евгений И.</span>
                     </div>
+                </div>
+                <div class="image-members">
+                    <img src="../../images/gallery-2.jpg">
                 </div>
             </div>
             <div class="pic">
-                <div class="img3 img-value"></div>
+                <div class="hidden-avatar">
+                    <div class="we-love">
+                        <div class="comment">
+                            <div class="quote">
+                                <i class="mdi-format-quote-open mdi-set"></i>
+                            </div>
+                            <span itemprop="commentText">Здесь твоя социальная сеть реальна</span>
+                        </div>
+                        <div class="avatar">
+                            <img src="../../images/avatar-irina1.png" alt="Ирина К.">
+                        </div>
+                        <span class="avatar-comment" itemprop="name">Ирина К.</span>
+                    </div>
+                </div>
+                <div class="image-members">
+                    <img src="../../images/gallery-3.jpg">
+                </div>
             </div>
             <div class="pic">
-                <div class="img4 img-value img-hover">
+                <div class="hidden-avatar">
                     <div class="we-love">
+                        <div class="comment">
+                            <div class="quote">
+                                <i class="mdi-format-quote-open mdi-set"></i>
+                            </div>
+                            <span itemprop="commentText">Я рад быть частью сообщества 404</span>
+                        </div>
+                        <div class="avatar">
+                            <img src="../../images/avatar-alex1.png" alt="Алекс К.">
+                        </div>
+                        <span class="avatar-comment" itemprop="name">Алекс К.</span>
+                    </div>
+                </div>
+                <div class="image-members">
+                    <img src="../../images/gallery-4.jpg">
+                </div>
+            </div>
+            <div class="pic">
+                <div class="hidden-avatar">
+                    <div class="we-love">
+                        <div class="comment">
+                            <div class="quote">
+                                <i class="mdi-format-quote-open mdi-set"></i>
+                            </div>
+                            <span itemprop="commentText">404 - лучшее место для работы с профессионалами</span>
+                        </div>
                         <div class="avatar">
                             <img src="../../images/avatar-cristi1.png" alt="Кристи К.">
                         </div>
-                        <div class="comment" itemprop="creator" itemscope itemtype="https://schema.org/UserComments">
-                            <span class="avatar-comment" itemprop="name">Кристи К.</span>
-                            <span itemprop="commentText">"404 Лучшее место для работы с профессионалами"</span>
-                        </div>
+                        <span class="avatar-comment" itemprop="name">Кристи К.</span>
                     </div>
+                </div>
+                <div class="image-members">
+                    <img src="../../images/gallery-5.jpg">
+                </div>
+            </div>
+            <div class="pic">
+                <div class="hidden-avatar">
+                    <div class="we-love">
+                        <div class="comment">
+                            <div class="quote">
+                                <i class="mdi-format-quote-open mdi-set"></i>
+                            </div>
+                            <span itemprop="commentText">Уютное место и приятная атмосфера</span>
+                        </div>
+                        <div class="avatar">
+                            <img src="../../images/avatar-alex2.png" alt="Aлександр В.">
+                        </div>
+                        <span class="avatar-comment" itemprop="name">Aлександр В.</span>
+                    </div>
+                </div>
+                <div class="image-members">
+                    <img src="../../images/gallery-6.jpg">
+                </div>
+            </div>
+            <div class="pic">
+                <div class="hidden-avatar">
+                    <div class="we-love">
+                        <div class="comment">
+                            <div class="quote">
+                                <i class="mdi-format-quote-open mdi-set"></i>
+                            </div>
+                            <span itemprop="commentText">Я рад быть частью сообшества 404</span>
+                        </div>
+                        <div class="avatar">
+                            <img src="../../images/avatar-marcel1.png" alt="Марчел Г.">
+                        </div>
+                        <span class="avatar-comment" itemprop="name">Марчел Г.</span>
+                    </div>
+                </div>
+                <div class="image-members">
+                    <img src="../../images/gallery-7.jpg">
+                </div>
+            </div>
+            <div class="pic">
+                <div class="hidden-avatar">
+                    <div class="we-love">
+                        <div class="comment">
+                            <div class="quote">
+                                <i class="mdi-format-quote-open mdi-set"></i>
+                            </div>
+                            <span itemprop="commentText">404 вдохновляет меня на работу</span>
+                        </div>
+                        <div class="avatar">
+                            <img src="../../images/avatar-grigore1.png" alt="Григорий M.">
+                        </div>
+                        <span class="avatar-comment" itemprop="name">Григорий M.</span>
+                    </div>
+                </div>
+                <div class="image-members">
+                    <img src="../../images/gallery-8.jpg">
+                </div>
+            </div>
+            <div class="pic">
+                <div class="hidden-avatar">
+                    <div class="we-love">
+                        <div class="comment">
+                            <div class="quote">
+                                <i class="mdi-format-quote-open mdi-set"></i>
+                            </div>
+                            <span itemprop="commentText">404 мотивирует меня каждый день</span>
+                        </div>
+                        <div class="avatar">
+                            <img src="../../images/avatar-dan1.png" alt="Дан Б.">
+                        </div>
+                        <span class="avatar-comment" itemprop="name">Дан Б.</span>
+                    </div>
+                </div>
+                <div class="image-members">
+                    <img src="../../images/gallery-9.jpg">
+                </div>
+            </div>
+            <div class="pic">
+                <div class="hidden-avatar">
+                    <div class="we-love">
+                        <div class="comment">
+                            <div class="quote">
+                                <i class="mdi-format-quote-open mdi-set"></i>
+                            </div>
+                            <span itemprop="commentText">404 - это идеальное место, чтобы преуспеть</span>
+                        </div>
+                        <div class="avatar">
+                            <img src="../../images/avatar-dima1.png" alt="Дмитрий Д.">
+                        </div>
+                        <span class="avatar-comment" itemprop="name">Дмитрий Д.</span>
+                    </div>
+                </div>
+                <div class="image-members">
+                    <img src="../../images/gallery-10.jpg">
+                </div>
+            </div>
+            <div class="pic">
+                <div class="hidden-avatar">
+                    <div class="we-love">
+                        <div class="comment">
+                            <div class="quote">
+                                <i class="mdi-format-quote-open mdi-set"></i>
+                            </div>
+                            <span itemprop="commentText">404 - идеальный путь к достижениям</span>
+                        </div>
+                        <div class="avatar">
+                            <img src="../../images/avatar-tanea1.png" alt="Татьяна С.">
+                        </div>
+                        <span class="avatar-comment" itemprop="name">Татьяна С.</span>
+                    </div>
+                </div>
+                <div class="image-members">
+                    <img src="../../images/gallery-11.jpg">
+                </div>
+            </div>
+            <div class="pic">
+                <div class="hidden-avatar">
+                    <div class="we-love">
+                        <div class="comment">
+                            <div class="quote">
+                                <i class="mdi-format-quote-open mdi-set"></i>
+                            </div>
+                            <span itemprop="commentText">Тут чувствуешь себя как дома</span>
+                        </div>
+                        <div class="avatar">
+                            <img src="../../images/avatar-dima2.png" alt="Дмитрий С.">
+                        </div>
+                        <span class="avatar-comment" itemprop="name">Дмитрий С.</span>
+                    </div>
+                </div>
+                <div class="image-members">
+                    <img src="../../images/gallery-12.jpg">
                 </div>
             </div>
         </div>
@@ -322,78 +506,73 @@ window.fbAsyncInit = function () {
 </div>
 
 <footer>
-<div class="contacts">
-    <div class="container get-in-touch">
-        <div class="block-1"><img src="../../images/logo-below-white.svg" alt="Logo 404 Not Found" /></div>
-        <div class="block-2" itemscope itemtype="https://schema.org/AboutPage">
-            <h4 class="connect-us">О нас</h4>
-             <span itemprop="description">404 Not Found это сообщество для IT-бизнеса и IT-специалистов из Молдовы.
-            Мы хотим дать возможность маленьким компаниям и квалифицированным специалистам стать
-            конкурентоспособными на мировом рынке. Члены нашего сообщества гордятся тем что работают
-            с Fortune 500 клиентами из Европы и США.
-             </span>
-        </div>
-        <div class="block-3" itemprop="address" itemscope itemtype="https://schema.org/PostalAddress">
-            <h4 class="connect-us">Наши контакты</h4>
-            <div class="one-line">
-                <i class="fa fa-envelope" aria-hidden="true"></i>
-                <a href="mailto:info@404.md" itemprop="email">info@404.md</a>
+    <div class="contacts">
+        <div class="container get-in-touch flex-row">
+            <div class="block-1 flex-item-4"><img src="../../images/logo-right-black.svg" alt="Logo 404 Not Found" /></div>
+            <div class="block-2 flex-item-4" itemscope itemtype="https://schema.org/Organization">
+                <h4 class="connect-us">Свяжитесь с нами</h4>
+                <div class="one-line">
+                    <a href="https://www.facebook.com/404moldova" itemprop="sameAs"><i class="mdi-facebook mdi-set" aria-hidden="true"></i></a>
+                    <a href="https://instagram.com/404_moldova" itemprop="sameAs"><i class="mdi-instagram mdi-set"></i></a>
+                    <a href="https://twitter.com/404moldova" itemprop="sameAs"><i class="mdi-twitter mdi-set"></i></a>
+                    <a href="https://www.linkedin.com/company/404-moldova" itemprop="sameAs"><i class="mdi-linkedin mdi-set"></i></a>
+                    <a href="https://www.youtube.com/channel/UCXY-0ZUU-mvxbzWuLGZp5LQ" itemprop="sameAs"><i class="mdi-youtube-play mdi-set"></i></a>
+                    <a href="https://www.messenger.com/t/404Moldova/" itemprop="sameAs"><i class="mdi-facebook-messenger mdi-set"></i></a>
+                </div>
             </div>
-            <div class="one-line">
-                <i class="fa fa-phone" aria-hidden="true"></i>
-                <a href="tel:+37322808291">(+373) 22 808 291</a>
-            </div>
-            <div class="one-line">
-                <i class="fa fa-map-marker" aria-hidden="true"></i>
-                <a itemprop="streetAddress" href="https://goo.gl/maps/GvA1ChgPJ4U2"><span itemprop="streetAddress">бул. Дачия #23, эт. 3</span>
-                    <span class="one-line new-line" itemprop="addressLocality">Кишинев, Молдова</span></a>
-            </div>
-        </div>
-        <div class="block-4 ru-vertion-footer" itemscope itemtype="https://schema.org/Organization">
-            <h4 class="connect-us">Свяжитесь с нами</h4>
-            <div class="one-line display-flex">
-                <a href="https://www.facebook.com/404moldova" itemprop="sameAs"><i class="fa fa-facebook" aria-hidden="true"></i></a>
-                <a href="https://twitter.com/404moldova" itemprop="sameAs"><i class="fa fa-twitter" aria-hidden="true"></i></a>
-                <a href="https://www.linkedin.com/company/404-moldova" itemprop="sameAs"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
-                <a href="https://www.pinterest.com/404moldova/" itemprop="sameAs"><i class="fa fa-pinterest-p" aria-hidden="true"></i></a>
-                <a href="https://pycoding.slack.com/messages/general/" itemprop="sameAs"><i class="fa fa-slack" aria-hidden="true"></i></a>
-            </div>
-            <div class="one-line display-flex">
-                <a href="https://ok.ru/md404" itemprop="sameAs"><i class="fa fa-odnoklassniki" aria-hidden="true"></i></a>
-                <a href="https://vk.com/md404" itemprop="sameAs"><i class="fa fa-vk" aria-hidden="true"></i></a>
-                <a href="https://instagram.com/404_moldova" itemprop="sameAs"><i class="fa fa-instagram" aria-hidden="true"></i></a>
-                <a href="https://github.com/404md" itemprop="sameAs"><i class="fa fa-github" aria-hidden="true"></i></a>
-                <a href="https://plus.google.com/u/0/107643683758390437710" itemprop="sameAs"><i class="fa fa-google-plus" aria-hidden="true"></i></a>
+            <div class="block-3 flex-item-4" itemscope itemtype="https://schema.org/PostalAddress">
+                <div class="right-side">
+                    <h4 class="connect-us">Наши контакты</h4>
+                    <div class="one-line">
+                        <i class="mdi-email-outline mdi-set"></i>
+                        <a class="color-link" href="mailto:info@404.md" itemprop="email">info@404.md</a>
+                    </div>
+                    <div class="one-line">
+                        <i class="mdi-phone mdi-set"></i>
+                        <div class="phones">
+                            <a class="color-link" href="tel:+37322808291">(+373) 22 808 291</a>
+                            <a class="color-link" href="tel:+37360999007">(+373) 60 999 007</a>
+                        </div>
+                    </div>
+                    <div class="one-line">
+                        <i class="mdi-map-marker mdi-set"></i>
+                        <a class="color-link" itemprop="streetAddress" href="https://goo.gl/maps/GvA1ChgPJ4U2"><span itemprop="streetAddress">бул. Дачия #23, эт. 3</span>
+                            <span class="one-line new-line" itemprop="addressLocality">Кишинев, Молдова</span></a>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
-</div>
 
-<div class="footer-black">
-    <div class="container">
-        <div class="left-footer ru-text">
-            2017 &copy; PyCoding SRL
-            <a href="/ru/terms/">Условия Использования</a>
+    <div class="footer-black ru">
+        <div class="container">
+            <div class="left-footer ru-text">
+                2017 &copy; PyCoding SRL
+                <a href="/terms/">Условия Использования</a>
+                <a class="language" href="/coworking/"><img src="../../images/flag-us.png"></a>
+                <a class="language" href="/ro/coworking/"><img src="../../images/flag-ro.png"></a>
+            </div>
+            <div class="right-footer">
+                <ul class="">
+                    <li><a href="/ru/coworking/">Коворкинг</a></li>
+                    <li><a href="/ru/members/">Участники</a></li>
+                    <li><a href="/ru/media/">Пресса</a></li>
+                    <li><a href="/ru/gallery/">Галерея</a></li>
+                    <li><a href="/ru/contact/">Контакты</a></li>
+                    <li><a href="https://blog.404.md">Блог</a></li>
+                    <li><a href="/ru/tour/">Забронируй Обход</a></li>
+                </ul>
+            </div>
+            <div class="clear"></div>
         </div>
-        <div class="right-footer">
-            <ul class="">
-                <li><a href="/ru/amenities/">Удобства</a></li>
-                <li><a href="/ru/pricing/">Цены</a></li>
-                <li><a href="/ru/members/">Участники</a></li>
-                <li><a href="/ru/tour/">Забронируй Обход</a></li>
-                <li><a href="/ru/media/">Пресса</a></li>
-                <li><a href="/ru/gallery/">Галерея</a></li>
-                <li><a href="/ru/contact/">Контакты</a></li>
-                <li><a href="https://blog.404.md">Блог</a></li>
-            </ul>
-        </div>
-        <div class="clear"></div>
     </div>
-</div>
 </footer>
 
 <script type="text/javascript" src="../../js/jquery-1.11.0.min.js"></script>
+<script type="text/javascript" src="../../js/slick-1.6.0.min.js"></script>
+<script type="text/javascript" src="../../js/footer-carousel.js"></script>
 <script type="text/javascript" src="../../js/main.min.js"></script>
+<script type="text/javascript" src="../../js/coworking.js"></script>
 
 </body>
 </html>

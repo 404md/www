@@ -12,9 +12,30 @@ function myMap() {
     var marker = new google.maps.Marker({
         position: myLatLng,
         map: map,
+        scrollwheel: false,
         title: 'Olimpiada'
     });
 }
+
+function myEvent() {
+    var myLatLng = {lat: 46.9869149, lng: 28.8577533};
+
+    var map2 = new google.maps.Map(document.getElementById('map2'), {
+        zoom: 18,
+        backgroundColor:"#eeeeee",
+        scrollwheel: false,
+        center: myLatLng
+    });
+
+    var marker = new google.maps.Marker({
+        position: myLatLng,
+        map: map2,
+        title: 'Olimpiada'
+
+    });
+
+}
+
 
 jQuery(function($) {
     'use strict';
@@ -128,7 +149,7 @@ jQuery(function($) {
         $('.image').addClass('video');
         $('.media-image').hide();
         $('.show-video').removeClass('hidden');
-        $('#video').attr('src', '/videos/agora.mp4');
+        $('#video').attr('src', 'https://www.youtube.com/embed/ZGbORDi_UPA?rel=0&amp;controls=0&amp;showinfo=0');
     });
 
     $('.btn-close').on('click', function(){
@@ -136,6 +157,26 @@ jQuery(function($) {
         $('.image').removeClass('video');
         $('.media-image').fadeIn("slow");
         $('#video').removeAttr('src');
-    })
+    });
 
+    $('.getprice-button').on('click',function(){
+        $('.overlay').addClass('pop-up-visible');
+    });
+
+    var BtnClose = $('.close');
+    BtnClose.on('click',function(){
+        $('.overlay').removeClass('pop-up-visible');
+    });
+
+    $('.getprice-button1').on('click',function(){
+        $('.overlay1').addClass('pop-up-visible');
+    });
+
+    BtnClose.on('click',function(){
+        $('.overlay1').removeClass('pop-up-visible');
+    });
+
+    $(':required, .required, .non-required').on('blur keydown', function() {
+        $(this)[ $(this).val() ? 'addClass' : 'removeClass' ]('touched');
+    });
 });

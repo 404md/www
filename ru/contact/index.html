@@ -18,7 +18,10 @@
 <meta name="twitter:url" content="https://www.404.md/ru/contact/"/>
 <link rel="icon" href="/favicon.png" type="image/png"/>
 <link rel="stylesheet" href="../../css/index.min.css"/>
+<link rel="stylesheet" href="../../css/slick-1.6.0.min.css"/>
+<link rel="stylesheet" href="../../css/slick-theme-1.6.0.min.css"/>
 <link rel="stylesheet" href="../../css/font-awesome-4.7.0.min.css"/>
+<link rel="stylesheet" href="../../css/materialdesignicons.css"/>
 <!-- Google Tag Manager -->
 <script>
 (function (w, d, s, l, i) {
@@ -62,7 +65,7 @@ window.fbAsyncInit = function () {
 <header class="main-nav">
     <div class="container">
         <div class="logo" itemscope itemtype="https://schema.org/Organization">
-            <a href="https://www.404.md" itemprop="url">
+            <a href="/ru/" itemprop="url">
                 <img itemprop="logo" class="img-logo" src="../../images/logo-right-black.svg" alt="Logo 404 Not Found" />
                 <meta itemprop="url" content="https://www.404.md/images/logo-right-black.svg">
             </a>
@@ -80,31 +83,29 @@ window.fbAsyncInit = function () {
                 </div>
             </div>
             <ul class="navt" id="myTopnav">
-                <li><a class="link" href="/ru/amenities/">Удобства</a></li>
-                <li><a class="link" href="/ru/pricing/">Цены</a></li>
+                <li><a class="link" href="/ru/coworking/">Коворкинг</a></li>
                 <li><a class="link" href="/ru/members/">Участники</a></li>
-                <li><a class="link" href="/ru/tour/">Забронируй Обход</a></li>
                 <li><a class="link" href="/ru/media/">Пресса</a></li>
                 <li><a class="link" href="/ru/gallery/">Галерея</a></li>
                 <li><a class="link active" href="/ru/contact/">Контакты</a></li>
-                <li><a class="last-line" href="https://blog.404.md"><span class="blog">Блог</span></a></li>
+                <li><a class="link" href="https://blog.404.md">Блог</a></li>
+                <li><a class="last-line" href="/ru/tour/"><span class="blog">Забронируй Обход</span></a></li>
             </ul>
-            <div class="language">
-                <a href="/contact/"><img src="../../images/flag-us.png"> en</a>
-                <a href="/ro/contact/"><img src="../../images/flag-ro.png"> ro</a>
-            </div>
         </div>
         <div class="clear"></div>
     </div>
 </header>
 
 <section class="image">
-    <div class="image-contact"></div>
+    <div class="image-contact page">
+        <div class="text-page-name">
+            <h1 class="page-name">Свяжитесь с нами</h1>
+        </div>
+    </div>
 </section>
 
 <div class="container new-page">
     <div class="pages">
-        <h1 class="page-name">Свяжитесь с нами</h1>
         <span class="text-page">
             404 Not Found это сообщество для IT-бизнеса и IT-специалистов из Молдовы.
             Мы хотим дать возможность маленьким компаниям и квалифицированным специалистам стать
@@ -114,7 +115,7 @@ window.fbAsyncInit = function () {
     </div>
 </div>
 
-<div class="wrapper contact">
+<div class="wrapper contact" itemscope itemprop="mainContentOfPage">
     <section class="main-block">
         <div class="container">
             <div id="map" class="map-style"></div>
@@ -122,19 +123,19 @@ window.fbAsyncInit = function () {
                 <form class="hole-form" method="post">
                    <div class="heading-contact">Свяжитесь с нами</div>
                     <div>
-                        <label for="name">Имя</label>
+                        <label class="input-name" for="name">Имя</label>
                         <input class="input-style" type="text" id="name" name="user_name" placeholder="Влад Урсу" />
                     </div>
                     <div>
-                        <label for="phone">Телефон</label>
+                        <label class="input-name" for="phone">Телефон</label>
                         <input class="input-style" type="tel" id="phone" name="user_phone" placeholder="022 999 999" />
                     </div>
                     <div>
-                        <label for="mail">Почта</label>
+                        <label class="input-name" for="mail">Почта</label>
                         <input class="input-style" type="email" id="mail" name="user_mail" placeholder="vlad.ursu@email.com" />
                     </div>
                     <div>
-                        <label for="msg">Сообщение</label>
+                        <label class="input-name" for="msg">Сообщение</label>
                         <textarea class="text-style" id="msg" name="user_message" placeholder="Пожалуйста оставьте ваше сообщение" rows="4"></textarea>
                     </div>
                     <div class="recaptcha-center">
@@ -148,47 +149,233 @@ window.fbAsyncInit = function () {
     </section>
 
     <section class="gallery connect-us">
-        <div class="gallery-line">
+        <div class="gallery-line footer-carousel" itemscope itemtype="https://schema.org/UserComments">
             <div class="pic">
-                <div class="img1 img-value img-hover">
+                <div class="hidden-avatar">
                     <div class="we-love">
+                        <div class="comment">
+                            <div class="quote">
+                                <i class="mdi-format-quote-open mdi-set"></i>
+                            </div>
+                            <span itemprop="commentText">404.md мотивирует меня</span>
+                        </div>
                         <div class="avatar">
                             <img src="../../images/avatar-vlad1.png" alt="Влад У.">
                         </div>
-                        <div class="comment" itemscope itemtype="https://schema.org/UserComments">
-                            <span class="avatar-comment" itemprop="name">Влад У.</span>
-                            <span itemprop="commentText">"404.md мотивирует меня"</span>
-                        </div>
+                        <span class="avatar-comment" itemprop="name">Влад У.</span>
                     </div>
+                </div>
+                <div class="image-members">
+                    <img src="../../images/gallery-1.jpg">
                 </div>
             </div>
             <div class="pic">
-                <div class="img2 img-value img-hover">
+                <div class="hidden-avatar">
                     <div class="we-love">
+                        <div class="comment">
+                            <div class="quote">
+                                <i class="mdi-format-quote-open mdi-set"></i>
+                            </div>
+                            <span itemprop="commentText">404.md вдохновляет меня делать добро</span>
+                        </div>
+                        <div class="avatar">
+                            <img src="../../images/avatar-eugen1.png" alt="Евгений И." />
+                        </div>
+                        <span class="avatar-comment" itemprop="name">Евгений И.</span>
+                    </div>
+                </div>
+                <div class="image-members">
+                    <img src="../../images/gallery-2.jpg">
+                </div>
+            </div>
+            <div class="pic">
+                <div class="hidden-avatar">
+                    <div class="we-love">
+                        <div class="comment">
+                            <div class="quote">
+                                <i class="mdi-format-quote-open mdi-set"></i>
+                            </div>
+                            <span itemprop="commentText">Здесь твоя социальная сеть реальна</span>
+                        </div>
+                        <div class="avatar">
+                            <img src="../../images/avatar-irina1.png" alt="Ирина К.">
+                        </div>
+                        <span class="avatar-comment" itemprop="name">Ирина К.</span>
+                    </div>
+                </div>
+                <div class="image-members">
+                    <img src="../../images/gallery-3.jpg">
+                </div>
+            </div>
+            <div class="pic">
+                <div class="hidden-avatar">
+                    <div class="we-love">
+                        <div class="comment">
+                            <div class="quote">
+                                <i class="mdi-format-quote-open mdi-set"></i>
+                            </div>
+                            <span itemprop="commentText">Я рад быть частью сообщества 404</span>
+                        </div>
+                        <div class="avatar">
+                            <img src="../../images/avatar-alex1.png" alt="Алекс К.">
+                        </div>
+                        <span class="avatar-comment" itemprop="name">Алекс К.</span>
+                    </div>
+                </div>
+                <div class="image-members">
+                    <img src="../../images/gallery-4.jpg">
+                </div>
+            </div>
+            <div class="pic">
+                <div class="hidden-avatar">
+                    <div class="we-love">
+                        <div class="comment">
+                            <div class="quote">
+                                <i class="mdi-format-quote-open mdi-set"></i>
+                            </div>
+                            <span itemprop="commentText">404 - лучшее место для работы с профессионалами</span>
+                        </div>
                         <div class="avatar">
                             <img src="../../images/avatar-cristi1.png" alt="Кристи К.">
                         </div>
-                        <div class="comment" itemscope itemtype="https://schema.org/UserComments">
-                            <span class="avatar-comment" itemprop="name">Кристи К.</span>
-                            <span itemprop="commentText">"404 Лучшее место для работы с профессионалами"</span>
-                        </div>
+                        <span class="avatar-comment" itemprop="name">Кристи К.</span>
                     </div>
+                </div>
+                <div class="image-members">
+                    <img src="../../images/gallery-5.jpg">
                 </div>
             </div>
             <div class="pic">
-                <div class="img3 img-value"></div>
+                <div class="hidden-avatar">
+                    <div class="we-love">
+                        <div class="comment">
+                            <div class="quote">
+                                <i class="mdi-format-quote-open mdi-set"></i>
+                            </div>
+                            <span itemprop="commentText">Уютное место и приятная атмосфера</span>
+                        </div>
+                        <div class="avatar">
+                            <img src="../../images/avatar-alex2.png" alt="Aлександр В.">
+                        </div>
+                        <span class="avatar-comment" itemprop="name">Aлександр В.</span>
+                    </div>
+                </div>
+                <div class="image-members">
+                    <img src="../../images/gallery-6.jpg">
+                </div>
             </div>
             <div class="pic">
-                <div class="img4 img-value img-hover">
+                <div class="hidden-avatar">
                     <div class="we-love">
+                        <div class="comment">
+                            <div class="quote">
+                                <i class="mdi-format-quote-open mdi-set"></i>
+                            </div>
+                            <span itemprop="commentText">Я рад быть частью сообшества 404</span>
+                        </div>
                         <div class="avatar">
-                            <img src="../../images/avatar-eugen1.png" alt="Eugen I." />
+                            <img src="../../images/avatar-marcel1.png" alt="Марчел Г.">
                         </div>
-                        <div class="comment" itemscope itemtype="https://schema.org/UserComments">
-                            <span class="avatar-comment" itemprop="name">Евгений И.</span>
-                            <span itemprop="commentText">"404.md вдохновляет меня делать добро"</span>
-                        </div>
+                        <span class="avatar-comment" itemprop="name">Марчел Г.</span>
                     </div>
+                </div>
+                <div class="image-members">
+                    <img src="../../images/gallery-7.jpg">
+                </div>
+            </div>
+            <div class="pic">
+                <div class="hidden-avatar">
+                    <div class="we-love">
+                        <div class="comment">
+                            <div class="quote">
+                                <i class="mdi-format-quote-open mdi-set"></i>
+                            </div>
+                            <span itemprop="commentText">404 вдохновляет меня на работу</span>
+                        </div>
+                        <div class="avatar">
+                            <img src="../../images/avatar-grigore1.png" alt="Григорий M.">
+                        </div>
+                        <span class="avatar-comment" itemprop="name">Григорий M.</span>
+                    </div>
+                </div>
+                <div class="image-members">
+                    <img src="../../images/gallery-8.jpg">
+                </div>
+            </div>
+            <div class="pic">
+                <div class="hidden-avatar">
+                    <div class="we-love">
+                        <div class="comment">
+                            <div class="quote">
+                                <i class="mdi-format-quote-open mdi-set"></i>
+                            </div>
+                            <span itemprop="commentText">404 мотивирует меня каждый день</span>
+                        </div>
+                        <div class="avatar">
+                            <img src="../../images/avatar-dan1.png" alt="Дан Б.">
+                        </div>
+                        <span class="avatar-comment" itemprop="name">Дан Б.</span>
+                    </div>
+                </div>
+                <div class="image-members">
+                    <img src="../../images/gallery-9.jpg">
+                </div>
+            </div>
+            <div class="pic">
+                <div class="hidden-avatar">
+                    <div class="we-love">
+                        <div class="comment">
+                            <div class="quote">
+                                <i class="mdi-format-quote-open mdi-set"></i>
+                            </div>
+                            <span itemprop="commentText">404 - это идеальное место, чтобы преуспеть</span>
+                        </div>
+                        <div class="avatar">
+                            <img src="../../images/avatar-dima1.png" alt="Дмитрий Д.">
+                        </div>
+                        <span class="avatar-comment" itemprop="name">Дмитрий Д.</span>
+                    </div>
+                </div>
+                <div class="image-members">
+                    <img src="../../images/gallery-10.jpg">
+                </div>
+            </div>
+            <div class="pic">
+                <div class="hidden-avatar">
+                    <div class="we-love">
+                        <div class="comment">
+                            <div class="quote">
+                                <i class="mdi-format-quote-open mdi-set"></i>
+                            </div>
+                            <span itemprop="commentText">404 - идеальный путь к достижениям</span>
+                        </div>
+                        <div class="avatar">
+                            <img src="../../images/avatar-tanea1.png" alt="Татьяна С.">
+                        </div>
+                        <span class="avatar-comment" itemprop="name">Татьяна С.</span>
+                    </div>
+                </div>
+                <div class="image-members">
+                    <img src="../../images/gallery-11.jpg">
+                </div>
+            </div>
+            <div class="pic">
+                <div class="hidden-avatar">
+                    <div class="we-love">
+                        <div class="comment">
+                            <div class="quote">
+                                <i class="mdi-format-quote-open mdi-set"></i>
+                            </div>
+                            <span itemprop="commentText">Тут чувствуешь себя как дома</span>
+                        </div>
+                        <div class="avatar">
+                            <img src="../../images/avatar-dima2.png" alt="Дмитрий С.">
+                        </div>
+                        <span class="avatar-comment" itemprop="name">Дмитрий С.</span>
+                    </div>
+                </div>
+                <div class="image-members">
+                    <img src="../../images/gallery-12.jpg">
                 </div>
             </div>
         </div>
@@ -218,78 +405,72 @@ window.fbAsyncInit = function () {
 </div>
 
 <footer>
-<div class="contacts">
-    <div class="container get-in-touch">
-        <div class="block-1"><img src="../../images/logo-below-white.svg" alt="Logo 404 Not Found" /></div>
-        <div class="block-2" itemscope itemtype="https://schema.org/AboutPage">
-            <h4 class="connect-us">О нас</h4>
-            <span itemprop="description">404 Not Found это сообщество для IT-бизнеса и IT-специалистов из Молдовы.
-            Мы хотим дать возможность маленьким компаниям и квалифицированным специалистам стать
-            конкурентоспособными на мировом рынке. Члены нашего сообщества гордятся тем что работают
-            с Fortune 500 клиентами из Европы и США.
-            </span>
-        </div>
-        <div class="block-3" itemprop="address" itemscope itemtype="https://schema.org/PostalAddress">
-            <h4 class="connect-us">Наши контакты</h4>
-            <div class="one-line">
-                <i class="fa fa-envelope" aria-hidden="true"></i>
-                <a href="mailto:info@404.md" itemprop="email">info@404.md</a>
+    <div class="contacts">
+        <div class="container get-in-touch flex-row">
+            <div class="block-1 flex-item-4"><img src="../../images/logo-right-black.svg" alt="Logo 404 Not Found" /></div>
+            <div class="block-2 flex-item-4" itemscope itemtype="https://schema.org/Organization">
+                <h4 class="connect-us">Свяжитесь с нами</h4>
+                <div class="one-line">
+                    <a href="https://www.facebook.com/404moldova" itemprop="sameAs"><i class="mdi-facebook mdi-set" aria-hidden="true"></i></a>
+                    <a href="https://instagram.com/404_moldova" itemprop="sameAs"><i class="mdi-instagram mdi-set"></i></a>
+                    <a href="https://twitter.com/404moldova" itemprop="sameAs"><i class="mdi-twitter mdi-set"></i></a>
+                    <a href="https://www.linkedin.com/company/404-moldova" itemprop="sameAs"><i class="mdi-linkedin mdi-set"></i></a>
+                    <a href="https://www.youtube.com/channel/UCXY-0ZUU-mvxbzWuLGZp5LQ" itemprop="sameAs"><i class="mdi-youtube-play mdi-set"></i></a>
+                    <a href="https://www.messenger.com/t/404Moldova/" itemprop="sameAs"><i class="mdi-facebook-messenger mdi-set"></i></a>
+                </div>
             </div>
-            <div class="one-line">
-                <i class="fa fa-phone" aria-hidden="true"></i>
-                <a href="tel:+37322808291">(+373) 22 808 291</a>
-            </div>
-            <div class="one-line">
-                <i class="fa fa-map-marker" aria-hidden="true"></i>
-                <a itemprop="streetAddress" href="https://goo.gl/maps/GvA1ChgPJ4U2"><span itemprop="streetAddress">бул. Дачия #23, эт. 3</span>
-                <span class="one-line new-line" itemprop="addressLocality">Кишинев, Молдова</span></a>
-            </div>
-        </div>
-        <div class="block-4 ru-vertion-footer" itemscope itemtype="https://schema.org/Organization">
-            <h4 class="connect-us">Свяжитесь с нами</h4>
-            <div class="one-line display-flex">
-                <a href="https://www.facebook.com/404moldova" itemprop="sameAs"><i class="fa fa-facebook" aria-hidden="true"></i></a>
-                <a href="https://twitter.com/404moldova" itemprop="sameAs"><i class="fa fa-twitter" aria-hidden="true"></i></a>
-                <a href="https://www.linkedin.com/company/404-moldova" itemprop="sameAs"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
-                <a href="https://www.pinterest.com/404moldova/" itemprop="sameAs"><i class="fa fa-pinterest-p" aria-hidden="true"></i></a>
-                <a href="https://pycoding.slack.com/messages/general/" itemprop="sameAs"><i class="fa fa-slack" aria-hidden="true"></i></a>
-            </div>
-            <div class="one-line display-flex">
-                <a href="https://ok.ru/md404" itemprop="sameAs"><i class="fa fa-odnoklassniki" aria-hidden="true"></i></a>
-                <a href="https://vk.com/md404" itemprop="sameAs"><i class="fa fa-vk" aria-hidden="true"></i></a>
-                <a href="https://instagram.com/404_moldova" itemprop="sameAs"><i class="fa fa-instagram" aria-hidden="true"></i></a>
-                <a href="https://github.com/404md" itemprop="sameAs"><i class="fa fa-github" aria-hidden="true"></i></a>
-                <a href="https://plus.google.com/u/0/107643683758390437710" itemprop="sameAs"><i class="fa fa-google-plus" aria-hidden="true"></i></a>
+            <div class="block-3 flex-item-4" itemscope itemtype="https://schema.org/PostalAddress">
+                <div class="right-side">
+                    <h4 class="connect-us">Наши контакты</h4>
+                    <div class="one-line">
+                        <i class="mdi-email-outline mdi-set"></i>
+                        <a class="color-link" href="mailto:info@404.md" itemprop="email">info@404.md</a>
+                    </div>
+                    <div class="one-line">
+                        <i class="mdi-phone mdi-set"></i>
+                        <div class="phones">
+                            <a class="color-link" href="tel:+37322808291">(+373) 22 808 291</a>
+                            <a class="color-link" href="tel:+37360999007">(+373) 60 999 007</a>
+                        </div>
+                    </div>
+                    <div class="one-line">
+                        <i class="mdi-map-marker mdi-set"></i>
+                        <a class="color-link" itemprop="streetAddress" href="https://goo.gl/maps/GvA1ChgPJ4U2"><span itemprop="streetAddress">бул. Дачия #23, эт. 3</span>
+                            <span class="one-line new-line" itemprop="addressLocality">Кишинев, Молдова</span></a>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
-</div>
 
-<div class="footer-black">
-    <div class="container">
-        <div class="left-footer ru-text">
-            2017 &copy; PyCoding SRL
-            <a href="/ru/terms/">Условия Использования</a>
+    <div class="footer-black">
+        <div class="container">
+            <div class="left-footer ru-text">
+                2017 &copy; PyCoding SRL
+                <a href="/terms/">Условия Использования</a>
+                <a class="language" href="/contact/"><img src="../../images/flag-us.png"></a>
+                <a class="language" href="/ro/contact/"><img src="../../images/flag-ro.png"></a>
+            </div>
+            <div class="right-footer">
+                <ul class="">
+                    <li><a href="/ru/coworking/">Коворкинг</a></li>
+                    <li><a href="/ru/members/">Участники</a></li>
+                    <li><a href="/ru/media/">Пресса</a></li>
+                    <li><a href="/ru/gallery/">Галерея</a></li>
+                    <li><a href="/ru/contact/">Контакты</a></li>
+                    <li><a href="https://blog.404.md">Блог</a></li>
+                    <li><a href="/ru/tour/">Забронируй Обход</a></li>
+                </ul>
+            </div>
+            <div class="clear"></div>
         </div>
-        <div class="right-footer">
-            <ul class="">
-                <li><a href="/ru/amenities/">Удобства</a></li>
-                <li><a href="/ru/pricing/">Цены</a></li>
-                <li><a href="/ru/members/">Участники</a></li>
-                <li><a href="/ru/tour/">Забронируй Обход</a></li>
-                <li><a href="/ru/media/">Пресса</a></li>
-                <li><a href="/ru/gallery/">Галерея</a></li>
-                <li><a href="/ru/contact/">Контакты</a></li>
-                <li><a href="https://blog.404.md">Блог</a></li>
-            </ul>
-        </div>
-        <div class="clear"></div>
     </div>
-</div>
 </footer>
 
 <script type="text/javascript" src="../../js/jquery-1.11.0.min.js"></script>
 <script type="text/javascript" src="../../js/main.min.js"></script>
+<script type="text/javascript" src="../../js/slick-1.6.0.min.js"></script>
+<script type="text/javascript" src="../../js/footer-carousel.js"></script>
 <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBMl1HPvxC30Mtcbe6gKWZjiccGAYopsQA&callback=myMap" async defer></script>
 <script type="text/javascript" src="https://www.google.com/recaptcha/api.js" async defer></script>
 
