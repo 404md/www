@@ -1395,14 +1395,14 @@ input:focus {
 }
 
 /* active state */
-input:focus ~ label, input:valid ~ label {
+input:focus ~ .label-form, input:valid ~ .label-form {
   top:-20px;
   font-size:14px;
   color:#FF5533;
 }
 
 
-.touched ~ label {
+.touched ~ .label-form {
   top:-20px;
   color:#FF5533;
 }
