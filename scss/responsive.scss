@@ -877,6 +877,7 @@
   .popup {
     margin: 0;
     width: 100%;
+    height: 100%;
     padding: 1em;
     .close {
       right: 40px;
@@ -1517,22 +1518,24 @@
   }
 }
 
+
+
 @media (max-height: 430px) {
   .popup {
     width: 100%;
+    height: 100%;
+    margin: 0;
   }
   #mc_embed_signup {
     &.coworking {
       width: 100%;
       .mc-field-group {
         width: 50%;
-        float: right;
         padding-right: 10px;
         &.field-left {
           float:left;
         }
       }
-
       .indicates-required {
         padding-bottom: 5px;
         padding-top: 5px;
@@ -1598,6 +1601,15 @@
   }
 }
 
+@media (max-height: 400px) {
+  #mc_embed_signup {
+    &.coworking {
+      .mc-field-group {
+        width: 100%;
+      }
+    }
+  }
+}
 @media (max-width: 375px) {
   .gallery {
     margin-bottom: 32px;

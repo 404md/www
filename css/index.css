@@ -1180,70 +1180,6 @@ body {
     .third-block .program .collaboration .text-collaboration {
       font-size: 25px; }
 
-.overlay, .overlay1 {
-  position: fixed;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  background: rgba(0, 0, 0, 0.5);
-  transition: opacity 200ms;
-  visibility: hidden;
-  opacity: 0;
-  z-index: 7; }
-  .overlay.light, .overlay1.light {
-    background: rgba(255, 255, 255, 0.5); }
-  .overlay .cancel, .overlay1 .cancel {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    cursor: default; }
-
-.popup {
-  margin: 75px auto;
-  padding: 2em;
-  background: #fff;
-  width: 500px;
-  box-shadow: 0 0 50px rgba(0, 0, 0, 0.5);
-  position: relative;
-  height: 100%; }
-  .light .popup {
-    border-color: #aaa;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.25); }
-  .popup h2 {
-    margin-top: 0;
-    color: #777;
-    font-family: "Trebuchet MS", Tahoma, Arial, sans-serif; }
-  .popup .close {
-    position: absolute;
-    width: 20px;
-    height: 20px;
-    top: 20px;
-    right: 20px;
-    opacity: 0.8;
-    transition: all 200ms;
-    font-size: 24px;
-    font-weight: bold;
-    text-decoration: none;
-    color: #777; }
-    .popup .close:hover {
-      opacity: 1; }
-  .popup .content {
-    overflow: auto;
-    height: 100%;
-    display: flex;
-    display: -webkit-flex;
-    flex-direction: column;
-    justify-content: center; }
-  .popup p {
-    margin: 0 0 1em; }
-    .popup p:last-child {
-      margin: 0; }
-
-.pop-up-visible {
-  visibility: visible;
-  opacity: 1; }
-
 /* Mail-Chimp inputs*/
 /* form starting stylings ------------------------------- */
 .group {
@@ -1276,12 +1212,12 @@ input:focus {
   -webkit-transition: 0.2s ease all; }
 
 /* active state */
-input:focus ~ label, input:valid ~ label {
+input:focus ~ .label-form, input:valid ~ .label-form {
   top: -20px;
   font-size: 14px;
   color: #FF5533; }
 
-.touched ~ label {
+.touched ~ .label-form {
   top: -20px;
   color: #FF5533; }
 
@@ -1806,6 +1742,70 @@ input:focus ~ .highlight {
   display: flex;
   flex-direction: column; }
 
+.overlay, .overlay1 {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.5);
+  transition: opacity 200ms;
+  visibility: hidden;
+  opacity: 0;
+  z-index: 7; }
+  .overlay.light, .overlay1.light {
+    background: rgba(255, 255, 255, 0.5); }
+  .overlay .cancel, .overlay1 .cancel {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    cursor: default; }
+
+.popup {
+  margin: 75px auto;
+  padding: 2em;
+  background: #fff;
+  width: 600px;
+  box-shadow: 0 0 50px rgba(0, 0, 0, 0.5);
+  position: relative;
+  height: calc(100% - 150px); }
+  .light .popup {
+    border-color: #aaa;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.25); }
+  .popup h2 {
+    margin-top: 0;
+    color: #777;
+    font-family: "Trebuchet MS", Tahoma, Arial, sans-serif; }
+  .popup .close {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    top: 20px;
+    right: 20px;
+    opacity: 0.8;
+    transition: all 200ms;
+    font-size: 24px;
+    font-weight: bold;
+    text-decoration: none;
+    color: #777; }
+    .popup .close:hover {
+      opacity: 1; }
+  .popup .content {
+    overflow: auto;
+    height: 100%;
+    display: flex;
+    display: -webkit-flex;
+    flex-direction: column;
+    justify-content: center; }
+  .popup p {
+    margin: 0 0 1em; }
+    .popup p:last-child {
+      margin: 0; }
+
+.pop-up-visible {
+  visibility: visible;
+  opacity: 1; }
+
 /* MailChimp Form Embed Code - Classic - 12/17/2015 v10.7 */
 #mc_embed_signup.coworking {
   background: #fff;
@@ -1849,7 +1849,7 @@ input:focus ~ .highlight {
   -webkit-border-radius: 3px;
   -moz-border-radius: 3px;
   border-radius: 3px;
-  font-size: 10px;
+  font-size: 12px;
   font-weight: normal;
   position: absolute;
   color: #e85c41;
@@ -2273,6 +2273,7 @@ input:focus ~ .highlight {
   .popup {
     margin: 0;
     width: 100%;
+    height: 100%;
     padding: 1em; }
     .popup .close {
       right: 40px; }
@@ -2533,13 +2534,14 @@ input:focus ~ .highlight {
     width: 90%; } }
 @media (max-height: 430px) {
   .popup {
-    width: 100%; }
+    width: 100%;
+    height: 100%;
+    margin: 0; }
 
   #mc_embed_signup.coworking {
     width: 100%; }
     #mc_embed_signup.coworking .mc-field-group {
       width: 50%;
-      float: right;
       padding-right: 10px; }
       #mc_embed_signup.coworking .mc-field-group.field-left {
         float: left; }
@@ -2565,6 +2567,9 @@ input:focus ~ .highlight {
     -webkit-transform: scale(0.85);
     transform-origin: 0 0;
     -webkit-transform-origin: 0 0; } }
+@media (max-height: 400px) {
+  #mc_embed_signup.coworking .mc-field-group {
+    width: 100%; } }
 @media (max-width: 375px) {
   .gallery {
     margin-bottom: 32px; }
@@ -2860,7 +2865,8 @@ input:focus ~ .highlight {
   margin-right: 10px; }
 
 #mc_embed_signup .mc-field-group.input-group label {
-  display: inline; }
+  display: inline;
+  padding-left: 5px; }
 
 #mc_embed_signup .mc-field-group.input-group input {
   display: inline;
@@ -2911,18 +2917,6 @@ input:focus ~ .highlight {
   border: 1px solid #ccc;
   margin-right: .5em;
   font-weight: bold; }
-
-#mc_embed_signup #mc-embedded-subscribe-form div.mce_inline_error {
-  padding: 0;
-  display: inline-block;
-  background-color: rgba(255, 255, 255, 0.85);
-  -webkit-border-radius: 3px;
-  -moz-border-radius: 3px;
-  border-radius: 3px;
-  font-size: 14px;
-  font-weight: normal;
-  position: absolute;
-  color: #e85c41; }
 
 .small-meta, .datepart {
   font-size: 10px; }
