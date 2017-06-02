@@ -30,7 +30,7 @@ if [ ${dependencies} == 'y' ]; then
     npm install uglify-js -g
 fi
 
-if [ ${env} == 'dev' ]; then
+if [ ${env} != 'prod' ]; then
     bucket='s3://www-dev.404.md/'
     distribution_id='E3GMNOZE3OLH8B'
 else
