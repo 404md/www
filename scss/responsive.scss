@@ -570,7 +570,7 @@
   .wrapper {
     &.contact {
       .main-block {
-        min-height: 900px;
+        min-height: 750px;
         .container {
           .map-style {
            height: 200px;
@@ -579,7 +579,7 @@
           .input-field {
             margin:auto;
             top: auto;
-            height: 700px;
+            height: 550px;
             bottom: 0;
             right:0;
             width: 100%;
@@ -1936,6 +1936,13 @@
 }
 
 @media (max-width: 992px){
+  .gallery {
+    &.connect-us {
+      .gallery-line {
+        margin-top: 0;
+      }
+    }
+  }
   .startup {
     .third-block {
       .program {
@@ -2102,7 +2109,6 @@
         }
         .button-block {
           padding: 0;
-
         }
       }
     }

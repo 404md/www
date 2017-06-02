@@ -121,25 +121,41 @@ window.fbAsyncInit = function () {
             <div class="input-field">
                 <form class="hole-form" method="post">
                    <div class="heading-contact">Contactează-ne</div>
-                    <div>
-                        <label class="input-name" for="name">Nume</label>
-                        <input class="input-style" type="text" id="name" name="user_name" placeholder="e.g. Vlad Ursu" />
+                    <div class="error-m">
+                        <div class="group">
+                            <input type="text" id="name" name="user_name" required />
+                            <span class="highlight"></span>
+                            <span class="bar"></span>
+                            <label class="label-form" for="name">Nume</label>
+                        </div>
                     </div>
-                    <div>
-                        <label class="input-name" for="phone">Telefon</label>
-                        <input class="input-style" type="tel" id="phone" name="user_phone" placeholder="e.g. 022 999 999" />
+                    <div class="error-m">
+                        <div class="group">
+                            <input type="tel" id="phone" name="user_phone" required />
+                            <span class="highlight"></span>
+                            <span class="bar"></span>
+                            <label class="label-form" for="phone">Telefon</label>
+                        </div>
                     </div>
-                    <div>
-                        <label class="input-name" for="mail">E-mail</label>
-                        <input class="input-style" type="email" id="mail" name="user_mail" placeholder="e.g. vlad.ursu@email.com" />
+                    <div class="error-m">
+                        <div class="group">
+                            <input type="email" id="mail" name="user_mail" required />
+                            <span class="highlight"></span>
+                            <span class="bar"></span>
+                            <label class="label-form" for="mail">E-mail</label>
+                        </div>
                     </div>
-                    <div>
-                        <label class="input-name" for="msg">Mesaj</label>
-                        <textarea class="text-style" id="msg" name="user_message" placeholder="Lăsați Mesajul Dumneavoastră" rows="4"></textarea>
+                    <div class="error-m">
+                        <div class="group">
+                            <input id="msg" name="user_message" required/>
+                            <span class="highlight"></span>
+                            <span class="bar"></span>
+                            <label class="label-form" for="msg">Mesaj</label>
+                        </div>
                     </div>
-                    <div class="recaptcha-center">
-                        <div class="g-recaptcha"  data-sitekey="6LcHAgkTAAAAAHP1uEknBzH3ZeeqciGJEXVgZAJm"></div>
-                    </div>
+                    <!--<div class="recaptcha-center">-->
+                        <!--<div class="g-recaptcha"  data-sitekey="6LcHAgkTAAAAAHP1uEknBzH3ZeeqciGJEXVgZAJm"></div>-->
+                    <!--</div>-->
                     <br/>
                     <button class="button button-contact" type="submit">Trimite</button>
                 </form>

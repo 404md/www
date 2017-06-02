@@ -1401,7 +1401,6 @@ input:focus ~ .label-form, input:valid ~ .label-form {
   color:#FF5533;
 }
 
-
 .touched ~ .label-form {
   top:-20px;
   color:#FF5533;
@@ -1448,15 +1447,15 @@ input:focus ~ .highlight {
   animation:inputHighlighter 0.3s ease;
 }
 
-@-webkit-keyframes inputHighlighter {
-  from { background:#FF5533; }
-  to 	{ width:0; background:transparent; }
-}
-@-moz-keyframes inputHighlighter {
-  from { background:#FF5533; }
-  to 	{ width:0; background:transparent; }
-}
-@keyframes inputHighlighter {
-  from { background:#FF5533; }
-  to 	{ width:0; background:transparent; }
-}
+//@-webkit-keyframes inputHighlighter {
+//  from { background:#FF5533; }
+//  to 	{ width:0; background:transparent; }
+//}
+//@-moz-keyframes inputHighlighter {
+//  from { background:#FF5533; }
+//  to 	{ width:0; background:transparent; }
+//}
+//@keyframes inputHighlighter {
+//  from { background:#FF5533; }
+//  to 	{ width:0; background:transparent; }
+//}
