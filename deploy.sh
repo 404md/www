@@ -33,9 +33,11 @@ fi
 if [ ${env} != 'prod' ]; then
     bucket='s3://www-dev.404.md/'
     distribution_id='E3GMNOZE3OLH8B'
+    max_age='600'
 else
     bucket='s3://www.404.md/'
     distribution_id='E1CHAR53JHGDQK'
+    max_age='604800'
 fi
 
 message "### Build: Start ###"
@@ -44,7 +46,7 @@ message "### Build: Start ###"
 message "### Deploy: Start ###"
 message "Synchronizing build/Release/"
 aws s3 sync ./build/Release/ ${bucket} --region ${region} --profile ${profile} \
-    --storage-class REDUCED_REDUNDANCY --metadata-directive REPLACE --cache-control max-age=600 \
+    --storage-class REDUCED_REDUNDANCY --metadata-directive REPLACE --cache-control max-age=${max_age} \
     --exclude 'backend/*' --exclude 'scss/*' --exclude 'build/*'
 
 message "Invalidating CloudFront"
