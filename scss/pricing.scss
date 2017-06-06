@@ -197,9 +197,7 @@
 .popup {
   margin: 75px auto;
   padding: 2em;
-  background: #fff;
-  width: 600px;
-  box-shadow: 0 0 50px rgba(0,0,0,0.5);
+  width: 630px;
   position: relative;
   height: calc(100% - 150px);
   .light & {
@@ -215,7 +213,7 @@
     position: absolute;
     width: 20px;
     height: 20px;
-    top: 20px;
+    top: 0;
     right: 20px;
     opacity: 0.8;
     transition: all 200ms;
@@ -229,11 +227,13 @@
   }
   .content {
     overflow: auto;
-    height: 100%;
     display: flex;
-    display: -webkit-flex;
-    flex-direction: column;
-    justify-content: center;
+    height: 500px;
+    position: relative;
+    top:50%;
+    -ms-transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
   }
   p {
     margin: 0 0 1em;
@@ -249,6 +249,28 @@
 }
 
 
+#mc_embed_signup {
+  &.coworking {
+    top: 50%;
+    left: 50%;
+    position: absolute;
+    -ms-transform:translate(-50%, -50%);
+    -webkit-transform:translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    .mc-field-group {
+      padding-right: 10px;
+      width: 50%;
+      &.field-left {
+        float:left;
+      }
+    }
+    .indicates-required {
+      padding-bottom: 5px;
+      padding-top: 5px;
+    }
+  }
+}
+
 /* MailChimp Form Embed Code - Classic - 12/17/2015 v10.7 */
 
 #mc_embed_signup.coworking{background:#fff; clear:left;width: 100%; }
@@ -258,11 +280,11 @@
 #mc_embed_signup input.mce_inline_error {
   border-color: transparent;
 }
-#mc_embed_signup .mc-field-group {clear:left; position:relative; width:100%; min-height:50px; display: inline-block; margin-bottom: 30px;}
+#mc_embed_signup .mc-field-group {clear:left; position:relative; min-height:50px; display: inline-block; margin-bottom: 30px;}
 
 #mc_embed_signup .indicates-required {text-align:right; font-size:11px;padding-bottom: 20px;}
 
-#mc_embed_signup #mce-success-response {color:#529214; display:none; margin-bottom: 20px;}
+#mc_embed_signup #mce-success-response {color:#529214; display:none;}
 
 
 #mc_embed_signup #mc-embedded-subscribe-form div.mce_inline_error {padding:0; background-color:rgba(255,255,255,0.85); -webkit-border-radius: 3px; -moz-border-radius: 3px; border-radius: 3px; font-size:12px; font-weight:normal; position:absolute; color:#e85c41; display: block;}
