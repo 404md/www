@@ -22,14 +22,13 @@
 .error-m {
   position: relative;
   padding-bottom: 5px; }
+  .error-m .group {
+    padding-bottom: 25px; }
   .error-m label.error {
     position: absolute;
     font-size: 15px;
     color: red;
-    bottom: 5px;
     left: 0; }
-  .error-m input.error, .error-m textarea.error {
-    border-color: red; }
 
 .status-message.success {
   padding: 10px;
@@ -50,15 +49,15 @@
   color: red; }
 
 .wrapper.contact .main-block {
-  min-height: 700px; }
+  min-height: 550px; }
   .wrapper.contact .main-block .container .map-style {
     width: 60%;
-    height: 700px;
+    height: 550px;
     float: left; }
   .wrapper.contact .main-block .container .input-field {
     position: relative;
     width: 40%;
-    height: 700px;
+    height: 550px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -1262,24 +1261,6 @@ input:focus ~ .highlight {
   -moz-animation: inputHighlighter 0.3s ease;
   animation: inputHighlighter 0.3s ease; }
 
-@-webkit-keyframes inputHighlighter {
-  from {
-    background: #FF5533; }
-  to {
-    width: 0;
-    background: transparent; } }
-@-moz-keyframes inputHighlighter {
-  from {
-    background: #FF5533; }
-  to {
-    width: 0;
-    background: transparent; } }
-@keyframes inputHighlighter {
-  from {
-    background: #FF5533; }
-  to {
-    width: 0;
-    background: transparent; } }
 #video {
   width: 100%;
   height: 642px; }
@@ -2143,14 +2124,14 @@ input:focus ~ .highlight {
           font-size: 20px; }
 
   .wrapper.contact .main-block {
-    min-height: 900px; }
+    min-height: 750px; }
     .wrapper.contact .main-block .container .map-style {
       height: 200px;
       width: 100%; }
     .wrapper.contact .main-block .container .input-field {
       margin: auto;
       top: auto;
-      height: 700px;
+      height: 550px;
       bottom: 0;
       right: 0;
       width: 100%; }
@@ -2698,6 +2679,9 @@ input:focus ~ .highlight {
   .startup .text-yellow {
     font-size: 20px; } }
 @media (max-width: 992px) {
+  .gallery.connect-us .gallery-line {
+    margin-top: 0; }
+
   .startup .third-block .program .collaboration .text-up h3 {
     font-size: 25px; }
   .startup .third-block .program .collaboration .text-collaboration p {
