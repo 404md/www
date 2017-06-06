@@ -122,20 +122,36 @@ window.fbAsyncInit = function () {
                 <form id="contact-us-form" class="hole-form">
                    <div class="heading-contact">Get in touch</div>
                     <div class="error-m">
-                        <label class="input-name" for="name">Name</label>
-                        <input class="input-style" type="text" id="name" name="user_name" placeholder="e.g. Vlad Ursu" />
+                        <div class="group">
+                            <input type="text" id="name" name="user_name" required />
+                            <span class="highlight"></span>
+                            <span class="bar"></span>
+                            <label class="label-form" for="name">Name</label>
+                        </div>
                     </div>
                     <div class="error-m">
-                        <label class="input-name" for="phone">Phone</label>
-                        <input class="input-style" type="tel" id="phone" name="user_phone" placeholder="e.g. 022 999 999" />
+                        <div class="group">
+                            <input type="tel" id="phone" name="user_phone" required />
+                            <span class="highlight"></span>
+                            <span class="bar"></span>
+                            <label class="label-form" for="phone">Phone</label>
+                        </div>
                     </div>
                     <div class="error-m">
-                        <label class="input-name" for="mail">E-mail</label>
-                        <input class="input-style" type="email" id="mail" name="user_mail" placeholder="e.g. vlad.ursu@email.com" />
+                        <div class="group">
+                            <input type="email" id="mail" name="user_mail" required/>
+                            <span class="highlight"></span>
+                            <span class="bar"></span>
+                            <label class="label-form" for="mail">E-mail</label>
+                        </div>
                     </div>
                     <div class="error-m">
-                        <label class="input-name" for="msg">Message</label>
-                        <textarea class="text-style" id="msg" name="user_message" placeholder="Please Tell Us Your Feedback" rows="4"></textarea>
+                        <div class="group">
+                            <input id="msg" name="user_message" required/>
+                            <span class="highlight"></span>
+                            <span class="bar"></span>
+                            <label class="label-form" for="msg">Message</label>
+                        </div>
                     </div>
                     <div id="reCaptcha"></div>
                     <div class="status-message"></div>

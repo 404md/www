@@ -570,7 +570,7 @@
   .wrapper {
     &.contact {
       .main-block {
-        min-height: 900px;
+        min-height: 750px;
         .container {
           .map-style {
            height: 200px;
@@ -579,7 +579,7 @@
           .input-field {
             margin:auto;
             top: auto;
-            height: 700px;
+            height: 550px;
             bottom: 0;
             right:0;
             width: 100%;
@@ -913,9 +913,6 @@
       padding-bottom: 10px;
       h2 {
         font-size: 19px;
-        &.form1-top {
-          margin-top: 40px;
-        }
       }
       width: 95%;
       margin: 0 auto;
@@ -1609,37 +1606,29 @@
   }
 }
 
-@media (max-height: 412px) {
-  #mc_embed_signup {
-    &.coworking {
-      h2 {
-        &.form1-top {
-          margin-top: 10px;
-        }
+@media (max-width: 412px) {
+  .popup {
+    &.form2 {
+      .content {
+        height: 100%;
+        position: static;
+        top: auto;
+        -ms-transform: none;
+        -webkit-transform: none;
+        transform: none;
       }
     }
   }
-}
-
-@media (max-width: 412px) {
-  .popup {
-    .content {
-      height: 100%;
-      position: static;
-      top: auto;
-      -ms-transform: none;
-      -webkit-transform: none;
-      transform: none;
-    }
-  }
   #mc_embed_signup {
     &.coworking {
-      position: static;
-      top: auto;
-      left: auto;
-      -ms-transform: none;
-      -webkit-transform: none;
-      transform: none;
+      &.form2 {
+        position: static;
+        top: auto;
+        left: auto;
+        -ms-transform: none;
+        -webkit-transform: none;
+        transform: none;
+      }
     }
   }
 }
@@ -2032,6 +2021,13 @@
 }
 
 @media (max-width: 992px){
+  .gallery {
+    &.connect-us {
+      .gallery-line {
+        margin-top: 0;
+      }
+    }
+  }
   .startup {
     .third-block {
       .program {
@@ -2198,7 +2194,6 @@
         }
         .button-block {
           padding: 0;
-
         }
       }
     }
