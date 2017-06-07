@@ -22,14 +22,13 @@
 .error-m {
   position: relative;
   padding-bottom: 5px; }
+  .error-m .group {
+    padding-bottom: 25px; }
   .error-m label.error {
     position: absolute;
     font-size: 15px;
     color: red;
-    bottom: 5px;
     left: 0; }
-  .error-m input.error, .error-m textarea.error {
-    border-color: red; }
 
 .status-message.success {
   padding: 10px;
@@ -50,15 +49,15 @@
   color: red; }
 
 .wrapper.contact .main-block {
-  min-height: 700px; }
+  min-height: 550px; }
   .wrapper.contact .main-block .container .map-style {
     width: 60%;
-    height: 700px;
+    height: 550px;
     float: left; }
   .wrapper.contact .main-block .container .input-field {
     position: relative;
     width: 40%;
-    height: 700px;
+    height: 550px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -1262,24 +1261,6 @@ input:focus ~ .highlight {
   -moz-animation: inputHighlighter 0.3s ease;
   animation: inputHighlighter 0.3s ease; }
 
-@-webkit-keyframes inputHighlighter {
-  from {
-    background: #FF5533; }
-  to {
-    width: 0;
-    background: transparent; } }
-@-moz-keyframes inputHighlighter {
-  from {
-    background: #FF5533; }
-  to {
-    width: 0;
-    background: transparent; } }
-@keyframes inputHighlighter {
-  from {
-    background: #FF5533; }
-  to {
-    width: 0;
-    background: transparent; } }
 #video {
   width: 100%;
   height: 642px; }
@@ -1362,7 +1343,8 @@ input:focus ~ .highlight {
   .logo-media .img-logo {
     background: white;
     vertical-align: baseline;
-    margin-right: 5px; }
+    margin-right: 5px;
+    height: 16px; }
 
 .video-media.display-flex {
   justify-content: space-around; }
@@ -1764,9 +1746,7 @@ input:focus ~ .highlight {
 .popup {
   margin: 75px auto;
   padding: 2em;
-  background: #fff;
-  width: 600px;
-  box-shadow: 0 0 50px rgba(0, 0, 0, 0.5);
+  width: 630px;
   position: relative;
   height: calc(100% - 150px); }
   .light .popup {
@@ -1780,7 +1760,7 @@ input:focus ~ .highlight {
     position: absolute;
     width: 20px;
     height: 20px;
-    top: 20px;
+    top: 0;
     right: 20px;
     opacity: 0.8;
     transition: all 200ms;
@@ -1792,11 +1772,13 @@ input:focus ~ .highlight {
       opacity: 1; }
   .popup .content {
     overflow: auto;
-    height: 100%;
     display: flex;
-    display: -webkit-flex;
-    flex-direction: column;
-    justify-content: center; }
+    height: 500px;
+    position: relative;
+    top: 50%;
+    -ms-transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%); }
   .popup p {
     margin: 0 0 1em; }
     .popup p:last-child {
@@ -1805,6 +1787,22 @@ input:focus ~ .highlight {
 .pop-up-visible {
   visibility: visible;
   opacity: 1; }
+
+#mc_embed_signup.coworking {
+  top: 50%;
+  left: 50%;
+  position: absolute;
+  -ms-transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%); }
+  #mc_embed_signup.coworking .mc-field-group {
+    padding-right: 10px;
+    width: 50%; }
+    #mc_embed_signup.coworking .mc-field-group.field-left {
+      float: left; }
+  #mc_embed_signup.coworking .indicates-required {
+    padding-bottom: 5px;
+    padding-top: 5px; }
 
 /* MailChimp Form Embed Code - Classic - 12/17/2015 v10.7 */
 #mc_embed_signup.coworking {
@@ -1828,7 +1826,6 @@ input:focus ~ .highlight {
 #mc_embed_signup .mc-field-group {
   clear: left;
   position: relative;
-  width: 100%;
   min-height: 50px;
   display: inline-block;
   margin-bottom: 30px; }
@@ -1840,8 +1837,7 @@ input:focus ~ .highlight {
 
 #mc_embed_signup #mce-success-response {
   color: #529214;
-  display: none;
-  margin-bottom: 20px; }
+  display: none; }
 
 #mc_embed_signup #mc-embedded-subscribe-form div.mce_inline_error {
   padding: 0;
@@ -2143,14 +2139,14 @@ input:focus ~ .highlight {
           font-size: 20px; }
 
   .wrapper.contact .main-block {
-    min-height: 900px; }
+    min-height: 750px; }
     .wrapper.contact .main-block .container .map-style {
       height: 200px;
       width: 100%; }
     .wrapper.contact .main-block .container .input-field {
       margin: auto;
       top: auto;
-      height: 700px;
+      height: 550px;
       bottom: 0;
       right: 0;
       width: 100%; }
@@ -2269,16 +2265,35 @@ input:focus ~ .highlight {
 @media (max-width: 768px) {
   .main-nav .container .nav-top .navt li .link, .main-nav .container .nav-top .navt li .last-line {
     width: auto; } }
+@media (max-width: 736px) and (max-height: 414px) {
+  .popup .content {
+    height: 100%;
+    position: static;
+    top: auto;
+    -ms-transform: none;
+    -webkit-transform: none;
+    transform: none; }
+
+  #mc_embed_signup.coworking {
+    height: 100%;
+    position: static;
+    top: auto;
+    left: auto;
+    -ms-transform: none;
+    -webkit-transform: none;
+    transform: none; } }
 @media (max-width: 736px) {
   .popup {
     margin: 0;
     width: 100%;
     height: 100%;
-    padding: 1em; }
-    .popup .close {
-      right: 40px; }
+    padding: 0; }
+    .popup .content {
+      height: 100%; }
 
   #mc_embed_signup.coworking {
+    padding-top: 10px;
+    padding-bottom: 10px;
     width: 95%;
     margin: 0 auto; }
     #mc_embed_signup.coworking h2 {
@@ -2286,8 +2301,7 @@ input:focus ~ .highlight {
     #mc_embed_signup.coworking .mc-field-group .label-form {
       font-size: 15px; }
     #mc_embed_signup.coworking .indicates-required {
-      padding-bottom: 5px;
-      padding-top: 5px; }
+      padding: 5px 10px 0; }
 
   .offers.slick-initialized .slick-list .slick-track .plans {
     border: 2px solid #000000; }
@@ -2484,6 +2498,11 @@ input:focus ~ .highlight {
   .case-study .container .left-block .mockup {
     margin-bottom: 0; } }
 @media (max-width: 550px) {
+  #mc_embed_signup.coworking .mc-field-group {
+    width: 100%;
+    padding-right: 0;
+    padding-bottom: 5px; }
+
   .wrapper.pricing .main-block .container .display-flex .plans {
     width: 90%;
     margin: 10px auto; }
@@ -2534,20 +2553,12 @@ input:focus ~ .highlight {
     width: 90%; } }
 @media (max-height: 430px) {
   .popup {
+    margin: 0;
     width: 100%;
     height: 100%;
-    margin: 0; }
-
-  #mc_embed_signup.coworking {
-    width: 100%; }
-    #mc_embed_signup.coworking .mc-field-group {
-      width: 50%;
-      padding-right: 10px; }
-      #mc_embed_signup.coworking .mc-field-group.field-left {
-        float: left; }
-    #mc_embed_signup.coworking .indicates-required {
-      padding-bottom: 5px;
-      padding-top: 5px; } }
+    padding: 0; }
+    .popup .content {
+      height: 100%; } }
 @media (max-width: 422px) {
   .booking-form #mc_embed_signup {
     width: auto; }
@@ -2567,9 +2578,28 @@ input:focus ~ .highlight {
     -webkit-transform: scale(0.85);
     transform-origin: 0 0;
     -webkit-transform-origin: 0 0; } }
+@media (max-width: 412px) {
+  .popup.form2 .content {
+    height: 100%;
+    position: static;
+    top: auto;
+    -ms-transform: none;
+    -webkit-transform: none;
+    transform: none; }
+
+  #mc_embed_signup.coworking.form2 {
+    position: static;
+    top: auto;
+    left: auto;
+    -ms-transform: none;
+    -webkit-transform: none;
+    transform: none; } }
 @media (max-height: 400px) {
   #mc_embed_signup.coworking .mc-field-group {
-    width: 100%; } }
+    width: 50%; } }
+@media (max-height: 375px) {
+  #mc_embed_signup.coworking h2.form1-top {
+    margin-top: 10px; } }
 @media (max-width: 375px) {
   .gallery {
     margin-bottom: 32px; }
@@ -2608,7 +2638,25 @@ input:focus ~ .highlight {
       margin-right: 0; }
   .wrapper.booking .main-block .container .back-image .booking-form.ru-booking #mc_embed_signup .mc-field-group.ru label {
     font-size: 13px; } }
-@media (max-width: 320px) {
+@media (max-width: 320px) and (max-width: 360px) {
+  .popup .close {
+    right: 7px; }
+  .popup .content {
+    height: 100%;
+    position: static;
+    top: auto;
+    -ms-transform: none;
+    -webkit-transform: none;
+    transform: none; }
+
+  #mc_embed_signup.coworking {
+    position: static;
+    top: auto;
+    left: auto;
+    -ms-transform: none;
+    -webkit-transform: none;
+    transform: none; }
+
   .small-meta {
     display: block; }
 
@@ -2698,6 +2746,9 @@ input:focus ~ .highlight {
   .startup .text-yellow {
     font-size: 20px; } }
 @media (max-width: 992px) {
+  .gallery.connect-us .gallery-line {
+    margin-top: 0; }
+
   .startup .third-block .program .collaboration .text-up h3 {
     font-size: 25px; }
   .startup .third-block .program .collaboration .text-collaboration p {
@@ -2815,6 +2866,9 @@ input:focus ~ .highlight {
 .gallery.tour-gallery .gallery-line {
   margin-top: 60px; }
 
+#mc_embed_signup .mc-field-group.input-group {
+  margin-bottom: 0; }
+
 /* MailChimp Form Embed Code - Classic - 12/17/2015 v10.7 */
 #mc_embed_signup {
   background: #fff;
@@ -2881,8 +2935,7 @@ input:focus ~ .highlight {
   clear: both; }
 
 #mc_embed_signup div.response {
-  margin: 1em 0;
-  padding: 1em .5em .5em 0;
+  padding-bottom: 1em;
   font-weight: bold;
   float: left;
   top: -1.5em;
