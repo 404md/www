@@ -1343,7 +1343,8 @@ input:focus ~ .highlight {
   .logo-media .img-logo {
     background: white;
     vertical-align: baseline;
-    margin-right: 5px; }
+    margin-right: 5px;
+    height: 16px; }
 
 .video-media.display-flex {
   justify-content: space-around; }
