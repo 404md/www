@@ -159,24 +159,40 @@ jQuery(function($) {
         $('#video').removeAttr('src');
     });
 
+    var popupOverlay =  $('.overlay');
+    var popupOverlay1 = $('.overlay1');
+    var popUp = $(".popup");
+
     $('.getprice-button').on('click',function(){
-        $('.overlay').addClass('pop-up-visible');
+        popupOverlay.addClass('pop-up-visible');
+        popUp.show();
     });
 
     var BtnClose = $('.close');
     BtnClose.on('click',function(){
-        $('.overlay').removeClass('pop-up-visible');
+        popupOverlay.removeClass('pop-up-visible');
     });
 
     $('.getprice-button1').on('click',function(){
-        $('.overlay1').addClass('pop-up-visible');
+        popupOverlay1.addClass('pop-up-visible');
+        popUp.show();
+    });
+
+    $(document).on('click', '.pop-up-visible', function(e){
+        if (!($(e.target).hasClass( "popup" ))) {
+            popUp.hide("fast");
+            popupOverlay1.removeClass('pop-up-visible');
+            popupOverlay.removeClass('pop-up-visible');
+        }
+
     });
 
     BtnClose.on('click',function(){
-        $('.overlay1').removeClass('pop-up-visible');
+        popupOverlay1.removeClass('pop-up-visible');
     });
 
-    $(':required, .required, .non-required').on('blur keydown', function() {
+    $(':required, .required').on('blur keydown', function() {
         $(this)[ $(this).val() ? 'addClass' : 'removeClass' ]('touched');
     });
+
 });
