@@ -3,7 +3,7 @@
 .wrapper {
   &.amenities {
     .main-block {
-      min-height: unset;
+      min-height: 0;
       .blocks {
         background: #f5f5f4;
         .container {
@@ -23,7 +23,7 @@
               }
             .text-anvio {
               margin-top: 20px;
-            }
+              }
             }
           }
         }

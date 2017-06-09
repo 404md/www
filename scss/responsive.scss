@@ -251,7 +251,7 @@
               width: 100%;
               .img-plan {
                 float: left;
-               height: auto;
+                height: auto;
                 width: 40%;
                 img {
                   width: 100%;
@@ -541,9 +541,9 @@
         height: auto;
         .right-info {
           width: 100%;
-          top:unset;
-          transform: unset;
-          position: unset;
+          top:auto;
+          transform: none;
+          position: static;
           margin-top: 15px;
           margin-bottom: 30px;
         }
@@ -593,7 +593,7 @@
           .display-flex {
             .plans {
               .img-plan {
-               height: auto;
+                height: auto;
                 margin-right: 20px;
                 margin-bottom: 10px;
               }
@@ -966,23 +966,31 @@
             .link, .last-line {
               font-size: 15px;
               &:hover {
-                background: none;
-                color: unset;
+                background: transparent;
+                color: black;
               }
               &.active {
                 color: #FF5533;
                 &:hover {
-                  color: unset;
+                  color: transparent;
                 }
               }
             }
             &:hover {
-              background: none;
-              color: unset;
+              background: transparent;
+              color: transparent;
             }
             a, .link.active {
               &:hover {
                 color: #FF5533;
+              }
+            }
+            &:last-child {
+              &:nth-child(odd) {
+                &:hover {
+                  background:black;
+
+                }
               }
             }
             &:nth-child(odd){
@@ -997,26 +1005,36 @@
           .navt {
             li {
               &:hover {
-                background: unset;
+                background: transparent;
               }
               .link {
                 &:hover {
-                  background: unset;
+                  background: transparent;
                 }
               }
               &:hover {
-                background:unset;
-                color:unset;
+                background:transparent;
+                color:transparent;
               }
               .last-line {
                 &:hover {
-                  background:unset;
+                  background:transparent;
+                }
+              }
+              &:last-child {
+                &:nth-child(odd) {
+                  &:hover {
+                    background: white;
+                    .blog {
+                      color: black;
+                    }
+                  }
                 }
               }
             }
             .blog {
-                color:white;
-                background:#FF5533;
+                color:black;
+                background:white;
             }
           }
         }
@@ -1439,7 +1457,7 @@
                   }
                   .form-block {
                     width: 15%;
-                    top:unset;
+                    top:auto;
                   }
                 }
               }

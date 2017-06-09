@@ -17,9 +17,11 @@
 <meta name="twitter:image" content="https://www.404.md/images/fb.jpeg"/>
 <meta name="twitter:url" content="https://www.404.md/"/>
 <link rel="icon" href="/favicon.png" type="image/png"/>
-<link rel="stylesheet" href="/css/index.min.css"/>
-<link rel="stylesheet" href="/css/font-awesome-4.7.0.min.css"/>
-<link rel="stylesheet" href="/css/materialdesignicons.css"/>
+    <link rel="stylesheet" href="/css/index.min.css"/>
+    <!--[if IE]>
+    <link rel="stylesheet" href="/css/materialdesignicons.css"/>
+    <![endif]-->
+
 <!-- Google Tag Manager -->
 <script>
 (function (w, d, s, l, i) {
@@ -177,8 +179,8 @@ window.fbAsyncInit = function () {
             <div class="left-footer">
                 2017 &copy; PyCoding SRL
                 <a href="/terms/">Terms of Use</a>
-                <a class="language" href="/ro/"><img src="/images/flag-ro.png"></a>
-                <a class="language" href="/ru/"><img src="/images/flag-ru.png"></a>
+                <a class="language" href="/ro/"><img src="/images/flag-ro.png" alt="Romanian Flag"></a>
+                <a class="language" href="/ru/"><img src="/images/flag-ru.png" alt="Russian Flag"></a>
             </div>
             <div class="right-footer">
                 <ul class="">
@@ -195,6 +197,10 @@ window.fbAsyncInit = function () {
         </div>
     </div>
 </footer>
+
+<!--[if !IE]>-->
+<link rel="stylesheet" href="/css/materialdesignicons.css" lazyload="1"/>
+<!-- <![endif]-->
 
 <script type="text/javascript" src="/js/jquery-1.11.0.min.js"></script>
 <script type="text/javascript" src="/js/main.min.js"></script>
