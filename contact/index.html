@@ -17,11 +17,15 @@
 <meta name="twitter:image" content="https://www.404.md/images/fb.jpeg"/>
 <meta name="twitter:url" content="https://www.404.md/contact/"/>
 <link rel="icon" href="/favicon.png" type="image/png"/>
-<link rel="stylesheet" href="../css/index.min.css"/>
-<link rel="stylesheet" href="../css/slick-1.6.0.min.css"/>
-<link rel="stylesheet" href="../css/slick-theme-1.6.0.min.css"/>
-<link rel="stylesheet" href="../css/font-awesome-4.7.0.min.css"/>
-<link rel="stylesheet" href="../css/materialdesignicons.css"/>
+    <link rel="stylesheet" href="../css/index.min.css"/>
+    <!--[if IE]>
+    <link rel="stylesheet" href="../css/materialdesignicons.css"/>
+    <link rel="stylesheet" href="../css/slick-1.6.0.min.css"/>
+    <link rel="stylesheet" href="../css/slick-theme-1.6.0.min.css"/>
+    <![endif]-->
+
+
+
 <!-- Google Tag Manager -->
 <script>
 (function (w, d, s, l, i) {
@@ -480,15 +484,21 @@ window.fbAsyncInit = function () {
     </div>
 </footer>
 
+<!-- [if !IE] -->
+<link rel="stylesheet" href="../css/materialdesignicons.css" lazyload="1"/>
+<link rel="stylesheet" href="../css/slick-1.6.0.min.css" lazyload="2"/>
+<link rel="stylesheet" href="../css/slick-theme-1.6.0.min.css" lazyload="3"/>
+<!-- <![endif]-->
+
 <script src="../js/jquery-1.11.0.min.js"></script>
-<script src="../js/jquery.validate.min.js"></script>
+<script src="../js/jquery.validate.min.js" async defer></script>
 <script src="../js/aws-sdk.min.js"></script>
 <script src="../js/main.min.js"></script>
-<script type="text/javascript" src="../js/footer-carousel.js"></script>
+<script type="text/javascript" src="../js/footer-carousel.js" async defer></script>
 <script type="text/javascript" src="../js/slick-1.6.0.min.js"></script>
 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBMl1HPvxC30Mtcbe6gKWZjiccGAYopsQA&callback=myMap" async defer></script>
 <script src="https://www.google.com/recaptcha/api.js?onload=createCaptcha&render=explicit&hl=en" async defer></script>
-<script src="../js/contact.min.js"></script>
+<script src="../js/contact.min.js" async defer></script>
 
 </body>
 </html>

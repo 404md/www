@@ -17,10 +17,12 @@
 <meta name="twitter:image" content="https://www.404.md/images/fb.jpeg"/>
 <meta name="twitter:url" content="https://www.404.md/ro/"/>
 <link rel="icon" href="/favicon.png" type="image/png"/>
-<link rel="stylesheet" href="../css/index.min.css"/>
-<link rel="stylesheet" href="../css/font-awesome-4.7.0.min.css"/>
-<link rel="stylesheet" href="../css/materialdesignicons.css"/>
-<!-- Google Tag Manager -->
+    <link rel="stylesheet" href="../css/index.min.css"/>
+    <!--[if IE]>
+    <link rel="stylesheet" href="../css/materialdesignicons.css"/>
+    <![endif]-->
+
+    <!-- Google Tag Manager -->
 <script>
 (function (w, d, s, l, i) {
     w[l] = w[l] || [];
@@ -196,6 +198,10 @@ window.fbAsyncInit = function () {
         </div>
     </div>
 </footer>
+
+<!--[if !IE]>-->
+<link rel="stylesheet" href="../css/materialdesignicons.css" lazyload="1"/>
+<!-- <![endif]-->
 
 <script type="text/javascript" src="../js/jquery-1.11.0.min.js"></script>
 <script type="text/javascript" src="../js/main.min.js"></script>

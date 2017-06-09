@@ -17,12 +17,13 @@
 <meta name="twitter:image" content="https://www.404.md/images/fb.jpeg"/>
 <meta name="twitter:url" content="https://www.404.md/coworking"/>
 <link rel="icon" href="/favicon.png" type="image/png"/>
+    <link rel="stylesheet" href="../css/index.min.css"/>
+    <!--[if IE]>
+    <link rel="stylesheet" href="../css/materialdesignicons.css"/>
+    <link rel="stylesheet" href="../css/slick-1.6.0.min.css"/>
+    <link rel="stylesheet" href="../css/slick-theme-1.6.0.min.css"/>
+    <![endif]-->
 
-<link rel="stylesheet" href="../css/index.min.css"/>
-<link rel="stylesheet" href="../css/slick-1.6.0.min.css"/>
-<link rel="stylesheet" href="../css/slick-theme-1.6.0.min.css"/>
-<link rel="stylesheet" href="../css/font-awesome-4.7.0.min.css"/>
-<link rel="stylesheet" href="../css/materialdesignicons.css"/>
 <!-- Google Tag Manager -->
 <script>
 (function (w, d, s, l, i) {
@@ -560,11 +561,11 @@ window.fbAsyncInit = function () {
     <div class="container">
         <section class="partners" itemscope itemtype="https://schema.org/Organization">
             <div class="usaid">
-                <img itemprop="logo" src="../images/logo-usaid.png" alt="USAID from the American People" />
+                <img itemprop="logo" src="../images/logo-usaid.svg" alt="USAID from the American People" />
                 <meta itemprop="url" content="https://www.404.md/images/logo-usaid.png">
             </div>
             <div class="sweden">
-                <img itemprop="logo" src="../images/logo-sweden.png" alt="Government of Sweden" />
+                <img itemprop="logo" src="../images/sweden.svg" alt="Government of Sweden" />
                 <meta itemprop="url" content="https://www.404.md/images/logo-sweden.png">
             </div>
             <div class="pycoding">
@@ -641,6 +642,13 @@ window.fbAsyncInit = function () {
     </div>
 </div>
 </footer>
+
+ <!--[if !IE]> -->
+<link rel="stylesheet" href="../css/materialdesignicons.css" lazyload="1"/>
+<link rel="stylesheet" href="../css/slick-1.6.0.min.css" lazyload="2"/>
+<link rel="stylesheet" href="../css/slick-theme-1.6.0.min.css" lazyload="3"/>
+
+<!-- <![endif]-->
 
 <script type="text/javascript" src="../js/jquery-1.11.0.min.js"></script>
 <script type="text/javascript" src="../js/slick-1.6.0.min.js"></script>

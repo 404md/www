@@ -17,12 +17,14 @@
 <meta name="twitter:image" content="https://www.404.md/images/fb.jpeg"/>
 <meta name="twitter:url" content="https://www.404.md/ro/media/"/>
 <link rel="icon" href="/favicon.png" type="image/png"/>
-<link rel="stylesheet" href="../../css/index.min.css"/>
-<link rel="stylesheet" href="../../css/font-awesome-4.7.0.min.css"/>
-<link rel="stylesheet" href="../../css/slick-1.6.0.min.css"/>
-<link rel="stylesheet" href="../../css/slick-theme-1.6.0.min.css"/>
-<link rel="stylesheet" href="../../css/materialdesignicons.css"/>
-<!-- Google Tag Manager -->
+    <link rel="stylesheet" href="../../css/index.min.css"/>
+    <!--[if IE]>
+    <link rel="stylesheet" href="../../css/materialdesignicons.css"/>
+    <link rel="stylesheet" href="../../css/slick-1.6.0.min.css"/>
+    <link rel="stylesheet" href="../../css/slick-theme-1.6.0.min.css"/>
+    <![endif]-->
+
+    <!-- Google Tag Manager -->
 <script>
 (function (w, d, s, l, i) {
     w[l] = w[l] || [];
@@ -124,10 +126,10 @@ window.fbAsyncInit = function () {
                    href="http://coworking.md/coworking/404-not-found/"
                    target="_blank">
                     <div class="back-color">
-                        <img itemprop="image" class="image-media" src="/images/imgm13.jpg">
+                        <img itemprop="image" class="image-media" src="/images/imgm13.jpg" alt="coworking.md">
                         <div class="black-gr"></div>
                     </div>
-                    <div itemprop="name" class="logo-media text-up"><img class="img-logo" src="/images/icon13.png">
+                    <div itemprop="name" class="logo-media text-up"><img class="img-logo" src="/images/icon13.png" alt="coworking.md">
                         Coworking
                     </div>
                     <div itemprop="description" class="media-title">"404 Not Found”: объединяет лучшие IT умы Молдовы"
@@ -158,7 +160,7 @@ window.fbAsyncInit = function () {
                         <img itemprop="image" class="image-media" src="/images/imgm10.jpg" alt="InfoMarket">
                         <div class="black-gr"></div>
                     </div>
-                    <div itemprop="name" class="logo-media"><img class="info-logo" src="/images/icon10.png" alt="InfoMarket">
+                    <div itemprop="name" class="logo-media"><i class="mdi-information-outline mdi-set" aria-hidden="true"></i>
                         InfoMarket
                     </div>
                     <div itemprop="description" class="media-title">"Noi oportunități de dezvoltare pentru tinerii specialiști IT din Moldova"
@@ -187,7 +189,7 @@ window.fbAsyncInit = function () {
                         <img itemprop="image" class="image-media" src="/images/imgm2.jpg" alt="Știrile CTC">
                         <div class="black-gr"></div>
                     </div>
-                    <div itemprop="name" class="logo-media"><i class=" fa fa-facebook-official" aria-hidden="true"></i>
+                    <div itemprop="name" class="logo-media"><i class="mdi-facebook-box mdi-set" aria-hidden="true"></i>
                         Știrile CTC
                     </div>
                     <div itemprop="description" class="media-title">La serviciu, ca acasă. Freelancer-ii din Chişinău au
@@ -615,6 +617,12 @@ window.fbAsyncInit = function () {
         </div>
     </div>
 </footer>
+
+<!--[if !IE]>-->
+<link rel="stylesheet" href="../../css/materialdesignicons.css" lazyload="1"/>
+<link rel="stylesheet" href="../../css/slick-1.6.0.min.css" lazyload="2"/>
+<link rel="stylesheet" href="../../css/slick-theme-1.6.0.min.css" lazyload="3"/>
+<!-- <![endif]-->
 
 <script type="text/javascript" src="../../js/jquery-1.11.0.min.js"></script>
 <script type="text/javascript" src="../../js/slick-1.6.0.min.js"></script>
