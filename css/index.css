@@ -1203,7 +1203,7 @@ input:focus {
   font-size: 18px;
   font-weight: normal;
   position: absolute;
-  pointer-events: none;
+  pointer-events: auto;
   left: 5px;
   top: 10px;
   transition: 0.2s ease all;
@@ -1252,7 +1252,7 @@ input:focus ~ .bar:before, input:focus ~ .bar:after {
   width: 100px;
   top: 25%;
   left: 0;
-  pointer-events: none;
+  pointer-events: auto;
   opacity: 0.5; }
 
 /* active state */
@@ -1735,6 +1735,9 @@ input:focus ~ .highlight {
   visibility: hidden;
   opacity: 0;
   z-index: 7; }
+  .overlay .popup .content iframe, .overlay1 .popup .content iframe {
+    width: 100%;
+    height: 100%; }
   .overlay.light, .overlay1.light {
     background: rgba(255, 255, 255, 0.5); }
   .overlay .cancel, .overlay1 .cancel {
