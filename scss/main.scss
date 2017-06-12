@@ -541,9 +541,9 @@ body {
     }
   }
   &.thankyou {
-    min-height: unset;
+    min-height: 0;
     .main-block {
-      min-height: unset;
+      min-height: 0;
       background: #f5f5f4;
       .container {
         &.new-page {
@@ -1386,7 +1386,7 @@ input:focus {
     font-size:18px;
     font-weight:normal;
     position:absolute;
-    pointer-events:none;
+    pointer-events:auto;
     left:5px;
     top:10px;
     transition:0.2s ease all;
@@ -1436,7 +1436,7 @@ input:focus ~ .bar:before, input:focus ~ .bar:after {
   width:100px;
   top:25%;
   left:0;
-  pointer-events:none;
+  pointer-events:auto;
   opacity:0.5;
 }
 
@@ -1446,16 +1446,3 @@ input:focus ~ .highlight {
   -moz-animation:inputHighlighter 0.3s ease;
   animation:inputHighlighter 0.3s ease;
 }
-
-//@-webkit-keyframes inputHighlighter {
-//  from { background:#FF5533; }
-//  to 	{ width:0; background:transparent; }
-//}
-//@-moz-keyframes inputHighlighter {
-//  from { background:#FF5533; }
-//  to 	{ width:0; background:transparent; }
-//}
-//@keyframes inputHighlighter {
-//  from { background:#FF5533; }
-//  to 	{ width:0; background:transparent; }
-//}

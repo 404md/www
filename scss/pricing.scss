@@ -2,8 +2,8 @@
 .btn-plan {
   .button {
     padding:0 10px;
-    background: unset;
-    font-size: unset;
+    background: transparent;
+    font-size: small;
     border-color: white;
     &:hover {
       color:white;
@@ -82,7 +82,6 @@
             position: relative;
             display: flex;
             flex-direction:column;
-            
             img {
               width: 100%;
               filter: grayscale(100%);
@@ -173,6 +172,14 @@
 }
 
 .overlay, .overlay1{
+  .popup {
+    .content {
+      iframe {
+        width: 100%;
+        height: 100%;
+      }
+    }
+  }
   position: fixed;
   top: 0;
   bottom: 0;

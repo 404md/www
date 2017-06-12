@@ -101,7 +101,7 @@
    */
   $contactForm.on('submit', function (e) {
     e.preventDefault();
-    $('#msg').val('');
+    $('.empty-field').val('');
   });
 
   /**
