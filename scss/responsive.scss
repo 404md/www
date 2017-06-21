@@ -874,6 +874,17 @@
 }
 
 @media (max-width: 736px) and (max-height: 414px){
+  .container {
+    &.container-calendar {
+      .calendar {
+        top: auto;
+        position: static;
+        -ms-transform: none;
+        -webkit-transform: none;
+        transform: none;
+      }
+    }
+  }
   .popup {
     .content {
       height: 100%;
@@ -1780,6 +1791,17 @@
 }
 
 @media (max-width: 320px)  and  (max-width: 360px) {
+  .container {
+    &.container-calendar {
+      .calendar {
+        position: static;
+        top: auto;
+        -ms-transform: none;
+        -webkit-transform: none;
+        transform: none;
+      }
+    }
+  }
   .popup {
     .close {
       right: 7px;

@@ -1446,3 +1446,25 @@ input:focus ~ .highlight {
   -moz-animation:inputHighlighter 0.3s ease;
   animation:inputHighlighter 0.3s ease;
 }
+
+.container {
+  &.container-calendar {
+    height: 100vh;
+    .calendar {
+      top: 50%;
+      -ms-transform: translateY(-50%);
+      -webkit-transform: -webkit-translateY (-50%);
+      transform: translateY(-50%);
+      position: relative;
+      text-align: center;
+      .logo {
+        a {
+          display: inline-block;
+          img {
+            height: 70px;
+          }
+        }
+      }
+    }
+  }
+}
