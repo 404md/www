@@ -17,10 +17,12 @@
 <meta name="twitter:image" content="https://www.404.md/images/fb.jpeg"/>
 <meta name="twitter:url" content="https://www.404.md/ro/"/>
 <link rel="icon" href="/favicon.png" type="image/png"/>
-<link rel="stylesheet" href="../css/index.min.css"/>
-<link rel="stylesheet" href="../css/font-awesome-4.7.0.min.css"/>
-<link rel="stylesheet" href="../css/materialdesignicons.css"/>
-<!-- Google Tag Manager -->
+    <link rel="stylesheet" href="../css/index.min.css"/>
+    <!--[if IE]>
+    <link rel="stylesheet" href="../css/materialdesignicons.css"/>
+    <![endif]-->
+
+    <!-- Google Tag Manager -->
 <script>
 (function (w, d, s, l, i) {
     w[l] = w[l] || [];
@@ -115,11 +117,11 @@ window.fbAsyncInit = function () {
     <div class="container">
         <section class="partners" itemscope itemtype="https://schema.org/Organization">
             <div class="usaid">
-                <img itemprop="logo" src="../images/logo-usaid.png" alt="USAID from the American People" />
+                <img itemprop="logo" src="../images/logo-usaid.svg" alt="USAID from the American People" />
                 <meta itemprop="url" content="https://www.404.md/images/logo-usaid.png">
             </div>
             <div class="sweden">
-                <img itemprop="logo" src="../images/logo-sweden.png" alt="Government of Sweden" />
+                <img itemprop="logo" src="../images/sweden.svg" alt="Government of Sweden" />
                 <meta itemprop="url" content="https://www.404.md/images/logo-sweden.png">
             </div>
             <div class="pycoding">
@@ -178,8 +180,8 @@ window.fbAsyncInit = function () {
             <div class="left-footer">
                 2017 &copy; PyCoding SRL
                 <a href="/terms/">Termeni de Utilizare</a>
-                <a class="language" href="/"><img src="../images/flag-us.png"></a>
-                <a class="language" href="/ru/"><img src="../images/flag-ru.png"></a>
+                <a class="language" href="/"><img src="../images/flag-us.png" alt="Amarican Flag"></a>
+                <a class="language" href="/ru/"><img src="../images/flag-ru.png" alt="Russian Flag"></a>
             </div>
             <div class="right-footer">
                 <ul class="">
@@ -196,6 +198,10 @@ window.fbAsyncInit = function () {
         </div>
     </div>
 </footer>
+
+<!--[if !IE]>-->
+<link rel="stylesheet" href="../css/materialdesignicons.css" lazyload="1"/>
+<!-- <![endif]-->
 
 <script type="text/javascript" src="../js/jquery-1.11.0.min.js"></script>
 <script type="text/javascript" src="../js/main.min.js"></script>

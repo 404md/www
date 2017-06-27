@@ -18,11 +18,13 @@
 <meta name="twitter:url" content="https://www.404.md/ru/terms/"/>
 <link rel="icon" href="/favicon.png" type="image/png"/>
 <link rel="stylesheet" href="../../css/index.min.css"/>
-<link rel="stylesheet" href="../../css/slick-1.6.0.min.css"/>
-<link rel="stylesheet" href="../../css/slick-theme-1.6.0.min.css"/>
-<link rel="stylesheet" href="../../css/font-awesome-4.7.0.min.css"/>
-<link rel="stylesheet" href="../../css/materialdesignicons.css"/>
-<!-- Google Tag Manager -->
+    <!--[if IE]>
+    <link rel="stylesheet" href="../../css/materialdesignicons.css"/>
+    <link rel="stylesheet" href="../../css/slick-1.6.0.min.css"/>
+    <link rel="stylesheet" href="../../css/slick-theme-1.6.0.min.css"/>
+    <![endif]-->
+
+    <!-- Google Tag Manager -->
 <script>(function (w, d, s, l, i) {
     w[l] = w[l] || [];
     w[l].push({
@@ -499,7 +501,7 @@ window.fbAsyncInit = function () {
                     </div>
                 </div>
                 <div class="image-members">
-                    <img src="../../images/gallery-10.jpg">
+                    <img src="../../images/gallery-10.jpg" alt="Дмитрий Д.">
                 </div>
             </div>
             <div class="pic">
@@ -518,7 +520,7 @@ window.fbAsyncInit = function () {
                     </div>
                 </div>
                 <div class="image-members">
-                    <img src="../../images/gallery-11.jpg">
+                    <img src="../../images/gallery-11.jpg" alt="Татьяна С.">
                 </div>
             </div>
             <div class="pic">
@@ -537,7 +539,7 @@ window.fbAsyncInit = function () {
                     </div>
                 </div>
                 <div class="image-members">
-                    <img src="../../images/gallery-12.jpg">
+                    <img src="../../images/gallery-12.jpg" alt="Дмитрий С.">
                 </div>
             </div>
         </div>
@@ -546,8 +548,8 @@ window.fbAsyncInit = function () {
 
     <div class="container">
         <section class="partners">
-            <div class="usaid"><img src="../../images/logo-usaid.png" alt="USAID from the American People" /></div>
-            <div class="sweden"><img src="../../images/logo-sweden.png" alt="Government of Sweden" /></div>
+            <div class="usaid"><img src="../../images/logo-usaid.svg" alt="USAID from the American People" /></div>
+            <div class="sweden"><img src="../../images/sweden.svg" alt="Government of Sweden" /></div>
             <div class="pycoding"><img src="../../images/logo-pycoding.svg" alt="PyCoding Moldova" /></div>
             <div class="mitoc"><img src="../../images/logo-mitoc.svg" alt="Mitoc Group USA" /></div>
         </section>
@@ -598,8 +600,8 @@ window.fbAsyncInit = function () {
             <div class="left-footer ru-text">
                 2017 &copy; PyCoding SRL
                 <a href="/terms/">Условия Использования</a>
-                <a class="language" href="/terms/"><img src="../../images/flag-us.png"></a>
-                <a class="language" href="/ro/terms/"><img src="../../images/flag-ro.png"></a>
+                <a class="language" href="/terms/"><img src="../../images/flag-us.png" alt="American Flag"></a>
+                <a class="language" href="/ro/terms/"><img src="../../images/flag-ro.png" alt="Romanian Flag"></a>
             </div>
             <div class="right-footer">
                 <ul class="">
@@ -616,6 +618,12 @@ window.fbAsyncInit = function () {
         </div>
     </div>
 </footer>
+
+<!--[if !IE]>-->
+<link rel="stylesheet" href="../../css/materialdesignicons.css" lazyload="1"/>
+<link rel="stylesheet" href="../../css/slick-1.6.0.min.css" lazyload="2"/>
+<link rel="stylesheet" href="../../css/slick-theme-1.6.0.min.css" lazyload="3"/>
+<!-- <![endif]-->
 
 <script type="text/javascript" src="../../js/jquery-1.11.0.min.js"></script>
 <script type="text/javascript" src="../../js/slick-1.6.0.min.js"></script>

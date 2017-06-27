@@ -38,7 +38,7 @@
 .wrapper {
   &.invitation {
     .main-block {
-      min-height:unset;
+      min-height:0;
       .container {
         .add-friends {
           margin-bottom: 40px;
