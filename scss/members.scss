@@ -24,16 +24,16 @@
               &:before {
                 content: '\f053';
                 color: white;
-                font-family: FontAwesome;
+                font-family: "Material Design Icons";
               }
             }
             .slick-next {
               top: 50%;
               right: 7px;
               &:before {
-                content: '\f054';
+                content: "\F05A";
                 color: white;
-                font-family: FontAwesome;
+                font-family: "Material Design Icons";
               }
             }
             .slick-slide {
@@ -90,9 +90,9 @@
                   text-align: center;
                   .likes-instagram {
                     &:before {
-                      content: '\f08a';
+                      content: '\F2D5';
                       color: white;
-                      font-family: FontAwesome;
+                      font-family: "Material Design Icons";
                       font-size: x-large;
                       margin-right: 10px;
                     }
@@ -104,7 +104,7 @@
 
                 }
                 .hashtags {
-                  padding: 0 15px;
+                  padding: 0 20px;
                 }
               }
             }
@@ -213,11 +213,11 @@
                   padding: 7px 8px;
                   font-size: 17px;
                 }
-                .fa-facebook {
+                .mdi-facebook {
                   font-size: 15px;
-                  padding: 9px 12px;
+                  padding: 9px 10px;
                 }
-                .fa-twitter {
+                .mdi-twitter {
                   font-size: 15px;
                   padding: 9px;
                 }
