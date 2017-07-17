@@ -1395,14 +1395,14 @@ input:focus ~ .highlight {
     .wrapper.members .main-block .container .instagram.slick-initialized .slick-prev:before {
       content: '\f053';
       color: white;
-      font-family: FontAwesome; }
+      font-family: "Material Design Icons"; }
   .wrapper.members .main-block .container .instagram.slick-initialized .slick-next {
     top: 50%;
     right: 7px; }
     .wrapper.members .main-block .container .instagram.slick-initialized .slick-next:before {
-      content: '\f054';
+      content: "\F05A";
       color: white;
-      font-family: FontAwesome; }
+      font-family: "Material Design Icons"; }
   .wrapper.members .main-block .container .instagram.slick-initialized .slick-slide {
     margin-right: 10px;
     position: relative; }
@@ -1451,16 +1451,16 @@ input:focus ~ .highlight {
         transform: translate(-50%, -50%);
         text-align: center; }
         .wrapper.members .main-block .container .instagram.slick-initialized .slick-slide .hover-hash .hover-text .likes-instagram:before {
-          content: '\f08a';
+          content: '\F2D5';
           color: white;
-          font-family: FontAwesome;
+          font-family: "Material Design Icons";
           font-size: x-large;
           margin-right: 10px; }
       .wrapper.members .main-block .container .instagram.slick-initialized .slick-slide .hover-hash:hover {
         opacity: 1;
         transition: 0.5s; }
       .wrapper.members .main-block .container .instagram.slick-initialized .slick-slide .hover-hash .hashtags {
-        padding: 0 15px; }
+        padding: 0 20px; }
   .wrapper.members .main-block .container .instagram.slick-initialized .slick-list .slick-track .slick-slide {
     overflow: hidden; }
     .wrapper.members .main-block .container .instagram.slick-initialized .slick-list .slick-track .slick-slide:hover img {
@@ -1537,10 +1537,10 @@ input:focus ~ .highlight {
               .case-study .container .left-block .mockup .mockup-head .flex-row .flex-item-6 .icons-cont .five {
                 padding: 7px 8px;
                 font-size: 17px; }
-              .case-study .container .left-block .mockup .mockup-head .flex-row .flex-item-6 .icons-cont .fa-facebook {
+              .case-study .container .left-block .mockup .mockup-head .flex-row .flex-item-6 .icons-cont .mdi-facebook {
                 font-size: 15px;
-                padding: 9px 12px; }
-              .case-study .container .left-block .mockup .mockup-head .flex-row .flex-item-6 .icons-cont .fa-twitter {
+                padding: 9px 10px; }
+              .case-study .container .left-block .mockup .mockup-head .flex-row .flex-item-6 .icons-cont .mdi-twitter {
                 font-size: 15px;
                 padding: 9px; }
         .case-study .container .left-block .mockup .mockup-cont > p {
