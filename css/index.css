@@ -471,7 +471,7 @@ body {
   .wrapper.notfound-page {
     min-height: 100vh; }
     .wrapper.notfound-page .main-block.notfound {
-      height: 100vh;
+      min-height: 100vh;
       background-image: url(../images/404.png);
       background-position: 100% 50%;
       background-size: cover;
@@ -498,10 +498,20 @@ body {
           .wrapper.notfound-page .main-block.notfound .container .text-notfound .location {
             display: inline-block;
             vertical-align: sub;
-            height: 38px;
-            width: 43px; }
+            height: 48px;
+            width: 100%; }
             .wrapper.notfound-page .main-block.notfound .container .text-notfound .location #location {
-              display: block; }
+              display: inline;
+              width: 48px;
+              height: 48px;
+              text-align: center; }
+          .wrapper.notfound-page .main-block.notfound .container .text-notfound .title-notfound .name-page {
+            font-size: 150px;
+            line-height: 135px;
+            font-weight: bold; }
+          .wrapper.notfound-page .main-block.notfound .container .text-notfound .title-notfound .text-page {
+            font-size: 50px;
+            font-weight: bold; }
   .wrapper.members .new-heading {
     padding: 40px 10px; }
   .wrapper.terms .main-block .container h2 {
