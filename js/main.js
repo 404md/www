@@ -43,6 +43,12 @@ jQuery(function($) {
     $('#menu-toggle').click(function () {
         $(this).toggleClass('open');
         $('.main-nav').toggleClass("responsive-nav");
+        if ( $('#menu-toggle').hasClass('open')) {
+            $('html').css('overflow','hidden');
+        }
+        else {
+            $('html').css('overflow','scroll');
+        }
     });
 
     var isScrolling;
@@ -165,16 +171,19 @@ jQuery(function($) {
 
     $('.getprice-button').on('click',function(){
         popupOverlay.addClass('pop-up-visible');
+        $('html').css('overflow','hidden');
         popUp.show();
     });
 
     var BtnClose = $('.close');
     BtnClose.on('click',function(){
         popupOverlay.removeClass('pop-up-visible');
+        $('html').css('overflow','scroll');
     });
 
     $('.getprice-button1').on('click',function(){
         popupOverlay1.addClass('pop-up-visible');
+        $('html').css('overflow','hidden');
         popUp.show();
     });
 
@@ -183,6 +192,7 @@ jQuery(function($) {
             popUp.hide("fast");
             popupOverlay1.removeClass('pop-up-visible');
             popupOverlay.removeClass('pop-up-visible');
+            $('html').css('overflow','scroll');
         }
 
     });
@@ -195,4 +205,85 @@ jQuery(function($) {
         $(this)[ $(this).val() ? 'addClass' : 'removeClass' ]('touched');
     });
 
+    $(document).ready(function(){
+        $(".icons").hover(function(){
+            $(this).css('color', '#FF5533');
+            $(this).parent().prev().css('color', '#FF5533');
+        }, function(){
+            $(this).parent().prev().css('color', '#A9AAAB');
+            $(this).css('color', '#A9AAAB');
+        });
+    });
+
+    $(document).ready(function(){
+        $(".color-link").hover(function(){
+            $(this).css('color', '#FF5533');
+            $(this).next().find('.icons').css('color', '#FF5533');
+        }, function(){
+            $(this).next().find('.icons').css('color', '#A9AAAB');
+            $(this).css('color', '#A9AAAB');
+        });
+    });
+
+    $(document).ready(function() {
+
+        $(window).scroll(function () {
+            console.log($(window).scrollTop());
+            if ($(window).scrollTop() > 10) {
+                $('.main-nav').addClass('fixed-top');
+            }
+            if ($(window).scrollTop() < 10) {
+                $('.main-nav').removeClass("fixed-top");
+            }
+        });
+    });
+
+    $(function () {
+        var $content = $('#jsonContent');
+        var data = {
+            rss_url: 'https://blog.404.md/feed'
+        };
+        $.get('https://api.rss2json.com/v1/api.json', data, function (response) {
+            if (response.status == 'ok') {
+                var output = '';
+                $.each(response.items, function (k, item) {
+                    var visibleSm;
+                    if(k < 2){
+                        visibleSm = '';
+                    } else {
+                        visibleSm = ' visible-sm';
+                    }
+                    output += '<div class="flex-item-4' + visibleSm + '">';
+                    output += '<div class="blog-post"><header>';
+                    var tagIndex = item.description.indexOf('<img'); // Find where the img tag starts
+                    var srcIndex = item.description.substring(tagIndex).indexOf('src=') + tagIndex; // Find where the src attribute starts
+                    var srcStart = srcIndex + 5; // Find where the actual image URL starts; 5 for the length of 'src="'
+                    var srcEnd = item.description.substring(srcStart).indexOf('"') + srcStart; // Find where the URL ends
+                    var src = item.description.substring(srcStart, srcEnd); // Extract just the URL
+                    output += '<a href="'+ item.link + '" class="blog-element"><img class="img-responsive" src="' + src + '" height="240px" ></a></header>';
+                    output += '<div class="blog-content"><h4><a href="'+ item.link + '">' + item.title + '</a></h4>';
+                    var yourString = item.description.replace(/<img[^>]*>/g,""); //replace with your string.
+                    var maxLength = 120 // maximum number of characters to extract
+                    //trim the string to the maximum length
+                    var trimmedString = yourString.substr(0, maxLength);
+                    //re-trim if we are in the middle of a word
+                    trimmedString = trimmedString.substr(0, Math.min(trimmedString.length, trimmedString.lastIndexOf(" ")));
+                    // output += '<p>' + trimmedString + '...</p>';
+                    output += '</div></div></div>';
+                    return k < 2;
+                });
+                $content.html(output);
+            }
+        });
+    });
+
 });
+
+  function openNav() {
+    document.getElementById("mySidenav").style.width = "100%";
+  }
+
+function closeNav() {
+    document.getElementById("mySidenav").style.width = "0";
+}
+

@@ -311,7 +311,6 @@ window.fbAsyncInit = function () {
                     <div class="icons-text" itemprop="name">Servicii De Curațăre</div>
                 </div>
             </div>
-
         </div>
     </section>
 
@@ -567,17 +566,57 @@ window.fbAsyncInit = function () {
                 <img itemprop="logo" src="../../images/logo-mitoc.svg" alt="Mitoc Group USA" />
                 <meta itemprop="url" content="https://www.404.md/images/logo-mitoc.svg">
             </div>
+            <hr>
+        </section>
+        <section id="blog" class="blog">
+            <header class="section-heading">
+                <h2>Recent from Our Blog:</h2>
+            </header>
+            <div id="blogContent" class="section-content">
+                <div id="jsonContent" class="flex-row"></div>
+            </div>
+            <div class="text-center">
+                <a id="loadBlogPosts" class="btn btn-dark" href='//blog.404.md'></a>
+            </div>
         </section>
     </div>
 </div>
 
 <footer>
     <div class="contacts">
-        <div class="container get-in-touch flex-row">
-            <div class="block-1 flex-item-4"><img src="../../images/logo-right-black.svg" alt="Logo 404 Not Found" /></div>
-            <div class="block-2 flex-item-4" itemscope itemtype="https://schema.org/Organization">
-                <h4 class="connect-us">Contactează-ne</h4>
-                <div class="one-line">
+        <div class="container">
+            <div class="flex-row footer-up">
+                <div class="flex-item-4">
+                    <i class="mdi mdi-phone color-link"></i>
+                    <div class="phones">
+                        <a class="icons" href="tel:+37322808291">(+373) 22 808 291</a>
+                        <a class="icons" href="tel:+37360999007">(+373) 60 999 007</a>
+                    </div>
+                </div>
+                <div class="flex-item-4 btn-center">
+                    <i class="mdi mdi-email-outline color-link"></i>
+                    <div class="mail">
+                        <a class="icons" href="mailto:info@404.md" itemprop="email">info@404.md</a>
+                    </div>
+                </div>
+                <div class="flex-item-4 btn-right">
+                    <i class="mdi mdi-map-marker color-link"></i>
+                    <div class="map-location">
+                        <a class="icons" itemprop="streetAddress" href="https://goo.gl/maps/GvA1ChgPJ4U2"><span itemprop="streetAddress">Bul. Dacia 23, et. 3</span>
+                            <span class="one-line new-line" itemprop="addressLocality">Chișinău, Moldova</span></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="flex-row footer-down">
+                <div class="flex-item-4">
+                    <img class="logo-footer" src="/images/logo-footer.svg" alt="Logo 404 Not Found"/>
+                    <div class="flag">
+                        <a class="language" href="/coworking"><img src="../../images/flag-us.png" alt="Amarican Flag"></a>
+                        <a class="language" href="/ru/coworking"><img src="../../images/flag-ru.png" alt="Russian Flag"></a>
+                    </div>
+                </div>
+                <div class="flex-item-4 media-icons">
                     <a href="https://www.facebook.com/404moldova" itemprop="sameAs"><i class="mdi-facebook mdi-set" aria-hidden="true"></i></a>
                     <a href="https://instagram.com/404_moldova" itemprop="sameAs"><i class="mdi-instagram mdi-set"></i></a>
                     <a href="https://twitter.com/404moldova" itemprop="sameAs"><i class="mdi-twitter mdi-set"></i></a>
@@ -585,54 +624,15 @@ window.fbAsyncInit = function () {
                     <a href="https://www.youtube.com/channel/UCXY-0ZUU-mvxbzWuLGZp5LQ" itemprop="sameAs"><i class="mdi-youtube-play mdi-set"></i></a>
                     <a href="https://www.messenger.com/t/404Moldova/" itemprop="sameAs"><i class="mdi-facebook-messenger mdi-set"></i></a>
                 </div>
-            </div>
-            <div class="block-3 flex-item-4" itemscope itemtype="https://schema.org/PostalAddress">
-                <div class="right-side">
-                    <h4 class="connect-us">Date de contact</h4>
-                    <div class="one-line">
-                        <i class="mdi-email-outline mdi-set"></i>
-                        <a class="color-link" href="mailto:info@404.md" itemprop="email">info@404.md</a>
-                    </div>
-                    <div class="one-line">
-                        <i class="mdi-phone mdi-set"></i>
-                        <div class="phones">
-                            <a class="color-link" href="tel:+37322808291">(+373) 22 808 291</a>
-                            <a class="color-link" href="tel:+37360999007">(+373) 60 999 007</a>
-                        </div>
-                    </div>
-                    <div class="one-line">
-                        <i class="mdi-map-marker mdi-set"></i>
-                        <a class="color-link" itemprop="streetAddress" href="https://goo.gl/maps/GvA1ChgPJ4U2"><span itemprop="streetAddress">Bul. Dacia #23, et. 3</span>
-                            <span itemprop="addressLocality" class="one-line new-line">Chișinău, Moldova</span></a>
-                    </div>
+                <div class="flex-item-4 btn-right last-block ru_ro-block">
+                    2017 &copy; PyCoding SRL
+                    <a href="/terms/">Termeni de Utilizare</a>
                 </div>
             </div>
         </div>
     </div>
-
-    <div class="footer-black">
-        <div class="container">
-            <div class="left-footer">
-                2017 &copy; PyCoding SRL
-                <a href="/terms/">Termeni de Utilizare</a>
-                <a class="language" href="/coworking/"><img src="../../images/flag-us.png" alt="American Flag"></a>
-                <a class="language" href="/ru/coworking/"><img src="../../images/flag-ru.png" alt="Russian Flag"></a>
-            </div>
-            <div class="right-footer">
-                <ul class="">
-                    <li><a href="/ro/coworking/">Coworking</a></li>
-                    <li><a href="/ro/members/">Membri</a></li>
-                    <li><a href="/ro/media/">Media</a></li>
-                    <li><a href="/ro/gallery/">Galerie</a></li>
-                    <li><a href="/ro/contact/">Contacte</a></li>
-                    <li><a href="https://blog.404.md">Blog</a></li>
-                    <li><a href="/ro/tour/">Rezervă o Vizită</a></li>
-                </ul>
-            </div>
-            <div class="clear"></div>
-        </div>
-    </div>
 </footer>
+
 
 <!--[if !IE]>-->
 <link rel="stylesheet" href="../../css/materialdesignicons.css" lazyload="1"/>
