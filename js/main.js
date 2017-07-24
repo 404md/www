@@ -204,8 +204,7 @@ jQuery(function($) {
     $(':required, .required').on('blur keydown', function() {
         $(this)[ $(this).val() ? 'addClass' : 'removeClass' ]('touched');
     });
-
-    $(document).ready(function(){
+    
         $(".icons").hover(function(){
             $(this).css('color', '#FF5533');
             $(this).parent().prev().css('color', '#FF5533');
@@ -213,9 +212,8 @@ jQuery(function($) {
             $(this).parent().prev().css('color', '#A9AAAB');
             $(this).css('color', '#A9AAAB');
         });
-    });
 
-    $(document).ready(function(){
+
         $(".color-link").hover(function(){
             $(this).css('color', '#FF5533');
             $(this).next().find('.icons').css('color', '#FF5533');
@@ -223,20 +221,17 @@ jQuery(function($) {
             $(this).next().find('.icons').css('color', '#A9AAAB');
             $(this).css('color', '#A9AAAB');
         });
-    });
 
-    $(document).ready(function() {
 
-        $(window).scroll(function () {
-            console.log($(window).scrollTop());
+    $(window).scroll(function () {
             if ($(window).scrollTop() > 10) {
                 $('.main-nav').addClass('fixed-top');
             }
-            if ($(window).scrollTop() < 10) {
+            else {
                 $('.main-nav').removeClass("fixed-top");
             }
         });
-    });
+
 
     $(function () {
         var $content = $('#jsonContent');
