@@ -717,8 +717,8 @@ body {
       border: 2px solid transparent; }
       .main-nav .container .nav-top .blog:hover {
         border-color: #000000;
-        color: #ffffff;
-        background: #000000; }
+        color: #000000;
+        background: #ffffff; }
 
 /* Main Footer*/
 .contacts {
@@ -1566,7 +1566,8 @@ input:focus ~ .highlight {
         opacity: 1;
         transition: 0.5s; }
       .wrapper.members .main-block .container .instagram.slick-initialized .slick-slide .hover-hash .hashtags {
-        padding: 0 20px; }
+        padding: 0 20px;
+        word-break: break-all; }
   .wrapper.members .main-block .container .instagram.slick-initialized .slick-list .slick-track .slick-slide {
     overflow: hidden; }
     .wrapper.members .main-block .container .instagram.slick-initialized .slick-list .slick-track .slick-slide:hover img {
@@ -1985,6 +1986,11 @@ input:focus ~ .highlight {
       padding-bottom: 15px; }
     .pic .img-hover .we-love .comment span {
       font-size: 15px; } }
+@media (max-width: 1246px) {
+  .wrapper .main-block .main-info .local-com h1, .wrapper .main-block .main-info .local-com h2, .wrapper .main-block .main-info.ru-vertion .local-com h1, .wrapper .main-block .main-info.ru-vertion .local-com h2 {
+    font-size: 50px;
+    line-height: 50px;
+    margin-bottom: 15px; } }
 @media (max-width: 1246px) and (min-width: 768px) {
   .contacts .footer-down .last-block.ru_ro-block {
     line-height: 20px;
@@ -2131,7 +2137,7 @@ input:focus ~ .highlight {
   .text-upercase {
     font-size: 20px; }
 
-  .wrapper .main-block .main-info .local-com h1, .wrapper .main-block .main-info .local-com h2 {
+  .wrapper .main-block .main-info.ru-vertion .local-com h1, .wrapper .main-block .main-info.ru-vertion .local-com h2 {
     font-size: 50px;
     line-height: 50px;
     margin-bottom: 15px; }
@@ -2694,6 +2700,18 @@ input:focus ~ .highlight {
       text-align: center; }
   .case-study .container .left-block .mockup {
     margin-bottom: 0; } }
+@media (max-height: 495px) {
+  .wrapper .main-block .main-info .local-com h1, .wrapper .main-block .main-info .local-com h2, .wrapper .main-block .main-info.ru-vertion .local-com h1, .wrapper .main-block .main-info.ru-vertion .local-com h2 {
+    font-size: 25px;
+    line-height: 25px;
+    margin-bottom: 10px; }
+  .wrapper .main-block .main-info .local-com .more, .wrapper .main-block .main-info.ru-vertion .local-com .more {
+    margin-top: 10px; }
+    .wrapper .main-block .main-info .local-com .more .more-about, .wrapper .main-block .main-info.ru-vertion .local-com .more .more-about {
+      font-size: 15px;
+      padding: 5px 45px; }
+  .wrapper .main-block .main-info .local-com .text-center, .wrapper .main-block .main-info.ru-vertion .local-com .text-center {
+    font-size: 15px; } }
 @media (max-width: 550px) {
   #mc_embed_signup.coworking .mc-field-group {
     width: 100%;
