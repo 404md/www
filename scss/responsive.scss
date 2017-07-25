@@ -889,6 +889,21 @@
 
 @media (max-height: 595px) {
   .main-nav {
+    .container {
+      .nav-top {
+        .navt {
+          li {
+            a {
+              &.link {
+                &:hover {
+                  color:#000000;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
     &.responsive-nav {
       .container {
         .nav-top {
@@ -896,6 +911,16 @@
            .navt {
              justify-content: space-around;
              -webkit-justify-content: space-around;
+             li {
+               &:hover {
+                 background: transparent;
+               }
+               .link {
+                 &:hover {
+                   color:#ffffff;
+                 }
+               }
+             }
            }
           }
           .navt {
@@ -905,6 +930,14 @@
             li {
               &:last-child {
                 padding: 10px 0;
+              }
+              &:hover {
+                background: transparent;
+              }
+              .link {
+                &.active {
+                  color:#FF5533;
+                }
               }
             }
           }
@@ -1380,7 +1413,7 @@
   }
 }
 
-@media (max-width:736px) and (min-height: 320px) {
+@media (max-width:736px)  {
   .wrapper {
     &.main {
       .main-block {
