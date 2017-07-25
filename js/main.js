@@ -206,20 +206,20 @@ jQuery(function($) {
     });
     
         $(".icons").hover(function(){
-            $(this).css('color', '#FF5533');
-            $(this).parent().prev().css('color', '#FF5533');
+            $(this).addClass('text-color');
+            $(this).parent().prev().addClass('text-color');
         }, function(){
-            $(this).parent().prev().css('color', '#A9AAAB');
-            $(this).css('color', '#A9AAAB');
+            $(this).parent().prev().removeClass('text-color');
+            $(this).removeClass('text-color');
         });
 
 
         $(".color-link").hover(function(){
-            $(this).css('color', '#FF5533');
-            $(this).next().find('.icons').css('color', '#FF5533');
+            $(this).addClass('text-color');
+            $(this).next().find('.icons').addClass('text-color');
         }, function(){
-            $(this).next().find('.icons').css('color', '#A9AAAB');
-            $(this).css('color', '#A9AAAB');
+            $(this).next().find('.icons').removeClass('text-color');
+            $(this).removeClass('text-color');
         });
 
 
@@ -250,20 +250,15 @@ jQuery(function($) {
                     }
                     output += '<div class="flex-item-4' + visibleSm + '">';
                     output += '<div class="blog-post"><header>';
-                    var tagIndex = item.description.indexOf('<img'); // Find where the img tag starts
-                    var srcIndex = item.description.substring(tagIndex).indexOf('src=') + tagIndex; // Find where the src attribute starts
-                    var srcStart = srcIndex + 5; // Find where the actual image URL starts; 5 for the length of 'src="'
-                    var srcEnd = item.description.substring(srcStart).indexOf('"') + srcStart; // Find where the URL ends
-                    var src = item.description.substring(srcStart, srcEnd); // Extract just the URL
+                    var tagIndex = item.description.indexOf('<img');
+                    var srcIndex = item.description.substring(tagIndex).indexOf('src=') + tagIndex;
+                    var srcStart = srcIndex + 5;
+                    var srcEnd = item.description.substring(srcStart).indexOf('"') + srcStart; 
+                    var src = item.description.substring(srcStart, srcEnd); 
                     output += '<a href="'+ item.link + '" class="blog-element"><img class="img-responsive" src="' + src + '" height="240px" ></a></header>';
                     output += '<div class="blog-content"><h4><a href="'+ item.link + '">' + item.title + '</a></h4>';
-                    var yourString = item.description.replace(/<img[^>]*>/g,""); //replace with your string.
-                    var maxLength = 120 // maximum number of characters to extract
-                    //trim the string to the maximum length
-                    var trimmedString = yourString.substr(0, maxLength);
-                    //re-trim if we are in the middle of a word
-                    trimmedString = trimmedString.substr(0, Math.min(trimmedString.length, trimmedString.lastIndexOf(" ")));
-                    // output += '<p>' + trimmedString + '...</p>';
+                    var yourString = item.description.replace(/<img[^>]*>/g,""); 
+                    var maxLength = 120;
                     output += '</div></div></div>';
                     return k < 2;
                 });
@@ -271,6 +266,5 @@ jQuery(function($) {
             }
         });
     });
-
 });
 

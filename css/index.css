@@ -738,7 +738,10 @@ body {
     color: #A9AAAB;
     font-size: 52px;
     margin-right: 20px;
-    vertical-align: middle; }
+    vertical-align: middle;
+    cursor: pointer; }
+    .contacts .mdi.text-color, .contacts .logo-footer.text-color {
+      color: #FF5533; }
     .contacts .mdi.mdi-phone, .contacts .logo-footer.mdi-phone {
       display: inline-block; }
   .contacts a {
@@ -753,6 +756,8 @@ body {
         margin-right: 10px; }
     .contacts .phones a, .contacts .phones span, .contacts .mail a, .contacts .mail span, .contacts .map-location a, .contacts .map-location span, .contacts .flag a, .contacts .flag span {
       display: block; }
+    .contacts .phones .icons.text-color, .contacts .mail .icons.text-color, .contacts .map-location .icons.text-color, .contacts .flag .icons.text-color {
+      color: #FF5533; }
   .contacts .footer-down {
     padding: 40px 0;
     position: relative; }
