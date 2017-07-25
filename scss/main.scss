@@ -730,6 +730,10 @@ body {
     font-size: 52px;
     margin-right: 20px;
     vertical-align: middle;
+    cursor: pointer;
+    &.text-color {
+      color:#FF5533;
+    }
     &.mdi-phone {
       display: inline-block;
     }
@@ -750,7 +754,13 @@ body {
     a, span {
       display: block;
     }
+    .icons {
+      &.text-color {
+        color:#FF5533;
+      }
+    }
   }
+
   .footer-down {
     padding: 40px 0;
     position: relative;

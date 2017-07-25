@@ -738,7 +738,10 @@ body {
     color: #A9AAAB;
     font-size: 52px;
     margin-right: 20px;
-    vertical-align: middle; }
+    vertical-align: middle;
+    cursor: pointer; }
+    .contacts .mdi.text-color, .contacts .logo-footer.text-color {
+      color: #FF5533; }
     .contacts .mdi.mdi-phone, .contacts .logo-footer.mdi-phone {
       display: inline-block; }
   .contacts a {
@@ -753,6 +756,8 @@ body {
         margin-right: 10px; }
     .contacts .phones a, .contacts .phones span, .contacts .mail a, .contacts .mail span, .contacts .map-location a, .contacts .map-location span, .contacts .flag a, .contacts .flag span {
       display: block; }
+    .contacts .phones .icons.text-color, .contacts .mail .icons.text-color, .contacts .map-location .icons.text-color, .contacts .flag .icons.text-color {
+      color: #FF5533; }
   .contacts .footer-down {
     padding: 40px 0;
     position: relative; }
@@ -2396,15 +2401,25 @@ input:focus ~ .highlight {
   .footer-carousel .pic .we-love .avatar-comment {
     padding-top: 15px; } }
 @media (max-height: 595px) {
+  .main-nav .container .nav-top .navt li a.link:hover {
+    color: #000000; }
   .main-nav.responsive-nav .container .nav-top.main-page-nav .navt {
     justify-content: space-around;
     -webkit-justify-content: space-around; }
+    .main-nav.responsive-nav .container .nav-top.main-page-nav .navt li:hover {
+      background: transparent; }
+    .main-nav.responsive-nav .container .nav-top.main-page-nav .navt li .link:hover {
+      color: #ffffff; }
   .main-nav.responsive-nav .container .nav-top .navt {
     justify-content: space-around;
     -webkit-justify-content: space-around;
     line-height: normal; }
     .main-nav.responsive-nav .container .nav-top .navt li:last-child {
-      padding: 10px 0; } }
+      padding: 10px 0; }
+    .main-nav.responsive-nav .container .nav-top .navt li:hover {
+      background: transparent; }
+    .main-nav.responsive-nav .container .nav-top .navt li .link.active {
+      color: #FF5533; } }
 @media (max-width: 600px) {
   .fb-container {
     display: none; }
@@ -2619,7 +2634,7 @@ input:focus ~ .highlight {
     height: 40px; }
   .case-study .container .right-block .right-info .right-header {
     font-size: 30px; } }
-@media (max-width: 736px) and (min-height: 320px) {
+@media (max-width: 736px) {
   .wrapper.main .main-block .main-info .local-com h1, .wrapper.main .main-block .main-info .local-com h2 {
     font-size: 30px;
     line-height: 20px; }
