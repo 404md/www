@@ -34,6 +34,22 @@
   }
 }
 
+@media (max-width: 1246px) {
+  .wrapper {
+    .main-block {
+      .main-info, .main-info.ru-vertion {
+        .local-com {
+          h1, h2 {
+            font-size: 50px;
+            line-height: 50px;
+            margin-bottom: 15px;
+          }
+        }
+      }
+    }
+  }
+}
+
 @media (max-width: 1246px) and (min-width: 768px) {
  .contacts {
    .footer-down {
@@ -51,7 +67,7 @@
  }
 }
 
-@media (max-width: 1200px) {
+@media (max-width: 1200px)  {
   #menu-toggle {
     top:23px;
   }
@@ -270,11 +286,13 @@
   .wrapper {
     .main-block {
       .main-info {
-        .local-com {
-          h1,h2 {
-            font-size: 50px;
-            line-height: 50px;
-            margin-bottom: 15px;
+        &.ru-vertion {
+          .local-com {
+            h1,h2 {
+              font-size: 50px;
+              line-height: 50px;
+              margin-bottom: 15px;
+            }
           }
         }
       }
@@ -1545,6 +1563,32 @@
         }
         .mockup {
           margin-bottom: 0;
+        }
+      }
+    }
+  }
+}
+
+@media (max-height: 495px)  {
+  .wrapper {
+    .main-block {
+      .main-info, .main-info.ru-vertion {
+        .local-com {
+          h1, h2 {
+            font-size:25px;
+            line-height: 25px;
+            margin-bottom: 10px;
+          }
+          .more {
+            margin-top: 10px;
+            .more-about {
+              font-size: 15px;
+              padding: 5px 45px;
+            }
+          }
+          .text-center {
+            font-size: 15px;
+          }
         }
       }
     }
