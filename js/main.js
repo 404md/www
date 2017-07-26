@@ -155,7 +155,7 @@ jQuery(function($) {
         $('.image').addClass('video');
         $('.media-image').hide();
         $('.show-video').removeClass('hidden');
-        $('#video').attr('src', 'https://www.youtube.com/embed/ZGbORDi_UPA?rel=0&amp;controls=0&amp;showinfo=0');
+        $('#video').attr('src', 'https://www.youtube.com/embed/ZGbORDi_UPA?rel=0&amp;controls=0&amp;showinfo=0;autoplay=1');
     });
 
     $('.btn-close').on('click', function(){

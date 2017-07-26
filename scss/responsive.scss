@@ -50,11 +50,10 @@
   }
 }
 
-@media (max-width: 1246px) and (min-width: 768px) {
+@media (max-width: 1246px) and (min-width: 737px) {
  .contacts {
    .footer-down {
      .last-block {
-       &.ru_ro-block {
          line-height: 20px;
          display: flex;
          flex-direction: column;
@@ -65,7 +64,6 @@
      }
    }
  }
-}
 
 @media (max-width: 1200px)  {
   #menu-toggle {
