@@ -1494,7 +1494,7 @@ input:focus ~ .highlight {
 .wrapper.members .main-block .container.instagram-block {
   margin-bottom: 40px; }
 .wrapper.members .main-block .container .instagram.slick-initialized {
-  margin-right: -10px; }
+  margin-right: -15px; }
   .wrapper.members .main-block .container .instagram.slick-initialized .slick-prev {
     top: 50%;
     left: auto;
@@ -1511,7 +1511,7 @@ input:focus ~ .highlight {
       color: white;
       font-family: "Material Design Icons"; }
   .wrapper.members .main-block .container .instagram.slick-initialized .slick-slide {
-    margin-right: 10px;
+    margin-right: 15px;
     position: relative; }
     .wrapper.members .main-block .container .instagram.slick-initialized .slick-slide .button-video {
       position: absolute;
@@ -1770,7 +1770,7 @@ input:focus ~ .highlight {
 
 /*Offers Slick*/
 .offers.slick-initialized.slick-slider {
-  margin: 0 -12px; }
+  margin: 0 -7px; }
 .offers.slick-initialized .slick-list .slick-track {
   display: flex; }
   .offers.slick-initialized .slick-list .slick-track .plans {
@@ -1834,8 +1834,8 @@ input:focus ~ .highlight {
         background: #95989A;
         margin-bottom: 24px; }
 .offers.slick-initialized .slick-slide {
-  margin-right: 12px;
-  margin-left: 12px;
+  margin-right: 7px;
+  margin-left: 7px;
   height: auto;
   float: none;
   display: flex;
@@ -2511,7 +2511,8 @@ input:focus ~ .highlight {
     .offers.slick-initialized .slick-list .slick-track .plans .button {
       background: #FF5533;
       border: 2px solid #FF5533;
-      color: #ffffff; }
+      color: #ffffff;
+      font-size: 16px; }
   .offers.slick-initialized .slick-list .slick-track .plans-points ul li {
     color: #FF5533; }
 
