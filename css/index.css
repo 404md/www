@@ -1445,10 +1445,11 @@ input:focus ~ .highlight {
 
 .logo-media {
   position: absolute;
-  top: 125px;
+  bottom: 0;
   padding: 20px;
   color: white;
-  font-size: 17px; }
+  font-size: 17px;
+  z-index: 1; }
   .logo-media .mdi-close-circle-outline {
     font-size: 19px;
     margin-right: 5px; }
@@ -1991,12 +1992,12 @@ input:focus ~ .highlight {
     font-size: 50px;
     line-height: 50px;
     margin-bottom: 15px; } }
-@media (max-width: 1246px) and (min-width: 768px) {
-  .contacts .footer-down .last-block.ru_ro-block {
+@media (max-width: 1246px) and (min-width: 737px) {
+  .contacts .footer-down .last-block {
     line-height: 20px;
     display: flex;
     flex-direction: column; }
-    .contacts .footer-down .last-block.ru_ro-block a {
+    .contacts .footer-down .last-block a {
       display: inline-block; } }
 @media (max-width: 1200px) {
   #menu-toggle {
