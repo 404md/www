@@ -213,6 +213,7 @@
           justify-content: center;
           -webkit-justify-content: center;
           overflow: hidden;
+          text-align: center;
         }
         &.main-page-nav {
           .navt {
@@ -275,6 +276,7 @@
             -webkit-flex-direction: column;
             justify-content: center;
             -webkit-justify-content: center;
+            text-align: center;
           }
         }
       }
@@ -1060,7 +1062,7 @@
       text-align: left;
     }
     .footer-down {
-      padding: 20px 0;
+      padding: 30px 0 20px;
       .flex-item-4 {
         &:first-child {
           margin-bottom: 20px;
