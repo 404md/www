@@ -655,9 +655,9 @@ body {
   top: 0;
   z-index: 2; }
   .main-nav.fixed-top {
-    -webkit-box-shadow: 0 10px 10px -10px #000000;
-    -moz-box-shadow: 0 10px 10px -10px #000000;
-    box-shadow: 0 10px 10px -10px #000000; }
+    -webkit-box-shadow: 0 4px 9px -7px #000;
+    -moz-box-shadow: 0 4px 9px -7px #000;
+    box-shadow: 0 4px 9px -7px #000; }
   .main-nav .container .logo {
     line-height: 100px;
     float: left; }
@@ -1567,7 +1567,7 @@ input:focus ~ .highlight {
         transition: 0.5s; }
       .wrapper.members .main-block .container .instagram.slick-initialized .slick-slide .hover-hash .hashtags {
         padding: 0 20px;
-        word-break: break-all; }
+        word-break: break-word; }
   .wrapper.members .main-block .container .instagram.slick-initialized .slick-list .slick-track .slick-slide {
     overflow: hidden; }
     .wrapper.members .main-block .container .instagram.slick-initialized .slick-list .slick-track .slick-slide:hover img {
@@ -2089,7 +2089,8 @@ input:focus ~ .highlight {
       -webkit-flex-direction: column;
       justify-content: center;
       -webkit-justify-content: center;
-      overflow: hidden; }
+      overflow: hidden;
+      text-align: center; }
     .main-nav .container .nav-top.main-page-nav .navt {
       display: none;
       position: absolute;
@@ -2132,7 +2133,8 @@ input:focus ~ .highlight {
       flex-direction: column;
       -webkit-flex-direction: column;
       justify-content: center;
-      -webkit-justify-content: center; }
+      -webkit-justify-content: center;
+      text-align: center; }
 
   .text-upercase {
     font-size: 20px; }

@@ -610,9 +610,9 @@ body {
   top:0;
   z-index: 2;
   &.fixed-top {
-    -webkit-box-shadow: 0 10px 10px -10px #000000;
-    -moz-box-shadow: 0 10px 10px -10px #000000;
-    box-shadow: 0 10px 10px -10px #000000;
+    -webkit-box-shadow: 0 4px 9px -7px #000;
+    -moz-box-shadow:0 4px 9px -7px #000;
+    box-shadow: 0 4px 9px -7px #000;
   }
   .container {
     .logo {

@@ -213,6 +213,7 @@
           justify-content: center;
           -webkit-justify-content: center;
           overflow: hidden;
+          text-align: center;
         }
         &.main-page-nav {
           .navt {
@@ -275,6 +276,7 @@
             -webkit-flex-direction: column;
             justify-content: center;
             -webkit-justify-content: center;
+            text-align: center;
           }
         }
       }
