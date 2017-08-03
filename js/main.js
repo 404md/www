@@ -43,6 +43,12 @@ jQuery(function($) {
     $('#menu-toggle').click(function () {
         $(this).toggleClass('open');
         $('.main-nav').toggleClass("responsive-nav");
+        if ( $('#menu-toggle').hasClass('open')) {
+            $('html').css('overflow','hidden');
+        }
+        else {
+            $('html').css('overflow','scroll');
+        }
     });
 
     var isScrolling;
@@ -149,7 +155,7 @@ jQuery(function($) {
         $('.image').addClass('video');
         $('.media-image').hide();
         $('.show-video').removeClass('hidden');
-        $('#video').attr('src', 'https://www.youtube.com/embed/ZGbORDi_UPA?rel=0&amp;controls=0&amp;showinfo=0');
+        $('#video').attr('src', 'https://www.youtube.com/embed/ZGbORDi_UPA?rel=0&amp;controls=0&amp;showinfo=0;autoplay=1');
     });
 
     $('.btn-close').on('click', function(){
@@ -165,16 +171,19 @@ jQuery(function($) {
 
     $('.getprice-button').on('click',function(){
         popupOverlay.addClass('pop-up-visible');
+        $('html').css('overflow','hidden');
         popUp.show();
     });
 
     var BtnClose = $('.close');
     BtnClose.on('click',function(){
         popupOverlay.removeClass('pop-up-visible');
+        $('html').css('overflow','scroll');
     });
 
     $('.getprice-button1').on('click',function(){
         popupOverlay1.addClass('pop-up-visible');
+        $('html').css('overflow','hidden');
         popUp.show();
     });
 
@@ -183,6 +192,7 @@ jQuery(function($) {
             popUp.hide("fast");
             popupOverlay1.removeClass('pop-up-visible');
             popupOverlay.removeClass('pop-up-visible');
+            $('html').css('overflow','scroll');
         }
 
     });
@@ -194,5 +204,67 @@ jQuery(function($) {
     $(':required, .required').on('blur keydown', function() {
         $(this)[ $(this).val() ? 'addClass' : 'removeClass' ]('touched');
     });
+    
+        $(".icons").hover(function(){
+            $(this).addClass('text-color');
+            $(this).parent().prev().addClass('text-color');
+        }, function(){
+            $(this).parent().prev().removeClass('text-color');
+            $(this).removeClass('text-color');
+        });
 
+
+        $(".color-link").hover(function(){
+            $(this).addClass('text-color');
+            $(this).next().find('.icons').addClass('text-color');
+        }, function(){
+            $(this).next().find('.icons').removeClass('text-color');
+            $(this).removeClass('text-color');
+        });
+
+
+    $(window).scroll(function () {
+            if ($(window).scrollTop() > 10) {
+                $('.main-nav').addClass('fixed-top');
+            }
+            else {
+                $('.main-nav').removeClass("fixed-top");
+            }
+        });
+
+
+    $(function () {
+        var $content = $('#jsonContent');
+        var data = {
+            rss_url: 'https://blog.404.md/feed'
+        };
+        $.get('https://api.rss2json.com/v1/api.json', data, function (response) {
+            if (response.status == 'ok') {
+                var output = '';
+                $.each(response.items, function (k, item) {
+                    var visibleSm;
+                    if(k < 2){
+                        visibleSm = '';
+                    } else {
+                        visibleSm = ' visible-sm';
+                    }
+                    output += '<div class="flex-item-4' + visibleSm + '">';
+                    output += '<div class="blog-post"><header>';
+                    var tagIndex = item.description.indexOf('<img');
+                    var srcIndex = item.description.substring(tagIndex).indexOf('src=') + tagIndex;
+                    var srcStart = srcIndex + 5;
+                    var srcEnd = item.description.substring(srcStart).indexOf('"') + srcStart; 
+                    var src = item.description.substring(srcStart, srcEnd); 
+                    output += '<a href="'+ item.link + '" class="blog-element"><img class="img-responsive" src="' + src + '" height="240px" ></a></header>';
+                    output += '<div class="blog-content"><h4><a href="'+ item.link + '">' + item.title + '</a></h4>';
+                    var yourString = item.description.replace(/<img[^>]*>/g,""); 
+                    var maxLength = 120;
+                    output += '</div></div></div>';
+                    return k < 2;
+                });
+                $content.html(output);
+            }
+        });
+    });
 });
+
