@@ -3,7 +3,7 @@
   .button {
     padding:0 10px;
     background: transparent;
-    font-size: small;
+    font-size: 16px;
     border-color: white;
     &:hover {
       color:white;
@@ -17,8 +17,8 @@
   text-align: center;
   .button {
     padding:0 16px;
-    border-color: #000000;
-    color: #000000;
+    border-color: #282B2E;
+    color: #282B2E;
     background: #ffffff;
   }
 }
@@ -94,14 +94,21 @@
               text-align: center;
               transform: translate(-50%, -50%);
               color:#ffffff;
+              label {
+                font-size: 1.5em;
+              }
               .text-p {
-                font-size: 25px;
+                font-size: 2em;
                 text-transform: uppercase;
+                font-weight: bold;
+              }
+              .btn-plan {
+                margin-top: 5px;
               }
             }
           }
           &:hover {
-            border: 2px solid #000;
+            border: 2px solid #282B2E;
           }
           &:hover img {
             filter:none;
@@ -135,7 +142,7 @@
 
               }
               span {
-                color: #000;
+                color: #282B2E;
               }
             }
             .last-li {

@@ -61,28 +61,28 @@
 }
 
 .video-container {
-    &.show-video {
-      position: relative;
-      .btn-close {
-        position: absolute;
-        font-size: 30px;
-        color: white;
-        top: 0;
-        right: 20px;
-        cursor: pointer;
-        &:hover {
-          color:gray;
-        }
-      }
-      .video {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
+  &.show-video {
+    position: relative;
+    .btn-close {
+      position: absolute;
+      font-size: 30px;
+      color: white;
+      top: 0;
+      right: 20px;
+      cursor: pointer;
+      &:hover {
+        color: gray;
       }
     }
+    .video {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+    }
   }
+}
 
 .logo-media {
   position: absolute;
@@ -116,10 +116,10 @@
     position: relative;
     width: 30%;
     margin-bottom: 60px;
-    color: black;
+    color: #282B2E;
     .block-link {
       display: block;
-      color: black;
+      color: #282B2E;
       .image-media {
         width: 100%;
         height: auto;
