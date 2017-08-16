@@ -70,7 +70,7 @@ window.fbAsyncInit = function () {
                 <img class="img-logo" src="../../images/logo-right-black.svg" alt="Logo 404 Not Found" />
             </a>
         </div>
-        <div class="nav-top" >
+        <div class="nav-top" id="navigation">
             <div id="menu-toggle">
                 <div id="hamburger">
                     <span></span>
@@ -84,13 +84,15 @@ window.fbAsyncInit = function () {
             </div>
             <ul class="navt" id="myTopnav">
                 <li><a class="link" href="/ru/coworking/">Коворкинг</a></li>
+                <li><a class="link" href="/ru/events/">Мероприятия</a></li>
                 <li><a class="link" href="/ru/members/">Участники</a></li>
                 <li><a class="link" href="/ru/media/">Пресса</a></li>
                 <li><a class="link" href="/ru/gallery/">Галерея</a></li>
                 <li><a class="link" href="/ru/contact/">Контакты</a></li>
                 <li><a class="link" href="https://blog.404.md">Блог</a></li>
-                <li><a class="last-line" href="/ru/tour/"><span class="blog">Забронируй Обход</span></a></li>
+                <li class="current-item"><a class="last-line" href="/ru/tour/"><span class="blog">Забронируй Обход</span></a></li>
             </ul>
+            <span id="slide-line"></span>
         </div>
         <div class="clear"></div>
     </div>
@@ -103,6 +105,8 @@ window.fbAsyncInit = function () {
         </div>
     </div>
 </section>
+
+
 
 <div class="container new-page">
     <div class="pages">
@@ -631,6 +635,7 @@ window.fbAsyncInit = function () {
 <script type="text/javascript" src="../../js/slick-1.6.0.min.js"></script>
 <script type="text/javascript" src="../../js/footer-carousel.js"></script>
 <script type="text/javascript" src="../../js/main.min.js"></script>
+<script type="text/javascript" src="../../js/parallax.min.js"></script>
 
 </body>
 </html>
