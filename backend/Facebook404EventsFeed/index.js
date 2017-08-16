@@ -13,6 +13,7 @@ exports.handler = (event, context) => {
     
     let feed = res.data.map(item => {
       return {
+        id: item.id,
         name: item.name,
         date : {
           month: getMonth(item.start_time),
@@ -39,7 +40,7 @@ exports.handler = (event, context) => {
 };
 
 function getEventsFeed() {
-  let endpoint = `https://graph.facebook.com/v2.10/404Moldova/events?limit=6&fields=cover,name,start_time,end_time&access_token=${config.access_token}`;
+  let endpoint = `https://graph.facebook.com/v2.10/404Moldova/events?limit=6&fields=cover,name,start_time,end_time,id&access_token=${config.access_token}`;
 
   return new Promise((resolve, reject) => {
     https.get(endpoint, res => {

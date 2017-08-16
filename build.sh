@@ -9,6 +9,7 @@ cssnano < ./css/index.css > ./css/index.min.css
 echo "Minifying js code"
 uglifyjs ./js/main.js -c -m -o ./js/main.min.js
 uglifyjs ./js/members.js -c -m -o ./js/members.min.js
+uglifyjs ./js/events.js -c -m -o ./js/events.min.js
 uglifyjs ./js/contact.js -c -m -o ./js/contact.min.js
 uglifyjs ./js/mc-validate.js -c -m -o ./js/mc-validate.min.js
 
