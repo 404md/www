@@ -39,15 +39,24 @@ function myEvent() {
 
 jQuery(function($) {
     'use strict';
+    
+    var navBar = $('.main-nav');
 
     $('#menu-toggle').click(function () {
         $(this).toggleClass('open');
-        $('.main-nav').toggleClass("responsive-nav");
-        if ($('#menu-toggle').hasClass('open')) {
-            $('html').css('overflow', 'hidden');
+
+        navBar.toggleClass("responsive-nav");
+        if ( $('#menu-toggle').hasClass('open')) {
+            $('html').css('overflow','hidden');
+
         }
         else {
             $('html').css('overflow', 'scroll');
+        }
+        if (navBar.hasClass('responsive-nav')) {
+            navBar.css('transition', 'none');
+        } else {
+            navBar.css('transition', '.4s');
         }
     });
 
@@ -241,9 +250,17 @@ jQuery(function($) {
         $.get('https://api.rss2json.com/v1/api.json', data, function (response) {
             if (response.status == 'ok') {
                 var output = '';
+                var count = 0;
                 $.each(response.items, function (k, item) {
+                    if (/.*vinde-utilaje-absolut-gratuit-575eed5d9185.*/.test(item.link)) {
+                        return;
+                    }
+
+                    count++;
                     var visibleSm;
-                    if (k < 2) {
+
+                    if (count < 3){
+
                         visibleSm = '';
                     } else {
                         visibleSm = ' visible-sm';
@@ -260,7 +277,7 @@ jQuery(function($) {
                     var yourString = item.description.replace(/<img[^>]*>/g, "");
                     var maxLength = 120;
                     output += '</div></div></div>';
-                    return k < 2;
+                    return count < 3;
                 });
                 $content.html(output);
             }
@@ -294,7 +311,7 @@ jQuery(function($) {
         $currentItem = j$(".current-item");
 
     j$(function(){
-        // Menu has active item
+        
         if ($currentItem[0]) {
             $slideLine.css({
                 "width": $currentItem.width(),
@@ -302,25 +319,23 @@ jQuery(function($) {
             });
         }
 
-        // Underline transition
+        
         j$($nav).find("li").hover(
-            // Hover on
+           
             function(){
                 $slideLine.css({
                     "width": j$(this).width(),
                     "left": j$(this).position().left
                 });
             },
-            // Hover out
+            
             function(){
                 if ($currentItem[0]) {
-                    // Go back to current
                     $slideLine.css({
                         "width": $currentItem.width(),
                         "left": $currentItem.position().left
                     });
                 } else {
-                    // Disapear
                     $slideLine.width(0);
                 }
                 if($(window).width() < 1246) {
