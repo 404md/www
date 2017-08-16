@@ -72,7 +72,7 @@ window.fbAsyncInit = function () {
                 <meta itemprop="url" content="https://www.404.md/images/logo-right-black.svg">
             </a>
         </div>
-        <div class="nav-top" >
+        <div class="nav-top" id="navigation">
             <div id="menu-toggle">
                 <div id="hamburger">
                     <span></span>
@@ -85,7 +85,8 @@ window.fbAsyncInit = function () {
                 </div>
             </div>
             <ul class="navt" id="myTopnav">
-                <li><a class="link active" href="/ru/coworking/">Коворкинг</a></li>
+                <li class="current-item"><a class="link active" href="/ru/coworking/">Коворкинг</a></li>
+                <li><a class="link" href="/ru/events/">Мероприятия</a></li>
                 <li><a class="link" href="/ru/members/">Участники</a></li>
                 <li><a class="link" href="/ru/media/">Пресса</a></li>
                 <li><a class="link" href="/ru/gallery/">Галерея</a></li>
@@ -93,18 +94,21 @@ window.fbAsyncInit = function () {
                 <li><a class="link" href="https://blog.404.md">Блог</a></li>
                 <li><a class="last-line" href="/ru/tour/"><span class="blog">Забронируй Обход</span></a></li>
                </ul>
+            <span id="slide-line"></span>
         </div>
         <div class="clear"></div>
     </div>
 </header>
 
-<section class="image">
-    <div class="image-coworking page">
-        <div class="text-page-name">
-            <h1 class="page-name">Коворкинг</h1>
+<div class="parallax-window" data-parallax="scroll" data-image-src="../../images/coworking-bg.jpg">
+    <section class="image">
+        <div class="page">
+            <div class="text-page-name">
+                <h1 class="page-name scroll-title">Коворкинг</h1>
+            </div>
         </div>
-    </div>
-</section>
+    </section>
+</div>
 
 <div class="container new-page">
     <div class="pages">
@@ -209,7 +213,7 @@ window.fbAsyncInit = function () {
                             </div>
                         </div>
                         <div class="btn-plan-contact">
-                            <a class="button getprice-button1">Получи цену</a>
+                            <a  class="md-trigger button" data-modal="modal-1">Получи цену</a>
                         </div>
                 </div>
                 <div class="plans">
@@ -244,27 +248,31 @@ window.fbAsyncInit = function () {
                         </div>
                     </div>
                     <div class="btn-plan-contact">
-                        <a class="button getprice-button">Получи цену</a>
-                    </div>
-                </div>
-            </div>
-            <div class="overlay1">
-                <div class="popup">
-                    <div class="content">
-                        <a class="close">&times;</a>
-                        <iframe src="../form1/" frameborder="0"></iframe>
+                        <a  class="md-trigger button open-popup" data-modal="modal">Получи цену</a>
                     </div>
                 </div>
             </div>
 
-            <div class="overlay">
-                <div class="popup form2">
+            <div class="md-modal md-effect-1" id="modal-1">
+                <div class="md-content">
                     <div class="content">
-                        <a class="close">&times;</a>
-                        <iframe src="../form2/" frameborder="0"></iframe>
+                        <i class="mdi mdi-close md-close"></i>
+                        <iframe src="/form1/" frameborder="0"></iframe>
                     </div>
                 </div>
             </div>
+            <div class="md-overlay1"></div>
+
+            <div class="popup-open-1 md-modal md-effect-1" id="modal">
+                <div class="md-content">
+                    <div class="content">
+                        <i class="mdi mdi-close md-close"></i>
+                        <iframe src="/form2/" frameborder="0"></iframe>
+                    </div>
+                </div>
+            </div>
+            <div class="md-overlay"></div>
+
         </div>
         <div class=" container new-page">
             <div class="pages coworking">
@@ -647,9 +655,12 @@ window.fbAsyncInit = function () {
 
 <script type="text/javascript" src="../../js/jquery-1.11.0.min.js"></script>
 <script type="text/javascript" src="../../js/slick-1.6.0.min.js"></script>
+<script type="text/javascript" src="../../js/classie.js"></script>
+<script type="text/javascript" src="../../js/modalEffects.js"></script>
 <script type="text/javascript" src="../../js/footer-carousel.js"></script>
 <script type="text/javascript" src="../../js/main.min.js"></script>
 <script type="text/javascript" src="../../js/coworking.js"></script>
+<script type="text/javascript" src="../../js/parallax.min.js"></script>
 
 </body>
 </html>
