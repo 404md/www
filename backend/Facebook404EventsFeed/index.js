@@ -59,13 +59,17 @@ function getEventsFeed() {
 
 function customTimeFormat(string_date) {
   const date = new Date(string_date);
-  return date.getHours() + ':' + date.getMinutes();
+  return pad(date.getHours()) + ':' + pad(date.getMinutes());
 }
 
 function getDay(string_date) {
-  return new Date(string_date).getDay();
+  return pad(new Date(string_date).getDate());
 }
 
 function getMonth(string_date) {
   return new Date(string_date).getMonth();
+}
+
+function pad(number) {
+  return ('0' + number).slice(-2);
 }
