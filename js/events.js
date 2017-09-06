@@ -6,37 +6,48 @@ jQuery(function($) {
       console.error('Could not load facebook feed: ', err);
     });
   });
+    $('.meeting-room').slick({
+        dots:false,
+        speed: 500,
+        arrows: true,
+        fade: true,
+        cssEase: 'linear'
+    });
+
 });
 
 function generateFbFeedHTML(data) {
-    var eventsHtml = '<div class="clear"></div>';
+    var eventsHtml = '';
     data.forEach(function(item) {
       eventsHtml +='\
-      <div style=";width: 33%;height: auto;display: inline-block;">\
-        <img src="'+item.photo+'" style="max-width: 100%;"\
-        href="https://www.facebook.com/events/'+item.id+'/">\
-        <div class="date" style="float: left;">\
-            <span class="day" style="text-align: center;font-size: 25px;display: block;\
-            color:red;">\
+      <div class="flex-item-4 space">\
+      <a href="https://www.facebook.com/events/'+item.id+'/">\
+      <div class="block-style">\
+        <img src="'+item.photo+'" style="max-width: 100%;">\
+        <div class="content-block">\
+        <div class="date">\
+            <span class="day">\
               '+getMonthName(item.date.month)+'\
             </span>\
-            <span class="month" style="display: block;text-align: center;">\
+            <span class="month">\
               '+item.date.day+'\
             </span>\
         </div>\
-        <div class="context" style="width: 70%;height: 50px;float: right;">\
-            <span class="title" style="text-align: left;display: block;">\
+        <div class="context">\
+            <span class="title"">\
               '+item.name+'\
             </span>\
-            <span class="interval" style="display: block;text-align: left;">\
+            <span class="interval">\
               '+item.date.timeInterval+'\
             </span>\
         </div>\
+        </div>\
+        </div>\
+        </a>\
       </div>\
       ';
     });
-    eventsHtml += '<div class="clear"></div>';
-    $(".pages").append(eventsHtml);
+    $(".events-fb").append(eventsHtml);
 }
 
 function ajaxCall(url, reject) {
