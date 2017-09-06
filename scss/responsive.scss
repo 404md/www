@@ -1,4 +1,4 @@
-@media (min-width: 768px) {
+@media (min-width: 800px) {
   .container {
     width: 750px;
   }
@@ -6,11 +6,11 @@
 
 @media (min-width: 992px) {
   .container {
-    width: 970px;
+    width: 950px;
   }
 }
 
-@media (min-width: 1246px) {
+@media (min-width: 1270px) {
   .container {
     width: 1216px;
   }
@@ -39,7 +39,23 @@
   }
 }
 
-@media (max-width: 1246px) {
+@media (max-width: 1270px) {
+  .new-page {
+    &.events {
+      .amenities-block {
+        .bloks-icons {
+          img {
+            height: 80px;
+          }
+          .icons-text {
+           padding: 10px 0 20px;
+            font-size: 17px;
+          }
+        }
+      }
+    }
+  }
+
   .wrapper {
     .main-block {
       .main-info, .main-info.ru-vertion {
@@ -562,6 +578,30 @@
 }
 
 @media screen and (max-width: 992px) {
+  .new-page {
+    &.events {
+      .pages {
+        &.flex-row {
+          .flex-item-4 {
+            flex: 0 0 50%;
+            max-width: 50%;
+          }
+        }
+      }
+      .amenities-block {
+        .bloks-icons {
+          max-width:125px;
+          img {
+            height: 65px;
+          }
+          .icons-text {
+            padding: 0;
+            font-size: 16px;
+          }
+        }
+      }
+    }
+  }
   .contacts {
     a {
       font-size: 14px;
@@ -897,11 +937,60 @@
 }
 
 @media (max-width: 680px) {
- body {
-   .parallax-window {
-     min-height: 152px;
-   }
- }
+  .new-page {
+    &.events {
+      .pages {
+        &.flex-row {
+          .flex-item-4 {
+            flex: 0 0 100%;
+            max-width: 100%;
+          }
+        }
+      }
+      .amenities-block {
+        &.display-flex {
+          &.flex-item-6 {
+            flex: 0 0 75%;
+            max-width: 75%;
+          }
+        }
+      }
+      .display-flex {
+        .meeting-room {
+          &.flex-item-4 {
+            flex: 0 0 100%;
+            max-width: 100%;
+            .slick-slide {
+              img {
+                width: 100vw;
+                object-fit: cover;
+              }
+            }
+          }
+        }
+        .price {
+          &.flex-item-2 {
+            flex: 0 0 25%;
+            max-width: 25%;
+          }
+        }
+      }
+      .meeting-room {
+        position: relative;
+        left: 50%;
+        transform: translateX(-50%);
+        -webkit-transform: translateX(-50%);
+        -moz-transform: translateX(-50%);
+        -o-transform: translateX(-50%);
+        margin-bottom: 40px;
+      }
+    }
+  }
+  body {
+    .parallax-window {
+      min-height: 152px;
+    }
+  }
   .wrapper {
     &.invitation {
       .main-block {
@@ -934,7 +1023,7 @@
           font-size: 25px;
           padding-bottom: 3px;
           &:before {
-            height:4px;
+            height: 4px;
             width: 65px;
           }
         }
@@ -1049,7 +1138,7 @@
   }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 800px) {
   .main-nav {
     .container {
       .nav-top {
@@ -2473,6 +2562,18 @@
         }
         .button-block {
           padding: 0;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 409px) {
+  .new-page {
+    &.events {
+      .amenities-block {
+        .bloks-icons {
+          width: auto;
         }
       }
     }
