@@ -260,6 +260,10 @@ hr {
 .btn-right {
   text-align: right; }
 
+p {
+  margin-bottom: 20px;
+  font-size: 17px; }
+
 .odd {
   background: #FCFCFB; }
 
@@ -1472,7 +1476,7 @@ input:focus ~ .highlight {
       font-weight: bold; }
     .new-page.events .display-flex .price .price-block span:nth-child(2) {
       font-weight: bold;
-      font-size: 20px; }
+      font-size: 35px; }
     .new-page.events .display-flex .price .price-block span:last-child {
       font-size: 15px; }
 .new-page.events .amenities-block .bloks-icons {
@@ -1655,7 +1659,7 @@ input:focus ~ .highlight {
       right: 0;
       height: 100%;
       color: white;
-      background-color: rgba(221, 89, 49, 0.8);
+      background-color: rgba(40, 43, 46, 0.7);
       transition: all .2s ease-in-out; }
       .wrapper.members .main-block .container .instagram.slick-initialized .slick-slide .hover-hash .hover-text {
         position: relative;
@@ -1665,12 +1669,34 @@ input:focus ~ .highlight {
         -webkit-transform: translate(-50%, -50%);
         transform: translate(-50%, -50%);
         text-align: center; }
-        .wrapper.members .main-block .container .instagram.slick-initialized .slick-slide .hover-hash .hover-text .likes-instagram:before {
-          content: '\F2D5';
-          color: white;
-          font-family: "Material Design Icons";
-          font-size: x-large;
-          margin-right: 10px; }
+        .wrapper.members .main-block .container .instagram.slick-initialized .slick-slide .hover-hash .hover-text .likes-instagram {
+          display: inline-block;
+          padding: 3px 15px;
+          background: #FF3C4C;
+          border-radius: 7px;
+          -webkit-border-radius: 7px;
+          -moz-border-radius: 7px;
+          position: relative;
+          margin-bottom: 32px;
+          font-size: 20px; }
+          .wrapper.members .main-block .container .instagram.slick-initialized .slick-slide .hover-hash .hover-text .likes-instagram:after {
+            content: "";
+            position: absolute;
+            border-top: 12px solid #FF3C4C;
+            border-left: 12px solid transparent;
+            border-right: 12px solid transparent;
+            bottom: -12px;
+            left: 50%;
+            transform: translateX(-50%);
+            -webkit-transform: translateX(-50%);
+            -moz-transform: translateX(-50%);
+            -o-transform: translateX(-50%); }
+          .wrapper.members .main-block .container .instagram.slick-initialized .slick-slide .hover-hash .hover-text .likes-instagram:before {
+            content: '\F2D1';
+            color: white;
+            font-family: "Material Design Icons";
+            font-size: x-large;
+            margin-right: 10px; }
       .wrapper.members .main-block .container .instagram.slick-initialized .slick-slide .hover-hash:hover {
         opacity: 1;
         transition: 0.5s; }
@@ -1678,7 +1704,13 @@ input:focus ~ .highlight {
         padding: 0 20px;
         word-break: break-word; }
   .wrapper.members .main-block .container .instagram.slick-initialized .slick-list .slick-track .slick-slide {
-    overflow: hidden; }
+    overflow: hidden;
+    height: 386px; }
+    .wrapper.members .main-block .container .instagram.slick-initialized .slick-list .slick-track .slick-slide .video-block {
+      height: 100%; }
+    .wrapper.members .main-block .container .instagram.slick-initialized .slick-list .slick-track .slick-slide img {
+      object-fit: cover;
+      min-height: 100%; }
     .wrapper.members .main-block .container .instagram.slick-initialized .slick-list .slick-track .slick-slide:hover img {
       transform: scale(1.1); }
     .wrapper.members .main-block .container .instagram.slick-initialized .slick-list .slick-track .slick-slide:hover video {
@@ -1687,144 +1719,33 @@ input:focus ~ .highlight {
       width: 100%;
       transition: all .2s ease-in-out; }
 
-.projects {
-  background: #f5f5f4;
-  min-height: 300px; }
-  .projects .container .display-flex {
-    min-height: 300px;
+.members-header {
+  margin-bottom: 30px;
+  font-size: 35px; }
+
+.members-info {
+  background: #F7F7F7; }
+  .members-info.visa_versa-block {
+    background: #ffffff; }
+  .members-info .container {
     padding-top: 40px;
     padding-bottom: 40px; }
-    .projects .container .display-flex .project-block {
-      width: 300px;
-      text-align: center;
-      margin: auto;
-      font-size: 35px; }
-      .projects .container .display-flex .project-block .text-anvio {
-        margin-top: 20px;
-        margin-bottom: 10px; }
-
-.case-study {
-  min-height: 760px; }
-  .case-study .container {
-    margin-top: 50px; }
-    .case-study .container .left-block {
-      float: left;
-      width: 50%;
-      font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif; }
-      .case-study .container .left-block .mockup {
-        background: #fff;
-        border: 1px solid #e1e1e1;
-        box-shadow: 0 1px 7px 0 rgba(0, 0, 0, 0.08);
-        padding: 20px 50px 50px;
+    .members-info .container .left-block {
+      text-align: center; }
+      .members-info .container .left-block a {
+        display: block;
         position: relative;
-        margin-bottom: 50px; }
-        .case-study .container .left-block .mockup .logo-img {
-          height: 35px;
-          margin: 0 auto;
-          display: flex; }
-        .case-study .container .left-block .mockup .mockup-head {
-          border-width: 1px 0;
-          border-color: #3b9ff3;
-          border-style: solid;
-          margin: 20px 0;
-          padding: 5px 0 15px 0; }
-          .case-study .container .left-block .mockup .mockup-head h1 {
-            color: #3b9ff3;
-            font-size: 24px;
-            line-height: 40px;
-            margin: 0;
-            text-align: left; }
-          .case-study .container .left-block .mockup .mockup-head .flex-row {
-            font-size: 17px; }
-            .case-study .container .left-block .mockup .mockup-head .flex-row .flex-item-6 {
-              margin: 10px 0; }
-              .case-study .container .left-block .mockup .mockup-head .flex-row .flex-item-6.text-left {
-                text-align: left; }
-              .case-study .container .left-block .mockup .mockup-head .flex-row .flex-item-6.text-right {
-                text-align: right; }
-              .case-study .container .left-block .mockup .mockup-head .flex-row .flex-item-6.self-center {
-                line-height: 37px;
-                text-align: right; }
-              .case-study .container .left-block .mockup .mockup-head .flex-row .flex-item-6 .icons-cont i {
-                background: #ddd;
-                padding: 6px;
-                border-radius: 50%;
-                margin-left: 10px; }
-              .case-study .container .left-block .mockup .mockup-head .flex-row .flex-item-6 .icons-cont .five {
-                padding: 7px 8px;
-                font-size: 17px; }
-              .case-study .container .left-block .mockup .mockup-head .flex-row .flex-item-6 .icons-cont .mdi-facebook {
-                font-size: 15px;
-                padding: 9px 10px; }
-              .case-study .container .left-block .mockup .mockup-head .flex-row .flex-item-6 .icons-cont .mdi-twitter {
-                font-size: 15px;
-                padding: 9px; }
-        .case-study .container .left-block .mockup .mockup-cont > p {
-          margin: 0 0 20px; }
-        .case-study .container .left-block .mockup .mockup-cont img {
-          margin-bottom: 20px;
-          opacity: .7;
-          width: 100%; }
-        .case-study .container .left-block .mockup .mockup-cont .blurry {
-          position: relative; }
-          .case-study .container .left-block .mockup .mockup-cont .blurry p {
-            filter: blur(2.5px);
-            -webkit-filter: blur(2.5px); }
-          .case-study .container .left-block .mockup .mockup-cont .blurry .btn {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translateX(-50%) translateY(-50%);
-            -webkit-transform: translateX(-50%) translateY(-50%); }
-            .case-study .container .left-block .mockup .mockup-cont .blurry .btn.btn-primary {
-              background: #44a5db;
-              border: 0;
-              padding: 10px;
-              color: #fff;
-              font-size: 13px;
-              text-transform: uppercase; }
-    .case-study .container .right-block {
-      float: right;
-      width: 50%;
-      height: 710px; }
-      .case-study .container .right-block .right-info {
-        width: 90%;
-        float: right;
         top: 50%;
         transform: translateY(-50%);
-        position: relative; }
-        .case-study .container .right-block .right-info .logo {
-          display: block;
-          height: 100px; }
-          .case-study .container .right-block .right-info .logo img {
-            height: 80px;
-            position: relative;
-            top: 50%;
-            -webkit-transform: translateY(-50%);
-            -moz-transform: translateY(-50%);
-            -o-transform: translateY(-50%);
-            transform: translateY(-50%); }
-        .case-study .container .right-block .right-info p {
-          margin-top: 20px;
-          font-size: 16px; }
-        .case-study .container .right-block .right-info .right-header {
-          font-family: 'Lato', sans-serif;
-          font-size: 50px;
-          position: relative;
-          margin-bottom: 20px; }
-          .case-study .container .right-block .right-info .right-header:before {
-            content: '';
-            position: absolute;
-            width: 140px;
-            height: 6px;
-            background: #FF5533;
-            bottom: 0; }
-
-.circle1, .circle2, .circle3 {
-  margin: 0 auto;
-  width: 175px;
-  height: 175px;
-  position: relative; }
+        -webkit-transform: translateY(-50%);
+        -moz-transform: translateY(-50%);
+        -o-transform: translateY(-50%); }
+        .members-info .container .left-block a .adtechmedia {
+          height: 73px; }
+        .members-info .container .left-block a .iello-logo {
+          height: 256px; }
+        .members-info .container .left-block a .impact-logo {
+          height: 400px; }
 
 /* Gallery */
 .gallery.members-gallery .gallery-line {
@@ -2217,7 +2138,13 @@ input:focus ~ .highlight {
       padding-bottom: 15px; }
     .pic .img-hover .we-love .comment span {
       font-size: 15px; } }
+@media (min-width: 1270px) {
+  .new-page.events .amenities-block.display-flex.flex-item-6 {
+    flex: 0 0 41.66666667%;
+    max-width: 41.66666667%; } }
 @media (max-width: 1270px) {
+  .new-page.events .amenities-block .bloks-icons .icons-text {
+    margin-top: inherit; }
   .new-page.events .amenities-block .bloks-icons img {
     height: 80px; }
   .new-page.events .amenities-block .bloks-icons .icons-text {
@@ -2228,14 +2155,14 @@ input:focus ~ .highlight {
     font-size: 50px;
     line-height: 50px;
     margin-bottom: 15px; } }
-@media (max-width: 1246px) and (min-width: 737px) {
+@media (max-width: 1270px) and (min-width: 737px) {
   .contacts .footer-down .last-block {
     line-height: 20px;
     display: flex;
     flex-direction: column; }
     .contacts .footer-down .last-block a {
       display: inline-block; } }
-@media (max-width: 1246px) {
+@media (max-width: 1270px) {
   #menu-toggle {
     display: block; }
 
@@ -2484,6 +2411,9 @@ input:focus ~ .highlight {
   .wrapper.amenities .main-block .blocks .container .display-flex.ru-block .text-anvio {
     font-size: 21px; } }
 @media screen and (max-width: 992px) {
+  .members-info .container .left-block a .adtechmedia {
+    height: 55px; }
+
   .new-page.events .pages.flex-row .flex-item-4 {
     flex: 0 0 50%;
     max-width: 50%; }
@@ -2532,39 +2462,6 @@ input:focus ~ .highlight {
     text-align: center; }
   .footer-black .container .right-footer {
     display: none; }
-
-  .case-study .container .left-block {
-    float: none;
-    margin: 0 auto;
-    width: 90%; }
-    .case-study .container .left-block .mockup {
-      margin-bottom: 0; }
-  .case-study .container .right-block {
-    float: none;
-    width: 100%;
-    text-align: center;
-    height: auto; }
-    .case-study .container .right-block .right-info {
-      width: 100%;
-      top: auto;
-      transform: none;
-      -webkit-transform: none;
-      -moz-transform: none;
-      -o-transform: none;
-      position: static;
-      margin-top: 15px;
-      margin-bottom: 30px; }
-
-  .projects {
-    min-height: 200px; }
-    .projects .container .display-flex {
-      min-height: 200px; }
-      .projects .container .display-flex .project-block {
-        width: 210px; }
-        .projects .container .display-flex .project-block img {
-          width: 50%; }
-        .projects .container .display-flex .project-block .text-anvio {
-          font-size: 20px; }
 
   .wrapper.contact .main-block {
     min-height: 750px; }
@@ -2741,6 +2638,17 @@ input:focus ~ .highlight {
       .fb-container-responsive .left-fb-block iframe[style] {
         width: 66% !important; } }
 @media (max-width: 800px) {
+  .members-info .container {
+    display: grid; }
+    .members-info .container .left-block.flex-item-6, .members-info .container .right-block.flex-item-6 {
+      flex: 0 0 100%;
+      max-width: 100%; }
+    .members-info .container .left-block h2, .members-info .container .right-block h2 {
+      text-align: center; }
+    .members-info .container .right-block {
+      grid-column: 1 / 2;
+      grid-row: 1 / 3; }
+
   .main-nav .container .nav-top .navt li .link, .main-nav .container .nav-top .navt li .last-line {
     width: auto; } }
 @media (max-width: 736px) and (max-height: 414px) {
@@ -3352,6 +3260,13 @@ input:focus ~ .highlight {
   .new-page.events .amenities-block .bloks-icons {
     width: auto; } }
 @media (max-width: 320px) {
+  .members-info .container .left-block a .adtechmedia {
+    height: 46px; }
+  .members-info .container .left-block a .iello-logo {
+    height: 200px; }
+  .members-info .container .left-block a .impact-logo {
+    height: 300px; }
+
   .md-modal .md-content .content .mdi-close {
     right: 15px;
     top: 2px; }
