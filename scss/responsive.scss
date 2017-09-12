@@ -169,7 +169,7 @@
               margin: 0 auto;
               display: block;
               padding: 0 20px;
-              width: 970px;
+              //width: 970px;
               &:hover {
                 //color:white;
                 &:before {
@@ -312,6 +312,9 @@
       }
     }
   }
+}
+
+@media (max-width: 1270px)  {
   .offers {
     &.slick-initialized {
       .slick-list {
@@ -329,10 +332,6 @@
       }
     }
   }
-}
-
-@media (max-width: 1200px)  {
-
   .amenities-block{
     &.display-flex {
       justify-content: space-around;
@@ -490,31 +489,6 @@
     }
   }
 
-  .case-study {
-    .container {
-      .right-block {
-        width: 47%;
-        .right-info {
-          width: 100%;
-          .logo {
-            height: 45px;
-            img {
-              height: 40px;
-            }
-          }
-          .right-header {
-            font-size: 35px;
-            &:before {
-              width: 85px;
-            }
-          }
-          p {
-            margin-top: 10px;
-          }
-        }
-      }
-    }
-  }
   .img-hover{
     &:hover {
       .we-love {
@@ -1067,11 +1041,14 @@
                &:hover {
                  background: transparent;
                }
-               .link {
-                 &:hover {
-                   color:#ffffff;
+               a {
+                 &.link {
+                   &:hover {
+                     color:#ffffff;
+                   }
                  }
                }
+
              }
            }
           }

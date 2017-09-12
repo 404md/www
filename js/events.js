@@ -21,7 +21,7 @@ function generateFbFeedHTML(data) {
     data.forEach(function(item) {
       eventsHtml +='\
       <div class="flex-item-4 space">\
-      <a href="https://www.facebook.com/events/'+item.id+'/">\
+      <a href="https://www.facebook.com/events/'+item.id+'/" target="_blank">\
       <div class="block-style">\
         <img src="'+item.photo+'" style="max-width: 100%;">\
         <div class="content-block">\

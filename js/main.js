@@ -311,7 +311,7 @@ jQuery(function($) {
         $currentItem = j$(".current-item");
 
     j$(function(){
-        
+
         if ($currentItem[0]) {
             $slideLine.css({
                 "width": $currentItem.width(),
@@ -319,26 +319,28 @@ jQuery(function($) {
             });
         }
 
-        
+
         j$($nav).find("li").hover(
-           
+
             function(){
                 $slideLine.css({
                     "width": j$(this).width(),
                     "left": j$(this).position().left
                 });
+                $('#slide-line').removeClass("hidden-line");
             },
-            
+
             function(){
                 if ($currentItem[0]) {
                     $slideLine.css({
                         "width": $currentItem.width(),
                         "left": $currentItem.position().left
                     });
+
                 } else {
                     $slideLine.width(0);
                 }
-                if($(window).width() < 1246) {
+                if($(window).width() < 1270) {
                     $slideLine.width(0);
                 } else {
                     $slideLine.css({
@@ -349,4 +351,9 @@ jQuery(function($) {
             }
         );
     });
+    
+    if($('.current-item').hasClass('hide-line')) {
+        $('#slide-line').addClass("hidden-line");
+    }
+    
 });

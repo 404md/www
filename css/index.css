@@ -1323,7 +1323,10 @@ input:focus ~ .highlight {
 .blog .flex-row {
   margin-right: -15px; }
   .blog .flex-row .flex-item-4 .blog-post {
-    margin-right: 15px; }
+    margin-right: 15px;
+    cursor: pointer; }
+    .blog .flex-row .flex-item-4 .blog-post:hover .blog-content h4 a {
+      color: #FF5533; }
     .blog .flex-row .flex-item-4 .blog-post .blog-element img {
       width: 100%;
       object-fit: cover;
@@ -1373,17 +1376,6 @@ input:focus ~ .highlight {
   font-size: 36px;
   margin-left: 50px;
   color: #282B2E; }
-
-#navigation.main-page-nav.nav-top #slide-line {
-  background: #ffffff; }
-#navigation.nav-top #slide-line {
-  position: absolute;
-  bottom: 38px;
-  height: 2px;
-  background-color: #282B2E;
-  -webkit-transition: all .3s ease;
-  transition: all .3s ease;
-  z-index: -1; }
 
 /* Events Page*/
 .new-page.events .pages {
@@ -1463,10 +1455,10 @@ input:focus ~ .highlight {
     font-family: Material Design Icons; }
 .new-page.events .display-flex .meeting-room .slick-slide img {
   width: 100%; }
-.new-page.events .display-flex .price .price-block {
-  position: relative;
-  top: 50%;
-  transform: translateY(-50%); }
+.new-page.events .display-flex .price {
+  display: flex;
+  flex-direction: column;
+  justify-content: center; }
   .new-page.events .display-flex .price .price-block span {
     display: block;
     text-align: center; }
@@ -1481,12 +1473,28 @@ input:focus ~ .highlight {
       font-size: 15px; }
 .new-page.events .amenities-block .bloks-icons {
   display: flex;
-  flex-direction: column; }
+  flex-direction: column;
+  justify-content: center; }
   .new-page.events .amenities-block .bloks-icons img {
     height: 130px; }
   .new-page.events .amenities-block .bloks-icons .icons-text {
-    padding: 10px 0 50px;
-    margin-top: auto; }
+    margin-top: auto;
+    padding: 0 0 10px; }
+
+#navigation.nav-top #slide-line.hidden-line {
+  opacity: 0; }
+#navigation.main-page-nav.nav-top #slide-line {
+  background: #ffffff; }
+  #navigation.main-page-nav.nav-top #slide-line.hidden-line {
+    opacity: 0; }
+#navigation.nav-top #slide-line {
+  position: absolute;
+  bottom: 38px;
+  height: 2px;
+  background-color: #282B2E;
+  -webkit-transition: all .3s ease;
+  transition: all .3s ease;
+  z-index: -1; }
 
 #video {
   width: 100%;
@@ -1678,7 +1686,7 @@ input:focus ~ .highlight {
           -moz-border-radius: 7px;
           position: relative;
           margin-bottom: 32px;
-          font-size: 20px; }
+          font-size: 24px; }
           .wrapper.members .main-block .container .instagram.slick-initialized .slick-slide .hover-hash .hover-text .likes-instagram:after {
             content: "";
             position: absolute;
@@ -1731,15 +1739,12 @@ input:focus ~ .highlight {
     padding-top: 40px;
     padding-bottom: 40px; }
     .members-info .container .left-block {
-      text-align: center; }
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      justify-content: center; }
       .members-info .container .left-block a {
-        display: block;
-        position: relative;
-        top: 50%;
-        transform: translateY(-50%);
-        -webkit-transform: translateY(-50%);
-        -moz-transform: translateY(-50%);
-        -o-transform: translateY(-50%); }
+        display: block; }
         .members-info .container .left-block a .adtechmedia {
           height: 73px; }
         .members-info .container .left-block a .iello-logo {
@@ -2203,8 +2208,7 @@ input:focus ~ .highlight {
           border: 0;
           margin: 0 auto;
           display: block;
-          padding: 0 20px;
-          width: 970px; }
+          padding: 0 20px; }
           .main-nav .container .nav-top .navt li .link:hover:before, .main-nav .container .nav-top .navt li .last-line:hover:before {
             content: '';
             height: 0; }
@@ -2300,11 +2304,11 @@ input:focus ~ .highlight {
     .main-nav .container .logo {
       line-height: 80px; }
       .main-nav .container .logo .img-logo {
-        height: 50px; }
-
+        height: 50px; } }
+@media (max-width: 1270px) {
   .offers.slick-initialized .slick-list .slick-track .plans .plan .text-plan .text-p {
-    font-size: 19px; } }
-@media (max-width: 1200px) {
+    font-size: 19px; }
+
   .amenities-block.display-flex {
     justify-content: space-around;
     -webkit-justify-content: space-around; }
@@ -2369,21 +2373,6 @@ input:focus ~ .highlight {
       height: 2px; }
   .wrapper.invitation .main-block .form-invitation .container .form-invite .contacts-invite .form-block .input-style {
     font-size: 15px; }
-
-  .case-study .container .right-block {
-    width: 47%; }
-    .case-study .container .right-block .right-info {
-      width: 100%; }
-      .case-study .container .right-block .right-info .logo {
-        height: 45px; }
-        .case-study .container .right-block .right-info .logo img {
-          height: 40px; }
-      .case-study .container .right-block .right-info .right-header {
-        font-size: 35px; }
-        .case-study .container .right-block .right-info .right-header:before {
-          width: 85px; }
-      .case-study .container .right-block .right-info p {
-        margin-top: 10px; }
 
   .img-hover:hover .we-love .avatar {
     width: 95px;
@@ -2610,7 +2599,7 @@ input:focus ~ .highlight {
     -webkit-justify-content: space-around; }
     .main-nav.responsive-nav .container .nav-top.main-page-nav .navt li:not(:last-child):hover {
       background: transparent; }
-    .main-nav.responsive-nav .container .nav-top.main-page-nav .navt li:not(:last-child) .link:hover {
+    .main-nav.responsive-nav .container .nav-top.main-page-nav .navt li:not(:last-child) a.link:hover {
       color: #ffffff; }
   .main-nav.responsive-nav .container .nav-top .navt {
     justify-content: space-around;

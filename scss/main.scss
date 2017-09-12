@@ -1527,6 +1527,16 @@ input:focus ~ .highlight {
     .flex-item-4 {
       .blog-post {
         margin-right: 15px;
+        cursor: pointer;
+        &:hover {
+          .blog-content {
+            h4 {
+              a {
+                color: $main_color;
+              }
+            }
+          }
+        }
         .blog-element {
           img {
             width: 100%;
@@ -1598,28 +1608,6 @@ input:focus ~ .highlight {
     font-size: 36px;
     margin-left: 50px;
     color: $color;
-  }
-}
-
-// Main Navigation Area
-#navigation {
-  &.main-page-nav {
-    &.nav-top {
-      #slide-line {
-        background: #ffffff;
-      }
-    }
-  }
-  &.nav-top {
-    #slide-line {
-      position: absolute;
-      bottom: 38px;
-      height: 2px;
-      background-color: $color;
-      -webkit-transition: all .3s ease;
-      transition: all .3s ease;
-      z-index: -1;
-    }
   }
 }
 
@@ -1736,10 +1724,10 @@ input:focus ~ .highlight {
         }
       }
       .price {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
         .price-block {
-          position: relative;
-          top: 50%;
-          transform: translateY(-50%);
           span {
             display: block;
             text-align: center;
@@ -1763,14 +1751,48 @@ input:focus ~ .highlight {
       .bloks-icons {
         display: flex;
         flex-direction: column;
+        justify-content: center;
         img {
           height: 130px;
         }
         .icons-text {
-          padding: 10px 0 50px;
           margin-top: auto;
+          padding: 0 0 10px;
         }
       }
+    }
+  }
+}
+
+// Main Navigation Area
+
+#navigation {
+  &.nav-top {
+    #slide-line {
+      &.hidden-line {
+        opacity: 0;
+      }
+    }
+  }
+  &.main-page-nav {
+    &.nav-top {
+      #slide-line {
+        background: #ffffff;
+        &.hidden-line {
+          opacity: 0;
+        }
+      }
+    }
+  }
+  &.nav-top {
+    #slide-line {
+      position: absolute;
+      bottom: 38px;
+      height: 2px;
+      background-color: $color;
+      -webkit-transition: all .3s ease;
+      transition: all .3s ease;
+      z-index: -1;
     }
   }
 }
