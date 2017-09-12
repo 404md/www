@@ -97,7 +97,7 @@
                     -moz-border-radius: 7px;
                     position: relative;
                     margin-bottom: 32px;
-                    font-size: 20px;
+                    font-size: 24px;
                     &:after {
                       content: "";
                       position: absolute;
@@ -179,14 +179,11 @@
     padding-bottom: 40px;
     .left-block {
       text-align: center;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
       a {
         display: block;
-        position: relative;
-        top: 50%;
-        transform: translateY(-50%);
-        -webkit-transform: translateY(-50%);
-        -moz-transform: (translateY(-50%));
-        -o-transform: translateY(-50%);
         .adtechmedia {
           height: 73px;
         }
