@@ -895,6 +895,17 @@
 }
 
 @media (max-width: 680px) {
+  .blog {
+    .section-heading {
+      h2 {
+        display: block;
+      }
+      .button {
+        margin-top: 10px;
+        float: none;
+      }
+    }
+  }
   .new-page {
     &.events {
       .pages {
@@ -2560,6 +2571,24 @@
 }
 
 @media (max-width: 320px) {
+  .wrapper {
+    &.members {
+      .main-block {
+        .container {
+          .instagram {
+            &.slick-initialized {
+              .slick-prev {
+                right: 55%;
+              }
+              .slick-next {
+                right: 46%;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
   .members-info {
     .container {
       .left-block {

@@ -53,7 +53,6 @@ hr {
 }
 
 p {
-  margin-bottom: 20px;
   font-size: 17px;
 }
 
@@ -602,7 +601,7 @@ body {
   width: 100%;
   position: fixed;
   top: 0;
-  z-index: 2;
+  z-index: 10;
   &.fixed-top {
     -webkit-box-shadow: 0 4px 9px -7px $color;
     -moz-box-shadow: 0 4px 9px -7px $color;
@@ -1521,6 +1520,14 @@ input:focus ~ .highlight {
 .blog {
   .section-heading {
     margin: 20px 0;
+    h2 {
+      display: inline-block;
+    }
+    .button {
+      padding: 1px 20px;
+      float:right;
+      font-size: 16px;
+    }
   }
   .flex-row {
     margin-right: -15px;
@@ -1702,19 +1709,31 @@ input:focus ~ .highlight {
             left: 7px;
             z-index: 1;
             &:before {
-              content: "\f053";
-              color: #fff;
+              content: "\F141";
+              color: #ffffff;
               font-family: Material Design Icons;
+              border: 2px solid #ffffff;
+              text-shadow: 2px 2px 4px #000000;
+              box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
             }
           }
           .slick-next {
-            right: 7px;
+            right: 10px;
             z-index: 1;
             &:before {
-              content: "\F05A";
-              color: #fff;
+              content: "\F142";
+              color: #ffffff;
               font-family: Material Design Icons;
+              border: 2px solid #ffffff;
+              text-shadow: 2px 2px 4px #000000;
+              box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
             }
+          }
+          .slick-next:hover:before, .slick-prev:hover:before {
+            border-color: $main_color;
+            background-color: $main_color;
+            color:#ffffff;
+            text-shadow: none;
           }
         }
         .slick-slide {

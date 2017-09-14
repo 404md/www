@@ -272,7 +272,7 @@ jQuery(function($) {
                     var srcStart = srcIndex + 5;
                     var srcEnd = item.description.substring(srcStart).indexOf('"') + srcStart;
                     var src = item.description.substring(srcStart, srcEnd);
-                    output += '<a href="' + item.link + '" class="blog-element"><img class="img-responsive" src="' + src + '" height="208px" ></a></header>';
+                    output += '<a href="' + item.link + '" class="blog-element" target="_blank"><img class="img-responsive" src="' + src + '" height="208px"></a></header>';
                     output += '<div class="blog-content"><h4><a href="' + item.link + '">' + item.title + '</a></h4>';
                     var yourString = item.description.replace(/<img[^>]*>/g, "");
                     var maxLength = 120;
