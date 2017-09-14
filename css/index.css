@@ -261,7 +261,6 @@ hr {
   text-align: right; }
 
 p {
-  margin-bottom: 20px;
   font-size: 17px; }
 
 .odd {
@@ -649,7 +648,7 @@ body {
   width: 100%;
   position: fixed;
   top: 0;
-  z-index: 2; }
+  z-index: 10; }
   .main-nav.fixed-top {
     -webkit-box-shadow: 0 4px 9px -7px #282B2E;
     -moz-box-shadow: 0 4px 9px -7px #282B2E;
@@ -1320,6 +1319,12 @@ input:focus ~ .highlight {
 /* Blog.404.md*/
 .blog .section-heading {
   margin: 20px 0; }
+  .blog .section-heading h2 {
+    display: inline-block; }
+  .blog .section-heading .button {
+    padding: 1px 20px;
+    float: right;
+    font-size: 16px; }
 .blog .flex-row {
   margin-right: -15px; }
   .blog .flex-row .flex-item-4 .blog-post {
@@ -1443,16 +1448,27 @@ input:focus ~ .highlight {
   left: 7px;
   z-index: 1; }
   .new-page.events .display-flex .meeting-room.slick-slider .slick-prev:before {
-    content: "\f053";
-    color: #fff;
-    font-family: Material Design Icons; }
+    content: "\F141";
+    color: #ffffff;
+    font-family: Material Design Icons;
+    border: 2px solid #ffffff;
+    text-shadow: 2px 2px 4px #000000;
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); }
 .new-page.events .display-flex .meeting-room.slick-slider .slick-next {
-  right: 7px;
+  right: 10px;
   z-index: 1; }
   .new-page.events .display-flex .meeting-room.slick-slider .slick-next:before {
-    content: "\F05A";
-    color: #fff;
-    font-family: Material Design Icons; }
+    content: "\F142";
+    color: #ffffff;
+    font-family: Material Design Icons;
+    border: 2px solid #ffffff;
+    text-shadow: 2px 2px 4px #000000;
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); }
+.new-page.events .display-flex .meeting-room.slick-slider .slick-next:hover:before, .new-page.events .display-flex .meeting-room.slick-slider .slick-prev:hover:before {
+  border-color: #FF5533;
+  background-color: #FF5533;
+  color: #ffffff;
+  text-shadow: none; }
 .new-page.events .display-flex .meeting-room .slick-slide img {
   width: 100%; }
 .new-page.events .display-flex .price {
@@ -1615,21 +1631,32 @@ input:focus ~ .highlight {
   margin-bottom: 40px; }
 .wrapper.members .main-block .container .instagram.slick-initialized {
   margin-right: -15px; }
+  .wrapper.members .main-block .container .instagram.slick-initialized .slick-next:hover:before, .wrapper.members .main-block .container .instagram.slick-initialized .slick-prev:hover:before {
+    border-color: #FF5533;
+    background-color: #FF5533;
+    color: #ffffff;
+    text-shadow: none; }
   .wrapper.members .main-block .container .instagram.slick-initialized .slick-prev {
     top: 50%;
-    left: auto;
+    left: 7px;
     z-index: 2; }
     .wrapper.members .main-block .container .instagram.slick-initialized .slick-prev:before {
-      content: '\f053';
-      color: white;
-      font-family: "Material Design Icons"; }
+      content: '\F141';
+      color: #ffffff;
+      font-family: "Material Design Icons";
+      border: 2px solid #ffffff;
+      text-shadow: 2px 2px 4px #000000;
+      box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); }
   .wrapper.members .main-block .container .instagram.slick-initialized .slick-next {
     top: 50%;
-    right: 15px; }
+    right: 25px; }
     .wrapper.members .main-block .container .instagram.slick-initialized .slick-next:before {
-      content: "\F05A";
-      color: white;
-      font-family: "Material Design Icons"; }
+      content: "\F142";
+      color: #ffffff;
+      font-family: "Material Design Icons";
+      border: 2px solid #ffffff;
+      text-shadow: 2px 2px 4px #000000;
+      box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); }
   .wrapper.members .main-block .container .instagram.slick-initialized .slick-slide {
     margin-right: 15px;
     position: relative; }
@@ -1709,7 +1736,7 @@ input:focus ~ .highlight {
         opacity: 1;
         transition: 0.5s; }
       .wrapper.members .main-block .container .instagram.slick-initialized .slick-slide .hover-hash .hashtags {
-        padding: 0 20px;
+        padding: 0 35px;
         word-break: break-word; }
   .wrapper.members .main-block .container .instagram.slick-initialized .slick-list .slick-track .slick-slide {
     overflow: hidden;
@@ -1751,6 +1778,12 @@ input:focus ~ .highlight {
           height: 256px; }
         .members-info .container .left-block a .impact-logo {
           height: 400px; }
+    .members-info .container .right-block p {
+      margin-bottom: 20px; }
+    .members-info .container .right-block .members-header a {
+      color: #282B2E; }
+      .members-info .container .right-block .members-header a:hover {
+        color: #FF5533; }
 
 /* Gallery */
 .gallery.members-gallery .gallery-line {
@@ -2541,6 +2574,12 @@ input:focus ~ .highlight {
   .wrapper.invitation .main-block .form-invitation .container .form-invite .contacts-invite .form-block {
     width: 35%; } }
 @media (max-width: 680px) {
+  .blog .section-heading h2 {
+    display: block; }
+  .blog .section-heading .button {
+    margin-top: 10px;
+    float: none; }
+
   .new-page.events .pages.flex-row .flex-item-4 {
     flex: 0 0 100%;
     max-width: 100%; }
@@ -3249,6 +3288,11 @@ input:focus ~ .highlight {
   .new-page.events .amenities-block .bloks-icons {
     width: auto; } }
 @media (max-width: 320px) {
+  .wrapper.members .main-block .container .instagram.slick-initialized .slick-prev {
+    right: 55%; }
+  .wrapper.members .main-block .container .instagram.slick-initialized .slick-next {
+    right: 46%; }
+
   .members-info .container .left-block a .adtechmedia {
     height: 46px; }
   .members-info .container .left-block a .iello-logo {

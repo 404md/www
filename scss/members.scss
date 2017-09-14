@@ -16,24 +16,36 @@
         }
         .instagram {
           &.slick-initialized {
+            .slick-next:hover:before, .slick-prev:hover:before {
+              border-color: $main_color;
+              background-color: $main_color;
+              color:#ffffff;
+              text-shadow: none;
+            }
             margin-right: -15px;
             .slick-prev {
               top: 50%;
-              left: auto;
+              left: 7px;
               z-index: 2;
               &:before {
-                content: '\f053';
-                color: white;
+                content: '\F141';
+                color: #ffffff;
                 font-family: "Material Design Icons";
+                border: 2px solid #ffffff;
+                text-shadow: 2px 2px 4px #000000;
+                box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
               }
             }
             .slick-next {
               top: 50%;
-              right: 15px;
+              right: 25px;
               &:before {
-                content: "\F05A";
-                color: white;
+                content: "\F142";
+                color: #ffffff;
                 font-family: "Material Design Icons";
+                border: 2px solid #ffffff;
+                text-shadow: 2px 2px 4px #000000;
+                box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
               }
             }
             .slick-slide {
@@ -126,7 +138,7 @@
 
                 }
                 .hashtags {
-                  padding: 0 20px;
+                  padding: 0 35px;
                   word-break: break-word;
                 }
               }
@@ -192,6 +204,19 @@
         }
         .impact-logo {
           height: 400px;
+        }
+      }
+    }
+    .right-block {
+      p {
+        margin-bottom: 20px;
+      }
+      .members-header {
+        a {
+          color: $color;
+          &:hover {
+            color: $main_color;
+          }
         }
       }
     }
