@@ -59,7 +59,8 @@ function getEventsFeed() {
 
 function customTimeFormat(string_date) {
   const date = new Date(string_date);
-  return pad(date.getHours()) + ':' + pad(date.getMinutes());
+  const KIV_TIMEZONE = new Date(date.toLocaleString('en-US', { timeZone: 'Europe/Chisinau' }));
+  return pad(KIV_TIMEZONE.getHours()) + ':' + pad(KIV_TIMEZONE.getMinutes());
 }
 
 function getDay(string_date) {
