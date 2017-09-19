@@ -16,8 +16,10 @@
 <meta name="twitter:description" content="404 Not Found is a coworking space for IT Businesses and IT people from Moldova. We want to empower local IT community of small companies and skillied individuals to be competitive globally"/>
 <meta name="twitter:image" content="https://www.404.md/images/fb.jpeg"/>
 <meta name="twitter:url" content="https://www.404.md/coworking"/>
+
 <link rel="icon" href="/favicon.png" type="image/png"/>
     <link rel="stylesheet" href="../css/index.min.css"/>
+
     <!--[if IE]>
     <link rel="stylesheet" href="../css/materialdesignicons.css"/>
     <link rel="stylesheet" href="../css/slick-1.6.0.min.css"/>
@@ -72,7 +74,7 @@ window.fbAsyncInit = function () {
                 <meta itemprop="url" content="https://www.404.md/images/logo-right-black.svg">
             </a>
         </div>
-        <div class="nav-top" >
+        <div class="nav-top" id="navigation">
             <div id="menu-toggle">
                 <div id="hamburger">
                     <span></span>
@@ -85,7 +87,8 @@ window.fbAsyncInit = function () {
                 </div>
             </div>
             <ul class="navt" id="myTopnav">
-                <li><a class="link active" href="/coworking/">Coworking</a></li>
+                <li class="current-item"><a class="link active" href="/coworking/">Coworking</a></li>
+                <li><a class="link" href="/events/">Events</a></li>
                 <li><a class="link" href="/members/">Members</a></li>
                 <li><a class="link" href="/media/">Media</a></li>
                 <li><a class="link" href="/gallery/">Gallery</a></li>
@@ -93,18 +96,21 @@ window.fbAsyncInit = function () {
                 <li><a class="link" href="https://blog.404.md">Blog</a></li>
                 <li><a class="last-line" href="/tour/"><span class="blog">Book a Tour</span></a></li>
             </ul>
+            <span id="slide-line"></span>
         </div>
         <div class="clear"></div>
     </div>
 </header>
 
-<section class="image">
-    <div class="image-coworking page">
-        <div class="text-page-name">
-            <h1 class="page-name">Coworking</h1>
+<div class="parallax-window" data-parallax="scroll" data-image-src="/images/coworking-bg.jpg">
+    <section class="image">
+        <div class="page">
+            <div class="text-page-name">
+                <h1 class="page-name scroll-title">Coworking</h1>
+            </div>
         </div>
-    </div>
-</section>
+    </section>
+</div>
 
 <div class="container new-page">
     <div class="pages">
@@ -127,8 +133,7 @@ window.fbAsyncInit = function () {
                         <div class="text-plan">
                             <div class="text-p">Test Drive</div>
                             <label>
-                                <span>$</span>
-                                <span>20 / 24 hours</span>
+                                <span>24 hours</span>
                             </label>
                         </div>
                     </div>
@@ -149,10 +154,9 @@ window.fbAsyncInit = function () {
                     <div class="plan"><img src="../images/plan2.jpg" alt="Free Plan" />
                         <div class="text-plan">
                             <div class="text-p">Free Plan</div>
-                            <label>
-                                <span>$</span>
-                                <span>0 / month</span>
-                            </label>
+                            <div class="btn-plan">
+                                <a itemprop="url" href="/tour/" class="button">Book a Tour</a>
+                            </div>
                         </div>
                     </div>
                     <div class="plans-points">
@@ -185,7 +189,7 @@ window.fbAsyncInit = function () {
                         <div class="text-plan">
                             <div class="text-p">Individual</div>
                             <div class="btn-plan">
-                            <a itemprop="url" href="/tour/" class="button">Book a Tour</a>
+                                <a itemprop="url" href="/tour/" class="button">Book a Tour</a>
                             </div>
                         </div>
                     </div>
@@ -211,7 +215,7 @@ window.fbAsyncInit = function () {
                             </div>
                         </div>
                     <div class="btn-plan-contact">
-                        <a itemprop="url" class="button getprice-button1">Get Price</a>
+                        <a itemprop="url" class="md-trigger button" data-modal="modal-1">Get Price</a>
                     </div>
                 </div>
                 <div class="plans">
@@ -219,7 +223,7 @@ window.fbAsyncInit = function () {
                         <div class="text-plan">
                             <div class="text-p">Business</div>
                             <div class="btn-plan">
-                            <a itemprop="url" href="/tour/" class="button">Book a Tour</a>
+                                <a itemprop="url" href="/tour/" class="button">Book a Tour</a>
                             </div>
                         </div>
                     </div>
@@ -245,28 +249,30 @@ window.fbAsyncInit = function () {
                         </div>
                     </div>
                     <div class="btn-plan-contact">
-                        <a itemprop="url" class="button getprice-button">Get Price</a>
+                        <a itemprop="url" class="md-trigger button open-popup" data-modal="modal">Get Price</a>
                     </div>
                 </div>
             </div>
 
-            <div class="overlay1">
-                <div class="popup">
+            <div class="md-modal md-effect-1" id="modal-1">
+                <div class="md-content">
                     <div class="content">
-                        <a class="close">&times;</a>
+                        <i class="mdi mdi-close md-close"></i>
                         <iframe src="/form1/" frameborder="0"></iframe>
                     </div>
                 </div>
             </div>
+            <div class="md-overlay1"></div>
 
-            <div class="overlay">
-            <div class="popup form2">
-                <div class="content">
-                    <a class="close">&times;</a>
-                    <iframe src="/form2/" frameborder="0"></iframe>
+            <div class="popup-open-1 md-modal md-effect-1" id="modal">
+                <div class="md-content">
+                    <div class="content">
+                        <i class="mdi mdi-close md-close"></i>
+                        <iframe src="/form2/" frameborder="0"></iframe>
+                    </div>
                 </div>
             </div>
-            </div>
+            <div class="md-overlay"></div>
 
         </div>
         <div class="container new-page">
@@ -577,6 +583,7 @@ window.fbAsyncInit = function () {
         <section id="blog" class="blog">
             <header class="section-heading">
                 <h2>Recent from Our Blog:</h2>
+                <a href="https://blog.404.md/" class="button" target="_blank">Read More</a>
             </header>
             <div id="blogContent" class="section-content">
                 <div id="jsonContent" class="flex-row"></div>
@@ -595,7 +602,6 @@ window.fbAsyncInit = function () {
                 <div class="flex-item-4">
                     <i class="mdi mdi-phone color-link"></i>
                     <div class="phones">
-                        <a class="icons" href="tel:+37360999007">(+373) 78 360 009</a>
                         <a class="icons" href="tel:+37322808291">(+373) 22 808 291</a>
                         <a class="icons" href="tel:+37360999007">(+373) 60 999 007</a>
                     </div>
@@ -609,7 +615,7 @@ window.fbAsyncInit = function () {
                 <div class="flex-item-4 btn-right">
                     <i class="mdi mdi-map-marker color-link"></i>
                     <div class="map-location">
-                        <a class="icons" itemprop="streetAddress" href="https://goo.gl/maps/GvA1ChgPJ4U2"><span itemprop="streetAddress">Blvd. Dacia 23, et. 3</span>
+                        <a class="icons" itemprop="streetAddress" href="https://goo.gl/maps/7MArc7ukMhq" target="_blank"><span itemprop="streetAddress">Blvd. Dacia 23, et. 3</span>
                             <span class="one-line new-line" itemprop="addressLocality">Chisinau, Moldova</span></a>
                     </div>
                 </div>
@@ -624,12 +630,12 @@ window.fbAsyncInit = function () {
                     </div>
                 </div>
                 <div class="flex-item-4 media-icons">
-                    <a href="https://www.facebook.com/404moldova" itemprop="sameAs"><i class="mdi-facebook mdi-set" aria-hidden="true"></i></a>
-                    <a href="https://instagram.com/404_moldova" itemprop="sameAs"><i class="mdi-instagram mdi-set"></i></a>
-                    <a href="https://twitter.com/404moldova" itemprop="sameAs"><i class="mdi-twitter mdi-set"></i></a>
-                    <a href="https://www.linkedin.com/company/404-moldova" itemprop="sameAs"><i class="mdi-linkedin mdi-set"></i></a>
-                    <a href="https://www.youtube.com/channel/UCXY-0ZUU-mvxbzWuLGZp5LQ" itemprop="sameAs"><i class="mdi-youtube-play mdi-set"></i></a>
-                    <a href="https://www.messenger.com/t/404Moldova/" itemprop="sameAs"><i class="mdi-facebook-messenger mdi-set"></i></a>
+                    <a href="https://www.facebook.com/404moldova" itemprop="sameAs" target="_blank"><i class="mdi-facebook mdi-set" aria-hidden="true"></i></a>
+                    <a href="https://instagram.com/404_moldova" itemprop="sameAs" target="_blank"><i class="mdi-instagram mdi-set"></i></a>
+                    <a href="https://twitter.com/404moldova" itemprop="sameAs" target="_blank"><i class="mdi-twitter mdi-set"></i></a>
+                    <a href="https://www.linkedin.com/company/404-moldova" itemprop="sameAs" target="_blank"><i class="mdi-linkedin mdi-set"></i></a>
+                    <a href="https://www.youtube.com/channel/UCXY-0ZUU-mvxbzWuLGZp5LQ" itemprop="sameAs" target="_blank"><i class="mdi-youtube-play mdi-set"></i></a>
+                    <a href="https://www.messenger.com/t/404Moldova/" itemprop="sameAs" target="_blank"><i class="mdi-facebook-messenger mdi-set"></i></a>
                 </div>
                 <div class="flex-item-4 btn-right last-block">
                     2017 &copy; PyCoding SRL
@@ -648,9 +654,13 @@ window.fbAsyncInit = function () {
 
 <script type="text/javascript" src="../js/jquery-1.11.0.min.js"></script>
 <script type="text/javascript" src="../js/slick-1.6.0.min.js"></script>
+<script type="text/javascript" src="../js/classie.js"></script>
+<script type="text/javascript" src="../js/modalEffects.js"></script>
 <script type="text/javascript" src="../js/coworking.js"></script>
 <script type="text/javascript" src="../js/main.min.js"></script>
 <script type="text/javascript" src="../js/footer-carousel.js"></script>
+<script type="text/javascript" src="../js/parallax.min.js"></script>
+
 
 </body>
 </html>

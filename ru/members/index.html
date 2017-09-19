@@ -72,7 +72,7 @@ window.fbAsyncInit = function () {
                 <meta itemprop="url" content="https://www.404.md/images/logo-right-black.svg">
             </a>
         </div>
-        <div class="nav-top">
+        <div class="nav-top" id="navigation">
             <div id="menu-toggle">
                 <div id="hamburger">
                     <span></span>
@@ -86,25 +86,29 @@ window.fbAsyncInit = function () {
             </div>
             <ul class="navt" id="myTopnav">
                 <li><a class="link" href="/ru/coworking/">Коворкинг</a></li>
-                <li><a class="link active" href="/ru/members/">Участники</a></li>
+                <li><a class="link" href="/ru/events/">События</a></li>
+                <li class="current-item"><a class="link active" href="/ru/members/">Участники</a></li>
                 <li><a class="link" href="/ru/media/">Пресса</a></li>
                 <li><a class="link" href="/ru/gallery/">Галерея</a></li>
                 <li><a class="link" href="/ru/contact/">Контакты</a></li>
                 <li><a class="link" href="https://blog.404.md">Блог</a></li>
                 <li><a class="last-line" href="/ru/tour/"><span class="blog">Забронируй Обход</span></a></li>
             </ul>
+            <span id="slide-line"></span>
         </div>
         <div class="clear"></div>
     </div>
 </header>
 
-<section class="image">
-    <div class="image-members page">
-        <div class="text-page-name">
-            <h1 class="page-name">Участники</h1>
+<div class="parallax-window" data-parallax="scroll" data-image-src="../../images/members.jpg">
+    <section class="image">
+        <div class="page">
+            <div class="text-page-name">
+                <h1 class="page-name scroll-title">Участники</h1>
+            </div>
         </div>
-    </div>
-</section>
+    </section>
+</div>
 
 <div class="container new-page members-page">
     <div class="pages">
@@ -123,115 +127,109 @@ window.fbAsyncInit = function () {
             <div class="instagram"></div>
         </div>
 
-        <div class="projects active">
-            <div class="container">
-                <div class="display-flex">
-                    <div class="project-block">
-                        <div class="circle1"></div>
-                        <div class="text-anvio">Довольные <span class="text-color">Клиенты</span></div>
-                        <div class="start-c"></div>
-                    </div>
-
-                    <div class="project-block">
-                        <div class="circle2"></div>
-                        <div class="text-anvio">Отработанные <span class="text-color">Часы</span></div>
-                        <div class="start-c"></div>
-                    </div>
-
-                    <div class="project-block">
-                        <div class="circle3"></div>
-                        <div class="text-anvio">Терабайты <span class="text-color">Данных</span></div>
-                        <div class="start-c"></div>
-                    </div>
-
+        <div class="members-info">
+            <div class="container flex-row">
+                <div class="left-block flex-item-6">
+                    <a href="https://www.adtechmedia.io" class="logo" target="_blank">
+                        <img src="../../images/logo-adtechmedia.svg" alt="AdTechMedia Platform" class="adtechmedia" />
+                    </a>
+                </div>
+                <div class="flex-item-6 right-block">
+                    <h2 class="members-header"><a target="_blank" href="https://www.adtechmedia.io">AdTechMedia</a></h2>
+                    <p>
+                        <a target="_blank" href="https://www.adtechmedia.io">AdTechMedia</a>
+                        является Adtech платформой с возможностью микроплатежей для медиа-контента.
+                        Мы помогаем издателям и контент-провайдерам, для создания бесплатных способов дохода,
+                        которые невосприимчивы к ПО для блокировки собственной рекламы и собственных платежей.
+                        Наши решения являются безопасными для управления в реальном времени.
+                    </p>
+                    <p>
+                        Патент AdTechMedia позволяет своим клиентам выбрать их идеальный путь,
+                        которой бы они хотели поддержать для создания контента.
+                        Пользователи могут либо принять решения, чтобы создать микроплатежи,
+                        либо просмотреть рекламу для блокировки контента, чтобы разблокировать контент.
+                        Идя по этому пути, издатели могут выбрать, какую  плату взимать за каждую статью
+                        (например, 15 центов) и в продолжительность видео рекламы (например, 5 секунд).
+                    </p>
+                    <p>
+                        Основываясь на удачном опыте клиентов, эта платформа размещена на вашем веб-сайте
+                        или веб-приложении. Если вы издатель
+                        или контент-провайдер, и вы  ищете надежное решение для разрешения проблемы,
+                        то AdTechMedia является ответом.
+                    </p>
+                    <p>
+                        <a target="_blank" href="https://www.adtechmedia.io/admin/accounts/signup">Зарегистрироваться</a> или
+                        <a target="_blank" href="https://www.adtechmedia.io/admin/accounts/signin">войти в систему</a> сегодня!
+                    </p>
                 </div>
             </div>
         </div>
 
-        <div class="case-study">
-            <div class="container">
-                <div class="left-block">
-                    <div class="mockup">
-                        <img class="logo-img" src="../../images/logo-adtechmedia.svg" alt="AdTechMedia" />
 
-                    <div class="mockup-head">
-                        <div class="flex-row">
-                            <div class="flex-item-6">
-                                <h1>Article Title</h1>
-                            </div>
-                            <div class="flex-item-6 self-center">
-                                <div class="icons-cont text-right">
-                                    <i class="five">5¢</i>
-                                    <i class="mdi mdi-facebook"></i>
-                                    <i class="mdi mdi-twitter"></i>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="flex-row">
-                            <div class="flex-item-6 text-left">
-                                By John Smith, <i>author</i>
-                            </div>
-                            <div class="flex-item-6 text-right">September 22nd, 2016</div>
-                        </div>
-                    </div>
+        <div class="members-info visa_versa-block">
+            <div class="container flex-row">
+                <div class="flex-item-6 right-block">
+                    <h2 class="members-header"><a href="http://impactacademies.com/ru/home" target="_blank">ImpacT Academies & Camps</a></h2>
 
-                    <div class="mockup-cont">
-                        <img src="../../images/mockup-image.jpg" alt="Case Study">
-
-                        <p>It is a long established fact that a reader will be distracted by
-                            the readable content of a page when looking at its layout.
-                        </p>
-
-                        <div class="blurry">
-                            <p>It is a long established fact that a reader will be distracted by
-                                the readable content of a page when looking at its layout.
-                                The point of using Lorem Ipsum is that it has a more-or-less normal
-                                distribution of letters, as opposed to using 'Content here, content here',
-                                making it look like readable English.
-                            </p>
-                            <button type="submit" class="btn btn-primary">
-                                <i class="mdi mdi-lock"></i>
-                                Unlock Content
-                            </button>
-                        </div>
-                    </div>
-                </div>
+                    <p>
+                        ImpacT Academies & Camps основана для предоставления возможности нашим детям получить
+                        необходимые навыки и обучить их цифровой грамотности с целью перейти со стадии
+                        потребителя технологий в их создателя. Даже если ребенок не станет работать в этой сфере,
+                        без таких способностей почти невозможно будет добиться успеха в современном мире.
+                    </p>
+                    <p>
+                        Используя собственную учебную программу, адаптированную из школ Силиконовой долины,
+                        мы обучаем не только техническим навыкам – графическому дизайну, программированию,
+                        разработке сайтов, игр, робототехнике, но и soft-skills направленных на управление
+                        личным развитием, умению грамотно управлять своим временем, умению убеждать,
+                        навыкам ведения переговоров и т.д.
+                    </p>
+                    <p>
+                        Мы рады расширить возможности будущего поколения, предоставив им все нужные навыки
+                        чтобы стать лидерами в цифровую эру. Присоединяйтесь к нашему путешествию!
+                    </p>
 
                 </div>
-                <div class="right-block">
-                    <div class="right-info">
-                        <h2 class="right-header">Пример</h2>
-                        <a href="https://www.adtechmedia.io" class="logo">
-                            <img src="../../images/logo-adtechmedia.svg" alt="AdTechMedia Platform" />
-                        </a>
-                        <p>
-                            <a target="_blank" href="https://www.adtechmedia.io">AdTechMedia</a>
-                            является Adtech платформой с возможностью микроплатежей для медиа-контента.
-                            Мы помогаем издателям и контент-провайдерам, для создания бесплатных способов дохода,
-                            которые невосприимчивы к ПО для блокировки собственной рекламы и собственных платежей.
-                            Наши решения являются безопасными для управления в реальном времени.
-                        </p>
-                        <p>
-                            Патент AdTechMedia позволяет своим клиентам выбрать их идеальный путь,
-                            которой бы они хотели поддержать для создания контента.
-                            Пользователи могут либо принять решения, чтобы создать микроплатежи,
-                            либо просмотреть рекламу для блокировки контента, чтобы разблокировать контент.
-                            Идя по этому пути, издатели могут выбрать, какую  плату взимать за каждую статью
-                            (например, 15 центов) и в продолжительность видео рекламы (например, 5 секунд).
-                        </p>
-                        <p>
-                            Основываясь на удачном опыте клиентов, эта платформа размещена на вашем веб-сайте
-                            или веб-приложении. Если вы издатель
-                            или контент-провайдер, и вы  ищете надежное решение для разрешения проблемы,
-                            то AdTechMedia является ответом.
-                        </p>
-                        <p>
-                            <a target="_blank" href="https://www.adtechmedia.io/admin/accounts/signup">Зарегистрироваться</a> или
-                            <a target="_blank" href="https://www.adtechmedia.io/admin/accounts/signin">войти в систему</a> сегодня!
-                        </p>
-                    </div>
+                <div class="left-block flex-item-6">
+                    <a href="http://impactacademies.com/ru/home" class="logo" target="_blank">
+                        <img src="../../images/impact.svg" alt="ImpacT Academies & Camps" class="iello-logo" />
+                    </a>
                 </div>
-                <div class="clear"></div>
+            </div>
+        </div>
+
+        <div class="members-info">
+            <div class="container flex-row">
+                <div class="left-block flex-item-6">
+                    <a href="http://www.iello.ro/" class="logo" target="_blank">
+                        <img src="../../images/iello.png" alt="iEllo IT" class="iello-logo" />
+                    </a>
+                </div>
+                <div class="flex-item-6 right-block">
+                    <h2 class="members-header"><a href="http://www.iello.ro/" target="_blank">iEllo IT</a></h2>
+
+                    <p>
+                        iELLO - это международный провайдер IT решений, специализирующийся на программной
+                        разработке и SOA интеграции, которые предоставляют организациям беспрецедентную гибкость,
+                        масштабируемость, совместимость и производительность.
+                    </p>
+                    <p>
+                        iELLO гордится ролью первопроходца в предоставлении услуг по SOA интеграции в регионе,
+                        базируясь на 100% платформе промежуточного ПО с открытым исходным кодом
+                        корпоративного класса от WSO2.
+                    </p>
+                    <p>
+                        Наша команда создала великолепную репутацию, реализуя самые сложные проекты
+                        и предоставляю оперативную поддержку наших клиентов, как на этапе реализации,
+                        так и на этапе производства.
+                    </p>
+                    <p>
+                        Маневренность iELLO обеспечивается обширными знаниями и опытом команды,
+                        которые позволяют нам реагировать на требования клиентов
+                        в коммерчески-сложной и технически-конкурентной среде.
+                    </p>
+
+                </div>
             </div>
         </div>
     </section>
@@ -492,7 +490,8 @@ window.fbAsyncInit = function () {
         </section>
         <section id="blog" class="blog">
             <header class="section-heading">
-                <h2>Recent from Our Blog:</h2>
+                <h2>Новое в Блоге:</h2>
+                <a href="https://blog.404.md/" class="button" target="_blank">Читай Ещё</a>
             </header>
             <div id="blogContent" class="section-content">
                 <div id="jsonContent" class="flex-row"></div>
@@ -511,7 +510,6 @@ window.fbAsyncInit = function () {
                 <div class="flex-item-4">
                     <i class="mdi mdi-phone color-link"></i>
                     <div class="phones">
-                        <a class="icons" href="tel:+37360999007">(+373) 78 360 009</a>
                         <a class="icons" href="tel:+37322808291">(+373) 22 808 291</a>
                         <a class="icons" href="tel:+37360999007">(+373) 60 999 007</a>
                     </div>
@@ -525,7 +523,7 @@ window.fbAsyncInit = function () {
                 <div class="flex-item-4 btn-right">
                     <i class="mdi mdi-map-marker color-link"></i>
                     <div class="map-location">
-                        <a class="icons" itemprop="streetAddress" href="https://goo.gl/maps/GvA1ChgPJ4U2"><span itemprop="streetAddress">бул. Дачия 23, эт. 3</span>
+                        <a class="icons" itemprop="streetAddress" href="https://goo.gl/maps/7MArc7ukMhq" target="_blank"><span itemprop="streetAddress">бул. Дачия 23, эт. 3</span>
                             <span class="one-line new-line" itemprop="addressLocality">Кишинев, Молдова</span></a>
                     </div>
                 </div>
@@ -540,12 +538,12 @@ window.fbAsyncInit = function () {
                     </div>
                 </div>
                 <div class="flex-item-4 media-icons">
-                    <a href="https://www.facebook.com/404moldova" itemprop="sameAs"><i class="mdi-facebook mdi-set" aria-hidden="true"></i></a>
-                    <a href="https://instagram.com/404_moldova" itemprop="sameAs"><i class="mdi-instagram mdi-set"></i></a>
-                    <a href="https://twitter.com/404moldova" itemprop="sameAs"><i class="mdi-twitter mdi-set"></i></a>
-                    <a href="https://www.linkedin.com/company/404-moldova" itemprop="sameAs"><i class="mdi-linkedin mdi-set"></i></a>
-                    <a href="https://www.youtube.com/channel/UCXY-0ZUU-mvxbzWuLGZp5LQ" itemprop="sameAs"><i class="mdi-youtube-play mdi-set"></i></a>
-                    <a href="https://www.messenger.com/t/404Moldova/" itemprop="sameAs"><i class="mdi-facebook-messenger mdi-set"></i></a>
+                    <a href="https://www.facebook.com/404moldova" itemprop="sameAs" target="_blank"><i class="mdi-facebook mdi-set" aria-hidden="true"></i></a>
+                    <a href="https://instagram.com/404_moldova" itemprop="sameAs" target="_blank"><i class="mdi-instagram mdi-set"></i></a>
+                    <a href="https://twitter.com/404moldova" itemprop="sameAs" target="_blank"><i class="mdi-twitter mdi-set"></i></a>
+                    <a href="https://www.linkedin.com/company/404-moldova" itemprop="sameAs" target="_blank"><i class="mdi-linkedin mdi-set"></i></a>
+                    <a href="https://www.youtube.com/channel/UCXY-0ZUU-mvxbzWuLGZp5LQ" itemprop="sameAs" target="_blank"><i class="mdi-youtube-play mdi-set"></i></a>
+                    <a href="https://www.messenger.com/t/404Moldova/" itemprop="sameAs" target="_blank"><i class="mdi-facebook-messenger mdi-set"></i></a>
                 </div>
                 <div class="flex-item-4 btn-right last-block ru_ro-block ru">
                     2017 &copy; PyCoding SRL
@@ -569,6 +567,7 @@ window.fbAsyncInit = function () {
 <script type="text/javascript" src="../../js/members.min.js"></script>
 <script type="text/javascript" src="../../js/progressbar.min.js"></script>
 <script type="text/javascript" src="../../js/footer-carousel.js" async defer></script>
+<script type="text/javascript" src="../../js/parallax.min.js"></script>
 
 </body>
 </html>

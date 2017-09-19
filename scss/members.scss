@@ -16,24 +16,36 @@
         }
         .instagram {
           &.slick-initialized {
+            .slick-next:hover:before, .slick-prev:hover:before {
+              border-color: $main_color;
+              background-color: $main_color;
+              color:#ffffff;
+              text-shadow: none;
+            }
             margin-right: -15px;
             .slick-prev {
               top: 50%;
-              left: auto;
+              left: 7px;
               z-index: 2;
               &:before {
-                content: '\f053';
-                color: white;
+                content: '\F141';
+                color: #ffffff;
                 font-family: "Material Design Icons";
+                border: 2px solid #ffffff;
+                text-shadow: 2px 2px 4px #000000;
+                box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
               }
             }
             .slick-next {
               top: 50%;
-              right: 15px;
+              right: 25px;
               &:before {
-                content: "\F05A";
-                color: white;
+                content: "\F142";
+                color: #ffffff;
                 font-family: "Material Design Icons";
+                border: 2px solid #ffffff;
+                text-shadow: 2px 2px 4px #000000;
+                box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
               }
             }
             .slick-slide {
@@ -78,7 +90,7 @@
                 right: 0;
                 height: 100%;
                 color: white;
-                background-color: rgba(221, 89, 49, 0.8);
+                background-color: rgba(40,43,46, 0.7);
                 transition: all .2s ease-in-out;
                 .hover-text {
                   position: relative;
@@ -89,8 +101,30 @@
                   transform: translate(-50%, -50%);
                   text-align: center;
                   .likes-instagram {
+                    display: inline-block;
+                    padding: 3px 15px;
+                    background: #FF3C4C;
+                    border-radius: 7px;
+                    -webkit-border-radius: 7px;
+                    -moz-border-radius: 7px;
+                    position: relative;
+                    margin-bottom: 32px;
+                    font-size: 24px;
+                    &:after {
+                      content: "";
+                      position: absolute;
+                      border-top: 12px solid #FF3C4C;
+                      border-left: 12px solid transparent;
+                      border-right: 12px solid transparent;
+                      bottom: -12px;
+                      left:50%;
+                      transform: translateX(-50%);
+                      -webkit-transform: translateX(-50%);
+                      -moz-transform: translateX(-50%);
+                      -o-transform: translateX(-50%);
+                    }
                     &:before {
-                      content: '\F2D5';
+                      content: '\F2D1';
                       color: white;
                       font-family: "Material Design Icons";
                       font-size: x-large;
@@ -104,7 +138,7 @@
 
                 }
                 .hashtags {
-                  padding: 0 20px;
+                  padding: 0 35px;
                   word-break: break-word;
                 }
               }
@@ -113,6 +147,14 @@
               .slick-track {
                 .slick-slide {
                   overflow: hidden;
+                  height: 386px;
+                  .video-block {
+                    height: 100%;
+                  }
+                  img {
+                    object-fit: cover;
+                    min-height: 100%;
+                  }
                   &:hover img {
                     transform: scale(1.1);
                   }
@@ -133,189 +175,52 @@
   }
 }
 
-.projects {
-  background: #f5f5f4;
-  min-height: 300px;
-  .container {
-    .display-flex {
-      min-height: 300px;
-      padding-top: 40px;
-      padding-bottom: 40px;
-      .project-block {
-        width: 300px;
-        text-align: center;
-        margin: auto;
-        font-size: 35px;
-        .text-anvio {
-          margin-top: 20px;
-          margin-bottom: 10px;
-        }
-      }
-    }
-  }
+.members-header {
+  margin-bottom: 30px;
+  font-size: 35px;
 }
 
-.case-study {
-  min-height: 760px;
+
+.members-info {
+  background: #F7F7F7;
+  &.visa_versa-block {
+    background: #ffffff;
+  }
   .container {
-    margin-top: 50px;
+    padding-top: 40px;
+    padding-bottom: 40px;
     .left-block {
-      float:left;
-      width: 50%;
-      font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
-      .mockup {
-        background: #fff;
-        border: 1px solid #e1e1e1;
-        box-shadow: 0 1px 7px 0 rgba(0, 0, 0, .08);
-        padding: 20px 50px 50px;
-        position: relative;
-        margin-bottom: 50px;
-        .logo-img {
-          height: 35px;
-          margin: 0 auto;
-          display: flex;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      a {
+        display: block;
+        .adtechmedia {
+          height: 73px;
         }
-
-        .mockup-head {
-          border-width: 1px 0;
-          border-color: #3b9ff3;
-          border-style: solid;
-          margin: 20px 0;
-          padding: 5px 0 15px 0;
-          h1 {
-            color: #3b9ff3;
-            font-size: 24px;
-            line-height: 40px;
-            margin: 0;
-            text-align: left;
-          }
-          .flex-row {
-            font-size: 17px;
-            .flex-item-6 {
-              margin: 10px 0;
-              &.text-left {
-                text-align: left;
-              }
-              &.text-right {
-                text-align: right;
-              }
-              &.self-center {
-                line-height: 37px;
-                text-align: right;
-              }
-              .icons-cont {
-                i {
-                  background: #ddd;
-                  padding: 6px;
-                  border-radius: 50%;
-                  margin-left: 10px;
-                }
-                .five {
-                  padding: 7px 8px;
-                  font-size: 17px;
-                }
-                .mdi-facebook {
-                  font-size: 15px;
-                  padding: 9px 10px;
-                }
-                .mdi-twitter {
-                  font-size: 15px;
-                  padding: 9px;
-                }
-              }
-            }
-          }
+        .iello-logo {
+          height: 256px;
         }
-
-        .mockup-cont {
-          & > p {
-            margin: 0 0 20px;
-          }
-
-          img {
-            margin-bottom: 20px;
-            opacity: .7;
-            width: 100%;
-          }
-
-          .blurry {
-            position: relative;
-            p {
-              filter: blur(2.5px);
-              -webkit-filter: blur(2.5px);
-            }
-
-            .btn {
-              position: absolute;
-              top: 50%;
-              left: 50%;
-              transform: translateX(-50%) translateY(-50%);
-              -webkit-transform: translateX(-50%) translateY(-50%);
-              &.btn-primary {
-                background: #44a5db;
-                border: 0;
-                padding: 10px;
-                color: #fff;
-                font-size: 13px;
-                text-transform: uppercase;
-              }
-            }
-          }
+        .impact-logo {
+          height: 400px;
         }
       }
     }
     .right-block {
-      float:right;
-      width: 50%;
-      height:710px;
-      .right-info {
-        width: 90%;
-        float: right;
-        top: 50%;
-        transform: translateY(-50%);
-        position: relative;
-        .logo {
-          display: block;
-          height: 100px;
-          img {
-            height: 80px;
-            position: relative;
-            top: 50%;
-            -webkit-transform: translateY(-50%);
-            -moz-transform: translateY(-50%);
-            -o-transform: translateY(-50%);
-            transform: translateY(-50%);
+      p {
+        margin-bottom: 20px;
+      }
+      .members-header {
+        a {
+          color: $color;
+          &:hover {
+            color: $main_color;
           }
         }
-        p {
-          margin-top: 20px;
-          font-size: 16px;
-        }
-        .right-header {
-          font-family: 'Lato', sans-serif;
-         font-size: 50px;
-         position: relative;
-         margin-bottom: 20px;
-         &:before {
-           content: '';
-           position: absolute;
-           width: 140px;
-           height: 6px;
-           background: #FF5533;
-           bottom: 0;
-         }
-       }
       }
     }
   }
-}
-
-.circle1, .circle2, .circle3 {
-  margin: 0 auto;
-  width: 175px;
-  height: 175px;
-  position: relative;
-
 }
 
 /* Gallery */

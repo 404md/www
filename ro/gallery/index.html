@@ -77,7 +77,7 @@ window.fbAsyncInit = function () {
                 <meta itemprop="url" content="https://www.404.md/images/logo-right-black.svg">
             </a>
         </div>
-        <div class="nav-top" >
+        <div class="nav-top" id="navigation">
             <div id="menu-toggle">
                 <div id="hamburger">
                     <span></span>
@@ -91,25 +91,29 @@ window.fbAsyncInit = function () {
             </div>
             <ul class="navt" id="myTopnav">
                 <li><a class="link" href="/ro/coworking/">Coworking</a></li>
+                <li><a class="link" href="/ro/events/">Evenimente</a></li>
                 <li><a class="link" href="/ro/members/">Membri</a></li>
                 <li><a class="link" href="/ro/media/">Media</a></li>
-                <li><a class="link active" href="/ro/gallery/">Galerie</a></li>
+                <li class="current-item"><a class="link active" href="/ro/gallery/">Galerie</a></li>
                 <li><a class="link" href="/ro/contact/">Contacte</a></li>
                 <li><a class="link" href="https://blog.404.md">Blog</a></li>
                 <li><a class="last-line" href="/ro/tour/"><span class="blog">Rezervă o Vizită</span></a></li>
             </ul>
+            <span id="slide-line"></span>
         </div>
         <div class="clear"></div>
     </div>
 </header>
 
-<section class="image">
-    <div class="image-gallery page">
-        <div class="text-page-name">
-            <h1 class="page-name">Galerie</h1>
+<div class="parallax-window" data-parallax="scroll" data-image-src="../../images/gallery.jpg">
+    <section class="image">
+        <div class="page">
+            <div class="text-page-name">
+                <h1 class="page-name scroll-title">Galerie</h1>
+            </div>
         </div>
-    </div>
-</section>
+    </section>
+</div>
 
 <div class=" container new-page">
     <div class="pages">
@@ -400,7 +404,8 @@ window.fbAsyncInit = function () {
         </section>
         <section id="blog" class="blog">
             <header class="section-heading">
-                <h2>Recent from Our Blog:</h2>
+                <h2>Nou pe Blog:</h2>
+                <a href="https://blog.404.md/" class="button" target="_blank">Mai Multe</a>
             </header>
             <div id="blogContent" class="section-content">
                 <div id="jsonContent" class="flex-row"></div>
@@ -419,7 +424,6 @@ window.fbAsyncInit = function () {
                 <div class="flex-item-4">
                     <i class="mdi mdi-phone color-link"></i>
                     <div class="phones">
-                        <a class="icons" href="tel:+37360999007">(+373) 78 360 009</a>
                         <a class="icons" href="tel:+37322808291">(+373) 22 808 291</a>
                         <a class="icons" href="tel:+37360999007">(+373) 60 999 007</a>
                     </div>
@@ -433,7 +437,7 @@ window.fbAsyncInit = function () {
                 <div class="flex-item-4 btn-right">
                     <i class="mdi mdi-map-marker color-link"></i>
                     <div class="map-location">
-                        <a class="icons" itemprop="streetAddress" href="https://goo.gl/maps/GvA1ChgPJ4U2"><span itemprop="streetAddress">Bul. Dacia 23, et. 3</span>
+                        <a class="icons" itemprop="streetAddress" href="https://goo.gl/maps/7MArc7ukMhq" target="_blank"><span itemprop="streetAddress">Bul. Dacia 23, et. 3</span>
                             <span class="one-line new-line" itemprop="addressLocality">Chișinău, Moldova</span></a>
                     </div>
                 </div>
@@ -448,12 +452,12 @@ window.fbAsyncInit = function () {
                     </div>
                 </div>
                 <div class="flex-item-4 media-icons">
-                    <a href="https://www.facebook.com/404moldova" itemprop="sameAs"><i class="mdi-facebook mdi-set" aria-hidden="true"></i></a>
-                    <a href="https://instagram.com/404_moldova" itemprop="sameAs"><i class="mdi-instagram mdi-set"></i></a>
-                    <a href="https://twitter.com/404moldova" itemprop="sameAs"><i class="mdi-twitter mdi-set"></i></a>
-                    <a href="https://www.linkedin.com/company/404-moldova" itemprop="sameAs"><i class="mdi-linkedin mdi-set"></i></a>
-                    <a href="https://www.youtube.com/channel/UCXY-0ZUU-mvxbzWuLGZp5LQ" itemprop="sameAs"><i class="mdi-youtube-play mdi-set"></i></a>
-                    <a href="https://www.messenger.com/t/404Moldova/" itemprop="sameAs"><i class="mdi-facebook-messenger mdi-set"></i></a>
+                    <a href="https://www.facebook.com/404moldova" itemprop="sameAs" target="_blank"><i class="mdi-facebook mdi-set" aria-hidden="true"></i></a>
+                    <a href="https://instagram.com/404_moldova" itemprop="sameAs" target="_blank"><i class="mdi-instagram mdi-set"></i></a>
+                    <a href="https://twitter.com/404moldova" itemprop="sameAs" target="_blank"><i class="mdi-twitter mdi-set"></i></a>
+                    <a href="https://www.linkedin.com/company/404-moldova" itemprop="sameAs" target="_blank"><i class="mdi-linkedin mdi-set"></i></a>
+                    <a href="https://www.youtube.com/channel/UCXY-0ZUU-mvxbzWuLGZp5LQ" itemprop="sameAs" target="_blank"><i class="mdi-youtube-play mdi-set"></i></a>
+                    <a href="https://www.messenger.com/t/404Moldova/" itemprop="sameAs" target="_blank"><i class="mdi-facebook-messenger mdi-set"></i></a>
                 </div>
                 <div class="flex-item-4 btn-right last-block ru_ro-block">
                     2017 &copy; PyCoding SRL
@@ -475,6 +479,7 @@ window.fbAsyncInit = function () {
 <script type="text/javascript" src="../../js/slick-1.6.0.min.js"></script>
 <script type="text/javascript" src="../../js/main.min.js"></script>
 <script type="text/javascript" src="../../js/footer-carousel.js"></script>
+<script type="text/javascript" src="../../js/parallax.min.js"></script>
 
 </body>
 </html>
