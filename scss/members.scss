@@ -219,6 +219,19 @@
           }
         }
       }
+      ul {
+        list-style-position: inside;
+        li {
+          font-size: 16px;
+          color: $gray-color;
+          span {
+            color: $color;
+          }
+        }
+        li:last-child {
+          margin-bottom: 20px;
+        }
+      }
     }
   }
 }

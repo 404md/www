@@ -1784,6 +1784,15 @@ input:focus ~ .highlight {
       color: #282B2E; }
       .members-info .container .right-block .members-header a:hover {
         color: #FF5533; }
+    .members-info .container .right-block ul {
+      list-style-position: inside; }
+      .members-info .container .right-block ul li {
+        font-size: 16px;
+        color: #95989A; }
+        .members-info .container .right-block ul li span {
+          color: #282B2E; }
+      .members-info .container .right-block ul li:last-child {
+        margin-bottom: 20px; }
 
 /* Gallery */
 .gallery.members-gallery .gallery-line {
