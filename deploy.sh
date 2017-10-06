@@ -46,7 +46,7 @@ message "### Build: Start ###"
 message "### Deploy: Start ###"
 message "Synchronizing build/Release/"
 aws s3 sync ./build/Release/ ${bucket} --region ${region} --profile ${profile} \
-    --storage-class REDUCED_REDUNDANCY --metadata-directive REPLACE --cache-control max-age=${max_age} \
+    --metadata-directive REPLACE --cache-control max-age=${max_age} \
     --exclude 'backend/*' --exclude 'scss/*' --exclude 'build/*'
 
 message "Invalidating CloudFront"
