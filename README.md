@@ -19,25 +19,34 @@ Fetches data from Instagram feed and stores them to domain related bucket.
 * Used official Instagram API (api.instagram.com/v1);
 * Fetch latest 20 posts.
 
+### Facebook Events
+
+Fetches Facebook events list and stores them as json.
+
 ## Deployment
 
 ### Pre-requisites
 
 - Amazon Web Services (AWS) [account][1]
 - AWS Command Line Interface (CLI) [configured][2]
-- HTML-minifier `npm install html-minifier -g`
-- CSS-nano `npm install cssnano-cli -g`
-- Uglify-js `npm install uglify-js -g`
+
+### Prepare
+
+Make sure you have all requirements installed
+
+```bash
+cd bin/travis && npm install && cd ../../
+```
 
 ### Build & deploy
 
 Run the deploy command:
 
 ```bash
-sh deploy.sh <env> <region> <aws-profile>
+bash bin/deploy.sh <env> <region> <aws-profile>
 ```
 
-Available `dev` and `prod` environments for deploy.
+Available `dev` and `master` environments for deploy.
 
 >Defaults:
 >- `<env> => dev`
