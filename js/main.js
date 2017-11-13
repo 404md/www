@@ -36,6 +36,9 @@ function myEvent() {
 
 }
 
+$('.open-popup').on('click', function () {
+    $('.popup-open-1').addClass('md-show');
+});
 
 jQuery(function($) {
     'use strict';
