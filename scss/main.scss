@@ -1419,6 +1419,11 @@ input {
   width: 100%;
   border: none;
   border-bottom: 1px solid #757575;
+  border-right: 0;
+  border-left: 0;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
 }
 
 input:focus {
