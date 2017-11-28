@@ -93,6 +93,7 @@
       $.each($contactForm.serializeArray(), function(i, v) {
         formDataObject[v.name] = v.value;
       });
+      $('.empty-field').val('');
     }
   });
 
@@ -101,7 +102,6 @@
    */
   $contactForm.on('submit', function (e) {
     e.preventDefault();
-    $('.empty-field').val('');
   });
 
   /**

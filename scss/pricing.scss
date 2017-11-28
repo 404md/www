@@ -25,7 +25,7 @@
 
 .gray-text {
   color: #95989A;
-  font-size: 10px;
+  font-size: 12px;
 }
 
 .new-page {
@@ -134,6 +134,11 @@
         .plans-points {
           position: relative;
           padding: 24px 20px;
+          .text-p {
+            margin-bottom: 20px;
+            font-weight: bold;
+            text-align: center;
+          }
           ul {
             padding: 0 10px;
             font-size: 16px;
