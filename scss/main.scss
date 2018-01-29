@@ -281,6 +281,17 @@ body {
 .parallax-window {
   min-height: 360px;
   background: transparent;
+  .image {
+    .page {
+      .text-page-name {
+        .icons {
+          text-align: center;
+          color: #ffffff;
+          font-size: 30px;
+        }
+      }
+    }
+  }
 }
 
 .text-anvio {
