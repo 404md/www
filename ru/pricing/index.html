@@ -84,6 +84,7 @@
                     <span></span>
                 </div>
             </div>
+
             <ul class="navt" id="myTopnav">
                 <li class="current-item"><a class="link active" href="/ru/pricing/">Цены</a></li>
                 <li><a class="link" href="/ru/events/">События</a></li>
@@ -97,14 +98,20 @@
             <span id="slide-line"></span>
         </div>
         <div class="clear"></div>
+        <div class="flag">
+            <a class="language" href="/pricing"><img src="/images/flag-us.png" alt="American Flag"></a>
+            <a class="language" href="/ro/pricing"><img src="/images/flag-ro.png" alt="Romanian Flag"></a>
+        </div>
     </div>
+
 </header>
 
 <div class="parallax-window" data-parallax="scroll" data-image-src="/images/coworking-bg.jpg">
     <section class="image">
         <div class="page">
             <div class="text-page-name">
-                <h1 class="page-name scroll-title">Коворкинг</h1>
+                <a class="icons" href="tel:+37360999007">(+373) 60 999 007</a>
+                <h1 class="page-name scroll-title">Цены</h1>
             </div>
         </div>
     </section>
@@ -128,19 +135,22 @@
                 <div class="plans">
                     <div class="plan"><img src="/images/plan1.jpg" alt="Test Drive" />
                         <div class="text-plan">
-                            <div class="text-p">Тест драйв</div>
-                            <label>
-                                <span>Неделя</span>
-                            </label>
+                            <div class="text-p">Hub Resident</div>
                         </div>
                     </div>
                     <div class="plans-points">
+                        <div class="text-p">2500 MDL</div>
                         <ul>
                             <li><span>Рабочее место</span></li>
                             <li><span>Доступны  конференц-залы</span></li>
                             <li><span>1 тренинг  или мероприятие</span></li>
                             <li><span>24-часовой доступ</span></li>
                             <li><span>Кофе, чай, фрукты и печенье</span></li>
+                            <li><span>Свободное общение с 404 партнерами</span></li>
+                            <li><span>Пригласи 2 друзей на 1 неделю</span></li>
+                            <li><span>Бесплатное использование проектора</span></li>
+                            <li><span>Консультация юриста</span></li>
+                            <li><span>Камера хранения / серверная</span></li>
                         </ul>
                     </div>
                     <div class="btn-plan-contact">
@@ -150,13 +160,23 @@
                 <div class="plans">
                     <div class="plan"><img src="/images/plan2.jpg" alt="Free Plan" />
                         <div class="text-plan">
-                            <div class="text-p">Бесплатно</div>
+                            <div class="text-p">Teams</div>
                             <div class="btn-plan">
                                 <a itemprop="url" href="/ru/tour/" class="button">Забронируй свое Место</a>
                             </div>
                         </div>
                     </div>
                     <div class="plans-points">
+                        <div class="text-p">
+                            <div class="number-input">
+                                <button onclick="this.parentNode.querySelector('input[type=number]').stepDown()" ></button>
+                                <input class="quantity" min="1" name="quantity" value="2" type="number">
+                                <button onclick="this.parentNode.querySelector('input[type=number]').stepUp()" class="plus"></button>
+                            </div>
+                            <div class="price">
+                                <span>2500</span><span> MDL</span>
+                            </div>
+                        </div>
                         <ul>
                             <li><span>Фиксированное рабочее место</span></li>
                             <li><span>Доступны  конференц-залы</span></li>
@@ -166,7 +186,8 @@
                             <li><span>Свободное общение с 404 партнерами</span></li>
                             <li><span>Бесплатные билеты на конференции Cloud Computing</span></li>
                             <li><span>Сертификаты Cloud Computing</span></li>
-                            <li><span>Пригласи 2 друзей на 1 неделю</span></li>
+                            <li><span>Консультация юриста</span></li>
+                            <li><span>Камера хранения / серверная</span></li>
                         </ul>
                         <div class="notes">
                             <div class="glay-line"></div>
@@ -183,32 +204,20 @@
                 <div class="plans">
                     <div class="plan"><img src="/images/plan3.jpg" alt="Individual" />
                         <div class="text-plan">
-                            <div class="text-p">Индивидуально</div>
+                            <div class="text-p">Day Pass</div>
                             <div class="btn-plan">
                                 <a itemprop="url" href="/ru/tour/" class="button">Забронируй свое Место</a>
                             </div>
                         </div>
                     </div>
                     <div class="plans-points">
-                        <div class="text-p">2500 MDL</div>
+                        <div class="text-p">150 MDL</div>
                         <ul>
                             <li><span>Фиксированное рабочее место</span></li>
                             <li><span>Доступны  конференц-залы</span></li>
-                            <li><span>Посещение всех тренингов и мероприятий</span></li>
+                            <li><span>Посещение 1 тренинга или мероприятия</span></li>
                             <li><span>24/7</span></li>
                             <li><span>Кофе, чай, фрукты и печенье</span></li>
-                            <li><span>Пригласи 2 друзей на 1 неделю</span></li>
-                            <li><span>Консультация юриста</span></li>
-                            <li><span>Бесплатное использование проекторов</span></li>
-                            <li><span>Камера хранения / серверная</span></li>
-                        </ul>
-                        <div class="text-p">1500 MDL</div>
-                        <div class="text-p">Последние 3 места</div>
-                        <ul>
-                            <li><span>Фиксированное рабочее место</span></li>
-                            <li><span>24/7</span></li>
-                            <li><span>Кофе, чай, фрукты и печенье</span></li>
-                            <li><span>Ограниченный доступ к конференц-залам</span></li>
                         </ul>
                     </div>
                     <div class="btn-plan-contact">
@@ -218,25 +227,19 @@
                 <div class="plans">
                     <div class="plan"><img src="/images/plan4.jpg" alt="Business" />
                         <div class="text-plan">
-                            <div class="text-p">Бизнес</div>
+                            <div class="text-p">Weekdays</div>
                             <div class="btn-plan">
                                 <a itemprop="url" href="/ru/tour/" class="button">Забронируй свое Место</a>
                             </div>
                         </div>
                     </div>
                     <div class="plans-points">
-                        <div class="text-p">2500 MDL</div>
-                        <div class="text-p">Для команд скидки до 15%</div>
+                        <div class="text-p">550 MDL/week</div>
                         <ul>
                             <li><span>Фиксированное рабочее место</span></li>
+                            <li><span>Доступное время с 9:00 - 18:00</span></li>
                             <li><span>Доступны  конференц-залы</span></li>
                             <li><span>Посещение всех тренингов и мероприятий</span></li>
-                            <li><span>24/7</span></li>
-                            <li><span>Кофе, чай, фрукты и печенье</span></li>
-                            <li><span>Свободное общение с 404 партнерами</span></li>
-                            <li><span>Бесплатные билеты на конференции Cloud Computing</span></li>
-                            <li><span>Сертификаты Cloud Computing</span></li>
-                            <li><span>Консультация юриста</span></li>
                         </ul>
                     </div>
                     <div class="btn-plan-contact">
@@ -616,10 +619,6 @@
             <div class="flex-row footer-down">
                 <div class="flex-item-4">
                     <img class="logo-footer" src="/images/logo-footer.svg" alt="Logo 404Moldova"/>
-                    <div class="flag">
-                        <a class="language" href="/coworking"><img src="/images/flag-us.png" alt="American Flag"></a>
-                        <a class="language" href="/ro/coworking"><img src="/images/flag-ro.png" alt="Romanian Flag"></a>
-                    </div>
                 </div>
                 <div class="flex-item-4 media-icons">
                     <a href="https://www.facebook.com/404moldova" itemprop="sameAs" target="_blank"><i class="mdi-facebook mdi-set" aria-hidden="true"></i></a>

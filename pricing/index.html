@@ -98,6 +98,10 @@
             <span id="slide-line"></span>
         </div>
         <div class="clear"></div>
+        <div class="flag">
+            <a class="language" href="/ro/pricing"><img src="/images/flag-ro.png" alt="Romanian Flag"></a>
+            <a class="language" href="/ru/pricing"><img src="/images/flag-ru.png" alt="Russian Flag"></a>
+        </div>
     </div>
 </header>
 <div class="parallax-window" data-parallax="scroll" data-image-src="/images/coworking-bg.jpg">
@@ -128,19 +132,22 @@
                 <div class="plans">
                     <div class="plan"><img src="/images/plan1.jpg" alt="Test Drive" />
                         <div class="text-plan">
-                            <div class="text-p">Test Drive</div>
-                            <label>
-                                <span>One Week</span>
-                            </label>
+                            <div class="text-p">Hub Resident</div>
                         </div>
                     </div>
                     <div class="plans-points">
+                        <div class="text-p">2500 MDL</div>
                         <ul>
-                            <li><span>Workplace </span></li>
-                            <li><span>Access to conference rooms</span></li>
-                            <li><span>Free access to 1 training or event</span></li>
-                            <li><span>24 hours biometric access</span></li>
+                            <li><span>Fixed workplace </span></li>
+                            <li><span>Free access to conference rooms</span></li>
+                            <li><span>Free access to all trainings and events</span></li>
+                            <li><span>24/7 biometric access</span></li>
                             <li><span>Coffee, tea, fruits and biscuits</span></li>
+                            <li><span>Free exposure to 404 partners</span></li>
+                            <li><span>Free 1 week invitation for 2 friends</span></li>
+                            <li><span>Free use of projectors</span></li>
+                            <li><span>Legal Consulting</span></li>
+                            <li><span>Storage room/servers</span></li>
                         </ul>
                     </div>
                     <div class="btn-plan-contact">
@@ -150,13 +157,23 @@
                 <div class="plans">
                     <div class="plan"><img src="/images/plan2.jpg" alt="Free Plan" />
                         <div class="text-plan">
-                            <div class="text-p">Free Plan</div>
+                            <div class="text-p">Teams</div>
                             <div class="btn-plan">
                                 <a itemprop="url" href="/tour/" class="button">Book Your Space</a>
                             </div>
                         </div>
                     </div>
                     <div class="plans-points">
+                        <div class="text-p">
+                            <div class="number-input">
+                                <button onclick="this.parentNode.querySelector('input[type=number]').stepDown()" ></button>
+                                <input class="quantity" min="1" name="quantity" value="2" type="number">
+                                <button onclick="this.parentNode.querySelector('input[type=number]').stepUp()" class="plus"></button>
+                            </div>
+                            <div class="price">
+                                <span>2500</span><span> MDL</span>
+                            </div>
+                        </div>
                         <ul>
                             <li><span>Fixed workplace</span></li>
                             <li><span>Access to conference rooms</span></li>
@@ -166,7 +183,8 @@
                             <li><span>Free exposure to 404 partners</span></li>
                             <li><span>Free tickets to Cloud Computing focused conferences</span></li>
                             <li><span>Free Cloud Computing certification</span></li>
-                            <li><span>Free 1 week invitation for 2 friends</span></li>
+                            <li><span>Legal consulting</span></li>
+                            <li><span>Storage room/servers</span></li>
                         </ul>
                         <div class="notes">
                             <div class="glay-line"></div>
@@ -182,33 +200,21 @@
                 <div class="plans">
                     <div class="plan"><img src="/images/plan3.jpg" alt="Individual" />
                         <div class="text-plan">
-                            <div class="text-p">Individual</div>
+                            <div class="text-p">Day Pass</div>
                             <div class="btn-plan">
                                 <a itemprop="url" href="/tour/" class="button">Book Your Space</a>
                             </div>
                         </div>
                     </div>
                     <div class="plans-points">
-                        <div class="text-p">2500 MDL</div>
+                        <div class="text-p">150 MDL</div>
                         <ul>
                             <li><span>Fixed workplace</span></li>
                             <li><span>Access to conference rooms</span></li>
-                            <li><span>Free acces to all trainings and events</span></li>
+                            <li><span>Free acces to 1 training or event</span></li>
                             <li><span>24/7 biometric access</span></li>
                             <li><span>Coffee, tea, fruits and biscuits</span></li>
                             <li><span>Free 1 week invitation for 2 friends</span></li>
-                            <li><span>Legal consulting</span></li>
-                            <li><span>Free use of projectors</span></li>
-                            <li><span>Storage room / servers</span></li>
-                        </ul>
-
-                        <div class="text-p">1500 MDL</div>
-                        <div class="text-p">Last 3 places are available</div>
-                        <ul>
-                            <li><span>Fixed workplace</span></li>
-                            <li><span>24/7 biometric access</span></li>
-                            <li><span>Coffee, tea, fruits and biscuits</span></li>
-                            <li><span>Limited acces to conference rooms</span></li>
                         </ul>
                     </div>
                     <div class="btn-plan-contact">
@@ -218,25 +224,20 @@
                 <div class="plans">
                     <div class="plan"><img src="/images/plan4.jpg" alt="Business" />
                         <div class="text-plan">
-                            <div class="text-p">Business</div>
+                            <div class="text-p">Weekdays</div>
                             <div class="btn-plan">
                                 <a itemprop="url" href="/tour/" class="button">Book Your Space</a>
                             </div>
                         </div>
                     </div>
                     <div class="plans-points">
-                        <div class="text-p">2500 MDL</div>
-                        <div class="text-p">For Teams up to 15% discount</div>
+                        <div class="text-p">550 MDL/week</div>
                         <ul>
                             <li><span>Fixed workplace</span></li>
                             <li><span>Access to conference rooms</span></li>
                             <li><span>Access to all trainings and events</span></li>
-                            <li><span>24/7 biometric access</span></li>
+                            <li><span>Biometric acces from 9:00 - 18:00</span></li>
                             <li><span>Coffee, tea, fruits and biscuits</span></li>
-                            <li><span>Free exposure to 404 partners</span></li>
-                            <li><span>Free tickets to Cloud Computing focused conferences</span></li>
-                            <li><span>Free Cloud Computing certification</span></li>
-                            <li><span>Legal Consulting</span></li>
                         </ul>
                     </div>
                     <div class="btn-plan-contact">
@@ -607,10 +608,6 @@
             <div class="flex-row footer-down">
                 <div class="flex-item-4">
                     <img class="logo-footer" src="/images/logo-footer.svg" alt="Logo 404Moldova" />
-                    <div class="flag">
-                        <a class="language" href="/ro/coworking"><img src="/images/flag-ro.png" alt="Romanian Flag"></a>
-                        <a class="language" href="/ru/coworking"><img src="/images/flag-ru.png" alt="Russian Flag"></a>
-                    </div>
                 </div>
                 <div class="flex-item-4 media-icons">
                     <a href="https://www.facebook.com/404moldova" itemprop="sameAs" target="_blank"><i class="mdi-facebook mdi-set" aria-hidden="true"></i></a>
