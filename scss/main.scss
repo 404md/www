@@ -281,6 +281,17 @@ body {
 .parallax-window {
   min-height: 360px;
   background: transparent;
+  .image {
+    .page {
+      .text-page-name {
+        .icons {
+          text-align: center;
+          color: #ffffff;
+          font-size: 30px;
+        }
+      }
+    }
+  }
 }
 
 .text-anvio {
@@ -809,6 +820,7 @@ body {
       -ms-transform: translate(-50%, -50%);
       -webkit-transform: translate(-50%, -50%);
       transform: translate(-50%, -50%);
+      text-align: center;
       .page-name {
         font-family: 'Lato-Regular', sans-serif;
         font-size: 45px;
@@ -1820,4 +1832,3 @@ input:focus ~ .highlight {
     }
   }
 }
-
