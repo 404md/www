@@ -40,6 +40,12 @@
 }
 
 @media (min-width: 1270px) {
+  //.flag {
+  //  display: none;
+  //  &.web-flag {
+  //    display: block;
+  //  }
+  //}
   .new-page {
     &.events {
       .amenities-block {
@@ -55,6 +61,11 @@
 }
 
 @media (max-width: 1270px) {
+  //.flag {
+  //  &.web-flag {
+  //    display: none;
+  //  }
+  //}
   .new-page {
     &.events {
       .amenities-block {
@@ -1049,6 +1060,18 @@
               }
             }
           }
+
+        }
+        &.main-page-nav {
+          li {
+            a {
+              &.link {
+                &:hover {
+                  color: #ffffff;
+                }
+              }
+            }
+          }
         }
       }
     }
@@ -1483,7 +1506,6 @@
 }
 
 @media (max-width: 645px) {
-
   .contacts {
     .get-in-touch {
       &.flex-row {
