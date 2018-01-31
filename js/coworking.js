@@ -73,6 +73,21 @@ jQuery(function($) {
   }
 
   /**
+   * @param val
+   * @returns {Number}
+   */
+  function normalize(val) {
+    let result = 1;
+    val = parseInt(val) || 1;
+
+    if (val > 0) {
+      result = (val >= 53) ? 53 : val;
+    }
+
+    return result;
+  }
+
+  /**
    * Handle click
    */
   $change.on('click', function() {
@@ -84,15 +99,16 @@ jQuery(function($) {
       val--;
     }
 
-    $quantity.val((val <= 0) ? 1 : val).trigger('change');
+    $quantity.val(normalize(val)).trigger('change');
   });
 
   /**
    * Handle input change
    */
   $quantity.on('keyup change', function() {
-    let val = parseInt($(this).val() || 1);
+    let inputVal = normalize($(this).val());
 
-    $teamPrice.text(calculate(val));
+    $quantity.val(inputVal);
+    $teamPrice.text(calculate(inputVal));
   });
 });
