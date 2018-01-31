@@ -162,12 +162,12 @@
                     <div class="plans-points">
                         <div class="text-p">
                             <div class="number-input">
-                                <button onclick="this.parentNode.querySelector('input[type=number]').stepDown()" ></button>
+                                <button class="change-quantity" data-event="minus"></button>
                                 <input class="quantity" min="1" name="quantity" value="2" type="number">
-                                <button onclick="this.parentNode.querySelector('input[type=number]').stepUp()" class="plus"></button>
+                                <button class="change-quantity plus" data-event="plus"></button>
                             </div>
                             <div class="price">
-                                <span>2500</span><span> MDL</span>
+                                <span id="team-price-value">2500</span><span> MDL</span>
                             </div>
                         </div>
                         <ul>
@@ -630,7 +630,7 @@
 <link rel="stylesheet" href="/css/slick-1.6.0.min.css" />
 <link rel="stylesheet" href="/css/slick-theme-1.6.0.min.css" />
 <!-- <![endif]-->
-<script type="text/javascript" src="/js/jquery-1.11.0.min.js"></script>
+<script type="text/javascript" src="/js/jquery.min.js"></script>
 <script type="text/javascript" src="/js/slick-1.6.0.min.js"></script>
 <script type="text/javascript" src="/js/classie.js"></script>
 <script type="text/javascript" src="/js/modalEffects.js"></script>
