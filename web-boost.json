@@ -11,7 +11,7 @@
           "js/index.js"
         ],
         "css/index.min.css": [
-          "styles/bootstrap.min.css",
+          "styles/main.scss",
           "styles/index.scss"
         ]
       }
@@ -24,7 +24,7 @@
       },
       "assets": {
         "css/pricing.min.css": [
-          "styles/bootstrap.min.css",
+          "styles/main.scss",
           "styles/pricing.scss"
         ]
       }
@@ -37,7 +37,7 @@
       },
       "assets": {
         "css/events.min.css": [
-          "styles/bootstrap.min.css",
+          "styles/main.scss",
           "styles/events.scss"
         ]
       }
@@ -50,7 +50,7 @@
       },
       "assets": {
         "css/members.min.css": [
-          "styles/bootstrap.min.css",
+          "styles/main.scss",
           "styles/members.scss"
         ]
       }
@@ -63,7 +63,7 @@
       },
       "assets": {
         "css/media.min.css": [
-          "styles/bootstrap.min.css",
+          "styles/main.scss",
           "styles/media.scss"
         ]
       }
@@ -76,7 +76,7 @@
       },
       "assets": {
         "css/gallery.min.css": [
-          "styles/bootstrap.min.css",
+          "styles/main.scss",
           "styles/gallery.scss"
         ]
       }
@@ -89,7 +89,7 @@
       },
       "assets": {
         "css/contact.min.css": [
-          "styles/bootstrap.min.css",
+          "styles/main.scss",
           "styles/contact.scss"
         ]
       }
@@ -102,7 +102,7 @@
       },
       "assets": {
         "css/tour.min.css": [
-          "styles/bootstrap.min.css",
+          "styles/main.scss",
           "styles/tour.scss"
         ]
       }
