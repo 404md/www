@@ -1,0 +1,113 @@
+{
+  "routes": {
+    "/": {
+      "view": "index.twig",
+      "vars": {
+        "title": "Home page",
+        "greeting": "Hello world!"
+      },
+      "assets": {
+        "js/index.min.js": [
+          "js/index.js"
+        ],
+        "css/index.min.css": [
+          "styles/bootstrap.min.css",
+          "styles/index.scss"
+        ]
+      }
+    },
+    "/pricing": {
+      "view": "pricing.twig",
+      "vars": {
+        "title": "Price page",
+        "greeting": "Quickly build an effective pricing table for your potential customers with this Bootstrap example. It's built with default Bootstrap components and utilities with little customization."
+      },
+      "assets": {
+        "css/pricing.min.css": [
+          "styles/bootstrap.min.css",
+          "styles/pricing.scss"
+        ]
+      }
+    },
+    "/events": {
+      "view": "events.twig",
+      "vars": {
+        "title": "Price page",
+        "greeting": "Quickly build an effective pricing table for your potential customers with this Bootstrap example. It's built with default Bootstrap components and utilities with little customization."
+      },
+      "assets": {
+        "css/events.min.css": [
+          "styles/bootstrap.min.css",
+          "styles/events.scss"
+        ]
+      }
+    },
+    "/members": {
+      "view": "members.twig",
+      "vars": {
+        "title": "Price page",
+        "greeting": "Quickly build an effective pricing table for your potential customers with this Bootstrap example. It's built with default Bootstrap components and utilities with little customization."
+      },
+      "assets": {
+        "css/members.min.css": [
+          "styles/bootstrap.min.css",
+          "styles/members.scss"
+        ]
+      }
+    },
+    "/media": {
+      "view": "media.twig",
+      "vars": {
+        "title": "Price page",
+        "greeting": "Quickly build an effective pricing table for your potential customers with this Bootstrap example. It's built with default Bootstrap components and utilities with little customization."
+      },
+      "assets": {
+        "css/media.min.css": [
+          "styles/bootstrap.min.css",
+          "styles/media.scss"
+        ]
+      }
+    },
+    "/gallery": {
+      "view": "gallery.twig",
+      "vars": {
+        "title": "Price page",
+        "greeting": "Quickly build an effective pricing table for your potential customers with this Bootstrap example. It's built with default Bootstrap components and utilities with little customization."
+      },
+      "assets": {
+        "css/gallery.min.css": [
+          "styles/bootstrap.min.css",
+          "styles/gallery.scss"
+        ]
+      }
+    },
+    "/contact": {
+      "view": "contact.twig",
+      "vars": {
+        "title": "Price page",
+        "greeting": "Quickly build an effective pricing table for your potential customers with this Bootstrap example. It's built with default Bootstrap components and utilities with little customization."
+      },
+      "assets": {
+        "css/contact.min.css": [
+          "styles/bootstrap.min.css",
+          "styles/contact.scss"
+        ]
+      }
+    },
+    "/tour": {
+      "view": "tour.twig",
+      "vars": {
+        "title": "Price page",
+        "greeting": "Quickly build an effective pricing table for your potential customers with this Bootstrap example. It's built with default Bootstrap components and utilities with little customization."
+      },
+      "assets": {
+        "css/contact.min.css": [
+          "styles/bootstrap.min.css",
+          "styles/tour.scss"
+        ]
+      }
+    }
+
+
+  }
+}
