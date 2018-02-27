@@ -6,4 +6,21 @@ $primary-color: blue;
   h1 {
     color: $primary-color;
   }
+
+  .block {
+    width: 100%;
+    display: flex;
+
+    .blocks {
+      width: 33.33333333%;
+      position: relative;
+    }
+      & :after {
+        content: '';
+        position: absolute;
+        height: 100%;
+        width: 2px;
+        background-color: blue;
+      }
+  }
 }
