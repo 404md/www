@@ -11,7 +11,7 @@
           "js/index.js"
         ],
         "css/index.min.css": [
-          "styles/bootstrap.min.css",
+          "styles/main.scss",
           "styles/index.scss"
         ]
       }
@@ -20,11 +20,11 @@
       "view": "pricing.twig",
       "vars": {
         "title": "Price page",
-        "greeting": "Quickly build an effective pricing table for your potential customers with this Bootstrap example. It's built with default Bootstrap components and utilities with little customization."
+          "greeting": "Quickly build an effective pricing table for your potential customers with this Bootstrap example. It's built with default Bootstrap components and utilities with little customization."
       },
       "assets": {
         "css/pricing.min.css": [
-          "styles/bootstrap.min.css",
+          "styles/main.scss",
           "styles/pricing.scss"
         ]
       }
@@ -37,7 +37,7 @@
       },
       "assets": {
         "css/events.min.css": [
-          "styles/bootstrap.min.css",
+          "styles/main.scss",
           "styles/events.scss"
         ]
       }
@@ -50,8 +50,20 @@
       },
       "assets": {
         "css/members.min.css": [
-          "styles/bootstrap.min.css",
+          "styles/main.scss",
           "styles/members.scss"
+        ],
+        "js/members.min.js": [
+          "js/jquery.min.js",
+          "js/jquery.validate.min.js",
+          "js/aws-sdk.min.js",
+          "js/main.js",
+          "js/slick-1.6.0.min.js",
+          "js/recaptcha-api.js",
+          "js/contact.js",
+          "js/footer-carousel.js",
+          "js/parallax.min.js"
+
         ]
       }
     },
@@ -63,7 +75,7 @@
       },
       "assets": {
         "css/media.min.css": [
-          "styles/bootstrap.min.css",
+          "styles/main.scss",
           "styles/media.scss"
         ]
       }
@@ -76,7 +88,7 @@
       },
       "assets": {
         "css/gallery.min.css": [
-          "styles/bootstrap.min.css",
+          "styles/main.scss",
           "styles/gallery.scss"
         ]
       }
@@ -89,7 +101,7 @@
       },
       "assets": {
         "css/contact.min.css": [
-          "styles/bootstrap.min.css",
+          "styles/main.scss",
           "styles/contact.scss"
         ]
       }
@@ -102,7 +114,7 @@
       },
       "assets": {
         "css/tour.min.css": [
-          "styles/bootstrap.min.css",
+          "styles/main.scss",
           "styles/tour.scss"
         ]
       }
