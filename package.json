@@ -8,5 +8,11 @@
   },
   "devDependencies": {
     "web-boost": "^1.0.2"
+<<<<<<< HEAD
+=======
+  },
+  "dependencies": {
+    "web-boost-cli": "^1.0.2"
+>>>>>>> 2f90f6ed29aa64468bb4bfa6f4fa216d200554ec
   }
 }
