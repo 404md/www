@@ -13,7 +13,9 @@
     ],
     "common-scss": [
       "styles/main.scss",
-      "styles/responsive.scss"
+      "styles/responsive.scss",
+      "css/slick-1.6.0.min.css",
+      "css/slick-theme-1.6.0.min.css"
     ]
   },
   "routes": {

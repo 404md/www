@@ -10,7 +10,7 @@
     </head>
     <body>
         {% include 'menu.twig' %}
-        <div class="container">
+        <div class="">
             <div class="row">
                 <div class="col-md-12">
                     {% block body %}{% endblock %}
@@ -19,8 +19,8 @@
         </div>
         {% block js %}{% endblock %}
     </body>
-    <footer>
+    <!-- <footer> -->
       {% include 'footer.twig' %}
-    </footer>
+    <!-- </footer> -->
     {% block js %}{% endblock %}
 </html>
