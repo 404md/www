@@ -1,11 +1,6 @@
 {
   "$": {
-<<<<<<< HEAD
-    "common-scss": [
-      "styles/main.scss",
-      "styles/responsive.scss"
-=======
-    "commonJS": [
+    "common-js": [
       "js/jquery.min.js",
       "js/jquery.validate.min.js",
       "js/aws-sdk.min.js",
@@ -15,7 +10,10 @@
       "js/contact.js",
       "js/footer-carousel.js",
       "js/parallax.min.js"
->>>>>>> 2f90f6ed29aa64468bb4bfa6f4fa216d200554ec
+    ],
+    "common-scss": [
+      "styles/main.scss",
+      "styles/responsive.scss"
     ]
   },
   "routes": {
@@ -27,10 +25,10 @@
       },
       "assets": {
         "js/index.min.js": [
-          "$.commonJS"
+          "$.common-js"
         ],
         "css/index.min.css": [
-          "styles/main.scss",
+          "$.common-scss",
           "styles/index.scss"
         ]
       }
@@ -43,11 +41,11 @@
       },
       "assets": {
         "css/pricing.min.css": [
-          "styles/main.scss",
+          "$.common-scss",
           "styles/pricing.scss"
         ],
         "js/pricing.min.js": [
-          "$.commonJS"
+          "$.common-js"
         ]
       }
     },
@@ -59,11 +57,11 @@
       },
       "assets": {
         "css/events.min.css": [
-          "styles/main.scss",
+          "$.common-scss",
           "styles/events.scss"
         ],
         "js/events.min.js": [
-          "$.commonJS"
+          "$.common-js"
         ]
       }
     },
@@ -75,11 +73,11 @@
       },
       "assets": {
         "css/members.min.css": [
-          "styles/main.scss",
+          "$.common-scss",
           "styles/members.scss"
         ],
         "js/members.min.js": [
-          "$.commonJS"
+          "$.common-js"
         ]
       }
     },
@@ -90,15 +88,11 @@
           },
       "assets": {
         "css/media.min.css": [
-<<<<<<< HEAD
           "$.common-scss",
-=======
-          "styles/main.scss",
->>>>>>> 2f90f6ed29aa64468bb4bfa6f4fa216d200554ec
           "styles/media.scss"
         ],
         "js/media.min.js": [
-          "$.commonJS"
+          "$.common-js"
         ]
       }
     },
@@ -110,11 +104,11 @@
       },
       "assets": {
         "css/gallery.min.css": [
-          "styles/main.scss",
+          "$.common-scss",
           "styles/gallery.scss"
         ],
         "js/gallery.min.js": [
-          "$.commonJS"
+          "$.common-js"
         ]
       }
     },
@@ -126,11 +120,11 @@
       },
       "assets": {
         "css/contact.min.css": [
-          "styles/main.scss",
+          "$.common-scss",
           "styles/contact.scss"
         ],
         "js/contact.min.js": [
-          "$.commonJS"
+          "$.common-js"
         ]
       }
     },
@@ -142,11 +136,11 @@
       },
       "assets": {
         "css/tour.min.css": [
-          "styles/main.scss",
+          "$.common-scss",
           "styles/tour.scss"
         ],
         "js/tour.min.js": [
-          "$.commonJS"
+          "$.common-js"
         ]
       }
     }
