@@ -1,4 +1,17 @@
 {
+  "$": {
+    "commonJS": [
+      "js/jquery.min.js",
+      "js/jquery.validate.min.js",
+      "js/aws-sdk.min.js",
+      "js/main.js",
+      "js/slick-1.6.0.min.js",
+      "js/recaptcha-api.js",
+      "js/contact.js",
+      "js/footer-carousel.js",
+      "js/parallax.min.js"
+    ]
+  },
   "routes": {
     "/": {
       "view": "index.twig",
@@ -8,7 +21,7 @@
       },
       "assets": {
         "js/index.min.js": [
-          "js/index.js"
+          "$.commonJS"
         ],
         "css/index.min.css": [
           "styles/main.scss",
@@ -26,6 +39,9 @@
         "css/pricing.min.css": [
           "styles/main.scss",
           "styles/pricing.scss"
+        ],
+        "js/pricing.min.js": [
+          "$.commonJS"
         ]
       }
     },
@@ -39,6 +55,9 @@
         "css/events.min.css": [
           "styles/main.scss",
           "styles/events.scss"
+        ],
+        "js/events.min.js": [
+          "$.commonJS"
         ]
       }
     },
@@ -54,16 +73,7 @@
           "styles/members.scss"
         ],
         "js/members.min.js": [
-          "js/jquery.min.js",
-          "js/jquery.validate.min.js",
-          "js/aws-sdk.min.js",
-          "js/main.js",
-          "js/slick-1.6.0.min.js",
-          "js/recaptcha-api.js",
-          "js/contact.js",
-          "js/footer-carousel.js",
-          "js/parallax.min.js"
-
+          "$.commonJS"
         ]
       }
     },
@@ -77,6 +87,9 @@
         "css/media.min.css": [
           "styles/main.scss",
           "styles/media.scss"
+        ],
+        "js/media.min.js": [
+          "$.commonJS"
         ]
       }
     },
@@ -90,6 +103,9 @@
         "css/gallery.min.css": [
           "styles/main.scss",
           "styles/gallery.scss"
+        ],
+        "js/gallery.min.js": [
+          "$.commonJS"
         ]
       }
     },
@@ -103,6 +119,9 @@
         "css/contact.min.css": [
           "styles/main.scss",
           "styles/contact.scss"
+        ],
+        "js/contact.min.js": [
+          "$.commonJS"
         ]
       }
     },
@@ -116,6 +135,9 @@
         "css/tour.min.css": [
           "styles/main.scss",
           "styles/tour.scss"
+        ],
+        "js/tour.min.js": [
+          "$.commonJS"
         ]
       }
     }

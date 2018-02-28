@@ -5,9 +5,9 @@
 {% endblock %}
 
 {% block body %}
-    <div class="jumbotron">
-        <h1>{{ greeting }}</h1>
-        <p>This is an example of user's page.</p>
-        <img src="{{ asset('@img/1.jpg') }}" class="img-thumbnail" width="304" height="236">
-    </div>
+
+{% endblock %}
+
+{% block js %}
+    <script src="{{ asset('@js/events.min.js') }}"></script>
 {% endblock %}

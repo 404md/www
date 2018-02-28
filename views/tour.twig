@@ -8,6 +8,9 @@
     <div class="jumbotron">
         <h1>{{ greeting }}</h1>
         <p>This is an example of tour's page.</p>
-        <img src="{{ asset('@img/john-smith.png') }}" class="img-thumbnail" width="304" height="236">
     </div>
+{% endblock %}
+
+{% block js %}
+    <script src="{{ asset('@js/tour.min.js') }}"></script>
 {% endblock %}
