@@ -1,4 +1,10 @@
 {
+  "$": {
+    "common-scss": [
+      "styles/main.scss",
+      "styles/responsive.scss"
+    ]
+  },
   "routes": {
     "/": {
       "view": "index.twig",
@@ -58,12 +64,11 @@
     "/media": {
       "view": "media.twig",
       "vars": {
-        "title": "Price page",
-        "greeting": "Quickly build an effective pricing table for your potential customers with this Bootstrap example. It's built with default Bootstrap components and utilities with little customization."
-      },
+        "title": "Media"
+          },
       "assets": {
         "css/media.min.css": [
-          "styles/main.scss",
+          "$.common-scss",
           "styles/media.scss"
         ]
       }
