@@ -8,19 +8,15 @@
         {% block css %}{% endblock %}
 
     </head>
+    {% include 'menu.twig' %}
+    {% block js %}{% endblock %}
+    {% include 'header.twig' %}
+    {% block js %}{% endblock %}
     <body>
         {% include 'menu.twig' %}
-        <div class="">
-            <div class="row">
-                <div class="col-md-12">
-                    {% block body %}{% endblock %}
-                </div>
-            </div>
-        </div>
+            {% block body %}{% endblock %}
         {% block js %}{% endblock %}
     </body>
-    <!-- <footer> -->
-      {% include 'footer.twig' %}
-    <!-- </footer> -->
+    {% include 'footer.twig' %}
     {% block js %}{% endblock %}
 </html>

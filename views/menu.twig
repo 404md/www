@@ -1,19 +1,34 @@
-{# Common menu #}
-<nav class="navbar navbar-default">
-<div class="d-flex flex-column flex-md-row align-items-center p-3 px-md-4 mb-3 bg-white border-bottom box-shadow">
-   <nav class="my-2 my-md-0 mr-md-3">
-     <a class="p-2 text-dark" href="/">Home</a>
-     <a class="p-2 text-dark" href="/pricing">PRICING</a>
-     <a class="p-2 text-dark" href="/events">EVENTS</a>
-     <a class="p-2 text-dark" href="/members">MEMBERS</a>
-     <a class="p-2 text-dark" href="/media">MEDIA</a>
-     <a class="p-2 text-dark" href="/gallery">GALLERY</a>
-     <a class="p-2 text-dark" href="/contact">CONTACT</a>
-     <a class="p-2 text-dark" href="https://blog.404.md/">BLOG</a>
-     <a class="p-2 text-dark" href="/tour">TOUR</a>
-   </nav>
- </div>
-
-
-    </div>
-</nav>
+    <header class="main-nav">
+        <div class="container">
+            <div class="logo">
+                <a href="/">
+                    <img class="img-logo" src="{{asset('@img/logo-right-black.svg')}}" alt="Logo 404Moldova" />
+                </a>
+            </div>
+            <div class="nav-top" id="navigation">
+                <div id="menu-toggle">
+                    <div id="hamburger">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                    <div id="cross">
+                        <span></span>
+                        <span></span>
+                    </div>
+                </div>
+                <ul class="navt" id="myTopnav">
+                    <li><a class="link" href="/pricing/">Pricing</a></li>
+                    <li class="current-item"><a class="link active" href="/events/">Events</a></li>
+                    <li><a class="link" href="/members/">Members</a></li>
+                    <li><a class="link" href="/media/">Media</a></li>
+                    <li><a class="link" href="/gallery/">Gallery</a></li>
+                    <li><a class="link" href="/contact/">Contact</a></li>
+                    <li><a class="link" href="https://blog.404.md" target="_blank">Blog</a></li>
+                    <li><a class="last-line" href="/tour/"><span class="blog">Book a Tour</span></a></li>
+                </ul>
+                <span id="slide-line"></span>
+            </div>
+            <div class="clear"></div>
+        </div>
+    </header>

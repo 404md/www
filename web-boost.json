@@ -14,8 +14,9 @@
     "common-scss": [
       "styles/main.scss",
       "styles/responsive.scss",
-      "css/slick-1.6.0.min.css",
-      "css/slick-theme-1.6.0.min.css"
+      "styles/slick-1.6.0.min.css",
+      "styles/slick-theme-1.6.0.min.css",
+      "styles/materialdesignicons.min.css"
     ]
   },
   "routes": {
@@ -24,6 +25,7 @@
       "vars": {
         "title": "Home page",
         "greeting": "Hello world!"
+      
       },
       "assets": {
         "js/index.min.js": [
@@ -86,7 +88,8 @@
     "/media": {
       "view": "media.twig",
       "vars": {
-        "title": "Media"
+        "title": "Media",
+        "page": "Media"
           },
       "assets": {
         "css/media.min.css": [
