@@ -1,4 +1,17 @@
 {
+  "$": {
+    "commonJS": [
+      "js/jquery.min.js",
+      "js/jquery.validate.min.js",
+      "js/aws-sdk.min.js",
+      "js/main.js",
+      "js/slick-1.6.0.min.js",
+      "js/recaptcha-api.js",
+      "js/contact.js",
+      "js/footer-carousel.js",
+      "js/parallax.min.js"
+    ]
+  },
   "routes": {
     "/": {
       "view": "index.twig",
@@ -8,10 +21,10 @@
       },
       "assets": {
         "js/index.min.js": [
-          "js/index.js"
+          "$.commonJS"
         ],
         "css/index.min.css": [
-          "styles/bootstrap.min.css",
+          "styles/main.scss",
           "styles/index.scss"
         ]
       }
@@ -20,12 +33,15 @@
       "view": "pricing.twig",
       "vars": {
         "title": "Price page",
-        "greeting": "Quickly build an effective pricing table for your potential customers with this Bootstrap example. It's built with default Bootstrap components and utilities with little customization."
+          "greeting": "Quickly build an effective pricing table for your potential customers with this Bootstrap example. It's built with default Bootstrap components and utilities with little customization."
       },
       "assets": {
         "css/pricing.min.css": [
-          "styles/bootstrap.min.css",
+          "styles/main.scss",
           "styles/pricing.scss"
+        ],
+        "js/pricing.min.js": [
+          "$.commonJS"
         ]
       }
     },
@@ -37,8 +53,11 @@
       },
       "assets": {
         "css/events.min.css": [
-          "styles/bootstrap.min.css",
+          "styles/main.scss",
           "styles/events.scss"
+        ],
+        "js/events.min.js": [
+          "$.commonJS"
         ]
       }
     },
@@ -50,8 +69,11 @@
       },
       "assets": {
         "css/members.min.css": [
-          "styles/bootstrap.min.css",
+          "styles/main.scss",
           "styles/members.scss"
+        ],
+        "js/members.min.js": [
+          "$.commonJS"
         ]
       }
     },
@@ -63,8 +85,11 @@
       },
       "assets": {
         "css/media.min.css": [
-          "styles/bootstrap.min.css",
+          "styles/main.scss",
           "styles/media.scss"
+        ],
+        "js/media.min.js": [
+          "$.commonJS"
         ]
       }
     },
@@ -76,8 +101,11 @@
       },
       "assets": {
         "css/gallery.min.css": [
-          "styles/bootstrap.min.css",
+          "styles/main.scss",
           "styles/gallery.scss"
+        ],
+        "js/gallery.min.js": [
+          "$.commonJS"
         ]
       }
     },
@@ -89,8 +117,11 @@
       },
       "assets": {
         "css/contact.min.css": [
-          "styles/bootstrap.min.css",
+          "styles/main.scss",
           "styles/contact.scss"
+        ],
+        "js/contact.min.js": [
+          "$.commonJS"
         ]
       }
     },
@@ -102,8 +133,11 @@
       },
       "assets": {
         "css/tour.min.css": [
-          "styles/bootstrap.min.css",
+          "styles/main.scss",
           "styles/tour.scss"
+        ],
+        "js/tour.min.js": [
+          "$.commonJS"
         ]
       }
     }

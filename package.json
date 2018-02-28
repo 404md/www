@@ -7,6 +7,9 @@
     "compile": "node node_modules/.bin/wb-compile"
   },
   "devDependencies": {
-    "web-boost": "^1.0.0"
+    "web-boost": "^1.0.2"
+  },
+  "dependencies": {
+    "web-boost-cli": "^1.0.2"
   }
 }

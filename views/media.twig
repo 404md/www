@@ -5,9 +5,22 @@
 {% endblock %}
 
 {% block body %}
-    <div class="jumbotron">
-        <h1>{{ greeting }}</h1>
-        <p>This is an example of media's page.</p>
-        <img src="{{ asset('@img/john-smith.png') }}" class="img-thumbnail" width="304" height="236">
-    </div>
+    <section class="main-block">
+            <div class="container video-media display-flex" itemscope itemtype="https://schema.org/Organization">
+                <div class="media-gallery">
+                    <a itemprop="url" class="block-link" href="http://coworking.md/coworking/404-not-found/" target="_blank">
+                        <div class="back-color">
+                            <img itemprop="image" class="image-media" src="/images/imgm13.jpg" alt="coworking.md">
+                            <div itemprop="name" class="logo-media text-up"><img class="img-logo" src="/images/icon13.png" alt="coworking.md"> Coworking
+                            </div>
+                            <div class="black-gr"></div>
+                        </div>
+                        <div itemprop="description" class="media-title">"404Moldova”: объединяет лучшие IT умы Молдовы"
+                        </div>
+                    </a>
+                </div>
+{% endblock %}
+
+{% block js %}
+    <script src="{{ asset('@js/media.min.js') }}"></script>
 {% endblock %}
