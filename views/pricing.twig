@@ -6,112 +6,207 @@
 
 {% block body %}
 
- <div class="pricing-header px-3 py-3 pt-md-5 pb-md-4 mx-auto text-center">
-   <h1 class="display-4">Pricing</h1>
-   <p class="lead">{{greeting}}</p>
- </div>
-
- <div class="container">
-   <div class="card-deck mb-3 text-center">
-     <div class="card mb-4 box-shadow">
-       <div class="card-header">
-         <h4 class="my-0 font-weight-normal">Free</h4>
-       </div>
-       <div class="card-body">
-         <h1 class="card-title pricing-card-title">$0 <small class="text-muted">/ mo</small></h1>
-         <ul class="list-unstyled mt-3 mb-4">
-           <li>10 users included</li>
-           <li>2 GB of storage</li>
-           <li>Email support</li>
-           <li>Help center access</li>
-         </ul>
-         <button type="button" class="btn btn-lg btn-block btn-outline-primary">Sign up for free</button>
-       </div>
-     </div>
-     <div class="card mb-4 box-shadow">
-       <div class="card-header">
-         <h4 class="my-0 font-weight-normal">Pro</h4>
-       </div>
-       <div class="card-body">
-         <h1 class="card-title pricing-card-title">$15 <small class="text-muted">/ mo</small></h1>
-         <ul class="list-unstyled mt-3 mb-4">
-           <li>20 users included</li>
-           <li>10 GB of storage</li>
-           <li>Priority email support</li>
-           <li>Help center access</li>
-         </ul>
-         <button type="button" class="btn btn-lg btn-block btn-primary">Get started</button>
-       </div>
-     </div>
-     <div class="card mb-4 box-shadow">
-       <div class="card-header">
-         <h4 class="my-0 font-weight-normal">Enterprise</h4>
-       </div>
-       <div class="card-body">
-         <h1 class="card-title pricing-card-title">$29 <small class="text-muted">/ mo</small></h1>
-         <ul class="list-unstyled mt-3 mb-4">
-           <li>30 users included</li>
-           <li>15 GB of storage</li>
-           <li>Phone and email support</li>
-           <li>Help center access</li>
-         </ul>
-         <button type="button" class="btn btn-lg btn-block btn-primary">Contact us</button>
-       </div>
-     </div>
-   </div>
-
-   <footer class="pt-4 my-md-5 pt-md-5 border-top">
-     <div class="row">
-       <div class="col-12 col-md">
-         <img class="mb-2" src="https://getbootstrap.com/assets/brand/bootstrap-solid.svg" alt="" width="24" height="24">
-         <small class="d-block mb-3 text-muted">&copy; 2017-2018</small>
-       </div>
-       <div class="col-6 col-md">
-         <h5>Features</h5>
-         <ul class="list-unstyled text-small">
-           <li><a class="text-muted" href="#">Cool stuff</a></li>
-           <li><a class="text-muted" href="#">Random feature</a></li>
-           <li><a class="text-muted" href="#">Team feature</a></li>
-           <li><a class="text-muted" href="#">Stuff for developers</a></li>
-           <li><a class="text-muted" href="#">Another one</a></li>
-           <li><a class="text-muted" href="#">Last time</a></li>
-         </ul>
-       </div>
-       <div class="col-6 col-md">
-         <h5>Resources</h5>
-         <ul class="list-unstyled text-small">
-           <li><a class="text-muted" href="#">Resource</a></li>
-           <li><a class="text-muted" href="#">Resource name</a></li>
-           <li><a class="text-muted" href="#">Another resource</a></li>
-           <li><a class="text-muted" href="#">Final resource</a></li>
-         </ul>
-       </div>
-       <div class="col-6 col-md">
-         <h5>About</h5>
-         <ul class="list-unstyled text-small">
-           <li><a class="text-muted" href="#">Team</a></li>
-           <li><a class="text-muted" href="#">Locations</a></li>
-           <li><a class="text-muted" href="#">Privacy</a></li>
-           <li><a class="text-muted" href="#">Terms</a></li>
-         </ul>
-       </div>
-     </div>
-   </footer>
- </div>
-
-
- <!-- Bootstrap core JavaScript
- ================================================== -->
- <!-- Placed at the end of the document so the pages load faster -->
- <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
- <script>
-   Holder.addTheme('thumb', {
-     bg: '#55595c',
-     fg: '#eceeef',
-     text: 'Thumbnail'
-   });
- </script>
+ <div class="container new-page">
+    <div class="pages">
+            <span class="text-page">
+           404Moldova is a coworking space for IT businesses and IT people from Moldova.
+            We want to empower local community of small companies and skilled individuals to be competitive globally.
+            Become part of our local community of IT professionals.
+            Our members contribute to the global platform of cloud computing,
+            working with Fortune 500 companies from Europe and USA.
+        </span>
     </div>
+</div>
+<div class="wrapper pricing" itemscope itemprop="mainContentOfPage">
+    <section class="main-block">
+        <div class="container">
+            <div class="offers">
+                <div class="plans">
+                    <div class="plan"><img src="{{ asset ('@img/plan1.jpg') }}" alt="Test Drive" />
+                        <div class="text-plan">
+                            <div class="text-p">Hub Resident</div>
+                            <div class="btn-plan">
+                                <a itemprop="url" href="https://orders.fest.md/ro/biz/404-moldova" class="button" target="_blank">Book Your Space</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="plans-points">
+                        <div class="text-p">2500 MDL</div>
+                        <ul>
+                            <li><span>Fixed workplace </span></li>
+                            <li><span>Free access to conference rooms</span></li>
+                            <li><span>Free access to all trainings and events</span></li>
+                            <li><span>24/7 biometric access</span></li>
+                            <li><span>Coffee, tea, fruits and biscuits</span></li>
+                            <li><span>Free exposure to 404 partners</span></li>
+                            <li><span>Free 1 week invitation for 2 friends</span></li>
+                            <li><span>Free use of projectors</span></li>
+                            <li><span>Storage room/servers</span></li>
+                        </ul>
+                    </div>
+                    <div class="btn-plan-contact">
+                        <a itemprop="url" href="/contact/" class="button">Contact Us</a>
+                    </div>
+                </div>
+                <div class="plans">
+                    <div class="plan"><img src="{{ asset ('@img/plan2.jpg') }}" alt="Free Plan" />
+                        <div class="text-plan">
+                            <div class="text-p">Teams</div>
+                            <div class="btn-plan">
+                                <a itemprop="url" href="https://orders.fest.md/ro/biz/404-moldova" class="button" target="_blank">Book Your Space</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="plans-points">
+                        <div class="text-p">
+                            <div class="number-input">
+                                <button class="change-quantity" data-event="minus"></button>
+                                <input class="quantity" min="1" name="quantity" value="2" type="number">
+                                <button class="change-quantity plus" data-event="plus"></button>
+                            </div>
+                            <div class="price">
+                                <span id="team-price-value">4750</span><span> MDL</span>
+                            </div>
+                        </div>
+                        <ul>
+                            <li><span>Fixed workplace</span></li>
+                            <li><span>Access to conference rooms</span></li>
+                            <li><span>Access to all trainings and events</span></li>
+                            <li><span>24/7 biometric access</span></li>
+                            <li><span>Coffee, tea, fruits and biscuits</span></li>
+                            <li><span>Free exposure to 404 partners</span></li>
+                            <li><span>Free tickets to Cloud Computing focused conferences</span></li>
+                            <li><span>Free Cloud Computing certification</span></li>
+                            <li><span>Storage room/servers</span></li>
+                        </ul>
+                        <div class="notes">
+                            <div class="glay-line"></div>
+                            <p class="gray-text">Free Membership</p>
+                            <p class="gray-text">The most important perk of our platform is free membership. If a member is selected to work on a partner’s project(s), the partner pays membership fees for the member.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="btn-plan-contact">
+                        <a itemprop="url" href="/contact/" class="button">Contact Us</a>
+                    </div>
+                </div>
+                <div class="plans">
+                    <div class="plan"><img src="{{ asset ('@img/plan3.jpg') }}" alt="Individual" />
+                        <div class="text-plan">
+                            <div class="text-p">Day Pass</div>
+                            <div class="btn-plan">
+                                <a itemprop="url" href="https://orders.fest.md/ro/biz/404-moldova" class="button" target="_blank">Book Your Space</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="plans-points">
+                        <div class="text-p">150 MDL</div>
+                        <ul>
+                            <li><span>Fixed workplace</span></li>
+                            <li><span>Access to conference rooms</span></li>
+                            <li><span>Free acces to 1 training or event</span></li>
+                            <li><span>24/7 biometric access</span></li>
+                            <li><span>Coffee, tea, fruits and biscuits</span></li>
+                            <li><span>Free 1 week invitation for 2 friends</span></li>
+                        </ul>
+                    </div>
+                    <div class="btn-plan-contact">
+                        <a itemprop="url" href="/contact/" class="button">Contact Us</a>
+                    </div>
+                </div>
+                <div class="plans">
+                    <div class="plan"><img src="{{ asset ('@img/plan4.jpg') }}" alt="Business" />
+                        <div class="text-plan">
+                            <div class="text-p">Weekdays</div>
+                            <div class="btn-plan">
+                                <a itemprop="url" href="https://orders.fest.md/ro/biz/404-moldova" class="button" target="_blank">Book Your Space</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="plans-points">
+                        <div class="text-p">550 MDL/week</div>
+                        <ul>
+                            <li><span>Fixed workplace</span></li>
+                            <li><span>Access to conference rooms</span></li>
+                            <li><span>Access to all trainings and events</span></li>
+                            <li><span>Biometric acces from 9:00 - 18:00</span></li>
+                            <li><span>Coffee, tea, fruits and biscuits</span></li>
+                        </ul>
+                    </div>
+                    <div class="btn-plan-contact">
+                        <a itemprop="url" href="/contact/" class="button">Contact Us</a>
+                    </div>
+                </div>
+            </div>
+            <div class="md-modal md-effect-1" id="modal-1">
+                <div class="md-content">
+                    <div class="content">
+                        <i class="mdi mdi-close md-close"></i>
+                        <iframe src="/form1/" frameborder="0"></iframe>
+                    </div>
+                </div>
+            </div>
+            <div class="md-overlay1"></div>
+            <div class="popup-open-1 md-modal md-effect-1" id="modal">
+                <div class="md-content">
+                    <div class="content">
+                        <i class="mdi mdi-close md-close"></i>
+                        <iframe src="/form2/" frameborder="0"></iframe>
+                    </div>
+                </div>
+            </div>
+            <div class="md-overlay"></div>
+        </div>
+        <div class="container new-page">
+            <div class="pages coworking">
+                <h1 class="page-name">Amenities</h1>
+                <p class="text-p">All pricing plans include following amenities: </p>
+            </div>
+            <div class="amenities-block display-flex">
+                <div class="bloks-icons">
+                    <img src="{{ asset ('@img/icon-4.svg') }}" alt="Fast Internet">
+                    <div class="icons-text">Fast Internet</div>
+                </div>
+                <div class="bloks-icons">
+                    <img src="{{ asset ('@img/icon-5.svg') }}" alt="Conference Rooms">
+                    <div class="icons-text">Conference Rooms</div>
+                </div>
+                <div class="bloks-icons">
+                    <img src="{{ asset ('@img/icon-6.svg') }}" alt="Printing Supplies">
+                    <div class="icons-text">Printing Supplies</div>
+                </div>
+                <div class="bloks-icons">
+                    <img src="{{ asset ('@img/icon-10.svg') }}" alt="Access">
+                    <div class="icons-text">24 hrs Access</div>
+                </div>
+                <div class="bloks-icons">
+                    <img src="{{ asset ('@img/icon-7.svg') }}" alt="Regular Events">
+                    <div class="icons-text">Regular Events</div>
+                </div>
+                <div class="bloks-icons">
+                    <img src="{{ asset ('@img/icon-8.svg') }}" alt="Strategic Location">
+                    <div class="icons-text">Strategic Location</div>
+                </div>
+                <div class="bloks-icons">
+                    <img src="{{ asset ('@img/icon-1.svg') }}" alt="Onsite Staff">
+                    <div class="icons-text" itemprop="name">Onsite Staff</div>
+                </div>
+                <div class="bloks-icons">
+                    <img src="{{ asset ('@img/icon-9.svg') }}" alt="Refreshing Water">
+                    <div class="icons-text" itemprop="name">Refreshing Water</div>
+                </div>
+                <div class="bloks-icons">
+                    <img src="{{ asset ('@img/icon-3.svg') }}" alt="Modern Kitchen">
+                    <div class="icons-text" itemprop="name">Modern Kitchen</div>
+                </div>
+                <div class="bloks-icons">
+                    <img src="{{ asset ('@img/icon-2.svg') }}" alt="Cleaning Services">
+                    <div class="icons-text" itemprop="name">Cleaning Services</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
 {% endblock %}
 
 {% block js %}

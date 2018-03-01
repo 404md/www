@@ -1,0 +1,255 @@
+$color: #282B2E;
+$main_color: #FF5533;
+$gray-color: #95989A;
+
+.text-name {
+  text-transform: uppercase;
+}
+
+.text-work {
+ color:#aaaaaa;
+  font-size: 15px;
+}
+
+.wrapper {
+  &.members {
+    .main-block {
+      .container {
+        &.instagram-block {
+          margin-bottom:40px;
+        }
+        .instagram {
+          &.slick-initialized {
+            .slick-next:hover:before, .slick-prev:hover:before {
+              border-color: $main_color;
+              background-color: $main_color;
+              color:#ffffff;
+              text-shadow: none;
+            }
+            margin-right: -15px;
+            .slick-prev {
+              top: 50%;
+              left: 7px;
+              z-index: 2;
+              &:before {
+                content: '\F141';
+                color: #ffffff;
+                font-family: "Material Design Icons";
+                border: 2px solid #ffffff;
+                text-shadow: 2px 2px 4px #000000;
+                box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+              }
+            }
+            .slick-next {
+              top: 50%;
+              right: 25px;
+              &:before {
+                content: "\F142";
+                color: #ffffff;
+                font-family: "Material Design Icons";
+                border: 2px solid #ffffff;
+                text-shadow: 2px 2px 4px #000000;
+                box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+              }
+            }
+            .slick-slide {
+              margin-right: 15px;
+              position: relative;
+              .button-video {
+                position: absolute;
+                top: 45%;
+                left: 45%;
+                .play-button {
+                  height:50px;
+                  width: 50px;
+                  border-radius: 50%;
+                  position: relative;
+                  border: 2px solid white;
+                  &:hover {
+                    background-color: rgba(0, 173, 239, 0.9);
+                  }
+                  &:after {
+                    content: "";
+                    display: block;
+                    position: absolute;
+                    top: 15.5px;
+                    left: 18px;
+                    margin: 0 auto;
+                    border-style: solid;
+                    border-width: 9.5px 0 9.5px 17px;
+                    border-color: transparent transparent transparent rgba(255, 255, 255, 1);
+                  }
+                }
+              }
+              video {
+                width: 100%;
+                transition: all .2s ease-in-out;
+              }
+              .hover-hash {
+                opacity: 0;
+                position: absolute;
+                top: 0;
+                bottom: 0;
+                left: 0;
+                right: 0;
+                height: 100%;
+                color: white;
+                background-color: rgba(40,43,46, 0.7);
+                transition: all .2s ease-in-out;
+                .hover-text {
+                  position: relative;
+                  top: 50%;
+                  left: 50%;
+                  -ms-transform: translate(-50%, -50%);
+                  -webkit-transform: translate(-50%, -50%);
+                  transform: translate(-50%, -50%);
+                  text-align: center;
+                  .likes-instagram {
+                    display: inline-block;
+                    padding: 3px 15px;
+                    background: #FF3C4C;
+                    border-radius: 7px;
+                    -webkit-border-radius: 7px;
+                    -moz-border-radius: 7px;
+                    position: relative;
+                    margin-bottom: 32px;
+                    font-size: 24px;
+                    &:after {
+                      content: "";
+                      position: absolute;
+                      border-top: 12px solid #FF3C4C;
+                      border-left: 12px solid transparent;
+                      border-right: 12px solid transparent;
+                      bottom: -12px;
+                      left:50%;
+                      transform: translateX(-50%);
+                      -webkit-transform: translateX(-50%);
+                      -moz-transform: translateX(-50%);
+                      -o-transform: translateX(-50%);
+                    }
+                    &:before {
+                      content: '\F2D1';
+                      color: white;
+                      font-family: "Material Design Icons";
+                      font-size: x-large;
+                      margin-right: 10px;
+                    }
+                  }
+                }
+                &:hover {
+                  opacity: 1;
+                  transition: 0.5s;
+
+                }
+                .hashtags {
+                  padding: 0 35px;
+                  word-break: break-word;
+                }
+              }
+            }
+            .slick-list {
+              .slick-track {
+                .slick-slide {
+                  overflow: hidden;
+                  height: 386px;
+                  .video-block {
+                    height: 100%;
+                  }
+                  img {
+                    object-fit: cover;
+                    min-height: 100%;
+                  }
+                  &:hover img {
+                    transform: scale(1.1);
+                  }
+                  &:hover video {
+                    transform: scale(1.1);
+                  }
+                  img {
+                    width: 100%;
+                    transition: all .2s ease-in-out;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.members-header {
+  margin-bottom: 30px;
+  font-size: 35px;
+}
+
+
+.members-info {
+  background: #F7F7F7;
+  &.visa_versa-block {
+    background: #ffffff;
+  }
+  .container {
+    padding-top: 40px;
+    padding-bottom: 40px;
+    .left-block {
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      a {
+        display: block;
+        .adtechmedia {
+          height: 73px;
+        }
+        .iello-logo {
+          height: 256px;
+        }
+        .impact-logo {
+          height: 400px;
+        }
+        .mitoc-logo {
+          height: 100px;
+        }
+      }
+    }
+    .right-block {
+      p {
+        margin-bottom: 20px;
+      }
+      .members-header {
+        a {
+          color: $color;
+          &:hover {
+            color: $main_color;
+          }
+        }
+      }
+      ul {
+        list-style-position: inside;
+        li {
+          font-size: 16px;
+          color: $gray-color;
+          span {
+            color: $color;
+          }
+        }
+        li:last-child {
+          margin-bottom: 20px;
+        }
+      }
+    }
+  }
+}
+
+/* Gallery */
+
+.gallery {
+  &.members-gallery {
+    .gallery-line {
+      margin-top: 0;
+    }
+  }
+}
+
