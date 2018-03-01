@@ -1,6 +1,6 @@
 {
   "$": {
-    "commonJS": [
+    "common-js": [
       "js/jquery.min.js",
       "js/jquery.validate.min.js",
       "js/aws-sdk.min.js",
@@ -10,6 +10,13 @@
       "js/contact.js",
       "js/footer-carousel.js",
       "js/parallax.min.js"
+    ],
+    "common-scss": [
+      "styles/main.scss",
+      "styles/responsive.scss",
+      "styles/slick-1.6.0.min.css",
+      "styles/slick-theme-1.6.0.min.css",
+      "styles/materialdesignicons.min.css"
     ]
   },
   "routes": {
@@ -18,13 +25,14 @@
       "vars": {
         "title": "Home page",
         "greeting": "Hello world!"
+      
       },
       "assets": {
         "js/index.min.js": [
-          "$.commonJS"
+          "$.common-js"
         ],
         "css/index.min.css": [
-          "styles/main.scss",
+          "$.common-scss",
           "styles/index.scss"
         ]
       }
@@ -37,11 +45,11 @@
       },
       "assets": {
         "css/pricing.min.css": [
-          "styles/main.scss",
+          "$.common-scss",
           "styles/pricing.scss"
         ],
         "js/pricing.min.js": [
-          "$.commonJS"
+          "$.common-js"
         ]
       }
     },
@@ -53,11 +61,11 @@
       },
       "assets": {
         "css/events.min.css": [
-          "styles/main.scss",
+          "$.common-scss",
           "styles/events.scss"
         ],
         "js/events.min.js": [
-          "$.commonJS"
+          "$.common-js"
         ]
       }
     },
@@ -69,27 +77,27 @@
       },
       "assets": {
         "css/members.min.css": [
-          "styles/main.scss",
+          "$.common-scss",
           "styles/members.scss"
         ],
         "js/members.min.js": [
-          "$.commonJS"
+          "$.common-js"
         ]
       }
     },
     "/media": {
       "view": "media.twig",
       "vars": {
-        "title": "Price page",
-        "greeting": "Quickly build an effective pricing table for your potential customers with this Bootstrap example. It's built with default Bootstrap components and utilities with little customization."
-      },
+        "title": "Media",
+        "page": "Media"
+          },
       "assets": {
         "css/media.min.css": [
-          "styles/main.scss",
+          "$.common-scss",
           "styles/media.scss"
         ],
         "js/media.min.js": [
-          "$.commonJS"
+          "$.common-js"
         ]
       }
     },
@@ -101,11 +109,11 @@
       },
       "assets": {
         "css/gallery.min.css": [
-          "styles/main.scss",
+          "$.common-scss",
           "styles/gallery.scss"
         ],
         "js/gallery.min.js": [
-          "$.commonJS"
+          "$.common-js"
         ]
       }
     },
@@ -117,11 +125,11 @@
       },
       "assets": {
         "css/contact.min.css": [
-          "styles/main.scss",
+          "$.common-scss",
           "styles/contact.scss"
         ],
         "js/contact.min.js": [
-          "$.commonJS"
+          "$.common-js"
         ]
       }
     },
@@ -133,11 +141,11 @@
       },
       "assets": {
         "css/tour.min.css": [
-          "styles/main.scss",
+          "$.common-scss",
           "styles/tour.scss"
         ],
         "js/tour.min.js": [
-          "$.commonJS"
+          "$.common-js"
         ]
       }
     }
