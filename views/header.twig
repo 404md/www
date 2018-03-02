@@ -1,4 +1,6 @@
-<div class="parallax-window" data-parallax="scroll" data-image-src="{{asset('@img/events.jpg')}}">
+{% if not hideParallax %}
+   <div class="parallax-window" data-parallax="scroll" data-image-src="{{ asset('@' ~ imagePath ) }}">
+{% endif %}
     <section class="image">
         <div class="page">
             <div class="text-page-name">
@@ -6,5 +8,6 @@
             </div>
         </div>
     </section>
-</div
-    
+{% if not hideParallax %}
+    </div>
+{% endif %}

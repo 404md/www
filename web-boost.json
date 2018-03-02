@@ -32,8 +32,7 @@
           "$.common-js"
         ],
         "css/index.min.css": [
-          "$.common-scss",
-          "styles/index.scss"
+          "$.common-scss"
         ]
       }
     },
@@ -41,15 +40,17 @@
       "view": "pricing.twig",
       "vars": {
         "title": "Price page",
-          "greeting": "Quickly build an effective pricing table for your potential customers with this Bootstrap example. It's built with default Bootstrap components and utilities with little customization."
-      },
+        "page": "Pricing",
+        "imagePath": "img/coworking-bg.jpg" 
+         },
       "assets": {
         "css/pricing.min.css": [
           "$.common-scss",
           "styles/pricing.scss"
         ],
         "js/pricing.min.js": [
-          "$.common-js"
+          "$.common-js",
+          "js/coworking.js"
         ]
       }
     },
@@ -57,15 +58,16 @@
       "view": "events.twig",
       "vars": {
         "title": "Price page",
-        "greeting": "Quickly build an effective pricing table for your potential customers with this Bootstrap example. It's built with default Bootstrap components and utilities with little customization."
+        "page": "Events",
+        "imagePath": "img/events.jpg"
       },
       "assets": {
         "css/events.min.css": [
-          "$.common-scss",
-          "styles/events.scss"
+          "$.common-scss"
         ],
         "js/events.min.js": [
-          "$.common-js"
+          "$.common-js",
+          "js/events.js"
         ]
       }
     },
@@ -73,7 +75,8 @@
       "view": "members.twig",
       "vars": {
         "title": "Price page",
-        "greeting": "Quickly build an effective pricing table for your potential customers with this Bootstrap example. It's built with default Bootstrap components and utilities with little customization."
+        "page": "Members",
+        "imagePath": "img/members.jpg"
       },
       "assets": {
         "css/members.min.css": [
@@ -89,8 +92,9 @@
       "view": "media.twig",
       "vars": {
         "title": "Media",
-        "page": "Media"
-          },
+        "page": "Media",
+        "hideParallax": true
+      },
       "assets": {
         "css/media.min.css": [
           "$.common-scss",
@@ -109,8 +113,7 @@
       },
       "assets": {
         "css/gallery.min.css": [
-          "$.common-scss",
-          "styles/gallery.scss"
+          "$.common-scss"
         ],
         "js/gallery.min.js": [
           "$.common-js"
@@ -125,8 +128,7 @@
       },
       "assets": {
         "css/contact.min.css": [
-          "$.common-scss",
-          "styles/contact.scss"
+          "$.common-scss"
         ],
         "js/contact.min.js": [
           "$.common-js"

@@ -1636,10 +1636,26 @@ input:focus ~ .highlight {
 /* Events Page*/
 .new-page {
   &.events {
+    margin-bottom: 60px;
+    .amenities-block {
+      .bloks-icons {
+        width: 200px;
+        text-align: center;
+      }
+    }
     .pages {
       &.coworking {
+        text-align: center;
+        margin: 24px 0;
         .page-name {
           display: inherit;
+          position: relative;
+            &:before {
+            position: absolute;
+            width: 106px;
+            left: 50%;
+            transform: translateX(-50%);
+          }
         }
       }
       margin-right: -7px;
@@ -1827,6 +1843,36 @@ input:focus ~ .highlight {
       -webkit-transition: all .3s ease;
       transition: all .3s ease;
       z-index: -1;
+    }
+  }
+}
+
+.partners {
+  line-height: 150px;
+  display: flex;
+  display: -webkit-flex;
+  justify-content: space-between;
+  -webkit-justify-content: space-between;
+  flex-wrap: wrap;
+  -webkit-flex-wrap: wrap;
+  .usaid {
+    img {
+      height: 48px;
+    }
+  }
+  .sweden {
+    img {
+      height: 100px;
+    }
+  }
+  .pycoding {
+    img {
+      height: 24px;
+    }
+  }
+  .mitoc {
+    img {
+      height: 40px;
     }
   }
 }
