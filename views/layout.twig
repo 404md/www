@@ -4,14 +4,15 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>{{ title }}</title>
+        <link rel="icon" href="{{ asset('@img/favicon.png') }}" type="image/png" />
         {% block css %}{% endblock %}
     </head>
-    {% include 'menu.twig' %}
-    {% include 'header.twig' %}
+        {% include 'menu.twig' %}
+        {% include 'header.twig' %}
     <body>
         {% include 'menu.twig' %}
         {% block body %}{% endblock %}
     </body>
-    {% include 'footer.twig' %}
-    {% block js %}{% endblock %}
+        {% include 'footer.twig' %}
+        {% block js %}{% endblock %}
 </html>
