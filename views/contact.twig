@@ -5,9 +5,64 @@
 {% endblock %}
 
 {% block body %}
-
+    <div class="container new-page">
+        <div class="pages">
+            <span class="text-page">
+            404Moldova is a coworking space for IT businesses and IT people from Moldova.
+            We want to empower local community of small companies and skilled individuals
+            to be competitive globally.
+            </span>
+        </div>
+    </div>
+    <div class="wrapper contact" itemscope itemprop="mainContentOfPage">
+        <section class="main-block">
+            <div class="container">
+                <div id="map" class="map-style"></div>
+                <div class="input-field">
+                    <form id="contact-us-form" class="hole-form">
+                        <div class="heading-contact">Get in touch</div>
+                        <div class="error-m">
+                            <div class="group">
+                                <input class="empty-field" type="text" id="name" name="user_name" required />
+                                <span class="highlight"></span>
+                                <span class="bar"></span>
+                                <label class="label-form" for="name">Name</label>
+                            </div>
+                        </div>
+                        <div class="error-m">
+                            <div class="group">
+                                <input class="empty-field" type="tel" id="phone" name="user_phone" required />
+                                <span class="highlight"></span>
+                                <span class="bar"></span>
+                                <label class="label-form" for="phone">Phone</label>
+                            </div>
+                        </div>
+                        <div class="error-m">
+                            <div class="group">
+                                <input class="empty-field" type="email" id="mail" name="user_mail" required/>
+                                <span class="highlight"></span>
+                                <span class="bar"></span>
+                                <label class="label-form" for="mail">E-mail</label>
+                            </div>
+                        </div>
+                        <div class="error-m">
+                            <div class="group">
+                                <input class="empty-field" id="msg" name="user_message" required/>
+                                <span class="highlight"></span>
+                                <span class="bar"></span>
+                                <label class="label-form" for="msg">Message</label>
+                            </div>
+                        </div>
+                        <div id="reCaptcha"></div>
+                        <div class="status-message"></div>
+                        <button class="button button-contact" type="submit">Submit</button>
+                    </form>
+                </div>
+            </div>
+        </section>
 {% endblock %}
 
 {% block js %}
     <script src="{{ asset('@js/contact.min.js') }}"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBMl1HPvxC30Mtcbe6gKWZjiccGAYopsQA&callback=myMap" async defer></script>
 {% endblock %}

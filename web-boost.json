@@ -7,7 +7,6 @@
       "js/main.js",
       "js/slick-1.6.0.min.js",
       "js/recaptcha-api.js",
-      "js/contact.js",
       "js/footer-carousel.js",
       "js/parallax.min.js"
     ],
@@ -23,9 +22,7 @@
     "/": {
       "view": "index.twig",
       "vars": {
-        "title": "Home page",
-        "greeting": "Hello world!"
-      
+        "title": "404Moldova | Coworking Space | Local Community"
       },
       "assets": {
         "js/index.min.js": [
@@ -39,7 +36,7 @@
     "/pricing": {
       "view": "pricing.twig",
       "vars": {
-        "title": "Price page",
+        "title": "Pricing | 404Moldova | Coworking Space | Local Community",
         "page": "Pricing",
         "imagePath": "img/coworking-bg.jpg" 
          },
@@ -57,7 +54,7 @@
     "/events": {
       "view": "events.twig",
       "vars": {
-        "title": "Price page",
+        "title": "Events | 404Moldova | Coworking Space | Local Community",
         "page": "Events",
         "imagePath": "img/events.jpg"
       },
@@ -74,7 +71,7 @@
     "/members": {
       "view": "members.twig",
       "vars": {
-        "title": "Price page",
+        "title": "Members | 404Moldova | Coworking Space | Local Community",
         "page": "Members",
         "imagePath": "img/members.jpg"
       },
@@ -91,9 +88,9 @@
     "/media": {
       "view": "media.twig",
       "vars": {
-        "title": "Media",
-        "page": "Media",
-        "hideParallax": true
+        "url": "media",
+        "title": "Media &amp; Press | 404Moldova | Coworking Space | Local Community",
+        "page": "media"
       },
       "assets": {
         "css/media.min.css": [
@@ -108,8 +105,10 @@
     "/gallery": {
       "view": "gallery.twig",
       "vars": {
-        "title": "Price page",
-        "greeting": "Quickly build an effective pricing table for your potential customers with this Bootstrap example. It's built with default Bootstrap components and utilities with little customization."
+        "url": "gallery",
+        "page": "Gallery",
+        "title": "Photo Gallery | 404Moldova | Coworking Space | Local Community",
+        "imagePath": "img/gallery.jpg"
       },
       "assets": {
         "css/gallery.min.css": [
@@ -123,23 +122,27 @@
     "/contact": {
       "view": "contact.twig",
       "vars": {
-        "title": "Price page",
-        "greeting": "Quickly build an effective pricing table for your potential customers with this Bootstrap example. It's built with default Bootstrap components and utilities with little customization."
+        "title": "Contact | 404Moldova | Coworking Space | Local Community",
+        "page": "Contact us",
+        "imagePath": "img/contacts.jpg"
       },
       "assets": {
         "css/contact.min.css": [
-          "$.common-scss"
+          "$.common-scss",
+          "styles/contacts.scss"
         ],
         "js/contact.min.js": [
-          "$.common-js"
+          "$.common-js",
+          "js/contact.js"
         ]
       }
     },
     "/tour": {
       "view": "tour.twig",
       "vars": {
-        "title": "Price page",
-        "greeting": "Quickly build an effective pricing table for your potential customers with this Bootstrap example. It's built with default Bootstrap components and utilities with little customization."
+        "title": "Book a Tour | 404Moldova | Coworking Space | Local Community",
+        "page": "Book a tour",
+        "imagePath": "img/book.jpg"
       },
       "assets": {
         "css/tour.min.css": [
@@ -147,7 +150,9 @@
           "styles/tour.scss"
         ],
         "js/tour.min.js": [
-          "$.common-js"
+          "$.common-js",
+          "js/mc-validate.min.js",
+          "js/messages_en.js"
         ]
       }
     }
