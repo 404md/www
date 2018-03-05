@@ -317,7 +317,7 @@ body {
     .main-block {
       &.notfound {
         min-height: 100vh;
-        background-image: url(../images/404.png);
+        background-image: url(../img/404.png);
         background-position: 100% 50%;
         background-size: cover;
         position: relative;
@@ -406,7 +406,7 @@ body {
   }
   &.main {
     .main-block {
-      background-image: url(../images/bg.jpg);
+      background-image: url(../img/bg.jpg);
       background-position: center;
       background-size: cover;
       position: relative;
@@ -1346,25 +1346,25 @@ body {
 
 .third-block {
   .image-cover {
-    background-image: url(../images/cover-photo.jpg);
+    background-image: url(../img/cover-photo.jpg);
     background-position: 50% 50%;
     height: 300px;
     background-size: cover;
   }
   .image-photo1 {
-    background-image: url(../images/eistrati.jpg);
+    background-image: url(../img/eistrati.jpg);
     background-position: 70% 50%;
     height: 300px;
     background-size: cover;
   }
   .image-photo2 {
-    background-image: url(../images/aburciu.jpg);
+    background-image: url(../img/aburciu.jpg);
     background-position: 0% 50%;
     height: 300px;
     background-size: cover;
   }
   .image-photo3 {
-    background-image: url(../images/dsturza.jpg);
+    background-image: url(../img/dsturza.jpg);
     background-position: 70% 50%;
     height: 300px;
     background-size: cover;
@@ -1412,6 +1412,7 @@ body {
 .group {
   position: relative;
   margin-bottom: 10px;
+  padding-bottom: 25px;
   display: inline-block;
   width: 100%;
 }
@@ -1448,7 +1449,7 @@ input:focus {
 }
 
 /* active state */
-input:focus ~ .label-form, input:valid ~ .label-form {
+input:focus ~ .label-form {
   top: -20px;
   font-size: 14px;
   color: $main_color;

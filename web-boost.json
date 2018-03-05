@@ -132,7 +132,7 @@
         ],
         "js/contact.min.js": [
           "$.common-js",
-          "js/contact.js"
+          "js/mail-chimp.js"
         ]
       }
     },
