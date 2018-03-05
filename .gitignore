@@ -1,3 +1,13 @@
-node_modules/
+# IntelliJ files
+.idea
+
+# Dependency directories
+node_modules
 package-lock.json
+
+# Compiled files
 public/*
+!public/.gitkeep
+
+# Logs
+*.log

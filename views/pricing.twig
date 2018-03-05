@@ -4,15 +4,27 @@
     <link rel="stylesheet" href="{{ asset('@css/pricing.min.css') }}" />
 {% endblock %}
 
+{% set amenities = [
+    {'name': 'Fast Internet', 'image': '@img/icon-4.svg'},
+    {'name': 'Conference Rooms', 'image': '@img/icon-5.svg'},
+    {'name': 'Printing Supplies', 'image': '@img/icon-6.svg'},
+    {'name': '24 hrs Access', 'image': '@img/icon-10.svg'},
+    {'name': 'Regular Events', 'image': '@img/icon-7.svg'},
+    {'name': 'Strategic Location', 'image': '@img/icon-8.svg'},
+    {'name': 'Onsite Staff', 'image': '@img/icon-1.svg'},
+    {'name': 'Refreshing Water', 'image': '@img/icon-9.svg'},
+    {'name': 'Modern Kitchen', 'image': '@img/icon-3.svg'},
+    {'name': 'Cleaning Services', 'image': '@img/icon-2.svg'}
+]%}
+
 {% block body %}
     <div class="container new-page">
         <div class="pages">
             <span class="text-page">
-           404Moldova is a coworking space for IT businesses and IT people from Moldova.
-            We want to empower local community of small companies and skilled individuals to be competitive globally.
-            Become part of our local community of IT professionals.
-            Our members contribute to the global platform of cloud computing,
-            working with Fortune 500 companies from Europe and USA.
+                404Moldova is a coworking space for IT businesses and IT people from Moldova. We want to empower local
+                community of small companies and skilled individuals to be competitive globally. Become part of our
+                local community of IT professionals. Our members contribute to the global platform of cloud computing,
+                working with Fortune 500 companies from Europe and USA.
             </span>
         </div>
     </div>
@@ -21,7 +33,8 @@
             <div class="container">
                 <div class="offers">
                     <div class="plans">
-                        <div class="plan"><img src="{{ asset ('@img/plan1.jpg') }}" alt="Test Drive" />
+                        <div class="plan">
+                            <img src="{{ asset ('@img/plan1.jpg') }}" alt="Test Drive" />
                             <div class="text-plan">
                                 <div class="text-p">Hub Resident</div>
                                 <div class="btn-plan">
@@ -48,7 +61,8 @@
                         </div>
                     </div>
                     <div class="plans">
-                        <div class="plan"><img src="{{ asset ('@img/plan2.jpg') }}" alt="Free Plan" />
+                        <div class="plan">
+                            <img src="{{ asset ('@img/plan2.jpg') }}" alt="Free Plan" />
                             <div class="text-plan">
                                 <div class="text-p">Teams</div>
                                 <div class="btn-plan">
@@ -90,7 +104,8 @@
                         </div>
                     </div>
                     <div class="plans">
-                        <div class="plan"><img src="{{ asset ('@img/plan3.jpg') }}" alt="Individual" />
+                        <div class="plan">
+                            <img src="{{ asset ('@img/plan3.jpg') }}" alt="Individual" />
                             <div class="text-plan">
                                 <div class="text-p">Day Pass</div>
                                 <div class="btn-plan">
@@ -114,7 +129,8 @@
                         </div>
                     </div>
                     <div class="plans">
-                        <div class="plan"><img src="{{ asset ('@img/plan4.jpg') }}" alt="Business" />
+                        <div class="plan">
+                            <img src="{{ asset ('@img/plan4.jpg') }}" alt="Business" />
                             <div class="text-plan">
                                 <div class="text-p">Weekdays</div>
                                 <div class="btn-plan">
@@ -128,7 +144,7 @@
                                 <li><span>Fixed workplace</span></li>
                                 <li><span>Access to conference rooms</span></li>
                                 <li><span>Access to all trainings and events</span></li>
-                                <li><span>Biometric acces from 9:00 - 18:00</span></li>
+                                <li><span>Biometric access from 9:00 - 18:00</span></li>
                                 <li><span>Coffee, tea, fruits and biscuits</span></li>
                             </ul>
                         </div>
@@ -162,50 +178,16 @@
                     <p class="text-p">All pricing plans include following amenities: </p>
                 </div>
                 <div class="amenities-block display-flex">
-                    <div class="bloks-icons">
-                        <img src="{{ asset('@img/icon-4.svg') }}" alt="Fast Internet">
-                        <div class="icons-text">Fast Internet</div>
-                    </div>
-                    <div class="bloks-icons">
-                        <img src="{{ asset('@img/icon-5.svg') }}" alt="Conference Rooms">
-                        <div class="icons-text">Conference Rooms</div>
-                    </div>
-                    <div class="bloks-icons">
-                        <img src="{{ asset('@img/icon-6.svg') }}" alt="Printing Supplies">
-                        <div class="icons-text">Printing Supplies</div>
-                    </div>
-                    <div class="bloks-icons">
-                        <img src="{{ asset('@img/icon-10.svg') }}" alt="Access">
-                        <div class="icons-text">24 hrs Access</div>
-                    </div>
-                    <div class="bloks-icons">
-                        <img src="{{ asset('@img/icon-7.svg') }}" alt="Regular Events">
-                        <div class="icons-text">Regular Events</div>
-                    </div>
-                    <div class="bloks-icons">
-                        <img src="{{ asset('@img/icon-8.svg') }}" alt="Strategic Location">
-                        <div class="icons-text">Strategic Location</div>
-                    </div>
-                    <div class="bloks-icons">
-                        <img src="{{ asset('@img/icon-1.svg') }}" alt="Onsite Staff">
-                        <div class="icons-text" itemprop="name">Onsite Staff</div>
-                    </div>
-                    <div class="bloks-icons">
-                        <img src="{{ asset('@img/icon-9.svg') }}" alt="Refreshing Water">
-                        <div class="icons-text" itemprop="name">Refreshing Water</div>
-                    </div>
-                    <div class="bloks-icons">
-                        <img src="{{ asset('@img/icon-3.svg') }}" alt="Modern Kitchen">
-                        <div class="icons-text" itemprop="name">Modern Kitchen</div>
-                    </div>
-                    <div class="bloks-icons">
-                        <img src="{{ asset('@img/icon-2.svg') }}" alt="Cleaning Services">
-                        <div class="icons-text" itemprop="name">Cleaning Services</div>
-                    </div>
+                    {% for amenity in amenities %}
+                        <div class="bloks-icons">
+                            <img src="{{ asset( amenity.image ) }}" alt="{{ amenity.name }}">
+                            <div class="icons-text">{{ amenity.name }}</div>
+                        </div>
+                    {% endfor %}
                 </div>
             </div>
         </section>
-
+    </div>
 {% endblock %}
 
 {% block js %}
