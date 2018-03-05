@@ -98,6 +98,27 @@ $gray-color: #95989A;
   clear:left;
   width: 600px;
   .mc-field-group {
+    &.input-group {
+      ul {
+        margin:0; 
+        padding:5px 0; 
+        list-style:none;
+        li {
+          display:inline-block; 
+          padding:3px 0; 
+          margin-right:10px;
+        }
+      }
+      label {
+        display:inline; 
+        padding-left: 5px;
+      }
+      input {
+        display:inline; 
+        width:auto; 
+        border:none;
+      }
+    }
     clear:left; 
     position:relative; 
     width:100%;
@@ -114,6 +135,24 @@ $gray-color: #95989A;
   }
   .datefield, .phonefield-us {
     padding: 5px 0;
+    input {
+      display:inline; 
+      width:60px; 
+      margin:0 2px; 
+      letter-spacing:1px; 
+      text-align:center; 
+      padding:5px 0 2px 0;
+    }
+    label {
+      width:50px;
+      font-size: 12px;
+    }
+    .monthfield, .dayfield {
+      input {
+        width:50px;
+        font-size: 12px;
+      }
+    }
   }
 }
 
@@ -128,15 +167,15 @@ $gray-color: #95989A;
 //#mc_embed_signup .mc-field-group label {display:block; margin-bottom:3px; font-size: 20px}
 
 // #mc_embed_signup .datefield, #mc_embed_signup .phonefield-us{padding:5px 0;}
-#mc_embed_signup .datefield input, #mc_embed_signup .phonefield-us input{display:inline; width:60px; margin:0 2px; letter-spacing:1px; text-align:center; padding:5px 0 2px 0;}
+//#mc_embed_signup .datefield input, #mc_embed_signup .phonefield-us input{display:inline; width:60px; margin:0 2px; letter-spacing:1px; text-align:center; padding:5px 0 2px 0;}
 
-#mc_embed_signup .datefield .monthfield input, #mc_embed_signup .datefield .dayfield input{width:50px;font-size: 12px; }
-#mc_embed_signup .datefield label, #mc_embed_signup .phonefield-us label{display:none;}
+//#mc_embed_signup .datefield .monthfield input, #mc_embed_signup .datefield .dayfield input{width:50px;font-size: 12px; }
+//#mc_embed_signup .datefield label, #mc_embed_signup .phonefield-us label{width:50px;font-size: 12px;}
 
-#mc_embed_signup .mc-field-group.input-group ul {margin:0; padding:5px 0; list-style:none;}
-#mc_embed_signup .mc-field-group.input-group ul li {display:inline-block; padding:3px 0; margin-right:10px;}
-#mc_embed_signup .mc-field-group.input-group label {display:inline; padding-left: 5px;}
-#mc_embed_signup .mc-field-group.input-group input {display:inline; width:auto; border:none;}
+//#mc_embed_signup .mc-field-group.input-group ul {margin:0; padding:5px 0; list-style:none;}
+//#mc_embed_signup .mc-field-group.input-group ul li {display:inline-block; padding:3px 0; margin-right:10px;}
+//#mc_embed_signup .mc-field-group.input-group label {display:inline; padding-left: 5px;}
+//#mc_embed_signup .mc-field-group.input-group input {display:inline; width:auto; border:none;}
 //
 #mc_embed_signup div#mce-responses {float:left; top:-1.4em; padding:0em .5em 0em .5em; overflow:hidden; clear: both;}
 #mc_embed_signup div.response {padding-bottom: 1em; font-weight:bold; float:left; top:-1.5em; z-index:1; }

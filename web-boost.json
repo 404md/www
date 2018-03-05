@@ -8,7 +8,9 @@
       "js/slick-1.6.0.min.js",
       "js/recaptcha-api.js",
       "js/footer-carousel.js",
-      "js/parallax.min.js"
+      "js/parallax.min.js",
+      "js/jquery-2.2.4.min.js",
+      "js/jquery-mailchimp.min.js"
     ],
     "common-scss": [
       "styles/main.scss",
@@ -132,7 +134,7 @@
         ],
         "js/contact.min.js": [
           "$.common-js",
-          "js/contact.js"
+          "js/mail-chimp.js"
         ]
       }
     },
