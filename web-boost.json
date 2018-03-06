@@ -129,7 +129,7 @@
         ],
         "js/contact.min.js": [
           "$.common-js",
-          "js/mail-chimp.js"
+          "js/forms.js"
         ]
       }
     },
@@ -147,7 +147,7 @@
         ],
         "js/tour.min.js": [
           "$.common-js",
-          "js/tour-mc.js"
+          "js/forms.js"
         ]
       }
     },
@@ -164,8 +164,7 @@
           "styles/tour-ty.scss"
         ],
         "js/tour-ty.min.js": [
-          "$.common-js",
-          "js/libs/mc-validate.min.js"
+          "$.common-js"
         ]
       }
     }
