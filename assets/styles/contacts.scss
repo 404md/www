@@ -54,10 +54,20 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            background-image: url(../images/map.jpg);
+            background-image: url(../img/map.jpg);
             background-position: center;
             background-size: cover;
-            float:left;
+            float:left; 
+            .subscribe-form {
+                width: 80%;
+                #mc_embed_signup {
+                    width: auto;
+                    .mc-field-group {
+                        margin-bottom: 0;
+                    }
+                }
+            }
+              
             &:before {
               position: absolute;
               content:'';
@@ -68,6 +78,7 @@
               right:0;
               opacity: 0.95;
             }
+              
             .hole-form {
               position: relative;
               width:80%;
@@ -76,6 +87,7 @@
                 margin-bottom: 10px;
                 font-size: 18px;
               }
+                
               .button {
                 margin-top: 30px;
               }
