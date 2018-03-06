@@ -8,7 +8,7 @@ $(function() {
      */
     $('#subscribe-form').MailChimpForm({
         url: '//mitocgroup.us11.list-manage.com/subscribe/post?u=13a7a5fca813b378c24ec9fe3&id=092d77b13b',
-        fields: 'EMAIL,NAME,MESSAGE,PHONE',
+        fields: '1:NAME,PHONE,0:EMAIL,2:MESSAGE',
         submitSelector: '#submit-form'
     });
 
@@ -25,6 +25,4 @@ $(function() {
     $formInput.on('mc:input:ok', function(message) {
         console.log('mc:input:ok event fired');
     });
-
 });
-
