@@ -132,8 +132,8 @@
         ],
         "js/contact.min.js": [
           "$.common-js",
-          "js/mail-chimp.js",
-          "js/jquery-mailchimp.min.js"
+          "js/libs/jquery-mailchimp.min.js",
+          "js/mail-chimp.js"
         ]
       }
     },
@@ -151,7 +151,7 @@
         ],
         "js/tour.min.js": [
           "$.common-js",
-          "js/mc-validate.min.js",
+          "js/libs/mc-validate.min.js",
           "js/messages_en.js"
         ]
       }

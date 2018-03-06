@@ -1,9 +1,9 @@
+
 $(function() {
     'use strict';
 
     const $formInput = $('.mc-error');
 
-     console.log('aksjdad');
     /**
      * Init MailChimpForm
      */
