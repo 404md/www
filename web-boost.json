@@ -2,11 +2,11 @@
   "$": {
     "common-js": [
       "js/libs/jquery.min.js",
+      "js/libs/jquery-mailchimp.min.js",
       "js/libs/jquery.validate.min.js",
       "js/libs/aws-sdk.min.js",
       "js/main.js",
       "js/libs/slick-1.6.0.min.js",
-      "js/libs/recaptcha-api.min.js",
       "js/footer-carousel.js",
       "js/libs/parallax.min.js"
     ],
@@ -151,8 +151,25 @@
         ],
         "js/tour.min.js": [
           "$.common-js",
-          "js/libs/mc-validate.min.js",
-          "js/messages_en.js"
+          "js/tour_mc.js"
+        ]
+      }
+    },
+    "/tour_ty": {
+      "view": "tour_ty.twig",
+      "vars": {
+        "title": "Book a Tour | 404Moldova | Coworking Space | Local Community",
+        "page": "Book like a tour",
+        "imagePath": "img/book.jpg"
+      },
+      "assets": {
+        "css/tour_ty.min.css": [
+          "$.common-scss",
+          "styles/tour_ty.scss"
+        ],
+        "js/tour_ty.min.js": [
+          "$.common-js",
+          "js/libs/mc-validate.min.js"
         ]
       }
     }
