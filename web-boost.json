@@ -2,13 +2,13 @@
   "$": {
     "common-js": [
       "js/libs/jquery.min.js",
-      "js/jquery.validate.min.js",
-      "js/aws-sdk.min.js",
+      "js/libs/jquery.validate.min.js",
+      "js/libs/aws-sdk.min.js",
       "js/main.js",
-      "js/slick-1.6.0.min.js",
-      "js/recaptcha-api.js",
+      "js/libs/slick-1.6.0.min.js",
+      "js/libs/recaptcha-api.min.js",
       "js/footer-carousel.js",
-      "js/parallax.min.js"
+      "js/libs/parallax.min.js"
     ],
     "common-scss": [
       "styles/main.scss",
@@ -38,7 +38,7 @@
       "vars": {
         "title": "Pricing | 404Moldova | Coworking Space | Local Community",
         "page": "Pricing",
-        "imagePath": "img/coworking-bg.jpg" 
+        "imagePath": "img/coworking-bg.jpg"
          },
       "assets": {
         "css/pricing.min.css": [
