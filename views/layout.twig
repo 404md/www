@@ -8,8 +8,10 @@
         {% block css %}{% endblock %}
     </head>
     <body>
-        {% include 'header.twig' %}
-        {% include 'menu.twig' %}
+        {% if routeName != '/' %}
+            {% include 'header.twig' %}
+            {% include 'menu.twig' %}
+        {% endif %}
         {% block body %}{% endblock %}
         {% include 'footer.twig' %}
     </body>
