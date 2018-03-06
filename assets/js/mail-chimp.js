@@ -3,7 +3,6 @@ $(function() {
 
     const $formInput = $('.mc-error');
 
-     console.log('aksjdad');
     /**
      * Init MailChimpForm
      */
