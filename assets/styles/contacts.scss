@@ -58,6 +58,17 @@
             background-position: center;
             background-size: cover;
             float:left;
+
+            .subscribe-form {
+              width: 80%;
+              #mc_embed_signup {
+                width: auto;
+                .mc-field-group {
+                  margin-bottom: 0;
+                }
+              }
+            }
+
             &:before {
               position: absolute;
               content:'';
