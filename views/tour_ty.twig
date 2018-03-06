@@ -1,0 +1,34 @@
+{% extends 'layout.twig' %}
+
+{% block css %}
+    <link rel="stylesheet" href="{{ asset('@css/tour_ty.min.css') }}" />
+{% endblock %}
+
+{% block body %}
+    <div class=" container new-page">
+        <div class="pages">
+            <div class="line"></div>
+            <span class="text-page">
+                404Moldova is a coworking space for IT businesses and IT people from Moldova. We want to empower local
+                community of small companies and skilled individuals to be competitive globally.
+            </span>
+        </div>
+    </div>
+    <div class="wrapper booking" itemscope itemprop="mainContentOfPage">
+        <section class="main-block">
+            <div class="container">
+                <div class="back-image">
+                    <div class="booking-form">
+                        <div id="mc_embed_signup">
+                            <p>Hello, it's me ..... I was wondering if after all this </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+{% endblock %}
+
+{% block js %}
+    <script src="{{ asset('@js/tour_ty.min.js') }}"></script>
+{% endblock %}
