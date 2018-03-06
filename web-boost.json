@@ -137,6 +137,28 @@
         ]
       }
     },
+
+    "/contact-ok": {
+      "view": "contact-ok.twig",
+      "vars": {
+        "title": "Contact | 404Moldova | Coworking Space | Local Community",
+        "page": "Contact us",
+        "imagePath": "img/contacts.jpg"
+      },
+      "assets": {
+        "css/contact.min.css": [
+          "$.common-scss",
+          "styles/contacts.scss",
+          "styles/contact-ok.scss"
+        ],
+        "js/contact.min.js": [
+          "$.common-js",
+          "js/libs/jquery-mailchimp.min.js",
+          "js/mail-chimp.js"
+        ]
+      }
+    },
+
     "/tour": {
       "view": "tour.twig",
       "vars": {

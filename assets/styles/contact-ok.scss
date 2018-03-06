@@ -1,0 +1,113 @@
+  .main-block {
+
+    .thank-you {
+       h2 {
+         text-transform: uppercase;
+         font-family: 'Lato-Regular', sans-serif;
+         color: #fc563c;
+         text-align: center;
+         font-size: 45px;
+         margin: 15px;
+      }
+
+        h3 {
+          font-family: 'Lato-Regular', sans-serif;
+          text-align: center;
+        }
+    }
+  }
+  .status-message {
+    &.success {
+      padding: 10px;
+      bottom: 0;
+      right: 0;
+      z-index: 2;
+      font-size: 15px;
+      width: 20%;
+      position: fixed;
+      color: #3c763d;
+      background-color: #dff0d8;
+      border-color: #d6e9c6;
+      border-radius: 4px;
+    }
+    &.error {
+      position: absolute;
+      bottom: 55px;
+      line-height: 21px;
+      color:red;
+    }
+  }
+  
+  .wrapper {
+    &.contact {
+      .main-block {
+        min-height: 550px;
+        margin-bottom: 60px;
+        .container {
+          .map-style {
+            width: 60%;
+            height: 550px;
+            float:left;
+          }
+          .input-field {
+            position: relative;
+            width: 40%;
+            height: 550px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-image: url(../img/map.jpg);
+            background-position: center;
+            background-size: cover;
+
+            float:left; 
+            .subscribe-form {
+                width: 80%;
+                #mc_embed_signup {
+                    width: auto;
+                    .mc-field-group {
+                        margin-bottom: 0;
+                    }
+                }
+            }
+
+            &:before {
+              position: absolute;
+              content:'';
+              background: white;
+              top:0;
+              left:0;
+              bottom:0;
+              right:0;
+              opacity: 0.95;
+            }
+              
+            .hole-form {
+              position: relative;
+              width:80%;
+              .input-name {
+                display: block;
+                margin-bottom: 10px;
+                font-size: 18px;
+              }
+                
+              .button {
+                margin-top: 30px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  
+  /* Gallery */
+  
+  .gallery {
+    &.connect-us {
+      .gallery-line {
+        margin-top: 60px;
+      }
+    }
+  }
+  

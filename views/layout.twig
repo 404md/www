@@ -8,12 +8,20 @@
         {% block css %}{% endblock %}
     </head>
     <body>
-        {% if routeName != '/' %}
+        {% if routeName != '/'  %}
             {% include 'header.twig' %}
             {% include 'menu.twig' %}
         {% endif %}
         {% block body %}{% endblock %}
-        {% include 'footer.twig' %}
+
+        {% if routeName != '/contact-ok'  %}
+            {% include 'prefooter.twig' %}
+            {% include 'footer.twig' %}
+        {% else %}
+            {% include 'footer.twig' %}
+        {% endif %}
     </body>
     {% block js %}{% endblock %}
 </html>
+
+
