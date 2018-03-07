@@ -124,6 +124,7 @@
       "assets": {
         "css/contact.min.css": [
           "$.common-scss",
+          "styles/tour.scss",
           "styles/contacts.scss"
         ],
         "js/contact.min.js": [

@@ -15,6 +15,7 @@
         {% block body %}{% endblock %}
 
         {% if routeName != '/404error' %}
+            {% include 'prefooter.twig' %}
             {% include 'footer.twig' %}
         {% endif %}
     </body>
