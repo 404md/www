@@ -129,28 +129,7 @@
         ],
         "js/contact.min.js": [
           "$.common-js",
-          "js/mail-chimp.js"
-        ]
-      }
-    },
-
-    "/contact-ok": {
-      "view": "contact-ok.twig",
-      "vars": {
-        "title": "Contact | 404Moldova | Coworking Space | Local Community",
-        "page": "Contact us",
-        "imagePath": "img/contacts.jpg"
-      },
-      "assets": {
-        "css/contact.min.css": [
-          "$.common-scss",
-          "styles/contacts.scss",
-          "styles/contact-ok.scss"
-        ],
-        "js/contact.min.js": [
-          "$.common-js",
-          "js/libs/jquery-mailchimp.min.js",
-          "js/mail-chimp.js"
+          "js/forms.js"
         ]
       }
     },
@@ -169,7 +148,7 @@
         ],
         "js/tour.min.js": [
           "$.common-js",
-          "js/tour-mc.js"
+          "js/forms.js"
         ]
       }
     },
@@ -186,8 +165,7 @@
           "styles/tour-ty.scss"
         ],
         "js/tour-ty.min.js": [
-          "$.common-js",
-          "js/libs/mc-validate.min.js"
+          "$.common-js"
         ]
       }
     }
