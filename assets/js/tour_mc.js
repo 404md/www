@@ -3,7 +3,6 @@ $(function() {
 
     const $formInput = $('input');
 
-    console.log('VVVVV')
 
     $('#submit-form').on('click', function() {
         console.log('AAAAA')
@@ -18,7 +17,7 @@ $(function() {
         submitSelector: '#submit-form',
         onFail: function(message){},
         onOk: function(okMsg){
-            window.location=`/tour_ty`
+            window.location=`/tour-ty`
         }
     });
 

@@ -155,17 +155,17 @@
         ]
       }
     },
-    "/tour_ty": {
-      "view": "tour_ty.twig",
+    "/tour-ty": {
+      "view": "tour-ty.twig",
       "vars": {
         "title": "Book a Tour | 404Moldova | Coworking Space | Local Community",
-        "page": "Book like a tour",
+        "page": "Book a tour",
         "imagePath": "img/book.jpg"
       },
       "assets": {
-        "css/tour_ty.min.css": [
+        "css/tour-ty.min.css": [
           "$.common-scss",
-          "styles/tour_ty.scss"
+          "styles/tour-ty.scss"
         ],
         "js/tour_ty.min.js": [
           "$.common-js",
