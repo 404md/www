@@ -1,9 +1,4 @@
-// @todo move all the variables to separate file
-// @import "variables.scss";
-
-$color: #282B2E;
-$main_color: #FF5533;
-$gray-color: #95989A;
+@import "./styles/variables";
 
 .btn-plan {
   .button {

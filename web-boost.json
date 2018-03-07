@@ -88,8 +88,7 @@
     "/media": {
       "view": "media.twig",
       "vars": {
-        "title": "Media &amp; Press | 404Moldova | Coworking Space | Local Community",
-        "page": "media"
+        "title": "Media &amp; Press | 404Moldova | Coworking Space | Local Community"
       },
       "assets": {
         "css/media.min.css": [
@@ -153,6 +152,22 @@
           "$.common-js",
           "js/libs/mc-validate.min.js",
           "js/messages_en.js"
+        ]
+      }
+    },
+    "/404error": {
+      "view": "404error.twig",
+      "vars": {
+        "title": "404 not found | 404Moldova | Coworking Space | Local Community"
+      },
+      "assets": {
+        "css/404error.min.css": [
+          "$.common-scss"
+        ],
+        "js/404error.min.js": [
+          "$.common-js",
+          "js/libs/bodymovin.min.js",
+          "js/animations.js"
         ]
       }
     }
