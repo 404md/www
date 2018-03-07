@@ -8,12 +8,14 @@
         {% block css %}{% endblock %}
     </head>
     <body>
-        {% if routeName != '/' %}
+        {% if routeName not in ['/', '/404error'] %}
             {% include 'header.twig' %}
             {% include 'menu.twig' %}
         {% endif %}
         {% block body %}{% endblock %}
-        {% include 'footer.twig' %}
+        {% if routeName != '/404error' %}
+            {% include 'footer.twig' %}
+        {% endif %}        
     </body>
     {% block js %}{% endblock %}
 </html>
