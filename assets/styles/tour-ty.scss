@@ -8,8 +8,9 @@ $gray-color: #95989A;
       min-height: 700px;
       margin-bottom: 60px;
       .container {
+        margin-top: 30px;
         .back-image {
-          background-image: url(../img/1.jpg);
+          background-image: url(../img/404.png);
           background-repeat: no-repeat;
           background-position: 50% 50%;
           background-size: cover;
@@ -21,7 +22,32 @@ $gray-color: #95989A;
             top: 0;
             right: 0;
             bottom:0;
-            background: rgba(0, 0, 0, 0.3);
+            background: rgba(0, 0, 0, 0.2);
+          }
+          .message{
+            //justify-content: center;
+            padding: 90px;
+            text-align: center;
+            .center{
+              padding-left: 50px;
+            }
+            .ty{
+              text-transform: uppercase;
+              font-size: 25px;
+              font-weight: 600;
+              padding-bottom: 20px;
+              color: $main_color;
+            }
+            .block-icon{
+
+              width: 200px;
+              text-align: center;
+              display: initial;
+              .check{
+                width: 100px;
+                color: $main_color;
+              }
+            }
           }
           .booking-form {
             position: relative;
