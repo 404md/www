@@ -132,6 +132,7 @@
         ]
       }
     },
+
     "/tour": {
       "view": "tour.twig",
       "vars": {
