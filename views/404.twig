@@ -1,7 +1,7 @@
 {% extends 'layout.twig' %}
 
 {% block css %}
-    <link rel="stylesheet" href="{{ asset('@css/index.min.css') }}" />
+    <link rel="stylesheet" href="{{ asset('@css/404.min.css') }}" />
 {% endblock %}
 
 {% block body %}
@@ -15,7 +15,7 @@
                     <div class="title-notfound">
                         <p class="name-page">404</p>
                         <p class="text-page">is now found</p>
-                        <div class="links"><a href="/tour">visit us </a> or <a href="/">go home</a></div>
+                        <div class="links"><a href="/tour/">visit us </a> or <a href="/">go home</a></div>
                     </div>
                 </div>
             </div>
@@ -24,5 +24,5 @@
 {% endblock %}
 
 {% block js %}
-    <script type="text/javascript" src="{{ asset('@js/404error.min.js') }}"></script>
+    <script type="text/javascript" src="{{ asset('@js/404.min.js') }}"></script>
 {% endblock %}
