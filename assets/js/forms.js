@@ -12,7 +12,12 @@ jQuery(function($) {
     $contactForm.MailChimpForm({
       url: '//mitocgroup.us11.list-manage.com/subscribe/post?u=13a7a5fca813b378c24ec9fe3&id=092d77b13b',
       fields: '1:NAME,4:PHONE,0:EMAIL,2:MESSAGE',
-      submitSelector: '#submit-form'
+      submitSelector: '#submit-form',
+      onFail: function(message) {},
+      onOk: function(okMsg) {
+          window.location='/thank-you'
+      }
+
     });
   }
 
@@ -26,7 +31,7 @@ jQuery(function($) {
       submitSelector: '#submit-form',
       onFail: function(message) {},
       onOk: function(okMsg) {
-        window.location='/tour-ty'
+        window.location='/thank-you'
       }
     });
   }
