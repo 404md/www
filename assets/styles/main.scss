@@ -1,6 +1,4 @@
-$color: #282B2E;
-$main_color: #FF5533;
-$gray-color: #95989A;
+@import './styles/variables';
 
 * {
   margin: 0;
@@ -18,7 +16,7 @@ img {
 
 a {
   text-decoration: none;
-  color: $main_color;
+  color: $main-color;
   cursor: pointer;
   transition: 0.4s ease-in-out;
   -webkit-transition: 0.4s ease-in-out;
@@ -66,7 +64,7 @@ p {
 }
 
 .text-color {
-  color: $main_color;
+  color: $main-color;
 }
 
 .display-flex {
@@ -243,7 +241,7 @@ body {
 
 .button {
   display: inline-block;
-  background: $main_color;
+  background: $main-color;
   font-size: 17px;
   padding: 10px 50px;
   text-transform: uppercase;
@@ -340,7 +338,7 @@ body {
               font-size: 70px;
               font-weight: bold;
               &:hover {
-                color: $main_color;
+                color: $main-color;
               }
             }
             .location {
@@ -427,7 +425,7 @@ body {
         .container {
           .nav-top {
             .blog {
-              background: $main_color;
+              background: $main-color;
               color: #ffffff;
               transition: 0.4s ease-in-out;
               -webkit-transition: 0.4s ease-in-out;
@@ -529,9 +527,9 @@ body {
             color: white;
             text-transform: uppercase;
             padding: 10px 50px;
-            border: 3px solid $main_color;
+            border: 3px solid $main-color;
             text-decoration: none;
-            background: $main_color;
+            background: $main-color;
             transition: 0.4s ease-in-out;
             -webkit-transition: 0.4s ease-in-out;
             -moz-transition: 0.4s ease-in-out;
@@ -671,7 +669,7 @@ body {
         }
       }
       .blog {
-        background: $main_color;
+        background: $main-color;
         font-size: 16px;
         padding: 2px 6px;
         line-height: normal;
@@ -721,7 +719,7 @@ body {
     -moz-transition: 0.4s ease-in-out;
     -o-transition: 0.4s ease-in-out;
     &.text-color {
-      color: $main_color;
+      color: $main-color;
       transition: 0.4s ease-in-out;
       -webkit-transition: 0.4s ease-in-out;
       -moz-transition: 0.4s ease-in-out;
@@ -749,7 +747,7 @@ body {
     }
     .icons {
       &.text-color {
-        color: $main_color;
+        color: $main-color;
 
       }
     }
@@ -778,7 +776,7 @@ body {
       a {
         font-size: 32px;
         &:hover {
-          color: $main_color;
+          color: $main-color;
         }
       }
     }
@@ -790,7 +788,7 @@ body {
         font-size: 16px;
         margin-left: 5px;
         &:hover {
-          color: $main_color;
+          color: $main-color;
         }
       }
     }
@@ -825,7 +823,7 @@ body {
           position: absolute;
           width: 95px;
           height: 6px;
-          background: $main_color;
+          background: $main-color;
           bottom: 0;
           left: 50%;
           -ms-transform: translateX(-50%);
@@ -869,7 +867,7 @@ body {
         position: absolute;
         width: 80px;
         height: 6px;
-        background: $main_color;
+        background: $main-color;
         bottom: 0;
       }
     }
@@ -932,7 +930,7 @@ body {
         position: relative;
         background: #95989A;
         margin: 0 auto;
-        border: 4px solid $main_color;
+        border: 4px solid $main-color;
         img {
           height: 100%;
           position: absolute;
@@ -956,7 +954,7 @@ body {
           padding-bottom: 15px;
           text-align: left;
           font-size: 35px;
-          color: $main_color;
+          color: $main-color;
         }
         span {
           font-size: 15px;
@@ -1452,12 +1450,12 @@ input:focus {
 input:focus ~ .label-form {
   top: -20px;
   font-size: 14px;
-  color: $main_color;
+  color: $main-color;
 }
 
 .touched ~ .label-form {
   top: -20px;
-  color: $main_color;
+  color: $main-color;
 }
 
 .bar {
@@ -1471,7 +1469,7 @@ input:focus ~ .label-form {
   height: 2px;
   width: 0;
   position: absolute;
-  background: $main_color;
+  background: $main-color;
   transition: 0.2s ease all;
   -moz-transition: 0.2s ease all;
   -webkit-transition: 0.2s ease all;
@@ -1549,7 +1547,7 @@ input:focus ~ .highlight {
           .blog-content {
             h4 {
               a {
-                color: $main_color;
+                color: $main-color;
               }
             }
           }
@@ -1568,7 +1566,7 @@ input:focus ~ .highlight {
               font-size: 17px;
               color: $color;
               &:hover {
-                color: $main_color;
+                color: $main-color;
               }
             }
           }
@@ -1608,11 +1606,11 @@ input:focus ~ .highlight {
     display: block;
     transition: 0.3s;
     &:last-child {
-      background: $main_color;
+      background: $main-color;
       color: #ffffff;
     }
     &.active {
-      color: $main_color;
+      color: $main-color;
     }
   }
 }
@@ -1691,7 +1689,7 @@ input:focus ~ .highlight {
                     text-align: center;
                   }
                   .day {
-                    color: $main_color;
+                    color: $main-color;
                     font-size: 30px;
                     text-transform: uppercase;
                   }
@@ -1756,8 +1754,8 @@ input:focus ~ .highlight {
             }
           }
           .slick-next:hover:before, .slick-prev:hover:before {
-            border-color: $main_color;
-            background-color: $main_color;
+            border-color: $main-color;
+            background-color: $main-color;
             color:#ffffff;
             text-shadow: none;
           }
@@ -1777,7 +1775,7 @@ input:focus ~ .highlight {
             display: block;
             text-align: center;
             &:first-child {
-              color: $main_color;
+              color: $main-color;
               font-size: 20px;
               font-weight: bold;
             }

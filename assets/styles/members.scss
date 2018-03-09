@@ -1,6 +1,4 @@
-$color: #282B2E;
-$main_color: #FF5533;
-$gray-color: #95989A;
+@import './styles/variables';
 
 .text-name {
   text-transform: uppercase;
@@ -21,8 +19,8 @@ $gray-color: #95989A;
         .instagram {
           &.slick-initialized {
             .slick-next:hover:before, .slick-prev:hover:before {
-              border-color: $main_color;
-              background-color: $main_color;
+              border-color: $main-color;
+              background-color: $main-color;
               color:#ffffff;
               text-shadow: none;
             }
@@ -222,7 +220,7 @@ $gray-color: #95989A;
         a {
           color: $color;
           &:hover {
-            color: $main_color;
+            color: $main-color;
           }
         }
       }

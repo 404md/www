@@ -6,8 +6,9 @@ node_modules
 package-lock.json
 
 # Compiled files
-public/*
-!public/.gitkeep
+build/*
+static/js/
+static/css/
 
 # Logs
 *.log

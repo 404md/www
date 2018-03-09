@@ -26,7 +26,7 @@ jQuery(function($) {
       submitSelector: '#submit-form',
       onFail: function(message) {},
       onOk: function(okMsg) {
-        window.location=`/tour-ty`
+        window.location='/tour-ty'
       }
     });
   }

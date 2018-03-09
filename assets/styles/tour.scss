@@ -1,6 +1,4 @@
-$color: #282B2E;
-$main_color: #FF5533;
-$gray-color: #95989A;
+@import './styles/variables';
 
 .wrapper {
   &.booking {
@@ -155,9 +153,6 @@ $gray-color: #95989A;
     }
   }
 }
-
-
-
 /* MailChimp Form Embed Code - Classic - 12/17/2015 v10.7 */
 // #mc_embed_signup{background:#fff; clear:left;width: 600px; }
 

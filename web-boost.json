@@ -11,9 +11,9 @@
     "common-scss": [
       "styles/main.scss",
       "styles/responsive.scss",
-      "styles/slick-1.6.0.min.css",
-      "styles/slick-theme-1.6.0.min.css",
-      "styles/materialdesignicons.min.css"
+      "styles/libs/materialdesignicons.min.css",
+      "styles/libs/slick-1.6.0.min.css",
+      "styles/libs/slick-theme-1.6.0.min.css"
     ]
   },
   "routes": {
@@ -86,7 +86,6 @@
     "/media": {
       "view": "media.twig",
       "vars": {
-        "page": "Media",
         "title": "Media &amp; Press | 404Moldova | Coworking Space | Local Community"
       },
       "assets": {
@@ -133,6 +132,7 @@
         ]
       }
     },
+
     "/tour": {
       "view": "tour.twig",
       "vars": {
@@ -165,6 +165,22 @@
         ],
         "js/tour-ty.min.js": [
           "$.common-js"
+        ]
+      }
+    },
+    "/404": {
+      "view": "404.twig",
+      "vars": {
+        "title": "404 not found | 404Moldova | Coworking Space | Local Community"
+      },
+      "assets": {
+        "css/404.min.css": [
+          "$.common-scss"
+        ],
+        "js/404.min.js": [
+          "$.common-js",
+          "js/libs/bodymovin.min.js",
+          "js/animations.js"
         ]
       }
     }
