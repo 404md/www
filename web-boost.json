@@ -34,7 +34,7 @@
     "/pricing": {
       "view": "pricing.twig",
       "vars": {
-        "page": "Pricing",
+        "page": "pricing",
         "title": "Pricing | 404Moldova | Coworking Space | Local Community",
         "imagePath": "img/coworking-bg.jpg"
       },
@@ -52,7 +52,7 @@
     "/events": {
       "view": "events.twig",
       "vars": {
-        "page": "Events",
+        "page": "events",
         "title": "Events | 404Moldova | Coworking Space | Local Community",
         "imagePath": "img/events.jpg"
       },
@@ -69,7 +69,7 @@
     "/members": {
       "view": "members.twig",
       "vars": {
-        "page": "Members",
+        "page": "members",
         "title": "Members | 404Moldova | Coworking Space | Local Community",
         "imagePath": "img/members.jpg"
       },
@@ -101,7 +101,7 @@
     "/gallery": {
       "view": "gallery.twig",
       "vars": {
-        "page": "Gallery",
+        "page": "gallery",
         "title": "Photo Gallery | 404Moldova | Coworking Space | Local Community",
         "imagePath": "img/gallery.jpg"
       },
@@ -117,7 +117,7 @@
     "/contact": {
       "view": "contact.twig",
       "vars": {
-        "page": "Contact us",
+        "page": "contact us",
         "title": "Contact | 404Moldova | Coworking Space | Local Community",
         "imagePath": "img/contacts.jpg"
       },
@@ -136,7 +136,7 @@
     "/tour": {
       "view": "tour.twig",
       "vars": {
-        "page": "Book a tour",
+        "page": "book a tour",
         "title": "Book a Tour | 404Moldova | Coworking Space | Local Community",
         "imagePath": "img/book.jpg"
       },
@@ -154,7 +154,7 @@
     "/tour-ty": {
       "view": "tour-ty.twig",
       "vars": {
-        "page": "Book a tour",
+        "page": "book a tour",
         "title": "Book a Tour | 404Moldova | Coworking Space | Local Community",
         "imagePath": "img/book.jpg"
       },
@@ -171,6 +171,7 @@
     "/404": {
       "view": "404.twig",
       "vars": {
+        "page": 404,
         "title": "404 not found | 404Moldova | Coworking Space | Local Community"
       },
       "assets": {
@@ -181,6 +182,22 @@
           "$.common-js",
           "js/libs/bodymovin.min.js",
           "js/animations.js"
+        ]
+      }
+    },
+    "/terms": {
+      "view": "terms.twig",
+      "vars": {
+        "page": "Terms of use",
+        "title": "Terms of Use | 404Moldova | Coworking Space | Local Community", 
+        "imagePath": "img/terms.jpg"
+      },
+      "assets": {
+        "css/terms.min.css": [
+          "$.common-scss"
+        ],
+        "js/terms.min.js": [
+          "$.common-js"
         ]
       }
     }
