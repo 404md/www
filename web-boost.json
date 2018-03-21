@@ -34,7 +34,7 @@
     "/pricing": {
       "view": "pricing.twig",
       "vars": {
-        "page": "pricing",
+        "page": "Pricing",
         "title": "Pricing | 404Moldova | Coworking Space | Local Community",
         "imagePath": "img/coworking-bg.jpg"
       },
@@ -52,7 +52,7 @@
     "/events": {
       "view": "events.twig",
       "vars": {
-        "page": "events",
+        "page": "Events",
         "title": "Events | 404Moldova | Coworking Space | Local Community",
         "imagePath": "img/events.jpg"
       },
@@ -69,7 +69,7 @@
     "/members": {
       "view": "members.twig",
       "vars": {
-        "page": "members",
+        "page": "Members",
         "title": "Members | 404Moldova | Coworking Space | Local Community",
         "imagePath": "img/members.jpg"
       },
@@ -86,7 +86,6 @@
     "/media": {
       "view": "media.twig",
       "vars": {
-        "page": "media",
         "title": "Media &amp; Press | 404Moldova | Coworking Space | Local Community"
       },
       "assets": {
@@ -102,7 +101,7 @@
     "/gallery": {
       "view": "gallery.twig",
       "vars": {
-        "page": "gallery",
+        "page": "Gallery",
         "title": "Photo Gallery | 404Moldova | Coworking Space | Local Community",
         "imagePath": "img/gallery.jpg"
       },
@@ -118,7 +117,7 @@
     "/contact": {
       "view": "contact.twig",
       "vars": {
-        "page": "contact us",
+        "page": "Contact us",
         "title": "Contact | 404Moldova | Coworking Space | Local Community",
         "imagePath": "img/contacts.jpg"
       },
@@ -137,7 +136,7 @@
     "/tour": {
       "view": "tour.twig",
       "vars": {
-        "page": "book a tour",
+        "page": "Book a tour",
         "title": "Book a Tour | 404Moldova | Coworking Space | Local Community",
         "imagePath": "img/book.jpg"
       },
@@ -172,7 +171,6 @@
     "/404": {
       "view": "404.twig",
       "vars": {
-        "page": 404,
         "title": "404 not found | 404Moldova | Coworking Space | Local Community"
       },
       "assets": {
