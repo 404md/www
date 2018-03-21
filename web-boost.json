@@ -183,6 +183,22 @@
           "js/animations.js"
         ]
       }
+    },
+    "/terms": {
+      "view": "terms.twig",
+      "vars": {
+        "page": "Terms of use",
+        "title": "Terms of Use | 404Moldova | Coworking Space | Local Community", 
+        "imagePath": "img/terms.jpg"
+      },
+      "assets": {
+        "css/terms.min.css": [
+          "$.common-scss"
+        ],
+        "js/terms.min.js": [
+          "$.common-js"
+        ]
+      }
     }
   }
 }
