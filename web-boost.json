@@ -86,6 +86,7 @@
     "/media": {
       "view": "media.twig",
       "vars": {
+        "page": "media",
         "title": "Media &amp; Press | 404Moldova | Coworking Space | Local Community"
       },
       "assets": {
