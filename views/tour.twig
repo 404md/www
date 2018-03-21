@@ -112,17 +112,19 @@
                                     </label>
                                     <div class="mc-error"></div>
                                 </div>
-                                <div class="mc-form-group-LANG mc-field-group input-group">
+                                <div class="mc-form-group-LANG mc-field-group input-group" id="lang_ch">
                                     <strong>Choose the language you prefer</strong>
                                     <ul>
-                                        <li><input type="radio" value="English" name="LANG"><label>English</label></li>
-                                        <li><input type="radio" value="Romanian" name="LANG"><label>Romanian</label>
+                                        <li><input type="radio" value="English" name="LANG" id="eng_btn"><label>English</label></li>
+                                        <li><input type="radio" value="Romanian" name="LANG" id="rom_btn"><label>Romanian</label>
                                         </li>
-                                        <li><input type="radio" value="Russian" name="LANG"><label>Russian</label></li>
+                                        <li><input type="radio" value="Russian" name="LANG" id="ru_btn"><label>Russian</label></li>
                                     </ul>
                                     <div class="mc-error"></div>
                                 </div>
+                                <div id="mc-general-error"></div>
                             </form>
+
                             <input type="submit" value="Schedule your tour" name="schedule your tour" id="submit-form" class="button">
                             {#<button class="button" id="submit-form">Schedule your tour</button>#}
                         </div>
