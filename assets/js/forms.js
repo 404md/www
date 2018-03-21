@@ -22,7 +22,6 @@ jQuery(function($) {
       onOk: function(okMsg) {
           window.location='/thank-you'
       }
-
     });
   }
 
@@ -39,7 +38,6 @@ jQuery(function($) {
             let $genErr = $('#mc-general-error');
 
             let lnid = $( "input:checked" ).attr("id");
-
             if(lnid==="eng_btn"){
 
             }
@@ -51,13 +49,9 @@ jQuery(function($) {
             }
 
             $genErr.html(`<div class="error-mc">${errMsg}</div>`);
-
         },
       onOk: function(okMsg) {
-        console.log('hello');
-
            let lnid = $( "input:checked" ).attr("id");
-
            if(lnid==="eng_btn"){
                window.location='/thank-you'
            }
@@ -68,7 +62,6 @@ jQuery(function($) {
                 window.location='/thank-you'
             }
         }
-
     });
   }
 
