@@ -3,8 +3,8 @@
     {'text': '404.md inspires me to do good', 'image': '@img/avatar-eugen1.png', 'author': 'Eugen I.', 'bgimage': '@img/gallery-2.jpg'},
     {'text': 'Here your social network is real', 'image': '@img/avatar-irina1.png', 'author': 'Irina C.', 'bgimage': '@img/gallery-3.jpg'},
     {'text': 'Proud to be a member of 404 community', 'image': '@img/avatar-alex1.png', 'author': 'Alex C.', 'bgimage': '@img/gallery-4.jpg'},
-    {'text': '404 Great place to work with professionals devs', 'image': '@img/avatar-cristi1.png', 'author': 'Alexandr V.', 'bgimage': '@img/gallery-5.jpg'},
-    {'text': 'Comfortable place and welcoming atmosphere', 'image': '@img/avatar-alex2.png', 'author': 'Irina C.', 'bgimage': '@img/gallery-6.jpg'},
+    {'text': '404 Great place to work with professionals devs', 'image': '@img/avatar-cristi1.png', 'author': 'Cristi C.', 'bgimage': '@img/gallery-5.jpg'},
+    {'text': 'Comfortable place and welcoming atmosphere', 'image': '@img/avatar-alex2.png', 'author': 'Alexandr V.', 'bgimage': '@img/gallery-6.jpg'},
     {'text': 'I enjoy being part of 404 community', 'image': '@img/avatar-marcel1.png', 'author': 'Marcel G.', 'bgimage': '@img/gallery-7.jpg'},
     {'text': '404 makes me enjoy my work', 'image': '@img/avatar-grigore1.png', 'author': 'Grigore M.', 'bgimage': '@img/gallery-8.jpg'},
     {'text': '404 inspires me every day', 'image': '@img/avatar-dan1.png', 'author': 'Dan B.', 'bgimage': '@img/gallery-9.jpg'},
@@ -47,16 +47,17 @@
     <div class="clear"></div>
 </section>
 
-<div class="container">
-    <section class="partners" itemscope itemtype="https://schema.org/Organization">
-        {% for partner in partners %}
-            <div class="{{ partner.class }}">
-                <img itemprop="logo" src="{{ asset( partner.image ) }}" alt="{{ partner.alt }}">
-                <meta itemprop="url" content="{{ partner.png }}">
-            </div>
-        {% endfor %}
-        <hr>
-    </section>
+<div class="wrapper">
+    <div class="container">
+        <section class="partners" itemscope itemtype="https://schema.org/Organization">
+            {% for partner in partners %}
+                <div class="{{ partner.class }}">
+                    <img itemprop="logo" src="{{ asset( partner.image ) }}" alt="{{ partner.alt }}">
+                    <meta itemprop="url" content="{{ partner.png }}">
+                </div>
+            {% endfor %}
+            <hr>
+        </section>
 
     <section id="blog" class="blog">
         <header class="section-heading">
@@ -70,4 +71,5 @@
             <a id="loadBlogPosts" class="btn btn-dark" href='//blog.404.md'></a>
         </div>
     </section>
+</div>
 </div>

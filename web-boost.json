@@ -41,11 +41,12 @@
       "assets": {
         "css/pricing.min.css": [
           "$.common-scss",
-          "styles/pricing.scss"
+          "styles/pricing.scss",
+          "styles/responsive.scss"
         ],
         "js/pricing.min.js": [
           "$.common-js",
-          "js/coworking.js"
+          "js/pricing.js"
         ]
       }
     },
@@ -58,11 +59,12 @@
       },
       "assets": {
         "css/events.min.css": [
-          "$.common-scss"
+          "$.common-scss",
+          "styles/responsive.scss"
         ],
         "js/events.min.js": [
           "$.common-js",
-          "js/events.js"
+          "js/events.js"        
         ]
       }
     },
@@ -76,7 +78,8 @@
       "assets": {
         "css/members.min.css": [
           "$.common-scss",
-          "styles/members.scss"
+          "styles/members.scss",
+          "styles/responsive.scss"
         ],
         "js/members.min.js": [
           "$.common-js"
@@ -124,7 +127,8 @@
       "assets": {
         "css/contact.min.css": [
           "$.common-scss",
-          "styles/contacts.scss"
+          "styles/contacts.scss",
+          "styles/responsive.scss"
         ],
         "js/contact.min.js": [
           "$.common-js",

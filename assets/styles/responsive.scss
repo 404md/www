@@ -63,11 +63,11 @@
 }
 
 @media (max-width: 1270px) {
-  //.flag {
-  //  &.web-flag {
-  //    display: none;
-  //  }
-  //}
+  .flag {
+   &.web-flag {
+     display: none;
+   }
+  }
   .new-page {
     &.events {
       .amenities-block {
