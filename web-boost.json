@@ -17,7 +17,7 @@
   },
   "routes": {
     "/": {
-      "view": "index.twig",
+      "view": "en/index.twig",
       "vars": {
         "title": "404Moldova | Coworking Space | Local Community"
       },
@@ -32,7 +32,7 @@
       }
     },
     "/pricing": {
-      "view": "pricing.twig",
+      "view": "en/pricing.twig",
       "vars": {
         "page": "Pricing",
         "title": "Pricing | 404Moldova | Coworking Space | Local Community",
@@ -51,7 +51,7 @@
       }
     },
     "/events": {
-      "view": "events.twig",
+      "view": "en/events.twig",
       "vars": {
         "page": "Events",
         "title": "Events | 404Moldova | Coworking Space | Local Community",
@@ -64,12 +64,12 @@
         ],
         "js/events.min.js": [
           "$.common-js",
-          "js/events.js"        
+          "js/events.js"
         ]
       }
     },
     "/members": {
-      "view": "members.twig",
+      "view": "en/members.twig",
       "vars": {
         "page": "Members",
         "title": "Members | 404Moldova | Coworking Space | Local Community",
@@ -87,7 +87,7 @@
       }
     },
     "/media": {
-      "view": "media.twig",
+      "view": "en/media.twig",
       "vars": {
         "title": "Media &amp; Press | 404Moldova | Coworking Space | Local Community"
       },
@@ -103,7 +103,7 @@
       }
     },
     "/gallery": {
-      "view": "gallery.twig",
+      "view": "en/gallery.twig",
       "vars": {
         "page": "Gallery",
         "title": "Photo Gallery | 404Moldova | Coworking Space | Local Community",
@@ -120,7 +120,7 @@
       }
     },
     "/contact": {
-      "view": "contact.twig",
+      "view": "en/contact.twig",
       "vars": {
         "page": "Contact us",
         "title": "Contact | 404Moldova | Coworking Space | Local Community",
@@ -138,9 +138,8 @@
         ]
       }
     },
-
     "/tour": {
-      "view": "tour.twig",
+      "view": "en/tour.twig",
       "vars": {
         "page": "Book a tour",
         "title": "Book a Tour | 404Moldova | Coworking Space | Local Community",
@@ -159,7 +158,7 @@
       }
     },
     "/thank-you": {
-      "view": "thank-you.twig",
+      "view": "en/thank-you.twig",
       "vars": {
         "page": "Thank you!",
         "title": "Book a Tour | 404Moldova | Coworking Space | Local Community",
@@ -177,7 +176,7 @@
       }
     },
     "/404": {
-      "view": "404.twig",
+      "view": "en/404.twig",
       "vars": {
         "title": "404 not found | 404Moldova | Coworking Space | Local Community"
       },
@@ -194,10 +193,10 @@
       }
     },
     "/terms": {
-      "view": "terms.twig",
+      "view": "en/terms.twig",
       "vars": {
         "page": "Terms of use",
-        "title": "Terms of Use | 404Moldova | Coworking Space | Local Community", 
+        "title": "Terms of Use | 404Moldova | Coworking Space | Local Community",
         "imagePath": "img/terms.jpg"
       },
       "assets": {
@@ -208,6 +207,200 @@
         "js/terms.min.js": [
           "$.common-js"
         ]
+      },
+
+      "/ru": {
+        "view": "ru/index.twig",
+        "vars": {
+          "title": "404Moldova | Coworking Space | Local Community"
+        },
+        "assets": {
+          "js/index.min.js": [
+            "$.common-js"
+          ],
+          "css/index.min.css": [
+            "$.common-scss",
+            "styles/responsive.scss"
+          ]
+        }
+      },
+      "/ru/pricing": {
+        "view": "ru/pricing.twig",
+        "vars": {
+          "page": "Pricing",
+          "title": "Pricing | 404Moldova | Coworking Space | Local Community",
+          "imagePath": "img/coworking-bg.jpg"
+        },
+        "assets": {
+          "css/pricing.min.css": [
+            "$.common-scss",
+            "styles/pricing.scss",
+            "styles/responsive.scss"
+          ],
+          "js/pricing.min.js": [
+            "$.common-js",
+            "js/coworking.js"
+          ]
+        }
+      },
+      "/ru/events": {
+        "view": "ru/events.twig",
+        "vars": {
+          "page": "Events",
+          "title": "Events | 404Moldova | Coworking Space | Local Community",
+          "imagePath": "img/events.jpg"
+        },
+        "assets": {
+          "css/events.min.css": [
+            "$.common-scss",
+            "styles/responsive.scss"
+          ],
+          "js/events.min.js": [
+            "$.common-js",
+            "js/events.js"
+          ]
+        }
+      },
+      "/ru/members": {
+        "view": "ru/members.twig",
+        "vars": {
+          "page": "Members",
+          "title": "Members | 404Moldova | Coworking Space | Local Community",
+          "imagePath": "img/members.jpg"
+        },
+        "assets": {
+          "css/members.min.css": [
+            "$.common-scss",
+            "styles/members.scss",
+            "styles/responsive.scss"
+          ],
+          "js/members.min.js": [
+            "$.common-js"
+          ]
+        }
+      },
+      "/ru/media": {
+        "view": "ru/media.twig",
+        "vars": {
+          "title": "Media &amp; Press | 404Moldova | Coworking Space | Local Community"
+        },
+        "assets": {
+          "css/media.min.css": [
+            "$.common-scss",
+            "styles/media.scss",
+            "styles/responsive.scss"
+          ],
+          "js/media.min.js": [
+            "$.common-js"
+          ]
+        }
+      },
+      "/ru/gallery": {
+        "view": "ru/gallery.twig",
+        "vars": {
+          "page": "Gallery",
+          "title": "Photo Gallery | 404Moldova | Coworking Space | Local Community",
+          "imagePath": "img/gallery.jpg"
+        },
+        "assets": {
+          "css/gallery.min.css": [
+            "$.common-scss",
+            "styles/responsive.scss"
+          ],
+          "js/gallery.min.js": [
+            "$.common-js"
+          ]
+        }
+      },
+      "/ru/contact": {
+        "view": "ru/contact.twig",
+        "vars": {
+          "page": "Contact us",
+          "title": "Contact | 404Moldova | Coworking Space | Local Community",
+          "imagePath": "img/contacts.jpg"
+        },
+        "assets": {
+          "css/contact.min.css": [
+            "$.common-scss",
+            "styles/contacts.scss",
+            "styles/responsive.scss"
+          ],
+          "js/contact.min.js": [
+            "$.common-js",
+            "js/forms.js"
+          ]
+        }
+      },
+      "/ru/tour": {
+        "view": "ru/tour.twig",
+        "vars": {
+          "page": "Book a tour",
+          "title": "Book a Tour | 404Moldova | Coworking Space | Local Community",
+          "imagePath": "img/book.jpg"
+        },
+        "assets": {
+          "css/tour.min.css": [
+            "$.common-scss",
+            "styles/tour.scss",
+            "styles/responsive.scss"
+          ],
+          "js/tour.min.js": [
+            "$.common-js",
+            "js/forms.js"
+          ]
+        }
+      },
+      "/ru/thank-you": {
+        "view": "ru/thank-you.twig",
+        "vars": {
+          "page": "Thank you!",
+          "title": "Book a Tour | 404Moldova | Coworking Space | Local Community",
+          "imagePath": "img/book.jpg"
+        },
+        "assets": {
+          "css/thank-you.min.css": [
+            "$.common-scss",
+            "styles/thank-you.scss",
+            "styles/responsive.scss"
+          ],
+          "js/thank-you.min.js": [
+            "$.common-js"
+          ]
+        }
+      },
+      "/ru/404": {
+        "view": "ru/404.twig",
+        "vars": {
+          "title": "404 not found | 404Moldova | Coworking Space | Local Community"
+        },
+        "assets": {
+          "css/404.min.css": [
+            "$.common-scss",
+            "styles/responsive.scss"
+          ],
+          "js/404.min.js": [
+            "$.common-js",
+            "js/libs/bodymovin.min.js",
+            "js/animations.js"
+          ]
+        }
+      },
+      "/ru/terms": {
+        "view": "ru/terms.twig",
+        "vars": {
+          "page": "Terms of use",
+          "title": "Terms of Use | 404Moldova | Coworking Space | Local Community",
+          "imagePath": "img/terms.jpg"
+        },
+        "assets": {
+          "css/terms.min.css": [
+            "$.common-scss",
+            "styles/responsive.scss"
+          ],
+          "js/terms.min.js": [
+            "$.common-js"
+          ]
+        }
       }
     }
   }
