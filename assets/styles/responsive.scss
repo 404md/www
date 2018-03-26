@@ -144,6 +144,18 @@
 
   .main-nav {
     .container {
+      position: relative;
+      .flag {
+        position: absolute;
+        padding-top: 25px;
+        right: 85px;
+        .language {
+        display: inline-block;
+          &:first-child {
+            margin-right: 10px;
+          }
+        }
+      }
       .nav-top {
         float: none;
         position: static;
@@ -176,7 +188,6 @@
                 }
               }
             }
-
             .link, .last-line {
               border: 0;
               margin: 0 auto;
