@@ -4,49 +4,48 @@
     <link rel="stylesheet" href="{{ asset('@css/events.min.css') }}" />
 {% endblock %}
 
+{% set amenities = [
+    {'name': 'Projector', 'image': '@img/icon-11.svg'},
+    {'name': '3 Meeting Rooms', 'image': '@img/icon-5.svg'},
+    {'name': '60 Seats', 'image': '@img/icon-12.svg'},
+    {'name': 'Coffee Break', 'image': '@img/icon-13.svg'}
+]%}
+
 {% block body %}
-    <div class="container new-page events">
-        <div class="events-fb pages flex-row"></div>
-        <div class="container new-page">
-            <div class="pages coworking">
-                <h1 class="page-name">Host an event</h1>
-                <p class="text-p">Or your next meeting here: </p>
-            </div>
-        </div>
-        <div class="display-flex flex-row">
-            <div class="meeting-room flex-item-4">
-                <div><img src="{{ asset('@img/meeting1.jpg') }}" alt="Meeting Room"></div>
-                <div><img src="{{ asset('@img/meeting2.jpg') }}" alt="Meeting Room"></div>
-                <div><img src="{{ asset('@img/meeting3.jpg') }}" alt="Meeting Room"></div>
-                <div><img src="{{ asset('@img/meeting4.jpg') }}" alt="Meeting Room"></div>
-            </div>
-            <div class="amenities-block display-flex flex-item-6">
-                <div class="bloks-icons">
-                    <img src="{{ asset('@img/icon-11.svg') }}" alt="Projector">
-                    <div class="icons-text">Projector</div>
+    <div class="wrapper">
+        <div class="container new-page events">
+            <div class="events-fb pages flex-row"></div>
+            {# <div class="container new-page"> #}
+                <div class="pages coworking">
+                    <h1 class="page-name">Host an event</h1>
+                    <p class="text-p">Or your next meeting here: </p>
                 </div>
-                <div class="bloks-icons">
-                    <img src="{{ asset('@img/icon-5.svg') }}" alt="3 Meeting Rooms">
-                    <div class="icons-text">3 Meeting Rooms</div>
+            {# </div> #}
+            <div class="display-flex flex-row">
+                <div class="meeting-room flex-item-4">
+                    <div><img src="{{ asset('@img/meeting1.jpg') }}" alt="Meeting Room"></div>
+                    <div><img src="{{ asset('@img/meeting2.jpg') }}" alt="Meeting Room"></div>
+                    <div><img src="{{ asset('@img/meeting3.jpg') }}" alt="Meeting Room"></div>
+                    <div><img src="{{ asset('@img/meeting4.jpg') }}" alt="Meeting Room"></div>
                 </div>
-                <div class="bloks-icons">
-                    <img src="{{ asset('@img/icon-12.svg') }}" alt="60 Seats">
-                    <div class="icons-text">60 Seats</div>
+                <div class="amenities-block display-flex flex-item-6">
+                    {% for amenity in amenities %}
+                        <div class="bloks-icons">
+                            <img src="{{ asset( amenity.image ) }}" alt="{{ amenity.name }}">
+                            <div class="icons-text">{{ amenity.name }}</div>
+                        </div>
+                    {% endfor %}
                 </div>
-                <div class="bloks-icons">
-                    <img src="{{ asset('@img/icon-13.svg') }}" alt="Coffee Break">
-                    <div class="icons-text">Coffee Break</div>
-                </div>
-            </div>
-            <div class="price flex-item-2">
-                <div class="price-block">
-                    <span>For just</span>
-                    <span>250</span>
-                    <span>MDL/hour</span>
+                <div class="price flex-item-2">
+                    <div class="price-block">
+                        <span>For just</span>
+                        <span>250</span>
+                        <span>MDL/hour</span>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
+    </div>    
 {% endblock %}
 
 {% block js %}
