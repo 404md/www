@@ -17,6 +17,47 @@
     {'name': 'Cleaning Services', 'image': '@img/icon-2.svg'}
 ]%}
 
+{% set hubs = [
+    {'text': 'Fixed workplace'},
+    {'text': 'Access to conference rooms'},
+    {'text': 'Free access to all trainings and events'},
+    {'text': '24/7 biometric access'},
+    {'text': 'Coffee, tea, fruits and biscuits'},
+    {'text': 'Free exposure to 404 partners'},
+    {'text': 'Free 1 week invitation for 2 friends'},
+    {'text': 'Free use of projectors'},
+    {'text': 'Storage room/servers'}
+]%}
+
+{% set teams = [
+    {'text': 'Fixed workplace'},
+    {'text': 'Access to conference rooms'},
+    {'text': 'Access to all trainings and events'},
+    {'text': '24/7 biometric access'},
+    {'text': 'Coffee, tea, fruits and biscuits'},
+    {'text': 'Free exposure to 404 partners'},
+    {'text': 'Free tickets to Cloud Computing focused conferences'},
+    {'text': 'Free Cloud Computing certification'},        
+    {'text': 'Storage room/servers'}
+]%}
+
+{% set days = [
+    {'text': 'Fixed workplace'},
+    {'text': 'Access to conference rooms'},
+    {'text': 'Free acces to 1 training or event'},
+    {'text': '24/7 biometric access'},
+    {'text': 'Coffee, tea, fruits and biscuits'},
+    {'text': 'Free 1 week invitation for 2 friends'}
+]%}
+
+{% set weekdays = [
+    {'text': 'Fixed workplace'},
+    {'text': 'Access to conference rooms'},
+    {'text': 'Access to all trainings and events'},
+    {'text': 'Biometric access from 9:00 - 18:00'},
+    {'text': 'Coffee, tea, fruits and biscuits'}
+]%}
+
 {% block body %}
     <div class="container new-page">
         <div class="pages">
@@ -45,15 +86,9 @@
                         <div class="plans-points">
                             <div class="text-p">2500 MDL</div>
                             <ul>
-                                <li><span>Fixed workplace </span></li>
-                                <li><span>Free access to conference rooms</span></li>
-                                <li><span>Free access to all trainings and events</span></li>
-                                <li><span>24/7 biometric access</span></li>
-                                <li><span>Coffee, tea, fruits and biscuits</span></li>
-                                <li><span>Free exposure to 404 partners</span></li>
-                                <li><span>Free 1 week invitation for 2 friends</span></li>
-                                <li><span>Free use of projectors</span></li>
-                                <li><span>Storage room/servers</span></li>
+                            {% for hub in hubs %}
+                                <li><span>{{ hub.text }}</span></li>
+                            {% endfor %}    
                             </ul>
                         </div>
                         <div class="btn-plan-contact">
@@ -82,15 +117,9 @@
                                 </div>
                             </div>
                             <ul>
-                                <li><span>Fixed workplace</span></li>
-                                <li><span>Access to conference rooms</span></li>
-                                <li><span>Access to all trainings and events</span></li>
-                                <li><span>24/7 biometric access</span></li>
-                                <li><span>Coffee, tea, fruits and biscuits</span></li>
-                                <li><span>Free exposure to 404 partners</span></li>
-                                <li><span>Free tickets to Cloud Computing focused conferences</span></li>
-                                <li><span>Free Cloud Computing certification</span></li>
-                                <li><span>Storage room/servers</span></li>
+                            {% for team in teams %}
+                                <li><span>{{ team.text }}</span></li>
+                            {% endfor %}
                             </ul>
                             <div class="notes">
                                 <div class="glay-line"></div>
@@ -116,12 +145,9 @@
                         <div class="plans-points">
                             <div class="text-p">150 MDL</div>
                             <ul>
-                                <li><span>Fixed workplace</span></li>
-                                <li><span>Access to conference rooms</span></li>
-                                <li><span>Free acces to 1 training or event</span></li>
-                                <li><span>24/7 biometric access</span></li>
-                                <li><span>Coffee, tea, fruits and biscuits</span></li>
-                                <li><span>Free 1 week invitation for 2 friends</span></li>
+                            {% for day in days %}
+                                <li><span>{{ day.text }}</span></li>
+                            {% endfor %}
                             </ul>
                         </div>
                         <div class="btn-plan-contact">
@@ -141,11 +167,9 @@
                         <div class="plans-points">
                             <div class="text-p">550 MDL/week</div>
                             <ul>
-                                <li><span>Fixed workplace</span></li>
-                                <li><span>Access to conference rooms</span></li>
-                                <li><span>Access to all trainings and events</span></li>
-                                <li><span>Biometric access from 9:00 - 18:00</span></li>
-                                <li><span>Coffee, tea, fruits and biscuits</span></li>
+                            {% for weekday in weekdays %}
+                                <li><span>{{ weekday.text }}</span></li>
+                            {% endfor %}
                             </ul>
                         </div>
                         <div class="btn-plan-contact">

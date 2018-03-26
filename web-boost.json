@@ -10,7 +10,6 @@
     ],
     "common-scss": [
       "styles/main.scss",
-      "styles/responsive.scss",
       "styles/libs/materialdesignicons.min.css",
       "styles/libs/slick-1.6.0.min.css",
       "styles/libs/slick-theme-1.6.0.min.css"
@@ -27,7 +26,8 @@
           "$.common-js"
         ],
         "css/index.min.css": [
-          "$.common-scss"
+          "$.common-scss",
+          "styles/responsive.scss"
         ]
       }
     },
@@ -41,7 +41,8 @@
       "assets": {
         "css/pricing.min.css": [
           "$.common-scss",
-          "styles/pricing.scss"
+          "styles/pricing.scss",
+          "styles/responsive.scss"
         ],
         "js/pricing.min.js": [
           "$.common-js",
@@ -58,11 +59,12 @@
       },
       "assets": {
         "css/events.min.css": [
-          "$.common-scss"
+          "$.common-scss",
+          "styles/responsive.scss"
         ],
         "js/events.min.js": [
           "$.common-js",
-          "js/events.js"
+          "js/events.js"        
         ]
       }
     },
@@ -76,7 +78,8 @@
       "assets": {
         "css/members.min.css": [
           "$.common-scss",
-          "styles/members.scss"
+          "styles/members.scss",
+          "styles/responsive.scss"
         ],
         "js/members.min.js": [
           "$.common-js"
@@ -91,7 +94,8 @@
       "assets": {
         "css/media.min.css": [
           "$.common-scss",
-          "styles/media.scss"
+          "styles/media.scss",
+          "styles/responsive.scss"
         ],
         "js/media.min.js": [
           "$.common-js"
@@ -107,7 +111,8 @@
       },
       "assets": {
         "css/gallery.min.css": [
-          "$.common-scss"
+          "$.common-scss",
+          "styles/responsive.scss"
         ],
         "js/gallery.min.js": [
           "$.common-js"
@@ -124,7 +129,8 @@
       "assets": {
         "css/contact.min.css": [
           "$.common-scss",
-          "styles/contacts.scss"
+          "styles/contacts.scss",
+          "styles/responsive.scss"
         ],
         "js/contact.min.js": [
           "$.common-js",
@@ -143,7 +149,8 @@
       "assets": {
         "css/tour.min.css": [
           "$.common-scss",
-          "styles/tour.scss"
+          "styles/tour.scss",
+          "styles/responsive.scss"
         ],
         "js/tour.min.js": [
           "$.common-js",
@@ -161,7 +168,8 @@
       "assets": {
         "css/thank-you.min.css": [
           "$.common-scss",
-          "styles/thank-you.scss"
+          "styles/thank-you.scss",
+          "styles/responsive.scss"
         ],
         "js/thank-you.min.js": [
           "$.common-js"
@@ -175,7 +183,8 @@
       },
       "assets": {
         "css/404.min.css": [
-          "$.common-scss"
+          "$.common-scss",
+          "styles/responsive.scss"
         ],
         "js/404.min.js": [
           "$.common-js",
@@ -193,7 +202,8 @@
       },
       "assets": {
         "css/terms.min.css": [
-          "$.common-scss"
+          "$.common-scss",
+          "styles/responsive.scss"
         ],
         "js/terms.min.js": [
           "$.common-js"
