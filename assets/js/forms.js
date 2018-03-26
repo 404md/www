@@ -6,25 +6,21 @@ jQuery(function($) {
   const $contactForm = $('#subscribe-contact-form');
 
   $('#mce-PHONE').on('input', function() {
-    let input=$(this);
-    let re = /^[\+]?[(]?[0-9]{3}[)]?[0-9]*$/;
-    let is_phone=re.test(input.val());
+    let $input = $(this);
+    let regExp = /^[\+]?[(]?[0-9]{3}[)]?[0-9]*$/;
+    let isPhone = regExp.test($input.val());
     let $genErr = $('#phone-error');
 
-    if(is_phone){
+    if (isPhone) {
       let errMsg = "";
       $genErr.html(`<p>${errMsg}</p>`);
-      $('#submit-form').prop('disabled',false);
-    }
-    else{
-      let errMsg = "Unacceptable value";
-
+      $('#submit-form').prop('disabled', false);
+    } else {
+      let errMsg = 'Unacceptable value';
       $genErr.html(`<p>${errMsg}</p>`);
-      $('#submit-form').prop('disabled',true);
+      $('#submit-form').prop('disabled', true);
     }
-
   });
-
 
   if ($contactForm.length) {
     /**
@@ -40,7 +36,7 @@ jQuery(function($) {
         $genErr.html(`<div class="error-mc">${errMsg}</div>`);
       },
       onOk: function(okMsg) {
-        window.location='/thank-you'
+        window.location = '/thank-you'
       }
     });
   }
@@ -55,30 +51,27 @@ jQuery(function($) {
       submitSelector: '#submit-form',
       onFail: function (errMsg) {
         let $genErr = $('#mc-general-error');
+        let lnId = $( "input:checked" ).attr("id");
 
-        let lnid = $( "input:checked" ).attr("id");
-        if (lnid === "engBtn" ){
-
+        if (lnId === 'romBtn') {
+          errMsg = 'Nu se poate asa';
         }
-        if(lnid==="rom_btn"){
-          errMsg="Nu se poate asa";
-        }
-        if(lnid==="ru_btn"){
-          errMsg="Что-то пошло не так, какая жалость"
+        if (lnId === 'ruBtn') {
+          errMsg = 'Что-то пошло не так, какая жалость';
         }
 
         $genErr.html(`<div class="error-mc">${errMsg}</div>`);
       },
       onOk: function(okMsg) {
-        let lnid = $( "input:checked" ).attr("id");
-        if(lnid==="eng_btn"){
-          window.location='/thank-you'
+        let lnId = $( "input:checked" ).attr("id");
+        if (lnId === 'engBtn') {
+          window.location = '/thank-you'
         }
-        if(lnid==="rom_btn"){
-          window.location='/thank-you'
+        if (lnId === 'romBtn') {
+          window.location = '/thank-you'
         }
-        if(lnid==="ru_btn"){
-          window.location='/thank-you'
+        if (lnId === 'ruBtn') {
+          window.location = '/thank-you'
         }
       }
     });
