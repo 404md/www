@@ -47,6 +47,19 @@
   }
 }
 
+.gray-text {
+  color: #95989A;
+  font-size: 18px;
+}
+
+ul {
+  left: 100px;
+}
+
+strong {
+   padding-left: 5px;
+}
+
 /* Gallery */
 
 .gallery {
@@ -98,7 +111,7 @@
   .mc-field-group {
     &.input-group {
       ul {
-        margin:0; 
+        margin-left:5px;
         padding:5px 0; 
         list-style:none;
         li {
