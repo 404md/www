@@ -9,9 +9,9 @@
     </head>
     <body>
         {# Header #}
-        {% if routeName not in ['/', '/404'] %}
-            {% include 'header.twig' %}
-            {% include 'menu.twig' %}
+        {% if routeName not in ['/', '/404', '/ru', '/ro', '/ru/404', '/ro/404'] %}
+            {% include 'en/header.twig' %}
+            {% include 'en/menu.twig' %}
         {% endif %}
 
         {# Content #}
@@ -19,8 +19,8 @@
 
         {# Footer #}
         {% if routeName != '/404' %}
-            {% include 'prefooter.twig' %}
-            {% include 'footer.twig' %}
+            {% include 'en/prefooter.twig' %}
+            {% include 'en/footer.twig' %}
         {% endif %}
     </body>
     {% block js %}{% endblock %}

@@ -1,0 +1,82 @@
+{% extends '../layout.twig' %}
+
+{% block css %}
+    <link rel="stylesheet" href="{{ asset('@css/contact.min.css') }}" />
+{% endblock %}
+
+{% block body %}
+    <div class="container new-page">
+        <div class="pages">
+            <span class="text-page">
+                404Moldova это сообщество для IT-бизнеса и IT-специалистов из Молдовы.
+                Мы хотим дать возможность маленьким компаниям и квалифицированным специалистам стать конкурентоспособными на мировом рынке.
+                Члены нашего сообщества гордятся тем что работают с Fortune 500 клиентами из Европы и США.
+            </span>
+        </div>
+    </div>
+    <div class="wrapper contact" itemscope itemprop="mainContentOfPage">
+        <section class="main-block">
+            <div class="container">
+                <div id="map" class="map-style"></div>
+                <div class="input-field">
+                    <form id="subscribe-contact-form" class="hole-form">
+                        <h2 class="heading-contact">Свяжитесь с нами</h2>
+                        <div class="indicates-required">
+                            <span class="asterisk">*</span>indicates required
+                        </div>
+                        <div class="group mc-form-group-NAME">
+                            <input id="name" class="empty-field required" type="text" name="NAME">
+                            <span class="highlight"></span>
+                            <span class="bar"></span>
+                            <label class="label-form" for="name">
+                                Имя
+                                <span class="asterisk">*</span>
+                            </label>
+                            <div class="mc-error"></div>
+                        </div>
+                        <div class="group mc-form-group-PHONE" >
+                            <input id="phone" class="empty-field required" type="text" name="PHONE">
+                            <span class="highlight"></span>
+                            <span class="bar"></span>
+                            <label class="label-form" for="phone">
+                                Телефон
+                                <span class="asterisk">*</span>
+                            </label>
+                            <div class="mc-error"></div>
+                        </div>
+                        <div class="group mc-form-group-EMAIL">
+                            <input id="email" class="empty-field required" type="text" name="EMAIL">
+                            <span class="highlight"></span>
+                            <span class="bar"></span>
+                            <label class="label-form" for="email">
+                                Почта
+                                <span class="asterisk">*</span>
+                            </label>
+                            <div class="mc-error"></div>
+                        </div>
+                        <div class="group mc-form-group-MESSAGE">
+                            <input id="msg" class="empty-field required" type="text" name="MESSAGE">
+                            <span class="highlight"></span>
+                            <span class="bar"></span>
+                            <label class="label-form" for="msg">
+                                Сообщения
+                                <span class="asterisk">*</span>
+                            </label>
+                            <div class="mc-error"></div>
+                        </div>
+                        <div id="mc-general-error"></div>
+                        <input type="submit" value="Отправить" name="Submit" id="submit-form" class="button button-contact">
+                        {#<input type="submit" value="Schedule your tour" name="schedule your tour" id="submit-form" class="button">#}
+                    </form>
+                </div>
+            </div>
+        </section>
+    </div>
+
+{% endblock %}
+
+
+{% block js %}
+    <script src="{{ asset('@js/contact.min.js') }}"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBMl1HPvxC30Mtcbe6gKWZjiccGAYopsQA&callback=myMap" async defer></script>
+{% endblock %}
