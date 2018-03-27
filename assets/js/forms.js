@@ -12,7 +12,7 @@ jQuery(function($) {
     let $genErr = $('#phone-error');
 
     if (isPhone) {
-      let errMsg = "";
+      let errMsg = '';
       $genErr.html(`<p>${errMsg}</p>`);
       $('#submit-form').prop('disabled', false);
     } else {

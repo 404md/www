@@ -9,7 +9,7 @@
     </head>
     <body>
         {# Header #}
-        {% if routeName not in ['/', '/404'] %}
+        {% if routeName not in ['/', '/404', '/ru', '/ro', '/ru/404', '/ro/404'] %}
             {% include 'en/header.twig' %}
             {% include 'en/menu.twig' %}
         {% endif %}
