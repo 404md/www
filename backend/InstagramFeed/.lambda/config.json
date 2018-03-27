@@ -1,9 +1,0 @@
-{
-  "lambdaName": "InstagramFeed404md",
-  "lambda": "index.js",
-  "handler": "handler",
-  "event": "event.js",
-  "role": "arn:aws:iam::722084099005:role/InstagramFeedLambdaPermissions",
-  "instaToken": "4879135806.98b5149.38f35adea8024304bf2adede3a9eb929",
-  "feedItems": 30
-}
