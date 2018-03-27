@@ -108,6 +108,13 @@ strong {
   background:#fff; 
   clear:left;
   width: 600px;
+  .mc-error {
+    p {
+      font-size: 17px;
+      font-weight: 600;
+      color: #fd3916;
+    }
+  }
   .mc-field-group {
     &.input-group {
       ul {
@@ -168,24 +175,7 @@ strong {
 }
 
 /* MailChimp Form Embed Code - Classic - 12/17/2015 v10.7 */
-// #mc_embed_signup{background:#fff; clear:left;width: 600px; }
 
-// #mc_embed_signup .mc-field-group {clear:left; position:relative; width:100%;padding-bottom: 10px; min-height:50px;}
-// #mc_embed_signup .mc-field-group .message-text { padding-top: 5px;}
-
-//#mc_embed_signup .mc-field-group label {display:block; margin-bottom:3px; font-size: 20px}
-
-// #mc_embed_signup .datefield, #mc_embed_signup .phonefield-us{padding:5px 0;}
-//#mc_embed_signup .datefield input, #mc_embed_signup .phonefield-us input{display:inline; width:60px; margin:0 2px; letter-spacing:1px; text-align:center; padding:5px 0 2px 0;}
-
-//#mc_embed_signup .datefield .monthfield input, #mc_embed_signup .datefield .dayfield input{width:50px;font-size: 12px; }
-//#mc_embed_signup .datefield label, #mc_embed_signup .phonefield-us label{width:50px;font-size: 12px;}
-
-//#mc_embed_signup .mc-field-group.input-group ul {margin:0; padding:5px 0; list-style:none;}
-//#mc_embed_signup .mc-field-group.input-group ul li {display:inline-block; padding:3px 0; margin-right:10px;}
-//#mc_embed_signup .mc-field-group.input-group label {display:inline; padding-left: 5px;}
-//#mc_embed_signup .mc-field-group.input-group input {display:inline; width:auto; border:none;}
-//
 #mc_embed_signup div#mce-responses {float:left; top:-1.4em; padding:0em .5em 0em .5em; overflow:hidden; clear: both;}
 #mc_embed_signup div.response {padding-bottom: 1em; font-weight:bold; float:left; top:-1.5em; z-index:1; }
 #mc_embed_signup #mce-error-response {display:none;}

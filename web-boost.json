@@ -209,6 +209,7 @@
         ]
       }
     },
+    
     "/ru": {
       "view": "ru/index.twig",
       "vars": {
@@ -369,7 +370,7 @@
       }
     },
     "/ru/404": {
-      "view": "ru/404.twig",
+      "view": "404.twig",
       "vars": {
         "title": "404 not found | 404Moldova | Coworking Space | Local Community"
       },
@@ -402,6 +403,7 @@
         ]
       }
     },
+
     "/ro": {
       "view": "ro/index.twig",
       "vars": {
@@ -595,5 +597,6 @@
         ]
       }
     }
+  }
   }
 }
