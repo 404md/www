@@ -4,11 +4,16 @@ const AWS = require('aws-sdk');
 const s3 = new AWS.S3({region: 'eu-central-1'});
 const path = require('path');
 
-
 require('dotenv').config({path: path.join(__dirname, 'deploy.env')})
+
+/**
+ * Facebook feed retrieve and optimize content
+ * @param event
+ * @param context
+ */
 exports.handler = (event, context) => {
   getEventsFeed().then(res => {
-    if(res.error) {
+    if (res.error) {
       throw new Error(res.error.message);
     }
     let feed = res.data.map(item => {
@@ -39,18 +44,16 @@ exports.handler = (event, context) => {
 };
 
 function getEventsFeed() {
-  let endpoint = `https://graph.facebook.com/v2.10/404Moldova/events?limit=6&fields=cover,name,start_time,end_time,id&access_token=${process.env.ACCESS_TOKEN}`;
+  let endPoint = `https://graph.facebook.com/v2.10/404Moldova/events?limit=6&fields=cover,name,start_time,end_time,id&access_token=${process.env.ACCESS_TOKEN}`;
 
   return new Promise((resolve, reject) => {
-    https.get(endpoint, res => {
+    https.get(endPoint, res => {
       let rawData = '';
 
       res.on('data', data => {rawData += data;});
       res.on('end', () => {
-        if(res.statusCode !== 200) {
+        if (res.statusCode !== 200) {
         const { error } = JSON.parse(rawData.toString());
-
-        console.log(error.message);
 }
         resolve(JSON.parse(rawData));
       });
@@ -60,7 +63,10 @@ function getEventsFeed() {
     });
   });
 }
-
+/**
+ * Call instagram API
+ * @returns {Promise}
+ */
 function customTimeFormat(string_date) {
   const date = new Date(string_date);
   const KIV_TIMEZONE = new Date(date.toLocaleString('en-US', { timeZone: 'Europe/Chisinau' }));

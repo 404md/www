@@ -94,11 +94,9 @@ function handlePosts(rawPosts) {
   let posts = [];
   let post ='';
 
-  for(let i=0;i<process.env.FEED_ITEMS_TO_SHOW; i++)
-  {
-  for(let prop in rawPosts.items[i])
-  {
-    post=rawPosts.items[i];
+  for (let i=0;i<process.env.FEED_ITEMS_TO_SHOW; i++) {
+    for (let prop in rawPosts.items[i]) {
+      post=rawPosts.items[i];
   }
   posts.push({
      title: post.title,

@@ -6,6 +6,11 @@ const path = require('path');
 
 require('dotenv').config({path: path.join(__dirname, 'deploy.env')})
 
+/**
+ * Instagram feed retrieve and optimize content
+ * @param event
+ * @param context
+ */
 exports.handler = (event, context) => {
 
     getUserFeed().then(res => {
@@ -35,18 +40,21 @@ exports.handler = (event, context) => {
 
   };
 
+  /**
+   * Call instagram API
+   * @returns {Promise}
+   */
   function getUserFeed() {
-    let endpoint = `https://api.instagram.com/v1/users/self/media/recent/?access_token=${process.env.INSTA_TOKEN}&count=20}`;
+    let endPoint = `https://api.instagram.com/v1/users/self/media/recent/?access_token=${process.env.INSTA_TOKEN}&count=20}`;
 
     return new Promise((resolve, reject) => {
-      https.get(endpoint, res => {
+      https.get(endPoint, res => {
         let rawData = '';
         res.on('data', data => {rawData += data;});
         res.on('end', () => {
-          if(res.statusCode !== 200) {
-  const { meta } = JSON.parse(rawData.toString());
-  console.log(meta.error_message);
-}
+          if (res.statusCode !== 200) {
+            const { meta } = JSON.parse(rawData.toString());
+          }
           resolve(JSON.parse(rawData));
         });
 

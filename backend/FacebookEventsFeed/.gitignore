@@ -1,2 +1,0 @@
--e ".env\ndeploy.env\nevent.json\n.lambda"
-node_modules
