@@ -1,0 +1,5 @@
+.env
+deploy.env
+event.json
+.lambda
+node_modules

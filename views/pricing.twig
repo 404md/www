@@ -1,0 +1,220 @@
+{% extends 'layout.twig' %}
+
+{% block css %}
+    <link rel="stylesheet" href="{{ asset('@css/pricing.min.css') }}" />
+{% endblock %}
+
+{% set amenities = [
+    {'name': 'Fast Internet', 'image': '@img/icon-4.svg'},
+    {'name': 'Conference Rooms', 'image': '@img/icon-5.svg'},
+    {'name': 'Printing Supplies', 'image': '@img/icon-6.svg'},
+    {'name': '24 hrs Access', 'image': '@img/icon-10.svg'},
+    {'name': 'Regular Events', 'image': '@img/icon-7.svg'},
+    {'name': 'Strategic Location', 'image': '@img/icon-8.svg'},
+    {'name': 'Onsite Staff', 'image': '@img/icon-1.svg'},
+    {'name': 'Refreshing Water', 'image': '@img/icon-9.svg'},
+    {'name': 'Modern Kitchen', 'image': '@img/icon-3.svg'},
+    {'name': 'Cleaning Services', 'image': '@img/icon-2.svg'}
+]%}
+
+{% set hubs = [
+    {'text': 'Fixed workplace'},
+    {'text': 'Access to conference rooms'},
+    {'text': 'Free access to all trainings and events'},
+    {'text': '24/7 biometric access'},
+    {'text': 'Coffee, tea, fruits and biscuits'},
+    {'text': 'Free exposure to 404 partners'},
+    {'text': 'Free 1 week invitation for 2 friends'},
+    {'text': 'Free use of projectors'},
+    {'text': 'Storage room/servers'}
+]%}
+
+{% set teams = [
+    {'text': 'Fixed workplace'},
+    {'text': 'Access to conference rooms'},
+    {'text': 'Access to all trainings and events'},
+    {'text': '24/7 biometric access'},
+    {'text': 'Coffee, tea, fruits and biscuits'},
+    {'text': 'Free exposure to 404 partners'},
+    {'text': 'Free tickets to Cloud Computing focused conferences'},
+    {'text': 'Free Cloud Computing certification'},
+    {'text': 'Storage room/servers'}
+]%}
+
+{% set days = [
+    {'text': 'Fixed workplace'},
+    {'text': 'Access to conference rooms'},
+    {'text': 'Free acces to 1 training or event'},
+    {'text': '24/7 biometric access'},
+    {'text': 'Coffee, tea, fruits and biscuits'},
+    {'text': 'Free 1 week invitation for 2 friends'}
+]%}
+
+{% set weekdays = [
+    {'text': 'Fixed workplace'},
+    {'text': 'Access to conference rooms'},
+    {'text': 'Access to all trainings and events'},
+    {'text': 'Biometric access from 9:00 - 18:00'},
+    {'text': 'Coffee, tea, fruits and biscuits'}
+]%}
+
+{% block body %}
+    <div class="container new-page">
+        <div class="pages">
+            <span class="text-page">
+                404Moldova is a coworking space for IT businesses and IT people from Moldova. We want to empower local
+                community of small companies and skilled individuals to be competitive globally. Become part of our
+                local community of IT professionals. Our members contribute to the global platform of cloud computing,
+                working with Fortune 500 companies from Europe and USA.
+            </span>
+        </div>
+    </div>
+    <div class="wrapper pricing" itemscope itemprop="mainContentOfPage">
+        <section class="main-block">
+            <div class="container">
+                <div class="offers">
+                    <div class="plans">
+                        <div class="plan">
+                            <img src="{{ asset ('@img/plan1.jpg') }}" alt="Test Drive" />
+                            <div class="text-plan">
+                                <div class="text-p">Hub Resident</div>
+                                <div class="btn-plan">
+                                    <a itemprop="url" href="https://orders.fest.md/ro/biz/404-moldova" class="button" target="_blank">Book Your Space</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="plans-points">
+                            <div class="text-p">2500 MDL</div>
+                            <ul>
+                            {% for hub in hubs %}
+                                <li><span>{{ hub.text }}</span></li>
+                            {% endfor %}
+                            </ul>
+                        </div>
+                        <div class="btn-plan-contact">
+                            <a itemprop="url" href="/contact/" class="button">Contact Us</a>
+                        </div>
+                    </div>
+                    <div class="plans">
+                        <div class="plan">
+                            <img src="{{ asset ('@img/plan2.jpg') }}" alt="Free Plan" />
+                            <div class="text-plan">
+                                <div class="text-p">Teams</div>
+                                <div class="btn-plan">
+                                    <a itemprop="url" href="https://orders.fest.md/ro/biz/404-moldova" class="button" target="_blank">Book Your Space</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="plans-points">
+                            <div class="text-p">
+                                <div class="number-input">
+                                    <button class="change-quantity" data-event="minus"></button>
+                                    <input class="quantity" min="1" name="quantity" value="2" type="number">
+                                    <button class="change-quantity plus" data-event="plus"></button>
+                                </div>
+                                <div class="price">
+                                    <span id="team-price-value">4750</span><span> MDL</span>
+                                </div>
+                            </div>
+                            <ul>
+                            {% for team in teams %}
+                                <li><span>{{ team.text }}</span></li>
+                            {% endfor %}
+                            </ul>
+                            <div class="notes">
+                                <div class="glay-line"></div>
+                                <p class="gray-text">Free Membership</p>
+                                <p class="gray-text">The most important perk of our platform is free membership. If a member is selected to work on a partner’s project(s), the partner pays membership fees for the member.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="btn-plan-contact">
+                            <a itemprop="url" href="/contact/" class="button">Contact Us</a>
+                        </div>
+                    </div>
+                    <div class="plans">
+                        <div class="plan">
+                            <img src="{{ asset ('@img/plan3.jpg') }}" alt="Individual" />
+                            <div class="text-plan">
+                                <div class="text-p">Day Pass</div>
+                                <div class="btn-plan">
+                                    <a itemprop="url" href="https://orders.fest.md/ro/biz/404-moldova" class="button" target="_blank">Book Your Space</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="plans-points">
+                            <div class="text-p">150 MDL</div>
+                            <ul>
+                            {% for day in days %}
+                                <li><span>{{ day.text }}</span></li>
+                            {% endfor %}
+                            </ul>
+                        </div>
+                        <div class="btn-plan-contact">
+                            <a itemprop="url" href="/contact/" class="button">Contact Us</a>
+                        </div>
+                    </div>
+                    <div class="plans">
+                        <div class="plan">
+                            <img src="{{ asset ('@img/plan4.jpg') }}" alt="Business" />
+                            <div class="text-plan">
+                                <div class="text-p">Weekdays</div>
+                                <div class="btn-plan">
+                                    <a itemprop="url" href="https://orders.fest.md/ro/biz/404-moldova" class="button" target="_blank">Book Your Space</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="plans-points">
+                            <div class="text-p">550 MDL/week</div>
+                            <ul>
+                            {% for weekday in weekdays %}
+                                <li><span>{{ weekday.text }}</span></li>
+                            {% endfor %}
+                            </ul>
+                        </div>
+                        <div class="btn-plan-contact">
+                            <a itemprop="url" href="/contact/" class="button">Contact Us</a>
+                        </div>
+                    </div>
+                </div>
+                {# @Irina do we need it? #}
+                {#<div class="md-modal md-effect-1" id="modal-1">#}
+                    {#<div class="md-content">#}
+                        {#<div class="content">#}
+                            {#<i class="mdi mdi-close md-close"></i>#}
+                            {#<iframe src="/form1/" frameborder="0"></iframe>#}
+                        {#</div>#}
+                    {#</div>#}
+                {#</div>#}
+                {#<div class="md-overlay1"></div>#}
+                {#<div class="popup-open-1 md-modal md-effect-1" id="modal">#}
+                    {#<div class="md-content">#}
+                        {#<div class="content">#}
+                            {#<i class="mdi mdi-close md-close"></i>#}
+                            {#<iframe src="/form2/" frameborder="0"></iframe>#}
+                        {#</div>#}
+                    {#</div>#}
+                {#</div>#}
+                {#<div class="md-overlay"></div>#}
+            </div>
+            <div class="container new-page">
+                <div class="pages coworking">
+                    <h1 class="page-name">Amenities</h1>
+                    <p class="text-p">All pricing plans include following amenities: </p>
+                </div>
+                <div class="amenities-block display-flex">
+                    {% for amenity in amenities %}
+                        <div class="bloks-icons">
+                            <img src="{{ asset( amenity.image ) }}" alt="{{ amenity.name }}">
+                            <div class="icons-text">{{ amenity.name }}</div>
+                        </div>
+                    {% endfor %}
+                </div>
+            </div>
+        </section>
+    </div>
+{% endblock %}
+
+{% block js %}
+    <script src="{{ asset('@js/pricing.min.js') }}"></script>
+{% endblock %}

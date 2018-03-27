@@ -1,0 +1,7 @@
+{
+  "lambdaName": "InstagramFeed404md",
+  "lambda": "index.js",
+  "handler": "handler",
+  "event": "event.js",
+
+}
