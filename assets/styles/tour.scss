@@ -50,14 +50,11 @@
 .gray-text {
   color: #95989A;
   font-size: 18px;
+  padding-left: 5px;
 }
 
 ul {
   left: 100px;
-}
-
-strong {
-   padding-left: 5px;
 }
 
 /* Gallery */
@@ -100,6 +97,9 @@ strong {
       margin-bottom: 0;
     }
   }
+  .mc-error {
+    padding-left: 5px;
+  }
 }
 
 /*MailChimp IN PROCESS*/
@@ -128,12 +128,13 @@ strong {
         }
       }
       label {
-        display:inline; 
+        display:inline;
         padding-left: 5px;
+        font-size: 18px;
       }
       input {
-        display:inline; 
-        width:auto; 
+        display:inline;
+        width:auto;
         border:none;
       }
     }
