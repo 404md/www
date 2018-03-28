@@ -15,11 +15,11 @@ jQuery(function($) {
     if (isPhone) {
       let errMsg = '';
       $genErr.html(`<p>${errMsg}</p>`);
-      $('#submit-form').prop('disabled', false);
+      $('#submit-form').removeClass('disabled');
     } else {
       let errMsg = 'Unacceptable value';
       $genErr.html(`<p>${errMsg}</p>`);
-      $('#submit-form').prop('disabled', true);
+      $('#submit-form').addClass('disabled');
     }
   });
 
