@@ -212,7 +212,7 @@
       "view": "ru/pricing.twig",
       "vars": {
         "page": "Цены",
-        "title": "Цены | 404Moldova | Коворкинг | Местное Сообщество",
+        "title": "Цены | 404Moldova | Коворкинг | Местное Cообщество",
         "imagePath": "img/coworking-bg.jpg"
       },
       "assets": {
