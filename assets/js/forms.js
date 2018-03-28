@@ -4,6 +4,7 @@ jQuery(function($) {
   const $formInput = $('input');
   const $tourForm = $('#subscribe-tour-form');
   const $contactForm = $('#subscribe-contact-form');
+  const route = window.location.pathname;
 
   $('#mce-PHONE').on('input', function() {
     let $input = $(this);
@@ -33,10 +34,23 @@ jQuery(function($) {
       onFail: function (errMsg) {
         let $genErr = $('#mc-general-error');
 
-        $genErr.html(`<div class="error-mc">${errMsg}</div>`);
+        if (route === '/ru/contact/'){
+          translation(errMsg, 'ru');
+        } else if (route === '/ro/contact/'){
+          translation(errMsg, 'ro');
+        } else {
+          $genErr.html(`<div class="error-mc">${errMsg}</div>`);
+        }
       },
       onOk: function(okMsg) {
-        window.location = '/thank-you'
+
+        if (route === '/contact/'){
+          window.location = '/thank-you'
+        } else if (route === '/ru/contact/'){
+          window.location = '/ru/thank-you'
+        } else if (route === '/ro/contact/'){
+          window.location = '/ro/thank-you'
+        }
       }
     });
   }
@@ -54,24 +68,23 @@ jQuery(function($) {
         let lnId = $( "input:checked" ).attr("id");
 
         if (lnId === 'romBtn') {
-          errMsg = 'Nu se poate asa';
+          translation(errMsg, 'ro');
+        } else if (lnId === 'ruBtn') {
+          translation(errMsg, 'ru');
+        } else {
+          $genErr.html(`<div class="error-mc">${errMsg}</div>`);
         }
-        if (lnId === 'ruBtn') {
-          errMsg = 'Что-то пошло не так, какая жалость';
-        }
-
-        $genErr.html(`<div class="error-mc">${errMsg}</div>`);
       },
       onOk: function(okMsg) {
         let lnId = $( "input:checked" ).attr("id");
         if (lnId === 'engBtn') {
-          window.location = '/thank-you'
+          window.location = 'en/thank-you'
         }
-        if (lnId === 'romBtn') {
-          window.location = '/thank-you'
+        else if (lnId === 'romBtn') {
+          window.location = 'ro/thank-you'
         }
-        if (lnId === 'ruBtn') {
-          window.location = '/thank-you'
+        else if (lnId === 'ruBtn') {
+          window.location = 'ru/thank-you'
         }
       }
     });
@@ -91,3 +104,16 @@ jQuery(function($) {
     console.log('mc:input:ok event fired');
   });
 });
+
+function translation(errMsg,lng) {
+  let tr = `https://translate.googleapis.com/translate_a/single?client=gtx&sl=en&tl=${lng}&dt=t&q=${encodeURI(errMsg)}`;
+
+    fetch(`${tr}`)
+    .then(function(response) {
+      return response.json();
+    })
+    .then(function(myJson) {
+      errMsg = myJson[0][0][0];
+      $genErr.html(`<div class="error-mc">${errMsg}</div>`);
+    });
+}

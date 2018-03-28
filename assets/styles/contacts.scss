@@ -1,19 +1,7 @@
-.error-m {
-  position: relative;
-  padding-bottom: 5px;
-  .group {
-    padding-bottom: 25px;
-  }
-  label {
-    &.error {
-      position: absolute;
-      font-size: 15px;
-      color:red;
-      left:0;
-    }
-  }
+.mc-error {
+  padding-left: 5px;
 }
-  
+
 .status-message {
   &.success {
     padding: 10px;
