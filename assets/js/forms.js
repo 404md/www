@@ -6,7 +6,6 @@ jQuery(function($) {
   const $contactForm = $('#subscribe-contact-form');
   const route = window.location.pathname;
 
-
   $('#mce-PHONE').on('input', function() {
     let $input = $(this);
     let regExp = /^[\+]?[(]?[0-9]{3}[)]?[0-9]*$/;
