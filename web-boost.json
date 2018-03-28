@@ -196,7 +196,7 @@
     "/ru": {
       "view": "ru/index.twig",
       "vars": {
-        "title": "404Moldova | Coworking Space | Local Community"
+        "title": "404Moldova | Коворкинг | Местное сообщество"
       },
       "assets": {
         "js/index.min.js": [
@@ -211,8 +211,8 @@
     "/ru/pricing": {
       "view": "ru/pricing.twig",
       "vars": {
-        "page": "Pricing",
-        "title": "Pricing | 404Moldova | Coworking Space | Local Community",
+        "page": "Цены",
+        "title": "Цены | 404Moldova | Коворкинг | Местное Сообщество",
         "imagePath": "img/coworking-bg.jpg"
       },
       "assets": {
@@ -230,8 +230,8 @@
     "/ru/events": {
       "view": "ru/events.twig",
       "vars": {
-        "page": "Events",
-        "title": "Events | 404Moldova | Coworking Space | Local Community",
+        "page": "События",
+        "title": "События | 404Moldova | Коворкинг | Местное Сообщество",
         "imagePath": "img/events.jpg"
       },
       "assets": {
@@ -248,8 +248,8 @@
     "/ru/members": {
       "view": "ru/members.twig",
       "vars": {
-        "page": "Members",
-        "title": "Members | 404Moldova | Coworking Space | Local Community",
+        "page": "Участники",
+        "title": "Участники | 404Moldova | Коворкинг | Местное Сообщество",
         "imagePath": "img/members.jpg"
       },
       "assets": {
@@ -266,7 +266,7 @@
     "/ru/media": {
       "view": "ru/media.twig",
       "vars": {
-        "title": "Media &amp; Press | 404Moldova | Coworking Space | Local Community"
+        "title": "Пресса | 404Moldova | Коворкинг | Местное Сообщество"
       },
       "assets": {
         "css/media.min.css": [
@@ -283,7 +283,7 @@
       "view": "ru/gallery.twig",
       "vars": {
         "page": "Gallery",
-        "title": "Photo Gallery | 404Moldova | Coworking Space | Local Community",
+        "title": "Галерея | 404Moldova | Коворкинг | Местное Сообщество",
         "imagePath": "img/gallery.jpg"
       },
       "assets": {
@@ -299,8 +299,8 @@
     "/ru/contact": {
       "view": "ru/contact.twig",
       "vars": {
-        "page": "Contact us",
-        "title": "Contact | 404Moldova | Coworking Space | Local Community",
+        "page": "Свяжитесь с нами",
+        "title": "Свяжитесь с нами | 404Moldova | Коворкинг | Местное Сообщество",
         "imagePath": "img/contacts.jpg"
       },
       "assets": {
@@ -318,8 +318,8 @@
     "/ru/tour": {
       "view": "ru/tour.twig",
       "vars": {
-        "page": "Book a tour",
-        "title": "Book a Tour | 404Moldova | Coworking Space | Local Community",
+        "page": "Забронируйте Обход",
+        "title": "Забронируйте Обход | 404Moldova | Коворкинг | Местное Сообщество",
         "imagePath": "img/book.jpg"
       },
       "assets": {
@@ -337,8 +337,8 @@
     "/ru/thank-you": {
       "view": "ru/thank-you.twig",
       "vars": {
-        "page": "Thank you!",
-        "title": "Book a Tour | 404Moldova | Coworking Space | Local Community",
+        "page": "Спасибо!",
+        "title": "Спасибо! | 404Moldova | Коворкинг | Местное Сообщество",
         "imagePath": "img/book.jpg"
       },
       "assets": {
@@ -355,8 +355,8 @@
     "/ru/terms": {
       "view": "ru/terms.twig",
       "vars": {
-        "page": "Terms of use",
-        "title": "Terms of Use | 404Moldova | Coworking Space | Local Community",
+        "page": "Условия использования",
+        "title": "Условия Использования | 404Moldova | Коворкинг | Местное Сообщество",
         "imagePath": "img/terms.jpg"
       },
       "assets": {
