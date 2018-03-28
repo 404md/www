@@ -4,6 +4,8 @@ jQuery(function($) {
   const $formInput = $('input');
   const $tourForm = $('#subscribe-tour-form');
   const $contactForm = $('#subscribe-contact-form');
+  const route = window.location.pathname;
+
 
   $('#mce-PHONE').on('input', function() {
     let $input = $(this);
@@ -32,7 +34,6 @@ jQuery(function($) {
       submitSelector: '#submit-form',
       onFail: function (errMsg) {
         let $genErr = $('#mc-general-error');
-        let route = window.location.pathname;
 
         if (route === '/ru/contact/'){
           translation(errMsg, 'ru');
@@ -43,7 +44,6 @@ jQuery(function($) {
         }
       },
       onOk: function(okMsg) {
-        let route = window.location.pathname;
 
         if (route === '/contact/'){
           window.location = '/thank-you'
@@ -107,8 +107,7 @@ jQuery(function($) {
 });
 
 function translation(errMsg,lng) {
-  let tr = 'https://translate.googleapis.com/translate_a/single?client=gtx&sl=en'
-    + '&tl=' + `${lng}` + '&dt=t&q=' + encodeURI(errMsg);
+  let tr = `https://translate.googleapis.com/translate_a/single?client=gtx&sl=en&tl=${lng}&dt=t&q=${encodeURI(errMsg)}`;
 
     fetch(`${tr}`)
     .then(function(response) {
