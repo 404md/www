@@ -32,11 +32,46 @@ jQuery(function($) {
       submitSelector: '#submit-form',
       onFail: function (errMsg) {
         let $genErr = $('#mc-general-error');
+        let route = window.location.pathname;
 
+        if (route === '/ru/contact/'){
+          let ruTr = "https://translate.googleapis.com/translate_a/single?client=gtx&sl=en"
+            + "&tl=ru" + "&dt=t&q=" + encodeURI(errMsg);
+
+          let mesg = fetch(`${ruTr}`)
+            .then(function(response) {
+              return response.json();
+            })
+            .then(function(myJson) {
+              errMsg = myJson[0][0][0];
+              $genErr.html(`<div class="error-mc">${errMsg}</div>`);
+            });
+        } else if (route === '/ro/contact/'){
+          let roTr = "https://translate.googleapis.com/translate_a/single?client=gtx&sl=en"
+            + "&tl=ro" + "&dt=t&q=" + encodeURI(errMsg);
+
+          let mesg = fetch(`${roTr}`)
+            .then(function(response) {
+              return response.json();
+            })
+            .then(function(myJson) {
+              errMsg = myJson[0][0][0];
+              $genErr.html(`<div class="error-mc">${errMsg}</div>`);
+            });
+        }
         $genErr.html(`<div class="error-mc">${errMsg}</div>`);
       },
       onOk: function(okMsg) {
-        window.location = '/thank-you'
+
+        let route = window.location.pathname;
+
+        if (route === '/contact/'){
+          window.location = '/thank-you'
+        } else if (route === '/ru/contact/'){
+          window.location = '/ru/thank-you'
+        } else if (route === '/ro/contact/'){
+          window.location = '/ro/thank-you'
+        }
       }
     });
   }
@@ -54,10 +89,30 @@ jQuery(function($) {
         let lnId = $( "input:checked" ).attr("id");
 
         if (lnId === 'romBtn') {
-          errMsg = 'Nu se poate asa';
+          let roTr = "https://translate.googleapis.com/translate_a/single?client=gtx&sl=en"
+            + "&tl=ro" + "&dt=t&q=" + encodeURI(errMsg);
+
+          let mesg = fetch(`${roTr}`)
+            .then(function(response) {
+              return response.json();
+            })
+            .then(function(myJson) {
+              errMsg = myJson[0][0][0];
+              $genErr.html(`<div class="error-mc">${errMsg}</div>`);
+            });
         }
-        if (lnId === 'ruBtn') {
-          errMsg = 'Что-то пошло не так, какая жалость';
+        else if (lnId === 'ruBtn') {
+          let ruTr = "https://translate.googleapis.com/translate_a/single?client=gtx&sl=en"
+            + "&tl=ru" + "&dt=t&q=" + encodeURI(errMsg);
+
+          let mesg = fetch(`${ruTr}`)
+            .then(function(response) {
+              return response.json();
+            })
+            .then(function(myJson) {
+              errMsg = myJson[0][0][0];
+              $genErr.html(`<div class="error-mc">${errMsg}</div>`);
+            });
         }
 
         $genErr.html(`<div class="error-mc">${errMsg}</div>`);
@@ -65,13 +120,13 @@ jQuery(function($) {
       onOk: function(okMsg) {
         let lnId = $( "input:checked" ).attr("id");
         if (lnId === 'engBtn') {
-          window.location = '/thank-you'
+          window.location = 'en/thank-you'
         }
-        if (lnId === 'romBtn') {
-          window.location = '/thank-you'
+        else if (lnId === 'romBtn') {
+          window.location = 'ro/thank-you'
         }
-        if (lnId === 'ruBtn') {
-          window.location = '/thank-you'
+        else if (lnId === 'ruBtn') {
+          window.location = 'ru/thank-you'
         }
       }
     });
