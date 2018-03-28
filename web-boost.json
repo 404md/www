@@ -176,7 +176,7 @@
       }
     },
     "/404": {
-      "view": "en/404.twig",
+      "view": "404.twig",
       "vars": {
         "title": "404 not found | 404Moldova | Coworking Space | Local Community"
       },
@@ -564,7 +564,7 @@
       }
     },
     "/ro/404": {
-      "view": "ro/404.twig",
+      "view": "404.twig",
       "vars": {
         "title": "404 pagina nu a fost găsită | 404Moldova | Spațiu de Coworking | Comunitate Locală"
       },
@@ -597,6 +597,5 @@
         ]
       }
     }
-  }
   }
 }
