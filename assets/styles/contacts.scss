@@ -59,12 +59,19 @@
           background-size: cover;
           float:left;
           #subscribe-contact-form {
-              width: 80%;
-              .indicates-required {
-                text-align: right;
-                font-size: 11px;
-                padding-bottom: 20px;
+            width: 80%;
+            .indicates-required {
+              text-align: right;
+              font-size: 11px;
+              padding-bottom: 20px;
+            }
+            .mc-error {
+              p {
+                font-size: 17px;
+                font-weight: 600;
+                color: #fd3916;
               }
+            }
           }
 
           &:before {

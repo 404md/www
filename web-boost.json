@@ -175,23 +175,6 @@
         ]
       }
     },
-    "/404": {
-      "view": "404.twig",
-      "vars": {
-        "title": "404 not found | 404Moldova | Coworking Space | Local Community"
-      },
-      "assets": {
-        "css/404.min.css": [
-          "$.common-scss",
-          "styles/responsive.scss"
-        ],
-        "js/404.min.js": [
-          "$.common-js",
-          "js/libs/bodymovin.min.js",
-          "js/animations.js"
-        ]
-      }
-    },
     "/terms": {
       "view": "en/terms.twig",
       "vars": {
@@ -366,23 +349,6 @@
         ],
         "js/thank-you.min.js": [
           "$.common-js"
-        ]
-      }
-    },
-    "/ru/404": {
-      "view": "404.twig",
-      "vars": {
-        "title": "404 not found | 404Moldova | Coworking Space | Local Community"
-      },
-      "assets": {
-        "css/404.min.css": [
-          "$.common-scss",
-          "styles/responsive.scss"
-        ],
-        "js/404.min.js": [
-          "$.common-js",
-          "js/libs/bodymovin.min.js",
-          "js/animations.js"
         ]
       }
     },
@@ -563,23 +529,6 @@
         ]
       }
     },
-    "/ro/404": {
-      "view": "404.twig",
-      "vars": {
-        "title": "404 pagina nu a fost găsită | 404Moldova | Spațiu de Coworking | Comunitate Locală"
-      },
-      "assets": {
-        "css/404.min.css": [
-          "$.common-scss",
-          "styles/responsive.scss"
-        ],
-        "js/404.min.js": [
-          "$.common-js",
-          "js/libs/bodymovin.min.js",
-          "js/animations.js"
-        ]
-      }
-    },
     "/ro/terms": {
       "view": "ro/terms.twig",
       "vars": {
@@ -594,6 +543,23 @@
         ],
         "js/terms.min.js": [
           "$.common-js"
+        ]
+      }
+    },
+    "/404": {
+      "view": "404.twig",
+      "vars": {
+        "title": "404 not found | 404Moldova | Coworking Space | Local Community"
+      },
+      "assets": {
+        "css/404.min.css": [
+          "$.common-scss",
+          "styles/responsive.scss"
+        ],
+        "js/404.min.js": [
+          "$.common-js",
+          "js/libs/bodymovin.min.js",
+          "js/animations.js"
         ]
       }
     }
