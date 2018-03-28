@@ -1,12 +1,4 @@
 {
-  "EventSourceMappings": [
-    {
-      "EventSourceArn": "your event source arn",
-      "StartingPosition": "LATEST",
-      "BatchSize": 100,
-      "Enabled": true
-    }
-  ],
   "ScheduleEvents": [
     {
       "ScheduleName": "node-lambda-test-schedule",
@@ -18,19 +10,5 @@
           "key2": "value"
         }
     }
-  ],
-  "S3Events": [{
-    "Bucket": "BUCKET_NAME",
-    "Events": [
-      "s3:ObjectCreated:*"
-    ],
-    "Filter": {
-      "Key": {
-        "FilterRules": [{
-          "Name": "prefix",
-          "Value": "STRING_VALUE"
-        }]
-      }
-    }
-  }]
+  ]
 }

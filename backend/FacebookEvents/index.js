@@ -57,8 +57,8 @@ function getEventsFeed() {
       res.on('data', data => {rawData += data;});
       res.on('end', () => {
         if (res.statusCode !== 200) {
-        const { error } = JSON.parse(rawData.toString());
-}
+          const { error } = JSON.parse(rawData.toString());
+        }
         resolve(JSON.parse(rawData));
       });
     }).on('error', err => {

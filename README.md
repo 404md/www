@@ -10,19 +10,18 @@ This repository stores the code and data for [www.404.md][1]
 
 Checks user input data and sends email if there is no invalid data.
 
-* Protected by Google reCaptcha;
 * Sends emails through MailChimp
 
 ### Instagram feed
 
-Fetches data from Instagram feed and stores them to domain related bucket.
+Fetches data from Instagram feed and stores them as json in static/json folder
 
 * Used official Instagram API (api.instagram.com/v1);
 * Fetch latest 20 posts.
 
 ### Facebook Events
 
-Fetches Facebook events list and stores them as json.
+Fetches Facebook events list and stores them as json in static/json folder
 
 ## Deployment
 
@@ -31,20 +30,12 @@ Fetches Facebook events list and stores them as json.
 - Amazon Web Services (AWS) [account][2]
 - AWS Command Line Interface (CLI) [configured][3]
 
-### Prepare
-
-Make sure you have all requirements installed
-
-```bash
-npm install
-```
-
 ### Build & deploy
 
 Run the deploy command:
 
 ```bash
-bash bin/deploy.sh <env> <region> <aws-profile>
+bash bin/deploy.sh <env> <aws-profile>
 ```
 
 Available `dev` and `master` environments for deploy.

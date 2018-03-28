@@ -7,7 +7,6 @@ const https = require('https');
 const dateFormat = require('dateformat');
 const path = require('path');
 const config = require('./.config.json');
-
 const s3 = new AWS.S3();
 
 /**
@@ -25,7 +24,7 @@ exports.handler = (event, context) => {
 
     let posts = handlePosts(rawPosts);
     let images = posts.map(item => item.image.replace(/^.*?(?=[0-9]+\*)/,""));
-    
+
     Promise.all(images.map(image => optimizeImage(image))).then((buffers) => {
       return Promise.all(buffers.map((imgBuffer, index) =>
         s3.upload({
