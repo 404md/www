@@ -65,13 +65,13 @@ jQuery(function($) {
       onOk: function(okMsg) {
         let lnId = $( "input:checked" ).attr("id");
         if (lnId === 'engBtn') {
-          window.location = '/thank-you'
+          window.location = '/en/thank-you'
         }
         if (lnId === 'romBtn') {
-          window.location = '/thank-you'
+          window.location = '/ro/thank-you'
         }
         if (lnId === 'ruBtn') {
-          window.location = '/thank-you'
+          window.location = '/ru/thank-you'
         }
       }
     });
