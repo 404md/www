@@ -14,19 +14,19 @@ Checks user input data and sends email if there is no invalid data.
 
 ### Instagram feed
 
-Fetches data from Instagram feed and stores them as json in static/json folder
+Fetches data from Instagram feed and stores them as json in `json/instagram-feed.json`
 
 * Used official Instagram API (api.instagram.com/v1);
 * Fetch latest 20 posts.
 
 ### Facebook Events
 
-Fetches Facebook events list and stores them as json in static/json folder
+Fetches Facebook events list and stores them as json in `json/facebook-feed.json`
 
 ### Medium Feed
 
-Fetches data from MediumFeed and stores them as json in static/json folder also
-gets images and put them in static/img/medium folder
+Fetches data from MediumFeed and stores them as json in `json/medium-feed.json` gets images and puts 
+them in `img/medium` folder
 
 ## Deployment
 
@@ -42,6 +42,7 @@ Run the deploy command:
 ```bash
 bash bin/deploy.sh <env> <aws-profile>
 ```
+> Ex. bash bin/deploy.sh dev saml
 
 Available `dev` and `master` environments for deploy.
 
