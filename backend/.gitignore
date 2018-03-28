@@ -1,3 +1,5 @@
 **/.env
 **/deploy.env
 **/.lambda
+**/event.json
+**/.config.json

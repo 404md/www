@@ -6,8 +6,7 @@ const Jimp = require('jimp');
 const https = require('https');
 const dateFormat = require('dateformat');
 const path = require('path');
-
-require('dotenv').config({path: path.join(__dirname, 'deploy.env')})
+const config = require('./.config.json');
 
 const s3 = new AWS.S3();
 
@@ -26,11 +25,11 @@ exports.handler = (event, context) => {
 
     let posts = handlePosts(rawPosts);
     let images = posts.map(item => item.image.replace(/^.*?(?=[0-9]+\*)/,""));
-
+    
     Promise.all(images.map(image => optimizeImage(image))).then((buffers) => {
       return Promise.all(buffers.map((imgBuffer, index) =>
         s3.upload({
-          Bucket: process.env.DEST_BUCKET,
+          Bucket: config.destBucket,
           Key: `images/medium/${images[index]}`,
           Body: imgBuffer,
           CacheControl: 'max-age=604800'
@@ -38,7 +37,7 @@ exports.handler = (event, context) => {
       ));
     }).then(() =>
       s3.putObject({
-        Bucket: process.env.DEST_BUCKET,
+        Bucket: config.destBucket,
         Key: 'json/medium-feed.json',
         Body: JSON.stringify(posts),
         CacheControl: 'max-age=604800'
@@ -60,7 +59,7 @@ exports.handler = (event, context) => {
  */
 function getImageUrl(imageName) {
    const mediumImageCdn = 'https://cdn-images-1.medium.com';
-   return url.resolve(mediumImageCdn,`max/${process.env.MAX_IMAGE_WIDTH}/${imageName}`);
+   return url.resolve(mediumImageCdn,`max/${config.maxImageWidth}/${imageName}`);
 }
 
 /**
@@ -92,17 +91,18 @@ function optimizeImage(imageName) {
  */
 function handlePosts(rawPosts) {
   let posts = [];
-  let post ='';
-
-  for (let i=0;i<process.env.FEED_ITEMS_TO_SHOW; i++) {
+  let post = '';
+  for (let i = 0; i < config.feedItemsToShow; i++) {
     for (let prop in rawPosts.items[i]) {
-      post=rawPosts.items[i];
+      post = rawPosts.items[i];
   }
+
   posts.push({
      title: post.title,
      url: post.link,
      description: post.description,
      image: post.thumbnail,
+     localimage: path.join('static', 'img', 'medium', post.thumbnail.replace(/^.*?(?=[0-9]+\*)/,"")),
      publishedAt: dateFormat(post.pubDate, 'mmm dd, yyyy')
    });
  }

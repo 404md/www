@@ -1,10 +1,9 @@
 const fs = require('fs');
 const https = require('https');
 const AWS = require('aws-sdk');
-const s3 = new AWS.S3({region: 'eu-central-1'});
+const s3 = new AWS.S3();
 const path = require('path');
-
-require('dotenv').config({path: path.join(__dirname, 'deploy.env')})
+const config = require('./.config.json');
 
 /**
  * Instagram feed retrieve and optimize content
@@ -45,7 +44,7 @@ exports.handler = (event, context) => {
    * @returns {Promise}
    */
   function getUserFeed() {
-    let endPoint = `https://api.instagram.com/v1/users/self/media/recent/?access_token=${process.env.INSTA_TOKEN}&count=20}`;
+    let endPoint = `https://api.instagram.com/v1/users/self/media/recent/?access_token=${config.instaToken}&count=20}`;
 
     return new Promise((resolve, reject) => {
       https.get(endPoint, res => {

@@ -5,5 +5,8 @@
   "devDependencies": {
     "aws-sdk": "^2.133.0"
   },
-  "dependencies": {}
+  "dependencies": {
+    "dateformat": "^3.0.2",
+    "jimp": "^0.2.28"
+  }
 }

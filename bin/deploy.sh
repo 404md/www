@@ -1,8 +1,8 @@
 #!/usr/bin/env bash
 
 if [[ -z $(which aws) ]]; then
-	echo 'aws cli must be installed on your PC'
-	exit 1
+  echo 'aws cli must be installed on your PC'
+  exit 1
 fi
 
 MY_DIR=$(cd -P -- "$(dirname -- "$0")" && pwd -P)
