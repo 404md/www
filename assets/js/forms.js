@@ -35,9 +35,9 @@ jQuery(function($) {
         let route = window.location.pathname;
 
         if (route === '/ru/contact/'){
-          ruTranslation(errMsg);
+          translation(errMsg, 'ru');
         } else if (route === '/ro/contact/'){
-          roTranslation(errMsg);
+          translation(errMsg, 'ro');
         } else {
           $genErr.html(`<div class="error-mc">${errMsg}</div>`);
         }
@@ -69,9 +69,9 @@ jQuery(function($) {
         let lnId = $( "input:checked" ).attr("id");
 
         if (lnId === 'romBtn') {
-          roTranslation(errMsg);
+          translation(errMsg, 'ro');
         } else if (lnId === 'ruBtn') {
-          ruTranslation(errMsg);
+          translation(errMsg, 'ru');
         } else {
           $genErr.html(`<div class="error-mc">${errMsg}</div>`);
         }
@@ -106,11 +106,11 @@ jQuery(function($) {
   });
 });
 
-function ruTranslation(errMsg) {
-  let ruTr = "https://translate.googleapis.com/translate_a/single?client=gtx&sl=en"
-    + "&tl=ru" + "&dt=t&q=" + encodeURI(errMsg);
+function translation(errMsg,lng) {
+  let tr = 'https://translate.googleapis.com/translate_a/single?client=gtx&sl=en'
+    + '&tl=' + `${lng}` + '&dt=t&q=' + encodeURI(errMsg);
 
-    fetch(`${ruTr}`)
+    fetch(`${tr}`)
     .then(function(response) {
       return response.json();
     })
@@ -118,18 +118,4 @@ function ruTranslation(errMsg) {
       errMsg = myJson[0][0][0];
       $genErr.html(`<div class="error-mc">${errMsg}</div>`);
     });
-}
-
-function roTranslation(errMsg) {
-  let roTr = "https://translate.googleapis.com/translate_a/single?client=gtx&sl=en"
-    + "&tl=ro" + "&dt=t&q=" + encodeURI(errMsg);
-
-  fetch(`${roTr}`)
-  .then(function(response) {
-    return response.json();
-  })
-  .then(function(myJson) {
-    errMsg = myJson[0][0][0];
-    $genErr.html(`<div class="error-mc">${errMsg}</div>`);
-  });
 }
