@@ -1,0 +1,12 @@
+{
+  "name": "medium-feed-404md",
+  "version": "0.0.1",
+  "private": true,
+  "devDependencies": {
+    "aws-sdk": "^2.133.0"
+  },
+  "dependencies": {
+    "dateformat": "^3.0.2",
+    "jimp": "^0.2.28"
+  }
+}
