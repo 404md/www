@@ -134,7 +134,7 @@ function apiRequest() {
       res.on('data', data => {rawData += data;});
       res.on('end', () => {
         // Remove anti JSON hijacking prefix
-      resolve(JSON.parse(rawData.replace('])}while(1);</x>', '')));
+        resolve(JSON.parse(rawData.replace('])}while(1);</x>', '')));
       });
     }).on('error', err => {
       reject(err);

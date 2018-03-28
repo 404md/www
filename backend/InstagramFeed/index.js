@@ -11,7 +11,6 @@ const config = require('./.config.json');
  * @param context
  */
 exports.handler = (event, context) => {
-
     getUserFeed().then(res => {
       let feed = res.data.map(item => {
         return {
@@ -36,7 +35,6 @@ exports.handler = (event, context) => {
     }).catch(err => {
       context.fail(err);
     });
-
   };
 
   /**

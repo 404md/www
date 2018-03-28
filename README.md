@@ -23,6 +23,11 @@ Fetches data from Instagram feed and stores them as json in static/json folder
 
 Fetches Facebook events list and stores them as json in static/json folder
 
+### Medium Feed
+
+Fetches data from MediumFeed and stores them as json in static/json folder also
+gets images and put them in static/img/medium folder
+
 ## Deployment
 
 ### Pre-requisites
@@ -42,7 +47,6 @@ Available `dev` and `master` environments for deploy.
 
 >Defaults:
 >- `<env> => dev`
->- `<region> => eu-central-1`
 >- `<profile> => default`
 
 
