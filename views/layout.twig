@@ -9,28 +9,28 @@
     </head>
     <body>
         {# Header #}
-        {% if routeName in ['/pricing', '/events', '/members', '/media', '/gallery', '/contact', '/tour'] %}
+        {% if routeName in ['/pricing', '/events', '/members', '/media', '/gallery', '/contact', '/tour', '/thank-you'] %}
             {% include 'en/header.twig' %}
             {% include 'en/menu.twig' %}
-        {% elseif routeName in ['/ru/pricing', '/ru/events', '/ru/members', '/ru/media', '/ru/gallery', '/ru/contact', '/ru/tour'] %}
+        {% elseif routeName in ['/ru/pricing', '/ru/events', '/ru/members', '/ru/media', '/ru/gallery', '/ru/contact', '/ru/tour', '/ru/thank-you', '/ru/terms'] %}
             {% include 'ru/header.twig' %}
             {% include 'ru/menu.twig' %}
-        {% elseif routeName in ['/ro/pricing', '/ro/events', '/ro/members', '/ro/media', '/ro/gallery', '/ro/contact', '/ru/tour'] %}
+        {% elseif routeName in ['/ro/pricing', '/ro/events', '/ro/members', '/ro/media', '/ro/gallery', '/ro/contact', '/ro/tour', '/ro/thank-you', '/ro/terms'] %}
             {% include 'ro/header.twig' %}
-            {% include 'ro/menu.twig' %}
+            {% include 'ro/menu.twig' %}   
         {% endif %}
 
         {# Content #}
         {% block body %}{% endblock %}
 
         {# Footer #}
-        {% if routeName != '/404' %}
+        {% if routeName in ['/', '/pricing', '/events', '/members', '/media', '/gallery', '/contact', '/tour'] %}
             {% include 'en/prefooter.twig' %}
             {% include 'en/footer.twig' %}
-        {% elseif routeName != '/ru/404' %}
+        {% elseif routeName in ['/ru', '/ru/pricing', '/ru/events', '/ru/members', '/ru/media', '/ru/gallery', '/ru/contact', '/ru/tour'] %}
             {% include 'ru/prefooter.twig' %}
             {% include 'ru/footer.twig' %}
-        {% elseif routeName != '/ro/404' %}
+        {% elseif routeName in ['/ro', '/ro/pricing', '/ro/events', '/ro/members', '/ro/media', '/ro/gallery', '/ro/contact', '/ro/tour'] %}
             {% include 'ro/prefooter.twig' %}
             {% include 'ro/footer.twig' %}
         {% endif %}

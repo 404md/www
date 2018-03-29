@@ -16,8 +16,8 @@
                         </a>
                     </div>
                     <div class="flag">
-                        <a class="language" href="/ro"><img src="{{ asset('@img/flag-ro.png') }}" alt="Romanian Flag"></a>
-                        <a class="language" href="/"><img src="{{ asset('@img/flag-us.png') }}" alt="American Flag"></a>
+                        <a class="language" href="/ro{{ routeName|slice(3) }}"><img src="{{ asset('@img/flag-ro.png') }}" alt="Romanian Flag"></a>
+                        <a class="language" href="/{{ routeName|slice(3) }}"><img src="{{ asset('@img/flag-us.png') }}" alt="American Flag"></a>
                     </div>  
                     <div class="nav-top main-page-nav" id="navigation">
                         <div id="menu-toggle">
@@ -32,14 +32,14 @@
                             </div>
                         </div>
                         <ul class="navt" id="myTopnav">
-                            <li><a class="link" href="/ru/pricing/">Цены</a></li>
-                            <li><a class="link" href="/ru/events/">События</a></li>
-                            <li><a class="link" href="/ru/members/">Участники</a></li>
-                            <li><a class="link" href="/ru/media/">Пресса</a></li>
-                            <li><a class="link" href="/ru/gallery/">Галерея</a></li>
-                            <li><a class="link" href="/ru/contact/">Контакты</a></li>
+                            <li><a class="link" href="/ru/pricing">Цены</a></li>
+                            <li><a class="link" href="/ru/events">События</a></li>
+                            <li><a class="link" href="/ru/members">Участники</a></li>
+                            <li><a class="link" href="/ru/media">Пресса</a></li>
+                            <li><a class="link" href="/ru/gallery">Галерея</a></li>
+                            <li><a class="link" href="/ru/contact">Контакты</a></li>
                             <li><a class="link" href="https://blog.404.md" target="_blank">Блог</a></li>
-                            <li class="current-item hide-line"><a class="last-line" href="/ru/tour/"><span class="blog">Забронируй обход</span></a></li>
+                            <li class="current-item hide-line"><a class="last-line" href="/ru/tour"><span class="blog">Забронируйте обход</span></a></li>
                         </ul>
                         <span id="slide-line"></span>
                     </div>

@@ -2,12 +2,12 @@
     <div class="container">
         <div class="logo">
             <a href="/ro">
-                <img class="img-logo" src="{{asset('@img/logo-right-black.svg')}}" alt="Logo 404Moldova" />
+                <img class="img-logo" src="{{ asset('@img/logo-right-black.svg') }}" alt="Logo 404Moldova" />
             </a>
         </div>
         <div class="flag">
-            <a class="language" href="/"><img src="{{ asset('@img/flag-us.png') }}" alt="American Flag"></a>
-            <a class="language" href="/ru"><img src="{{ asset('@img/flag-ru.png') }}" alt="Russian Flag"></a>
+            <a class="language" href="{{ routeName|slice(3) }}"><img src="{{ asset('@img/flag-us.png') }}" alt="American Flag"></a>
+            <a class="language" href="/ru{{ routeName|slice(3) }}"><img src="{{ asset('@img/flag-ru.png') }}" alt="Russian Flag"></a>
         </div>        
         <div class="nav-top" id="navigation">
             <div id="menu-toggle">
@@ -22,12 +22,12 @@
                 </div>
             </div>
             <ul class="navt" id="myTopnav">
-                <li class="{{  routeName == '/ro/pricing' ? 'current-item'}}"><a class="link {{  routeName == '/ro/pricing' ? 'active'}}" href="/ro/pricing/">Prețuri</a></li>
-                <li class="{{  routeName == '/ro/events' ? 'current-item'}}"><a class="link {{  routeName == '/ro/events' ? 'active'}}" href="/ro/events/">Evenimente</a></li>
-                <li class="{{  routeName == '/ro/members' ? 'current-item'}}"><a class="link {{  routeName == '/ro/members' ? 'active'}}" href="/ro/members/">Membri</a></li>
-                <li class="{{  routeName == '/ro/media' ? 'current-item'}}"><a class="link {{ routeName == '/ro/media' ? 'active'}}" href="/ro/media/">Media</a></li>
-                <li class="{{  routeName == '/ro/gallery' ? 'current-item'}}"><a class="link {{  routeName == '/ro/gallery' ? 'active'}}" href="/ro/gallery/">Galerie</a></li>
-                <li class="{{  routeName == '/ro/contact' ? 'current-item'}}"><a class="link {{  routeName == '/ro/contact' ? 'active'}}" href="/ro/contact/">Contacte</a></li>
+                <li class="{{ routeName == '/ro/pricing' ? 'current-item' }}"><a class="link {{ routeName == '/ro/pricing' ? 'active' }}" href="/ro/pricing">Prețuri</a></li>
+                <li class="{{ routeName == '/ro/events' ? 'current-item' }}"><a class="link {{ routeName == '/ro/events' ? 'active' }}" href="/ro/events">Evenimente</a></li>
+                <li class="{{ routeName == '/ro/members' ? 'current-item' }}"><a class="link {{ routeName == '/ro/members' ? 'active' }}" href="/ro/members">Membri</a></li>
+                <li class="{{ routeName == '/ro/media' ? 'current-item' }}"><a class="link {{ routeName == '/ro/media' ? 'active' }}" href="/ro/media">Media</a></li>
+                <li class="{{ routeName == '/ro/gallery' ? 'current-item' }}"><a class="link {{ routeName == '/ro/gallery' ? 'active' }}" href="/ro/gallery">Galerie</a></li>
+                <li class="{{ routeName == '/ro/contact' ? 'current-item' }}"><a class="link {{ routeName == '/ro/contact' ? 'active' }}" href="/ro/contact">Contacte</a></li>
                 <li><a class="link" href="https://blog.404.md" target="_blank">Blog</a></li>
                 <li><a class="last-line" href="/ro/tour/"><span class="blog">Rezervați o vizită</span></a></li>
             </ul>

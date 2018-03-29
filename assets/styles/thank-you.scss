@@ -20,16 +20,13 @@
             width: 100%;
             top: 0;
             right: 0;
-            bottom:0;
+            bottom: 0;
             background: rgba(0, 0, 0, 0.2);
           }
           .message {
             //justify-content: center;
             padding: 90px;
             text-align: center;
-            .center{
-              padding-left: 50px;
-            }
             .ty {
               text-transform: uppercase;
               font-size: 25px;
@@ -62,7 +59,7 @@
             .text-style {
               margin-bottom: 0;
               &:focus {
-                border:2px solid #333;
+                border: 2px solid #333;
                 padding: 9px;
               }
             }
@@ -124,56 +121,56 @@
   .mc-field-group {
     &.input-group {
       ul {
-        margin:0; 
-        padding:5px 0; 
-        list-style:none;
+        margin: 0; 
+        padding: 5px 0; 
+        list-style: none;
         li {
-          display:inline-block; 
-          padding:3px 0; 
-          margin-right:10px;
+          display: inline-block; 
+          padding: 3px 0; 
+          margin-right: 10px;
         }
       }
       label {
-        display:inline; 
+        display: inline; 
         padding-left: 5px;
       }
       input {
-        display:inline; 
-        width:auto; 
-        border:none;
+        display: inline; 
+        width: auto; 
+        border: none;
       }
     }
-    clear:left; 
-    position:relative; 
-    width:100%;
+    clear: left; 
+    position: relative; 
+    width: 100%;
     padding-bottom: 10px; 
-    min-height:50px;
+    min-height: 50px;
     .message-text {
       padding-top: 5px;
     }
     label {
-      display:block; 
-      margin-bottom:3px; 
+      display: block; 
+      margin-bottom: 3px; 
       font-size: 20px;
     }
   }
   .datefield, .phonefield-us {
     padding: 5px 0;
     input {
-      display:inline; 
-      width:60px; 
-      margin:0 2px; 
-      letter-spacing:1px; 
-      text-align:center; 
-      padding:5px 0 2px 0;
+      display: inline; 
+      width: 60px; 
+      margin: 0 2px; 
+      letter-spacing: 1px; 
+      text-align: center; 
+      padding: 5px 0 2px 0;
     }
     label {
-      width:50px;
+      width: 50px;
       font-size: 12px;
     }
     .monthfield, .dayfield {
       input {
-        width:50px;
+        width: 50px;
         font-size: 12px;
       }
     }
