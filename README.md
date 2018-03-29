@@ -17,7 +17,7 @@ Checks user input data and sends email if there is no invalid data.
 Fetches data from Instagram feed and stores them as json in static/json folder
 
 * Used official Instagram API (api.instagram.com/v1);
-* Fetch latest 20 posts.
+* Fetches latest 20 posts.
 
 ### Facebook Events
 
@@ -30,7 +30,7 @@ gets images and put them in static/img/medium folder
 
 ## Deployment
 
-### Pre-requisites
+### Prerequisites
 
 - Amazon Web Services (AWS) [account][2]
 - AWS Command Line Interface (CLI) [configured][3]
@@ -44,6 +44,15 @@ bash bin/deploy.sh <env> <aws-profile>
 ```
 
 Available `dev` and `master` environments for deploy.
+
+Run the deploy lambda command:
+
+```bash
+bash bin/test.sh <lambdaName> <aws-profile>
+```
+
+Available `facebook-events-404md`, ` medium-feed-404md` and
+ `instagram-feed-404md` lambdas for deploy
 
 >Defaults:
 >- `<env> => dev`
