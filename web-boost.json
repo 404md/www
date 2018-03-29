@@ -82,7 +82,8 @@
           "styles/responsive.scss"
         ],
         "js/members.min.js": [
-          "$.common-js"
+          "$.common-js",
+          "js/members.js"
         ]
       }
     },
@@ -259,7 +260,8 @@
           "styles/responsive.scss"
         ],
         "js/members.min.js": [
-          "$.common-js"
+          "$.common-js",
+          "js/members.js"
         ]
       }
     },
@@ -436,7 +438,8 @@
           "styles/responsive.scss"
         ],
         "js/members.min.js": [
-          "$.common-js"
+          "$.common-js",
+          "js/members.js"
         ]
       }
     },
