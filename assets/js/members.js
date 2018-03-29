@@ -22,13 +22,35 @@ jQuery(function ($) {
   function generateInstagramHTML(data) {
     let eventsHtml = '';
     data.forEach(function(item) {
-      let hoverBlock = "<div class='hover-hash'><div class='hover-text'><div class='likes-instagram'>" + item.likes.count + "</div><div class='hashtags'>" + item.description + "</div></div></div>";
-      let originalPost = "<a href='" + item.link + "' target='_blank'>" + hoverBlock + "</a>";
-      let content = "<img src='" + item.images.url + "'>";
+      let hoverBlock = `
+        <a href='${item.link}' target='_blank'>
+          <div class='hover-hash'>
+            <div class='hover-text'>
+              <div class='likes-instagram'>
+                   ${item.likes.count}
+              </div>
+              <div class='hashtags'>
+                  ${item.description}
+              </div>
+            </div>
+          </div>
+        </a>
+`;
+      let content = `<img src='${item.images.url}'>`;
       if (item.type == 'video') {
-        content = "<div class='video-block'>" + content + "</div><div class='button-video'><div class='play-button'></div></div>"
+        content =`
+                  <div class='video-block'>
+                    ${content}
+                   </div>
+                  <div class='button-video'>
+                    <div class='play-button'>
+                    </div>
+                  </div>`;
       }
-      $('.instagram').slick('slickAdd', "<div>" + content + originalPost + "</div>");
+      $('.instagram').slick('slickAdd', `<div>
+                                            ${content}
+                                            ${hoverBlock}
+                                          </div>`);
     });
   }
 });
