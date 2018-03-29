@@ -1,11 +1,14 @@
 jQuery(function($) {
   ("use strict");
-  
-  ajaxCall('//www.404.md/json/facebook-feed.json', function () {
-    ajaxCall(window.location.origin+'/json/facebook-feed.json' , function (err) {
-      console.error('Could not load facebook feed: ', err);
+
+  fetch('http://www.404.md.s3-website.eu-central-1.amazonaws.com/json/facebook-feed.json')
+    .then(function(response) {
+      return response.json();
+    })
+    .then(function(myJson) {
+      generateFbFeedHTML(myJson);
     });
-  });
+
     $('.meeting-room').slick({
         dots:false,
         speed: 500,
@@ -13,7 +16,6 @@ jQuery(function($) {
         fade: true,
         cssEase: 'linear'
     });
-
 });
 
 function generateFbFeedHTML(data) {
@@ -48,17 +50,6 @@ function generateFbFeedHTML(data) {
       ';
     });
     $(".events-fb").append(eventsHtml);
-}
-
-function ajaxCall(url, reject) {
-   $.ajax({
-    url: url,
-    dataType: "json"
-  }).done(function (data) {
-    generateFbFeedHTML(data);
-  }).fail(function (error) {
-    reject(error.statusText);
-  });
 }
 
 var monthNames = [
