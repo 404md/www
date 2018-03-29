@@ -1,8 +1,8 @@
 .button-contact {
-  &.disabled{
-  cursor: not-allowed;
-  pointer-events: none;
-  opacity: 0.4;
+  &.disabled {
+    cursor: not-allowed;
+    pointer-events: none;
+    opacity: 0.4;
   }
 }
 .mc-error {
@@ -32,7 +32,7 @@
     position: absolute;
     bottom: 55px;
     line-height: 21px;
-    color:red;
+    color:#fd3916;
   }
 }
 
@@ -45,7 +45,7 @@
         .map-style {
           width: 60%;
           height: 550px;
-          float:left;
+          float: left;
         }
         .input-field {
           position: relative;
