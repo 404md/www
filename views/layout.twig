@@ -12,12 +12,12 @@
         {% if routeName in ['/pricing', '/events', '/members', '/media', '/gallery', '/contact', '/tour', '/thank-you'] %}
             {% include 'en/header.twig' %}
             {% include 'en/menu.twig' %}
-        {% elseif routeName in ['/ru/pricing', '/ru/events', '/ru/members', '/ru/media', '/ru/gallery', '/ru/contact', '/ru/tour', '/ru/thank-you'] %}
+        {% elseif routeName in ['/ru/pricing', '/ru/events', '/ru/members', '/ru/media', '/ru/gallery', '/ru/contact', '/ru/tour', '/ru/thank-you', '/ru/terms'] %}
             {% include 'ru/header.twig' %}
             {% include 'ru/menu.twig' %}
-        {% elseif routeName in ['/ro/pricing', '/ro/events', '/ro/members', '/ro/media', '/ro/gallery', '/ro/contact', '/ro/tour', '/ro/thank-you'] %}
+        {% elseif routeName in ['/ro/pricing', '/ro/events', '/ro/members', '/ro/media', '/ro/gallery', '/ro/contact', '/ro/tour', '/ro/thank-you', '/ro/terms'] %}
             {% include 'ro/header.twig' %}
-            {% include 'ro/menu.twig' %}
+            {% include 'ro/menu.twig' %}   
         {% endif %}
 
         {# Content #}

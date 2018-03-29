@@ -282,7 +282,7 @@
     "/ru/gallery": {
       "view": "ru/gallery.twig",
       "vars": {
-        "page": "Gallery",
+        "page": "Галерея",
         "title": "Галерея | 404Moldova | Коворкинг | Местное Сообщество",
         "imagePath": "img/gallery.jpg"
       },
