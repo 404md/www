@@ -1,5 +1,4 @@
 jQuery(function ($) {
-    "use strict";
     $('.instagram').slick({
         infinite: true,
         slidesToShow: 3,

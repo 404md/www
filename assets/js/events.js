@@ -1,5 +1,4 @@
 jQuery(function($) {
-  ("use strict");
 
   fetch('http://www.404.md.s3-website.eu-central-1.amazonaws.com/json/facebook-feed.json')
     .then(function(response) {
