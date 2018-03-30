@@ -6,23 +6,21 @@
             </a>
         </div>
         <div class="video-container show-video hidden">
-            <iframe src="" frameborder="0" id="video"></iframe>
+            <iframe frameborder="0" id="video"></iframe>
             <i class="mdi-close-circle-outline btn-close mdi-set" aria-hidden="true"></i>
         </div>
     </section>
-     
 {% else %}
     <div class="parallax-window" data-parallax="scroll" data-image-src="{{ asset('@' ~ imagePath ) }}">
         <section class="image">
             <div class="page">
                 <div class="text-page-name">
                     {% if routeName == '/pricing' %}
-                    <a class="icons" href="tel:+37360999007">(+373) 60 999 007</a>
+                        <a class="icons" href="tel:+37360999007">(+373) 60 999 007</a>
                     {% endif %}
                     <h1 class="page-name scroll-title">{{ page }}</h1>
                 </div>
             </div>
         </section>
-    </div>     
-{% endif %}    
-    
+    </div>
+{% endif %}

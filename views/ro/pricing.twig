@@ -61,9 +61,8 @@
     <div class="container new-page">
         <div class="pages">
             <span class="text-page">
-                404Moldova este o comunitate de firme IT și specialiști IT din Moldova. Avem ca scop să
-                susținem comunitatea locală IT a companiilor mici și a specialiștilor calificați să fie competitivi la
-                nivel global.
+                404Moldova este o comunitate de firme IT și specialiști IT din Moldova. Avem ca scop să susținem comunitatea
+                locală IT a companiilor mici și a specialiștilor calificați să fie competitivi la nivel global.
             </span>
         </div>
     </div>
@@ -84,9 +83,9 @@
                         <div class="plans-points">
                             <div class="text-p">2500 lei</div>
                             <ul>
-                            {% for hub in hubs %}
-                                <li><span>{{ hub.text }}</span></li>
-                            {% endfor %}    
+                                {% for hub in hubs %}
+                                    <li><span>{{ hub.text }}</span></li>
+                                {% endfor %}
                             </ul>
                         </div>
                         <div class="btn-plan-contact">
@@ -115,9 +114,9 @@
                                 </div>
                             </div>
                             <ul>
-                            {% for team in teams %}
-                                <li><span>{{ team.text }}</span></li>
-                            {% endfor %}
+                                {% for team in teams %}
+                                    <li><span>{{ team.text }}</span></li>
+                                {% endfor %}
                             </ul>
                             <div class="notes">
                                 <div class="glay-line"></div>
@@ -142,9 +141,9 @@
                         <div class="plans-points">
                             <div class="text-p">150 lei</div>
                             <ul>
-                            {% for day in days %}
-                                <li><span>{{ day.text }}</span></li>
-                            {% endfor %}
+                                {% for day in days %}
+                                    <li><span>{{ day.text }}</span></li>
+                                {% endfor %}
                             </ul>
                         </div>
                         <div class="btn-plan-contact">
@@ -164,9 +163,9 @@
                         <div class="plans-points">
                             <div class="text-p">550 lei/săptămână</div>
                             <ul>
-                            {% for weekday in weekdays %}
-                                <li><span>{{ weekday.text }}</span></li>
-                            {% endfor %}
+                                {% for weekday in weekdays %}
+                                    <li><span>{{ weekday.text }}</span></li>
+                                {% endfor %}
                             </ul>
                         </div>
                         <div class="btn-plan-contact">
