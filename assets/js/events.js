@@ -18,32 +18,32 @@ jQuery(function($) {
 });
 
 function generateFbFeedHTML(data) {
-    var eventsHtml = '';
+    let eventsHtml = '';
     data.forEach(function(item) {
       eventsHtml +=`
       <div class="flex-item-4 space">
-      <a href="https://www.facebook.com/events/'+item.id+'/" target="_blank">
+      <a href="https://www.facebook.com/events/${item.id}/" target="_blank">
       <div class="block-style">
-        <img src="'+item.photo+'" style="max-width: 100%;">
+        <img src="${item.photo}" style="max-width: 100%;">
         <div class="content-block">
-        <div class="date">
-            <span class="day">
-              ${getMonthName(item.date.month)}
-            </span>
-            <span class="month">
-              ${item.date.day}
-            </span>
+          <div class="date">
+              <span class="day">
+                ${getMonthName(item.date.month)}
+              </span>
+              <span class="month">
+                ${item.date.day}
+              </span>
+          </div>
+          <div class="context">
+              <span class="title"">
+                ${item.name}
+              </span>
+              <span class="interval">
+                ${item.date.timeInterval}
+              </span>
+          </div>
         </div>
-        <div class="context">
-            <span class="title"">
-              ${item.name}+
-            </span>
-            <span class="interval">
-              ${item.date.timeInterval}
-            </span>
-        </div>
-        </div>
-        </div>
+      </div>
         </a>
       </div>
       `;
@@ -51,7 +51,7 @@ function generateFbFeedHTML(data) {
     $('.events-fb').append(eventsHtml);
 }
 
-var monthNames = [
+let monthNames = [
   "Jan",
   "Feb",
   "Mar",
