@@ -1,16 +1,9 @@
 #!/usr/bin/env bash
 
-isNpmPackageInstalled() {
-  which node-lambda $1 > /dev/null 2>&1
-}
-
-for package in node-lambda
-do
-  if ! ( isNpmPackageInstalled $package ); then
-      echo $package is NOT installed
-      npm install -g node-lambda
-  fi
-done
+if [[ -z $(which node-lambda) ]]; then
+    echo "Installing node-lambda globally..."
+    npm install -g node-lambda
+fi
 
 LAMBDA=$([ -n "$1" ] && echo "$1" || echo 'this_lambda_doesnt_exist')
 PROFILE=$([ -n "$2" ] && echo "$2" || echo 'default')
@@ -29,7 +22,5 @@ elif [ ${LAMBDA} = 'instagram-feed-404md' ]; then
     node-lambda deploy
     aws lambda invoke --function-name ${LAMBDA} /dev/null --profile ${PROFILE}
 else
-    echo 'please enter valid lambda facebook-events-404md || medium-feed-404md || instagram-feed-404md'
+    echo 'Please enter valid lambda facebook-events-404md || medium-feed-404md || instagram-feed-404md'
 fi
-
-done
