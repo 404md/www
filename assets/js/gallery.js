@@ -1,19 +1,12 @@
 jQuery(function($) {
-
-  fetch('http://www.404.md.s3-website.eu-central-1.amazonaws.com/json/facebook-feed.json')
+console.log('Hello');
+  fetch('https://graph.facebook.com/v2.10/404Moldova/albums?&fields=created_time,count,link,name,description,id&access_token=472105429820097%7CPVCfivD3me3oT02xN-Ygyd66nfA')
     .then(function(response) {
       return response.json();
     })
     .then(function(myJson) {
-      generateFbFeedHTML(myJson);
-    });
-
-    $('.meeting-room').slick({
-        dots:false,
-        speed: 500,
-        arrows: true,
-        fade: true,
-        cssEase: 'linear'
+      console.log(myJson.data);
+      generateFbFeedHTML(myJson.data);
     });
 });
 
@@ -48,24 +41,27 @@ function generateFbFeedHTML(data) {
       </div>
       `;
     });
-    $('.events-fb').append(eventsHtml);
+    $('.gallery-block').append(eventsHtml);
 }
 
-let monthNames = [
-  "Jan",
-  "Feb",
-  "Mar",
-  "Apr",
-  "May",
-  "Jun",
-  "Jul",
-  "Aug",
-  "Sep",
-  "Oct",
-  "Nov",
-  "Dec"
-];
 
-function getMonthName(month_number) {
-  return monthNames[month_number];
-}
+
+//
+// let monthNames = [
+//   "Jan",
+//   "Feb",
+//   "Mar",
+//   "Apr",
+//   "May",
+//   "Jun",
+//   "Jul",
+//   "Aug",
+//   "Sep",
+//   "Oct",
+//   "Nov",
+//   "Dec"
+// ];
+//
+// function getMonthName(month_number) {
+//   return monthNames[month_number];
+// }
