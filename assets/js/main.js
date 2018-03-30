@@ -36,7 +36,7 @@ function myEvent() {
 }
 
 jQuery(function($) {
-
+  'use strict';
   let navBar = $('.main-nav');
 
   $('.open-popup').on('click', function () {
