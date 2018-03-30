@@ -79,7 +79,7 @@
             height: 80px;
           }
           .icons-text {
-           padding: 10px 0 20px;
+            padding: 10px 0 20px;
             font-size: 17px;
           }
         }
@@ -137,6 +137,17 @@
               }
             }
           }
+          .flag {
+            position: absolute;
+            padding-top: 25px;
+            right: 60px;
+            .language {
+            display: inline-block;
+              &:first-child {
+                margin-right: 10px;
+              }
+            }
+          }
         }
       }
     }
@@ -148,7 +159,7 @@
       .flag {
         position: absolute;
         padding-top: 25px;
-        right: 85px;
+        right: 15px;
         .language {
         display: inline-block;
           &:first-child {
@@ -635,7 +646,7 @@
     }
     .footer-down {
       .last-block {
-        font-size: 14px;
+        font-size: 13px;
       }
     }
   }
@@ -2686,7 +2697,7 @@
   .contacts {
     .footer-down {
       .last-block {
-        &.ru_ro-block {
+        &.ru-ro-block {
           &.ru {
             line-height: 20px;
             margin-top: 15px;

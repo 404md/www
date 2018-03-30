@@ -24,7 +24,7 @@
         {% block body %}{% endblock %}
 
         {# Footer #}
-        {% if routeName in ['/', '/pricing', '/events', '/members', '/media', '/gallery', '/contact', '/tour', 'thank-you'] %}
+        {% if routeName in ['/', '/pricing', '/events', '/members', '/media', '/gallery', '/contact', '/tour', '/thank-you'] %}
             {% include 'en/prefooter.twig' %}
             {% include 'en/footer.twig' %}
         {% elseif routeName in ['/ru', '/ru/pricing', '/ru/events', '/ru/members', '/ru/media', '/ru/gallery', '/ru/contact', '/ru/tour', '/ru/thank-you'] %}
