@@ -204,12 +204,12 @@ jQuery(function($) {
    */
 
   fetch(`http://www.404.md.s3-website.eu-central-1.amazonaws.com/json/medium-feed.json`)
-      .then(function (response) {
-        return response.json();
-      })
-      .then(function (myJson) {
-        blogPosting(myJson);
-      });
+    .then(function (response) {
+      return response.json();
+    })
+    .then(function (myJson) {
+      blogPosting(myJson);
+    });
 
   function blogPosting(data) {
     let blogHtml = '';
