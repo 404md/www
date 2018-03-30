@@ -9,7 +9,7 @@
     </head>
     <body>
         {# Header #}
-        {% if routeName in ['/pricing', '/events', '/members', '/media', '/gallery', '/contact', '/tour', '/thank-you'] %}
+        {% if routeName in ['/pricing', '/events', '/members', '/media', '/gallery', '/contact', '/tour', '/thank-you', '/terms'] %}
             {% include 'en/header.twig' %}
             {% include 'en/menu.twig' %}
         {% elseif routeName in ['/ru/pricing', '/ru/events', '/ru/members', '/ru/media', '/ru/gallery', '/ru/contact', '/ru/tour', '/ru/thank-you', '/ru/terms'] %}
@@ -24,13 +24,13 @@
         {% block body %}{% endblock %}
 
         {# Footer #}
-        {% if routeName in ['/', '/pricing', '/events', '/members', '/media', '/gallery', '/contact', '/tour'] %}
+        {% if routeName in ['/', '/pricing', '/events', '/members', '/media', '/gallery', '/contact', '/tour', '/thank-you'] %}
             {% include 'en/prefooter.twig' %}
             {% include 'en/footer.twig' %}
-        {% elseif routeName in ['/ru', '/ru/pricing', '/ru/events', '/ru/members', '/ru/media', '/ru/gallery', '/ru/contact', '/ru/tour'] %}
+        {% elseif routeName in ['/ru', '/ru/pricing', '/ru/events', '/ru/members', '/ru/media', '/ru/gallery', '/ru/contact', '/ru/tour', '/ru/thank-you'] %}
             {% include 'ru/prefooter.twig' %}
             {% include 'ru/footer.twig' %}
-        {% elseif routeName in ['/ro', '/ro/pricing', '/ro/events', '/ro/members', '/ro/media', '/ro/gallery', '/ro/contact', '/ro/tour'] %}
+        {% elseif routeName in ['/ro', '/ro/pricing', '/ro/events', '/ro/members', '/ro/media', '/ro/gallery', '/ro/contact', '/ro/tour', '/ro/thank-you'] %}
             {% include 'ro/prefooter.twig' %}
             {% include 'ro/footer.twig' %}
         {% endif %}

@@ -79,7 +79,7 @@
             height: 80px;
           }
           .icons-text {
-           padding: 10px 0 20px;
+            padding: 10px 0 20px;
             font-size: 17px;
           }
         }
@@ -137,6 +137,17 @@
               }
             }
           }
+          .flag {
+            position: absolute;
+            padding-top: 25px;
+            right: 60px;
+            .language {
+            display: inline-block;
+              &:first-child {
+                margin-right: 10px;
+              }
+            }
+          }
         }
       }
     }
@@ -148,7 +159,7 @@
       .flag {
         position: absolute;
         padding-top: 25px;
-        right: 85px;
+        right: 15px;
         .language {
         display: inline-block;
           &:first-child {
@@ -635,7 +646,7 @@
     }
     .footer-down {
       .last-block {
-        font-size: 14px;
+        font-size: 13px;
       }
     }
   }
@@ -1263,7 +1274,6 @@
 }
 
 @media (max-width: 736px)  {
-
 .blog {
   .flex-row {
     .flex-item-4 {
@@ -1306,8 +1316,6 @@
       }
     }
   }
-
-
   .offers {
   &.slick-initialized {
     .slick-list {
@@ -1324,6 +1332,10 @@
             border:2px solid $main-color;
             color:#ffffff;
             font-size: 16px;
+            &.ru {
+              margin: 0 13px;
+              font-size: 15px;
+            }
           }
         }
         .plans-points {
@@ -2094,6 +2106,21 @@
 }
 
 @media (max-width: 375px) {
+  .label-form {
+    color: #95989A;
+    font-size: 14px;
+    font-weight: normal;
+    position: absolute;
+    pointer-events: auto;
+    left: 5px;
+    top: 13px;
+    transition: 0.2s ease all;
+    -moz-transition: 0.2s ease all;
+    -webkit-transition: 0.2s ease all;
+  }
+  .gray-text {
+    font-size: 14px;
+  }
   .gallery {
     margin-bottom: 32px;
   }
@@ -2670,7 +2697,7 @@
   .contacts {
     .footer-down {
       .last-block {
-        &.ru_ro-block {
+        &.ru-ro-block {
           &.ru {
             line-height: 20px;
             margin-top: 15px;
