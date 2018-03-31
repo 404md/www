@@ -14,10 +14,7 @@ Checks user input data and sends email if there is no invalid data.
 
 ### Instagram feed
 
-Fetches data from Instagram feed and stores them as json in `json/instagram-feed.json`
-
-* Used official Instagram API (api.instagram.com/v1);
-* Fetches latest 20 posts.
+Fetches data from Instagram feed (latest 20 posts) and stores them as json in `json/instagram-feed.json`
 
 ### Facebook Events
 

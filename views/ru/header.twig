@@ -6,11 +6,10 @@
             </a>
         </div>
         <div class="video-container show-video hidden">
-            <iframe src="" frameborder="0" id="video"></iframe>
+            <iframe frameborder="0" id="video"></iframe>
             <i class="mdi-close-circle-outline btn-close mdi-set" aria-hidden="true"></i>
         </div>
     </section>
-     
 {% else %}
     <div class="parallax-window" data-parallax="scroll" data-image-src="{{ asset('@' ~ imagePath ) }}">
         <section class="image">
@@ -23,6 +22,5 @@
                 </div>
             </div>
         </section>
-    </div>     
-{% endif %}    
-    
+    </div>
+{% endif %}

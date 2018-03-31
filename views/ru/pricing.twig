@@ -61,8 +61,8 @@
     <div class="container new-page">
         <div class="pages">
             <span class="text-page">
-               404Moldova это сообщество для IT-бизнеса и IT-специалистов из Молдовы.
-                Мы хотим дать возможность маленьким компаниям и квалифицированным специалистам стать конкурентоспособными на мировом рынке.
+                404Moldova это сообщество для IT-бизнеса и IT-специалистов из Молдовы. Мы хотим дать возможность
+                маленьким компаниям и квалифицированным специалистам стать конкурентоспособными на мировом рынке.
                 Члены нашего сообщества гордятся тем что работают с Fortune 500 клиентами из Европы и США.
             </span>
         </div>
@@ -84,9 +84,9 @@
                         <div class="plans-points">
                             <div class="text-p">2500 MDL</div>
                             <ul>
-                            {% for hub in hubs %}
-                                <li><span>{{ hub.text }}</span></li>
-                            {% endfor %}    
+                                {% for hub in hubs %}
+                                    <li><span>{{ hub.text }}</span></li>
+                                {% endfor %}
                             </ul>
                         </div>
                         <div class="btn-plan-contact">
@@ -115,9 +115,9 @@
                                 </div>
                             </div>
                             <ul>
-                            {% for team in teams %}
-                                <li><span>{{ team.text }}</span></li>
-                            {% endfor %}
+                                {% for team in teams %}
+                                    <li><span>{{ team.text }}</span></li>
+                                {% endfor %}
                             </ul>
                             <div class="notes">
                                 <div class="glay-line"></div>
@@ -144,9 +144,9 @@
                         <div class="plans-points">
                             <div class="text-p">150 MDL</div>
                             <ul>
-                            {% for day in days %}
-                                <li><span>{{ day.text }}</span></li>
-                            {% endfor %}
+                                {% for day in days %}
+                                    <li><span>{{ day.text }}</span></li>
+                                {% endfor %}
                             </ul>
                         </div>
                         <div class="btn-plan-contact">
@@ -166,9 +166,9 @@
                         <div class="plans-points">
                             <div class="text-p">550 MDL/week</div>
                             <ul>
-                            {% for weekday in weekdays %}
-                                <li><span>{{ weekday.text }}</span></li>
-                            {% endfor %}
+                                {% for weekday in weekdays %}
+                                    <li><span>{{ weekday.text }}</span></li>
+                                {% endfor %}
                             </ul>
                         </div>
                         <div class="btn-plan-contact">

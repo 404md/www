@@ -1059,7 +1059,7 @@ body {
     transform: rotate(45deg);
     span {
       &:nth-child(1) {
-        height: 0%;
+        height: 0;
         width: 4px;
         position: absolute;
         top: 10%;
@@ -1067,7 +1067,7 @@ body {
         transition-delay: 0s;
       }
       &:nth-child(2) {
-        width: 0%;
+        width: 0;
         height: 4px;
         position: absolute;
         left: 10%;
@@ -1122,7 +1122,7 @@ body {
   font-style: normal;
 }
 
-/* Gallery for terms*/
+/* Gallery for terms */
 
 .gallery {
   &.terms {
@@ -1132,7 +1132,7 @@ body {
   }
 }
 
-/* Gallery for photo-gallery*/
+/* Gallery for photo-gallery */
 
 .gallery {
   &.photos-gallery {
@@ -1154,7 +1154,7 @@ body {
 
 /* Mail-Chimp inputs*/
 
-/* form starting stylings ------------------------------- */
+/* form starting stylings */
 .group {
   position: relative;
   margin-bottom: 10px;
@@ -1271,7 +1271,7 @@ input:focus ~ .highlight {
   }
 }
 
-/* Blog.404.md*/
+/* Blog.404.md */
 
 .blog {
   .section-heading {
@@ -1555,7 +1555,7 @@ input:focus ~ .highlight {
   }
 }
 
-// Main Navigation Area
+/* Main Navigation Area */
 
 #navigation {
   &.nav-top {
