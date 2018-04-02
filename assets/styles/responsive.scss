@@ -42,12 +42,6 @@
 }
 
 @media (min-width: 1270px) {
-  //.flag {
-  //  display: none;
-  //  &.web-flag {
-  //    display: block;
-  //  }
-  //}
   .new-page {
     &.events {
       .amenities-block {
@@ -129,22 +123,23 @@
             background: $color;
           }
           .container {
+            position: relative;
+            .flag {
+              position: absolute;
+              padding-top: 25px;
+              right: 60px;
+              .language {
+              display: inline-block;
+                &:first-child {
+                  margin-right: 10px;
+                }
+              }
+            }
             .nav-top {
               &:hover {
                 .blog {
                   background: transparent;
                 }
-              }
-            }
-          }
-          .flag {
-            position: absolute;
-            padding-top: 25px;
-            right: 60px;
-            .language {
-            display: inline-block;
-              &:first-child {
-                margin-right: 10px;
               }
             }
           }
@@ -159,7 +154,7 @@
       .flag {
         position: absolute;
         padding-top: 25px;
-        right: 15px;
+        right: 60px;
         .language {
         display: inline-block;
           &:first-child {
