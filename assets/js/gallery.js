@@ -1,11 +1,9 @@
 jQuery(function($) {
-  url = 'https://s3.eu-central-1.amazonaws.com/www-dev.404.md/json/facebook-albums.json';
-  fetch(url)
+  fetch('https://s3.eu-central-1.amazonaws.com/www-dev.404.md/json/facebook-albums.json')
     .then(function(response) {
       return response.json();
     })
     .then(function(myJson) {
-      console.log(myJson);
       generateFbFeedHTML(myJson);
     });
 });
@@ -61,13 +59,8 @@ function generateFbFeedHTML(data) {
 }
 
 function getDate(date) {
-  return `${date.substring(0, date.indexOf('T'))} ${date.substring(date.indexOf('T')+1,date.indexOf('+'))}`;
+  return `${date.substring(0, date.indexOf('T'))} ${date.substring(date.indexOf('T') + 1,date.indexOf('+'))}`;
 }
 function descriptCheck(text) {
-
-  if (text) {
-    return text;
-  } else {
-    return '';
-  }
+  return text ? text : '';
 }
