@@ -23,7 +23,6 @@ function generateFbFeedHTML(data) {
           <p> ${getDate(item.created_time)} </p>
           <div class="fb-icon">
              <img src="img/fb-icon.png" alt="icon" />
-             <!--это картинки еще нет. Но так как и первая не видна то я пока не искала новую-->
           </div>
         </div>
         <div class="description">
