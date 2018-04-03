@@ -6,29 +6,50 @@ jQuery(function($) {
   const $contactForm = $('#subscribe-contact-form');
   const route = window.location.pathname;
 
+  // $('.required').each(function () {
+  //   if ($(this).val === '') {
+  //     $('#submit-form').addClass('disabled');
+  //   } else {
+  //     $('#submit-form').removeClass('disabled');
+  //   }
+  // });
+  //  TO DO:
+  //    disable the button if required fields are empty.
+  //    validate email value in order to avoid untranslatable errors from MailChimp.
+
   $('#mce-PHONE').on('input', function() {
     let $input = $(this);
     let regExp = /^[\+]?[(]?[0-9]{3}[)]?[0-9]*$/;
     let isPhone = regExp.test($input.val());
     let $genErr = $('#phone-error');
+    let errMsg = '';
+    let formName = 'contact' || 'tour';
 
     if (isPhone) {
-      let errMsg = '';
       $genErr.html(`<p>${errMsg}</p>`);
       $('#submit-form').removeClass('disabled');
     } else {
-      let errMsg = 'Unacceptable value';
-      $genErr.html(`<p>${errMsg}</p>`);
-      $('#submit-form').addClass('disabled');
+        if (route === `/${formName}`) {
+          errMsg = 'Unacceptable value';
+        } else if (route === `/ru/${formName}`) {
+          errMsg = 'Недопустимое значение';
+        } else {
+          errMsg = 'Valoare inacceptabilă';
+        }
+          $genErr.html(`<p>${errMsg}</p>`);
+          $('#submit-form').addClass('disabled');
+
     }
   });
+
+
 
   if ($contactForm.length) {
     /**
      * Contact form
      */
     $contactForm.MailChimpForm({
-      url: '//mitocgroup.us11.list-manage.com/subscribe/post?u=13a7a5fca813b378c24ec9fe3&id=092d77b13b',
+      url: '//404.us11.list-manage.com/subscribe/post?u=13a7a5fca813b378c24ec9fe3&amp;id=092d77b13b',
       fields: '1:NAME,4:PHONE,0:EMAIL,2:MESSAGE',
       submitSelector: '#submit-form',
       onFail: function (errMsg) {
@@ -44,12 +65,12 @@ jQuery(function($) {
       },
       onOk: function(okMsg) {
 
-        if (route === '/contact/'){
-          window.location = '/thank-you'
-        } else if (route === '/ru/contact/'){
-          window.location = '/ru/thank-you'
-        } else if (route === '/ro/contact/'){
-          window.location = '/ro/thank-you'
+        if (route === '/contact'){
+          window.location.href = '/thank-you'
+        } else if (route === '/ru/contact'){
+          window.location.href = '/ru/thank-you'
+        } else if (route === '/ro/contact'){
+          window.location.href = '/ro/thank-you'
         }
       }
     });
@@ -77,14 +98,15 @@ jQuery(function($) {
       },
       onOk: function(okMsg) {
         let lnId = $( "input:checked" ).attr("id");
-        if (lnId === 'engBtn') {
-          window.location = 'en/thank-you'
+        console.log(route);
+        if (lnId === 'engBtn' && (route === '/tour' || route === '/ru/tour' || '/ro/tour'))  {
+          window.location.href = '/thank-you'
         }
-        else if (lnId === 'romBtn') {
-          window.location = 'ro/thank-you'
+        else if (lnId === 'romBtn' && (route === '/tour' || route === '/ru/tour' || '/ro/tour')) {
+          window.location.href = '/ro/thank-you'
         }
-        else if (lnId === 'ruBtn') {
-          window.location = 'ru/thank-you'
+        else if (lnId === 'ruBtn' && (route === '/tour' || route === '/ru/tour' || '/ro/tour')) {
+          window.location.href = '/ru/thank-you'
         }
       }
     });

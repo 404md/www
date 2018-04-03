@@ -116,7 +116,8 @@
           "styles/responsive.scss"
         ],
         "js/gallery.min.js": [
-          "$.common-js"
+          "$.common-js",
+          "js/gallery.js"
         ]
       }
     },
@@ -294,7 +295,8 @@
           "styles/responsive.scss"
         ],
         "js/gallery.min.js": [
-          "$.common-js"
+          "$.common-js",
+          "js/gallery.js"
         ]
       }
     },
@@ -472,7 +474,8 @@
           "styles/responsive.scss"
         ],
         "js/gallery.min.js": [
-          "$.common-js"
+          "$.common-js",
+          "js/gallery.js"
         ]
       }
     },

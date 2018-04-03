@@ -9,5 +9,6 @@
   },
   "devDependencies": {
     "web-boost": "^1.2.0"
-  }
+  },
+  "dependencies": {}
 }
