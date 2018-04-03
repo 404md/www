@@ -10,7 +10,5 @@
   "devDependencies": {
     "web-boost": "^1.2.0"
   },
-  "dependencies": {
-    "node-lambda": "^0.11.6"
-  }
+  "dependencies": {}
 }
