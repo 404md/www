@@ -27,7 +27,7 @@ exports.handler = (event, context) => {
         },
         photo: item.cover.source,
       }
-    })
+    });
 
     let params = {
       Bucket: 'www.404.md',
