@@ -2,61 +2,41 @@
 
 This repository stores the code and data for [www.404.md][1]
 
-## Back-end maintenance
+## Frontend
 
-404.md's back-end functionality is running in AWS.Lambda
+404.md's frontend is build on top of [Web-boost][2] static site generator.
 
-### Contact Form
+## Backend
 
-Checks user input data and sends email if there is no invalid data.
-
-* Sends emails through MailChimp
-
-### Instagram feed
-
-Fetches data from Instagram feed (latest 20 posts) and stores them as json in `json/instagram-feed.json`
-
-### Facebook Events
-
-Fetches Facebook events list and stores them as json in `json/facebook-feed.json`
-
-### Medium Feed
-
-Fetches data from MediumFeed and stores them as json in `json/medium-feed.json` gets images and puts 
-them in `img/medium` folder
+404.md's backend is build on top of [Serverless Framework][3] (AWS provider).
 
 ## Deployment
 
 ### Prerequisites
 
-- Amazon Web Services (AWS) [account][2]
-- AWS Command Line Interface (CLI) [configured][3]
+- Amazon Web Services (AWS) [account][4]
+- AWS Command Line Interface (CLI) [configured][5]
+- Serverless Framework [installed][6]
 
 ### Build & deploy
 
-Run the deploy command:
+* To deploy frontend part, just run:
 
 ```bash
-bash bin/deploy.sh <env> <aws-profile>
+bash bin/deploy.sh [env] (aws-profile)
 ```
-> Ex. bash bin/deploy.sh dev saml
+> [env] required, default `dev`, available `dev` and `master` \
+(aws-profile) optional, default `none`
 
-Available `dev` and `master` environments for deploy.
-
-Run the deploy lambda command:
+* To deploy backend part, switch to `backend` directory and run:
 
 ```bash
-bash bin/test.sh <lambdaName> <aws-profile>
+serverless deploy
 ```
-
-Available `facebook-events-404md`, ` medium-feed-404md` and
- `instagram-feed-404md` lambdas for deploy
-
->Defaults:
->- `<env> => dev`
->- `<profile> => default`
-
 
 [1]: https://www.404.md
-[2]: https://www.youtube.com/watch?v=WviHsoz8yHk
-[3]: https://docs.aws.amazon.com/cli/latest/userguide/cli-chap-getting-started.html
+[2]: https://github.com/ddimitrioglo/web-boost
+[3]: https://github.com/serverless/serverless
+[4]: https://www.youtube.com/watch?v=WviHsoz8yHk
+[5]: https://docs.aws.amazon.com/cli/latest/userguide/cli-chap-getting-started.html
+[6]: https://github.com/serverless/serverless#quick-start

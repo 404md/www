@@ -1,0 +1,12 @@
+{
+  "name": "medium-feed",
+  "version": "0.0.1",
+  "author": "ddimitrioglo",
+  "license": "MIT",
+  "devDependencies": {
+    "aws-sdk": "^2.221.1"
+  },
+  "dependencies": {
+    "jimp": "^0.2.28"
+  }
+}

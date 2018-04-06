@@ -1,4 +1,8 @@
-**/.env
-**/.lambda
-**/event.json
-**/.config.json
+# Dependency directories
+node_modules
+
+# Serverless directories
+.serverless
+
+# Logs
+*.log
