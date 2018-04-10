@@ -9,15 +9,14 @@ jQuery(function($) {
     });
 
     $('.meeting-room').slick({
-        dots:false,
-        speed: 500,
-        arrows: true,
-        fade: true,
-        cssEase: 'linear'
+      dots:false,
+      speed: 500,
+      arrows: true,
+      fade: true,
+      cssEase: 'linear'
     });
-});
 
-function generateFbFeedHTML(data) {
+  function generateFbFeedHTML(data) {
     let eventsHtml = '';
     data.forEach(function(item) {
       eventsHtml +=`
@@ -49,23 +48,24 @@ function generateFbFeedHTML(data) {
       `;
     });
     $('.events-fb').append(eventsHtml);
-}
+  }
 
-let monthNames = [
-  "Jan",
-  "Feb",
-  "Mar",
-  "Apr",
-  "May",
-  "Jun",
-  "Jul",
-  "Aug",
-  "Sep",
-  "Oct",
-  "Nov",
-  "Dec"
-];
+  let monthNames = [
+    "Jan",
+    "Feb",
+    "Mar",
+    "Apr",
+    "May",
+    "Jun",
+    "Jul",
+    "Aug",
+    "Sep",
+    "Oct",
+    "Nov",
+    "Dec"
+  ];
 
-function getMonthName(month_number) {
-  return monthNames[month_number];
-}
+  function getMonthName(month_number) {
+    return monthNames[month_number];
+  }
+});
