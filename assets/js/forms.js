@@ -81,7 +81,7 @@ jQuery(function($) {
      * Tour form
      */
     $tourForm.MailChimpForm({
-      url: '//mitocgroup.us11.list-manage.com/subscribe/post?u=13a7a5fca813b378c24ec9fe3&id=de06a08172',
+      url: '//mitocgroup.us11.list-manage.com/subscribe/post?u=13a7a5fca813b378c24ec9fe3&amp;id=de06a08172',
       fields: '0:EMAIL,1:FNAME,2:LNAME,3:PHONE,4:JOB,5:VDATE,6:MMERGE3,7:LANG',
       submitSelector: '#submit-form',
       onFail: function (errMsg) {
