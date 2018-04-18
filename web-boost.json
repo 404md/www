@@ -194,7 +194,6 @@
         ]
       }
     },
-    
     "/ru": {
       "view": "ru/index.twig",
       "vars": {
@@ -373,7 +372,6 @@
         ]
       }
     },
-
     "/ro": {
       "view": "ro/index.twig",
       "vars": {

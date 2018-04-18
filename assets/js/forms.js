@@ -1,7 +1,7 @@
 jQuery(function($) {
   'use strict';
 
-  const $formInput = $('input');
+  const $genErr = $('#mc-general-error');
   const $tourForm = $('#subscribe-tour-form');
   const $contactForm = $('#subscribe-contact-form');
   const route = window.location.pathname;
@@ -21,40 +21,36 @@ jQuery(function($) {
     let $input = $(this);
     let regExp = /^[\+]?[(]?[0-9]{3}[)]?[0-9]*$/;
     let isPhone = regExp.test($input.val());
-    let $genErr = $('#phone-error');
+    let $phoneErr = $('#phone-error');
     let errMsg = '';
     let formName = 'contact' || 'tour';
 
     if (isPhone) {
-      $genErr.html(`<p>${errMsg}</p>`);
+      $phoneErr.html(`<p>${errMsg}</p>`);
       $('#submit-form').removeClass('disabled');
     } else {
-        if (route === `/${formName}`) {
-          errMsg = 'Unacceptable value';
-        } else if (route === `/ru/${formName}`) {
-          errMsg = 'Недопустимое значение';
-        } else {
-          errMsg = 'Valoare inacceptabilă';
-        }
-          $genErr.html(`<p>${errMsg}</p>`);
-          $('#submit-form').addClass('disabled');
+      if (route === `/${formName}`) {
+        errMsg = 'Unacceptable value';
+      } else if (route === `/ru/${formName}`) {
+        errMsg = 'Недопустимое значение';
+      } else {
+        errMsg = 'Valoare inacceptabilă';
+      }
 
+      $phoneErr.html(`<p>${errMsg}</p>`);
+      $('#submit-form').addClass('disabled');
     }
   });
-
-
 
   if ($contactForm.length) {
     /**
      * Contact form
      */
     $contactForm.MailChimpForm({
-      url: '//404.us11.list-manage.com/subscribe/post?u=13a7a5fca813b378c24ec9fe3&amp;id=092d77b13b',
+      url: '//404.us11.list-manage.com/subscribe/post?u=13a7a5fca813b378c24ec9fe3&id=092d77b13b',
       fields: '1:NAME,4:PHONE,0:EMAIL,2:MESSAGE',
       submitSelector: '#submit-form',
-      onFail: function (errMsg) {
-        let $genErr = $('#mc-general-error');
-
+      onFail: (errMsg) => {
         if (route === '/ru/contact/'){
           translation(errMsg, 'ru');
         } else if (route === '/ro/contact/'){
@@ -63,13 +59,12 @@ jQuery(function($) {
           $genErr.html(`<div class="error-mc">${errMsg}</div>`);
         }
       },
-      onOk: function(okMsg) {
-
-        if (route === '/contact'){
+      onOk: (okMsg) => {
+        if (/^\/contact/.test(route)) {
           window.location.href = '/thank-you'
-        } else if (route === '/ru/contact'){
+        } else if (/^\/ru\/contact/.test(route)) {
           window.location.href = '/ru/thank-you'
-        } else if (route === '/ro/contact'){
+        } else if (/^\/ro\/contact/.test(route)) {
           window.location.href = '/ro/thank-you'
         }
       }
@@ -81,13 +76,11 @@ jQuery(function($) {
      * Tour form
      */
     $tourForm.MailChimpForm({
-      url: '//mitocgroup.us11.list-manage.com/subscribe/post?u=13a7a5fca813b378c24ec9fe3&amp;id=de06a08172',
+      url: '//mitocgroup.us11.list-manage.com/subscribe/post?u=13a7a5fca813b378c24ec9fe3&id=de06a08172',
       fields: '0:EMAIL,1:FNAME,2:LNAME,3:PHONE,4:JOB,5:VDATE,6:MMERGE3,7:LANG',
       submitSelector: '#submit-form',
-      onFail: function (errMsg) {
-        let $genErr = $('#mc-general-error');
-        let lnId = $( "input:checked" ).attr("id");
-
+      onFail: (errMsg) => {
+        let lnId = $('input:checked').attr('id');
         if (lnId === 'romBtn') {
           translation(errMsg, 'ro');
         } else if (lnId === 'ruBtn') {
@@ -96,16 +89,13 @@ jQuery(function($) {
           $genErr.html(`<div class="error-mc">${errMsg}</div>`);
         }
       },
-      onOk: function(okMsg) {
-        let lnId = $( "input:checked" ).attr("id");
-        console.log(route);
+      onOk: (okMsg) => {
+        let lnId = $('input:checked').attr('id');
         if (lnId === 'engBtn' && (route === '/tour' || route === '/ru/tour' || '/ro/tour'))  {
           window.location.href = '/thank-you'
-        }
-        else if (lnId === 'romBtn' && (route === '/tour' || route === '/ru/tour' || '/ro/tour')) {
+        } else if (lnId === 'romBtn' && (route === '/tour' || route === '/ru/tour' || '/ro/tour')) {
           window.location.href = '/ro/thank-you'
-        }
-        else if (lnId === 'ruBtn' && (route === '/tour' || route === '/ru/tour' || '/ro/tour')) {
+        } else if (lnId === 'ruBtn' && (route === '/tour' || route === '/ru/tour' || '/ro/tour')) {
           window.location.href = '/ru/thank-you'
         }
       }
@@ -113,29 +103,15 @@ jQuery(function($) {
   }
 
   /**
-   * mc:input:error event handler
+   * @param {String} errMsg
+   * @param {String} lng
    */
-  $formInput.on('mc:input:error', function() {
-    console.log('mc:input:error event fired');
-  });
+  function translation(errMsg,lng) {
+    let trUrl = `https://translate.googleapis.com/translate_a/single?client=gtx&sl=en&tl=${lng}&dt=t&q=${encodeURI(errMsg)}`;
 
-  /**
-   * mc:input:ok event handler
-   */
-  $formInput.on('mc:input:ok', function() {
-    console.log('mc:input:ok event fired');
-  });
-});
-
-function translation(errMsg,lng) {
-  let tr = `https://translate.googleapis.com/translate_a/single?client=gtx&sl=en&tl=${lng}&dt=t&q=${encodeURI(errMsg)}`;
-
-    fetch(`${tr}`)
-    .then(function(response) {
-      return response.json();
-    })
-    .then(function(myJson) {
+    fetch(trUrl).then(res => res.json()).then(myJson => {
       errMsg = myJson[0][0][0];
       $genErr.html(`<div class="error-mc">${errMsg}</div>`);
     });
-}
+  }
+});
