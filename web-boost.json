@@ -163,7 +163,7 @@
       "view": "en/thank-you.twig",
       "vars": {
         "page": "Thank you!",
-        "title": "Book a Tour | 404Moldova | Coworking Space | Local Community",
+        "title": "Thank you! | 404Moldova | Coworking Space | Local Community",
         "imagePath": "img/book.jpg"
       },
       "assets": {
