@@ -5,17 +5,9 @@ jQuery(function($) {
   const $tourForm = $('#subscribe-tour-form');
   const $contactForm = $('#subscribe-contact-form');
   const route = window.location.pathname;
-
-  // $('.required').each(function () {
-  //   if ($(this).val === '') {
-  //     $('#submit-form').addClass('disabled');
-  //   } else {
-  //     $('#submit-form').removeClass('disabled');
-  //   }
-  // });
-  //  TO DO:
-  //    disable the button if required fields are empty.
-  //    validate email value in order to avoid untranslatable errors from MailChimp.
+  const contactFields = ['#name', '#mce-PHONE', '#email'];
+  const tourFields = ['#mce-EMAIL', '#mce-FNAME', '#mce-LNAME', '#mce-PHONE', '#mce-JOB', '#mce-VDATE'];
+  let errFlag = true;
 
   $('#mce-PHONE').on('input', function() {
     let $input = $(this);
@@ -23,24 +15,50 @@ jQuery(function($) {
     let isPhone = regExp.test($input.val());
     let $phoneErr = $('#phone-error');
     let errMsg = '';
-    let formName = 'contact' || 'tour';
 
     if (isPhone) {
       $phoneErr.html(`<p>${errMsg}</p>`);
-      $('#submit-form').removeClass('disabled');
+      errFlag = false;
     } else {
-      if (route === `/${formName}`) {
+      if (route === '/contact' || route === '/tour') {
         errMsg = 'Unacceptable value';
-      } else if (route === `/ru/${formName}`) {
+      } else if (route === '/ru/contact' || route === '/ru/tour') {
         errMsg = 'Недопустимое значение';
       } else {
         errMsg = 'Valoare inacceptabilă';
       }
-
       $phoneErr.html(`<p>${errMsg}</p>`);
-      $('#submit-form').addClass('disabled');
+      errFlag = true;
     }
   });
+
+  if($contactForm) {
+    $('#submit-contact-form').addClass('disabled');
+    contactFields.forEach((item) => {
+      $(item).on('input', function() {
+        if(($('#name').val() !== '' && $('#mce-PHONE').val() !== '' && $('#email').val()) !== '' && errFlag === false) {
+          $('#submit-contact-form').removeClass('disabled');
+        } else {
+          $('#submit-contact-form').addClass('disabled');
+        }
+      });
+      errFlag = true;
+    });
+  }
+
+  // if($tourForm) {
+  //   $('#submit-tour-form').addClass('disabled');
+  //   tourFields.forEach((item) => {
+  //     $(item).on('input', function() {
+  //       if($('#mce-EMAIL').val() !== '' && $('#mce-FNAME').val() !== '' && $('#mce-LNAME').val() !== '' && $('#mce-JOB').val() !== '' && $('#mce-PHONE').val() !== '' && $('#mce-VDATE').val() !== '' && errFlag === false) {
+  //         $('#submit-tour-form').removeClass('disabled');
+  //       } else {
+  //         $('#submit-tour-form').addClass('disabled');
+  //       }
+  //     errFlag = true;
+  //     });
+  //   });
+  // }
 
   if ($contactForm.length) {
     /**
@@ -49,7 +67,7 @@ jQuery(function($) {
     $contactForm.MailChimpForm({
       url: '//404.us11.list-manage.com/subscribe/post?u=13a7a5fca813b378c24ec9fe3&id=092d77b13b',
       fields: '1:NAME,4:PHONE,0:EMAIL,2:MESSAGE',
-      submitSelector: '#submit-form',
+      submitSelector: '#submit-contact-form',
       onFail: (errMsg) => {
         if (route === '/ru/contact/'){
           translation(errMsg, 'ru');
@@ -67,6 +85,7 @@ jQuery(function($) {
         } else if (/^\/ro\/contact/.test(route)) {
           window.location.href = '/ro/thank-you'
         }
+        $('#subscribe-contact-form input[type="text"]').val('');
       }
     });
   }
@@ -78,7 +97,7 @@ jQuery(function($) {
     $tourForm.MailChimpForm({
       url: '//mitocgroup.us11.list-manage.com/subscribe/post?u=13a7a5fca813b378c24ec9fe3&id=de06a08172',
       fields: '0:EMAIL,1:FNAME,2:LNAME,3:PHONE,4:JOB,5:VDATE,6:MMERGE3,7:LANG',
-      submitSelector: '#submit-form',
+      submitSelector: '#submit-tour-form',
       onFail: (errMsg) => {
         let lnId = $('input:checked').attr('id');
         if (lnId === 'romBtn') {
@@ -98,9 +117,12 @@ jQuery(function($) {
         } else if (lnId === 'ruBtn' && (route === '/tour' || route === '/ru/tour' || '/ro/tour')) {
           window.location.href = '/ru/thank-you'
         }
+        $('#subscribe-tour-form input[type="text"]').val('');
       }
     });
   }
+
+
 
   /**
    * @param {String} errMsg

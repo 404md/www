@@ -1,6 +1,8 @@
 /**
  * Google Map callback
  */
+let fieldSelectors = ['#name', '#mce-PHONE', '#email', '#msg'];
+
 function myMap() {
   let myLatLng = {lat: 46.9869511, lng: 28.8579025};
 
