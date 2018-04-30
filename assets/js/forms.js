@@ -1,3 +1,5 @@
+let errFlag = true;
+
 jQuery(function($) {
   'use strict';
 
@@ -6,8 +8,8 @@ jQuery(function($) {
   const $contactForm = $('#subscribe-contact-form');
   const route = window.location.pathname;
   const contactFields = ['#name', '#mce-PHONE', '#email'];
-  const tourFields = ['#mce-EMAIL', '#mce-FNAME', '#mce-LNAME', '#mce-PHONE', '#mce-JOB', '#mce-VDATE'];
-  let errFlag = true;
+  const tourFields = ['#mce-EMAIL', '#mce-FNAME', '#mce-LNAME', '#mce-PHONE', '#mce-JOB', '#mce-VDATE', '#lang_ch', '#lang_ch1'];
+
 
   $('#mce-PHONE').on('input', function() {
     let $input = $(this);
@@ -35,7 +37,7 @@ jQuery(function($) {
   if($contactForm) {
     $('#submit-contact-form').addClass('disabled');
     contactFields.forEach((item) => {
-      $(item).on('input', function() {
+      $(item).on('input', function () {
         if(($('#name').val() !== '' && $('#mce-PHONE').val() !== '' && $('#email').val()) !== '' && errFlag === false) {
           $('#submit-contact-form').removeClass('disabled');
         } else {
@@ -46,19 +48,45 @@ jQuery(function($) {
     });
   }
 
-  // if($tourForm) {
-  //   $('#submit-tour-form').addClass('disabled');
-  //   tourFields.forEach((item) => {
-  //     $(item).on('input', function() {
-  //       if($('#mce-EMAIL').val() !== '' && $('#mce-FNAME').val() !== '' && $('#mce-LNAME').val() !== '' && $('#mce-JOB').val() !== '' && $('#mce-PHONE').val() !== '' && $('#mce-VDATE').val() !== '' && errFlag === false) {
-  //         $('#submit-tour-form').removeClass('disabled');
-  //       } else {
-  //         $('#submit-tour-form').addClass('disabled');
-  //       }
-  //     errFlag = true;
-  //     });
-  //   });
-  // }
+
+  if($tourForm) {
+
+    $('#lang_ch').on('input', () => {
+      $('#lang_ch').val('set');
+      $('#lang_ch1').val('set');
+      if ($('#engBtn').prop('checked')) {
+        $('#engBtn1').prop('checked', true);
+      } else if ($('#ruBtn').prop('checked')) {
+        $('#ruBtn1').prop('checked', true);
+      } else if ($('#romBtn').prop('checked')) {
+        $('#romBtn1').prop('checked', true);
+      }
+    });
+
+    $('#lang_ch1').on('input', () => {
+      $('#lang_ch1').val('set');
+      $('#lang_ch').val('set');
+      if ($('#engBtn1').prop('checked')) {
+        $('#engBtn').prop('checked', true);
+      } else if ($('#ruBtn1').prop('checked')) {
+        $('#ruBtn').prop('checked', true);
+      } else if ($('#romBtn1').prop('checked')) {
+        $('#romBtn').prop('checked', true);
+      }
+    });
+
+    $('#submit-tour-form').addClass('disabled');
+    tourFields.forEach((item) => {
+      $(item).on('input', () => {
+        if($('#mce-EMAIL').val() !== '' && $('#mce-FNAME').val() !== '' && $('#mce-LNAME').val() !== '' && $('#mce-JOB').val() !== '' && $('#mce-PHONE').val() !== '' && $('#mce-VDATE').val() !== '' && $('#lang_ch').val() !== '' && $('#lang_ch1').val() !== '' && errFlag === false) {
+          $('#submit-tour-form').removeClass('disabled');
+        } else {
+          $('#submit-tour-form').addClass('disabled');
+        }
+      });
+      errFlag = true;
+    });
+  }
 
   if ($contactForm.length) {
     /**
