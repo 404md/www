@@ -1,5 +1,5 @@
 jQuery(function($) {
-  fetch('https://s3.eu-central-1.amazonaws.com/www-dev.404.md/json/facebook-albums.json')
+  fetch('https://s3.eu-central-1.amazonaws.com/www.404.md/json/facebook-albums.json')
     .then(function(response) {
       return response.json();
     })
@@ -53,15 +53,18 @@ function generateFbFeedHTML(data) {
                   </div>
                 </div> 
             </div>
-        </div>
         
-       <div class="album-name">
-        <a href="${item.link}" target="_blank">
-          <div class="block-style">
-                ${item.name}
-          </div>
-        </a>
-        <p>${item.count}</p>
+         <div class="name-stripe">
+           <div class="gradient"></div>
+           <div class="album-name">
+            <a href="${item.link}" target="_blank">
+              <div class="block-style">
+                    ${item.name}
+              </div>
+            </a>
+            <p>${item.count}</p>
+           </div>
+         </div>
        </div>
         
       </div>
