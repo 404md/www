@@ -21,7 +21,7 @@ module.exports.handler = (event, context, callback) => {
     }
 
     let filtered = res.data.filter(album => {
-      return !['Mobile Uploads', 'Instagram Photos', 'Cover Photos', 'Timeline Photos'].includes(album.name);
+      return !['Profile Pictures', 'Mobile Uploads', 'Instagram Photos', 'Cover Photos', 'Timeline Photos'].includes(album.name);
     });
 
     return Promise.all(filtered.map(album => {
