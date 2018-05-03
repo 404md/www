@@ -1,0 +1,97 @@
+@import './styles/variables';
+
+.fb-album {
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  padding: 15px;
+  //margin-bottom: 10px;
+  margin: 10px;
+  justify-content: space-around;
+}
+
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.header-content {
+  display: flex;
+}
+
+.album-text {
+  padding-left: 10px;
+}
+
+.album-date {
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 12px;
+  color: #90949c;
+}
+
+.fb-icon {
+  float: right;
+  height: 20px;
+}
+
+.icon-404 {
+  height: 40px;
+  width: 40px;
+}
+
+//.container .first-photo {
+//  width: 25%;
+//  height: auto;
+//}
+
+.description p {
+  font-size: 14px;
+  line-height: 1.38;
+  margin-bottom: 10px;
+}
+
+.page-title {
+  letter-spacing: .15px;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 18px;
+}
+
+.photos {
+  justify-content: center;
+  .album-appendix {
+    display: flex;
+    img {
+      width: 33.3%;
+    }
+  }
+}
+
+.album-name {
+  color: #fff;
+  font-size: 24px;
+  font-weight: normal;
+  a {
+
+  }
+  p {
+    text-color: #ccc;
+    font-size: 16px;
+    font-weight: normal;
+    padding-top: 2px;
+  }
+}
+
+//.gallery-block {
+//  justify-content: space-between;
+//}
+
+
+
+//.button-contact {
+//  &.disabled {
+//    cursor: not-allowed;
+//    pointer-events: none;
+//    opacity: 0.4;
+//  }
+//}
