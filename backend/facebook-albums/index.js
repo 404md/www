@@ -32,7 +32,7 @@ module.exports.handler = (event, context, callback) => {
 
         album.images = [];
         result.data.forEach(item => {
-          album.images.push((item.images.pop()).source);
+          album.images.push((item.images[0]).source);
         });
         return Promise.resolve(album);
       });

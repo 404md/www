@@ -97,7 +97,7 @@ jQuery(function($) {
       fields: '1:NAME,4:PHONE,0:EMAIL,2:MESSAGE',
       submitSelector: '#submit-contact-form',
       onFail: (errMsg) => {
-        if (route === '/ru/contact/'){
+        if (route === '/ru/contact/') {
           translation(errMsg, 'ru');
         } else if (route === '/ro/contact/'){
           translation(errMsg, 'ro');
