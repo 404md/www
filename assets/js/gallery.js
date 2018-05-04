@@ -12,11 +12,11 @@ function generateFbFeedHTML(data) {
   let eventsHtml = '';
     data.forEach(function(item) {
       eventsHtml +=`
-      <div class="fb-album flex-item-4 space">
+      <div class="fb-album space">
         <div class="card-header">
           <div class="header-content">
             <div class="icon">
-               <img src="img/main-photo.png" class="icon-404" alt="icon" />
+               <img src="../img/main-photo.png" class="icon-404" alt="icon" />
             </div>
             <div class="album-text">
               <p class="page-title">404 Moldova</p>
@@ -24,7 +24,7 @@ function generateFbFeedHTML(data) {
             </div>
           </div>
             <div>
-                 <img src="img/fb-icon.svg" class="fb-icon" alt="icon" />
+                 <img src="../img/fb-icon.svg" class="fb-icon" alt="icon" />
             </div>
         </div>
         <div class="description">
