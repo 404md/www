@@ -1,0 +1,115 @@
+.button-contact {
+  &.disabled {
+    cursor: not-allowed;
+    pointer-events: none;
+    opacity: 0.4;
+  }
+}
+.mc-error {
+  position: absolute;
+  padding-left: 5px;
+  p {
+    font-size: 17px;
+    font-weight: 600;
+    color: #fd3916;
+  }
+}
+.status-message {
+  &.success {
+    padding: 10px;
+    bottom: 0;
+    right: 0;
+    z-index: 2;
+    font-size: 15px;
+    width: 20%;
+    position: fixed;
+    color: #3c763d;
+    background-color: #dff0d8;
+    border-color: #d6e9c6;
+    border-radius: 4px;
+  }
+  &.error {
+    position: absolute;
+    bottom: 55px;
+    line-height: 21px;
+    color:#fd3916;
+  }
+}
+
+.wrapper {
+  &.contact {
+    .main-block {
+      min-height: 550px;
+      margin-bottom: 60px;
+      .container {
+        .map-style {
+          width: 60%;
+          height: 550px;
+          float: left;
+        }
+        .input-field {
+          position: relative;
+          width: 40%;
+          height: 550px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          background-image: url(../img/map.jpg);
+          background-position: center;
+          background-size: cover;
+          float:left;
+          #subscribe-contact-form {
+            width: 80%;
+            .indicates-required {
+              text-align: right;
+              font-size: 11px;
+              padding-bottom: 20px;
+            }
+            .mc-error {
+              p {
+                font-size: 17px;
+                font-weight: 600;
+                color: #fd3916;
+              }
+            }
+          }
+
+          &:before {
+            position: absolute;
+            content:'';
+            background: white;
+            top:0;
+            left:0;
+            bottom:0;
+            right:0;
+            opacity: 0.95;
+          }
+
+          .hole-form {
+            position: relative;
+            width:80%;
+            .input-name {
+              display: block;
+              margin-bottom: 10px;
+              font-size: 18px;
+            }
+
+            .button {
+              margin-top: 30px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+/* Gallery */
+
+.gallery {
+  &.connect-us {
+    .gallery-line {
+      margin-top: 60px;
+    }
+  }
+}

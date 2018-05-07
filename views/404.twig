@@ -1,0 +1,28 @@
+{% extends 'layout.twig' %}
+
+{% block css %}
+    <link rel="stylesheet" href="{{ asset('@css/404.min.css') }}" />
+{% endblock %}
+
+{% block body %}
+    <div class="wrapper notfound-page">
+        <section class="main-block notfound">
+            <div class="container">
+                <div class="text-notfound">
+                    <div class="location">
+                        <span id="location"></span>
+                    </div>
+                    <div class="title-notfound">
+                        <p class="name-page">404</p>
+                        <p class="text-page">is now found</p>
+                        <div class="links"><a href="/tour">take a Tour</a> or <a href="/">go to HOME page</a></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+{% endblock %}
+
+{% block js %}
+    <script type="text/javascript" src="{{ asset('@js/404.min.js') }}"></script>
+{% endblock %}

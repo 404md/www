@@ -1,0 +1,145 @@
+{% extends '../layout.twig' %}
+
+{% block css %}
+    <link rel="stylesheet" href="{{ asset('@css/tour.min.css') }}"/>
+{% endblock %}
+
+{% block body %}
+    <div class=" container new-page">
+        <div class="pages">
+            <div class="line"></div>
+            <span class="text-page">
+                404Moldova это сообщество для IT-бизнеса и IT-специалистов из Молдовы. Мы хотим дать возможность
+                маленьким компаниям и квалифицированным специалистам стать конкурентоспособными на мировом рынке.
+            </span>
+        </div>
+    </div>
+    <div class="wrapper booking" itemscope itemprop="mainContentOfPage">
+        <section class="main-block">
+            <div class="container">
+                <div class="back-image">
+                    <div class="booking-form">
+                        <div id="mc_embed_signup">
+                            <h2 class="heading-contact">Бронирование</h2>
+                            <div class="indicates-required">
+                                <span class="asterisk">*</span>обязательные поля
+                            </div>
+                            <form id="subscribe-tour-form">
+                                <div class="mc-form-group-LANG mc-field-group input-group" id="lang_ch">
+                                    <label class="gray-text">
+                                        Выберите язык, на котором вы предпочли бы общаться: <span class="asterisk">*</span>
+                                    </label>
+                                    <ul>
+                                        <li>
+                                            <input type="radio" value="English" name="LANG" id="engBtn">
+                                            <label for="engBtn">English</label>
+                                        </li>
+                                        <li>
+                                            <input type="radio" value="Romanian" name="LANG" id="romBtn">
+                                            <label for="romBtn">Română</label>
+                                        </li>
+                                        <li>
+                                            <input type="radio" value="Russian" name="LANG" id="ruBtn">
+                                            <label for="ruBtn">Русский</label>
+                                        </li>
+                                    </ul>
+                                    <div class="mc-error"></div>
+                                </div>
+                                <div class="mc-form-group-EMAIL group">
+                                    <input type="text" class="required" name="EMAIL" id="mce-EMAIL">
+                                    <span class="highlight"></span>
+                                    <span class="bar"></span>
+                                    <label class="label-form" for="mce-EMAIL">
+                                        Почта <span class="asterisk">*</span>
+                                    </label>
+                                    <div class="mc-error"></div>
+                                </div>
+                                <div class="mc-form-group-FNAME group">
+                                    <input type="text" class="required" name="FNAME" id="mce-FNAME">
+                                    <span class="highlight"></span>
+                                    <span class="bar"></span>
+                                    <label class="label-form" for="mce-FNAME">
+                                        Имя <span class="asterisk">*</span>
+                                    </label>
+                                    <div class="mc-error"></div>
+                                </div>
+                                <div class="mc-form-group-LNAME group">
+                                    <input type="text" class="required" name="LNAME" id="mce-LNAME">
+                                    <span class="highlight"></span>
+                                    <span class="bar"></span>
+                                    <label class="label-form" for="mce-LNAME">
+                                        Фамилия <span class="asterisk">*</span>
+                                    </label>
+                                    <div class="mc-error"></div>
+                                </div>
+                                <div class="mc-form-group-PHONE group">
+                                    <input type="text" class="required" name="PHONE" id="mce-PHONE">
+                                    <span class="highlight"></span>
+                                    <span class="bar"></span>
+                                    <label class="label-form" for="mce-PHONE">
+                                        Телефон <span class="asterisk">*</span>
+                                    </label>
+                                    <div class="mc-error" id="phone-error"></div>
+                                </div>
+                                <div class="mc-form-group-JOB group">
+                                    <input type="text" class="required" name="JOB" id="mce-JOB">
+                                    <span class="highlight"></span>
+                                    <span class="bar"></span>
+                                    <label class="label-form" for="mce-JOB">
+                                        Специальность (QA; дизайнер и т.д.) <span class="asterisk">*</span>
+                                    </label>
+                                    <div class="mc-error"></div>
+                                </div>
+                                <div class="mc-form-group-VDATE group">
+                                    <label class="gray-text" for="mce-VDATE">
+                                        Дата бронирования <span class="asterisk">*</span>
+                                    </label>
+                                    <input type="text" name="VDATE" placeholder="ММ/ДД/ГГГГ" id="mce-VDATE">
+                                    <span class="highlight"></span>
+                                    <span class="bar"></span>
+                                    <div class="mc-error"></div>
+                                </div>
+
+                                <div class="mc-form-group-MMERGE3 group">
+                                    <input type="text" name="MMERGE3" class="required" id="mce-MMERGE3">
+                                    <span class="highlight"></span>
+                                    <span class="bar"></span>
+                                    <label class="label-form" for="mce-MMERGE3">
+                                        Сообщение
+                                    </label>
+                                    <div class="mc-error"></div>
+                                </div>
+                                <div class="mc-form-group-LANG mc-field-group input-group" id="lang_ch1">
+                                    <label class="gray-text">
+                                        Выберите язык, на котором вы предпочли бы общаться: <span class="asterisk">*</span>
+                                    </label>
+                                    <ul>
+                                        <li>
+                                            <input type="radio" value="English" name="LANG1" id="engBtn1">
+                                            <label for="engBtn">English</label>
+                                        </li>
+                                        <li>
+                                            <input type="radio" value="Romanian" name="LANG1" id="romBtn1">
+                                            <label for="romBtn">Română</label>
+                                        </li>
+                                        <li>
+                                            <input type="radio" value="Russian" name="LANG1" id="ruBtn1">
+                                            <label for="ruBtn">Русский</label>
+                                        </li>
+                                    </ul>
+                                    <div class="mc-error"></div>
+                                </div>
+                                <div id="mc-general-error"></div>
+                            </form>
+                            <input type="submit" value="Отправить" name="schedule your tour" id="submit-tour-form" class="button">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+{% endblock %}
+
+{% block js %}
+    <script src="{{ asset('@js/tour.min.js') }}"></script>
+{% endblock %}

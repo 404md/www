@@ -1,0 +1,71 @@
+{% extends '../layout.twig' %}
+
+{% block css %}
+    <link rel="stylesheet" href="{{ asset('@css/index.min.css') }}" />
+{% endblock %}
+
+{% block body %}
+    <div class="wrapper main" itemscope itemprop="mainContentOfPage">
+        <div class="main-block">
+            <header class="main-nav">
+                <div class="container">
+                    <div class="logo" itemscope itemtype="https://schema.org/Organization">
+                        <a href="/ru" itemprop="url">
+                            <img itemprop="logo" class="img-logo" src="{{ asset('@img/logo-right-white.svg') }}" alt="Logo 404Moldova" />
+                            <meta itemprop="url" content="https://www.404.md/image/logo-right-white.svg">
+                        </a>
+                    </div>
+                    <div class="flag">
+                        <a class="language" href="/ro{{ routeName|slice(3) }}"><img src="{{ asset('@img/flag-ro.png') }}" alt="Romanian Flag"></a>
+                        <a class="language" href="/{{ routeName|slice(3) }}"><img src="{{ asset('@img/flag-us.png') }}" alt="American Flag"></a>
+                    </div>  
+                    <div class="nav-top main-page-nav" id="navigation">
+                        <div id="menu-toggle">
+                            <div id="hamburger">
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                            </div>
+                            <div id="cross">
+                                <span></span>
+                                <span></span>
+                            </div>
+                        </div>
+                        <ul class="navt" id="myTopnav">
+                            <li><a class="link" href="/ru/pricing">Цены</a></li>
+                            <li><a class="link" href="/ru/events">События</a></li>
+                            <li><a class="link" href="/ru/members">Участники</a></li>
+                            <li><a class="link" href="/ru/media">Пресса</a></li>
+                            <li><a class="link" href="/ru/gallery">Галерея</a></li>
+                            <li><a class="link" href="/ru/contact">Контакты</a></li>
+                            <li><a class="link" href="https://blog.404.md" target="_blank">Блог</a></li>
+                            <li class="current-item hide-line">
+                                <a class="last-line" href="/ru/tour"><span class="blog">Забронируйте обход</span></a>
+                            </li>
+                        </ul>
+                        <span id="slide-line"></span>
+                    </div>
+                    <div class="clear"></div>
+                </div>
+            </header>
+            <section class="container main-info ru-vertion">
+                <div class="local-com" itemscope itemtype="https://schema.org/Organization">
+                    <h1 itemprop="name">Коворкинг.</h1>
+                    <h2 itemprop="name">Местное Сообщество.</h2>
+                    <div itemprop="description" class="text-center">
+                        404Moldova - это сообщество для IT-бизнеса и IT-специалистов из Молдовы. Мы хотим дать возможность
+                        маленьким компаниям и квалифицированным специалистам стать конкурентоспособными на мировом рынке.
+                        Члены нашего сообщества гордятся тем, что работают с Fortune 500 клиентами из Европы и США.
+                    </div>
+                    <div class="more" itemscope itemtype="https://schema.org/SiteNavigationElement">
+                        <a class="more-about" href="ru/tour" itemprop="url">Бронирование посещения</a>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+{% endblock %}
+
+{% block js %}
+    <script src="{{ asset('@js/terms.min.js') }}"></script>
+{% endblock %}

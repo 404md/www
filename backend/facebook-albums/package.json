@@ -1,0 +1,9 @@
+{
+  "name": "facebook-albums",
+  "version": "0.0.1",
+  "author": "ddimitrioglo",
+  "license": "MIT",
+  "devDependencies": {
+    "aws-sdk": "^2.221.1"
+  }
+}

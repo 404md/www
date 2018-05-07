@@ -1,0 +1,31 @@
+{% extends '../layout.twig' %}
+
+{% block css %}
+    <link rel="stylesheet" href="{{ asset('@css/gallery.min.css') }}" />
+{% endblock %}
+
+{% block body %}
+    <div class=" container new-page">
+        <div class="pages">
+            <div class="line"></div>
+            <span class="text-page">
+                404Moldova это сообщество для IT-бизнеса и IT-специалистов из Молдовы. Мы хотим дать возможность
+                маленьким компаниям и квалифицированным специалистам стать конкурентоспособными на мировом рынке.
+                Члены нашего сообщества гордятся тем что работают с Fortune 500 клиентами из Европы и США.
+            </span>
+        </div>
+    </div>
+    <div class="wrapper photos-gallery" itemscope itemprop="mainContentOfPage">
+        <div class="main-block">
+            <div class="container">
+                <div class="gallery-block">
+                    <div class="clear"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
+
+{% block js %}
+    <script src="{{ asset('@js/gallery.min.js') }}"></script>
+{% endblock %}
