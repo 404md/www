@@ -46,7 +46,7 @@ Run the deploy command:
 bash bin/deploy.sh <env> <region> <aws-profile>
 ```
 
-Available `dev` and `master` environments for deploy.
+Available `dev`, `test` and `master` environments for deploy.
 
 >Defaults:
 >- `<env> => dev`
