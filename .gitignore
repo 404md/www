@@ -9,6 +9,7 @@ package-lock.json
 build/*
 static/js/
 static/css/
+public/*
 
 # Logs
 *.log

@@ -113,7 +113,8 @@
       "assets": {
         "css/gallery.min.css": [
           "$.common-scss",
-          "styles/responsive.scss"
+          "styles/responsive.scss",
+          "styles/gallery.scss"
         ],
         "js/gallery.min.js": [
           "$.common-js",

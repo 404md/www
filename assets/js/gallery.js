@@ -1,5 +1,5 @@
 jQuery(function($) {
-  fetch('https://s3.eu-central-1.amazonaws.com/www-dev.404.md/json/facebook-albums.json')
+  fetch('https://s3.eu-central-1.amazonaws.com/www.404.md/json/facebook-albums.json')
     .then(function(response) {
       return response.json();
     })
@@ -12,46 +12,61 @@ function generateFbFeedHTML(data) {
   let eventsHtml = '';
     data.forEach(function(item) {
       eventsHtml +=`
-      <div class="flex-item-6 space">
+      <div class="fb-album space">
         <div class="card-header">
-          <div class="icon">
-             <img src="img/main-photo.png" alt="icon" />
+          <div class="header-content">
+            <div class="icon">
+               <img src="../img/main-photo.png" class="icon-404" alt="icon" />
+            </div>
+            <div class="album-text">
+              <p class="page-title">404 Moldova</p>
+              <p class="album-date"> ${getDate(item.created_time)} </p>
+            </div>
           </div>
-          <p>404 Moldova</p>
-          <p> ${getDate(item.created_time)} </p>
-          <div class="fb-icon">
-             <img src="img/fb-icon.png" alt="icon" />
-          </div>
+            <div>
+                 <img src="../img/fb-icon.svg" class="fb-icon" alt="icon" />
+            </div>
         </div>
         <div class="description">
             <p>${descriptCheck(item.description)}</p>
         </div>
-        <div class="cover-photos">
-            <div id ="${item.id}" class="first-photo">
-                <img class="img-responsive" src="${item.images[0]}" height="208px">
+        <div class="photos">
+            <div class="cover-photos">
+              <div id ="${item.id}">
+                  <img class="img-responsive first-photo" src="${item.images[0]}" >
+              </div>
             </div>
-        </div>
-        <div class="cover-photos">
-            <div id ="${item.id}" class="second-photo">
-                <img class="img-responsive" src="${item.images[1]}" height="208px">
+            <div class="album-appendix">
+                <div class="cover-photos">
+                    <div id ="${item.id}">
+                        <img class="img-responsive second-photo" src="${item.images[1]}" >
+                    </div>
+                </div>
+                <div class="cover-photos">
+                   <div id ="${item.id}">
+                      <img class="img-responsive third-photo" src="${item.images[2]}" >
+                   </div>
+                </div>
+                <div class="cover-photos">
+                  <div id ="${item.id}">
+                      <img class="img-responsive fourth-photo" src="${item.images[3]}" >
+                  </div>
+                </div> 
             </div>
-        </div>
-        <div class="cover-photos">
-            <div id ="${item.id}" class="third-photo">
-                <img class="img-responsive" src="${item.images[2]}" height="208px">
-            </div>
-        </div>
-        <div class="cover-photos">
-            <div id ="${item.id}" class="fourth-photo">
-                <img class="img-responsive" src="${item.images[3]}" height="208px">
-            </div>
-        </div> 
-        <a href="${item.link}" target="_blank">
-          <div class="block-style">
-                ${item.name}
-          </div>
-        </a>
-        ${item.count}
+        
+         <div class="name-stripe">
+           <div class="gradient"></div>
+           <div class="album-name">
+            <a href="${item.link}" target="_blank">
+              <div class="block-style">
+                    ${item.name}
+              </div>
+            </a>
+            <p>${item.count}</p>
+           </div>
+         </div>
+       </div>
+        
       </div>
       `;
     });

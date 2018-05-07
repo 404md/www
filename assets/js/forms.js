@@ -1,4 +1,5 @@
 let errFlag = true;
+let messagesTemplate = {};
 
 jQuery(function($) {
   'use strict';
@@ -10,6 +11,23 @@ jQuery(function($) {
   const contactFields = ['#name', '#mce-PHONE', '#email'];
   const tourFields = ['#mce-EMAIL', '#mce-FNAME', '#mce-LNAME', '#mce-PHONE', '#mce-JOB', '#mce-VDATE', '#lang_ch', '#lang_ch1'];
 
+  if (route === '/ru/contact' || route === '/ru/tour') {
+    messagesTemplate = {
+      E001: 'Пожалуйста, введите значение',
+      E002: 'Некорректная дата',
+      E003: 'Отсутствует @ в адресе электронной почты',
+      E004: 'Неверный адрес электронной почты',
+      E005: 'Слишком много попыток подписки'
+    }
+  } else if (route === '/ro/contact' || route === '/ro/tour') {
+    messagesTemplate = {
+      E001: 'Vă rugăm să introduceți o valoare',
+      E002: 'Data incorectă',
+      E003: 'Lipsește @-ul în adresa de poștă electronică',
+      E004: 'Adresa de poștă electronică incorectă',
+      E005: 'Prea multe încercări de abonare'
+    }
+  }
 
   $('#mce-PHONE').on('input', function() {
     let $input = $(this);
@@ -26,7 +44,7 @@ jQuery(function($) {
         errMsg = 'Unacceptable value';
       } else if (route === '/ru/contact' || route === '/ru/tour') {
         errMsg = 'Недопустимое значение';
-      } else {
+      } else if (route === '/ro/contact' || route === '/ro/tour') {
         errMsg = 'Valoare inacceptabilă';
       }
       $phoneErr.html(`<p>${errMsg}</p>`);
@@ -96,8 +114,9 @@ jQuery(function($) {
       url: '//404.us11.list-manage.com/subscribe/post?u=13a7a5fca813b378c24ec9fe3&id=092d77b13b',
       fields: '1:NAME,4:PHONE,0:EMAIL,2:MESSAGE',
       submitSelector: '#submit-contact-form',
+      customMessages: messagesTemplate,
       onFail: (errMsg) => {
-        if (route === '/ru/contact/'){
+        if (route === '/ru/contact/') {
           translation(errMsg, 'ru');
         } else if (route === '/ro/contact/'){
           translation(errMsg, 'ro');
@@ -126,6 +145,7 @@ jQuery(function($) {
       url: '//mitocgroup.us11.list-manage.com/subscribe/post?u=13a7a5fca813b378c24ec9fe3&id=de06a08172',
       fields: '0:EMAIL,1:FNAME,2:LNAME,3:PHONE,4:JOB,5:VDATE,6:MMERGE3,7:LANG',
       submitSelector: '#submit-tour-form',
+      customMessages: messagesTemplate,
       onFail: (errMsg) => {
         let lnId = $('input:checked').attr('id');
         if (lnId === 'romBtn') {
