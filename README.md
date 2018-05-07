@@ -25,7 +25,7 @@ This repository stores the code and data for [www.404.md][1]
 ```bash
 bash bin/deploy.sh [env] (aws-profile)
 ```
-> [env] required, default `dev`, available `dev`, `test`, `stage` and `master` \
+> [env] required, default `dev`, available `_dev`, `dev`, `test`, `stage` and `master` \
 (aws-profile) optional, default `none`
 
 * To deploy backend part, switch to `backend` directory and run:
