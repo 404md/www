@@ -18,7 +18,7 @@ module.exports = {
     name: 'aws',
     runtime: 'nodejs8.10',
     stage: stage,
-    region: 'us-east-1',
+    region: 'eu-central-1',
     environment: {
       BUCKET_NAME: '${self:custom.bucket}'
     },
