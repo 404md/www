@@ -22,7 +22,7 @@ module.exports = {
     environment: {
       BUCKET_NAME: '${self:custom.bucket}'
     },
-    role: 'ServiceRoleForLambdaEdge'
+    role: 'arn:aws:iam:::role/ServiceRoleForLambdaEdge'
   },
   package: {
     individually: true,
