@@ -10,7 +10,7 @@ jQuery(function ($) {
         }, {breakpoint: 480, settings: {slidesToShow: 1, slidesToScroll: 1}}]
     });
 
-  fetch('http://www.404.md.s3-website.eu-central-1.amazonaws.com/json/instagram-feed.json')
+  fetch('https://www.404.md/json/instagram-feed.json')
     .then(function(response) {
       return response.json();
     })
