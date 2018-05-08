@@ -1,28 +1,23 @@
 'use strict';
 
-// const program = require('commander');
-let stageTemplate = 'dev';
-let bucketTemplate = 'www-dev.404.md';
-
-// program
-//   .option('--stage <n>', 'stage')
-//   .parse(process.argv);
+let stage = 'dev';
+let bucket = 'www-dev.404.md';
 
 if (process.argv[3] === 'master') {
-  stageTemplate = 'master';
-  bucketTemplate = 'www.404.md'
+  stage = 'master';
+  bucket = 'www.404.md'
 }
 
 module.exports = {
   service: 'www-404-md',
   custom: {
-    bucket: bucketTemplate,
+    bucket: bucket,
     schedule: 'rate(1 day)'
   },
   provider: {
     name: 'aws',
     runtime: 'nodejs6.10',
-    stage: program.stage || stageTemplate,
+    stage: stage,
     region: 'us-east-1',
     profile: 'saml',
     environment: {
@@ -52,11 +47,7 @@ module.exports = {
         MAX_WIDTH: '590',
         KEY_NAME: 'json/medium-feed.json'
       },
-      events: [
-        {
-          schedule: '${self:custom.schedule}'
-        }
-      ]
+      events: [{schedule: '${self:custom.schedule}'}]
     },
     'instagram-feed': {
       handler: 'instagram-feed/index.handler',
@@ -66,11 +57,7 @@ module.exports = {
       environment: {
         API_TOKEN: '${ssm:instagramApiToken}'
       },
-      events: [
-        {
-          schedule: '${self:custom.schedule}'
-        }
-      ]
+      events: [{schedule: '${self:custom.schedule}'}]
     },
     'facebook-events': {
       handler: 'facebook-events/index.handler',
@@ -82,11 +69,7 @@ module.exports = {
         API_TOKEN: '${ssm:facebookApiToken}',
         KEY_NAME: 'json/facebook-events.json'
       },
-      events: [
-        {
-          schedule: '${self:custom.schedule}'
-        }
-      ]
+      events: [{schedule: '${self:custom.schedule}'}]
     },
     'facebook-albums': {
       handler: 'facebook-albums/index.handler',
@@ -97,11 +80,7 @@ module.exports = {
         API_TOKEN: '${ssm:facebookApiToken}',
         KEY_NAME: 'json/facebook-albums.json'
       },
-      events: [
-        {
-          schedule: '${self:custom.schedule}'
-        }
-      ]
+      events: [{schedule: '${self:custom.schedule}'}]
     }
   }
 };
