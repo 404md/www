@@ -19,7 +19,7 @@ module.exports = {
     runtime: 'nodejs6.10',
     stage: stage,
     region: 'us-east-1',
-    profile: 'saml',
+    //profile: 'saml',
     environment: {
       BUCKET_NAME: '${self:custom.bucket}'
     },
