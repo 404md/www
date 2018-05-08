@@ -21,6 +21,7 @@ else
 fi
 
 echo "Starting compiling"
+npm install
 npm run compile
 
 echo "Synchronizing build directory"
