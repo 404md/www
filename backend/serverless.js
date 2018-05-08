@@ -16,7 +16,7 @@ module.exports = {
   },
   provider: {
     name: 'aws',
-    runtime: 'nodejs6.10',
+    runtime: 'nodejs8.10',
     stage: stage,
     region: 'us-east-1',
     environment: {
