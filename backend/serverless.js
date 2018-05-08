@@ -22,13 +22,7 @@ module.exports = {
     environment: {
       BUCKET_NAME: '${self:custom.bucket}'
     },
-    iamRoleStatements: [
-      {
-        Effect: 'Allow',
-        Action: ['s3:*'],
-        Resource: 'arn:aws:s3:::${self:custom.bucket}/*'
-      }
-    ]
+    role: 'ServiceRoleForLambdaEdge'
   },
   package: {
     individually: true,
