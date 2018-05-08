@@ -30,4 +30,9 @@ aws s3 sync ${APP_DIR} ${BUCKET} ${PROFILE}
 echo "Invalidating CloudFront"
 aws cloudfront create-invalidation --distribution-id ${DIST_ID} --paths '/*' ${PROFILE}
 
+echo "Deploy backend"
+cd ./backend/
+sls deploy --stage dev
+cd ..
+
 echo "Done"
