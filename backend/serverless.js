@@ -19,7 +19,6 @@ module.exports = {
     runtime: 'nodejs6.10',
     stage: stage,
     region: 'us-east-1',
-    //profile: 'saml',
     environment: {
       BUCKET_NAME: '${self:custom.bucket}'
     },
@@ -55,7 +54,7 @@ module.exports = {
         include: ["instagram-feed/**"]
       },
       environment: {
-        API_TOKEN: '${ssm:instagramApiToken}'
+        API_TOKEN: '${ssm:/CodeBuild/MitocGroup/IG_ACCESS_TOKEN}'
       },
       events: [{schedule: '${self:custom.schedule}'}]
     },
@@ -66,7 +65,7 @@ module.exports = {
       },
       environment: {
         COUNT: '6',
-        API_TOKEN: '${ssm:facebookApiToken}',
+        API_TOKEN: '${ssm:/CodeBuild/MitocGroup/FB_ACCESS_TOKEN}',
         KEY_NAME: 'json/facebook-events.json'
       },
       events: [{schedule: '${self:custom.schedule}'}]
@@ -77,7 +76,7 @@ module.exports = {
         include: ['facebook-albums/**']
       },
       environment: {
-        API_TOKEN: '${ssm:facebookApiToken}',
+        API_TOKEN: '${ssm:/CodeBuild/MitocGroup/FB_ACCESS_TOKEN}',
         KEY_NAME: 'json/facebook-albums.json'
       },
       events: [{schedule: '${self:custom.schedule}'}]
