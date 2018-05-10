@@ -1,0 +1,107 @@
+'use strict';
+
+const program = require('commander');
+let stageTemplate = 'dev';
+let bucketTemplate = 'www-dev.404.md';
+
+// program
+//   .option('--stage <n>', 'stage')
+//   .parse(process.argv);
+
+if (process.argv[process.argv.length] === 'prod') {
+  stageTemplate = 'prod';
+  bucketTemplate = 'www.404.md'
+}
+
+module.exports = {
+  service: 'www-404-md',
+  custom: {
+    bucket: bucketTemplate,
+    schedule: 'rate(1 day)'
+  },
+  provider: {
+    name: 'aws',
+    runtime: 'nodejs6.10',
+    stage: program.stage || stageTemplate,
+    region: 'us-east-1',
+    profile: 'mitoc',
+    environment: {
+      BUCKET_NAME: '${self:custom.bucket}'
+    },
+    iamRoleStatements: [
+      {
+        Effect: 'Allow',
+        Action: ['s3:*'],
+        Resource: 'arn:aws:s3:::${self:custom.bucket}/*'
+      }
+    ]
+  },
+  package: {
+    individually: true,
+    exclude: ['./**'],
+    include: ['common/**']
+  },
+  functions: {
+    'medium-feed': {
+      handler: 'medium-feed/index.handler',
+      package: {
+        include: ['medium-feed/**']
+      },
+      environment: {
+        COUNT: '3',
+        MAX_WIDTH: '590',
+        KEY_NAME: 'json/medium-feed.json'
+      },
+      events: [
+        {
+          schedule: '${self:custom.schedule}'
+        }
+      ]
+    },
+    'instagram-feed': {
+      handler: 'instagram-feed/index.handler',
+      package: {
+        include: ["instagram-feed/**"]
+      },
+      environment: {
+        API_TOKEN: '${ssm:instagramApiToken}'
+      },
+      events: [
+        {
+          schedule: '${self:custom.schedule}'
+        }
+      ]
+    },
+    'facebook-events': {
+      handler: 'facebook-events/index.handler',
+      package: {
+        include: ['facebook-events/**']
+      },
+      environment: {
+        COUNT: '6',
+        API_TOKEN: '${ssm.facebookApiToken}',
+        KEY_NAME: 'json/facebook-events.json'
+      },
+      events: [
+        {
+          schedule: '${self:custom.schedule}'
+        }
+      ]
+    },
+    'facebook-albums': {
+      handler: 'facebook-albums/index.handler',
+      package: {
+        include: ['facebook-albums/**']
+      },
+      environment: {
+        API_TOKEN: '${ssm:facebookApiToken}',
+        KEY_NAME: 'json/facebook-albums.json'
+      },
+      events: [
+        {
+          schedule: '${self:custom.schedule}'
+        }
+      ]
+    }
+  }
+};

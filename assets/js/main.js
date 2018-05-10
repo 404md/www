@@ -205,7 +205,7 @@ jQuery(function($) {
    * @todo move to a lambda function
    */
 
-  fetch(`http://www.404.md.s3-website.eu-central-1.amazonaws.com/json/medium-feed.json`)
+  fetch('/json/medium-feed.json')
     .then(function (response) {
       return response.json();
     })

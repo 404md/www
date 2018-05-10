@@ -10,5 +10,8 @@
   "devDependencies": {
     "web-boost": "^1.2.0"
   },
-  "dependencies": {}
+  "dependencies": {
+    "lodash": "^4.17.10",
+    "serverless": "^1.27.2"
+  }
 }
