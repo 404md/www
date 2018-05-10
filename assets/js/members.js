@@ -10,6 +10,7 @@ jQuery(function ($) {
         }, {breakpoint: 480, settings: {slidesToShow: 1, slidesToScroll: 1}}]
     });
 
+
   fetch('/json/instagram-feed.json')
     .then(function(response) {
       return response.json();

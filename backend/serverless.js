@@ -1,40 +1,28 @@
 'use strict';
 
-const program = require('commander');
-let stageTemplate = 'dev';
-let bucketTemplate = 'www-dev.404.md';
+let stage = 'dev';
+let bucket = 'www-dev.404.md';
 
-// program
-//   .option('--stage <n>', 'stage')
-//   .parse(process.argv);
-
-if (process.argv[process.argv.length] === 'prod') {
-  stageTemplate = 'prod';
-  bucketTemplate = 'www.404.md'
+if (process.argv[3] === 'master') {
+  stage = 'master';
+  bucket = 'www.404.md'
 }
 
 module.exports = {
   service: 'www-404-md',
   custom: {
-    bucket: bucketTemplate,
+    bucket: bucket,
     schedule: 'rate(1 day)'
   },
   provider: {
     name: 'aws',
-    runtime: 'nodejs6.10',
-    stage: program.stage || stageTemplate,
-    region: 'us-east-1',
-    profile: 'mitoc',
+    runtime: 'nodejs8.10',
+    stage: stage,
+    region: 'eu-central-1',
     environment: {
       BUCKET_NAME: '${self:custom.bucket}'
     },
-    iamRoleStatements: [
-      {
-        Effect: 'Allow',
-        Action: ['s3:*'],
-        Resource: 'arn:aws:s3:::${self:custom.bucket}/*'
-      }
-    ]
+    role: 'arn:aws:iam::492198229272:role/ServiceRoleForLambdaEdge'
   },
   package: {
     individually: true,
@@ -52,11 +40,7 @@ module.exports = {
         MAX_WIDTH: '590',
         KEY_NAME: 'json/medium-feed.json'
       },
-      events: [
-        {
-          schedule: '${self:custom.schedule}'
-        }
-      ]
+      events: [{schedule: '${self:custom.schedule}'}]
     },
     'instagram-feed': {
       handler: 'instagram-feed/index.handler',
@@ -64,13 +48,9 @@ module.exports = {
         include: ["instagram-feed/**"]
       },
       environment: {
-        API_TOKEN: '${ssm:instagramApiToken}'
+        API_TOKEN: '${ssm:/CodeBuild/MitocGroup/IG_ACCESS_TOKEN}'
       },
-      events: [
-        {
-          schedule: '${self:custom.schedule}'
-        }
-      ]
+      events: [{schedule: '${self:custom.schedule}'}]
     },
     'facebook-events': {
       handler: 'facebook-events/index.handler',
@@ -79,14 +59,10 @@ module.exports = {
       },
       environment: {
         COUNT: '6',
-        API_TOKEN: '${ssm.facebookApiToken}',
+        API_TOKEN: '${ssm:/CodeBuild/MitocGroup/FB_ACCESS_TOKEN}',
         KEY_NAME: 'json/facebook-events.json'
       },
-      events: [
-        {
-          schedule: '${self:custom.schedule}'
-        }
-      ]
+      events: [{schedule: '${self:custom.schedule}'}]
     },
     'facebook-albums': {
       handler: 'facebook-albums/index.handler',
@@ -94,14 +70,10 @@ module.exports = {
         include: ['facebook-albums/**']
       },
       environment: {
-        API_TOKEN: '${ssm:facebookApiToken}',
+        API_TOKEN: '${ssm:/CodeBuild/MitocGroup/FB_ACCESS_TOKEN}',
         KEY_NAME: 'json/facebook-albums.json'
       },
-      events: [
-        {
-          schedule: '${self:custom.schedule}'
-        }
-      ]
+      events: [{schedule: '${self:custom.schedule}'}]
     }
   }
 };

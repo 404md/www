@@ -21,6 +21,7 @@ else
 fi
 
 echo "Starting compiling"
+npm install
 npm run compile
 
 echo "Synchronizing build directory"
@@ -28,5 +29,10 @@ aws s3 sync ${APP_DIR} ${BUCKET} ${PROFILE}
 
 echo "Invalidating CloudFront"
 aws cloudfront create-invalidation --distribution-id ${DIST_ID} --paths '/*' ${PROFILE}
+
+echo "Deploy backend"
+cd ./backend/
+sls deploy --stage dev
+cd ..
 
 echo "Done"
