@@ -1,0 +1,74 @@
+{% extends '../layout.twig' %}
+
+{% block css %}
+    <link rel="stylesheet" href="{{ asset('@css/contact.min.css') }}" />
+{% endblock %}
+
+{% block body %}
+    <div class="container new-page">
+        <div class="pages">
+            <span class="text-page">
+                404Moldova este o comunitate de firme IT și specialiști IT din Moldova. Avem ca scop sa susținem comunitatea
+                locală IT a companiilor mici și a specialiștilor calificați să fie competitivi la nivel global.
+            </span>
+        </div>
+    </div>
+    <div class="wrapper contact" itemscope itemprop="mainContentOfPage">
+        <section class="main-block">
+            <div class="container">
+                <div id="map" class="map-style"></div>
+                <div class="input-field">
+                    <form id="subscribe-contact-form" class="hole-form">
+                        <h2 class="heading-contact">Contactează-ne</h2>
+                        <div class="indicates-required">
+                            <span class="asterisk">*</span>câmpuri necesare
+                        </div>
+                        <div class="group mc-form-group-NAME">
+                            <input id="name" class="empty-field required" type="text" name="NAME">
+                            <span class="highlight"></span>
+                            <span class="bar"></span>
+                            <label class="label-form" for="name">
+                                Nume <span class="asterisk">*</span>
+                            </label>
+                            <div class="mc-error"></div>
+                        </div>
+                        <div class="group mc-form-group-PHONE" >
+                            <input id="mce-PHONE" class="empty-field required" type="text" name="PHONE">
+                            <span class="highlight"></span>
+                            <span class="bar"></span>
+                            <label class="label-form" for="mce-PHONE">
+                                Telefon <span class="asterisk">*</span>
+                            </label>
+                            <div class="mc-error" id="phone-error"></div>
+                        </div>
+                        <div class="group mc-form-group-EMAIL">
+                            <input id="email" class="empty-field required" type="text" name="EMAIL">
+                            <span class="highlight"></span>
+                            <span class="bar"></span>
+                            <label class="label-form" for="email">
+                                E-mail <span class="asterisk">*</span>
+                            </label>
+                            <div class="mc-error"></div>
+                        </div>
+                        <div class="group mc-form-group-MESSAGE">
+                            <input id="msg" class="empty-field required" type="text" name="MESSAGE">
+                            <span class="highlight"></span>
+                            <span class="bar"></span>
+                            <label class="label-form" for="msg">
+                                Mesaj
+                            </label>
+                            <div class="mc-error"></div>
+                        </div>
+                        <div id="mc-general-error"></div>
+                        <input type="submit" value="Trimite" name="Submit" id="submit-contact-form" class="button button-contact">
+                    </form>
+                </div>
+            </div>
+        </section>
+    </div>
+{% endblock %}
+
+{% block js %}
+    <script src="{{ asset('@js/contact.min.js') }}"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBMl1HPvxC30Mtcbe6gKWZjiccGAYopsQA&callback=myMap" async defer></script>
+{% endblock %}

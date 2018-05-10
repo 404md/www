@@ -1,0 +1,75 @@
+{% set opinions = [
+    {'text': '404.md мотивирует меня', 'image': '@img/avatar-vlad1.png', 'author': 'Влад У.', 'bgimage': '@img/gallery-1.jpg'},
+    {'text': '404.md вдохновляет меня на успех', 'image': '@img/avatar-eugen1.png', 'author': 'Евгений И.', 'bgimage': '@img/gallery-2.jpg'},
+    {'text': 'Здесь твоя социальная сеть реальна', 'image': '@img/avatar-irina1.png', 'author': 'Ирина И.', 'bgimage': '@img/gallery-3.jpg'},
+    {'text': 'Я рад быть частью сообщества 404', 'image': '@img/avatar-alex1.png', 'author': 'Алекс К.', 'bgimage': '@img/gallery-4.jpg'},
+    {'text': '404 - лучшее место для работы с профессионалами', 'image': '@img/avatar-cristi1.png', 'author': 'Кристи К.', 'bgimage': '@img/gallery-5.jpg'},
+    {'text': 'Уютное место и приятная атмосфера', 'image': '@img/avatar-alex2.png', 'author': 'Александр В.', 'bgimage': '@img/gallery-6.jpg'},
+    {'text': 'Я рад быть частью сообшества 404', 'image': '@img/avatar-marcel1.png', 'author': 'Марчел Г.', 'bgimage': '@img/gallery-7.jpg'},
+    {'text': '404 позволяет мне наслаждаться работой', 'image': '@img/avatar-grigore1.png', 'author': 'Григорий М.', 'bgimage': '@img/gallery-8.jpg'},
+    {'text': '404 мотивирует меня каждый день', 'image': '@img/avatar-dan1.png', 'author': 'Дан Б.', 'bgimage': '@img/gallery-9.jpg'},
+    {'text': '404 - это идеальное место, чтобы преуспеть', 'image': '@img/avatar-dima1.png', 'author': 'Дима Д.', 'bgimage': '@img/gallery-10.jpg'},
+    {'text': '404 - идеальный путь к достижениям', 'image': '@img/avatar-tanea1.png', 'author': 'Таня С.', 'bgimage': '@img/gallery-11.jpg'},
+    {'text': 'Тут чувствуешь себя как дома', 'image': '@img/avatar-dima2.png', 'author': 'Дмитрий С.', 'bgimage': '@img/gallery-12.jpg'}
+]%}
+
+{% set partners = [
+    {'class': 'usaid', 'image': '@img/logo-usaid.svg', 'alt': 'USAID from the American People', 'png': 'https://www.404.md/images/logo-usaid.png'},
+    {'class': 'sweden', 'image': '@img/sweden.svg', 'alt': 'Government of Sweden', 'png': 'https://www.404.md/images/logo-sweden.png'},
+    {'class': 'pycoding', 'image': '@img/logo-pycoding.svg', 'alt': 'PyCoding Moldova', 'png': 'https://www.404.md/images/logo-pycoding.svg'},
+    {'class': 'mitoc', 'image': '@img/logo-mitoc.svg', 'alt': 'Mitoc Group USA', 'png': 'https://www.404.md/images/logo-mitoc.svg'}
+]%}
+
+<section class="gallery connect-us">
+    <div class="gallery-line footer-carousel" itemscope itemtype="https://schema.org/UserComments">
+        {% for opinion in opinions %}
+            <div class="pic">
+                <div class="hidden-avatar">
+                    <div class="we-love">
+                        <div class="comment">
+                            <div class="quote">
+                                <i class="mdi-format-quote-open mdi-set"></i>
+                            </div>
+                            <span itemprop="commentText">"{{ opinion.text }}"</span>
+                        </div>
+                        <div class="avatar">
+                            <img src="{{ asset( opinion.image ) }}" alt="{{ opinion.author }}">
+                        </div>
+                        <span class="avatar-comment" itemprop="name">{{ opinion.author }}</span>
+                    </div>
+                </div>
+                <div class="image-members">
+                    <img src="{{ asset( opinion.bgimage ) }}" alt="{{ opinion.author }}">
+                </div>
+            </div>
+        {% endfor %}
+    </div> 
+    <div class="clear"></div>
+</section>
+
+<div class="wrapper">
+    <div class="container">
+        <section class="partners" itemscope itemtype="https://schema.org/Organization">
+            {% for partner in partners %}
+                <div class="{{ partner.class }}">
+                    <img itemprop="logo" src="{{ asset( partner.image ) }}" alt="{{ partner.alt }}">
+                    <meta itemprop="url" content="{{ partner.png }}">
+                </div>
+            {% endfor %}
+            <hr>
+        </section>
+
+        <section id="blog" class="blog">
+            <header class="section-heading">
+                <h2>Новое в блоге:</h2>
+                <a href="https://blog.404.md/" class="button" target="_blank">Читать еще</a>
+            </header>
+            <div id="blogContent" class="section-content">
+                <div id="jsonContent" class="flex-row"></div>
+            </div>
+            <div class="text-center">
+                <a id="loadBlogPosts" class="btn btn-dark" href='//blog.404.md'></a>
+            </div>
+        </section>
+    </div>
+</div>
