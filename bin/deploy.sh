@@ -32,7 +32,7 @@ aws cloudfront create-invalidation --distribution-id ${DIST_ID} --paths '/*' ${P
 
 echo "Deploy backend"
 cd ./backend/
-sls deploy ${BRANCH}
-cd ..
+sls deploy "--${BRANCH}"
+cd ../
 
 echo "Done"
