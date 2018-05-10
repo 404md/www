@@ -3,7 +3,7 @@
 let stage = 'dev';
 let bucket = 'www-dev.404.md';
 
-if (process.argv[3] === 'master') {
+if (process.argv[3] === '--master') {
   stage = 'master';
   bucket = 'www.404.md'
 }
