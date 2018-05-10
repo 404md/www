@@ -204,7 +204,8 @@ jQuery(function($) {
   /**
    * @todo move to a lambda function
    */
-  fetch(`https://www.404.md/json/medium-feed.json`)
+
+  fetch('/json/medium-feed.json')
     .then(function (response) {
       return response.json();
     })

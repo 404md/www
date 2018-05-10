@@ -1,5 +1,5 @@
 jQuery(function($) {
-  fetch('https://s3.eu-central-1.amazonaws.com/www.404.md/json/facebook-albums.json')
+  fetch('/json/facebook-albums.json')
     .then(function(response) {
       return response.json();
     })

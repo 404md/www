@@ -10,8 +10,12 @@ jQuery(function($) {
   const route = window.location.pathname;
   const contactFields = ['#name', '#mce-PHONE', '#email'];
   const tourFields = ['#mce-EMAIL', '#mce-FNAME', '#mce-LNAME', '#mce-PHONE', '#mce-JOB', '#mce-VDATE', '#lang_ch', '#lang_ch1'];
+  const ruRegEx = /^\/ru\/((\w+)+\/?)$/;
+  const roRegEx = /^\/ro\/((\w+)+\/?)$/;
+  const enRegEx = /^\/((\w+)+\/?)$/;
+  const pathRegEx = /^(\/(\w+))?\/((\w+)+\/?)$/;
 
-  if (route === '/ru/contact' || route === '/ru/tour') {
+  if (ruRegEx.test(route)) {
     messagesTemplate = {
       E001: 'Пожалуйста, введите значение',
       E002: 'Некорректная дата',
@@ -19,7 +23,7 @@ jQuery(function($) {
       E004: 'Неверный адрес электронной почты',
       E005: 'Слишком много попыток подписки'
     }
-  } else if (route === '/ro/contact' || route === '/ro/tour') {
+  } else if (roRegEx.test(route)) {
     messagesTemplate = {
       E001: 'Vă rugăm să introduceți o valoare',
       E002: 'Data incorectă',
@@ -40,11 +44,11 @@ jQuery(function($) {
       $phoneErr.html(`<p>${errMsg}</p>`);
       errFlag = false;
     } else {
-      if (route === '/contact' || route === '/tour') {
+      if (enRegEx.test(route)) {
         errMsg = 'Unacceptable value';
-      } else if (route === '/ru/contact' || route === '/ru/tour') {
+      } else if (ruRegEx.test(route)) {
         errMsg = 'Недопустимое значение';
-      } else if (route === '/ro/contact' || route === '/ro/tour') {
+      } else if (roRegEx.test(route)) {
         errMsg = 'Valoare inacceptabilă';
       }
       $phoneErr.html(`<p>${errMsg}</p>`);
@@ -65,7 +69,6 @@ jQuery(function($) {
       errFlag = true;
     });
   }
-
 
   if($tourForm) {
 
@@ -116,9 +119,9 @@ jQuery(function($) {
       submitSelector: '#submit-contact-form',
       customMessages: messagesTemplate,
       onFail: (errMsg) => {
-        if (route === '/ru/contact/') {
+        if (ruRegEx.test(route)) {
           translation(errMsg, 'ru');
-        } else if (route === '/ro/contact/'){
+        } else if (roRegEx.test(route)){
           translation(errMsg, 'ro');
         } else {
           $genErr.html(`<div class="error-mc">${errMsg}</div>`);
@@ -158,19 +161,17 @@ jQuery(function($) {
       },
       onOk: (okMsg) => {
         let lnId = $('input:checked').attr('id');
-        if (lnId === 'engBtn' && (route === '/tour' || route === '/ru/tour' || '/ro/tour'))  {
+        if (lnId === 'engBtn' && pathRegEx.test(route))  {
           window.location.href = '/thank-you'
-        } else if (lnId === 'romBtn' && (route === '/tour' || route === '/ru/tour' || '/ro/tour')) {
+        } else if (lnId === 'romBtn' && pathRegEx.test(route)) {
           window.location.href = '/ro/thank-you'
-        } else if (lnId === 'ruBtn' && (route === '/tour' || route === '/ru/tour' || '/ro/tour')) {
+        } else if (lnId === 'ruBtn' && pathRegEx.test(route)) {
           window.location.href = '/ru/thank-you'
         }
         $('#subscribe-tour-form input[type="text"]').val('');
       }
     });
   }
-
-
 
   /**
    * @param {String} errMsg
