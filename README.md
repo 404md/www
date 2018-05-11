@@ -1,57 +1,42 @@
 # www
-This repository stores the code and data for www.404.md
 
-## Back-end maintenance
+This repository stores the code and data for [www.404.md][1]
 
-404.md's back-end functionality is running in AWS.Lambda
+## Frontend
 
-### Contact Form
+404.md's frontend is build on top of [Web-boost][2] static site generator.
 
-Checks user input data and sends email if there is no invalid data.
+## Backend
 
-* Protected by Google reCaptcha;
-* Sends emails through AWS.SES.
-
-### Instagram feed
-
-Fetches data from Instagram feed and stores them to domain related bucket.
-
-* Used official Instagram API (api.instagram.com/v1);
-* Fetch latest 20 posts.
-
-### Facebook Events
-
-Fetches Facebook events list and stores them as json.
+404.md's backend is build on top of [Serverless Framework][3] (AWS provider).
 
 ## Deployment
 
-### Pre-requisites
+### Prerequisites
 
-- Amazon Web Services (AWS) [account][1]
-- AWS Command Line Interface (CLI) [configured][2]
-
-### Prepare
-
-Make sure you have all requirements installed
-
-```bash
-cd bin/travis && npm install && cd ../../
-```
+- Amazon Web Services (AWS) [account][4]
+- AWS Command Line Interface (CLI) [configured][5]
+- Serverless Framework [installed][6]
 
 ### Build & deploy
 
-Run the deploy command:
+* To deploy frontend part, just run:
 
 ```bash
-bash bin/deploy.sh <env> <region> <aws-profile>
+bash bin/deploy.sh [env] (aws-profile)
+```
+> [env] required, default `dev`, available `dev` and `master` \
+(aws-profile) optional, default `none`
+
+* To deploy backend part, switch to `backend` directory and run:
+
+```bash
+serverless deploy
 ```
 
-Available `dev` and `master` environments for deploy.
-
->Defaults:
->- `<env> => dev`
->- `<region> => eu-central-1`
->- `<profile> => default`
-
-[1]: https://www.youtube.com/watch?v=WviHsoz8yHk
-[2]: https://docs.aws.amazon.com/cli/latest/userguide/cli-chap-getting-started.html
+[1]: https://www.404.md
+[2]: https://github.com/ddimitrioglo/web-boost
+[3]: https://github.com/serverless/serverless
+[4]: https://www.youtube.com/watch?v=WviHsoz8yHk
+[5]: https://docs.aws.amazon.com/cli/latest/userguide/cli-chap-getting-started.html
+[6]: https://github.com/serverless/serverless#quick-start

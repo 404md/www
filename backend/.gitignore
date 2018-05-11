@@ -1,12 +1,8 @@
 # Dependency directories
-/node_modules/
+node_modules
 
-# Lambda related
-**/dist/
-**/config.json
-
-# npm cache directory
-.npm
+# Serverless directories
+.serverless
 
 # Logs
 *.log

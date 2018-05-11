@@ -1,4 +1,0 @@
-User-agent: *
-Disallow: 
-
-Sitemap: https://www.404.md/sitemap.xml

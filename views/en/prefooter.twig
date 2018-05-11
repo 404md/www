@@ -1,0 +1,75 @@
+{% set opinions = [
+    {'text': '404.md keeps me motivated', 'image': '@img/avatar-vlad1.png', 'author': 'Vlad U.', 'bgimage': '@img/gallery-1.jpg'},
+    {'text': '404.md inspires me to do good', 'image': '@img/avatar-eugen1.png', 'author': 'Eugen I.', 'bgimage': '@img/gallery-2.jpg'},
+    {'text': 'Here your social network is real', 'image': '@img/avatar-irina1.png', 'author': 'Irina C.', 'bgimage': '@img/gallery-3.jpg'},
+    {'text': 'Proud to be a member of 404 community', 'image': '@img/avatar-alex1.png', 'author': 'Alex C.', 'bgimage': '@img/gallery-4.jpg'},
+    {'text': '404 is a great place to work with professionals', 'image': '@img/avatar-cristi1.png', 'author': 'Cristi C.', 'bgimage': '@img/gallery-5.jpg'},
+    {'text': 'Comfortable place and welcoming atmosphere', 'image': '@img/avatar-alex2.png', 'author': 'Alexandr V.', 'bgimage': '@img/gallery-6.jpg'},
+    {'text': 'I enjoy being a part of 404 community', 'image': '@img/avatar-marcel1.png', 'author': 'Marcel G.', 'bgimage': '@img/gallery-7.jpg'},
+    {'text': '404 makes me enjoy my work', 'image': '@img/avatar-grigore1.png', 'author': 'Grigore M.', 'bgimage': '@img/gallery-8.jpg'},
+    {'text': '404 inspires me everyday', 'image': '@img/avatar-dan1.png', 'author': 'Dan B.', 'bgimage': '@img/gallery-9.jpg'},
+    {'text': '404 is a perfect place to succeed', 'image': '@img/avatar-dima1.png', 'author': 'Dima D.', 'bgimage': '@img/gallery-10.jpg'},
+    {'text': '404 is a perfect way to acomplish yourself', 'image': '@img/avatar-tanea1.png', 'author': 'Tanea S.', 'bgimage': '@img/gallery-11.jpg'},
+    {'text': 'It feels like home here', 'image': '@img/avatar-dima2.png', 'author': 'Dima S.', 'bgimage': '@img/gallery-12.jpg'}
+]%}
+
+{% set partners = [
+    {'class': 'usaid', 'image': '@img/logo-usaid.svg', 'alt': 'USAID from the American People', 'png': 'https://www.404.md/images/logo-usaid.png'},
+    {'class': 'sweden', 'image': '@img/sweden.svg', 'alt': 'Government of Sweden', 'png': 'https://www.404.md/images/logo-sweden.png'},
+    {'class': 'pycoding', 'image': '@img/logo-pycoding.svg', 'alt': 'PyCoding Moldova', 'png': 'https://www.404.md/images/logo-pycoding.svg'},
+    {'class': 'mitoc', 'image': '@img/logo-mitoc.svg', 'alt': 'Mitoc Group USA', 'png': 'https://www.404.md/images/logo-mitoc.svg'}
+]%}
+
+<section class="gallery connect-us">
+    <div class="gallery-line footer-carousel" itemscope itemtype="https://schema.org/UserComments">
+        {% for opinion in opinions %}
+            <div class="pic">
+                <div class="hidden-avatar">
+                    <div class="we-love">
+                        <div class="comment">
+                            <div class="quote">
+                                <i class="mdi-format-quote-open mdi-set"></i>
+                            </div>
+                            <span itemprop="commentText">"{{ opinion.text }}"</span>
+                        </div>
+                        <div class="avatar">
+                            <img src="{{ asset( opinion.image ) }}" alt="{{ opinion.author }}">
+                        </div>
+                        <span class="avatar-comment" itemprop="name">{{ opinion.author }}</span>
+                    </div>
+                </div>
+                <div class="image-members">
+                    <img src="{{ asset( opinion.bgimage ) }}" alt="{{ opinion.author }}">
+                </div>
+            </div>
+        {% endfor %}
+    </div> 
+    <div class="clear"></div>
+</section>
+
+<div class="wrapper">
+    <div class="container">
+        <section class="partners" itemscope itemtype="https://schema.org/Organization">
+            {% for partner in partners %}
+                <div class="{{ partner.class }}">
+                    <img itemprop="logo" src="{{ asset( partner.image ) }}" alt="{{ partner.alt }}">
+                    <meta itemprop="url" content="{{ partner.png }}">
+                </div>
+            {% endfor %}
+            <hr>
+        </section>
+
+        <section id="blog" class="blog">
+            <header class="section-heading">
+                <h2>Recent from Our Blog:</h2>
+                <a href="https://blog.404.md/" class="button" target="_blank">Read More</a>
+            </header>
+            <div id="blogContent" class="section-content">
+                <div id="jsonContent" class="flex-row"></div>
+            </div>
+            <div class="text-center">
+                <a id="loadBlogPosts" class="btn btn-dark" href='//blog.404.md'></a>
+            </div>
+        </section>
+    </div>
+</div>

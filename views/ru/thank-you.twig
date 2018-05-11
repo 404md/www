@@ -1,0 +1,31 @@
+{% extends '../layout.twig' %}
+
+{% block css %}
+    <link rel="stylesheet" href="{{ asset('@css/thank-you.min.css') }}" />
+{% endblock %}
+
+{% block body %}
+    <div class="wrapper booking" itemscope itemprop="mainContentOfPage">
+        <section class="main-block">
+            <div class="container">
+                <div class="back-image">
+                    <div class="message">
+                        <h2 class="ty">Спасибо!</h2>
+                        <p class="center">
+                            Почти закончили... Необходимо подтвердить адрес электронной почты. Для завершения процесса
+                            подписки, пожалуйста, перейдите по ссылке в элекронном письме, которое мы только
+                            что вам отправили.
+                        </p>
+                        <div class="block-icon">
+                            <img class="check" src="{{ asset('@img/check_mark.svg') }}" alt="Check">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+{% endblock %}
+
+{% block js %}
+    <script src="{{ asset('@js/thank-you.min.js') }}"></script>
+{% endblock %}
