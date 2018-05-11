@@ -30,8 +30,21 @@ bash bin/deploy.sh [env] (aws-profile)
 
 * To deploy backend part, switch to `backend` directory and run:
 
+> (env) optional, available to be specified: \
+default empty value or any value not listed in the documentation equals `dev` \
+`master` value deploys into production \
+(aws-profile) optional, default `none`
+
 ```bash
 serverless deploy
+```
+>or
+```bash
+serverless deploy --stage dev
+```
+>or
+```bash
+serverless deploy --stage master
 ```
 
 [1]: https://www.404.md
