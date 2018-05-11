@@ -1,5 +1,5 @@
 jQuery(function($) {
-  fetch('/json/facebook-albums.json')
+  fetch('/json/_facebook-albums.json')
     .then(function(response) {
       return response.json();
     })
