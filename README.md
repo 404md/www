@@ -20,19 +20,14 @@ This repository stores the code and data for [www.404.md][1]
 
 ### Build & deploy
 
-* To deploy frontend part, just run:
+To deploy, just run:
 
 ```bash
 bash bin/deploy.sh [env] (aws-profile)
 ```
+In case you'd like to deploy backend part only, switch to `backend` directory and run: `serverless deploy --[env]`
 > [env] required, default `dev`, available `dev` and `master` \
 (aws-profile) optional, default `none`
-
-* To deploy backend part, switch to `backend` directory and run:
-
-```bash
-serverless deploy
-```
 
 [1]: https://www.404.md
 [2]: https://github.com/ddimitrioglo/web-boost
