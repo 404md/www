@@ -20,7 +20,7 @@ This repository stores the code and data for [www.404.md][1]
 
 ### Build & deploy
 
-* To deploy frontend part, just run:
+* To deploy, just run:
 
 ```bash
 bash bin/deploy.sh [env] (aws-profile)
@@ -28,10 +28,22 @@ bash bin/deploy.sh [env] (aws-profile)
 > [env] required, default `dev`, available `dev` and `master` \
 (aws-profile) optional, default `none`
 
-* To deploy backend part, switch to `backend` directory and run:
+* In case you'd like to deploy backend part only, switch to `backend` directory and run:
+
+> (env) optional, available to be specified: \
+default empty value or any value not listed in the documentation equals `dev` \
+`master` value deploys into production 
 
 ```bash
 serverless deploy
+```
+>or
+```bash
+serverless deploy --dev
+```
+>or
+```bash
+serverless deploy --master
 ```
 
 [1]: https://www.404.md
