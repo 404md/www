@@ -48,7 +48,8 @@ module.exports = {
         include: ["instagram-feed/**"]
       },
       environment: {
-        API_TOKEN: '${ssm:/CodeBuild/MitocGroup/IG_ACCESS_TOKEN}'
+        API_TOKEN: '${ssm:/CodeBuild/MitocGroup/IG_ACCESS_TOKEN}',
+        KEY_NAME: 'json/instagram-feed.json'
       },
       events: [{schedule: '${self:custom.schedule}'}]
     },
