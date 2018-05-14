@@ -184,8 +184,8 @@ ul {
 }
 
 /* MailChimp Form Embed Code - Classic - 12/17/2015 v10.7 */
-
-#mc_embed_signup div#mce-responses {float:left; top:-1.4em; padding:0em .5em 0em .5em; overflow:hidden; clear: both;}
+// @todo convert to scss
+#mc_embed_signup div#mce-responses {float:left; top:-1.4em; padding:0 .5em 0 .5em; overflow:hidden; clear: both;}
 #mc_embed_signup div.response {padding-bottom: 1em; font-weight:bold; float:left; top:-1.5em; z-index:1; }
 #mc_embed_signup #mce-error-response {display:none;}
 #mc_embed_signup #mce-success-response {color:#529214; display:none;}
