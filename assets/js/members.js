@@ -11,7 +11,7 @@ jQuery(function ($) {
     });
 
 
-  fetch('/json/instagram-feed.json')
+  fetch('/json/_instagram-feed.json')
     .then(function(response) {
       return response.json();
     })

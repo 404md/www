@@ -25,7 +25,7 @@ npm install
 npm run compile
 
 echo "Synchronizing build directory"
-aws s3 sync ${APP_DIR} ${BUCKET} ${PROFILE}
+aws s3 sync ${APP_DIR} ${BUCKET} ${PROFILE} --exclude 'json/_*'
 
 echo "Invalidating CloudFront"
 aws cloudfront create-invalidation --distribution-id ${DIST_ID} --paths '/*' ${PROFILE}
