@@ -38,7 +38,7 @@ module.exports = {
       environment: {
         COUNT: '3',
         MAX_WIDTH: '590',
-        KEY_NAME: 'json/medium-feed.json'
+        KEY_NAME: 'json/_medium-feed.json'
       },
       events: [{schedule: '${self:custom.schedule}'}]
     },
@@ -49,7 +49,7 @@ module.exports = {
       },
       environment: {
         API_TOKEN: '${ssm:/CodeBuild/MitocGroup/IG_ACCESS_TOKEN}',
-        KEY_NAME: 'json/instagram-feed.json'
+        KEY_NAME: 'json/_instagram-feed.json'
       },
       events: [{schedule: '${self:custom.schedule}'}]
     },
@@ -61,7 +61,7 @@ module.exports = {
       environment: {
         COUNT: '6',
         API_TOKEN: '${ssm:/CodeBuild/MitocGroup/FB_ACCESS_TOKEN}',
-        KEY_NAME: 'json/facebook-events.json'
+        KEY_NAME: 'json/_facebook-events.json'
       },
       events: [{schedule: '${self:custom.schedule}'}]
     },
@@ -72,7 +72,7 @@ module.exports = {
       },
       environment: {
         API_TOKEN: '${ssm:/CodeBuild/MitocGroup/FB_ACCESS_TOKEN}',
-        KEY_NAME: 'json/facebook-albums.json'
+        KEY_NAME: 'json/_facebook-albums.json'
       },
       events: [{schedule: '${self:custom.schedule}'}]
     }

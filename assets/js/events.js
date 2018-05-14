@@ -1,6 +1,6 @@
 jQuery(function($) {
 
-  fetch('https://www.404.md/json/facebook-feed.json')
+  fetch('/json/_facebook-feed.json')
     .then(function(response) {
       return response.json();
     })
