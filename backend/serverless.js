@@ -8,6 +8,7 @@ if (process.argv[3] === '--master') {
   bucket = 'www.404.md'
 }
 
+
 module.exports = {
   service: 'www-404-md',
   custom: {
