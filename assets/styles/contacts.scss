@@ -1,19 +1,19 @@
-.error-m {
-  position: relative;
-  padding-bottom: 5px;
-  .group {
-    padding-bottom: 25px;
-  }
-  label {
-    &.error {
-      position: absolute;
-      font-size: 15px;
-      color:red;
-      left:0;
-    }
+.button-contact {
+  &.disabled {
+    cursor: not-allowed;
+    pointer-events: none;
+    opacity: 0.4;
   }
 }
-  
+.mc-error {
+  position: absolute;
+  padding-left: 5px;
+  p {
+    font-size: 17px;
+    font-weight: 600;
+    color: #fd3916;
+  }
+}
 .status-message {
   &.success {
     padding: 10px;
@@ -32,7 +32,7 @@
     position: absolute;
     bottom: 55px;
     line-height: 21px;
-    color:red;
+    color:#fd3916;
   }
 }
 
@@ -45,7 +45,7 @@
         .map-style {
           width: 60%;
           height: 550px;
-          float:left;
+          float: left;
         }
         .input-field {
           position: relative;
@@ -59,12 +59,19 @@
           background-size: cover;
           float:left;
           #subscribe-contact-form {
-              width: 80%;
-              .indicates-required {
-                text-align: right;
-                font-size: 11px;
-                padding-bottom: 20px;
+            width: 80%;
+            .indicates-required {
+              text-align: right;
+              font-size: 11px;
+              padding-bottom: 20px;
+            }
+            .mc-error {
+              p {
+                font-size: 17px;
+                font-weight: 600;
+                color: #fd3916;
               }
+            }
           }
 
           &:before {

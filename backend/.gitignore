@@ -1,0 +1,8 @@
+# Dependency directories
+node_modules
+
+# Serverless directories
+.serverless
+
+# Logs
+*.log

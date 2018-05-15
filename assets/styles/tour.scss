@@ -18,7 +18,7 @@
             width: 100%;
             top: 0;
             right: 0;
-            bottom:0;
+            bottom: 0;
             background: rgba(0, 0, 0, 0.3);
           }
           .booking-form {
@@ -36,7 +36,7 @@
             .text-style {
               margin-bottom: 0;
               &:focus {
-                border:2px solid #333;
+                border: 2px solid #333;
                 padding: 9px;
               }
             }
@@ -45,6 +45,16 @@
       }
     }
   }
+}
+
+.gray-text {
+  color: #95989A;
+  font-size: 18px;
+  padding-left: 5px;
+}
+
+ul {
+  left: 100px;
 }
 
 /* Gallery */
@@ -87,6 +97,9 @@
       margin-bottom: 0;
     }
   }
+  .mc-error {
+    padding-left: 5px;
+  }
 }
 
 /*MailChimp IN PROCESS*/
@@ -95,90 +108,90 @@
   background:#fff; 
   clear:left;
   width: 600px;
+  .button {
+    &.disabled {
+      cursor: not-allowed;
+      pointer-events: none;
+      opacity: 0.4;
+    }
+  }
+  .mc-error {
+    position: absolute;
+    p {
+      font-size: 17px;
+      font-weight: 600;
+      color: #fd3916;
+    }
+  }
   .mc-field-group {
     &.input-group {
       ul {
-        margin:0; 
-        padding:5px 0; 
-        list-style:none;
+        margin-left: 5px;
+        padding: 5px 0; 
+        list-style: none;
         li {
-          display:inline-block; 
-          padding:3px 0; 
-          margin-right:10px;
+          display: inline-block; 
+          padding: 3px 0; 
+          margin-right: 10px;
         }
       }
       label {
-        display:inline; 
+        display: inline;
         padding-left: 5px;
+        font-size: 18px;
       }
       input {
-        display:inline; 
-        width:auto; 
-        border:none;
+        display: inline;
+        width: auto;
+        border: none;
       }
     }
-    clear:left; 
-    position:relative; 
-    width:100%;
+    clear: left; 
+    position: relative; 
+    width: 100%;
     padding-bottom: 10px; 
-    min-height:50px;
+    min-height: 50px;
     .message-text {
       padding-top: 5px;
     }
     label {
-      display:block; 
-      margin-bottom:3px; 
+      display: block; 
+      margin-bottom: 3px; 
       font-size: 20px;
     }
   }
   .datefield, .phonefield-us {
     padding: 5px 0;
     input {
-      display:inline; 
-      width:60px; 
-      margin:0 2px; 
-      letter-spacing:1px; 
-      text-align:center; 
-      padding:5px 0 2px 0;
+      display: inline; 
+      width: 60px; 
+      margin: 0 2px; 
+      letter-spacing: 1px; 
+      text-align: center; 
+      padding: 5px 0 2px 0;
     }
     label {
-      width:50px;
+      width: 50px;
       font-size: 12px;
     }
     .monthfield, .dayfield {
       input {
-        width:50px;
+        width: 50px;
         font-size: 12px;
       }
     }
   }
 }
+
 /* MailChimp Form Embed Code - Classic - 12/17/2015 v10.7 */
-// #mc_embed_signup{background:#fff; clear:left;width: 600px; }
-
-// #mc_embed_signup .mc-field-group {clear:left; position:relative; width:100%;padding-bottom: 10px; min-height:50px;}
-// #mc_embed_signup .mc-field-group .message-text { padding-top: 5px;}
-
-//#mc_embed_signup .mc-field-group label {display:block; margin-bottom:3px; font-size: 20px}
-
-// #mc_embed_signup .datefield, #mc_embed_signup .phonefield-us{padding:5px 0;}
-//#mc_embed_signup .datefield input, #mc_embed_signup .phonefield-us input{display:inline; width:60px; margin:0 2px; letter-spacing:1px; text-align:center; padding:5px 0 2px 0;}
-
-//#mc_embed_signup .datefield .monthfield input, #mc_embed_signup .datefield .dayfield input{width:50px;font-size: 12px; }
-//#mc_embed_signup .datefield label, #mc_embed_signup .phonefield-us label{width:50px;font-size: 12px;}
-
-//#mc_embed_signup .mc-field-group.input-group ul {margin:0; padding:5px 0; list-style:none;}
-//#mc_embed_signup .mc-field-group.input-group ul li {display:inline-block; padding:3px 0; margin-right:10px;}
-//#mc_embed_signup .mc-field-group.input-group label {display:inline; padding-left: 5px;}
-//#mc_embed_signup .mc-field-group.input-group input {display:inline; width:auto; border:none;}
-//
-#mc_embed_signup div#mce-responses {float:left; top:-1.4em; padding:0em .5em 0em .5em; overflow:hidden; clear: both;}
+// @todo convert to scss
+#mc_embed_signup div#mce-responses {float:left; top:-1.4em; padding:0 .5em 0 .5em; overflow:hidden; clear: both;}
 #mc_embed_signup div.response {padding-bottom: 1em; font-weight:bold; float:left; top:-1.5em; z-index:1; }
 #mc_embed_signup #mce-error-response {display:none;}
 #mc_embed_signup #mce-success-response {color:#529214; display:none;}
 #mc_embed_signup label.error {display:block; float:none; width:auto; margin-left:1.05em; text-align:left; padding:.5em 0;}
 //
-#mc-embedded-subscribe {clear:both;display:block; width: 100%; margin: 10px 0;}
+#mc-embedded-subscribe {clear:both; display:block; width: 100%; margin: 10px 0;}
 #mc_embed_signup #num-subscribers {font-size:1.1em;}
 #mc_embed_signup #num-subscribers span {padding:.5em; border:1px solid #ccc; margin-right:.5em; font-weight:bold;}
 

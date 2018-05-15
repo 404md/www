@@ -2,12 +2,12 @@
 
 .btn-plan {
   .button {
-    padding:0 10px;
+    padding: 0 10px;
     background: transparent;
     font-size: 16px;
     border-color: white;
     &:hover {
-      color:white;
+      color: white;
       background: #FF5533;
       border-color: #FF5533;
     }
@@ -17,7 +17,7 @@
 .btn-plan-contact {
   text-align: center;
   .button {
-    padding:0 16px;
+    padding: 0 16px;
     border-color: #282B2E;
     color: #282B2E;
     background: #ffffff;
@@ -116,15 +116,15 @@
             border: 2px solid #282B2E;
           }
           &:hover img {
-            filter:none;
+            filter: none;
           }
           &:hover li {
-            color:#FF5533;
+            color: #FF5533;
           }
           &:hover .button {
             color: #ffffff;
-            background:#FF5533;
-            border-color:#FF5533;
+            background: #FF5533;
+            border-color: #FF5533;
           }
           .btn-plan-contact {
             margin-top: auto;
@@ -156,9 +156,9 @@
             li {
               padding-bottom: 16px;
               position: relative;
-              color:#95989A;
+              color: #95989A;
               .gray-text {
-                color:#95989A;
+                color: #95989A;
 
               }
               span {
@@ -198,7 +198,7 @@
   }
 }
 
-.overlay, .overlay1{
+.overlay, .overlay1 {
   .popup {
     .content {
       iframe {
@@ -495,7 +495,7 @@ input[type=number]::-webkit-outer-spin-button {
 }
 
 .number-input button {
-  outline:none;
+  outline: none;
   -webkit-appearance: none;
   background-color: transparent;
   border: none;

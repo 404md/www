@@ -1,0 +1,85 @@
+@import './styles/variables';
+
+.wrapper {
+  &.booking {
+    .main-block {
+      margin-top: 70px;
+      min-height: 400px;
+      margin-bottom: 60px;
+      .container {
+        margin-top: 30px;
+        .back-image {
+          background-image: url(../img/404.png);
+          background-repeat: no-repeat;
+          background-position: 50% 50%;
+          background-size: cover;
+          position: relative;
+          &:before {
+            content: '';
+            position: absolute;
+            width: 100%;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.2);
+          }
+          .message {
+            //justify-content: center;
+            padding: 90px;
+            text-align: center;
+            .ty {
+              text-transform: uppercase;
+              font-size: 25px;
+              font-weight: 600;
+              padding-bottom: 20px;
+              color: $main_color;
+            }
+            .block-icon {
+              width: 200px;
+              text-align: center;
+              display: initial;
+              .check {
+                width: 100px;
+                margin-top: 10px;
+              }
+            }
+          }
+          .booking-form {
+            position: relative;
+            background: white;
+            opacity: 0.95;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 40px 0;
+            .input-style {
+              margin-bottom: 0;
+              border-color: $color;
+            }
+            .text-style {
+              margin-bottom: 0;
+              &:focus {
+                border: 2px solid #333;
+                padding: 9px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+/* Gallery */
+
+.gallery {
+  &.tour-gallery {
+    .gallery-line {
+      margin-top: 60px;
+    }
+  }
+}
+
+.small-meta, .datepart {
+  font-size: 10px;
+}

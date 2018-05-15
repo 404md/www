@@ -146,7 +146,7 @@ p {
 .language {
   display: inline-block;
   img {
-    height: 12px;
+    height: 15px;
   }
 }
 
@@ -472,6 +472,7 @@ body {
         transition: .5s;
       }
       .container {
+        position: relative;
         .nav-top {
           ul {
             li {
@@ -610,6 +611,7 @@ body {
     box-shadow: 0 4px 9px -7px $color;
   }
   .container {
+    position: relative;
     .logo {
       line-height: 100px;
       float: left;
@@ -620,6 +622,18 @@ body {
         height: 60px;
         a {
           display: inline-block;
+        }
+      }
+    }
+    .flag {
+      position: absolute;
+      padding-top: 10px;
+      right: 16px;
+      z-index: 1;
+      .language {
+      display: inline-block;
+        &:first-child {
+          margin-right: 10px;
         }
       }
     }
@@ -733,7 +747,7 @@ body {
     color: #A9AAAB;
     font-size: 19px;
   }
-  .phones, .mail, .map-location, .flag {
+  .phones, .mail, .map-location, .flag-footer {
     display: inline-block;
     vertical-align: middle;
     .language {
@@ -1045,7 +1059,7 @@ body {
     transform: rotate(45deg);
     span {
       &:nth-child(1) {
-        height: 0%;
+        height: 0;
         width: 4px;
         position: absolute;
         top: 10%;
@@ -1053,7 +1067,7 @@ body {
         transition-delay: 0s;
       }
       &:nth-child(2) {
-        width: 0%;
+        width: 0;
         height: 4px;
         position: absolute;
         left: 10%;
@@ -1108,7 +1122,7 @@ body {
   font-style: normal;
 }
 
-/* Gallery for terms*/
+/* Gallery for terms */
 
 .gallery {
   &.terms {
@@ -1118,7 +1132,7 @@ body {
   }
 }
 
-/* Gallery for photo-gallery*/
+/* Gallery for photo-gallery */
 
 .gallery {
   &.photos-gallery {
@@ -1138,275 +1152,9 @@ body {
   }
 }
 
-/* Startup-Evening*/
-
-.apply-button {
-  background: #fdb91a;
-  color: #ffffff;
-  padding: 10px 60px;
-  display: inline-block;
-  font-size: 40px;
-  border-radius: 4px;
-  &:hover {
-    background: #f03957;
-    color: #ffffff;
-  }
-}
-
-.startup {
-  font-family: 'Roboto Mono', monospace;
-  .first-block {
-    background: #373268;
-    .left-image {
-      img {
-        position: absolute;
-        max-height: 880px;
-      }
-      .image-block {
-        position: relative;
-        width: 90%;
-        height: 100%;
-        margin: 0 auto;
-        padding-top: 60px;
-      }
-    }
-    .right-image {
-      padding: 60px;
-      text-align: center;
-      .image-block {
-        width: 90%;
-        margin: 0 auto;
-        img {
-          max-height: 450px;
-        }
-      }
-      .text-event {
-        padding: 30px 0;
-
-      }
-    }
-  }
-  .text-yellow {
-    color: #fdb91a;
-    font-size: 40px;
-    display: inline;
-  }
-  .second-block {
-    .block-about {
-      margin-top: 30px;
-      margin-bottom: 30px;
-    }
-    background: #e8e6e7;
-    .logos {
-      padding: 30px 0;
-      text-align: center;
-      p {
-        text-align: center;
-        padding-bottom: 20px;
-        font-size: 20px;
-        color: #373268;
-      }
-      img {
-        max-height: 113px;
-      }
-      .logos_2 {
-        width: 35%;
-      }
-    }
-    .text-event {
-      p {
-        font-size: 20px;
-        color: #373268;
-        &.class-p {
-          padding-bottom: 30px;
-        }
-      }
-      h1, h2, h4 {
-        font-size: 30px;
-        text-align: center;
-        color: #f03957;
-        padding-bottom: 30px;
-      }
-    }
-    .yellow-block {
-      background: #fdb91a;
-      .text-event {
-        padding-top: 40px;
-        padding-bottom: 40px;
-        h4 {
-          color: #373268;
-          font-size: 30px;
-          text-align: left;
-        }
-        ul {
-          padding-left: 20px;
-          li {
-            font-size: 20px;
-            color: #373268;
-          }
-        }
-      }
-    }
-    .agenda {
-      color: #373268;
-      padding-top: 40px;
-      padding-bottom: 40px;
-      &.find-us {
-        background: #ffffff;
-        text-align: center;
-        line-height: 20px;
-        p {
-          padding: 5px;
-        }
-        h3 {
-          color: #f03957;
-        }
-        .mdi-facebook-box {
-          font-size: 40px;
-          color: #373268;
-          padding: 40px 0 0;
-        }
-      }
-      .text-event {
-        margin-bottom: 0;
-      }
-      h3 {
-        font-size: 30px;
-        text-align: center;
-        padding-bottom: 40px;
-
-      }
-      p, ul {
-        font-size: 25px;
-        padding: 15px;
-      }
-      .line-block {
-        position: relative;
-        &:before {
-          content: '';
-          position: absolute;
-          height: 100%;
-          width: 2px;
-          background: #373268;
-          right: 0;
-        }
-      }
-      .left-agenda {
-        p, ul {
-          margin-left: 40px;
-          li {
-            list-style-position: inside;
-          }
-        }
-      }
-      .button-block {
-        padding: 80px 0 0;
-        p {
-          font-size: 20px;
-        }
-        .btn-block {
-          text-align: center;
-          margin: auto;
-        }
-      }
-    }
-    .line-red {
-      background: #f03957;
-      height: 130px;
-      &.line-gray {
-        background: #E8E6E7;
-        h3 {
-          color: #373268;
-        }
-      }
-      h3 {
-        font-size: 30px;
-        color: #ffffff;
-        text-align: center;
-        line-height: 130px;
-      }
-    }
-    .map-event {
-      height: 490px;
-      .map-style-event {
-        height: 490px;
-      }
-    }
-  }
-  a {
-    color: #f03957;
-    text-decoration: underline;
-    &:hover {
-      color: #373268;
-    }
-  }
-}
-
-.third-block {
-  .image-cover {
-    background-image: url(../img/cover-photo.jpg);
-    background-position: 50% 50%;
-    height: 300px;
-    background-size: cover;
-  }
-  .image-photo1 {
-    background-image: url(../img/eistrati.jpg);
-    background-position: 70% 50%;
-    height: 300px;
-    background-size: cover;
-  }
-  .image-photo2 {
-    background-image: url(../img/aburciu.jpg);
-    background-position: 0% 50%;
-    height: 300px;
-    background-size: cover;
-  }
-  .image-photo3 {
-    background-image: url(../img/dsturza.jpg);
-    background-position: 70% 50%;
-    height: 300px;
-    background-size: cover;
-  }
-  .program {
-    color: #373268;
-    background: #f03957;
-    height: 300px;
-    &.yellow-program {
-      background: #fdb91a;
-      .text-up {
-        text-align: right;
-      }
-      p {
-        text-align: right;
-      }
-    }
-    .collaboration {
-      position: relative;
-      top: 50%;
-      -ms-transform: translateY(-50%);
-      -webkit-transform: -webkit-translateY (-50%);
-      transform: translateY(-50%);
-      padding: 0 40px;
-      .text-up {
-        padding-bottom: 20px;
-
-        h3 {
-          font-size: 30px;
-          text-transform: uppercase;
-          color: #373268;
-        }
-      }
-
-      .text-collaboration {
-        font-size: 25px;
-      }
-    }
-  }
-}
-
 /* Mail-Chimp inputs*/
 
-/* form starting stylings ------------------------------- */
+/* form starting stylings */
 .group {
   position: relative;
   margin-bottom: 10px;
@@ -1435,7 +1183,7 @@ input:focus {
 
 .label-form {
   color: #95989A;
-  font-size: 18px;
+  font-size: 20px;
   font-weight: normal;
   position: absolute;
   pointer-events: auto;
@@ -1523,7 +1271,7 @@ input:focus ~ .highlight {
   }
 }
 
-/* Blog.404.md*/
+/* Blog.404.md */
 
 .blog {
   .section-heading {
@@ -1807,7 +1555,7 @@ input:focus ~ .highlight {
   }
 }
 
-// Main Navigation Area
+/* Main Navigation Area */
 
 #navigation {
   &.nav-top {

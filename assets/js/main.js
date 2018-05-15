@@ -1,15 +1,17 @@
 /**
  * Google Map callback
  */
-function myMap() {
-  var myLatLng = {lat: 46.9869511, lng: 28.8579025};
+let fieldSelectors = ['#name', '#mce-PHONE', '#email', '#msg'];
 
-  var map = new google.maps.Map(document.getElementById('map'), {
+function myMap() {
+  let myLatLng = {lat: 46.9869511, lng: 28.8579025};
+
+  let map = new google.maps.Map(document.getElementById('map'), {
     zoom: 18,
     center: myLatLng
   });
 
-  var marker = new google.maps.Marker({
+  let marker = new google.maps.Marker({
     position: myLatLng,
     map: map,
     scrollwheel: false,
@@ -18,16 +20,16 @@ function myMap() {
 }
 
 function myEvent() {
-  var myLatLng = {lat: 46.9869149, lng: 28.8577533};
+  let myLatLng = {lat: 46.9869149, lng: 28.8577533};
 
-  var map2 = new google.maps.Map(document.getElementById('map2'), {
+  let map2 = new google.maps.Map(document.getElementById('map2'), {
     zoom: 18,
     backgroundColor:"#eeeeee",
     scrollwheel: false,
     center: myLatLng
   });
 
-  var marker = new google.maps.Marker({
+  let marker = new google.maps.Marker({
     position: myLatLng,
     map: map2,
     title: 'Olimpiada'
@@ -37,8 +39,7 @@ function myEvent() {
 
 jQuery(function($) {
   'use strict';
-
-  var navBar = $('.main-nav');
+  let navBar = $('.main-nav');
 
   $('.open-popup').on('click', function () {
     $('.popup-open-1').addClass('md-show');
@@ -48,9 +49,8 @@ jQuery(function($) {
     $(this).toggleClass('open');
 
     navBar.toggleClass("responsive-nav");
-    if ( $('#menu-toggle').hasClass('open')) {
-      $('html').css('overflow','hidden');
-
+    if ($('#menu-toggle').hasClass('open')) {
+      $('html').css('overflow', 'hidden');
     }
     else {
       $('html').css('overflow', 'scroll');
@@ -62,8 +62,8 @@ jQuery(function($) {
     }
   });
 
-  var isScrolling;
-  var navigationBar = $('.navt a');
+  let isScrolling;
+  let navigationBar = $('.navt a');
 
   navigationBar.on('touchstart', function () {
     isScrolling = false;
@@ -77,14 +77,14 @@ jQuery(function($) {
     }
   });
 
-  var $totalCount = $('#total-sales');
-  var destination = $('#destination');
-  var $addButton = $('.add-circle');
-  var count = 0;
+  let $totalCount = $('#total-sales');
+  let destination = $('#destination');
+  let $addButton = $('.add-circle');
+  let count = 0;
 
   function hideAndShowTrash() {
-    var $trashes = destination.find('.trash');
-    var itemCount = $trashes.length;
+    let $trashes = destination.find('.trash');
+    let itemCount = $trashes.length;
 
     console.log(itemCount);
 
@@ -98,8 +98,8 @@ jQuery(function($) {
   }
 
   function refreshTotalPercentage() {
-    var $filledItems = destination.find('.get-sales');
-    var itemCount = $filledItems.length;
+    let $filledItems = destination.find('.get-sales');
+    let itemCount = $filledItems.length;
 
     if (itemCount) {
       $totalCount.text(itemCount * 10 + '%').addClass('filled-field');
@@ -120,10 +120,10 @@ jQuery(function($) {
     }
 
     let tmpl = $('#form-template')
-      .html()
-      .replace(/xxx/g, 'user_name_' + count)
-      .replace(/yyy/g, 'user_mail_' + count)
-      .replace('_required', 'required');
+        .html()
+        .replace(/xxx/g, 'user_name_' + count)
+        .replace(/yyy/g, 'user_mail_' + count)
+        .replace('_required', 'required');
 
     destination.append(tmpl);
     count++;
@@ -131,7 +131,7 @@ jQuery(function($) {
     hideAndShowTrash();
 
     $('.mail-input').on('change', function () {
-      var $parent = $(this).closest('.clone-div');
+      let $parent = $(this).closest('.clone-div');
 
       $parent.find('.change-color').toggleClass('get-sales');
 
@@ -204,47 +204,38 @@ jQuery(function($) {
   /**
    * @todo move to a lambda function
    */
-  $(function () {
-    var $content = $('#jsonContent');
-    var data = {
-      rss_url: 'https://blog.404.md/feed'
-    };
-    $.get('https://api.rss2json.com/v1/api.json', data, function (response) {
-      if (response.status === 'ok') {
-        var output = '';
-        var count = 0;
-        $.each(response.items, function (k, item) {
-          if (/.*vinde-utilaje-absolut-gratuit-575eed5d9185.*/.test(item.link)) {
-            return;
-          }
 
-          count++;
-          var visibleSm;
-
-          if (count < 3){
-            visibleSm = '';
-          } else {
-            visibleSm = ' visible-sm';
-          }
-          output += '<div class="flex-item-4' + visibleSm + '">';
-          output += '<div class="blog-post"><header>';
-          var tagIndex = item.description.indexOf('<img');
-          var srcIndex = item.description.substring(tagIndex).indexOf('src=') + tagIndex;
-          var srcStart = srcIndex + 5;
-          var srcEnd = item.description.substring(srcStart).indexOf('"') + srcStart;
-          var src = item.description.substring(srcStart, srcEnd);
-          output += '<a href="' + item.link + '" class="blog-element" target="_blank"><img class="img-responsive" src="' + src + '" height="208px"></a></header>';
-          output += '<div class="blog-content"><h4><a href="' + item.link + '" target="_blank">' + item.title + '</a></h4>';
-          var yourString = item.description.replace(/<img[^>]*>/g, "");
-          var maxLength = 120;
-          output += '</div></div></div>';
-          return count < 3;
-        });
-        $content.html(output);
-      }
+  fetch('/json/_medium-feed.json')
+    .then(function (response) {
+      return response.json();
+    })
+    .then(function (myJson) {
+      blogPosting(myJson);
     });
-  });
 
+  function blogPosting(data) {
+    let blogHtml = '';
+    data.forEach(function(item) {
+      let srcStart = item.description.substring(item.description.indexOf('<img')).indexOf('src=') + item.description.indexOf('<img')+ 5;
+      let srcEnd = item.description.substring(srcStart).indexOf('"') + srcStart;
+      let src = item.description.substring(srcStart, srcEnd);
+
+      blogHtml += `
+      <div class="flex-item-4">
+        <div class="blog-post">
+          <header>
+            <a href="${item.url}" class="blog-element" target="_blank">
+              <img class="img-responsive" src="${src}" height="208px">
+            </a>
+          </header>
+          <div class="blog-content">
+            <h4><a href="${item.url}" target="_blank">${item.title}</a></h4>
+          </div>
+        </div>
+      </div>`;
+    });
+    $('#jsonContent').append(blogHtml);
+  }
 
   function scrollBanner() {
     $(document).scroll(function(){
@@ -298,6 +289,6 @@ jQuery(function($) {
   );
 
   if ($currentItem.hasClass('hide-line')) {
-    $slideLine.addClass("hidden-line");
+    $slideLine.addClass('hidden-line');
   }
 });

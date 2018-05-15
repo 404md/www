@@ -9,18 +9,30 @@
     </head>
     <body>
         {# Header #}
-        {% if routeName not in ['/', '/404'] %}
-            {% include 'header.twig' %}
-            {% include 'menu.twig' %}
+        {% if routeName in ['/pricing', '/events', '/members', '/media', '/gallery', '/contact', '/tour', '/thank-you', '/terms'] %}
+            {% include 'en/header.twig' %}
+            {% include 'en/menu.twig' %}
+        {% elseif routeName in ['/ru/pricing', '/ru/events', '/ru/members', '/ru/media', '/ru/gallery', '/ru/contact', '/ru/tour', '/ru/thank-you', '/ru/terms'] %}
+            {% include 'ru/header.twig' %}
+            {% include 'ru/menu.twig' %}
+        {% elseif routeName in ['/ro/pricing', '/ro/events', '/ro/members', '/ro/media', '/ro/gallery', '/ro/contact', '/ro/tour', '/ro/thank-you', '/ro/terms'] %}
+            {% include 'ro/header.twig' %}
+            {% include 'ro/menu.twig' %}   
         {% endif %}
 
         {# Content #}
         {% block body %}{% endblock %}
 
         {# Footer #}
-        {% if routeName != '/404' %}
-            {% include 'prefooter.twig' %}
-            {% include 'footer.twig' %}
+        {% if routeName in ['/', '/pricing', '/events', '/members', '/media', '/gallery', '/contact', '/tour', '/thank-you'] %}
+            {% include 'en/prefooter.twig' %}
+            {% include 'en/footer.twig' %}
+        {% elseif routeName in ['/ru', '/ru/pricing', '/ru/events', '/ru/members', '/ru/media', '/ru/gallery', '/ru/contact', '/ru/tour', '/ru/thank-you'] %}
+            {% include 'ru/prefooter.twig' %}
+            {% include 'ru/footer.twig' %}
+        {% elseif routeName in ['/ro', '/ro/pricing', '/ro/events', '/ro/members', '/ro/media', '/ro/gallery', '/ro/contact', '/ro/tour', '/ro/thank-you'] %}
+            {% include 'ro/prefooter.twig' %}
+            {% include 'ro/footer.twig' %}
         {% endif %}
     </body>
     {% block js %}{% endblock %}
