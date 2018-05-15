@@ -8,6 +8,7 @@ if (process.argv[3] === '--master') {
   bucket = 'www.404.md'
 }
 
+
 module.exports = {
   service: 'www-404-md',
   custom: {
@@ -33,7 +34,7 @@ module.exports = {
     'medium-feed': {
       handler: 'medium-feed/index.handler',
       package: {
-        include: ['medium-feed/**']
+        include: ['medium-feed/**', '../node_modules/**']
       },
       environment: {
         COUNT: '3',
