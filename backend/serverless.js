@@ -33,7 +33,7 @@ module.exports = {
     'medium-feed': {
       handler: 'medium-feed/index.handler',
       package: {
-        include: ['medium-feed/**']
+        include: ['medium-feed/**', '../node_modules/**']
       },
       environment: {
         COUNT: '3',
