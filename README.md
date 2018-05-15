@@ -1,7 +1,7 @@
 # www
+This repository stores the code and data for www.404.md
 
-This repository stores the code and data for [www.404.md][1]
-
+## Back-end maintenance
 ## Frontend
 
 404.md's frontend is build on top of [Web-boost][2] static site generator.
@@ -35,3 +35,4 @@ In case you'd like to deploy backend part only, switch to `backend` directory an
 [4]: https://www.youtube.com/watch?v=WviHsoz8yHk
 [5]: https://docs.aws.amazon.com/cli/latest/userguide/cli-chap-getting-started.html
 [6]: https://github.com/serverless/serverless#quick-start
+
