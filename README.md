@@ -35,3 +35,5 @@ In case you'd like to deploy backend part only, switch to `backend` directory an
 [4]: https://www.youtube.com/watch?v=WviHsoz8yHk
 [5]: https://docs.aws.amazon.com/cli/latest/userguide/cli-chap-getting-started.html
 [6]: https://github.com/serverless/serverless#quick-start
+
+TBU...
