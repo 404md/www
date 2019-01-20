@@ -7,10 +7,10 @@ fi
 
 MY_DIR=$(cd -P -- "$(dirname -- "$0")" && pwd -P)
 APP_DIR=$(dirname ${MY_DIR})/build
-BRANCH=$([ -n "$1" ] && echo "$1" || echo 'dev')
-PROFILE=$([ -n "$2" ] && echo "--profile=$2" || echo '')
+BRANCH=$([[ -n "$1" ]] && echo "$1" || echo 'dev')
+PROFILE=$([[ -n "$2" ]] && echo "--profile=$2" || echo '')
 
-if [ ${BRANCH} != 'master' ]; then
+if [[ ${BRANCH} != 'master' ]]; then
     BUCKET='s3://www-dev.404.md/'
     DIST_ID='EZZ1YSAXOSK4Y'
     MAX_AGE='600'

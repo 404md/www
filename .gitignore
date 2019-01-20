@@ -13,3 +13,6 @@ public/*
 
 # Logs
 *.log
+
+# MacOS
+.DS_Store

@@ -105,7 +105,7 @@ ul {
 /*MailChimp IN PROCESS*/
 
 #mc_embed_signup {
-  background:#fff; 
+  background:#fff;
   clear:left;
   width: 600px;
   .button {
@@ -127,11 +127,11 @@ ul {
     &.input-group {
       ul {
         margin-left: 5px;
-        padding: 5px 0; 
+        padding: 5px 0;
         list-style: none;
         li {
-          display: inline-block; 
-          padding: 3px 0; 
+          display: inline-block;
+          padding: 3px 0;
           margin-right: 10px;
         }
       }
@@ -146,28 +146,28 @@ ul {
         border: none;
       }
     }
-    clear: left; 
-    position: relative; 
+    clear: left;
+    position: relative;
     width: 100%;
-    padding-bottom: 10px; 
+    padding-bottom: 10px;
     min-height: 50px;
     .message-text {
       padding-top: 5px;
     }
     label {
-      display: block; 
-      margin-bottom: 3px; 
+      display: block;
+      margin-bottom: 3px;
       font-size: 20px;
     }
   }
   .datefield, .phonefield-us {
     padding: 5px 0;
     input {
-      display: inline; 
-      width: 60px; 
-      margin: 0 2px; 
-      letter-spacing: 1px; 
-      text-align: center; 
+      display: inline;
+      width: 60px;
+      margin: 0 2px;
+      letter-spacing: 1px;
+      text-align: center;
       padding: 5px 0 2px 0;
     }
     label {
@@ -189,8 +189,14 @@ ul {
 #mc_embed_signup div.response {padding-bottom: 1em; font-weight:bold; float:left; top:-1.5em; z-index:1; }
 #mc_embed_signup #mce-error-response {display:none;}
 #mc_embed_signup #mce-success-response {color:#529214; display:none;}
-#mc_embed_signup label.error {display:block; float:none; width:auto; margin-left:1.05em; text-align:left; padding:.5em 0;}
-//
+#mc_embed_signup label.error {
+  display:block;
+  float:none;
+  width:auto;
+  margin-left:1.05em;
+  text-align:left;
+  padding:.5em 0;
+}
 #mc-embedded-subscribe {clear:both; display:block; width: 100%; margin: 10px 0;}
 #mc_embed_signup #num-subscribers {font-size:1.1em;}
 #mc_embed_signup #num-subscribers span {padding:.5em; border:1px solid #ccc; margin-right:.5em; font-weight:bold;}
