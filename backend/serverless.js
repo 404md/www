@@ -22,7 +22,7 @@ module.exports = {
     environment: {
       BUCKET_NAME: '${self:custom.bucket}'
     },
-    role: 'arn:aws:iam::492198229272:role/ServiceRoleForLambdaEdge'
+    role: 'arn:aws:iam::745321830384:role/ServiceRoleForLambdaEdge'
   },
   package: {
     individually: true,
@@ -48,7 +48,7 @@ module.exports = {
         include: ["instagram-feed/**"]
       },
       environment: {
-        API_TOKEN: '${ssm:/CodeBuild/MitocGroup/IG_ACCESS_TOKEN}',
+        API_TOKEN: '${ssm:/CodeBuild/404md/IG_ACCESS_TOKEN}',
         KEY_NAME: 'json/_instagram-feed.json'
       },
       events: [{schedule: '${self:custom.schedule}'}]
@@ -60,7 +60,7 @@ module.exports = {
       },
       environment: {
         COUNT: '6',
-        API_TOKEN: '${ssm:/CodeBuild/MitocGroup/FB_ACCESS_TOKEN}',
+        API_TOKEN: '${ssm:/CodeBuild/404md/FB_ACCESS_TOKEN}',
         KEY_NAME: 'json/_facebook-events.json'
       },
       events: [{schedule: '${self:custom.schedule}'}]
@@ -71,7 +71,7 @@ module.exports = {
         include: ['facebook-albums/**']
       },
       environment: {
-        API_TOKEN: '${ssm:/CodeBuild/MitocGroup/FB_ACCESS_TOKEN}',
+        API_TOKEN: '${ssm:/CodeBuild/404md/FB_ACCESS_TOKEN}',
         KEY_NAME: 'json/_facebook-albums.json'
       },
       events: [{schedule: '${self:custom.schedule}'}]

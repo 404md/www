@@ -12,11 +12,11 @@ PROFILE=$([[ -n "$2" ]] && echo "--profile=$2" || echo '')
 
 if [[ ${BRANCH} != 'master' ]]; then
     BUCKET='s3://www-dev.404.md/'
-    DIST_ID='EZZ1YSAXOSK4Y'
+    DIST_ID='E3TR0NYCS165J3'
     MAX_AGE='600'
 else
     BUCKET='s3://www.404.md/'
-    DIST_ID='E3E50UDRANKEKH'
+    DIST_ID='E2TZRAONGBLPCS'
     MAX_AGE='604800'
 fi
 
